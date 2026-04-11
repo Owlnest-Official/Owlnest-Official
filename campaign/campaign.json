@@ -82,8 +82,8 @@
     }
   ],
   "supporterPerks": {
-    "title": "Why Follow Early?",
-    "intro": "Supporters who follow our Indiegogo campaign early may unlock extra launch value and occasional community appreciation opportunities.",
+    "title": "Follow Early. Save More.",
+    "intro": "Follow our Indiegogo campaign before launch to unlock extra value at launch. Highly engaged backers may also be considered for occasional appreciation perks as the project grows.",
     "items": [
       {
         "eyebrow": "Follow Before Launch",
@@ -92,8 +92,8 @@
       },
       {
         "eyebrow": "Community Appreciation",
-        "title": "Active Backer Opportunities",
-        "text": "Especially engaged backers may occasionally be considered for complimentary future-release opportunities, including second-generation product consideration or member-only credit perks. Availability and selection details will be announced separately."
+        "title": "Active Backer Recognition",
+        "text": "Highly engaged backers may occasionally be considered for future appreciation perks, such as second-generation product opportunities or voucher rewards. Availability and selection details will be announced separately."
       }
     ]
   },
@@ -133,8 +133,8 @@
       "a": "Supporters who follow the campaign on Indiegogo before launch will be eligible for an additional $5 followers discount when the campaign goes live."
     },
     {
-      "q": "Are there any community perks for active backers?",
-      "a": "From time to time, we may extend community appreciation perks to especially engaged backers. These may include future product access opportunities, early consideration for upcoming releases. Details, availability, and selection criteria will be announced separately."
+      "q": "Are there any perks for active backers?",
+      "a": "From time to time, we may extend appreciation perks to especially engaged backers. These may include future product opportunities or voucher rewards. Details, availability, and selection criteria will be announced separately."
     },
     {
       "q": "Do you ship internationally?",
