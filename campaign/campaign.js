@@ -39,6 +39,7 @@ function renderPage(data) {
     renderHero(data, isPrelaunch, isLive);
     renderStats(data, isPrelaunch);
     renderTiers(data, isPrelaunch, canShowTierPrices);
+    renderSupporterPerks(data.supporterPerks);
     renderTimeline(data);
     renderFaq(data);
 }
@@ -76,7 +77,6 @@ function renderHero(data, isPrelaunch, isLive) {
 
     renderHeroNotice(data.notice);
     renderHeroPricing(data, isPrelaunch, isLive);
-    renderHeroHighlights(data.heroHighlights);
 }
 
 function renderHeroNotice(notice) {
@@ -134,27 +134,6 @@ function renderHeroPricing(data, isPrelaunch, isLive) {
     eyebrowEl.textContent = eyebrow;
     mainEl.textContent = main;
     subtextEl.textContent = subtext;
-}
-
-function renderHeroHighlights(items) {
-    const container = document.getElementById('hero-highlights');
-    if (!container) return;
-
-    if (!Array.isArray(items) || items.length === 0) {
-        container.innerHTML = '';
-        return;
-    }
-
-    container.innerHTML = items.map(item => `
-        <div class="rounded-2xl border border-[#455169]/10 bg-white/55 p-4">
-            <div class="text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37] mb-2">
-                ${escapeHtml(item.title || '')}
-            </div>
-            <div class="text-sm text-[#455169]/80 leading-relaxed">
-                ${escapeHtml(item.text || '')}
-            </div>
-        </div>
-    `).join('');
 }
 
 function renderStats(data, isPrelaunch) {
@@ -278,6 +257,38 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
             </div>
         `;
     }).join('');
+}
+
+function renderSupporterPerks(section) {
+    const sectionEl = document.getElementById('supporter-perks-section');
+    const titleEl = document.getElementById('supporter-perks-title');
+    const introEl = document.getElementById('supporter-perks-intro');
+    const itemsEl = document.getElementById('supporter-perks-items');
+
+    if (!sectionEl || !titleEl || !introEl || !itemsEl) return;
+
+    if (!section || !Array.isArray(section.items) || section.items.length === 0) {
+        sectionEl.classList.add('hidden');
+        return;
+    }
+
+    sectionEl.classList.remove('hidden');
+    titleEl.textContent = section.title || 'Supporter Perks';
+    introEl.textContent = section.intro || '';
+
+    itemsEl.innerHTML = section.items.map(item => `
+        <div class="rounded-2xl border border-[#455169]/10 bg-white/55 p-5 md:p-6 shadow-sm">
+            <div class="text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37] mb-2">
+                ${escapeHtml(item.eyebrow || '')}
+            </div>
+            <h4 class="text-lg md:text-xl font-serif font-bold text-[#455169] mb-3">
+                ${escapeHtml(item.title || '')}
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                ${escapeHtml(item.text || '')}
+            </p>
+        </div>
+    `).join('');
 }
 
 function renderTimeline(data) {
