@@ -146,7 +146,7 @@
                         <h2 id="tiers-title" class="text-3xl md:text-4xl font-serif font-bold mb-4 text-brand-dark">Launch Pricing Preview</h2>
                         <div class="w-12 h-1 bg-brand-gold mx-auto"></div>
                         <p class="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">
-                            Secure the best launch price early. Follow the campaign before launch to unlock an extra $5 followers discount.
+                            Secure the best launch price early.
                         </p>
                     </div>
 
@@ -154,28 +154,69 @@
                 </div>
             </section>
 
-            <section id="supporter-perks-section" class="hidden py-12 md:py-16 px-4 sm:px-6">
+            <section id="follower-offer-section" class="hidden py-12 md:py-14 px-4 sm:px-6">
                 <div class="max-w-7xl mx-auto">
-                    <div class="relative overflow-hidden bg-brand-dark text-brand-cream rounded-3xl shadow-2xl border border-brand-gold/15 p-8 md:p-12">
-                        <div class="absolute top-0 right-0 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl"></div>
+                    <div class="relative overflow-hidden bg-brand-dark text-brand-cream rounded-3xl shadow-2xl border border-brand-gold/20 p-8 md:p-12">
+                        <div class="absolute top-0 right-0 w-52 h-52 bg-brand-gold/10 rounded-full blur-3xl"></div>
                         <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
 
-                        <div class="relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                            <div class="lg:col-span-4">
-                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-gold/30 bg-white/5 text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.22em] mb-4">
-                                    Early Follower Benefits
+                        <div class="relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                            <div class="lg:col-span-7">
+                                <div id="follower-offer-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-gold/30 bg-white/5 text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.22em] mb-5">
+                                    Launch Follower Offer
                                 </div>
 
-                                <h3 id="supporter-perks-title" class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-                                    Follow Early. Save More.
+                                <h3 id="follower-offer-title" class="text-3xl md:text-5xl font-serif font-bold text-white mb-5 leading-tight">
+                                    Follow on Indiegogo. Get $5 Off at Launch.
                                 </h3>
 
-                                <p id="supporter-perks-intro" class="text-sm md:text-base text-white/70 leading-relaxed">
-                                    Follow our Indiegogo campaign before launch to unlock extra value at launch. Highly engaged backers may also be considered for occasional appreciation perks as the project grows.
+                                <p id="follower-offer-text" class="text-sm md:text-lg text-white/75 leading-relaxed max-w-2xl mb-8">
+                                    Follow our Indiegogo campaign before launch and you will be eligible for an extra $5 followers discount when the campaign goes live.
                                 </p>
+
+                                <a id="follower-offer-cta" href="#" class="inline-flex items-center justify-center bg-brand-gold text-brand-dark px-8 py-4 font-bold tracking-widest uppercase hover:bg-white hover:text-brand-dark transition duration-300 rounded-sm shadow-md text-xs md:text-sm">
+                                    Follow on Indiegogo
+                                </a>
                             </div>
 
-                            <div id="supporter-perks-items" class="lg:col-span-8 grid md:grid-cols-2 gap-5">
+                            <div class="lg:col-span-5">
+                                <div class="rounded-3xl border border-brand-gold/25 bg-white/6 p-8 md:p-10 text-center lg:text-left">
+                                    <div id="follower-offer-highlight" class="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none mb-3">
+                                        $5
+                                    </div>
+                                    <div id="follower-offer-highlight-label" class="text-sm md:text-base uppercase tracking-[0.2em] text-white/70">
+                                        followers discount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="active-backer-section" class="hidden py-8 md:py-14 px-4 sm:px-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="bg-card-a rounded-3xl shadow-sm border border-brand-dark/5 p-8 md:p-12">
+                        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                            <div class="lg:col-span-5">
+                                <div id="active-backer-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-gold/30 bg-brand-cream/70 text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.22em] mb-5">
+                                    Active Backer Program
+                                </div>
+
+                                <h3 id="active-backer-title" class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-5 leading-tight">
+                                    Join the Conversation. Unlock Future Perks.
+                                </h3>
+
+                                <p id="active-backer-text" class="text-sm md:text-base text-gray-600 leading-relaxed mb-8">
+                                    This is separate from the followers discount. We want to keep the discussion active as Owlnest Lume grows, so especially engaged backers may occasionally be considered for future appreciation perks.
+                                </p>
+
+                                <a id="active-backer-cta" href="#discord-access" class="inline-flex items-center justify-center bg-brand-dark text-brand-cream px-8 py-4 font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-brand-dark transition duration-300 rounded-sm shadow-md text-xs md:text-sm">
+                                    Join the Community
+                                </a>
+                            </div>
+
+                            <div id="active-backer-cards" class="lg:col-span-7 grid md:grid-cols-2 gap-5">
                             </div>
                         </div>
                     </div>
@@ -215,7 +256,7 @@
                         <h2 class="text-2xl md:text-4xl font-serif font-bold mb-4 md:mb-6 text-white">Join Our Discord</h2>
                         <p class="text-base md:text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
                             This community is optional. You’re welcome to join, share feedback, and follow development updates.
-                            If you own an Owlnest Lume product, you can request the <span class="text-white">Product Owner</span> role for priority access and owner-only threads.
+                            Anyone interested in the project can join the conversation as the campaign develops.
                         </p>
 
                         <div class="flex flex-col sm:flex-row gap-4 items-center justify-center mb-10">
@@ -226,7 +267,7 @@
                             </a>
                             <a href="../member-login.html"
                                class="w-full sm:w-auto inline-flex items-center justify-center border border-brand-gold text-brand-gold px-10 py-4 font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-brand-dark transition duration-300 rounded-sm text-xs md:text-sm">
-                                Member Portal (Owners)
+                                Member Portal
                                 <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
