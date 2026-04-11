@@ -2,12 +2,18 @@
   "status": "prelaunch",
   "active": true,
   "lang": "en",
-  "title": "Owlnest Sleep Aid Lamp: The Art of Deep Sleep",
-  "subtitle": "Simulating natural sunset to support your circadian rhythm. ITRI-certified spectrum technology.",
-  "description": "After 1 years of R&D, we are bringing the serenity of dusk back to your bedroom. Join our community to shape the revolution of rest.",
-  "notice": "Pre-launch: Final pricing and rewards revealed at launch.",
+  "title": "Owlnest: Compact Circadian Rhythm Lamp",
+  "subtitle": "Designed for the 1 to 2 hours before bed with a night-friendly amber spectrum.",
+  "description": "Owlnest is not a generic night light or a normal warm lamp. It is a compact circadian rhythm lamp designed to support a calmer evening wind-down before sleep.",
+  "notice": "Preview pricing is now available. Final quantities, shipping details, and campaign timing will be confirmed at launch.",
+  "pricingPreviewEnabled": true,
+  "heroPricing": {
+    "eyebrow": "Launch Pricing Preview",
+    "main": "From $59",
+    "subtext": "Up to 50% off • Regular Price $119"
+  },
   "platformCta": {
-    "label": "Launching Soon on Kickstarter",
+    "label": "Launching Soon on Indiegogo",
     "href": "#"
   },
   "secondaryCta": {
@@ -22,53 +28,101 @@
   },
   "tiers": [
     {
+      "name": "Ultra Early Bird",
+      "badge": "Best Deal",
+      "price": 59,
+      "retailPrice": 119,
+      "bullets": [
+        "1x Owlnest Lamp",
+        "Lowest launch price",
+        "Limited quantity"
+      ],
+      "ctaLabel": "Launching Soon",
+      "ctaHref": "#",
+      "featured": true
+    },
+    {
       "name": "Super Early Bird",
-      "price": null,
-      "retailPrice": null,
-      "bullets": ["1x Owlnest Lamp", "Limited Quantity", "Lowest Price Tier"],
-      "ctaLabel": "Coming Soon",
+      "badge": "Popular",
+      "price": 69,
+      "retailPrice": 119,
+      "bullets": [
+        "1x Owlnest Lamp",
+        "Early supporter pricing",
+        "Limited quantity"
+      ],
+      "ctaLabel": "Launching Soon",
       "ctaHref": "#"
     },
     {
-      "name": "The Double Pack",
-      "price": null,
-      "retailPrice": null,
-      "bullets": ["2x Owlnest Lamps", "Perfect for Partners", "Priority Delivery"],
-      "ctaLabel": "Coming Soon",
+      "name": "Early Bird",
+      "badge": "Launch Price",
+      "price": 79,
+      "retailPrice": 119,
+      "bullets": [
+        "1x Owlnest Lamp",
+        "Discounted campaign pricing",
+        "Limited quantity"
+      ],
+      "ctaLabel": "Launching Soon",
       "ctaHref": "#"
     },
     {
-      "name": "Family Bundle",
-      "price": null,
-      "retailPrice": null,
-      "bullets": ["4x Owlnest Lamps", "Full Home Setup", "Best Value"],
-      "ctaLabel": "Coming Soon",
+      "name": "Standard Backer",
+      "badge": "Campaign Price",
+      "price": 89,
+      "retailPrice": 119,
+      "bullets": [
+        "1x Owlnest Lamp",
+        "Available after early tiers",
+        "Campaign pricing"
+      ],
+      "ctaLabel": "Launching Soon",
       "ctaHref": "#"
     }
   ],
   "timeline": [
-    { "date": "TBA", "title": "Campaign Launch", "text": "Crowdfunding live & Tooling initialization." },
-    { "date": "Est. 2025", "title": "Pilot Production", "text": "Quality assurance testing & certification." },
-    { "date": "Est. 2025", "title": "Mass Production", "text": "Final assembly and packaging." },
-    { "date": "Est. 2025", "title": "Shipping", "text": "Global delivery begins." }
+    {
+      "date": "TBA",
+      "title": "Campaign Launch",
+      "text": "Our Indiegogo campaign goes live with early supporter pricing."
+    },
+    {
+      "date": "TBA",
+      "title": "Production Preparation",
+      "text": "Final production scheduling, QA checks, and packaging preparation."
+    },
+    {
+      "date": "TBA",
+      "title": "Mass Production",
+      "text": "Manufacturing and final assembly begin."
+    },
+    {
+      "date": "TBA",
+      "title": "Shipping",
+      "text": "Orders begin shipping to supported regions."
+    }
   ],
   "faq": [
     {
-      "q": "How does the sunset simulation work?",
-      "a": "Owlnest shifts color temperature over 30 minutes, transitioning from warm reading light to a deep, blue-free amber glow, mimicking natural dusk."
+      "q": "What is Owlnest?",
+      "a": "Owlnest is a compact circadian rhythm lamp designed for nighttime use, especially during the 1 to 2 hours before bed."
     },
     {
-      "q": "How do I join the Discord community?",
-      "a": "Our Discord is a private space for verified owners. Purpose: protect community quality & backer co-creation. Access is unlocked AFTER you receive your product by verifying your unique Product Key in the Member Portal."
+      "q": "How is it different from a normal warm lamp or night light?",
+      "a": "Owlnest is designed around a night-friendly amber spectrum for evening use. It is meant to feel gentler and more sleep-compatible than ordinary bright or generic warm lighting."
     },
     {
       "q": "Do you ship internationally?",
-      "a": "Yes, we plan to ship to select regions including US, UK, EU, and Taiwan. Specific shipping costs will be confirmed at launch."
+      "a": "We plan to ship to select regions including the US, UK, EU, and Taiwan. Final shipping costs and supported destinations will be confirmed at launch."
+    },
+    {
+      "q": "How do I join the Discord community?",
+      "a": "Our Discord is optional and open to anyone who wants to follow the project. Verified owners can request product-owner access after delivery through the Member Portal."
     },
     {
       "q": "Is there a warranty?",
-      "a": "All Kickstarter rewards are expected to come with a standard 1-year limited warranty covering manufacturing defects."
+      "a": "All campaign orders are expected to include a standard 1-year limited warranty covering manufacturing defects."
     }
   ]
-
 }
