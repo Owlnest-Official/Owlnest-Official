@@ -276,15 +276,16 @@ function renderSupporterPerks(section) {
     titleEl.textContent = section.title || 'Supporter Perks';
     introEl.textContent = section.intro || '';
 
-    itemsEl.innerHTML = section.items.map(item => `
-        <div class="rounded-2xl border border-[#455169]/10 bg-white/55 p-5 md:p-6 shadow-sm">
+    itemsEl.innerHTML = section.items.map((item, index) => `
+        <div class="relative rounded-2xl border ${index === 0 ? 'border-[#D4AF37]/35 ring-1 ring-[#D4AF37]/20' : 'border-white/10'} bg-[#faefcf] text-[#455169] p-6 md:p-7 shadow-[0_12px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1">
+            <div class="w-10 h-1 rounded-full bg-[#D4AF37] mb-4"></div>
             <div class="text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37] mb-2">
                 ${escapeHtml(item.eyebrow || '')}
             </div>
-            <h4 class="text-lg md:text-xl font-serif font-bold text-[#455169] mb-3">
+            <h4 class="text-xl md:text-2xl font-serif font-bold text-[#455169] mb-3 leading-snug">
                 ${escapeHtml(item.title || '')}
             </h4>
-            <p class="text-sm text-gray-600 leading-relaxed">
+            <p class="text-sm md:text-base text-[#455169]/80 leading-relaxed">
                 ${escapeHtml(item.text || '')}
             </p>
         </div>
