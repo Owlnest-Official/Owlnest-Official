@@ -17,7 +17,7 @@
     "href": "#"
   },
   "secondaryCta": {
-    "label": "Community Access (Verified Owners)",
+    "label": "Join the Community",
     "href": "#discord-access"
   },
   "stats": {
@@ -81,21 +81,31 @@
       "ctaHref": "#"
     }
   ],
-  "supporterPerks": {
-    "title": "Follow Early. Save More.",
-    "intro": "Follow our Indiegogo campaign before launch to unlock extra value at launch. Highly engaged backers may also be considered for occasional appreciation perks as the project grows.",
-    "items": [
+  "launchFollowerOffer": {
+    "badge": "Launch Follower Offer",
+    "title": "Follow on Indiegogo. Get $5 Off at Launch.",
+    "text": "Follow our Indiegogo campaign before launch and you will be eligible for an extra $5 followers discount when the campaign goes live.",
+    "highlight": "$5",
+    "highlightLabel": "followers discount",
+    "ctaLabel": "Follow on Indiegogo",
+    "ctaHref": "#"
+  },
+  "activeBackerProgram": {
+    "badge": "Active Backer Program",
+    "title": "Join the Conversation. Unlock Future Perks.",
+    "text": "This is separate from the followers discount. We want to keep the discussion active as Owlnest Lume grows, so especially engaged backers may occasionally be considered for future appreciation perks.",
+    "cards": [
       {
-        "eyebrow": "Follow Before Launch",
-        "title": "$5 Followers Discount",
-        "text": "Followers on Indiegogo will be eligible for an extra $5 followers discount when the campaign goes live."
+        "title": "Stay Active in Discussion",
+        "text": "Share feedback, ask thoughtful questions, and take part in community discussion as the project develops."
       },
       {
-        "eyebrow": "Community Appreciation",
-        "title": "Active Backer Recognition",
-        "text": "Highly engaged backers may occasionally be considered for future appreciation perks, such as second-generation product opportunities or voucher rewards. Availability and selection details will be announced separately."
+        "title": "Future Appreciation Perks",
+        "text": "Especially engaged backers may occasionally be considered for second-generation product opportunities or voucher rewards. Availability and selection details will be announced separately."
       }
-    ]
+    ],
+    "ctaLabel": "Join the Community",
+    "ctaHref": "#discord-access"
   },
   "timeline": [
     {
@@ -130,19 +140,23 @@
     },
     {
       "q": "What do I get if I follow the campaign before launch?",
-      "a": "Supporters who follow the campaign on Indiegogo before launch will be eligible for an additional $5 followers discount when the campaign goes live."
+      "a": "Followers on Indiegogo before launch will be eligible for an additional $5 followers discount when the campaign goes live."
     },
     {
-      "q": "Are there any perks for active backers?",
-      "a": "From time to time, we may extend appreciation perks to especially engaged backers. These may include future product opportunities or voucher rewards. Details, availability, and selection criteria will be announced separately."
+      "q": "Is the followers discount the same as the active backer program?",
+      "a": "No. These are two separate parts of the campaign. Following before launch unlocks the $5 followers discount, while the active backer program is about community participation after joining the campaign."
+    },
+    {
+      "q": "What can active backers be considered for?",
+      "a": "Especially engaged backers may occasionally be considered for future appreciation perks, such as second-generation product opportunities or voucher rewards. Details and selection criteria will be announced separately."
     },
     {
       "q": "Do you ship internationally?",
       "a": "We plan to ship to select regions including the US, UK, EU, and Taiwan. Final shipping costs and supported destinations will be confirmed at launch."
     },
     {
-      "q": "How do I join the Discord community?",
-      "a": "Our Discord is optional and open to anyone who wants to follow the project. Verified owners can request product-owner access after delivery through the Member Portal."
+      "q": "How do I join the community?",
+      "a": "Our Discord is optional and open to anyone who wants to follow the project, join the conversation, and stay updated as the campaign develops."
     },
     {
       "q": "Is there a warranty?",
