@@ -39,7 +39,8 @@ function renderPage(data) {
     renderHero(data, isPrelaunch, isLive);
     renderStats(data, isPrelaunch);
     renderTiers(data, isPrelaunch, canShowTierPrices);
-    renderSupporterPerks(data.supporterPerks);
+    renderFollowerOffer(data.launchFollowerOffer);
+    renderActiveBackerProgram(data.activeBackerProgram);
     renderTimeline(data);
     renderFaq(data);
 }
@@ -69,11 +70,10 @@ function renderHero(data, isPrelaunch, isLive) {
     const secondaryCta = document.getElementById('hero-cta-sec');
 
     mainCta.textContent = data.platformCta?.label || 'Learn More';
-    mainCta.href = data.platformCta?.href || '#';
-    toggleLinkState(mainCta, !data.platformCta?.href || data.platformCta.href === '#');
+    setLinkState(mainCta, data.platformCta?.href || '#');
 
-    secondaryCta.textContent = data.secondaryCta?.label || 'Community Access';
-    secondaryCta.href = data.secondaryCta?.href || '#discord-access';
+    secondaryCta.textContent = data.secondaryCta?.label || 'Join the Community';
+    setLinkState(secondaryCta, data.secondaryCta?.href || '#discord-access');
 
     renderHeroNotice(data.notice);
     renderHeroPricing(data, isPrelaunch, isLive);
@@ -259,34 +259,67 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
     }).join('');
 }
 
-function renderSupporterPerks(section) {
-    const sectionEl = document.getElementById('supporter-perks-section');
-    const titleEl = document.getElementById('supporter-perks-title');
-    const introEl = document.getElementById('supporter-perks-intro');
-    const itemsEl = document.getElementById('supporter-perks-items');
+function renderFollowerOffer(section) {
+    const sectionEl = document.getElementById('follower-offer-section');
+    const badgeEl = document.getElementById('follower-offer-badge');
+    const titleEl = document.getElementById('follower-offer-title');
+    const textEl = document.getElementById('follower-offer-text');
+    const highlightEl = document.getElementById('follower-offer-highlight');
+    const highlightLabelEl = document.getElementById('follower-offer-highlight-label');
+    const ctaEl = document.getElementById('follower-offer-cta');
 
-    if (!sectionEl || !titleEl || !introEl || !itemsEl) return;
+    if (!sectionEl || !badgeEl || !titleEl || !textEl || !highlightEl || !highlightLabelEl || !ctaEl) return;
 
-    if (!section || !Array.isArray(section.items) || section.items.length === 0) {
+    if (!section) {
         sectionEl.classList.add('hidden');
         return;
     }
 
     sectionEl.classList.remove('hidden');
-    titleEl.textContent = section.title || 'Supporter Perks';
-    introEl.textContent = section.intro || '';
+    badgeEl.textContent = section.badge || 'Launch Follower Offer';
+    titleEl.textContent = section.title || 'Follow on Indiegogo. Get $5 Off at Launch.';
+    textEl.textContent = section.text || '';
+    highlightEl.textContent = section.highlight || '$5';
+    highlightLabelEl.textContent = section.highlightLabel || 'followers discount';
+    ctaEl.textContent = section.ctaLabel || 'Follow on Indiegogo';
+    setLinkState(ctaEl, section.ctaHref || '#');
+}
 
-    itemsEl.innerHTML = section.items.map((item, index) => `
-        <div class="relative rounded-2xl border ${index === 0 ? 'border-[#D4AF37]/35 ring-1 ring-[#D4AF37]/20' : 'border-white/10'} bg-[#faefcf] text-[#455169] p-6 md:p-7 shadow-[0_12px_40px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1">
+function renderActiveBackerProgram(section) {
+    const sectionEl = document.getElementById('active-backer-section');
+    const badgeEl = document.getElementById('active-backer-badge');
+    const titleEl = document.getElementById('active-backer-title');
+    const textEl = document.getElementById('active-backer-text');
+    const cardsEl = document.getElementById('active-backer-cards');
+    const ctaEl = document.getElementById('active-backer-cta');
+
+    if (!sectionEl || !badgeEl || !titleEl || !textEl || !cardsEl || !ctaEl) return;
+
+    if (!section) {
+        sectionEl.classList.add('hidden');
+        return;
+    }
+
+    sectionEl.classList.remove('hidden');
+    badgeEl.textContent = section.badge || 'Active Backer Program';
+    titleEl.textContent = section.title || 'Join the Conversation. Unlock Future Perks.';
+    textEl.textContent = section.text || '';
+    ctaEl.textContent = section.ctaLabel || 'Join the Community';
+    setLinkState(ctaEl, section.ctaHref || '#discord-access');
+
+    if (!Array.isArray(section.cards) || section.cards.length === 0) {
+        cardsEl.innerHTML = '';
+        return;
+    }
+
+    cardsEl.innerHTML = section.cards.map(card => `
+        <div class="rounded-2xl border border-[#455169]/10 bg-white/60 p-5 md:p-6 shadow-sm">
             <div class="w-10 h-1 rounded-full bg-[#D4AF37] mb-4"></div>
-            <div class="text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37] mb-2">
-                ${escapeHtml(item.eyebrow || '')}
-            </div>
-            <h4 class="text-xl md:text-2xl font-serif font-bold text-[#455169] mb-3 leading-snug">
-                ${escapeHtml(item.title || '')}
+            <h4 class="text-lg md:text-xl font-serif font-bold text-[#455169] mb-3">
+                ${escapeHtml(card.title || '')}
             </h4>
-            <p class="text-sm md:text-base text-[#455169]/80 leading-relaxed">
-                ${escapeHtml(item.text || '')}
+            <p class="text-sm md:text-base text-[#455169]/75 leading-relaxed">
+                ${escapeHtml(card.text || '')}
             </p>
         </div>
     `).join('');
@@ -333,17 +366,28 @@ function renderFaq(data) {
     `).join('');
 }
 
-function toggleLinkState(linkEl, disabled) {
+function setLinkState(linkEl, href) {
     if (!linkEl) return;
+
+    const disabled = !href || href === '#';
+
+    linkEl.href = href || '#';
 
     if (disabled) {
         linkEl.classList.add('opacity-60', 'cursor-not-allowed');
         linkEl.style.pointerEvents = 'none';
         linkEl.removeAttribute('target');
         linkEl.removeAttribute('rel');
+        return;
+    }
+
+    linkEl.classList.remove('opacity-60', 'cursor-not-allowed');
+    linkEl.style.pointerEvents = '';
+
+    if (href.startsWith('#')) {
+        linkEl.removeAttribute('target');
+        linkEl.removeAttribute('rel');
     } else {
-        linkEl.classList.remove('opacity-60', 'cursor-not-allowed');
-        linkEl.style.pointerEvents = '';
         linkEl.setAttribute('target', '_blank');
         linkEl.setAttribute('rel', 'noopener');
     }
