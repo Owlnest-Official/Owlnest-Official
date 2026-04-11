@@ -2,9 +2,9 @@
   "status": "prelaunch",
   "active": true,
   "lang": "en",
-  "title": "Owlnest: Compact Circadian Rhythm Lamp",
+  "title": "Owlnest Lume: Compact Circadian Rhythm Lamp",
   "subtitle": "Designed for the 1 to 2 hours before bed with a night-friendly amber spectrum.",
-  "description": "Owlnest is not a generic night light or a normal warm lamp. It is a compact circadian rhythm lamp designed to support a calmer evening wind-down before sleep.",
+  "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a compact circadian rhythm lamp designed to support a calmer evening wind-down before sleep.",
   "notice": "Preview pricing is now available. Final quantities, shipping details, and campaign timing will be confirmed at launch.",
   "pricingPreviewEnabled": true,
   "heroPricing": {
@@ -12,8 +12,18 @@
     "main": "From $59",
     "subtext": "Up to 50% off • Regular Price $119"
   },
+  "heroHighlights": [
+    {
+      "title": "Follow on Indiegogo",
+      "text": "Followers will be eligible for an extra $5 supporter credit at launch."
+    },
+    {
+      "title": "Stay engaged",
+      "text": "Active backers may also be considered for occasional community appreciation perks, such as future product access opportunities or member-only credits."
+    }
+  ],
   "platformCta": {
-    "label": "Launching Soon on Indiegogo",
+    "label": "Follow on Indiegogo",
     "href": "#"
   },
   "secondaryCta": {
@@ -33,7 +43,7 @@
       "price": 59,
       "retailPrice": 119,
       "bullets": [
-        "1x Owlnest Lamp",
+        "1x Owlnest Lume",
         "Lowest launch price",
         "Limited quantity"
       ],
@@ -47,7 +57,7 @@
       "price": 69,
       "retailPrice": 119,
       "bullets": [
-        "1x Owlnest Lamp",
+        "1x Owlnest Lume",
         "Early supporter pricing",
         "Limited quantity"
       ],
@@ -60,7 +70,7 @@
       "price": 79,
       "retailPrice": 119,
       "bullets": [
-        "1x Owlnest Lamp",
+        "1x Owlnest Lume",
         "Discounted campaign pricing",
         "Limited quantity"
       ],
@@ -73,7 +83,7 @@
       "price": 89,
       "retailPrice": 119,
       "bullets": [
-        "1x Owlnest Lamp",
+        "1x Owlnest Lume",
         "Available after early tiers",
         "Campaign pricing"
       ],
@@ -105,12 +115,20 @@
   ],
   "faq": [
     {
-      "q": "What is Owlnest?",
-      "a": "Owlnest is a compact circadian rhythm lamp designed for nighttime use, especially during the 1 to 2 hours before bed."
+      "q": "What is Owlnest Lume?",
+      "a": "Owlnest Lume is a compact circadian rhythm lamp designed for nighttime use, especially during the 1 to 2 hours before bed."
     },
     {
       "q": "How is it different from a normal warm lamp or night light?",
-      "a": "Owlnest is designed around a night-friendly amber spectrum for evening use. It is meant to feel gentler and more sleep-compatible than ordinary bright or generic warm lighting."
+      "a": "Owlnest Lume is designed around a night-friendly amber spectrum for evening use. It is meant to feel gentler and more sleep-compatible than ordinary bright or generic warm lighting."
+    },
+    {
+      "q": "What do I get if I follow the campaign before launch?",
+      "a": "Supporters who follow the campaign on Indiegogo before launch will be eligible for an additional $5 supporter credit when the campaign goes live."
+    },
+    {
+      "q": "Are there any community perks for active backers?",
+      "a": "From time to time, we may extend community appreciation perks to especially engaged backers. These may include future product access opportunities, early consideration for upcoming releases, or member-only credits. Details, availability, and selection criteria will be announced separately."
     },
     {
       "q": "Do you ship internationally?",
