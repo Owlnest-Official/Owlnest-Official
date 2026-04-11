@@ -12,16 +12,6 @@
     "main": "From $59",
     "subtext": "Up to 50% off • Regular Price $119"
   },
-  "heroHighlights": [
-    {
-      "title": "Follow on Indiegogo",
-      "text": "Followers will be eligible for an extra $5 supporter credit at launch."
-    },
-    {
-      "title": "Stay engaged",
-      "text": "Active backers may also be considered for occasional community appreciation perks, such as future product access opportunities or member-only credits."
-    }
-  ],
   "platformCta": {
     "label": "Follow on Indiegogo",
     "href": "#"
@@ -91,6 +81,22 @@
       "ctaHref": "#"
     }
   ],
+  "supporterPerks": {
+    "title": "Why Follow Early?",
+    "intro": "Supporters who follow our Indiegogo campaign early may unlock extra launch value and occasional community appreciation opportunities.",
+    "items": [
+      {
+        "eyebrow": "Follow Before Launch",
+        "title": "$5 Supporter Credit",
+        "text": "Followers on Indiegogo will be eligible for an extra $5 supporter credit when the campaign goes live."
+      },
+      {
+        "eyebrow": "Community Appreciation",
+        "title": "Active Backer Opportunities",
+        "text": "Especially engaged backers may occasionally be considered for complimentary future-release opportunities, including second-generation product consideration or member-only credit perks. Availability and selection details will be announced separately."
+      }
+    ]
+  },
   "timeline": [
     {
       "date": "TBA",
