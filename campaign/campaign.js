@@ -76,6 +76,7 @@ function renderHero(data, isPrelaunch, isLive) {
 
     renderHeroNotice(data.notice);
     renderHeroPricing(data, isPrelaunch, isLive);
+    renderHeroHighlights(data.heroHighlights);
 }
 
 function renderHeroNotice(notice) {
@@ -133,6 +134,27 @@ function renderHeroPricing(data, isPrelaunch, isLive) {
     eyebrowEl.textContent = eyebrow;
     mainEl.textContent = main;
     subtextEl.textContent = subtext;
+}
+
+function renderHeroHighlights(items) {
+    const container = document.getElementById('hero-highlights');
+    if (!container) return;
+
+    if (!Array.isArray(items) || items.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    container.innerHTML = items.map(item => `
+        <div class="rounded-2xl border border-[#455169]/10 bg-white/55 p-4">
+            <div class="text-[10px] md:text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37] mb-2">
+                ${escapeHtml(item.title || '')}
+            </div>
+            <div class="text-sm text-[#455169]/80 leading-relaxed">
+                ${escapeHtml(item.text || '')}
+            </div>
+        </div>
+    `).join('');
 }
 
 function renderStats(data, isPrelaunch) {
