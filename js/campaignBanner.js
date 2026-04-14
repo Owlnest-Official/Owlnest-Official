@@ -14,7 +14,7 @@
     }
 
     function injectBanner(status) {
-        let bannerText = "Crowdfunding Live: View Campaign →";
+        let bannerText = "Crowdfunding Live on Indiegogo →";
         if (status === 'prelaunch') {
             bannerText = "Crowdfunding Launching Soon: View Details →";
         }
@@ -43,7 +43,7 @@
         `;
         
         banner.innerHTML = `
-            <a href="/campaign/" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px; width:100%; justify-content:center; height:100%;">
+            <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px; width:100%; justify-content:center; height:100%;">
                 <i class="fas fa-fire" style="color:#D4AF37;"></i>
                 <span>${bannerText}</span>
             </a>
