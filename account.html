@@ -18,9 +18,6 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Snipcart CSS -->
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
-
   <script>
     tailwind.config = {
       theme: {
@@ -34,7 +31,6 @@
 
   <style>
     body { margin: 0; overflow-x: hidden; background-color: #faefcf; }
-    #snipcart { --color-modal-bg: #faefcf; --color-button-primary: #D4AF37; --color-button-primary-hover: #c5a02f; --color-button-primary-text: #455169; }
   </style>
 </head>
 
@@ -56,19 +52,17 @@
       <a href="/about.html" class="hover:text-brand-gold transition pb-1">About Us</a>
       <a href="/contact.html" class="hover:text-brand-gold transition pb-1">Contact</a>
       <div class="flex items-center gap-4 ml-4">
-        <button class="relative group snipcart-checkout text-brand-dark">
-          <i class="fas fa-shopping-bag text-2xl hover:text-brand-gold transition"></i>
-          <span class="snipcart-items-count absolute -top-1 -right-2 bg-brand-gold text-brand-dark text-[10px] font-bold px-1.5 rounded-full">0</span>
-        </button>
+        <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="text-xs border border-brand-dark/20 px-3 py-2 rounded text-brand-dark hover:bg-brand-dark hover:text-brand-cream transition uppercase tracking-widest">
+          Campaign
+        </a>
         <button id="logout-btn-desktop" class="text-xs border border-brand-dark/30 px-3 py-1 rounded hover:bg-brand-dark hover:text-brand-cream transition">Sign Out</button>
       </div>
     </div>
 
     <div class="flex lg:hidden items-center gap-4 flex-shrink-0">
-      <button class="relative active:scale-95 transition snipcart-checkout text-brand-dark">
-        <i class="fas fa-shopping-bag text-xl"></i>
-        <span class="snipcart-items-count absolute -top-1 -right-2 bg-brand-gold text-brand-dark text-[10px] font-bold px-1.5 rounded-full">0</span>
-      </button>
+      <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="relative active:scale-95 transition text-brand-dark">
+        <i class="fas fa-arrow-up-right-from-square text-xl"></i>
+      </a>
       <button id="mobile-menu-btn" class="text-2xl focus:outline-none active:scale-95 transition text-brand-dark">
         <i class="fas fa-bars" id="mobile-menu-icon"></i>
       </button>

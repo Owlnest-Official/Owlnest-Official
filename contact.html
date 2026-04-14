@@ -21,8 +21,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
-
     <script>
         tailwind.config = {
             theme: {
@@ -74,13 +72,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
         }
 
-        #snipcart {
-            --color-modal-bg: #182234;
-            --color-button-primary: #C9852A;
-            --color-button-primary-hover: #b57624;
-            --color-button-primary-text: #182234;
-        }
-
         #main-header {
             transition: background-color 0.4s ease, border-color 0.4s ease;
         }
@@ -129,10 +120,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <button class="relative group snipcart-checkout text-white/60 hover:text-amber transition-colors">
-                    <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
-                    <span class="snipcart-items-count absolute -top-2 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
-                </button>
+                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    Campaign
+                </a>
             </div>
         </div>
 
@@ -140,10 +131,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <button class="relative active:scale-95 transition snipcart-checkout text-white/80 hover:text-amber">
-                <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
-                <span class="snipcart-items-count absolute -top-1 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
-            </button>
+            <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
             <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
             </button>
@@ -251,20 +241,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
             <div class="flex gap-6">
                 <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
-                <a href="manual.pdf" target="_blank" download class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
+                <a href="manual.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="MmY2MWUwYjMtODI0Mi00NDQ1LTk4YWUtNTQ0NDgwODY5OGM0NjM5MDIzNDE2ODU0NDczMzQz"></div>
-
     <script>
-        const currentUrl = window.location.href;
-        document.querySelectorAll('.snipcart-add-item').forEach((btn) => {
-            btn.setAttribute('data-item-url', currentUrl);
-        });
-
         const revealElements = document.querySelectorAll('.reveal-text');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
