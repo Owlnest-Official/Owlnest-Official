@@ -266,7 +266,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Section 1: Hero (Preserved Canvas Engine, Re-positioned as Brand Hero) -->
         <section id="section-1" class="section-container bg-midnight active">
-            <div class="sticky top-0 h-[100vh] w-full overflow-hidden">
+            <div class="sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
                 <!-- Visual fallback background -->
                 <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
                 
@@ -276,43 +276,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="absolute inset-0 bg-gradient-to-b from-midnight/70 via-midnight/30 to-midnight/90 z-20 pointer-events-none"></div>
                 
                 <!-- Content Overlay -->
-                <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 max-w-screen-xl mx-auto pointer-events-none mt-12">
+                <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
                     
                     <!-- Restored and high-contrast brand mark -->
-                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-24 md:w-32 lg:w-40 opacity-100 mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125">
+                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125">
                     
-                    <span class="text-amber tracking-[0.3em] uppercase text-xs md:text-sm mb-4 reveal-text font-bold">Owlnest Lume | Live on Indiegogo</span>
+                    <span class="text-amber tracking-[0.24em] md:tracking-[0.3em] uppercase text-[11px] md:text-sm mb-4 reveal-text font-bold">Owlnest Lume | Live on Indiegogo</span>
                     
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-8 reveal-text drop-shadow-2xl">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-6 md:mb-8 reveal-text drop-shadow-2xl">
                         Night-friendly light<br>for the hours before bed.
                     </h1>
                     
-                    <p class="text-white/80 max-w-xl mx-auto text-lg md:text-xl font-light leading-relaxed reveal-text mb-8 drop-shadow-md">
+                    <p class="text-white/80 max-w-lg mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-6 md:mb-8 drop-shadow-md">
                         A compact circadian rhythm lamp designed for 1 to 2 hours before bed.
                     </p>
-                    <div class="max-w-2xl mx-auto mb-12 space-y-3 reveal-text">
+                    <div class="max-w-xl mx-auto mb-10 md:mb-12 space-y-3 reveal-text">
                         <p class="text-white/72 text-sm md:text-base font-light leading-relaxed">
                             Not a generic night light. Built for a calmer nighttime wind-down.
                         </p>
-                        <p class="text-white/55 text-xs md:text-sm font-light leading-relaxed tracking-[0.04em] uppercase">
+                        <p class="text-white/55 text-[11px] md:text-sm font-light leading-relaxed tracking-[0.04em] uppercase">
                             MSRP $119 · Campaign pricing on Indiegogo
                         </p>
                     </div>
 
                     <!-- Buttons (Enabled pointer events) -->
                     <div class="reveal-text pointer-events-auto flex flex-col items-center mt-2">
-                        <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto px-4 sm:px-0">
+                        <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
                             <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                               class="w-full sm:w-auto bg-amber text-midnight px-10 py-5 font-bold tracking-[0.15em] uppercase text-xs hover:bg-warm transition-all shadow-[0_0_20px_rgba(201,133,42,0.15)] flex justify-center items-center">
+                               class="w-full sm:w-auto bg-amber text-midnight px-6 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm transition-all shadow-[0_0_20px_rgba(201,133,42,0.15)] flex justify-center items-center">
                                 Get Campaign Pricing
                             </a>
-                            <a href="science.html" class="w-full sm:w-auto border border-white/20 text-white px-10 py-5 font-bold tracking-[0.15em] uppercase text-xs hover:bg-white/10 transition-colors flex justify-center items-center">
+                            <a href="science.html" class="w-full sm:w-auto border border-white/20 text-white px-6 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 transition-colors flex justify-center items-center">
                                 Why Light Matters
                             </a>
                         </div>
                     </div>
 
-                    <div class="absolute bottom-8 flex flex-col items-center animate-bounce text-white/50 pointer-events-none">
+                    <div class="absolute bottom-8 hidden md:flex flex-col items-center animate-bounce text-white/50 pointer-events-none">
                         <span class="text-[9px] tracking-[0.3em] uppercase mb-3">Scroll</span>
                         <div class="w-px h-10 bg-white/30"></div>
                     </div>
@@ -337,9 +337,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <!-- Section 3: The Science Preview (Warm & Breathable) -->
-        <section id="section-science" class="section-container bg-warm py-32 md:py-48 border-b border-taupe/20 section-light">
+        <section id="section-science" class="section-container bg-warm py-20 md:py-32 border-b border-taupe/20 section-light">
             <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
                     
                     <div class="order-2 lg:order-1 text-left space-y-12">
                         <h2 class="font-serif text-4xl md:text-5xl text-midnight leading-tight">Why Nighttime Light<br>Matters.</h2>
@@ -374,30 +374,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="flex flex-col lg:flex-row w-full h-full">
                 
                 <!-- Interactive Image Half (Left) -->
-                <div id="sec3-image" class="w-full lg:w-1/2 h-[50vh] lg:h-full relative overflow-hidden bg-warm transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
+                    <div id="sec3-image" class="w-full lg:w-1/2 h-[42vh] md:h-[50vh] lg:h-full relative overflow-hidden bg-warm transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
                     <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/F2EBDD/182234?text=Interactive+Lume'" alt="Interactive Lume Preview" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
                     <div class="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/5 transition duration-300"></div>
                     
                     <!-- Floating Pill Switch UI -->
-                    <div class="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 z-20 pointer-events-none">
-                        <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 pr-6 flex items-center gap-4 transition-all duration-300 border border-black/10 transform group-hover:scale-105">
+                    <div class="absolute bottom-4 left-4 lg:bottom-10 lg:left-10 z-20 pointer-events-none max-w-[calc(100%-2rem)]">
+                        <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 pr-4 md:pr-6 flex items-center gap-3 md:gap-4 transition-all duration-300 border border-black/10 transform group-hover:scale-105">
                             <div class="w-14 h-8 rounded-full bg-taupe/50 flex items-center px-1 transition-colors duration-500 ease-in-out" id="custom-toggle-bg">
                                 <div class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-500 ease-in-out" id="custom-toggle-circle"></div>
                             </div>
                             <div class="flex flex-col">
                                 <span class="text-[10px] tracking-widest uppercase text-taupe font-bold leading-none mb-1">Interactive</span>
-                                <span class="font-serif text-midnight font-bold text-base leading-none transition-all duration-300" id="lamp-status-label">Click to Light Up</span>
+                                <span class="font-serif text-midnight font-bold text-sm md:text-base leading-none transition-all duration-300" id="lamp-status-label">Click to Light Up</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Information & Buy Half (Right) -->
-                <div id="sec3-text" class="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center p-8 lg:p-20 bg-midnight relative z-20">
+                <div id="sec3-text" class="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center p-6 sm:p-8 lg:p-20 bg-midnight relative z-20">
                     <div class="max-w-xl reveal-text text-white">
                         <div class="mb-6">
                             <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">The Flagship</span>
-                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">Owlnest Lume</h2>
+                            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">Owlnest Lume</h2>
                         </div>
                         
                         <p class="text-white/70 mb-8 leading-relaxed text-base lg:text-lg font-light">
