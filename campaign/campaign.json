@@ -1,24 +1,24 @@
 {
-  "status": "prelaunch",
+  "status": "live",
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Compact Circadian Rhythm Lamp",
   "subtitle": "Designed for the 1 to 2 hours before bed with a night-friendly amber spectrum.",
-  "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a compact circadian rhythm lamp designed to support a calmer evening wind-down before sleep.",
-  "notice": "Preview pricing is now available. Final quantities, shipping details, and campaign timing will be confirmed at launch.",
+  "description": "Owlnest is not a generic night light or a normal warm lamp. It is a compact circadian rhythm lamp designed to support a calmer evening wind-down before sleep.",
+  "notice": "Owlnest Lume is currently live on Indiegogo. MSRP remains $119, while campaign pricing is limited to active campaign tiers on the campaign page.",
   "pricingPreviewEnabled": true,
   "heroPricing": {
-    "eyebrow": "Launch Pricing Preview",
+    "eyebrow": "Current Campaign Pricing",
     "main": "From $59",
     "subtext": "Up to 50% off • Regular Price $119"
   },
   "platformCta": {
-    "label": "Follow on Indiegogo",
-    "href": "#"
+    "label": "View Campaign on Indiegogo",
+    "href": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
   },
   "secondaryCta": {
-    "label": "Join the Community",
-    "href": "#discord-access"
+    "label": "Read Science & FAQ",
+    "href": "../science.html"
   },
   "stats": {
     "goal": null,
@@ -37,8 +37,8 @@
         "Lowest launch price",
         "Limited quantity"
       ],
-      "ctaLabel": "Launching Soon",
-      "ctaHref": "#",
+      "ctaLabel": "Back This Campaign",
+      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume",
       "featured": true
     },
     {
@@ -51,8 +51,8 @@
         "Early supporter pricing",
         "Limited quantity"
       ],
-      "ctaLabel": "Launching Soon",
-      "ctaHref": "#"
+      "ctaLabel": "Back This Campaign",
+      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
     },
     {
       "name": "Early Bird",
@@ -64,8 +64,8 @@
         "Discounted campaign pricing",
         "Limited quantity"
       ],
-      "ctaLabel": "Launching Soon",
-      "ctaHref": "#"
+      "ctaLabel": "Back This Campaign",
+      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
     },
     {
       "name": "Standard Backer",
@@ -77,41 +77,15 @@
         "Available after early tiers",
         "Campaign pricing"
       ],
-      "ctaLabel": "Launching Soon",
-      "ctaHref": "#"
+      "ctaLabel": "Back This Campaign",
+      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
     }
   ],
-  "launchFollowerOffer": {
-    "badge": "Launch Follower Offer",
-    "title": "Follow on Indiegogo. Get $5 Off at Launch.",
-    "text": "Follow our Indiegogo campaign before launch and you will be eligible for an extra $5 followers discount when the campaign goes live.",
-    "highlight": "$5",
-    "highlightLabel": "followers discount",
-    "ctaLabel": "Follow on Indiegogo",
-    "ctaHref": "#"
-  },
-  "activeBackerProgram": {
-    "badge": "Active Backer Program",
-    "title": "Join the Conversation. Unlock Future Perks.",
-    "text": "This is separate from the followers discount. We want to keep the discussion active as Owlnest Lume grows, so especially engaged backers may occasionally be considered for future appreciation perks.",
-    "cards": [
-      {
-        "title": "Stay Active in Discussion",
-        "text": "Share feedback, ask thoughtful questions, and take part in community discussion as the project develops."
-      },
-      {
-        "title": "Future Appreciation Perks",
-        "text": "Especially engaged backers may occasionally be considered for second-generation product opportunities or voucher rewards. Availability and selection details will be announced separately."
-      }
-    ],
-    "ctaLabel": "Join the Community",
-    "ctaHref": "#discord-access"
-  },
   "timeline": [
     {
-      "date": "TBA",
+      "date": "Now",
       "title": "Campaign Launch",
-      "text": "Our Indiegogo campaign goes live with early supporter pricing."
+      "text": "Owlnest Lume is currently available through crowdfunding with campaign-specific pricing."
     },
     {
       "date": "TBA",
@@ -135,28 +109,16 @@
       "a": "Owlnest Lume is a compact circadian rhythm lamp designed for nighttime use, especially during the 1 to 2 hours before bed."
     },
     {
-      "q": "How is it different from a normal warm lamp or night light?",
+      "q": "How is Owlnest Lume different from a normal warm lamp or night light?",
       "a": "Owlnest Lume is designed around a night-friendly amber spectrum for evening use. It is meant to feel gentler and more sleep-compatible than ordinary bright or generic warm lighting."
-    },
-    {
-      "q": "What do I get if I follow the campaign before launch?",
-      "a": "Followers on Indiegogo before launch will be eligible for an additional $5 followers discount when the campaign goes live."
-    },
-    {
-      "q": "Is the followers discount the same as the active backer program?",
-      "a": "No. These are two separate parts of the campaign. Following before launch unlocks the $5 followers discount, while the active backer program is about community participation after joining the campaign."
-    },
-    {
-      "q": "What can active backers be considered for?",
-      "a": "Especially engaged backers may occasionally be considered for future appreciation perks, such as second-generation product opportunities or voucher rewards. Details and selection criteria will be announced separately."
     },
     {
       "q": "Do you ship internationally?",
       "a": "We plan to ship to select regions including the US, UK, EU, and Taiwan. Final shipping costs and supported destinations will be confirmed at launch."
     },
     {
-      "q": "How do I join the community?",
-      "a": "Our Discord is optional and open to anyone who wants to follow the project, join the conversation, and stay updated as the campaign develops."
+      "q": "How do I join the Discord community?",
+      "a": "Our Discord is optional and open to anyone who wants to follow the project. Verified owners can request product-owner access after delivery through the Member Portal."
     },
     {
       "q": "Is there a warranty?",

@@ -260,7 +260,7 @@ function renderHeroPricing(data, isPrelaunch, isLive) {
     const heroPricing = data.heroPricing || {};
 
     const eyebrow = heroPricing.eyebrow
-        || (isLive ? 'Live on Indiegogo' : isPrelaunch ? 'Launch Pricing Preview' : 'Campaign Pricing');
+        || (isLive ? 'Current Campaign Pricing' : isPrelaunch ? 'Launch Pricing Preview' : 'Campaign Pricing');
 
     const main = heroPricing.main
         || (lowestPrice !== null ? `From $${lowestPrice}` : isPrelaunch ? 'Pricing TBA' : '');
@@ -323,7 +323,7 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
     const container = document.getElementById('tiers-container');
     const titleEl = document.getElementById('tiers-title');
 
-    titleEl.textContent = isPrelaunch ? 'Launch Pricing Preview' : 'Exclusive Rewards';
+    titleEl.textContent = isPrelaunch ? 'Launch Pricing Preview' : 'Indiegogo Campaign Offers';
 
     if (!Array.isArray(data.tiers) || data.tiers.length === 0) {
         container.innerHTML = `
