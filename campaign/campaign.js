@@ -349,11 +349,11 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
             : null;
 
         const savingsHtml = canShowTierPrices && savingsAmount > 0
-            ? `<div class="text-xs uppercase tracking-[0.18em] text-brand-dark/50 mb-5">Save $${savingsAmount} • ${savingsPct}% off</div>`
-            : `<div class="h-5 mb-5"></div>`;
+            ? `<div class="text-[11px] uppercase tracking-[0.18em] text-brand-dark/50">Save $${savingsAmount} • ${savingsPct}% off</div>`
+            : `<div class="h-4"></div>`;
 
         const tierBadgeHtml = tier.badge
-            ? `<div class="absolute top-5 right-5 inline-flex items-center px-3 py-1 rounded-full bg-[#D4AF37]/12 text-[#455169] text-[10px] font-bold tracking-[0.18em] uppercase border border-[#D4AF37]/25">${escapeHtml(tier.badge)}</div>`
+            ? `<div class="inline-flex items-center px-3 py-1 rounded-full bg-[#D4AF37]/12 text-[#455169] text-[10px] font-bold tracking-[0.18em] uppercase border border-[#D4AF37]/25 whitespace-nowrap">${escapeHtml(tier.badge)}</div>`
             : '';
 
         const tierBullets = Array.isArray(tier.bullets)
@@ -372,27 +372,29 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
             : 'bg-[#455169] text-[#faefcf] hover:bg-[#D4AF37] hover:text-[#455169]';
 
         return `
-            <div class="relative w-full h-full rounded-3xl border border-[#455169]/10 bg-[#fff8ea] p-6 md:p-7 shadow-sm transition duration-300 hover:border-[#D4AF37]/35 hover:-translate-y-1 ${tier.featured ? 'ring-1 ring-[#D4AF37]/35' : ''}">
-                ${tierBadgeHtml}
-                <div class="pr-20">
-                    <h3 class="text-xl md:text-2xl font-serif font-bold text-[#455169] mb-3">${escapeHtml(tier.name)}</h3>
+            <div class="relative w-full h-full rounded-3xl border border-[#455169]/10 bg-[#fff8ea] p-6 md:p-8 shadow-sm transition duration-300 hover:border-[#D4AF37]/35 hover:-translate-y-1 flex flex-col ${tier.featured ? 'ring-1 ring-[#D4AF37]/35' : ''}">
+                <div class="flex items-start justify-between gap-4 mb-6">
+                    <h3 class="text-2xl md:text-[2rem] font-serif font-bold text-[#455169] leading-[1.05] max-w-[12ch]">${escapeHtml(tier.name)}</h3>
+                    ${tierBadgeHtml}
                 </div>
 
-                <div class="flex flex-wrap items-end gap-2 mb-2">
-                    <span class="text-3xl md:text-4xl font-serif font-bold text-[#D4AF37]">${priceDisplay}</span>
-                    <span class="text-sm text-gray-400 line-through mb-1">${retailDisplay}</span>
+                <div class="mb-6">
+                    <span class="block text-4xl md:text-5xl font-serif font-bold text-[#D4AF37] leading-none">${priceDisplay}</span>
+                    <span class="block text-sm text-gray-400 line-through mt-3">${retailDisplay}</span>
                 </div>
 
-                ${savingsHtml}
+                <div class="mb-6">
+                    ${savingsHtml}
+                </div>
 
-                <ul class="space-y-3 mb-8 min-h-[120px]">
+                <ul class="space-y-4 mb-8 min-h-[132px] flex-1">
                     ${tierBullets}
                 </ul>
 
                 <a
                     href="${buttonDisabled ? '#' : tier.ctaHref}"
                     ${buttonDisabled ? 'aria-disabled="true"' : 'target="_blank" rel="noopener"'}
-                    class="mt-auto block w-full py-3 text-center font-bold tracking-widest uppercase text-xs transition duration-300 rounded-sm ${buttonClass}"
+                    class="mt-auto block w-full py-3.5 text-center font-bold tracking-[0.14em] uppercase text-xs transition duration-300 rounded-sm ${buttonClass}"
                     ${buttonDisabled ? 'onclick="return false;"' : ''}
                 >
                     ${escapeHtml(tier.ctaLabel || 'Learn More')}
