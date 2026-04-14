@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Submitted | Owlnest</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Manrope"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#182234',
+              warm: '#F2EBDD',
+              amber: '#C9852A'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-brand-dark text-white flex items-center justify-center px-6">
+  <div class="max-w-2xl w-full border border-white/10 bg-white/5 backdrop-blur-sm rounded-sm p-10 md:p-14 text-center shadow-2xl">
+    <div class="w-20 h-20 rounded-full bg-amber text-brand-dark flex items-center justify-center mx-auto mb-8 text-3xl font-bold">
+      OK
+    </div>
+    <p class="text-[10px] tracking-[0.35em] uppercase text-amber font-bold mb-4">Review Submitted</p>
+    <h1 class="font-serif text-4xl md:text-5xl leading-tight mb-6">Thank you for sharing your feedback.</h1>
+    <p class="font-sans text-base md:text-lg text-white/70 leading-relaxed max-w-xl mx-auto mb-10">
+      Your review has been received and may be checked before it appears publicly. We appreciate you taking the time to help future customers understand the Owlnest experience.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/products.html" class="inline-flex items-center justify-center bg-amber text-brand-dark px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs rounded-sm hover:bg-brand-warm transition-colors">
+        Back to Products
+      </a>
+      <a href="/index.html" class="inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">
+        Back to Home
+      </a>
+    </div>
+  </div>
+</body>
+</html>

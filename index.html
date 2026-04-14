@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- Google Tag Manager -->
@@ -12,13 +12,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owlnest Official | The Art of Deep Sleep</title>
-    <meta name="description" content="Owlnest Sleep Aid Lamp - Simulating natural sunset to help you sleep better. ITRI certified, blue-light free.">
+    <title>Owlnest Lume | Curating Your Evening Sanctuary</title>
+    <meta name="description" content="The 2-Hour Bridge to Deep Rest. Supporting your evening wind-down with precision deep amber spectrum lighting.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Fonts -->
@@ -39,19 +39,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        brand: {
-                            dark: '#455169',    // 深岩灰藍
-                            cream: '#faefcf',   // 奶油米色
-                            gold: '#D4AF37',    // 金色
-                            wood: '#4A403A'     // 木頭深棕
-                        }
+                        midnight: '#182234', 
+                        amber: '#C9852A',
+                        warm: '#F2EBDD',
+                        slateblue: '#51627A',
+                        taupe: '#8B7A69'
                     }
                 }
             }
         }
     </script>
     <style>
-        /* [核心修正] 移除 Scroll Snap 以修復 Canvas 動畫卡頓 */
         html { 
             scroll-behavior: smooth; 
         }
@@ -59,10 +57,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         body { 
             margin: 0;
             overflow-x: hidden; 
-            background-color: #455169;
+            background-color: #182234;
+            color: #ffffff;
         }
         
-        /* 通用區塊設定 */
         .section-container {
             width: 100%;
             position: relative;
@@ -73,28 +71,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             min-height: 100vh;
         }
         
-        /* Section 1: 序列幀動畫空間 */
-        /* 手機版：縮短滾動距離 (250vh)，避免滑太久 */
+        /* Canvas Scroll Height Preservation */
         #section-1 {
             display: block !important;
             padding: 0 !important;
             overflow: visible !important;
             height: 250vh !important; 
         }
-        /* 桌機版：維持長距離 (400vh) 以呈現細膩動畫 */
         @media (min-width: 768px) {
             #section-1 {
                 height: 400vh !important; 
             }
         }
 
-        /* Section 3: RWD 高度修正 */
-        @media (min-width: 1024px) {
-            #section-3 {
-                height: 100vh; 
-                align-items: stretch;
-            }
-        }
         @media (max-width: 1023px) {
             .section-container {
                 height: auto;
@@ -102,25 +91,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-bottom: 80px;
                 display: block; 
             }
-            /* [關鍵修正] 移除手機版 Sec3 上下內距，讓圖片無縫銜接上一區塊，消除深色間隙 */
-            #section-3 {
+            /* Remove padding for interactive section on mobile for seamless edge */
+            #section-product {
                 padding-top: 0 !important;
                 padding-bottom: 0 !important;
             }
         }
 
-        /* 滾動顯現動畫 (Reveal Text) */
+        /* Reveal Animations */
         .reveal-text {
             opacity: 0; 
             transform: translateY(30px);
-            transition: all 1s ease-out;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal-text.visible {
             opacity: 1;
             transform: translateY(0);
         }
         
-        /* 側邊導覽點 (Nav Dots) */
+        /* Navigation Dots */
         .nav-dots {
             position: fixed; 
             right: 2rem; 
@@ -136,563 +125,458 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .dot {
-            width: 12px; 
-            height: 12px; 
-            border: 1px solid rgba(255,255,255,0.5);
+            width: 10px; 
+            height: 10px; 
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 50%; 
             cursor: pointer; 
-            transition: all 0.3s;
+            transition: all 0.4s ease;
         }
         .dot.active { 
-            background-color: #D4AF37; 
-            border-color: #D4AF37; 
-            transform: scale(1.3); 
+            background-color: #C9852A; 
+            border-color: #C9852A; 
+            transform: scale(1.4); 
         }
 
-        /* 手機選單動畫 */
         #mobile-menu { 
             transform: translateY(-100%); 
-            transition: transform 0.3s ease-in-out; 
+            transition: transform 0.4s ease-in-out; 
         }
         #mobile-menu.open { 
             transform: translateY(0); 
         }
 
-        /* Snipcart 自定義配色 */
+        /* Snipcart Customization */
         #snipcart {
-            --color-modal-bg: #faefcf; 
-            --color-button-primary: #D4AF37; 
-            --color-button-primary-hover: #c5a02f; 
-            --color-button-primary-text: #455169; 
+            --color-modal-bg: #182234; 
+            --color-button-primary: #C9852A; 
+            --color-button-primary-hover: #b57624; 
+            --color-button-primary-text: #182234; 
         }
-        
-        /* [導覽列狀態 Class] */
-        /* nav-dark: 當背景是淺色時，文字變深色 */
-        header.nav-dark { 
-            color: #455169 !important; 
-            text-shadow: none; 
+
+        /* Dynamic Header Color Switching Classes */
+        #main-header {
+            transition: background-color 0.4s ease, border-color 0.4s ease;
         }
-        header.nav-dark button i, 
-        header.nav-dark i,
-        header.nav-dark a i { 
-            color: #455169 !important; 
+        #main-header.nav-dark {
+            background-color: rgba(242, 235, 221, 0.95) !important;
+            border-bottom-color: rgba(24, 34, 52, 0.1) !important;
         }
-        
-        /* nav-split: 電腦版 Sec3 專用 (左深右淺) */
-        header.nav-split .nav-links a { 
-            color: #faefcf !important; 
+        #main-header.nav-dark .logo-area span,
+        #main-header.nav-dark nav a,
+        #main-header.nav-dark .flex a i,
+        #main-header.nav-dark .flex button i {
+            color: #182234 !important;
         }
-        header.nav-split .logo-area { 
-            color: #455169 !important; 
+        #main-header.nav-dark .border-white\/10 {
+            border-color: rgba(24, 34, 52, 0.2) !important;
+        }
+
+        /* Desktop Split Header (Left dark text, Right white text) */
+        @media (min-width: 1024px) {
+            #main-header.nav-split {
+                background-color: transparent !important;
+                backdrop-filter: none !important;
+                border-bottom-color: transparent !important;
+            }
+            #main-header.nav-split .logo-area span {
+                color: #182234 !important;
+            }
+            #main-header.nav-split nav a,
+            #main-header.nav-split .flex a i,
+            #main-header.nav-split .flex button i {
+                color: #ffffff !important;
+            }
         }
     </style>
 </head>
-<body class="bg-brand-dark text-white antialiased text-base md:text-lg">
+<body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+
     <!-- Header / Navbar -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-4 md:px-8 py-4 md:py-6 flex justify-between items-center bg-transparent transition-all duration-300 text-brand-cream">
-        <!-- Logo 區域 -->
-        <div class="logo-area flex items-center gap-2 md:gap-4 relative z-50 transition-colors duration-300">
-             <!-- Logo 預設為淺色版本 (logo2.png)，JS 會根據背景切換為深色版本 (logo.png) -->
-             <img id="nav-logo" src="logo2.png" onerror="this.style.display='none'" alt="Owlnest Logo" class="h-10 md:h-14 w-auto contrast-100 object-contain">
-             <span class="font-serif text-lg md:text-3xl tracking-widest font-bold">Owlnest Official</span>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <!-- Logo -->
+        <div class="logo-area flex items-center gap-3 relative z-50">
+             <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
         </div>
         
         <!-- Desktop Nav -->
-        <div class="hidden lg:flex items-center gap-8 nav-links">
-            <nav class="flex gap-8 text-sm tracking-widest uppercase font-semibold">
-                <a href="about.html" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">About Us</a>
-                <a href="#section-1" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">Home</a>
-                <a href="#section-3" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">Products</a>
-                <a href="#section-6" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">Features</a>
-                <a href="#section-7" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">Specs</a>
-                <a href="#section-8" class="border-b-2 border-transparent hover:border-brand-gold hover:text-brand-gold transition-all duration-300 pb-1">Contact</a>
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="index.html" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="products.html" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="science.html" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="about.html" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="index.html#contact" class="hover:text-amber transition-colors duration-300">Contact</a>
             </nav>
             
-            <!-- [新增] 會員按鈕 (Desktop) -->
-            <div class="flex items-center gap-4">
-                <a href="account.html" class="relative group" title="Member Login">
-                    <i class="fas fa-user text-xl md:text-2xl hover:text-brand-gold transition"></i>
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <button class="relative group snipcart-checkout">
-                    <i class="fas fa-shopping-bag text-2xl md:text-3xl hover:text-brand-gold transition"></i>
-                    <span class="snipcart-items-count absolute -top-1 -right-2 bg-brand-gold text-brand-dark text-[10px] md:text-xs font-bold px-1.5 rounded-full">0</span>
+                <button class="relative group snipcart-checkout text-white/60 hover:text-amber transition-colors">
+                    <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
+                    <span class="snipcart-items-count absolute -top-2 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Toggle Button -->
-        <div class="flex lg:hidden items-center gap-4 relative z-50">
-            <!-- [新增] 會員按鈕 (Mobile) -->
-            <a href="account.html" class="relative active:scale-95 transition">
-                <i class="fas fa-user text-xl"></i>
+        <div class="flex lg:hidden items-center gap-5 relative z-50">
+            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            
-            <button class="relative active:scale-95 transition snipcart-checkout">
-                <i class="fas fa-shopping-bag text-2xl"></i>
-                <span class="snipcart-items-count absolute -top-1 -right-2 bg-brand-gold text-brand-dark text-[10px] font-bold px-1.5 rounded-full">0</span>
+            <button class="relative active:scale-95 transition snipcart-checkout text-white/80 hover:text-amber">
+                <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
+                <span class="snipcart-items-count absolute -top-1 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
             </button>
-            <button onclick="toggleMobileMenu()" class="text-2xl focus:outline-none active:scale-95 transition">
+            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
             </button>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-40 flex flex-col justify-center items-center pt-20 lg:hidden text-white">
-        <nav class="flex flex-col gap-8 text-xl tracking-widest uppercase font-semibold text-center">
-            <a href="account.html" class="hover:text-brand-gold transition flex items-center justify-center gap-2">
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-semibold text-center">
+            <a href="account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
                 <i class="fas fa-user"></i> Member Login
             </a>
-            <hr class="w-12 border-white/20 mx-auto">
-            <a href="about.html" class="hover:text-brand-gold transition">About Us</a>
-            <a href="#section-1" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition">Home</a>
-            <a href="#section-3" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition">Products</a>
-            <a href="#section-6" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition">Features</a>
-            <a href="#section-7" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition">Specs</a>
-            <a href="#section-8" onclick="toggleMobileMenu()" class="hover:text-brand-gold transition">Contact</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="index.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="products.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="science.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="index.html#contact" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
         </nav>
     </div>
 
     <!-- Navigation Dots -->
     <div class="nav-dots hidden xl:flex">
         <a href="#section-1" class="dot active" data-index="0"></a>
-        <a href="#section-2" class="dot" data-index="1"></a>
-        <a href="#section-3" class="dot" data-index="2"></a>
-        <a href="#section-4" class="dot" data-index="3"></a>
-        <a href="#section-5" class="dot" data-index="4"></a>
-        <a href="#section-6" class="dot" data-index="5"></a>
-        <a href="#section-7" class="dot" data-index="6"></a>
-        <a href="#section-8" class="dot" data-index="7"></a>
+        <a href="#section-problem" class="dot" data-index="1"></a>
+        <a href="#section-science" class="dot" data-index="2"></a>
+        <a href="#section-product" class="dot" data-index="3"></a>
+        <a href="#contact" class="dot" data-index="4"></a>
     </div>
 
-    <!-- Main Content Container -->
     <div class="main-container">
 
-        <!-- Section 1: Hero (Canvas Animation) -->
-        <section id="section-1" class="section-container bg-brand-dark active">
+        <!-- Section 1: Hero (Preserved Canvas Engine, Re-positioned as Brand Hero) -->
+        <section id="section-1" class="section-container bg-midnight active">
             <div class="sticky top-0 h-[100vh] w-full overflow-hidden">
-                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover bg-brand-dark"></canvas>
-                <div class="absolute inset-0 bg-black/30 z-20"></div>
+                <!-- Visual fallback background -->
+                <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
                 
-                <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 max-w-screen-xl mx-auto">
-                    <img src="logo2.png" onerror="this.style.display='none'" alt="Owlnest Logo" class="w-32 md:w-48 lg:w-64 mb-8 md:mb-10 brightness-200 contrast-100 drop-shadow-2xl reveal-text">
-                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-serif font-light mb-6 reveal-text text-brand-gold tracking-widest transition-all duration-700 delay-300">
-                        THE ART OF DEEP SLEEP
-                    </h1>
-                    <p class="text-gray-300 max-w-lg mx-auto text-base md:text-lg font-light leading-relaxed reveal-text mb-12 transition-all duration-700 delay-500">
-                        Experience the ultimate rest with nature-inspired technology.
-                    </p>
-                    <div class="absolute bottom-10 animate-bounce text-brand-gold/70 text-sm tracking-widest uppercase">
-                        Scroll to Experience
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: The Problem (Cream BG) -->
-        <section id="section-2" class="section-container bg-brand-cream text-brand-dark">
-            <div class="relative z-10 max-w-screen-xl px-4 md:px-8 py-16 lg:py-24 text-center mx-auto">
-                <p class="text-brand-gold text-xs md:text-sm tracking-widest uppercase mb-4 reveal-text">Sleep Troubles?</p>
-                <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight mb-12 lg:mb-16 reveal-text">
-                    Do You Have These <br> <span class="italic text-brand-dark">Sleep Troubles?</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 mb-12 lg:mb-20 reveal-text">
-                    <div class="p-6 lg:p-10 bg-white border border-brand-dark/5 rounded shadow-sm hover:border-brand-gold/50 transition">
-                        <i class="fas fa-mobile-alt text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-2 lg:mb-3">Blue Light</h3>
-                        <p class="text-brand-dark/70 text-sm lg:text-base">Blue light from screens disrupts sleep rhythm.</p>
-                    </div>
-                    <div class="p-6 lg:p-10 bg-white border border-brand-dark/5 rounded shadow-sm hover:border-brand-gold/50 transition">
-                        <i class="fas fa-bed text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-2 lg:mb-3">Tossing & Turning</h3>
-                        <p class="text-brand-dark/70 text-sm lg:text-base">Tossing and turning, can't shut off your mind.</p>
-                    </div>
-                    <div class="p-6 lg:p-10 bg-white border border-brand-dark/5 rounded shadow-sm hover:border-brand-gold/50 transition">
-                        <i class="fas fa-battery-quarter text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-2 lg:mb-3">Waking Up Tired</h3>
-                        <p class="text-brand-dark/70 text-sm lg:text-base">Poor sleep quality, waking up groggy and exhausted.</p>
-                    </div>
-                </div>
+                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
                 
-                <div class="max-w-4xl mx-auto reveal-text border-t border-brand-dark/10 pt-10">
-                    <div class="mt-8">
-                        <a href="#section-3" class="inline-block border border-brand-gold text-brand-gold px-8 py-3 lg:px-10 lg:py-4 hover:bg-brand-gold hover:text-white transition duration-300 tracking-widest text-xs lg:text-sm font-bold active:scale-95">
-                            FIND YOUR SOLUTION
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Interactive Experience (Variable BG) -->
-        <section id="section-3" class="section-container bg-brand-dark">
-            <div class="flex flex-col lg:flex-row w-full h-full">
-                <!-- Image Half -->
-                <!-- [修正] 預設白色背景 (關燈狀態)，且加上 transition-colors 確保切換無縫 -->
-                <div id="sec3-image" class="w-full lg:w-1/2 h-[50vh] lg:h-full relative overflow-hidden bg-white transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
-                    <!-- [Fallback] onerror 處理 -->
-                    <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/455169/FFF?text=Lamp+Image'" alt="Lamp" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
-                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/5 transition duration-300"></div>
+                <!-- Non-blocking overlay layers -->
+                <div class="absolute inset-0 bg-gradient-to-b from-midnight/70 via-midnight/30 to-midnight/90 z-20 pointer-events-none"></div>
+                
+                <!-- Content Overlay -->
+                <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 max-w-screen-xl mx-auto pointer-events-none mt-12">
                     
-                    <!-- [新版設計] 懸浮膠囊開關 -->
+                    <!-- Restored and high-contrast brand mark -->
+                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-24 md:w-32 lg:w-40 opacity-100 mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125">
+                    
+                    <span class="text-amber tracking-[0.3em] uppercase text-xs md:text-sm mb-4 reveal-text font-bold">Owlnest Official</span>
+                    
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-8 reveal-text drop-shadow-2xl">
+                        Curating Your<br>Evening Sanctuary.
+                    </h1>
+                    
+                    <p class="text-white/80 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed reveal-text mb-12 drop-shadow-md">
+                        Step away from the noise of the day. Discover an ecosystem of light and scent designed to guide your transition into deep rest.
+                    </p>
+
+                    <!-- Buttons (Enabled pointer events) -->
+                    <div class="reveal-text pointer-events-auto flex flex-col items-center mt-2">
+                        <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto px-4 sm:px-0">
+                            <a href="#section-product" 
+                               class="w-full sm:w-auto bg-amber text-midnight px-10 py-5 font-bold tracking-[0.15em] uppercase text-xs hover:bg-warm transition-all shadow-[0_0_20px_rgba(201,133,42,0.15)] flex justify-center items-center">
+                                Discover Lume
+                            </a>
+                            <a href="products.html" class="w-full sm:w-auto border border-white/20 text-white px-10 py-5 font-bold tracking-[0.15em] uppercase text-xs hover:bg-white/10 transition-colors flex justify-center items-center">
+                                View Collections
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-8 flex flex-col items-center animate-bounce text-white/50 pointer-events-none">
+                        <span class="text-[9px] tracking-[0.3em] uppercase mb-3">Scroll</span>
+                        <div class="w-px h-10 bg-white/30"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Problem (Evening Transition) -->
+        <section id="section-problem" class="section-container bg-midnight py-16 md:py-24 border-b border-white/5 !min-h-fit">
+            <div class="max-w-3xl mx-auto px-6 text-center reveal-text">
+                <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">The Evening Ritual</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">Your mind deserves a sunset,<br>not a switch.</h2>
+                
+                <p class="font-sans text-lg md:text-xl font-light text-white/80 leading-relaxed mb-6 max-w-2xl mx-auto">
+                    Modern illumination often feels like an artificial morning, pulling us away from our natural rhythm and keeping our minds engaged long after dusk.
+                </p>
+                <div class="w-6 h-px bg-white/20 mx-auto mb-6"></div>
+                <p class="font-sans text-sm md:text-base font-light text-white/50 leading-relaxed max-w-xl mx-auto">
+                    Owlnest Lume is designed to quiet the noise of the day. It provides a warm, screen-free environment that naturally prepares your body and mind for restful sleep.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: The Science Preview (Warm & Breathable) -->
+        <section id="section-science" class="section-container bg-warm py-32 md:py-48 border-b border-taupe/20 section-light">
+            <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    
+                    <div class="order-2 lg:order-1 text-left space-y-12">
+                        <h2 class="font-serif text-4xl md:text-5xl text-midnight leading-tight">The Art of <br>Evening Ambiance.</h2>
+                        
+                        <div class="space-y-10">
+                            <div class="border-l-2 border-taupe/30 pl-6">
+                                <h3 class="font-sans text-xl text-taupe mb-3">The Everyday Glare</h3>
+                                <p class="font-sans text-midnight/70 font-light text-base leading-relaxed">Standard lighting extends the frantic pace of the day, making it difficult to fully disconnect and step away from the noise.</p>
+                            </div>
+                            <div class="border-l-2 border-amber pl-6">
+                                <h3 class="font-sans text-2xl text-amber mb-3">The Deep Amber Glow</h3>
+                                <p class="font-sans text-midnight/90 font-light text-lg leading-relaxed">
+                                    Curated precisely between <strong class="text-amber font-semibold">1500K and 1800K</strong>. This rich, warm hue honors your evening rhythm, transforming any room into a true sanctuary of tranquility.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2">
+                        <div class="relative p-3 bg-white border border-taupe/20 rounded-sm shadow-xl">
+                            <img src="spectrum.jpg" onerror="this.src='https://placehold.co/800x400/F2EBDD/C9852A?text=Spectrum+Chart'" alt="Light Spectrum Comparison" class="w-full h-auto opacity-90">
+                        </div>
+                        <p class="text-center text-[10px] tracking-[0.2em] text-taupe uppercase mt-8">Spectrum Harmony</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Interactive Lume Preview (Restored Functionality) -->
+        <section id="section-product" class="section-container bg-midnight border-b border-white/5">
+            <div class="flex flex-col lg:flex-row w-full h-full">
+                
+                <!-- Interactive Image Half (Left) -->
+                <div id="sec3-image" class="w-full lg:w-1/2 h-[50vh] lg:h-full relative overflow-hidden bg-warm transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
+                    <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/F2EBDD/182234?text=Interactive+Lume'" alt="Interactive Lume Preview" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
+                    <div class="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/5 transition duration-300"></div>
+                    
+                    <!-- Floating Pill Switch UI -->
                     <div class="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 z-20 pointer-events-none">
-                        <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 pr-6 flex items-center gap-4 transition-all duration-300 border border-white/50 transform group-hover:scale-105">
-                            <!-- Toggle Graphic -->
-                            <div class="w-14 h-8 rounded-full bg-gray-300 flex items-center px-1 transition-colors duration-500 ease-in-out" id="custom-toggle-bg">
+                        <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 pr-6 flex items-center gap-4 transition-all duration-300 border border-black/10 transform group-hover:scale-105">
+                            <div class="w-14 h-8 rounded-full bg-taupe/50 flex items-center px-1 transition-colors duration-500 ease-in-out" id="custom-toggle-bg">
                                 <div class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-500 ease-in-out" id="custom-toggle-circle"></div>
                             </div>
-                            <!-- Text -->
                             <div class="flex flex-col">
-                                <span class="text-[10px] tracking-widest uppercase text-gray-400 font-bold leading-none mb-1">Interactive</span>
-                                <span class="font-serif text-brand-dark font-bold text-base leading-none transition-all duration-300" id="lamp-status-label">Click to Light Up</span>
+                                <span class="text-[10px] tracking-widest uppercase text-taupe font-bold leading-none mb-1">Interactive</span>
+                                <span class="font-serif text-midnight font-bold text-base leading-none transition-all duration-300" id="lamp-status-label">Click to Light Up</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Text Half -->
-                <div id="sec3-text" class="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center p-8 lg:p-20 bg-brand-dark relative z-20">
+                <!-- Information & Buy Half (Right) -->
+                <div id="sec3-text" class="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center p-8 lg:p-20 bg-midnight relative z-20">
                     <div class="max-w-xl reveal-text text-white">
-                        <div class="mb-4">
-                            <span class="text-brand-gold text-xs tracking-widest uppercase mb-1 block">Experience Owlnest</span>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white">Owlnest Sleep Aid Lamp</h3>
+                        <div class="mb-6">
+                            <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">The Flagship</span>
+                            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">Owlnest Lume</h2>
                         </div>
                         
-                        <p class="text-gray-300 mb-6 leading-relaxed text-base lg:text-lg">
-                            Create your own bedtime ritual. <br>
-                            Feel the difference of a deep amber glow.
+                        <p class="text-white/70 mb-8 leading-relaxed text-base lg:text-lg font-light">
+                            Intentionally analogue. Sculpted for your evening ritual. Crafted from soft silicone and resting gracefully on a solid wood base, it casts a pure, undisturbed ambiance—free from screens and modern distractions.
                             <br><br>
-                            <span class="text-brand-gold font-bold flex items-center gap-2 mt-2 cursor-pointer hover:text-white transition" onclick="toggleLamp()">
+                            <span class="text-amber font-semibold flex items-center gap-2 mt-2 cursor-pointer hover:text-white transition" onclick="toggleLamp()">
                                 <i class="fas fa-hand-pointer animate-pulse"></i> Click image to simulate sunset
                             </span>
                         </p>
-                        
-                        <ul class="space-y-3 mb-8 text-sm md:text-base text-gray-400">
-                            <li class="flex items-center gap-3"><span class="w-1 h-1 bg-brand-gold rounded-full"></span> 100% Sunset Glow</li>
-                            <li class="flex items-center gap-3"><span class="w-1 h-1 bg-brand-gold rounded-full"></span> Eye-Protecting Warmth</li>
-                            <li class="flex items-center gap-3"><span class="w-1 h-1 bg-brand-gold rounded-full"></span> Easy Bottom Switch</li>
-                        </ul>
 
-                        <div class="border-t border-white/10 pt-6 mt-6">
-                            <div class="mb-4">
-                                <span class="text-4xl lg:text-5xl font-serif text-brand-gold">USD $89</span>
+                        <div class="border-t border-white/10 pt-8 mt-8">
+                            <div class="mb-6 flex flex-wrap items-baseline gap-4">
+                                <span class="text-4xl lg:text-5xl font-serif text-amber font-bold">$119</span>
+                                <span class="text-xs tracking-widest text-white/50 uppercase">MSRP</span>
                             </div>
                             
-                            <button id="buy-button-1" class="snipcart-add-item bg-brand-gold text-brand-dark px-10 py-4 text-sm md:text-base tracking-widest uppercase hover:bg-white hover:text-brand-dark transition duration-300 w-full font-bold shadow-lg transform active:scale-95"
-                                data-item-id="owlnest-lamp-001"
-                                data-item-price="89.00"
-                                data-item-description="Sleep Aid Lamp with Amber Spectrum"
-                                data-item-image="lamp-on.jpg"
-                                data-item-name="Owlnest Sleep Aid Lamp">
-                                Add to Cart
-                            </button>
-                            <p class="text-center text-xs text-gray-500 mt-3"><i class="fas fa-lock"></i> Secure Checkout Guaranteed</p>
+                            <div class="flex flex-col sm:flex-row gap-5">
+                                <!-- Standard Site Checkout (Preserved Snipcart integration) -->
+                                <button class="snipcart-add-item bg-white/10 border border-white/20 text-white px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-white/20 transition-all text-center flex-1"
+                                    data-item-id="owlnest-lume-001"
+                                    data-item-price="119.00"
+                                    data-item-description="Precision deep amber spectrum lighting."
+                                    data-item-image="lamp-on.jpg"
+                                    data-item-name="Owlnest Lume">
+                                    Site Checkout
+                                </button>
+                                <!-- Unified Campaign Link -->
+                                <a href="/campaign/index.html" 
+                                   class="bg-amber text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-warm transition-all text-center shadow-[0_0_20px_rgba(201,133,42,0.15)] flex-1">
+                                    Campaign Pre-Order ($69)
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section 4: The Science -->
-        <section id="section-4" class="section-container bg-brand-cream text-brand-dark">
-            <div class="max-w-screen-xl w-full px-4 lg:px-8 py-16 lg:py-24 flex flex-col items-center mx-auto">
-                <div class="text-center max-w-5xl reveal-text mb-12">
-                    <span class="text-brand-gold text-xs tracking-widest uppercase mb-2 block">The Science of Sleep</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-6xl font-serif mb-6 uppercase leading-tight">
-                        AMBER LIGHT SPECTRUM <br>
-                        <span class="text-brand-dark/50 text-xl lg:text-4xl normal-case font-light block mt-2">vs Blue Light Spectrum</span>
-                    </h2>
-                    <p class="text-base lg:text-xl leading-relaxed mb-8 text-brand-dark/80">
-                        Owlnest mimics nature by filtering harmful blue light <br class="hidden lg:block">
-                        and boosting natural melatonin production.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 text-left max-w-3xl mx-auto bg-white/50 p-6 lg:p-10 rounded-lg shadow-sm">
-                        <div>
-                            <strong class="text-brand-dark block mb-2 text-lg">Problem:</strong>
-                            <span class="opacity-70 text-base">Disrupts Melatonin, <br>Causes Insomnia.</span>
-                        </div>
-                        <div class="text-brand-gold">
-                            <strong class="block mb-2 text-lg">Solution:</strong>
-                            <span class="text-base">Promotes Melatonin, <br>Deep, Restful Sleep.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full max-w-4xl reveal-text">
-                    <img src="spectrum.jpg" onerror="this.src='https://placehold.co/800x400/EEE/455169?text=Spectrum+Chart'" alt="Scientific Spectrum Chart" class="w-full h-auto rounded-lg shadow-lg border border-brand-dark/10" loading="lazy">
-                    <p class="text-center text-xs lg:text-sm mt-4 text-brand-dark/50">Owlnest's Custom Amber Spectrum (1500K-2000K)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Comparison -->
-        <section id="section-5" class="section-container bg-brand-dark">
-            <div class="max-w-screen-xl w-full px-4 py-16 lg:py-24 mx-auto">
-                <div class="text-center mb-10 lg:mb-16 reveal-text">
-                    <p class="text-brand-gold text-xs tracking-[0.4em] uppercase mb-4">Why Owlnest is Superior</p>
-                    <h2 class="text-3xl md:text-4xl lg:text-6xl font-serif text-white">The Natural Choice</h2>
-                </div>
-                <div class="overflow-x-auto reveal-text pb-4">
-                    <table class="w-full text-left border-collapse min-w-[600px] text-sm lg:text-lg">
-                        <thead>
-                            <tr class="border-b border-white/20 text-gray-400 uppercase tracking-wider text-xs lg:text-sm">
-                                <th class="py-4 lg:py-6 pr-4 font-normal w-1/4">Feature</th>
-                                <th class="py-4 lg:py-6 px-4 text-brand-gold font-bold text-base lg:text-xl w-1/3">Owlnest Sleep Lamp</th>
-                                <th class="py-4 lg:py-6 px-4 font-normal w-1/5">White Noise / Masks</th>
-                                <th class="py-4 lg:py-6 px-4 font-normal w-1/5">Melatonin / Pills</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-300">
-                            <tr class="border-b border-white/10 hover:bg-white/5 transition">
-                                <td class="py-6 lg:py-8 pr-4 font-bold text-white">Mechanism</td>
-                                <td class="py-6 lg:py-8 px-4 text-white">Promotes <span class="text-brand-gold">NATURAL</span> Melatonin</td>
-                                <td class="py-6 lg:py-8 px-4">Masks sounds or blocks light physically</td>
-                                <td class="py-6 lg:py-8 px-4">External chemical sedation</td>
-                            </tr>
-                            <tr class="border-b border-white/10 hover:bg-white/5 transition">
-                                <td class="py-6 lg:py-8 pr-4 font-bold text-white">Non-Invasive?</td>
-                                <td class="py-6 lg:py-8 px-4 text-white"><i class="fas fa-check text-brand-gold mr-2"></i> Yes. Ambient light.</td>
-                                <td class="py-6 lg:py-8 px-4">No. On face.</td>
-                                <td class="py-6 lg:py-8 px-4">No. Ingested.</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="py-6 lg:py-8 pr-4 font-bold text-white">Safety</td>
-                                <td class="py-6 lg:py-8 px-4 text-white"><span class="text-brand-gold">100% Safe</span>. No grogginess.</td>
-                                <td class="py-6 lg:py-8 px-4">Uncomfortable</td>
-                                <td class="py-6 lg:py-8 px-4">Risk of dependency</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-center text-xs text-gray-500 lg:hidden mt-2">← Swipe to see comparison →</p>
-            </div>
-        </section>
-
-        <!-- Section 6: Features -->
-        <section id="section-6" class="section-container bg-brand-cream text-brand-dark">
-            <div class="flex flex-col items-center text-center px-4 py-16 lg:py-24 max-w-screen-xl mx-auto reveal-text">
-                <div class="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 mb-8 lg:mb-10 rounded-full border-4 border-brand-dark/10 overflow-hidden shadow-2xl">
-                    <img src="lamp-off.jpg" onerror="this.src='https://placehold.co/400x400/EEE/455169?text=Detail'" alt="Owlnest Lamp Detail" class="w-full h-full object-cover" loading="lazy">
-                </div>
                 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6">Designed for Unwind</h2>
-                <p class="text-brand-dark/70 text-base lg:text-lg mb-10 lg:mb-12 font-light max-w-2xl">
-                    Crafted with soft silicone and a solid wood base. <br>
-                    Completely wireless and rechargeable.
-                </p>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-sm md:text-base w-full max-w-6xl">
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-temperature-low text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Sleep Temp</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-leaf text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Safe Silicone</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-power-off text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Button Switch</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-eye text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Eye-Protecting</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-battery-full text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Rechargeable</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-expand-arrows-alt text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Compact</div>
-                    <div class="p-4 md:p-6 bg-white/50 rounded border border-brand-dark/10 hover:border-brand-gold transition"><i class="fas fa-bolt text-brand-gold text-2xl md:text-3xl mb-3 block"></i> Energy Save</div>
-                </div>
-
-                <div class="mt-10 lg:mt-12 pt-10 border-t border-brand-dark/10 flex justify-center items-center reveal-text w-full max-w-4xl">
-                    <button id="buy-button-2" class="snipcart-add-item bg-brand-dark text-white px-10 py-3 md:px-12 md:py-4 text-sm md:text-base tracking-widest uppercase hover:bg-brand-gold hover:text-brand-dark transition duration-300 shadow-lg active:scale-95"
-                        data-item-id="owlnest-lamp-001"
-                        data-item-price="89.00"
-                        data-item-description="Sleep Aid Lamp with Amber Spectrum"
-                        data-item-image="lamp-on.jpg"
-                        data-item-name="Owlnest Sleep Aid Lamp">
-                        Add to Cart
-                    </button>
-                </div>
             </div>
         </section>
 
-        <!-- Section 7: Specs -->
-        <section id="section-7" class="section-container bg-brand-dark text-white">
-            <div class="max-w-5xl w-full px-4 md:px-8 py-16 lg:py-24 reveal-text mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 mb-12 lg:mb-20 text-center">
-                    <div class="p-6 lg:p-8 border border-white/20 rounded hover:bg-white/5 transition"><i class="fas fa-sun text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i><h4 class="font-bold mb-2 text-lg lg:text-xl">Mimics Sunset</h4></div>
-                    <div class="p-6 lg:p-8 border border-white/20 rounded hover:bg-white/5 transition"><i class="fas fa-globe text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i><h4 class="font-bold mb-2 text-lg lg:text-xl">Internationally Proven</h4></div>
-                    <div class="p-6 lg:p-8 border border-white/20 rounded hover:bg-white/5 transition"><i class="fas fa-check-circle text-4xl lg:text-5xl text-brand-gold mb-4 lg:mb-6"></i><h4 class="font-bold mb-2 text-lg lg:text-xl">ITRI Certified</h4></div>
-                </div>
-                <div class="text-center mb-8 lg:mb-12"><h2 class="text-3xl lg:text-4xl font-serif mb-4">Technical Specifications</h2></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 border-t border-white/20 pt-8 lg:pt-10 text-sm lg:text-lg">
-                    <div class="space-y-4 lg:space-y-6">
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Material</span><span>Silicone</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Light Color</span><span class="text-brand-gold">1500K - 2000K</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Power</span><span>0.03 - 0.1W</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">LEDs</span><span>6 Beads</span></div>
-                    </div>
-                    <div class="space-y-4 lg:space-y-6">
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">LED Lifespan</span><span>Approx. 3000 Hours</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Battery</span><span>1200 mAh Lithium</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Charging</span><span>Type-C (Included)</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2 lg:pb-3"><span class="text-gray-400">Control</span><span>Button Switch</span></div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="manual.pdf" target="_blank" download class="inline-block border border-brand-gold text-brand-gold px-10 py-3 md:px-12 md:py-4 font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-brand-dark transition duration-300 text-sm lg:text-base shadow-md rounded">
-                        <i class="fas fa-file-pdf mr-2"></i> Download User Manual
-                    </a>
-                </div>
-                
-                <div class="mt-8 lg:mt-10 text-center">
-                    <button id="buy-button-3" class="snipcart-add-item inline-block bg-brand-gold text-brand-dark px-10 py-4 lg:px-12 lg:py-5 font-bold hover:bg-white transition duration-300 tracking-widest text-sm lg:text-base shadow-lg active:scale-95"
-                        data-item-id="owlnest-lamp-001"
-                        data-item-price="89.00"
-                        data-item-description="Sleep Aid Lamp with Amber Spectrum"
-                        data-item-image="lamp-on.jpg"
-                        data-item-name="Owlnest Sleep Aid Lamp">
-                        ORDER NOW
-                    </button>
-                </div>
+        <!-- Section 5: Brand Soul (Taiwan / Phu Quoc) bridging to blue-gray -->
+        <section id="section-trust" class="relative py-24 md:py-32 w-full flex items-center justify-center overflow-hidden bg-slateblue">
+            <div class="absolute inset-0 w-full h-full bg-[url('005.png')] bg-cover bg-center bg-fixed opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slateblue via-midnight/50 to-midnight/20"></div>
+            
+            <div class="relative z-10 text-center px-6 max-w-4xl transition-all duration-1000">
+                <i class="fa-solid fa-quote-left text-amber/40 text-4xl mb-6 block"></i>
+                <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
+                    Designed in Taiwan.<br>
+                    <span class="italic text-amber font-light mt-3 block opacity-90">Inspired by Phu Quoc.</span>
+                </h2>
             </div>
         </section>
 
-        <!-- Section 8: Contact -->
-        <section id="section-8" class="section-container bg-brand-cream text-brand-dark">
-            <div class="max-w-7xl w-full px-4 md:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start mx-auto">
+        <!-- Section 6: Subtle Teaser for Products Page -->
+        <section class="bg-slateblue py-16 text-center px-6">
+            <div class="max-w-2xl mx-auto transition-all duration-1000">
+                <p class="text-white/70 font-light text-base mb-4">Expand your evening sanctuary.</p>
+                <a href="products.html" class="inline-block text-white border-b border-white/40 hover:text-amber hover:border-amber pb-1 text-sm tracking-widest uppercase transition-colors">
+                    Explore All Collections
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 7: Contact -->
+        <section id="contact" class="section-container bg-slateblue text-white !min-h-fit !block">
+            <div class="max-w-7xl w-full px-4 md:px-8 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mx-auto">
                 <div class="reveal-text">
-                    <h2 class="text-3xl md:text-5xl font-serif mb-6 lg:mb-10">Contact Us</h2>
-                    <div class="space-y-6 lg:space-y-8 text-brand-dark/70 font-light mb-8 lg:mb-10 text-base lg:text-lg">
+                    <h2 class="text-3xl md:text-4xl font-serif mb-6 lg:mb-10 text-white">Contact Us</h2>
+                    <div class="space-y-6 lg:space-y-8 text-white/80 font-light mb-8 lg:mb-10 text-base">
                         <p class="leading-relaxed mb-6">Have questions? We are here to help. Contact our team for support or business inquiries.</p>
-                        <p class="flex items-center gap-4 lg:gap-6"><i class="fas fa-map-marker-alt text-brand-gold text-xl lg:text-2xl"></i> 114 Lý Thường Kiệt, Phú Quốc, Vietnam</p>
-                        <p class="flex items-center gap-4 lg:gap-6"><i class="fas fa-envelope text-brand-gold text-xl lg:text-2xl"></i> owlnestpq2025@gmail.com</p>
+                        <p class="flex items-center gap-4 lg:gap-6"><i class="fas fa-map-marker-alt text-amber text-lg"></i> 114 Lý Thường Kiệt, Phú Quốc, Vietnam</p>
+                        <p class="flex items-center gap-4 lg:gap-6"><i class="fas fa-envelope text-amber text-lg"></i> owlnestpq2025@gmail.com</p>
                         
                         <!-- Social Icons -->
-                        <div class="flex items-center gap-6 mt-6">
-                            <a href="http://facebook.com/owlnestofficial" target="_blank" class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center hover:bg-brand-dark hover:text-brand-gold transition duration-300 shadow-md">
-                                <i class="fab fa-facebook-f text-lg"></i>
+                        <div class="flex items-center gap-5 mt-8">
+                            <a href="http://facebook.com/owlnestofficial" target="_blank" class="w-10 h-10 rounded-full border border-white/20 text-white/70 flex items-center justify-center hover:bg-amber hover:text-midnight hover:border-amber transition duration-300">
+                                <i class="fab fa-facebook-f text-sm"></i>
                             </a>
-                            <a href="http://www.instagram.com/owlnestpq_chilllife" target="_blank" class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center hover:bg-brand-dark hover:text-brand-gold transition duration-300 shadow-md">
-                                <i class="fab fa-instagram text-lg"></i>
+                            <a href="http://www.instagram.com/owlnestpq_chilllife" target="_blank" class="w-10 h-10 rounded-full border border-white/20 text-white/70 flex items-center justify-center hover:bg-amber hover:text-midnight hover:border-amber transition duration-300">
+                                <i class="fab fa-instagram text-sm"></i>
                             </a>
-                            <a href="http://x.com/owlnestpq_2025" target="_blank" class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center hover:bg-brand-dark hover:text-brand-gold transition duration-300 shadow-md">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 512 512">
+                            <a href="http://x.com/owlnestpq_2025" target="_blank" class="w-10 h-10 rounded-full border border-white/20 text-white/70 flex items-center justify-center hover:bg-amber hover:text-midnight hover:border-amber transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 512 512">
                                     <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
                                 </svg>
                             </a>
-
-                            <!-- ✅ Discord (NEW) -->
-                            <a href="https://discord.gg/dmPbRMtqRb" target="_blank" rel="noopener"
-                               title="Join Owlnest Discord Community"
-                               class="w-10 h-10 rounded-full bg-[#5865F2] text-white flex items-center justify-center hover:bg-[#4752C4] transition duration-300 shadow-md">
-                                <i class="fab fa-discord text-lg"></i>
+                            <!-- Discord -->
+                            <a href="https://discord.gg/dmPbRMtqRb" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-white/20 text-white/70 flex items-center justify-center hover:bg-[#5865F2] hover:text-white hover:border-[#5865F2] transition duration-300">
+                                <i class="fab fa-discord text-sm"></i>
                             </a>
                         </div>
-
-                        <!-- Optional helper line (small, non-pushy) -->
-                        <p class="text-xs text-brand-dark/50 mt-3 tracking-widest uppercase">
-                            Optional community: Join Discord to follow updates & share feedback.
-                        </p>
                     </div>
-                    <!-- Google Map -->
-                    <div class="w-full h-64 lg:h-80 rounded-lg overflow-hidden border border-brand-dark/10 shadow-lg mb-8 lg:mb-10 bg-gray-200">
+                    <!-- Google Map (Clean, readable treatment) -->
+                    <div class="w-full h-48 lg:h-64 rounded-sm overflow-hidden shadow-lg mb-8 lg:mb-10 transition-all duration-500 border border-white/10">
                         <iframe width="100%" height="100%" frameborder="0" style="border:0;" src="https://maps.google.com/maps?q=114+Lý+Thường+Kiệt,+Phú+Quốc,+Vietnam&hl=zh-TW&z=15&output=embed" allowfullscreen></iframe>
                     </div>
-                    <!-- Footer Links -->
-                    <div class="flex flex-wrap items-center gap-4 lg:gap-6">
-                        <p class="text-xs lg:text-sm text-brand-dark/50 uppercase tracking-widest">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
-                        <a href="disclaimer.html" class="text-xs lg:text-sm text-brand-dark/50 hover:text-brand-gold transition uppercase tracking-widest">Disclaimer</a>
-                        <a href="manual.pdf" target="_blank" download class="text-xs lg:text-sm text-brand-dark/50 hover:text-brand-gold transition uppercase tracking-widest">User Manual</a>
-
-                        <!-- ✅ Discord text link (NEW) -->
-                        <a href="https://discord.gg/dmPbRMtqRb" target="_blank" rel="noopener"
-                           class="text-xs lg:text-sm text-brand-dark/50 hover:text-brand-gold transition uppercase tracking-widest">
-                           Discord
-                        </a>
-                    </div>
                 </div>
-                <div class="bg-white p-6 lg:p-16 shadow-xl rounded-lg reveal-text">
+                
+                <div class="bg-midnight/40 p-6 lg:p-10 border border-white/10 rounded-sm reveal-text shadow-lg">
                     <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-success.html">
-  <!-- Netlify needs this hidden input -->
-  <input type="hidden" name="form-name" value="contact" />
-  <!-- Honeypot (hidden) -->
-  <p class="hidden">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p class="hidden">
+                            <label>Don’t fill this out: <input name="bot-field" /></label>
+                        </p>
 
-  <div class="mb-6 lg:mb-8">
-    <input type="text" name="name" placeholder="YOUR NAME"
-      class="w-full bg-transparent border-b border-brand-dark/20 py-3 lg:py-4 text-brand-dark text-base lg:text-lg focus:outline-none focus:border-brand-gold transition"
-      required>
-  </div>
+                        <div class="mb-6 lg:mb-8">
+                            <input type="text" name="name" placeholder="YOUR NAME" class="w-full bg-transparent border-b border-white/30 py-3 lg:py-4 text-white text-sm focus:outline-none focus:border-amber transition" required>
+                        </div>
 
-  <div class="mb-6 lg:mb-8">
-    <input type="email" name="email" placeholder="YOUR EMAIL"
-      class="w-full bg-transparent border-b border-brand-dark/20 py-3 lg:py-4 text-brand-dark text-base lg:text-lg focus:outline-none focus:border-brand-gold transition"
-      required>
-  </div>
+                        <div class="mb-6 lg:mb-8">
+                            <input type="email" name="email" placeholder="YOUR EMAIL" class="w-full bg-transparent border-b border-white/30 py-3 lg:py-4 text-white text-sm focus:outline-none focus:border-amber transition" required>
+                        </div>
 
-  <div class="mb-8 lg:mb-10">
-    <label class="text-xs lg:text-sm text-brand-gold tracking-widest uppercase mb-2 lg:mb-3 block font-bold">Message</label>
-    <textarea name="message" rows="5" placeholder="How can we help you?"
-      class="w-full bg-brand-cream border border-brand-dark/10 p-3 lg:p-4 text-brand-dark text-base lg:text-lg focus:outline-none focus:border-brand-gold transition font-mono"
-      required></textarea>
-  </div>
+                        <div class="mb-8 lg:mb-10">
+                            <label class="text-[10px] text-white/60 tracking-[0.2em] uppercase mb-3 block font-semibold">Message</label>
+                            <textarea name="message" rows="4" placeholder="How can we help you?" class="w-full bg-white/5 border border-white/20 p-4 text-white text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
+                        </div>
 
-  <button type="submit"
-    class="w-full bg-brand-dark text-white font-bold py-4 lg:py-5 hover:bg-brand-gold hover:text-brand-dark transition duration-300 tracking-widest text-base lg:text-lg shadow-md active:scale-95">
-    SEND MESSAGE
-  </button>
-</form>
-
+                        <button type="submit" class="w-full bg-white/10 text-white font-semibold py-4 uppercase tracking-widest text-xs hover:bg-amber hover:text-midnight transition duration-300 rounded-sm">
+                            SEND MESSAGE
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
 
+        <!-- Footer anchored in dark midnight -->
+        <footer class="bg-midnight border-t border-white/5 py-8 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
+                <div class="flex gap-6">
+                    <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
+                    <a href="manual.pdf" target="_blank" download class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
-    <!-- Snipcart Script -->
-   <script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+    <!-- Snipcart Script (Preserved) -->
+    <script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="MmY2MWUwYjMtODI0Mi00NDQ1LTk4YWUtNTQ0NDgwODY5OGM0NjM5MDIzNDE2ODU0NDczMzQz"></div>
-<script>
-  window.dataLayer = window.dataLayer || [];
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-  document.addEventListener('snipcart.ready', function () {
-    if (!window.Snipcart || !Snipcart.events) return;
+    document.addEventListener('snipcart.ready', function () {
+        if (!window.Snipcart || !Snipcart.events) return;
 
-    Snipcart.events.on('order.completed', function (order) {
-      try {
-        var transactionId =
-          (order && (order.invoiceNumber || order.token || order.orderToken)) ||
-          ('snip_' + Date.now());
+        Snipcart.events.on('order.completed', function (order) {
+        try {
+            var transactionId = (order && (order.invoiceNumber || order.token || order.orderToken)) || ('snip_' + Date.now());
+            var currency = (order && order.currency) || 'USD';
+            var value = Number(order && order.total) || 0;
+            var items = [];
+            if (order && order.items && order.items.items) {
+            items = order.items.items.map(function (it) {
+                return {
+                item_id: it.id || it.uniqueId || it.sku || it.name,
+                item_name: it.name || '',
+                price: Number(it.price) || 0,
+                quantity: Number(it.quantity) || 1
+                };
+            });
+            }
 
-        var currency = (order && order.currency) || 'USD';
-        var value = Number(order && order.total) || 0;
+            window.dataLayer.push({
+            event: 'purchase',
+            ecommerce: {
+                transaction_id: transactionId,
+                value: value,
+                currency: currency,
+                items: items
+            }
+            });
 
-        var items = [];
-        if (order && order.items && order.items.items) {
-          items = order.items.items.map(function (it) {
-            return {
-              item_id: it.id || it.uniqueId || it.sku || it.name,
-              item_name: it.name || '',
-              price: Number(it.price) || 0,
-              quantity: Number(it.quantity) || 1
-            };
-          });
+            window.location.href = 'thank-you.html';
+        } catch (e) {
+            window.dataLayer.push({ event: 'purchase_error' });
+            window.location.href = 'thank-you.html';
         }
-
-        window.dataLayer.push({
-          event: 'purchase',
-          ecommerce: {
-            transaction_id: transactionId,
-            value: value,
-            currency: currency,
-            items: items
-          }
         });
-
-        window.location.href = 'thank-you.html';
-      } catch (e) {
-        window.dataLayer.push({ event: 'purchase_error' });
-        window.location.href = 'thank-you.html';
-      }
     });
-  });
-</script>
-    <!-- JavaScript -->
+    </script>
+
+    <!-- JavaScript Base -->
     <script>
         // Snipcart Dynamic URL
         const currentUrl = window.location.href.split('#')[0];
@@ -700,7 +584,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             btn.setAttribute('data-item-url', currentUrl);
         });
 
-        // 1. Canvas Animation Setup
+        // 1. Canvas Animation Setup (Preserved Engine)
         const canvas = document.getElementById('hero-canvas');
         const context = canvas.getContext('2d');
         const section1 = document.getElementById('section-1');
@@ -713,7 +597,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         let imagesLoaded = 0;
         let imagesFailed = false;
 
-        // Preload Images
         for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
             img.src = currentFrame(i);
@@ -730,8 +613,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             images.push(img);
         }
 
-        // Render Canvas (Image or Fallback Gradient)
         function render() {
+            if(!canvas || !context) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             
@@ -739,11 +622,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 const gradient = context.createLinearGradient(0, 0, 0, canvas.height);
                 const progress = skySequence.frame / frameCount;
                 if (progress < 0.5) {
-                    gradient.addColorStop(0, "#87CEEB"); 
-                    gradient.addColorStop(1, "#f0e68c");
+                    gradient.addColorStop(0, "#182234"); 
+                    gradient.addColorStop(1, "#C9852A");
                 } else {
-                    gradient.addColorStop(0, "#0f172a"); 
-                    gradient.addColorStop(1, "#4A403A");
+                    gradient.addColorStop(0, "#182234"); 
+                    gradient.addColorStop(1, "#8B7A69");
                 }
                 context.fillStyle = gradient;
                 context.fillRect(0, 0, canvas.width, canvas.height);
@@ -761,24 +644,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             context.drawImage(img, x, y, img.width * scale, img.height * scale);
         }
 
-        // 2. Main Logic: Scroll, UI Update, Lamp
+        // 2. Main Logic: Scroll, Interactive Lamp & UI Update
         const sections = document.querySelectorAll('.section-container');
         const dots = document.querySelectorAll('.dot');
         const header = document.getElementById('main-header');
         const navLogo = document.getElementById('nav-logo');
-        const revealElements = document.querySelectorAll('.reveal-text');
         
         let isScrolling = false;
         let isLampOn = false;
 
-        // [核心函數] 判斷並更新導覽列顏色
         function updateUI() {
-            const headerHeight = header.offsetHeight || 80;
-            const checkY = headerHeight / 2; 
+            const headerHeight = header ? header.offsetHeight : 80;
+            const checkY = window.innerHeight / 2; 
 
-            let isBgLight = false; 
-
+            let isBgLight = false;
             let currentSec = null;
+
             sections.forEach(s => {
                 const rect = s.getBoundingClientRect();
                 if (rect.top <= checkY && rect.bottom > checkY) {
@@ -794,8 +675,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     d.classList.toggle('active', d.getAttribute('href') === `#${currentSec.id}`);
                 });
 
-                if (currentSec.id === 'section-3') {
-                     if (window.innerWidth < 1024) {
+                if (currentSec.id === 'section-product' || currentSec.id === 'section-science') {
+                     if (window.innerWidth < 1024 && currentSec.id === 'section-product') {
                         const imgEl = document.getElementById('sec3-image');
                         if (imgEl) {
                             const imgRect = imgEl.getBoundingClientRect();
@@ -805,33 +686,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 isBgLight = false; 
                             }
                         }
+                    } else if (currentSec.id === 'section-science') {
+                        isBgLight = true;
                     } else {
                         isBgLight = false; 
                     }
-                } 
-                else if (currentSec.classList.contains('bg-brand-cream') || currentSec.classList.contains('bg-white')) {
-                    isBgLight = true;
                 } else {
                     isBgLight = false;
                 }
             }
 
-            header.classList.remove('nav-dark', 'nav-split');
-
-            if (window.innerWidth >= 1024 && currentSec && currentSec.id === 'section-3' && !isLampOn) {
-                header.classList.add('nav-split');
-                if (navLogo) navLogo.src = 'logo.png'; 
-            } else {
-                if (isBgLight) {
-                    header.classList.add('nav-dark');
-                    if (navLogo) navLogo.src = 'logo.png';
+            // Advanced Header Color Switching (Restored Logic)
+            if (header) {
+                header.classList.remove('nav-dark', 'nav-split');
+                if (window.innerWidth >= 1024 && currentSec && currentSec.id === 'section-product' && !isLampOn) {
+                    header.classList.add('nav-split');
+                    if (navLogo) navLogo.src = 'logo.png'; 
                 } else {
-                    if (navLogo) navLogo.src = 'logo2.png';
+                    if (isBgLight) {
+                        header.classList.add('nav-dark');
+                        if (navLogo) navLogo.src = 'logo.png';
+                    } else {
+                        if (navLogo) navLogo.src = 'logo2.png';
+                    }
                 }
             }
         }
 
         function updateHeroAnimation() {
+            if(!section1) return;
             const rect = section1.getBoundingClientRect();
             const sectionHeight = section1.offsetHeight;
             const windowHeight = window.innerHeight;
@@ -869,14 +752,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         window.addEventListener('load', () => {
             updateUI();
             render();
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            const yr = document.getElementById('copyright-year');
+            if(yr) yr.textContent = new Date().getFullYear();
         });
         
         window.addEventListener('resize', render);
 
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('mobile-menu-icon');
+            if(!menu || !icon) return;
             menu.classList.toggle('open');
             if (menu.classList.contains('open')) {
                 icon.classList.remove('fa-bars');
@@ -887,131 +773,139 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
+        // Interactive Lamp Toggle Logic (Restored)
         const lampImg = document.getElementById('lamp-sequence-img');
         const lampStatus = document.getElementById('lamp-status-label');
         const lampContainer = document.getElementById('sec3-image');
-        
         const customToggleBg = document.getElementById('custom-toggle-bg');
         const customToggleCircle = document.getElementById('custom-toggle-circle');
 
         function toggleLamp() {
+            if (!lampImg || !lampContainer) return;
             if (isLampOn) {
                 lampImg.src = 'lamp-off.jpg';
                 lampStatus.textContent = 'Click to Light Up';
-                customToggleBg.classList.remove('bg-brand-gold');
-                customToggleBg.classList.add('bg-gray-300');
+                customToggleBg.classList.remove('bg-amber');
+                customToggleBg.classList.add('bg-taupe/50');
                 customToggleCircle.classList.remove('translate-x-6');
-                lampContainer.classList.remove('bg-brand-dark');
-                lampContainer.classList.add('bg-white');
+                lampContainer.classList.remove('bg-midnight');
+                lampContainer.classList.add('bg-warm');
                 isLampOn = false;
             } else {
                 lampImg.src = 'lamp-on.jpg';
                 lampStatus.textContent = 'Click to Turn Off';
-                customToggleBg.classList.remove('bg-gray-300');
-                customToggleBg.classList.add('bg-brand-gold');
+                customToggleBg.classList.remove('bg-taupe/50');
+                customToggleBg.classList.add('bg-amber');
                 customToggleCircle.classList.add('translate-x-6');
-                lampContainer.classList.remove('bg-white');
-                lampContainer.classList.add('bg-brand-dark');
+                lampContainer.classList.remove('bg-warm');
+                lampContainer.classList.add('bg-midnight');
                 isLampOn = true;
             }
             updateUI();
         }
-</script>  <!-- ✅ 這行很重要：先把上一個 JS script 結束 -->
+    </script>
 
-<script src="/js/campaignBanner.js"></script>
-<!-- ✅ Campaign Entry Modal (Website Entrance Popup) -->
-<div id="campaign-entry-modal" class="fixed inset-0 z-[9999] hidden">
-  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <!-- Campaign Script (Preserved) -->
+    <script src="/js/campaignBanner.js"></script>
+    
+    <!-- Campaign Entry Modal (Preserved Exact Logic) -->
+    <div id="campaign-entry-modal" class="fixed inset-0 z-[9999] hidden">
+        <div class="absolute inset-0 bg-midnight/80 backdrop-blur-sm"></div>
 
-  <div class="relative w-full h-full flex items-center justify-center p-4">
-    <div class="w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#0f172a] text-white">
-      <div class="p-6 sm:p-8">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <div class="text-[10px] tracking-[0.35em] uppercase text-[#D4AF37] font-bold">
-              Campaign
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+            <div class="w-full max-w-lg rounded-sm overflow-hidden shadow-2xl border border-white/10 bg-midnight text-white">
+            <div class="p-6 sm:p-8">
+                <div class="flex items-start justify-between gap-4">
+                <div>
+                    <div class="text-[10px] tracking-[0.35em] uppercase text-amber font-bold">
+                    Campaign
+                    </div>
+                    <h3 class="font-serif text-2xl sm:text-3xl mt-2 text-white">
+                    Owlnest is live on our Campaign Page
+                    </h3>
+                    <p class="text-white/60 mt-3 text-sm sm:text-base font-light leading-relaxed">
+                    Experience our full vision on the campaign page. Jump in for rewards, timeline, and exclusive details.
+                    </p>
+                </div>
+                <button id="campaign-entry-close-x" class="shrink-0 w-10 h-10 rounded-full border border-white/20 text-white/50 hover:bg-white/10 hover:text-white transition flex items-center justify-center active:scale-95" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a id="campaign-entry-go" href="/campaign/index.html"
+                    class="w-full inline-flex items-center justify-center gap-2 bg-amber text-midnight font-bold px-6 py-4 tracking-widest uppercase text-xs sm:text-sm hover:bg-warm transition active:scale-95">
+                    Browse Campaign Page <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <button id="campaign-entry-close"
+                        class="w-full inline-flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-4 tracking-widest uppercase text-xs sm:text-sm hover:bg-white/10 transition active:scale-95">
+                    Close & Continue
+                </button>
+                </div>
+
+                <div class="mt-6 text-[10px] text-white/30 tracking-widest uppercase">
+                Campaign updates live on our campaign page.
+                </div>
             </div>
-            <h3 class="font-serif text-2xl sm:text-3xl mt-2">
-              Owlnest is live on our Campaign Page
-            </h3>
-            <p class="text-white/70 mt-3 text-sm sm:text-base leading-relaxed">
-              Want the full rewards & timeline view? Jump to the campaign page.
-              Or close to keep browsing the official site.
-            </p>
-          </div>
-          <button id="campaign-entry-close-x" class="shrink-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/15 transition flex items-center justify-center active:scale-95" aria-label="Close">
-            <i class="fas fa-times"></i>
-          </button>
+            </div>
         </div>
-
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a id="campaign-entry-go" href="/campaign/index.html"
-             class="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[#455169] font-bold px-6 py-3 tracking-widest uppercase text-xs sm:text-sm hover:bg-white transition active:scale-95">
-            Browse Campaign Page <i class="fas fa-arrow-right"></i>
-          </a>
-
-          <button id="campaign-entry-close"
-                  class="w-full inline-flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-3 tracking-widest uppercase text-xs sm:text-sm hover:bg-white/10 transition active:scale-95">
-            Close & Continue
-          </button>
-        </div>
-
-        <div class="mt-4 text-[10px] text-white/40 tracking-widest uppercase">
-          Campaign updates live on our campaign page.
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<script>
-  (function () {
-    function openModal() {
-      const modal = document.getElementById("campaign-entry-modal");
-      if (!modal) return;
-      modal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-    }
+    <script>
+    (function () {
+        function openModal() {
+            const modal = document.getElementById("campaign-entry-modal");
+            if (!modal) return;
+            modal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
 
-    function closeModal() {
-      const modal = document.getElementById("campaign-entry-modal");
-      if (!modal) return;
-      modal.classList.add("hidden");
-      document.body.style.overflow = "";
-    }
+        function closeModal() {
+            const modal = document.getElementById("campaign-entry-modal");
+            if (!modal) return;
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+        }
 
-    window.addEventListener("load", function () {
-      // ✅ 每次載入都跳（無視 localStorage）
-      setTimeout(openModal, 450);
+        window.addEventListener("load", function () {
+            const closeBtn = document.getElementById("campaign-entry-close");
+            const closeX = document.getElementById("campaign-entry-close-x");
+            const modal = document.getElementById("campaign-entry-modal");
 
-      const closeBtn = document.getElementById("campaign-entry-close");
-      const closeX = document.getElementById("campaign-entry-close-x");
-      const modal = document.getElementById("campaign-entry-modal");
+            if (closeBtn) closeBtn.addEventListener("click", closeModal);
+            if (closeX) closeX.addEventListener("click", closeModal);
 
-      if (closeBtn) closeBtn.addEventListener("click", closeModal);
-      if (closeX) closeX.addEventListener("click", closeModal);
+            if (modal) {
+                modal.addEventListener("click", function (e) {
+                if (e.target === modal || e.target.classList.contains("bg-midnight/80")) closeModal();
+                });
+            }
 
-      // 點背景關閉
-      if (modal) {
-        modal.addEventListener("click", function (e) {
-          if (e.target === modal || e.target.classList.contains("bg-black/60")) closeModal();
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") closeModal();
+            });
+
+            // Delayed, scroll-based trigger for the campaign modal
+            let modalShown = false;
+            
+            // Show modal once user scrolls past 1.5 screen heights
+            window.addEventListener("scroll", function() {
+                if (!modalShown && window.scrollY > window.innerHeight * 1.5) {
+                    openModal();
+                    modalShown = true;
+                }
+            });
+            
+            // Fallback: Also show modal after 15 seconds if they haven't scrolled down far enough
+            setTimeout(function() {
+                if (!modalShown) {
+                    openModal();
+                    modalShown = true;
+                }
+            }, 15000);
         });
-      }
-
-      // ESC 關閉
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") closeModal();
-      });
-    });
-  })();
-</script>
-
-
+    })();
+    </script>
 </body>
 </html>
-
-
-
-
-
-

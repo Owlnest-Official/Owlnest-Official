@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+</script>
+<!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Owlnest Lume</title>
+    <meta name="description" content="Discover the Owlnest collection. A calm curation of precision lighting and natural scents designed for better evenings.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Snipcart CSS -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Manrope"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        midnight: '#182234', 
+                        amber: '#C9852A',
+                        warm: '#F2EBDD',
+                        slateblue: '#51627A',
+                        taupe: '#8B7A69'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        body { 
+            margin: 0;
+            overflow-x: hidden; 
+            background-color: #182234;
+            color: #ffffff;
+        }
+
+        /* Reveal Animations */
+        .reveal-text {
+            opacity: 0; 
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        #mobile-menu { 
+            transform: translateY(-100%); 
+            transition: transform 0.4s ease-in-out; 
+        }
+        #mobile-menu.open { 
+            transform: translateY(0); 
+        }
+
+        /* Snipcart Customization */
+        #snipcart {
+            --color-modal-bg: #182234; 
+            --color-button-primary: #C9852A; 
+            --color-button-primary-hover: #b57624; 
+            --color-button-primary-text: #182234; 
+        }
+
+        /* Dynamic Header Color Switching Classes */
+        #main-header {
+            transition: background-color 0.4s ease, border-color 0.4s ease;
+        }
+        #main-header.nav-dark {
+            background-color: rgba(242, 235, 221, 0.95) !important;
+            border-bottom-color: rgba(24, 34, 52, 0.1) !important;
+        }
+        #main-header.nav-dark .logo-area span,
+        #main-header.nav-dark nav a,
+        #main-header.nav-dark .flex a i,
+        #main-header.nav-dark .flex button i {
+            color: #182234 !important;
+        }
+        #main-header.nav-dark .border-white\/10 {
+            border-color: rgba(24, 34, 52, 0.2) !important;
+        }
+    </style>
+</head>
+<body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
+<!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header / Navbar -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <div class="logo-area flex items-center gap-3 relative z-50">
+             <a href="index.html" class="flex items-center gap-3">
+                 <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+                 <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+             </a>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="index.html" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="products.html" class="text-amber transition-colors duration-300 border-b border-amber pb-1">Products</a>
+                <a href="science.html" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="about.html" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="index.html#contact" class="hover:text-amber transition-colors duration-300">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <button class="relative group snipcart-checkout text-white/60 hover:text-amber transition-colors">
+                    <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
+                    <span class="snipcart-items-count absolute -top-2 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <div class="flex lg:hidden items-center gap-5 relative z-50">
+            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <button class="relative active:scale-95 transition snipcart-checkout text-white/80 hover:text-amber">
+                <i class="fas fa-shopping-bag text-xl transition-colors duration-300"></i>
+                <span class="snipcart-items-count absolute -top-1 -right-2 bg-amber text-midnight text-[9px] font-bold px-1.5 py-0.5 rounded-full">0</span>
+            </button>
+            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-semibold text-center">
+            <a href="account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
+                <i class="fas fa-user"></i> Member Login
+            </a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="index.html" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="products.html" class="text-amber transition-colors">Products</a>
+            <a href="science.html" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="about.html" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="index.html#contact" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-40 pb-24 md:pt-56 md:pb-32 px-6 bg-midnight text-center overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slateblue/20 via-midnight to-midnight pointer-events-none"></div>
+            <div class="relative z-10 max-w-3xl mx-auto reveal-text visible">
+                <span class="text-amber tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block font-bold">The Owlnest Collection</span>
+                <h1 class="text-4xl md:text-6xl font-serif text-white leading-tight mb-8">
+                    A calm curation designed <br>for better evenings.
+                </h1>
+                <p class="font-sans text-lg md:text-xl font-light text-white/60 leading-relaxed">
+                    Explore our flagship lighting and upcoming sensory additions. Simple, effective ways to wind down and prepare for rest.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Flagship: Owlnest Lume -->
+        <section id="section-flagship" class="py-24 md:py-32 px-6 bg-warm text-midnight border-t border-taupe/10 section-light">
+            <div class="max-w-7xl mx-auto reveal-text">
+                <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                    
+                    <!-- Product Visual -->
+                    <div class="w-full lg:w-1/2">
+                        <div class="aspect-square md:aspect-[4/5] overflow-hidden rounded-sm shadow-2xl relative bg-white group">
+                            <img src="lamp-on.jpg" alt="Owlnest Lume" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                            <div class="absolute inset-0 ring-1 ring-inset ring-midnight/5 pointer-events-none"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Details -->
+                    <div class="w-full lg:w-1/2 text-left">
+                        <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Flagship Lighting</span>
+                        <h2 class="font-serif text-4xl md:text-6xl text-midnight mb-6 leading-tight">Owlnest Lume</h2>
+                        <p class="text-xl md:text-2xl text-midnight/80 mb-10 font-light leading-relaxed">
+                            A screen-free light designed to help you wind down.
+                        </p>
+
+                        <ul class="space-y-5 mb-12">
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-sun text-amber mt-1 text-sm"></i>
+                                <span class="font-light text-midnight/80 leading-relaxed"><strong class="font-semibold text-midnight">Deep Amber Glow:</strong> 1500K-1800K warm light that respects your body's natural evening rhythm.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-power-off text-amber mt-1 text-sm"></i>
+                                <span class="font-light text-midnight/80 leading-relaxed"><strong class="font-semibold text-midnight">Screen-Free Interaction:</strong> Simple, tactile controls help you disconnect from digital noise before bed.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-leaf text-amber mt-1 text-sm"></i>
+                                <span class="font-light text-midnight/80 leading-relaxed"><strong class="font-semibold text-midnight">Thoughtful Design:</strong> Crafted with a solid wood base, soft silicone dome, and a fully cordless, rechargeable battery.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-white border border-taupe/20 p-6 rounded-sm mb-10 shadow-sm">
+                            <div class="flex flex-wrap items-baseline gap-4 mb-2">
+                                <span class="text-3xl md:text-4xl font-serif text-amber font-bold">$69</span>
+                                <span class="text-xs tracking-widest text-white uppercase bg-amber px-2 py-1 font-bold rounded-sm">Campaign Price</span>
+                            </div>
+                            <div class="flex flex-wrap items-baseline gap-4">
+                                <span class="text-lg md:text-xl font-serif text-midnight font-bold">$119</span>
+                                <span class="text-xs tracking-widest text-taupe uppercase">Standard Site MSRP</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <!-- Site Checkout -->
+                            <button class="snipcart-add-item border border-midnight/20 text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors text-center flex-1 rounded-sm"
+                                data-item-id="owlnest-lume-001"
+                                data-item-price="119.00"
+                                data-item-description="Precision deep amber spectrum lighting."
+                                data-item-image="lamp-on.jpg"
+                                data-item-name="Owlnest Lume">
+                                Buy on Site ($119)
+                            </button>
+                            <!-- Campaign Checkout -->
+                            <a href="/campaign/index.html" 
+                               class="bg-amber text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-[#b57624] transition-colors text-center flex-1 rounded-sm shadow-lg">
+                                View Campaign ($69)
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Collections Preview -->
+        <section class="py-24 md:py-32 px-6 bg-midnight border-t border-white/5">
+            <div class="max-w-7xl mx-auto reveal-text">
+                <div class="text-center mb-16">
+                    <span class="text-white/40 tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Future Additions</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-white">Expanding the Sanctuary</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    
+                    <!-- Agarwood -->
+                    <div class="bg-[#121a28] border border-white/5 rounded-sm p-6 group relative overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden mb-6 relative bg-midnight/50 rounded-sm">
+                            <img src="emotional.png" onerror="this.src='015.png'" alt="The Scent Sanctuary" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-midnight/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-midnight/90 border border-taupe/30 text-taupe px-3 py-1 text-[9px] tracking-[0.2em] uppercase font-bold rounded-sm backdrop-blur-md">In Development</span>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-2">The Scent Sanctuary</h3>
+                        <p class="font-sans font-light text-sm text-white/50 leading-relaxed">Authentic Phu Quoc agarwood incense, traditionally used to center the mind and create a calming evening atmosphere.</p>
+                    </div>
+
+                    <!-- Botanical Oils -->
+                    <div class="bg-[#121a28] border border-white/5 rounded-sm p-6 group relative overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden mb-6 relative bg-midnight/50 rounded-sm">
+                            <img src="science.png" onerror="this.src='008.png'" alt="Botanical Oils" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-midnight/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-amber/90 border border-amber text-midnight px-3 py-1 text-[9px] tracking-[0.2em] uppercase font-bold rounded-sm shadow-sm">Coming Soon</span>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-2">Botanical Oils</h3>
+                        <p class="font-sans font-light text-sm text-white/50 leading-relaxed">Natural essential oil blends crafted to relax the senses and signal that the day is done.</p>
+                    </div>
+
+                    <!-- Lume Travel -->
+                    <div class="bg-[#121a28] border border-white/5 rounded-sm p-6 group relative overflow-hidden">
+                        <div class="aspect-[4/3] overflow-hidden mb-6 relative bg-midnight/50 rounded-sm">
+                            <img src="002.png" onerror="this.src='lamp-off.jpg'" alt="Lume Travel" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute inset-0 bg-midnight/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-midnight/90 border border-taupe/30 text-taupe px-3 py-1 text-[9px] tracking-[0.2em] uppercase font-bold rounded-sm backdrop-blur-md">Concept</span>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white mb-2">Lume Travel</h3>
+                        <p class="font-sans font-light text-sm text-white/50 leading-relaxed">A compact version of our amber light, so you can maintain your evening routine in hotels or on the road.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Guided Selection -->
+        <section class="py-24 px-6 bg-slateblue text-white border-t border-white/5 text-center">
+            <div class="max-w-4xl mx-auto reveal-text">
+                <h2 class="font-serif text-3xl md:text-4xl mb-12">How to build your evening routine</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <h4 class="text-amber font-bold tracking-widest text-xs uppercase mb-3 border-b border-white/20 pb-2">For Environmental Light</h4>
+                        <p class="font-light text-sm text-white/80 leading-relaxed">Replace bright bedside lamps with <strong class="text-white font-medium">Owlnest Lume</strong> to lower the light in your room and signal to your body that it's time to rest.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-amber font-bold tracking-widest text-xs uppercase mb-3 border-b border-white/20 pb-2">For Grounding the Mind</h4>
+                        <p class="font-light text-sm text-white/80 leading-relaxed">Light our <strong class="text-white font-medium">agarwood incense</strong> when you need to step away from the day's stress and create a quiet moment for yourself.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-amber font-bold tracking-widest text-xs uppercase mb-3 border-b border-white/20 pb-2">For the Nomad</h4>
+                        <p class="font-light text-sm text-white/80 leading-relaxed">Pack <strong class="text-white font-medium">Lume Travel</strong> to bring a warm, familiar glow with you and avoid harsh hotel lighting before bed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 px-6 bg-[#111927] text-white border-t border-white/5">
+            <div class="max-w-6xl mx-auto reveal-text">
+                <div class="text-center mb-14">
+                    <span class="text-white/40 tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Customer Reviews</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight">Leave a real review</h2>
+                    <p class="font-sans text-base md:text-lg font-light text-white/60 leading-relaxed max-w-2xl mx-auto mt-6">
+                        Visitors can submit real feedback here. Reviews appear on the page after submission, and each entry must pass a simple number check to reduce spam.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-stretch">
+                    <div class="border border-white/10 bg-white/5 rounded-sm p-8 md:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-6 text-amber">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl text-white mb-4">Submit a product review</h3>
+                            <p class="font-sans text-base md:text-lg font-light text-white/70 leading-relaxed mb-6">
+                                If you have experienced Owlnest Lume, you can leave a comment about bedtime atmosphere, ease of use, nighttime comfort, and overall design satisfaction.
+                            </p>
+                        </div>
+                        <div class="border-t border-white/10 pt-6">
+                            <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 mb-2">Review policy</p>
+                            <p class="font-sans text-sm text-white/60 leading-relaxed">Reviews can appear immediately after submission. Spam, duplicate entries, and abusive content may still be removed later.</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-white/10 bg-midnight/50 rounded-sm p-6 md:p-8">
+                        <div id="review-list-shell" class="mb-8">
+                            <div class="flex items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 font-bold">Latest Reviews</p>
+                                    <h3 class="font-serif text-2xl text-white mt-2">What customers are saying</h3>
+                                </div>
+                                <button type="button" id="review-refresh" class="text-xs tracking-[0.14em] uppercase text-amber hover:text-white transition-colors">Refresh</button>
+                            </div>
+                            <div id="review-list" class="space-y-4">
+                                <div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading reviews...</div>
+                            </div>
+                        </div>
+
+                        <form id="review-form" class="space-y-5 border-t border-white/10 pt-8">
+                            <input type="hidden" name="product" value="Owlnest Lume" />
+                            <p class="hidden">
+                                <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="review-name" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Name</label>
+                                    <input id="review-name" name="name" type="text" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="review-email" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Email</label>
+                                    <input id="review-email" name="email" type="email" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber" placeholder="you@example.com">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="review-rating" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Rating</label>
+                                    <select id="review-rating" name="rating" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-amber">
+                                        <option value="" class="text-black">Select rating</option>
+                                        <option value="5" class="text-black">5 stars</option>
+                                        <option value="4" class="text-black">4 stars</option>
+                                        <option value="3" class="text-black">3 stars</option>
+                                        <option value="2" class="text-black">2 stars</option>
+                                        <option value="1" class="text-black">1 star</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="review-title" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Headline</label>
+                                    <input id="review-title" name="headline" type="text" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber" placeholder="How did it feel at night?">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="review-comment" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Your review</label>
+                                <textarea id="review-comment" name="review" rows="6" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber resize-y" placeholder="Share your experience with Owlnest Lume."></textarea>
+                            </div>
+
+                            <div class="border border-amber/20 bg-amber/5 rounded-sm p-4">
+                                <label for="review-verification" class="block text-[11px] tracking-[0.18em] uppercase text-amber font-bold mb-2">Number verification</label>
+                                <p id="review-captcha-label" class="font-sans text-sm text-white/70 leading-relaxed mb-3">Loading verification...</p>
+                                <input id="review-verification" name="verification_answer" type="number" inputmode="numeric" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber" placeholder="Enter the answer">
+                                <input id="review-captcha-expected" type="hidden" value="">
+                                <p id="review-form-message" class="text-sm text-red-300 mt-3 hidden"></p>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between pt-2">
+                                <p class="text-xs text-white/40 leading-relaxed">By submitting, you confirm this is your own review and understand it may be moderated before publication.</p>
+                                <button type="submit" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-colors rounded-sm whitespace-nowrap">
+                                    Submit Review
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Trust Parallax -->
+        <section class="relative h-[50vh] w-full flex items-center justify-center overflow-hidden bg-midnight">
+            <div class="absolute inset-0 w-full h-full bg-[url('005.png')] bg-cover bg-center bg-fixed opacity-40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-midnight/20"></div>
+            
+            <div class="relative z-10 text-center px-6 max-w-4xl reveal-text">
+                <i class="fa-solid fa-quote-left text-amber/40 text-4xl mb-6 block"></i>
+                <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight">
+                    Designed in Taiwan.<br>
+                    <span class="italic text-amber font-light mt-3 block opacity-90">Inspired by Phu Quoc.</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Showroom FAQ -->
+        <section class="py-24 px-6 bg-midnight border-t border-white/5">
+            <div class="max-w-3xl mx-auto reveal-text">
+                <div class="text-center mb-12">
+                    <span class="text-white/40 tracking-[0.2em] uppercase text-xs mb-3 block font-bold">Clarity</span>
+                    <h2 class="font-serif text-3xl text-white">Collection FAQ</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg text-amber mb-2">Why are there two prices for Owlnest Lume?</h4>
+                        <p class="font-sans font-light text-sm text-white/70 leading-relaxed">
+                            We are currently running an early-adopter campaign on Indiegogo. While our direct site checkout is fully functional and available at the MSRP of $119, supporting our campaign grants a 42% discount as a thank you to our early backers.
+                        </p>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg text-amber mb-2">When will the Scent Collection be available?</h4>
+                        <p class="font-sans font-light text-sm text-white/70 leading-relaxed">
+                            Sourcing authentic, sustainable Phu Quoc agarwood requires time and precision. We are currently in development. <a href="https://discord.gg/dmPbRMtqRb" target="_blank" class="text-amber hover:underline transition-colors">Join our Discord community</a> for updates and early access.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer anchored in dark midnight -->
+    <footer class="bg-midnight border-t border-white/5 py-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
+            <div class="flex gap-6">
+                <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
+                <a href="manual.pdf" target="_blank" download class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Snipcart Script -->
+    <script src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="MmY2MWUwYjMtODI0Mi00NDQ1LTk4YWUtNTQ0NDgwODY5OGM0NjM5MDIzNDE2ODU0NDczMzQz"></div>
+
+    <!-- JavaScript Base -->
+    <script>
+        // Snipcart Dynamic URL
+        const currentUrl = window.location.href.split('#')[0];
+        document.querySelectorAll('.snipcart-add-item').forEach(btn => {
+            btn.setAttribute('data-item-url', currentUrl);
+        });
+
+        // Main Logic: Scroll & UI Update
+        const header = document.getElementById('main-header');
+        let isScrolling = false;
+
+        function updateUI() {
+            const headerHeight = header ? header.offsetHeight : 80;
+            const checkY = window.innerHeight / 2; 
+
+            let isBgLight = false;
+
+            // Simple check for light sections
+            const lightSections = document.querySelectorAll('.section-light');
+            lightSections.forEach(s => {
+                const rect = s.getBoundingClientRect();
+                if (rect.top <= checkY && rect.bottom > checkY) {
+                    isBgLight = true;
+                }
+            });
+
+            // Reveal Animation logic
+            document.querySelectorAll('.reveal-text').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    el.classList.add('visible');
+                }
+            });
+
+            // Advanced Header Color Switching
+            if (header) {
+                if (isBgLight) {
+                    header.classList.add('nav-dark');
+                } else {
+                    header.classList.remove('nav-dark');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    updateUI();
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+        
+        window.addEventListener('load', () => {
+            updateUI();
+            const yr = document.getElementById('copyright-year');
+            if(yr) yr.textContent = new Date().getFullYear();
+            setupReviewCaptcha();
+            setupReviewForm();
+            loadPublicReviews();
+        });
+
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+        }
+
+        function renderStars(rating) {
+            const safeRating = Math.max(1, Math.min(5, Number(rating) || 0));
+            return Array.from({ length: 5 }, (_, index) => {
+                return `<i class="fas fa-star ${index < safeRating ? 'text-amber' : 'text-white/10'}"></i>`;
+            }).join('');
+        }
+
+        function renderReviewCard(review) {
+            const name = escapeHtml(review.name || 'Anonymous');
+            const headline = escapeHtml(review.headline || 'Customer review');
+            const body = escapeHtml(review.review || '');
+            const createdAt = review.created_at ? new Date(review.created_at).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }) : 'Recently';
+
+            return `
+                <article class="border border-white/10 bg-white/5 rounded-sm p-5">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h4 class="font-serif text-xl text-white">${headline}</h4>
+                            <p class="text-[11px] tracking-[0.16em] uppercase text-white/35 mt-2">${name}</p>
+                        </div>
+                        <div class="flex items-center gap-1 text-xs shrink-0">
+                            ${renderStars(review.rating)}
+                        </div>
+                    </div>
+                    <p class="font-sans text-sm font-light text-white/70 leading-relaxed mt-4">${body}</p>
+                    <p class="text-[11px] tracking-[0.16em] uppercase text-white/30 mt-4">${createdAt}</p>
+                </article>
+            `;
+        }
+
+        async function loadPublicReviews() {
+            const list = document.getElementById('review-list');
+            if (!list) return;
+
+            list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading reviews...</div>';
+
+            try {
+                const res = await fetch('/.netlify/functions/reviews');
+                const data = await res.json().catch(() => ({}));
+
+                if (!res.ok || !data.success) {
+                    throw new Error(data.error || 'Unable to load reviews.');
+                }
+
+                const items = Array.isArray(data.reviews) ? data.reviews : [];
+                if (!items.length) {
+                    list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">No public reviews yet. Be the first to share your experience.</div>';
+                    return;
+                }
+
+                list.innerHTML = items.map(renderReviewCard).join('');
+            } catch (error) {
+                list.innerHTML = '<div class="border border-red-400/20 bg-red-400/5 rounded-sm p-5 text-sm text-red-200">Reviews are not available right now. Please try again later.</div>';
+            }
+        }
+
+        function setupReviewCaptcha() {
+            const label = document.getElementById('review-captcha-label');
+            const expected = document.getElementById('review-captcha-expected');
+            if (!label || !expected) return;
+
+            const first = Math.floor(Math.random() * 8) + 1;
+            const second = Math.floor(Math.random() * 8) + 1;
+            expected.value = String(first + second);
+            label.textContent = `To verify you are human, enter the result of ${first} + ${second}.`;
+        }
+
+        function setupReviewForm() {
+            const form = document.getElementById('review-form');
+            const answer = document.getElementById('review-verification');
+            const expected = document.getElementById('review-captcha-expected');
+            const message = document.getElementById('review-form-message');
+            const refresh = document.getElementById('review-refresh');
+            if (!form || !answer || !expected || !message) return;
+
+            form.addEventListener('submit', (event) => {
+                if (answer.value.trim() !== expected.value) {
+                    event.preventDefault();
+                    message.textContent = 'Verification failed. Please enter the correct number before submitting.';
+                    message.classList.remove('hidden');
+                    answer.focus();
+                    return;
+                }
+
+                message.classList.add('hidden');
+            });
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                if (answer.value.trim() !== expected.value) return;
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                const formData = new FormData(form);
+                const payload = {
+                    product: formData.get('product'),
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    rating: formData.get('rating'),
+                    headline: formData.get('headline'),
+                    review: formData.get('review'),
+                    verification_answer: formData.get('verification_answer'),
+                    verification_expected: formData.get('verification_expected') || expected.value,
+                    bot_field: formData.get('bot-field')
+                };
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+
+                try {
+                    const res = await fetch('/.netlify/functions/reviews', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const data = await res.json().catch(() => ({}));
+                    if (!res.ok || !data.success) {
+                        throw new Error(data.error || 'Unable to submit your review right now.');
+                    }
+
+                    message.textContent = 'Your review is now live on the page.';
+                    message.classList.remove('hidden', 'text-red-300');
+                    message.classList.add('text-emerald-300');
+                    form.reset();
+                    setupReviewCaptcha();
+                    await loadPublicReviews();
+                } catch (error) {
+                    const text = error.message === 'daily_limit_reached'
+                        ? 'This email has already submitted a review today. Please try again tomorrow.'
+                        : (error.message || 'Unable to submit your review right now.');
+                    message.textContent = text;
+                    message.classList.remove('hidden', 'text-emerald-300');
+                    message.classList.add('text-red-300');
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Submit Review';
+                }
+            });
+
+            if (refresh) {
+                refresh.addEventListener('click', loadPublicReviews);
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if(!menu || !icon) return;
+            menu.classList.toggle('open');
+            if (menu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
+</body>
+</html>
