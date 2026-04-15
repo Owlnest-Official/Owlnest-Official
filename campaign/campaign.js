@@ -1,10 +1,16 @@
+const CAMPAIGN_DATA_URL = '/api/campaign-data';
+const CAMPAIGN_STATIC_URL = '/campaign/campaign.json';
+const LIVE_STATS_REFRESH_MS = 60000;
+
+let latestCampaignData = null;
+let liveStatsTimer = null;
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('/campaign/campaign.json');
-        if (!response.ok) throw new Error('Failed to load campaign data');
-
-        const data = await response.json();
+        const data = await loadCampaignData();
+        latestCampaignData = data;
         renderPage(data);
+        startLiveStatsRefresh();
     } catch (error) {
         console.error('Error loading campaign page:', error);
         document.body.innerHTML = `
@@ -161,6 +167,43 @@ const campaignFaqGroups = [
         ]
     }
 ];
+
+async function loadJson(url) {
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+        throw new Error(`Failed to load ${url}`);
+    }
+
+    return response.json();
+}
+
+async function loadCampaignData() {
+    try {
+        return await loadJson(CAMPAIGN_DATA_URL);
+    } catch (error) {
+        console.warn('Falling back to static campaign data:', error);
+        return loadJson(CAMPAIGN_STATIC_URL);
+    }
+}
+
+function startLiveStatsRefresh() {
+    if (liveStatsTimer) return;
+
+    liveStatsTimer = window.setInterval(async () => {
+        try {
+            const nextData = await loadCampaignData();
+            latestCampaignData = nextData;
+
+            const isPrelaunch = nextData.status === 'prelaunch';
+            const isLive = nextData.status === 'live';
+
+            renderHero(nextData, isPrelaunch, isLive);
+            renderStats(nextData, isPrelaunch);
+        } catch (error) {
+            console.warn('Live campaign refresh skipped:', error);
+        }
+    }, LIVE_STATS_REFRESH_MS);
+}
 
 function renderPage(data) {
     document.title = `${data.title} | Owlnest Campaign`;
