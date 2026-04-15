@@ -2,9 +2,7 @@
     if (window.location.pathname.includes('/campaign/')) return;
 
     try {
-        const response = await fetch('/campaign/campaign.json');
-        if (!response.ok) return;
-        const data = await response.json();
+        const data = await loadCampaignBannerData();
         
         if (data.active !== true) return;
 
@@ -73,5 +71,17 @@
         }
 
         window.addEventListener('resize', updateLayoutOffsets);
+    }
+
+    async function loadCampaignBannerData() {
+        try {
+            const response = await fetch('/api/campaign-data', { cache: 'no-store' });
+            if (!response.ok) throw new Error('live campaign data unavailable');
+            return response.json();
+        } catch (error) {
+            const fallback = await fetch('/campaign/campaign.json', { cache: 'no-store' });
+            if (!fallback.ok) throw error;
+            return fallback.json();
+        }
     }
 })();
