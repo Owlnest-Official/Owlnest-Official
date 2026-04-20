@@ -18,3 +18,18 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/ai/*.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"

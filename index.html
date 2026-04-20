@@ -25,6 +25,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:title" content="Owlnest | Curating Your Evening Sanctuary">
     <meta name="twitter:description" content="Deep amber evening lighting designed to support bedtime relaxation and a better sleep environment.">
     <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://owlnestofficial.com/#organization",
+          "name": "Owlnest",
+          "url": "https://owlnestofficial.com/",
+          "logo": "https://owlnestofficial.com/logo.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://owlnestofficial.com/#website",
+          "url": "https://owlnestofficial.com/",
+          "name": "Owlnest Official",
+          "publisher": {
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -360,7 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
                     <div class="order-1 lg:order-2">
                         <div class="relative p-3 bg-white border border-taupe/20 rounded-sm shadow-xl">
-                            <img src="spectrum.jpg" onerror="this.src='https://placehold.co/800x400/F2EBDD/C9852A?text=Spectrum+Chart'" alt="Light Spectrum Comparison" class="w-full h-auto opacity-90">
+                    <img src="spectrum.jpg" onerror="this.src='https://placehold.co/800x400/F2EBDD/C9852A?text=Spectrum+Chart'" alt="Comparison of daytime-oriented light and deep amber nighttime-friendly light spectrum direction" class="w-full h-auto opacity-90">
                         </div>
                         <p class="text-center text-[10px] tracking-[0.2em] text-taupe uppercase mt-8">Spectrum Harmony</p>
                     </div>
@@ -375,7 +399,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <!-- Interactive Image Half (Left) -->
                     <div id="sec3-image" class="w-full lg:w-1/2 h-[42vh] md:h-[50vh] lg:h-full relative overflow-hidden bg-warm transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
-                    <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/F2EBDD/182234?text=Interactive+Lume'" alt="Interactive Lume Preview" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
+                    <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/F2EBDD/182234?text=Interactive+Lume'" alt="Owlnest Lume shown in a dim nighttime room setting" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
                     <div class="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/5 transition duration-300"></div>
                     
                     <!-- Floating Pill Switch UI -->

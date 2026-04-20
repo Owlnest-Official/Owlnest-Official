@@ -1,4 +1,44 @@
 User-agent: *
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /
+Disallow: /account/
+Disallow: /account.html
+Disallow: /member-login.html
+Disallow: /reset-password.html
+Disallow: /activate.html
+Disallow: /verify.html
+
+User-agent: Googlebot
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Bingbot
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: OAI-SearchBot
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: GPTBot
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /ai-brief.html
+Allow: /ai/
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 Sitemap: https://owlnestofficial.com/sitemap.xml
