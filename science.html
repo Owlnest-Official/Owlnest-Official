@@ -19,20 +19,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://owlnestofficial.com/#organization",
+          "name": "Owlnest",
+          "url": "https://owlnestofficial.com/",
+          "brand": {
+            "@type": "Brand",
+            "name": "Owlnest"
+          }
+        },
+        {
           "@type": "WebPage",
           "@id": "https://owlnestofficial.com/science.html#webpage",
           "url": "https://owlnestofficial.com/science.html",
           "name": "Science of Night-Friendly Light | Owlnest Lume",
           "description": "Research-informed rationale behind Owlnest Lume and the principles of nighttime-friendly light.",
           "about": {
-            "@type": "Product",
-            "name": "Owlnest Lume",
-            "category": "compact circadian rhythm lamp"
+            "@type": "Thing",
+            "name": "Night-friendly light design principles"
           },
           "publisher": {
-            "@type": "Organization",
-            "name": "Owlnest",
-            "url": "https://owlnestofficial.com/"
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://owlnestofficial.com/#website",
+            "url": "https://owlnestofficial.com/",
+            "name": "Owlnest Official"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://owlnestofficial.com/science.html#article",
+          "headline": "Science of Night-Friendly Light",
+          "url": "https://owlnestofficial.com/science.html",
+          "description": "Research-informed rationale behind Owlnest Lume and the principles of nighttime-friendly light.",
+          "author": {
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "publisher": {
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://owlnestofficial.com/science.html#webpage"
           }
         }
       ]

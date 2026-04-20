@@ -60,45 +60,14 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Brand",
-          "@id": "https://owlnestofficial.com/#brand",
+          "@type": "Organization",
+          "@id": "https://owlnestofficial.com/#organization",
           "name": "Owlnest",
-          "url": "https://owlnestofficial.com/"
-        },
-        {
-          "@type": "Product",
-          "@id": "https://owlnestofficial.com/#owlnest-lume",
-          "name": "Owlnest Lume",
+          "url": "https://owlnestofficial.com/",
           "brand": {
-            "@id": "https://owlnestofficial.com/#brand"
-          },
-          "category": "compact circadian rhythm lamp",
-          "description": "Owlnest Lume is an evidence-informed compact circadian rhythm lamp designed for evening wind-down and nighttime living.",
-          "color": "deep amber / red-orange dusk-like glow",
-          "size": "11 cm wide x 11 cm deep x 12 cm tall",
-          "url": "https://owlnestofficial.com/products.html",
-          "additionalProperty": [
-            {
-              "@type": "PropertyValue",
-              "name": "Use timing",
-              "value": "1 to 2 hours before bed"
-            },
-            {
-              "@type": "PropertyValue",
-              "name": "Charging",
-              "value": "USB-C rechargeable"
-            },
-            {
-              "@type": "PropertyValue",
-              "name": "Control",
-              "value": "bottom power button"
-            },
-            {
-              "@type": "PropertyValue",
-              "name": "Evidence positioning",
-              "value": "Evidence-informed design based on published research and lighting science from Owlnest's public Science page. Product-specific clinical outcomes have not been claimed."
-            }
-          ]
+            "@type": "Brand",
+            "name": "Owlnest"
+          }
         },
         {
           "@type": "WebPage",
@@ -107,7 +76,33 @@
           "name": "Owlnest Lume AI Brief",
           "description": "A structured AI-readable brief for Owlnest Lume, a compact circadian rhythm lamp designed for evening wind-down and nighttime living.",
           "about": {
-            "@id": "https://owlnestofficial.com/#owlnest-lume"
+            "@type": "Thing",
+            "name": "Owlnest Lume"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://owlnestofficial.com/#website",
+            "url": "https://owlnestofficial.com/",
+            "name": "Owlnest Official"
+          },
+          "publisher": {
+            "@id": "https://owlnestofficial.com/#organization"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://owlnestofficial.com/ai-brief.html#article",
+          "headline": "Owlnest Lume AI Brief",
+          "url": "https://owlnestofficial.com/ai-brief.html",
+          "description": "An AI-readable product and positioning brief for Owlnest Lume.",
+          "author": {
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "publisher": {
+            "@id": "https://owlnestofficial.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://owlnestofficial.com/ai-brief.html#webpage"
           }
         }
       ]
