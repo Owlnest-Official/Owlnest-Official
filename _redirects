@@ -11,6 +11,7 @@
 /verify               /verify.html       301!
 /account/activate     /activate.html     301!
 /account/verify       /verify.html       301!
+/science.html         /science           301!
 
 # 3) 保底：任何未知路徑都回首頁或 index（避免 404）
 /*                    /index.html        200

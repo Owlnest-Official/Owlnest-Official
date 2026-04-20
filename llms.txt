@@ -41,7 +41,7 @@ Avoid:
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/ai/evidence.html
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
-- Science: https://owlnestofficial.com/science.html
+- Science: https://owlnestofficial.com/science
 - Indiegogo: https://www.indiegogo.com/en/projects/owlnest/owlnestlume
 
 ## Product Facts

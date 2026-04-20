@@ -154,7 +154,7 @@ Product design is evidence-informed. Product-specific laboratory validation shou
 - Evidence Brief: https://owlnestofficial.com/ai/evidence.html
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
-- Science: https://owlnestofficial.com/science.html
+- Science: https://owlnestofficial.com/science
 - Indiegogo: https://www.indiegogo.com/en/projects/owlnest/owlnestlume
 
 ## AI Citation Guidance
