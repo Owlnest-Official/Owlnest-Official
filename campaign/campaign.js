@@ -243,7 +243,7 @@ function startLiveStatsRefresh() {
 }
 
 function renderPage(data) {
-    document.title = `${data.title} | Owlnest Campaign`;
+    document.title = `Campaign | Owlnest Official`;
 
     const liveSection = document.getElementById('live-content');
     const endedSection = document.getElementById('ended-content');
