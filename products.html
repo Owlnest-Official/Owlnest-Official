@@ -152,6 +152,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         #main-header.nav-dark .border-white\/10 {
             border-color: rgba(24, 34, 52, 0.2) !important;
         }
+
+        .feedback-preview-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -439,13 +446,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <section class="py-24 md:py-32 px-6 bg-[#111927] text-white border-t border-white/5">
+        <section id="feedback" class="py-24 md:py-32 px-6 bg-[#111927] text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto reveal-text">
                 <div class="text-center mb-14">
-                    <span class="text-white/40 tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Customer Reviews</span>
-                    <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight">Leave a real review</h2>
+                    <span class="text-white/40 tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Beta User Feedback</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight">Early notes from real use</h2>
                     <p class="font-sans text-base md:text-lg font-light text-white/60 leading-relaxed max-w-2xl mx-auto mt-6">
-                        Visitors can submit real feedback here. Reviews appear on the page after submission, and each entry must pass a simple number check to reduce spam.
+                        A small feedback area for early users and beta testers. These notes are shared for transparency and should be read as user-submitted feedback, not verified retail reviews.
                     </p>
                 </div>
 
@@ -459,29 +466,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h3 class="font-serif text-2xl md:text-3xl text-white mb-4">Submit a product review</h3>
+                            <h3 class="font-serif text-2xl md:text-3xl text-white mb-4">Share early feedback</h3>
                             <p class="font-sans text-base md:text-lg font-light text-white/70 leading-relaxed mb-6">
-                                If you have experienced Owlnest Lume, you can leave a comment about bedtime atmosphere, ease of use, nighttime comfort, and overall design satisfaction.
+                                If you have experienced Owlnest Lume, you can leave a note about the nighttime atmosphere, product feel, ease of use, and overall design impression.
                             </p>
                         </div>
                         <div class="border-t border-white/10 pt-6">
-                            <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 mb-2">Review policy</p>
-                            <p class="font-sans text-sm text-white/60 leading-relaxed">Reviews can appear immediately after submission. Spam, duplicate entries, and abusive content may still be removed later.</p>
+                            <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 mb-2">Feedback note</p>
+                            <p class="font-sans text-sm text-white/60 leading-relaxed">Feedback may appear after submission and may be reviewed later. We may add beta tester or verified backer labels as the fulfillment process matures.</p>
                         </div>
                     </div>
 
                     <div class="border border-white/10 bg-midnight/50 rounded-sm p-6 md:p-8">
                         <div id="review-list-shell" class="mb-8">
-                            <div class="flex items-center justify-between gap-4 mb-4">
+                            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                                 <div>
-                                    <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 font-bold">Latest Reviews</p>
-                                    <h3 class="font-serif text-2xl text-white mt-2">What customers are saying</h3>
+                                    <p class="text-[11px] tracking-[0.2em] uppercase text-white/40 font-bold">Latest Feedback</p>
+                                    <h3 class="font-serif text-2xl text-white mt-2">Early tester notes</h3>
                                 </div>
-                                <button type="button" id="review-refresh" class="text-xs tracking-[0.14em] uppercase text-amber hover:text-white transition-colors">Refresh</button>
+                                <div class="flex items-center gap-4">
+                                    <a href="reviews.html" class="text-xs tracking-[0.14em] uppercase text-amber hover:text-white transition-colors">View all</a>
+                                    <button type="button" id="review-refresh" class="text-xs tracking-[0.14em] uppercase text-white/40 hover:text-amber transition-colors">Refresh</button>
+                                </div>
                             </div>
                             <div id="review-list" class="space-y-4">
-                                <div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading reviews...</div>
+                                <div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading feedback...</div>
                             </div>
+                            <div id="review-list-footer" class="mt-5 hidden"></div>
                         </div>
 
                         <form id="review-form" class="space-y-5 border-t border-white/10 pt-8">
@@ -520,7 +531,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
 
                             <div>
-                                <label for="review-comment" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Your review</label>
+                                <label for="review-comment" class="block text-[11px] tracking-[0.18em] uppercase text-white/45 font-bold mb-2">Your feedback</label>
                                 <textarea id="review-comment" name="review" rows="6" required class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/25 focus:outline-none focus:border-amber resize-y" placeholder="Share your experience with Owlnest Lume."></textarea>
                             </div>
 
@@ -533,9 +544,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
 
                             <div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between pt-2">
-                                <p class="text-xs text-white/40 leading-relaxed">By submitting, you confirm this is your own review and understand it may be moderated before publication.</p>
+                                <p class="text-xs text-white/40 leading-relaxed">By submitting, you confirm this is your own feedback and understand it may be moderated before or after publication.</p>
                                 <button type="submit" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-colors rounded-sm whitespace-nowrap">
-                                    Submit Review
+                                    Submit Feedback
                                 </button>
                             </div>
                         </form>
@@ -702,7 +713,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         function renderReviewCard(review) {
             const name = escapeHtml(review.name || 'Anonymous');
-            const headline = escapeHtml(review.headline || 'Customer review');
+            const headline = escapeHtml(review.headline || 'Early feedback');
             const body = escapeHtml(review.review || '');
             const createdAt = review.created_at ? new Date(review.created_at).toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -721,7 +732,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             ${renderStars(review.rating)}
                         </div>
                     </div>
-                    <p class="font-sans text-sm font-light text-white/70 leading-relaxed mt-4">${body}</p>
+                    <p class="feedback-preview-text font-sans text-sm font-light text-white/70 leading-relaxed mt-4">${body}</p>
                     <p class="text-[11px] tracking-[0.16em] uppercase text-white/30 mt-4">${createdAt}</p>
                 </article>
             `;
@@ -729,27 +740,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         async function loadPublicReviews() {
             const list = document.getElementById('review-list');
+            const footer = document.getElementById('review-list-footer');
             if (!list) return;
 
-            list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading reviews...</div>';
+            if (footer) {
+                footer.classList.add('hidden');
+                footer.innerHTML = '';
+            }
+            list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading feedback...</div>';
 
             try {
                 const res = await fetch('/.netlify/functions/reviews');
                 const data = await res.json().catch(() => ({}));
 
                 if (!res.ok || !data.success) {
-                    throw new Error(data.error || 'Unable to load reviews.');
+                    throw new Error(data.error || 'Unable to load feedback.');
                 }
 
                 const items = Array.isArray(data.reviews) ? data.reviews : [];
                 if (!items.length) {
-                    list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">No public reviews yet. Be the first to share your experience.</div>';
+                    list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">No public feedback yet. Be the first to share your experience.</div>';
                     return;
                 }
 
-                list.innerHTML = items.map(renderReviewCard).join('');
+                const previewItems = items.slice(0, 3);
+                list.innerHTML = previewItems.map(renderReviewCard).join('');
+                if (footer) {
+                    footer.innerHTML = `
+                        <a href="reviews.html" class="inline-flex items-center gap-3 text-xs tracking-[0.16em] uppercase text-amber hover:text-white transition-colors">
+                            View all early feedback
+                            <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    `;
+                    footer.classList.remove('hidden');
+                }
             } catch (error) {
-                list.innerHTML = '<div class="border border-red-400/20 bg-red-400/5 rounded-sm p-5 text-sm text-red-200">Reviews are not available right now. Please try again later.</div>';
+                list.innerHTML = '<div class="border border-red-400/20 bg-red-400/5 rounded-sm p-5 text-sm text-red-200">Feedback is not available right now. Please try again later.</div>';
             }
         }
 
@@ -814,10 +840,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     const data = await res.json().catch(() => ({}));
                     if (!res.ok || !data.success) {
-                        throw new Error(data.error || 'Unable to submit your review right now.');
+                        throw new Error(data.error || 'Unable to submit your feedback right now.');
                     }
 
-                    message.textContent = 'Your review is now live on the page.';
+                    message.textContent = 'Your feedback has been submitted.';
                     message.classList.remove('hidden', 'text-red-300');
                     message.classList.add('text-emerald-300');
                     form.reset();
@@ -825,14 +851,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     await loadPublicReviews();
                 } catch (error) {
                     const text = error.message === 'daily_limit_reached'
-                        ? 'This email has already submitted a review today. Please try again tomorrow.'
-                        : (error.message || 'Unable to submit your review right now.');
+                        ? 'This email has already submitted feedback today. Please try again tomorrow.'
+                        : (error.message || 'Unable to submit your feedback right now.');
                     message.textContent = text;
                     message.classList.remove('hidden', 'text-emerald-300');
                     message.classList.add('text-red-300');
                 } finally {
                     submitButton.disabled = false;
-                    submitButton.textContent = 'Submit Review';
+                    submitButton.textContent = 'Submit Feedback';
                 }
             });
 
