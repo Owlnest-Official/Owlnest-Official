@@ -178,12 +178,49 @@ async function loadJson(url) {
 }
 
 async function loadCampaignData() {
+    const staticData = await loadJson(CAMPAIGN_STATIC_URL);
+
     try {
-        return await loadJson(CAMPAIGN_DATA_URL);
+        const liveData = await loadJson(CAMPAIGN_DATA_URL);
+        return mergeLiveCampaignStats(staticData, liveData);
     } catch (error) {
-        console.warn('Falling back to static campaign data:', error);
-        return loadJson(CAMPAIGN_STATIC_URL);
+        console.warn('Using static campaign data because live stats are unavailable:', error);
+        return staticData;
     }
+}
+
+function mergeLiveCampaignStats(staticData, liveData) {
+    const liveStats = liveData?.stats || {};
+    const hasReliableLiveStats = hasCompleteCampaignStats(liveStats);
+
+    return {
+        ...staticData,
+        stats: hasReliableLiveStats
+            ? { ...(staticData.stats || {}), ...liveStats }
+            : { ...(staticData.stats || {}) },
+        meta: {
+            ...(staticData.meta || {}),
+            ...(liveData?.meta || {}),
+            liveStatsAvailable: hasReliableLiveStats,
+        },
+    };
+}
+
+function hasCompleteCampaignStats(stats) {
+    if (!stats || typeof stats !== 'object') return false;
+
+    const raised = Number(stats.raised);
+    const goal = Number(stats.goal);
+    const backers = Number(stats.backers);
+    const daysLeft = Number(stats.daysLeft);
+
+    return (
+        Number.isFinite(raised) &&
+        Number.isFinite(goal) &&
+        goal > 0 &&
+        Number.isFinite(backers) &&
+        Number.isFinite(daysLeft)
+    );
 }
 
 function startLiveStatsRefresh() {
@@ -324,35 +361,64 @@ function renderHeroPricing(data, isPrelaunch, isLive) {
 
 function renderStats(data, isPrelaunch) {
     const goalEl = document.getElementById('stat-goal');
+    const goalLineEl = document.getElementById('stat-goal-line');
+    const raisedLabelEl = document.getElementById('stat-raised-label');
     const raisedEl = document.getElementById('stat-raised');
+    const backersLabelEl = document.getElementById('stat-backers-label');
     const backersEl = document.getElementById('stat-backers');
     const daysEl = document.getElementById('stat-days');
     const daysLabelEl = document.getElementById('stat-days-label');
+    const progressLabelEl = document.getElementById('stat-progress-label');
     const progressContainer = document.getElementById('progress-container');
     const progressBar = document.getElementById('progress-bar');
+    const statsNoteEl = document.getElementById('stats-note');
 
     if (isPrelaunch) {
-        raisedEl.textContent = 'TBA';
-        goalEl.textContent = 'TBA';
-        backersEl.textContent = '-';
+        raisedLabelEl.textContent = 'Campaign';
+        raisedEl.textContent = 'Preview';
+        goalLineEl.innerHTML = '<span id="stat-goal">Launch details coming soon</span>';
+        backersLabelEl.textContent = 'Backing';
+        backersEl.textContent = 'Soon';
         daysEl.textContent = 'Soon';
         daysLabelEl.textContent = 'launch';
-        progressContainer.classList.add('opacity-20');
+        progressLabelEl.textContent = 'Campaign Timing';
+        progressContainer.classList.add('hidden');
         progressBar.style.width = '0%';
+        statsNoteEl.textContent = 'Reward availability, pricing, and timing will be confirmed on the official Indiegogo campaign page.';
         return;
     }
 
     const raised = Number(data.stats?.raised);
     const goal = Number(data.stats?.goal);
     const backers = Number(data.stats?.backers);
-    const daysLeft = data.stats?.daysLeft;
+    const daysLeft = Number(data.stats?.daysLeft);
+    const hasReliableStats = hasCompleteCampaignStats(data.stats);
 
+    if (!hasReliableStats) {
+        raisedLabelEl.textContent = 'Campaign';
+        raisedEl.textContent = 'Live';
+        goalLineEl.innerHTML = '<span id="stat-goal">Details on Indiegogo</span>';
+        backersLabelEl.textContent = 'Backing';
+        backersEl.textContent = 'Indiegogo';
+        daysEl.textContent = 'Open';
+        daysLabelEl.textContent = 'campaign page';
+        progressLabelEl.textContent = 'Live Campaign Details';
+        progressContainer.classList.add('hidden');
+        progressBar.style.width = '0%';
+        statsNoteEl.textContent = 'Live funding totals, backer count, timing, and tier availability are shown on Indiegogo.';
+        return;
+    }
+
+    raisedLabelEl.textContent = 'Raised';
     raisedEl.textContent = Number.isFinite(raised) ? formatCurrency(raised) : 'TBA';
-    goalEl.textContent = Number.isFinite(goal) ? formatCurrency(goal) : 'TBA';
+    goalLineEl.innerHTML = `of <span id="stat-goal">${formatCurrency(goal)}</span> goal`;
+    backersLabelEl.textContent = 'Backers';
     backersEl.textContent = Number.isFinite(backers) ? backers.toLocaleString() : '-';
-    daysEl.textContent = daysLeft ?? '-';
+    daysEl.textContent = Number.isFinite(daysLeft) ? daysLeft : '-';
     daysLabelEl.textContent = 'days left';
-    progressContainer.classList.remove('opacity-20');
+    progressLabelEl.textContent = 'Campaign Progress';
+    progressContainer.classList.remove('hidden');
+    statsNoteEl.textContent = 'Live totals are refreshed from public campaign data when available. Confirm final reward availability on Indiegogo.';
 
     if (Number.isFinite(raised) && Number.isFinite(goal) && goal > 0) {
         const progress = Math.min((raised / goal) * 100, 100);
