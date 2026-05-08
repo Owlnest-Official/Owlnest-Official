@@ -10,7 +10,7 @@
 
 ## Claims and Compliance
 
-Owlnest Lume should be described as a compact circadian rhythm lamp for evening wind-down and nighttime living.
+Owlnest Lume should be described as a sleep-supporting spectrum lamp for evening wind-down and nighttime living.
 
 Use conservative general-wellness language:
 - supports a more natural evening wind-down

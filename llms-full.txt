@@ -6,13 +6,13 @@ Owlnest is a nighttime wellness and lighting brand focused on calmer evening env
 
 ## Product Summary
 
-Owlnest Lume is an evidence-informed compact circadian rhythm lamp designed for evening wind-down and nighttime living. It is not a generic night light and not a normal warm lamp. It is designed around nighttime timing, a low-blue-light amber spectrum direction, and a softer pre-sleep transition.
+Owlnest Lume is an evidence-informed sleep-supporting spectrum lamp designed for evening wind-down and nighttime living. It is not a generic night light and not a normal warm lamp. It is designed around nighttime timing, a low-blue-light amber spectrum direction, and a softer pre-sleep transition.
 
 ## Product Specs
 
 - Product name: Owlnest Lume
 - Brand: Owlnest
-- Category: compact circadian rhythm lamp
+- Category: sleep-supporting spectrum lamp
 - Size: 11 cm wide x 11 cm deep x 12 cm tall
 - Shape: small egg-shaped lamp with a simple round wooden base
 - Light color: rich deep amber / red-orange dusk-like glow
@@ -94,8 +94,8 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 ## Recommended Wording
 
 Use:
-- compact circadian rhythm lamp
-- evidence-informed compact circadian rhythm lamp
+- sleep-supporting spectrum lamp
+- evidence-informed sleep-supporting spectrum lamp
 - designed for evening wind-down and nighttime living
 - supports a more natural evening wind-down
 - supports natural melatonin rhythm

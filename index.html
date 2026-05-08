@@ -49,16 +49,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     }
     </script>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -71,7 +71,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        midnight: '#182234', 
+                        midnight: '#182234',
                         amber: '#C9852A',
                         warm: '#F2EBDD',
                         slateblue: '#51627A',
@@ -82,17 +82,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     </script>
     <style>
-        html { 
-            scroll-behavior: smooth; 
+        html {
+            scroll-behavior: smooth;
         }
-        
-        body { 
+
+        body {
             margin: 0;
-            overflow-x: hidden; 
+            overflow-x: hidden;
             background-color: #182234;
             color: #ffffff;
         }
-        
+
         .section-container {
             width: 100%;
             position: relative;
@@ -102,26 +102,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: center;
             min-height: 100vh;
         }
-        
+
         /* Canvas Scroll Height Preservation */
         #section-1 {
             display: block !important;
             padding: 0 !important;
             overflow: visible !important;
-            height: 250vh !important; 
+            height: 250vh !important;
         }
         @media (min-width: 768px) {
             #section-1 {
-                height: 400vh !important; 
+                height: 400vh !important;
             }
         }
 
         @media (max-width: 1023px) {
             .section-container {
                 height: auto;
-                padding-top: 80px; 
+                padding-top: 80px;
                 padding-bottom: 80px;
-                display: block; 
+                display: block;
             }
             /* Remove padding for interactive section on mobile for seamless edge */
             #section-product {
@@ -132,7 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* Reveal Animations */
         .reveal-text {
-            opacity: 0; 
+            opacity: 0;
             transform: translateY(30px);
             transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -172,42 +172,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 transform: none !important;
             }
         }
-        
+
         /* Navigation Dots */
         .nav-dots {
-            position: fixed; 
-            right: 2rem; 
-            top: 50%; 
+            position: fixed;
+            right: 2rem;
+            top: 50%;
             transform: translateY(-50%);
-            z-index: 50; 
-            display: none; 
-            flex-direction: column; 
+            z-index: 50;
+            display: none;
+            flex-direction: column;
             gap: 1rem;
         }
-        @media (min-width: 1280px) { 
-            .nav-dots { display: flex; } 
+        @media (min-width: 1280px) {
+            .nav-dots { display: flex; }
         }
 
         .dot {
-            width: 10px; 
-            height: 10px; 
+            width: 10px;
+            height: 10px;
             border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 50%; 
-            cursor: pointer; 
+            border-radius: 50%;
+            cursor: pointer;
             transition: all 0.4s ease;
         }
-        .dot.active { 
-            background-color: #C9852A; 
-            border-color: #C9852A; 
-            transform: scale(1.4); 
+        .dot.active {
+            background-color: #C9852A;
+            border-color: #C9852A;
+            transform: scale(1.4);
         }
 
-        #mobile-menu { 
-            transform: translateY(-100%); 
-            transition: transform 0.4s ease-in-out; 
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out;
         }
-        #mobile-menu.open { 
-            transform: translateY(0); 
+        #mobile-menu.open {
+            transform: translateY(0);
         }
 
         /* Dynamic Header Color Switching Classes */
@@ -259,7 +259,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
              <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
         </div>
-        
+
         <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-10 nav-links">
             <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
@@ -269,7 +269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="about.html" class="hover:text-amber transition-colors duration-300">About Us</a>
                 <a href="contact.html" class="hover:text-amber transition-colors duration-300">Contact</a>
             </nav>
-            
+
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
@@ -316,7 +316,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="#section-problem" class="dot" data-index="1"></a>
         <a href="#section-mechanism" class="dot" data-index="2"></a>
         <a href="#section-product" class="dot" data-index="3"></a>
-        <a href="#section-science" class="dot" data-index="4"></a>
+        <a href="#section-final-cta" class="dot" data-index="4"></a>
     </div>
 
     <div class="main-container">
@@ -326,9 +326,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
                 <!-- Visual fallback background -->
                 <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
-                
+
                 <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
-                
+
                 <!-- Non-blocking overlay layers -->
                 <div class="absolute inset-0 bg-gradient-to-b from-midnight/70 via-midnight/30 to-midnight/90 z-20 pointer-events-none"></div>
 
@@ -346,23 +346,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
 
                     <span class="text-amber tracking-[0.24em] md:tracking-[0.3em] uppercase text-[11px] md:text-sm mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Live on Indiegogo</span>
-                    
+
                     <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-6 md:mb-8 reveal-text drop-shadow-2xl" style="transition-delay: 0.14s;">
-                        Tuned to Help You Sleep,<br>Not Just See
+                        Tuned to Help You Sleep,<br>Not Just See.
                     </h1>
-                    
+
                     <p class="text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6 drop-shadow-md" style="transition-delay: 0.2s;">
-                        Owlnest Lume uses a specially tuned deep amber, low-blue spectrum to support your natural melatonin rhythm, help your body fall asleep more easily, and support deeper, better-quality sleep.
+                        A deep amber, low-blue spectrum lamp designed to support melatonin rhythm, easier sleep, and deeper nights.
                     </p>
-                    <div class="max-w-2xl mx-auto mb-5 md:mb-6 space-y-3 reveal-text" style="transition-delay: 0.26s;">
-                        <p class="text-white/72 text-sm md:text-base font-light leading-relaxed">
-                            Use it 1-2 hours before bed to replace harsh white light, reduce nighttime light disruption, and help your room shift into sleep mode.
-                        </p>
-                    </div>
 
                     <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-9 reveal-text" style="transition-delay: 0.32s;">
                         <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Supports melatonin rhythm</span>
-                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Fall asleep more easily</span>
+                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Easier wind-down</span>
                         <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Deeper, better-quality sleep</span>
                     </div>
 
@@ -371,10 +366,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
                             <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
                                class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm flex justify-center items-center">
-                                Back Owlnest Lume on Indiegogo
+                                Back on Indiegogo
                             </a>
-                    <a href="#section-science" class="premium-cta w-full sm:w-auto border border-white/20 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 hover:border-amber flex justify-center items-center">
-                                See the Sleep Spectrum
+                    <a href="/science" class="premium-cta w-full sm:w-auto border border-white/20 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 hover:border-amber flex justify-center items-center">
+                                See the Science
                             </a>
                         </div>
                         <p class="mt-5 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
@@ -390,365 +385,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <!-- Section 2: The Problem (Evening Transition) -->
-        <section id="section-problem" class="section-container bg-midnight py-16 md:py-24 border-b border-white/5 !min-h-fit">
+        <!-- Section 2: The Problem -->
+        <section id="section-problem" class="section-container bg-midnight py-20 md:py-32 lg:py-36 border-b border-white/5 !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="max-w-3xl mx-auto text-center">
+                <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-10 lg:gap-20 items-start">
                     <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">The Problem</span>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">Most Lights Were Made for Seeing. Not Sleeping.</h2>
-
-                    <p class="font-sans text-lg md:text-xl font-light text-white/80 leading-relaxed mb-6 max-w-2xl mx-auto">
-                        Your body reads light as a signal. Bright, blue-rich light is useful during the day, but at night it can keep your body more alert when it should be winding down.
-                    </p>
-                    <p class="font-sans text-sm md:text-base font-light text-white/55 leading-relaxed max-w-2xl mx-auto">
-                        Owlnest Lume was designed for the 1-2 hours before bed, when your room should stop acting like daytime. Its deep amber, low-blue spectrum helps reduce nighttime light disruption and supports your body’s natural sleep rhythm.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mt-12">
-                    <div class="border border-white/10 bg-white/5 p-6 md:p-8 rounded-sm">
-                        <p class="text-[11px] tracking-[0.2em] uppercase text-white/35 font-bold mb-4">Regular Household Light</p>
-                        <h3 class="font-serif text-2xl text-white mb-3">Visibility first.</h3>
-                        <p class="text-white/60 font-light leading-relaxed">Useful for tasks and movement, but often too bright, broad, or blue-rich for the hours before sleep.</p>
+                    <div>
+                        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">Most lights help you see.<br>Few help you sleep.</h2>
                     </div>
-                    <div class="border border-amber/30 bg-amber/10 p-6 md:p-8 rounded-sm">
-                        <p class="text-[11px] tracking-[0.2em] uppercase text-amber font-bold mb-4">Owlnest Lume</p>
-                        <h3 class="font-serif text-2xl text-white mb-3">Sleep-supporting spectrum.</h3>
-                        <p class="text-white/70 font-light leading-relaxed">Tuned for deep amber, low-blue evening use so the room can shift away from daytime light.</p>
+                    <div class="border-t border-white/15 pt-8">
+                        <p class="font-sans text-lg md:text-xl font-light text-white/76 leading-relaxed">
+                            Blue-rich light can keep your body alert at night. Owlnest Lume was designed for the 1-2 hours before bed, when your room should stop acting like daytime.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 3: How It Works -->
-        <section id="section-mechanism" class="section-container bg-warm py-20 md:py-28 border-b border-taupe/20 section-light !min-h-fit">
+        <section id="section-mechanism" class="section-container bg-warm py-20 md:py-32 lg:py-36 border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Sleep-Supporting Spectrum</span>
-                    <h2 class="font-serif text-4xl md:text-5xl text-midnight leading-tight">How Owlnest Lume Supports Sleep</h2>
+                <div class="max-w-3xl mb-14">
+                    <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">How It Works</span>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-midnight leading-tight">A better spectrum for the hours before sleep.</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
-                    <div class="bg-white border border-taupe/15 p-6 rounded-sm shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+                    <div class="border-t border-taupe/30 pt-8">
                         <p class="text-amber font-serif text-4xl mb-5">01</p>
-                        <h3 class="font-serif text-2xl text-midnight mb-3">Reduces blue-rich nighttime light</h3>
-                        <p class="text-midnight/65 font-light leading-relaxed text-sm">A specially tuned deep amber, low-blue spectrum designed for the hours before bed.</p>
+                        <h3 class="font-serif text-2xl text-midnight mb-3">Low-blue deep amber light</h3>
+                        <p class="text-midnight/65 font-light leading-relaxed">Reduces blue-rich nighttime light exposure.</p>
                     </div>
-                    <div class="bg-white border border-taupe/15 p-6 rounded-sm shadow-sm">
+                    <div class="border-t border-taupe/30 pt-8">
                         <p class="text-amber font-serif text-4xl mb-5">02</p>
-                        <h3 class="font-serif text-2xl text-midnight mb-3">Supports natural melatonin rhythm</h3>
-                        <p class="text-midnight/65 font-light leading-relaxed text-sm">Helps reduce the type of nighttime light exposure that can interfere with your body’s sleep signal.</p>
+                        <h3 class="font-serif text-2xl text-midnight mb-3">Melatonin rhythm support</h3>
+                        <p class="text-midnight/65 font-light leading-relaxed">Designed to support your body's natural night signal.</p>
                     </div>
-                    <div class="bg-white border border-taupe/15 p-6 rounded-sm shadow-sm">
+                    <div class="border-t border-amber/60 pt-8">
                         <p class="text-amber font-serif text-4xl mb-5">03</p>
-                        <h3 class="font-serif text-2xl text-midnight mb-3">Helps your body fall asleep more easily</h3>
-                        <p class="text-midnight/65 font-light leading-relaxed text-sm">Use it 1-2 hours before bed to help your body shift out of alert mode.</p>
+                        <h3 class="font-serif text-2xl text-midnight mb-3">Deeper, better-quality sleep</h3>
+                        <p class="text-midnight/65 font-light leading-relaxed">Helps your body wind down before bed.</p>
                     </div>
-                    <div class="bg-white border border-taupe/15 p-6 rounded-sm shadow-sm">
-                        <p class="text-amber font-serif text-4xl mb-5">04</p>
-                        <h3 class="font-serif text-2xl text-midnight mb-3">Supports deeper, better-quality sleep</h3>
-                        <p class="text-midnight/65 font-light leading-relaxed text-sm">A better nighttime light environment can help your body prepare for deeper, more restorative rest.</p>
-                    </div>
-                </div>
-
-                <div class="mt-10 border border-amber/30 bg-amber/10 text-midnight p-5 md:p-6 text-center rounded-sm">
-                    <p class="font-sans text-sm md:text-base tracking-[0.08em] uppercase font-bold text-midnight/80">
-                        Deep amber, low-blue spectrum → Melatonin rhythm support → Easier sleep onset → Deeper, better-quality sleep
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Interactive Lume Preview (Restored Functionality) -->
+        <!-- Section 4: Product Snapshot -->
         <section id="section-product" class="section-container bg-midnight border-b border-white/5">
-            <div class="flex flex-col lg:flex-row w-full h-full">
-                
-                <!-- Interactive Image Half (Left) -->
-                    <div id="sec3-image" class="w-full lg:w-1/2 h-[42vh] md:h-[50vh] lg:h-full relative overflow-hidden bg-warm transition-colors duration-500 group cursor-pointer" onclick="toggleLamp()">
-                    <img id="lamp-sequence-img" src="lamp-off.jpg" onerror="this.src='https://placehold.co/800x1200/F2EBDD/182234?text=Interactive+Lume'" alt="Owlnest Lume shown in a dim nighttime room setting" class="w-full h-full object-cover transition-opacity duration-300 md:group-hover:scale-105 transition-transform duration-700" loading="eager">
-                    <div class="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/5 transition duration-300"></div>
-                    
-                    <!-- Floating Pill Switch UI -->
-                    <div class="absolute bottom-4 left-4 lg:bottom-10 lg:left-10 z-20 pointer-events-none max-w-[calc(100%-2rem)]">
-                        <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 pr-4 md:pr-6 flex items-center gap-3 md:gap-4 transition-all duration-300 border border-black/10 transform group-hover:scale-105">
-                            <div class="w-14 h-8 rounded-full bg-taupe/50 flex items-center px-1 transition-colors duration-500 ease-in-out" id="custom-toggle-bg">
-                                <div class="w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-500 ease-in-out" id="custom-toggle-circle"></div>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-[10px] tracking-widest uppercase text-taupe font-bold leading-none mb-1">Interactive</span>
-                                <span class="font-serif text-midnight font-bold text-sm md:text-base leading-none transition-all duration-300" id="lamp-status-label">Click to Light Up</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] min-h-[100svh]">
+                <div class="relative min-h-[52vh] lg:min-h-[100svh] bg-warm overflow-hidden flex items-end">
+                    <img src="lume-real-photo-on.jpg" alt="Owlnest Lume glowing with deep amber low-blue light" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight/55 via-transparent to-transparent"></div>
+                    <p class="relative z-10 m-6 md:m-10 text-[10px] tracking-[0.22em] uppercase text-white/70">Deep amber, low-blue glow</p>
                 </div>
-                
-                <!-- Information & Buy Half (Right) -->
-                <div id="sec3-text" class="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center p-6 sm:p-8 lg:p-20 bg-midnight relative z-20">
+
+                <div class="flex items-center px-6 py-20 md:py-28 lg:p-20">
                     <div class="max-w-xl reveal-text text-white">
-                        <div class="mb-6">
-                            <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">The Flagship</span>
-                            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">Owlnest Lume</h2>
-                            <p class="font-serif text-2xl text-amber mt-4">A sleep-supporting spectrum lamp for deeper nights.</p>
-                        </div>
-
-                        <p class="text-white/70 mb-8 leading-relaxed text-base lg:text-lg font-light">
-                            Owlnest Lume is not a regular night light or a normal warm lamp. It is a compact sleep-supporting spectrum lamp tuned for the 1-2 hours before bed.
-                            <br><br>
-                            Its deep amber, low-blue glow is designed to reduce nighttime light disruption, support natural melatonin rhythm, and help your body ease into a more sleep-ready state.
-                            <br><br>
-                            <span class="text-amber font-semibold flex items-center gap-2 mt-2 cursor-pointer hover:text-white transition" onclick="toggleLamp()">
-                                <i class="fas fa-hand-pointer animate-pulse"></i> Click image to preview the lighting mood
-                            </span>
-                        </p>
-
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/65 mb-8">
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>Specially tuned sleep-supporting spectrum</span></li>
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>Deep amber, low-blue glow</span></li>
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>Supports natural melatonin rhythm</span></li>
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>Helps your body wind down and fall asleep more easily</span></li>
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>No app, no screen, no bedtime distraction</span></li>
-                            <li class="flex gap-3"><span class="text-amber">✓</span><span>USB-C rechargeable</span></li>
-                            <li class="flex gap-3 sm:col-span-2"><span class="text-amber">✓</span><span>Soft silicone body with wooden base</span></li>
+                        <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Product Snapshot</span>
+                        <h2 class="text-4xl md:text-6xl font-serif text-white leading-tight mb-5">Owlnest Lume</h2>
+                        <p class="font-serif text-2xl text-amber mb-8">A sleep-supporting spectrum lamp for deeper nights.</p>
+                        <ul class="space-y-4 text-white/70 font-light">
+                            <li>Deep amber, low-blue spectrum</li>
+                            <li>Soft silicone body</li>
+                            <li>Wooden base</li>
+                            <li>USB-C rechargeable</li>
+                            <li>No app. No screen. No distraction.</li>
                         </ul>
-
-                        <div class="border-t border-white/10 pt-8 mt-8">
-                            <div class="mb-6 flex flex-wrap items-baseline gap-4">
-                                <span class="text-4xl lg:text-5xl font-serif text-amber font-bold">$119</span>
-                                <span class="text-xs tracking-widest text-white/50 uppercase">MSRP</span>
-                            </div>
-                            <p class="text-sm text-white/65 leading-relaxed mb-6">
-                                Current campaign pricing is available through our crowdfunding campaign. This website is for brand and product education and does not process direct checkout.
-                            </p>
-                            
-                            <div class="flex flex-col sm:flex-row gap-5">
-                                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                                   class="premium-cta bg-amber text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-warm text-center flex-1">
-                                    Back on Indiegogo
-                                </a>
-                                <a href="products.html#section-flagship"
-                                   class="premium-cta bg-white/10 border border-white/20 text-white px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-white/20 hover:border-amber text-center flex-1">
-                                    Why It Is Different
-                                </a>
-                            </div>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                            <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="premium-cta bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm text-center">
+                                Back on Indiegogo
+                            </a>
+                            <a href="products.html" class="premium-cta border border-white/15 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-white/10 hover:border-amber text-center">
+                                Product Details
+                            </a>
                         </div>
                     </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Section 5: Comparison -->
-        <section class="bg-warm text-midnight py-20 md:py-28 px-6 border-b border-taupe/20 section-light">
-            <div class="max-w-6xl mx-auto reveal-text">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Not Ordinary Lighting</span>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight">Not a Night Light. Not a Regular Warm Lamp.</h2>
-                </div>
-
-                <div class="hidden md:block overflow-x-auto border border-midnight/10 bg-white rounded-sm">
-                    <table class="w-full min-w-[760px] text-left">
-                        <thead>
-                            <tr class="border-b border-midnight/10">
-                                <th class="p-5 text-[11px] tracking-[0.2em] uppercase text-taupe">Compare</th>
-                                <th class="p-5 font-serif text-xl">Regular Night Light</th>
-                                <th class="p-5 font-serif text-xl">Warm Lamp</th>
-                                <th class="p-5 font-serif text-xl text-amber">Owlnest Lume</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm text-midnight/68">
-                            <tr class="border-b border-midnight/10">
-                                <td class="p-5 font-bold text-midnight">Main purpose</td>
-                                <td class="p-5">See in the dark</td>
-                                <td class="p-5">Create ambience</td>
-                                <td class="p-5 text-midnight font-semibold">Support sleep</td>
-                            </tr>
-                            <tr class="border-b border-midnight/10">
-                                <td class="p-5 font-bold text-midnight">Spectrum</td>
-                                <td class="p-5">Generic</td>
-                                <td class="p-5">Warm-looking</td>
-                                <td class="p-5 text-midnight font-semibold">Specially tuned deep amber, low-blue</td>
-                            </tr>
-                            <tr class="border-b border-midnight/10">
-                                <td class="p-5 font-bold text-midnight">Best timing</td>
-                                <td class="p-5">Anytime</td>
-                                <td class="p-5">Anytime</td>
-                                <td class="p-5 text-midnight font-semibold">1-2 hours before bed</td>
-                            </tr>
-                            <tr class="border-b border-midnight/10">
-                                <td class="p-5 font-bold text-midnight">Sleep logic</td>
-                                <td class="p-5">None</td>
-                                <td class="p-5">Mostly aesthetic</td>
-                                <td class="p-5 text-midnight font-semibold">Supports melatonin rhythm and wind-down</td>
-                            </tr>
-                            <tr>
-                                <td class="p-5 font-bold text-midnight">Experience</td>
-                                <td class="p-5">Visibility</td>
-                                <td class="p-5">Cozy mood</td>
-                                <td class="p-5 text-midnight font-semibold">Body and room shift toward sleep</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="md:hidden space-y-4">
-                    <div class="border border-midnight/10 bg-white p-5 rounded-sm">
-                        <h3 class="font-serif text-2xl text-midnight mb-4">Regular Night Light</h3>
-                        <div class="space-y-3 text-sm text-midnight/65">
-                            <p><strong class="text-midnight">Main purpose:</strong> See in the dark</p>
-                            <p><strong class="text-midnight">Spectrum:</strong> Generic</p>
-                            <p><strong class="text-midnight">Best timing:</strong> Anytime</p>
-                            <p><strong class="text-midnight">Sleep logic:</strong> None</p>
-                            <p><strong class="text-midnight">Experience:</strong> Visibility</p>
-                        </div>
-                    </div>
-                    <div class="border border-midnight/10 bg-white p-5 rounded-sm">
-                        <h3 class="font-serif text-2xl text-midnight mb-4">Warm Lamp</h3>
-                        <div class="space-y-3 text-sm text-midnight/65">
-                            <p><strong class="text-midnight">Main purpose:</strong> Create ambience</p>
-                            <p><strong class="text-midnight">Spectrum:</strong> Warm-looking</p>
-                            <p><strong class="text-midnight">Best timing:</strong> Anytime</p>
-                            <p><strong class="text-midnight">Sleep logic:</strong> Mostly aesthetic</p>
-                            <p><strong class="text-midnight">Experience:</strong> Cozy mood</p>
-                        </div>
-                    </div>
-                    <div class="border border-amber/35 bg-amber/10 p-5 rounded-sm">
-                        <h3 class="font-serif text-2xl text-amber mb-4">Owlnest Lume</h3>
-                        <div class="space-y-3 text-sm text-midnight/75">
-                            <p><strong class="text-midnight">Main purpose:</strong> Support sleep</p>
-                            <p><strong class="text-midnight">Spectrum:</strong> Specially tuned deep amber, low-blue</p>
-                            <p><strong class="text-midnight">Best timing:</strong> 1-2 hours before bed</p>
-                            <p><strong class="text-midnight">Sleep logic:</strong> Supports melatonin rhythm and wind-down</p>
-                            <p><strong class="text-midnight">Experience:</strong> Body and room shift toward sleep</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="text-center font-serif text-2xl md:text-3xl text-midnight mt-10 max-w-3xl mx-auto">
-                    Most lights help you see the room. Owlnest Lume is tuned to help your body leave the day behind.
-                </p>
-            </div>
-        </section>
-
-        <!-- Section 6: Use Cases -->
-        <section class="bg-midnight py-20 md:py-28 px-6 border-b border-white/5">
-            <div class="max-w-6xl mx-auto reveal-text">
-                <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
-                    <div>
-                        <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Use Window</span>
-                        <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Use It 1-2 Hours Before Bed</h2>
-                        <p class="text-white/70 font-light leading-relaxed text-base md:text-lg">
-                            Turn off harsh ceiling lights earlier. Put your phone away if you can. Let Owlnest Lume become your main evening light source while your body prepares for sleep.
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
-                            <h3 class="font-serif text-2xl text-white mb-3">Evening Reading</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">Read under a calmer deep amber spectrum instead of bright white light.</p>
-                        </div>
-                        <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
-                            <h3 class="font-serif text-2xl text-white mb-3">Wind-Down Routine</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">Use it while stretching, journaling, or getting ready for bed.</p>
-                        </div>
-                        <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
-                            <h3 class="font-serif text-2xl text-white mb-3">Hotel Room Reset</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">Bring a sleep-supporting light source into unfamiliar rooms.</p>
-                        </div>
-                        <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
-                            <h3 class="font-serif text-2xl text-white mb-3">Bedside Before Sleep</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">Keep the room usable without pulling it back into daytime mode.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Science -->
-        <section id="section-science" class="section-container bg-warm py-20 md:py-32 border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
-                    <div class="order-2 lg:order-1 text-left">
-                        <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Sleep Spectrum</span>
-                        <h2 class="font-serif text-4xl md:text-5xl text-midnight leading-tight mb-8">Why Spectrum Matters at Night</h2>
-                        <div class="space-y-6 text-midnight/72 font-light leading-relaxed text-base md:text-lg">
-                            <p>Not all warm light is sleep-supporting light. Many lamps look warm, but they are still designed mainly for visibility.</p>
-                            <p>Owlnest Lume is tuned differently: a deep amber, low-blue spectrum designed for the biological timing of the hours before sleep.</p>
-                            <p>The goal is simple: less disruptive nighttime light, stronger support for your natural melatonin rhythm, and a room that helps your body prepare for better sleep.</p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-x-6 gap-y-7 mt-9 pt-8 border-t border-midnight/15">
-                            <div>
-                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">1500K-1800K</p>
-                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Deep amber range</p>
-                            </div>
-                            <div>
-                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">Low-blue</p>
-                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Spectrum direction</p>
-                            </div>
-                            <div>
-                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">1-2h</p>
-                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Before bed</p>
-                            </div>
-                            <div>
-                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">No app</p>
-                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">No screen</p>
-                            </div>
-                        </div>
-                        <a href="/science" class="inline-flex mt-9 text-xs tracking-[0.18em] uppercase text-amber font-bold hover:text-midnight transition-colors">
-                            Read the science
-                        </a>
-                    </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="relative p-3 bg-white border border-taupe/20 rounded-sm shadow-xl">
-                            <img src="spectrum.jpg" onerror="this.src='https://placehold.co/800x400/F2EBDD/C9852A?text=Sleep-Supporting+Spectrum'" alt="Sleep-supporting spectrum direction for Owlnest Lume" class="w-full h-auto opacity-90">
-                        </div>
-                        <p class="text-center text-[10px] tracking-[0.2em] text-taupe uppercase mt-8">Deep amber, low-blue spectrum direction</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Indiegogo CTA -->
-        <section class="bg-midnight py-20 md:py-24 px-6 border-b border-white/5 text-center">
-            <div class="max-w-3xl mx-auto reveal-text">
-                <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Live on Indiegogo</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Back Owlnest Lume Today</h2>
-                <p class="text-white/68 font-light leading-relaxed text-base md:text-lg mb-4">
-                    Be among the first to bring a sleep-supporting spectrum lamp into your evening routine.
-                </p>
-                <p class="text-white/55 font-light leading-relaxed text-sm md:text-base mb-9">
-                    Owlnest Lume is designed for the 1-2 hours before bed, using a deep amber, low-blue spectrum to support natural melatonin rhythm, easier wind-down, and deeper, better-quality sleep.
-                </p>
-                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                   class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
-                    Back Owlnest Lume on Indiegogo
-                </a>
-                <p class="text-white/35 text-[11px] tracking-[0.14em] uppercase mt-5">Campaign pricing is available for a limited time.</p>
-            </div>
-        </section>
-
-        <!-- Section 5: Brand Soul (Taiwan / Phu Quoc) bridging to blue-gray -->
-        <section id="section-trust" class="relative py-24 md:py-32 w-full flex items-center justify-center overflow-hidden bg-slateblue">
-            <div class="absolute inset-0 w-full h-full bg-[url('005.png')] bg-cover bg-center bg-fixed opacity-30"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slateblue via-midnight/50 to-midnight/20"></div>
-
-            <div class="relative z-10 text-center px-6 max-w-4xl transition-all duration-1000 reveal-text">
-                <i class="fa-solid fa-quote-left text-amber/40 text-4xl mb-6 block"></i>
-                <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-5">Brand Story</span>
-                <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
-                    Designed in Taiwan.<br>
-                    <span class="italic text-amber font-light mt-3 block opacity-90">Inspired by Phu Quoc’s Sunset.</span>
-                </h2>
-                <div class="mt-8 space-y-5 text-white/70 font-light leading-relaxed text-base md:text-lg max-w-3xl mx-auto">
-                    <p>Owlnest began with a simple observation: the right kind of evening light can change the way a room feels, and the way your body prepares for sleep.</p>
-                    <p>We built Lume to bring that sunset-like sleep signal into modern bedrooms, without apps, screens, or harsh white light.</p>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA -->
-        <section class="bg-slateblue py-20 md:py-24 text-center px-6">
+        <section id="section-final-cta" class="section-container bg-slateblue py-24 md:py-36 lg:py-40 text-center px-6">
             <div class="max-w-3xl mx-auto transition-all duration-1000 reveal-text">
-                <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Bring Better Light to the Hours Before Bed</h2>
-                <p class="text-white/70 font-light text-base md:text-lg mb-9">Most lights help you see. Owlnest Lume is tuned to help you sleep.</p>
+                <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-7">Most lights help you see.<br>Owlnest Lume is tuned to help you sleep.</h2>
                 <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
                     Back Owlnest Lume on Indiegogo
                 </a>
@@ -774,10 +493,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const canvas = document.getElementById('hero-canvas');
         const context = canvas.getContext('2d');
         const section1 = document.getElementById('section-1');
-        
-        const frameCount = 96; 
-        const currentFrame = index => `${index.toString().padStart(3, '0')}.png`; 
-        
+
+        const frameCount = 96;
+        const currentFrame = index => `${index.toString().padStart(3, '0')}.png`;
+
         const images = [];
         const skySequence = { frame: 0 };
         let imagesLoaded = 0;
@@ -803,15 +522,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if(!canvas || !context) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            
+
             if (imagesFailed) {
                 const gradient = context.createLinearGradient(0, 0, 0, canvas.height);
                 const progress = skySequence.frame / frameCount;
                 if (progress < 0.5) {
-                    gradient.addColorStop(0, "#182234"); 
+                    gradient.addColorStop(0, "#182234");
                     gradient.addColorStop(1, "#C9852A");
                 } else {
-                    gradient.addColorStop(0, "#182234"); 
+                    gradient.addColorStop(0, "#182234");
                     gradient.addColorStop(1, "#8B7A69");
                 }
                 context.fillStyle = gradient;
@@ -825,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
             const x = (canvas.width / 2) - (img.width / 2) * scale;
             const y = (canvas.height / 2) - (img.height / 2) * scale;
-            
+
             context.clearRect(0, 0, canvas.width, canvas.height);
             context.drawImage(img, x, y, img.width * scale, img.height * scale);
         }
@@ -835,7 +554,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const dots = document.querySelectorAll('.dot');
         const header = document.getElementById('main-header');
         const navLogo = document.getElementById('nav-logo');
-        
+
         let isScrolling = false;
         let isLampOn = false;
 
@@ -901,7 +620,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 header.classList.remove('nav-dark', 'nav-split');
                 if (window.innerWidth >= 1024 && currentSec && currentSec.id === 'section-product' && !isLampOn) {
                     header.classList.add('nav-split');
-                    if (navLogo) navLogo.src = 'logo.png'; 
+                    if (navLogo) navLogo.src = 'logo.png';
                 } else {
                     if (isBgLight) {
                         header.classList.add('nav-dark');
@@ -918,19 +637,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const rect = section1.getBoundingClientRect();
             const sectionHeight = section1.offsetHeight;
             const windowHeight = window.innerHeight;
-            
+
             if (rect.top <= 0 && rect.bottom >= 0) {
                     const scrollTop = Math.abs(rect.top);
                     const maxScroll = sectionHeight - windowHeight;
                     let scrollFraction = scrollTop / maxScroll;
-                    
+
                     scrollFraction = Math.max(0, Math.min(1, scrollFraction));
-                    
+
                     const frameIndex = Math.min(
                         frameCount - 1,
                         Math.ceil(scrollFraction * frameCount)
                     );
-                    
+
                     if (frameIndex >= 0 && frameIndex < frameCount) {
                         skySequence.frame = frameIndex;
                         render();
@@ -948,14 +667,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 isScrolling = true;
             }
         });
-        
+
         window.addEventListener('load', () => {
             updateUI();
             render();
             const yr = document.getElementById('copyright-year');
             if(yr) yr.textContent = new Date().getFullYear();
         });
-        
+
         window.addEventListener('resize', render);
 
         // Mobile Menu Toggle
@@ -1007,7 +726,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Campaign Script (Preserved) -->
     <script src="/js/campaignBanner.js"></script>
-    
+
     <!-- Campaign Entry Modal (Preserved Exact Logic) -->
     <div id="campaign-entry-modal" class="fixed inset-0 z-[9999] hidden">
         <div class="absolute inset-0 bg-midnight/80 backdrop-blur-sm"></div>
@@ -1088,7 +807,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             // Delayed, scroll-based trigger for the campaign modal
             let modalShown = false;
-            
+
             // Show modal once user scrolls past 1.5 screen heights
             window.addEventListener("scroll", function() {
                 if (!modalShown && window.scrollY > window.innerHeight * 1.5) {
@@ -1096,7 +815,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     modalShown = true;
                 }
             });
-            
+
             // Fallback: Also show modal after 15 seconds if they haven't scrolled down far enough
             setTimeout(function() {
                 if (!modalShown) {
