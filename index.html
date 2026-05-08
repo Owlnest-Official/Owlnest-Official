@@ -140,6 +140,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             opacity: 1;
             transform: translateY(0);
         }
+
+        .hero-glow {
+            background: radial-gradient(circle, rgba(201,133,42,0.34) 0%, rgba(201,133,42,0.16) 34%, rgba(201,133,42,0) 72%);
+            filter: blur(18px);
+        }
+
+        .premium-cta {
+            border-radius: 10px;
+            transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .premium-cta:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .reveal-text,
+            .premium-cta,
+            #mobile-menu,
+            #main-header,
+            #lamp-sequence-img,
+            #custom-toggle-bg,
+            #custom-toggle-circle {
+                transition: none !important;
+                animation: none !important;
+                transform: none !important;
+            }
+        }
         
         /* Navigation Dots */
         .nav-dots {
@@ -299,45 +331,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <!-- Non-blocking overlay layers -->
                 <div class="absolute inset-0 bg-gradient-to-b from-midnight/70 via-midnight/30 to-midnight/90 z-20 pointer-events-none"></div>
-                
+
+                <div class="hidden xl:block absolute right-[5vw] bottom-[9vh] z-[25] w-[clamp(150px,17vw,260px)] pointer-events-none reveal-text" style="transition-delay: 0.42s;">
+                    <div class="hero-glow absolute inset-[-18%] rounded-full"></div>
+                    <div class="relative overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.08] backdrop-blur-sm">
+                        <img src="lume-real-photo-on.jpg" alt="Owlnest Lume glowing with deep amber low-blue light" class="w-full aspect-[3/4] object-cover opacity-95">
+                    </div>
+                </div>
+
                 <!-- Content Overlay -->
                 <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
-                    
+
                     <!-- Restored and high-contrast brand mark -->
-                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125">
+                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
+
+                    <span class="text-amber tracking-[0.24em] md:tracking-[0.3em] uppercase text-[11px] md:text-sm mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Live on Indiegogo</span>
                     
-                    <span class="text-amber tracking-[0.24em] md:tracking-[0.3em] uppercase text-[11px] md:text-sm mb-4 reveal-text font-bold">Owlnest Lume | Live on Indiegogo</span>
-                    
-                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-6 md:mb-8 reveal-text drop-shadow-2xl">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-6 md:mb-8 reveal-text drop-shadow-2xl" style="transition-delay: 0.14s;">
                         Tuned to Help You Sleep,<br>Not Just See
                     </h1>
                     
-                    <p class="text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6 drop-shadow-md">
+                    <p class="text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6 drop-shadow-md" style="transition-delay: 0.2s;">
                         Owlnest Lume uses a specially tuned deep amber, low-blue spectrum to support your natural melatonin rhythm, help your body fall asleep more easily, and support deeper, better-quality sleep.
                     </p>
-                    <div class="max-w-2xl mx-auto mb-8 md:mb-10 space-y-3 reveal-text">
+                    <div class="max-w-2xl mx-auto mb-5 md:mb-6 space-y-3 reveal-text" style="transition-delay: 0.26s;">
                         <p class="text-white/72 text-sm md:text-base font-light leading-relaxed">
                             Use it 1-2 hours before bed to replace harsh white light, reduce nighttime light disruption, and help your room shift into sleep mode.
                         </p>
-                        <p class="text-white/50 text-[11px] md:text-xs font-light leading-relaxed tracking-[0.08em] uppercase">
-                            Not a medical device. No sleep guarantees. A better light environment for the hours before bed.
-                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-9 reveal-text" style="transition-delay: 0.32s;">
+                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Supports melatonin rhythm</span>
+                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Fall asleep more easily</span>
+                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Deeper, better-quality sleep</span>
                     </div>
 
                     <!-- Buttons (Enabled pointer events) -->
-                    <div class="reveal-text pointer-events-auto flex flex-col items-center mt-2">
+                    <div class="reveal-text pointer-events-auto flex flex-col items-center mt-2" style="transition-delay: 0.38s;">
                         <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
                             <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                               class="w-full sm:w-auto bg-amber text-midnight px-6 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm transition-all shadow-[0_0_20px_rgba(201,133,42,0.15)] flex justify-center items-center">
+                               class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm flex justify-center items-center">
                                 Back Owlnest Lume on Indiegogo
                             </a>
-                    <a href="#section-science" class="w-full sm:w-auto border border-white/20 text-white px-6 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 transition-colors flex justify-center items-center">
+                    <a href="#section-science" class="premium-cta w-full sm:w-auto border border-white/20 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 hover:border-amber flex justify-center items-center">
                                 See the Sleep Spectrum
                             </a>
                         </div>
+                        <p class="mt-5 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
+                            Not a medical device. Individual results may vary.
+                        </p>
                     </div>
 
-                    <div class="absolute bottom-8 hidden md:flex flex-col items-center animate-bounce text-white/50 pointer-events-none">
+                    <div class="absolute bottom-5 hidden lg:flex flex-col items-center text-white/40 pointer-events-none">
                         <span class="text-[9px] tracking-[0.3em] uppercase mb-3">Scroll</span>
                         <div class="w-px h-10 bg-white/30"></div>
                     </div>
@@ -477,11 +522,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             
                             <div class="flex flex-col sm:flex-row gap-5">
                                 <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                                   class="bg-amber text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-warm transition-all text-center shadow-[0_0_20px_rgba(201,133,42,0.15)] flex-1">
+                                   class="premium-cta bg-amber text-midnight px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-warm text-center flex-1">
                                     Back on Indiegogo
                                 </a>
-                                <a href="products.html#section-flagship" 
-                                   class="bg-white/10 border border-white/20 text-white px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-white/20 transition-all text-center flex-1">
+                                <a href="products.html#section-flagship"
+                                   class="premium-cta bg-white/10 border border-white/20 text-white px-8 py-4 font-bold tracking-[0.1em] uppercase text-xs hover:bg-white/20 hover:border-amber text-center flex-1">
                                     Why It Is Different
                                 </a>
                             </div>
@@ -500,7 +545,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h2 class="font-serif text-4xl md:text-5xl leading-tight">Not a Night Light. Not a Regular Warm Lamp.</h2>
                 </div>
 
-                <div class="overflow-x-auto border border-midnight/10 bg-white rounded-sm shadow-sm">
+                <div class="hidden md:block overflow-x-auto border border-midnight/10 bg-white rounded-sm">
                     <table class="w-full min-w-[760px] text-left">
                         <thead>
                             <tr class="border-b border-midnight/10">
@@ -545,6 +590,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </table>
                 </div>
 
+                <div class="md:hidden space-y-4">
+                    <div class="border border-midnight/10 bg-white p-5 rounded-sm">
+                        <h3 class="font-serif text-2xl text-midnight mb-4">Regular Night Light</h3>
+                        <div class="space-y-3 text-sm text-midnight/65">
+                            <p><strong class="text-midnight">Main purpose:</strong> See in the dark</p>
+                            <p><strong class="text-midnight">Spectrum:</strong> Generic</p>
+                            <p><strong class="text-midnight">Best timing:</strong> Anytime</p>
+                            <p><strong class="text-midnight">Sleep logic:</strong> None</p>
+                            <p><strong class="text-midnight">Experience:</strong> Visibility</p>
+                        </div>
+                    </div>
+                    <div class="border border-midnight/10 bg-white p-5 rounded-sm">
+                        <h3 class="font-serif text-2xl text-midnight mb-4">Warm Lamp</h3>
+                        <div class="space-y-3 text-sm text-midnight/65">
+                            <p><strong class="text-midnight">Main purpose:</strong> Create ambience</p>
+                            <p><strong class="text-midnight">Spectrum:</strong> Warm-looking</p>
+                            <p><strong class="text-midnight">Best timing:</strong> Anytime</p>
+                            <p><strong class="text-midnight">Sleep logic:</strong> Mostly aesthetic</p>
+                            <p><strong class="text-midnight">Experience:</strong> Cozy mood</p>
+                        </div>
+                    </div>
+                    <div class="border border-amber/35 bg-amber/10 p-5 rounded-sm">
+                        <h3 class="font-serif text-2xl text-amber mb-4">Owlnest Lume</h3>
+                        <div class="space-y-3 text-sm text-midnight/75">
+                            <p><strong class="text-midnight">Main purpose:</strong> Support sleep</p>
+                            <p><strong class="text-midnight">Spectrum:</strong> Specially tuned deep amber, low-blue</p>
+                            <p><strong class="text-midnight">Best timing:</strong> 1-2 hours before bed</p>
+                            <p><strong class="text-midnight">Sleep logic:</strong> Supports melatonin rhythm and wind-down</p>
+                            <p><strong class="text-midnight">Experience:</strong> Body and room shift toward sleep</p>
+                        </div>
+                    </div>
+                </div>
+
                 <p class="text-center font-serif text-2xl md:text-3xl text-midnight mt-10 max-w-3xl mx-auto">
                     Most lights help you see the room. Owlnest Lume is tuned to help your body leave the day behind.
                 </p>
@@ -565,19 +643,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
                             <h3 class="font-serif text-2xl text-white mb-3">Evening Reading</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">A softer light source when you want to keep the room quiet before bed.</p>
+                            <p class="text-white/55 text-sm leading-relaxed">Read under a calmer deep amber spectrum instead of bright white light.</p>
                         </div>
                         <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
                             <h3 class="font-serif text-2xl text-white mb-3">Wind-Down Routine</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">A repeatable evening cue that helps the room stop feeling like daytime.</p>
+                            <p class="text-white/55 text-sm leading-relaxed">Use it while stretching, journaling, or getting ready for bed.</p>
                         </div>
                         <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
                             <h3 class="font-serif text-2xl text-white mb-3">Hotel Room Reset</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">A way to reduce harsh hotel lighting and make an unfamiliar room feel sleep-ready.</p>
+                            <p class="text-white/55 text-sm leading-relaxed">Bring a sleep-supporting light source into unfamiliar rooms.</p>
                         </div>
                         <div class="border border-white/10 bg-white/5 p-6 rounded-sm">
                             <h3 class="font-serif text-2xl text-white mb-3">Bedside Before Sleep</h3>
-                            <p class="text-white/55 text-sm leading-relaxed">A low-blue amber glow for the last stretch before lights out.</p>
+                            <p class="text-white/55 text-sm leading-relaxed">Keep the room usable without pulling it back into daytime mode.</p>
                         </div>
                     </div>
                 </div>
@@ -596,6 +674,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <p>Owlnest Lume is tuned differently: a deep amber, low-blue spectrum designed for the biological timing of the hours before sleep.</p>
                             <p>The goal is simple: less disruptive nighttime light, stronger support for your natural melatonin rhythm, and a room that helps your body prepare for better sleep.</p>
                         </div>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-7 mt-9 pt-8 border-t border-midnight/15">
+                            <div>
+                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">1500K-1800K</p>
+                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Deep amber range</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">Low-blue</p>
+                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Spectrum direction</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">1-2h</p>
+                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">Before bed</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-4xl md:text-5xl text-midnight leading-none">No app</p>
+                                <p class="text-[10px] tracking-[0.18em] uppercase text-taupe mt-3">No screen</p>
+                            </div>
+                        </div>
                         <a href="/science" class="inline-flex mt-9 text-xs tracking-[0.18em] uppercase text-amber font-bold hover:text-midnight transition-colors">
                             Read the science
                         </a>
@@ -613,15 +709,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Section 8: Indiegogo CTA -->
         <section class="bg-midnight py-20 md:py-24 px-6 border-b border-white/5 text-center">
             <div class="max-w-3xl mx-auto reveal-text">
-                <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Campaign</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Live on Indiegogo</h2>
-                <p class="text-white/68 font-light leading-relaxed text-base md:text-lg mb-9">
-                    Back Owlnest Lume today and be among the first to bring a sleep-supporting spectrum lamp into your evening routine.
+                <span class="text-amber tracking-[0.2em] uppercase text-[10px] md:text-xs block font-bold mb-4">Live on Indiegogo</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Back Owlnest Lume Today</h2>
+                <p class="text-white/68 font-light leading-relaxed text-base md:text-lg mb-4">
+                    Be among the first to bring a sleep-supporting spectrum lamp into your evening routine.
+                </p>
+                <p class="text-white/55 font-light leading-relaxed text-sm md:text-base mb-9">
+                    Owlnest Lume is designed for the 1-2 hours before bed, using a deep amber, low-blue spectrum to support natural melatonin rhythm, easier wind-down, and deeper, better-quality sleep.
                 </p>
                 <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
-                   class="inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-all">
-                    Back on Indiegogo
+                   class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
+                    Back Owlnest Lume on Indiegogo
                 </a>
+                <p class="text-white/35 text-[11px] tracking-[0.14em] uppercase mt-5">Campaign pricing is available for a limited time.</p>
             </div>
         </section>
 
@@ -649,7 +749,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="max-w-3xl mx-auto transition-all duration-1000 reveal-text">
                 <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">Bring Better Light to the Hours Before Bed</h2>
                 <p class="text-white/70 font-light text-base md:text-lg mb-9">Most lights help you see. Owlnest Lume is tuned to help you sleep.</p>
-                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-all">
+                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
                     Back Owlnest Lume on Indiegogo
                 </a>
             </div>
