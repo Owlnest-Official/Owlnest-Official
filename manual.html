@@ -1,124 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manual | Owlnest Official</title>
-  <meta name="description" content="The current Owlnest Lume manual, including usage guidance, 1500K–1800K light specifications, safety notes, and campaign support information.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://owlnestofficial.com/manual.html">
-  <link rel="icon" type="image/png" href="logo.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Manrope"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
-          },
-          colors: {
-            midnight: '#182234',
-            amber: '#C9852A',
-            warm: '#F2EBDD',
-            slateblue: '#51627A',
-            taupe: '#8B7A69'
-          }
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual | Owlnest Official</title>
+    <meta name="description" content="The current Owlnest Lume manual, including usage guidance, 1500K-1800K light specifications, safety notes, and campaign support information.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://owlnestofficial.com/manual.html">
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Manrope"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        midnight: '#182234',
+                        amber: '#C9852A',
+                        warm: '#F2EBDD',
+                        slateblue: '#51627A',
+                        taupe: '#8B7A69'
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #182234;
+            color: #ffffff;
+        }
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out;
+        }
+        #mobile-menu.open { transform: translateY(0); }
+    </style>
 </head>
-<body class="bg-midnight text-white font-sans antialiased">
-  <main class="max-w-5xl mx-auto px-6 py-16 md:py-24">
-    <div class="mb-12">
-      <a href="index.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-amber transition-colors">
-        Back to Owlnest
-      </a>
-      <div class="mt-8 text-amber text-xs tracking-[0.3em] uppercase font-bold">Owlnest Lume Manual</div>
-      <h1 class="mt-4 font-serif text-4xl md:text-6xl leading-tight">Current product guide for Owlnest Lume.</h1>
-      <p class="mt-6 max-w-3xl text-base md:text-lg text-white/70 leading-relaxed">
-        This manual reflects the current product and campaign state of Owlnest Lume. It is a compact circadian rhythm lamp designed for the 1 to 2 hours before bed, not a medical device and not a general-purpose bright room lamp.
-      </p>
+<body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/90 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <div class="logo-area flex items-center gap-3 relative z-50">
+            <a href="index.html" class="flex items-center gap-3">
+                <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+            </a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="index.html" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="products.html" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/science" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="about.html" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="contact.html" class="hover:text-amber transition-colors duration-300">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <a href="campaign/index.html" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    Campaign
+                </a>
+            </div>
+        </div>
+
+        <div class="flex lg:hidden items-center gap-5 relative z-50">
+            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="campaign/index.html" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-semibold text-center">
+            <a href="account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
+                <i class="fas fa-user"></i> Member Login
+            </a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="index.html" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="products.html" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="about.html" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="contact.html" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+        </nav>
     </div>
 
-    <section class="grid gap-6 md:grid-cols-2 mb-12">
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-bold">Product Type</div>
-        <p class="mt-3 text-white/80 leading-relaxed">Compact circadian rhythm lamp for nighttime wind-down.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-bold">Recommended Use Window</div>
-        <p class="mt-3 text-white/80 leading-relaxed">Use during the final 1 to 2 hours before bed as part of a calmer evening routine.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-bold">Light Range</div>
-        <p class="mt-3 text-white/80 leading-relaxed">1500K–1800K deep amber range designed for nighttime-friendly lighting.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="text-[11px] uppercase tracking-[0.2em] text-white/40 font-bold">Current Purchase Path</div>
-        <p class="mt-3 text-white/80 leading-relaxed">Backing and campaign pricing are currently handled through the Indiegogo campaign rather than direct website checkout.</p>
-      </div>
-    </section>
+    <main>
+        <section class="relative pt-36 pb-16 md:pt-44 md:pb-24 px-6 bg-midnight overflow-hidden border-b border-white/5">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slateblue/20 via-midnight to-midnight pointer-events-none"></div>
+            <div class="relative z-10 max-w-5xl mx-auto">
+                <span class="text-amber tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block font-bold">Owlnest Lume Manual</span>
+                <h1 class="font-serif text-5xl md:text-7xl text-white leading-[0.95]">Current product guide for Owlnest Lume.</h1>
+                <p class="font-sans text-base md:text-xl font-light text-white/65 leading-relaxed max-w-3xl mt-8">
+                    This manual reflects the current product and campaign state of Owlnest Lume. It is a compact circadian rhythm lamp designed for the 1 to 2 hours before bed, not a medical device and not a general-purpose bright room lamp.
+                </p>
+            </div>
+        </section>
 
-    <section class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 mb-10">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">How to use Owlnest Lume</h2>
-      <div class="space-y-5 text-white/75 leading-relaxed">
-        <p>1. Place Owlnest Lume in your bedside area or another part of the room where it can support your evening environment without acting as bright task lighting.</p>
-        <p>2. Turn it on during the last 1 to 2 hours before bed, especially when you want the room to feel calmer and less like daytime.</p>
-        <p>3. Use it to replace brighter overhead light, harsh bedside lamps, or other lighting that keeps the room feeling active late at night.</p>
-        <p>4. Owlnest Lume is best used as a repeatable environmental cue for nighttime wind-down, not as a promise of instant sleep results.</p>
-      </div>
-    </section>
+        <section class="bg-warm text-midnight px-6 py-16 md:py-24">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4 mb-12">
+                    <div class="rounded-sm border border-midnight/10 bg-white p-6 shadow-sm">
+                        <div class="text-[11px] uppercase tracking-[0.2em] text-taupe font-bold">Product Type</div>
+                        <p class="mt-4 font-serif text-2xl leading-tight">Compact circadian rhythm lamp</p>
+                    </div>
+                    <div class="rounded-sm border border-midnight/10 bg-white p-6 shadow-sm">
+                        <div class="text-[11px] uppercase tracking-[0.2em] text-taupe font-bold">Recommended Use</div>
+                        <p class="mt-4 font-serif text-2xl leading-tight">Final 1 to 2 hours before bed</p>
+                    </div>
+                    <div class="rounded-sm border border-midnight/10 bg-white p-6 shadow-sm">
+                        <div class="text-[11px] uppercase tracking-[0.2em] text-taupe font-bold">Light Range</div>
+                        <p class="mt-4 font-serif text-2xl leading-tight">1500K-1800K amber light</p>
+                    </div>
+                    <div class="rounded-sm border border-midnight/10 bg-white p-6 shadow-sm">
+                        <div class="text-[11px] uppercase tracking-[0.2em] text-taupe font-bold">Purchase Path</div>
+                        <p class="mt-4 font-serif text-2xl leading-tight">Campaign backing on Indiegogo</p>
+                    </div>
+                </div>
 
-    <section class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 mb-10">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">What Owlnest Lume is and is not</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">What it is</div>
-          <ul class="space-y-3 text-white/75 leading-relaxed">
-            <li>A compact circadian rhythm lamp.</li>
-            <li>A nighttime wind-down tool for the bedroom or evening routine.</li>
-            <li>A product designed around 1500K–1800K amber light and lower-stimulation nighttime use.</li>
-          </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-[0.36fr_1fr] gap-8 lg:gap-14">
+                    <aside class="lg:sticky lg:top-28 h-fit border border-midnight/10 bg-midnight text-white p-6 rounded-sm">
+                        <p class="text-[11px] tracking-[0.22em] uppercase text-amber font-bold mb-4">Quick Specs</p>
+                        <ul class="space-y-3 text-sm text-white/65 leading-relaxed">
+                            <li>Size: 11 cm x 11 cm x 12 cm</li>
+                            <li>Shape: egg-shaped diffuser with a simple round wooden base</li>
+                            <li>Control: bottom power button</li>
+                            <li>Charging: USB-C rechargeable</li>
+                            <li>No app, Bluetooth, speaker, clock, projector, alarm, or color-changing modes</li>
+                        </ul>
+                    </aside>
+
+                    <div class="space-y-5">
+                        <section class="bg-white p-7 md:p-9 rounded-sm border border-midnight/10 shadow-sm">
+                            <h2 class="font-serif text-2xl md:text-3xl mb-5">How to use Owlnest Lume</h2>
+                            <div class="space-y-4 text-midnight/68 leading-relaxed">
+                                <p>1. Place Owlnest Lume near your bedside area or another part of the room where it can support your evening environment without acting as bright task lighting.</p>
+                                <p>2. Turn it on during the last 1 to 2 hours before bed, especially when you want the room to feel calmer and less like daytime.</p>
+                                <p>3. Use it to replace brighter overhead light, harsh bedside lamps, or hotel lighting that keeps the room feeling active late at night.</p>
+                                <p>4. Treat it as a repeatable environmental cue for nighttime wind-down, not as a promise of instant sleep results.</p>
+                            </div>
+                        </section>
+
+                        <section class="bg-white p-7 md:p-9 rounded-sm border border-midnight/10 shadow-sm">
+                            <h2 class="font-serif text-2xl md:text-3xl mb-5">What Owlnest Lume is and is not</h2>
+                            <div class="grid gap-8 md:grid-cols-2">
+                                <div>
+                                    <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">What it is</div>
+                                    <ul class="space-y-3 text-midnight/68 leading-relaxed list-disc pl-5">
+                                        <li>A compact circadian rhythm lamp.</li>
+                                        <li>A nighttime wind-down tool for the bedroom or evening routine.</li>
+                                        <li>A product designed around 1500K-1800K amber light and lower-stimulation nighttime use.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">What it is not</div>
+                                    <ul class="space-y-3 text-midnight/68 leading-relaxed list-disc pl-5">
+                                        <li>Not a generic night light for simple visibility or navigation.</li>
+                                        <li>Not a medical device and not a treatment for insomnia or any sleep disorder.</li>
+                                        <li>Not a sunrise alarm, white noise machine, or app-based sleep gadget.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="bg-white p-7 md:p-9 rounded-sm border border-midnight/10 shadow-sm">
+                            <h2 class="font-serif text-2xl md:text-3xl mb-5">Safety and care</h2>
+                            <div class="space-y-4 text-midnight/68 leading-relaxed">
+                                <p>Use only compatible charging accessories and follow normal battery-safety precautions.</p>
+                                <p>Do not disassemble the lamp or expose charging components to moisture.</p>
+                                <p>Clean with a soft dry cloth. Avoid harsh solvents or abrasive cleaning materials.</p>
+                                <p>Keep the product away from extreme heat, prolonged direct water exposure, and situations where it may be crushed or sharply bent.</p>
+                            </div>
+                        </section>
+
+                        <section class="bg-white p-7 md:p-9 rounded-sm border border-midnight/10 shadow-sm">
+                            <h2 class="font-serif text-2xl md:text-3xl mb-5">Warranty, returns, and campaign support</h2>
+                            <div class="space-y-4 text-midnight/68 leading-relaxed">
+                                <p>Campaign-backed units are expected to include a standard 1-year limited warranty for manufacturing defects after delivery.</p>
+                                <p>Because the product is currently in crowdfunding, refund timing, pledge adjustments, and fulfillment terms follow the campaign and platform stage rather than normal instant-retail checkout rules.</p>
+                                <p>For support, warranty questions, or product guidance, contact <a href="mailto:owlnestpq2025@gmail.com" class="text-amber font-semibold hover:text-midnight transition-colors">owlnestpq2025@gmail.com</a>.</p>
+                            </div>
+                        </section>
+
+                        <section class="bg-midnight text-white p-7 md:p-9 rounded-sm border border-white/10 shadow-sm">
+                            <h2 class="font-serif text-2xl md:text-3xl mb-5">Important clarification</h2>
+                            <p class="text-white/68 leading-relaxed">
+                                Owlnest Lume is designed around nighttime-friendly lighting principles and a calmer evening environment. It is not a medical device, does not diagnose or treat sleep disorders, and should be understood as an environmental support product for the hours before bed.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-midnight border-t border-white/5 py-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
+            <div class="flex gap-6">
+                <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
+                <a href="manual.html" class="text-[10px] text-amber transition uppercase tracking-[0.2em]">Manual</a>
+            </div>
         </div>
-        <div>
-          <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">What it is not</div>
-          <ul class="space-y-3 text-white/75 leading-relaxed">
-            <li>Not a generic night light for simple visibility or navigation.</li>
-            <li>Not a medical device and not a treatment for insomnia or any sleep disorder.</li>
-            <li>Not a sunrise alarm, white noise machine, or app-based sleep gadget.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </footer>
 
-    <section class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 mb-10">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">Safety and care</h2>
-      <div class="space-y-4 text-white/75 leading-relaxed">
-        <p>Use only compatible charging accessories and follow normal battery-safety precautions.</p>
-        <p>Do not disassemble the lamp or expose charging components to moisture.</p>
-        <p>Clean with a soft dry cloth. Avoid harsh solvents or abrasive cleaning materials.</p>
-        <p>Keep the product away from extreme heat, prolonged direct water exposure, and situations where it may be crushed or sharply bent.</p>
-      </div>
-    </section>
+    <script>
+        window.addEventListener('load', () => {
+            const yr = document.getElementById('copyright-year');
+            if (yr) yr.textContent = new Date().getFullYear();
+        });
 
-    <section class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 mb-10">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">Warranty, returns, and campaign support</h2>
-      <div class="space-y-4 text-white/75 leading-relaxed">
-        <p>Owlnest expects campaign-backed units to include a standard 1-year limited warranty for manufacturing defects.</p>
-        <p>Because the product is currently in crowdfunding, refund timing, pledge adjustments, and fulfillment terms follow the campaign and platform stage rather than normal instant-retail checkout rules.</p>
-        <p>For support, warranty questions, or product guidance, contact <a href="mailto:owlnestpq2025@gmail.com" class="text-amber hover:text-white transition-colors">owlnestpq2025@gmail.com</a>.</p>
-      </div>
-    </section>
-
-    <section class="rounded-3xl border border-amber/20 bg-amber/5 p-8 md:p-10">
-      <h2 class="font-serif text-2xl md:text-3xl mb-6">Important clarification</h2>
-      <p class="text-white/75 leading-relaxed">
-        Owlnest Lume is designed around nighttime-friendly lighting principles and a calmer evening environment. It is not a medical device, does not diagnose or treat sleep disorders, and should be understood as an environmental support product for the hours before bed.
-      </p>
-    </section>
-  </main>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu || !icon) return;
+            menu.classList.toggle('open');
+            if (menu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
 </body>
 </html>
