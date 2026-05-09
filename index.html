@@ -125,6 +125,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
+        @media (max-width: 420px) {
+            #main-header {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            #main-header .logo-area {
+                gap: 0.55rem;
+            }
+            #main-header .logo-area span {
+                font-size: 1rem;
+                letter-spacing: 0.16em;
+            }
+            #main-header .mobile-actions {
+                gap: 1rem;
+            }
+            .home-hero-content {
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+            .home-hero-title {
+                max-width: 21rem;
+                font-size: 2rem;
+                line-height: 1.08;
+            }
+            .home-hero-copy {
+                max-width: 20.5rem;
+                font-size: 0.95rem;
+                line-height: 1.65;
+            }
+            .home-hero-chip {
+                padding-left: 0.85rem;
+                padding-right: 0.85rem;
+                letter-spacing: 0.05em;
+            }
+        }
+
         /* Reveal Animations */
         .reveal-text {
             opacity: 0;
@@ -301,7 +338,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <!-- Mobile Toggle Button -->
-        <div class="flex lg:hidden items-center gap-5 relative z-50">
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
             <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
@@ -352,25 +389,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="absolute inset-0 hero-atmosphere z-20 pointer-events-none"></div>
 
                 <!-- Content Overlay -->
-                <div class="relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
+                <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
 
                     <!-- Restored and high-contrast brand mark -->
                     <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
 
                     <span class="text-amber tracking-[0.24em] md:tracking-[0.3em] uppercase text-[11px] md:text-sm mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Live on Indiegogo</span>
 
-                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-7 md:mb-9 reveal-text drop-shadow-2xl" style="transition-delay: 0.14s;">
+                    <h1 class="home-hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] mb-7 md:mb-9 reveal-text drop-shadow-2xl" style="transition-delay: 0.14s;">
                         Tuned to Help You Sleep,<br>Not Just See.
                     </h1>
 
-                    <p class="text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.2s;">
+                    <p class="home-hero-copy text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.2s;">
                         A deep amber, low-blue spectrum lamp designed to support natural melatonin rhythm and a calmer nighttime environment.
                     </p>
 
                     <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-11 reveal-text" style="transition-delay: 0.32s;">
-                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Melatonin rhythm</span>
-                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Easier wind-down</span>
-                        <span class="border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Low-blue glow</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Melatonin rhythm</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Easier wind-down</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Low-blue glow</span>
                     </div>
 
                     <!-- Buttons (Enabled pointer events) -->
