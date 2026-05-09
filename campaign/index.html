@@ -133,6 +133,15 @@
                 height: 390px !important;
                 padding: 1.5rem !important;
             }
+            .campaign-hero-chips {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                max-width: 19.5rem !important;
+            }
+            .campaign-hero-chips span {
+                width: fit-content;
+                max-width: 100%;
+            }
         }
         @media (min-width: 641px) {
             .campaign-nav-short {
@@ -188,10 +197,6 @@
                         A specially tuned deep amber, low-blue sleep-supporting spectrum lamp designed to support natural melatonin production and help your body wind down before bed.
                     </p>
 
-                    <p class="campaign-hero-subcopy text-base sm:text-lg text-white/62 leading-relaxed max-w-2xl font-light mb-7">
-                        Use it during the 1 to 2 hours before bed to reduce disruptive nighttime light and support deeper, better-quality sleep.
-                    </p>
-
                     <div class="border-l border-amber/70 pl-5 mb-8">
                         <p class="text-2xl sm:text-3xl font-serif text-white">Live on Indiegogo from $59.</p>
                         <p class="text-sm sm:text-base text-white/56 mt-1">Regular price $119.</p>
@@ -207,11 +212,10 @@
                         </a>
                     </div>
 
-                    <div class="flex flex-wrap gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] font-bold text-white/72">
-                        <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">Sleep-supporting spectrum</span>
+                    <div class="campaign-hero-chips flex flex-wrap gap-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] font-bold text-white/72">
                         <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">Supports melatonin rhythm</span>
-                        <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">Deep amber, low-blue glow</span>
-                        <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">USB-C rechargeable</span>
+                        <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">Deep amber, low-blue</span>
+                        <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">From $59 on Indiegogo</span>
                         <span class="border border-white/12 bg-white/7 px-3 py-2 rounded-full">No app. No screen.</span>
                     </div>
                 </div>
@@ -220,20 +224,6 @@
                     <figure class="proof-frame rounded-[22px] overflow-hidden">
                         <img src="../lume-real-photo-on.jpg" alt="Owlnest Lume glowing with deep amber low-blue light" class="w-full h-[440px] sm:h-[560px] lg:h-[660px] object-contain p-8 sm:p-10">
                     </figure>
-                    <div class="grid grid-cols-3 gap-3 mt-4">
-                        <div class="proof-frame rounded-2xl p-4 text-center">
-                            <div class="text-amber text-[10px] uppercase tracking-[0.16em] font-bold mb-1">Light</div>
-                            <div class="text-white/72 text-xs">Deep amber, low-blue glow</div>
-                        </div>
-                        <div class="proof-frame rounded-2xl p-4 text-center">
-                            <div class="text-amber text-[10px] uppercase tracking-[0.16em] font-bold mb-1">Use</div>
-                            <div class="text-white/72 text-xs">1 to 2 hours before bed</div>
-                        </div>
-                        <div class="proof-frame rounded-2xl p-4 text-center">
-                            <div class="text-amber text-[10px] uppercase tracking-[0.16em] font-bold mb-1">Design</div>
-                            <div class="text-white/72 text-xs">No app or screen</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -245,7 +235,7 @@
                         Not a Night Light.<br>A Sleep-Supporting Spectrum Lamp.
                     </h2>
                     <p class="reveal text-lg text-midnight/68 leading-relaxed font-light">
-                        Normal warm lamps are made mainly for visibility. Owlnest Lume is tuned for the hours before bed, helping reduce blue-rich nighttime light disruption and support your body’s natural melatonin rhythm.
+                        Normal warm lamps are made for visibility. Owlnest Lume is tuned for the hours before bed, with a deep amber, low-blue spectrum designed to reduce nighttime light disruption and support natural melatonin rhythm.
                     </p>
                 </div>
 
@@ -254,7 +244,7 @@
                         <h3 class="font-serif text-2xl mb-6">Normal warm lamp</h3>
                         <ul class="space-y-4 text-midnight/66 leading-relaxed">
                             <li class="flex gap-3"><i class="fas fa-minus text-midnight/35 mt-1"></i><span>Made for seeing</span></li>
-                            <li class="flex gap-3"><i class="fas fa-minus text-midnight/35 mt-1"></i><span>May still be too alerting at night</span></li>
+                            <li class="flex gap-3"><i class="fas fa-minus text-midnight/35 mt-1"></i><span>Can still feel too alerting at night</span></li>
                             <li class="flex gap-3"><i class="fas fa-minus text-midnight/35 mt-1"></i><span>Not designed around melatonin rhythm</span></li>
                         </ul>
                     </div>
@@ -263,8 +253,8 @@
                         <h3 class="font-serif text-2xl mb-6">Owlnest Lume</h3>
                         <ul class="space-y-4 text-white/74 leading-relaxed">
                             <li class="flex gap-3"><i class="fas fa-check text-amber mt-1"></i><span>Tuned for sleep support</span></li>
-                            <li class="flex gap-3"><i class="fas fa-check text-amber mt-1"></i><span>Deep amber, low-blue spectrum</span></li>
                             <li class="flex gap-3"><i class="fas fa-check text-amber mt-1"></i><span>Supports natural melatonin production</span></li>
+                            <li class="flex gap-3"><i class="fas fa-check text-amber mt-1"></i><span>Designed for the hours before bed</span></li>
                         </ul>
                     </div>
                 </div>
@@ -280,7 +270,7 @@
                             Real Product. Real Details.
                         </h2>
                         <p class="text-white/66 leading-relaxed font-light mb-8">
-                            Built with a soft silicone body, wooden base, USB-C charging, bottom-button control, and a real deep amber glow.
+                            A compact 11 &times; 11 &times; 12 cm lamp with a soft silicone body, wooden base, USB-C charging, bottom-button control, and a real deep amber glow.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
@@ -290,7 +280,7 @@
                             <div class="proof-frame rounded-xl p-4">USB-C rechargeable</div>
                             <div class="proof-frame rounded-xl p-4">Bottom-button control</div>
                             <div class="proof-frame rounded-xl p-4">Deep amber, low-blue glow</div>
-                            <div class="proof-frame rounded-xl p-4">No app. No screen. No notifications.</div>
+                            <div class="proof-frame rounded-xl p-4">No app. No screen.</div>
                         </div>
                     </div>
 
@@ -330,7 +320,7 @@
 
                 <div class="reveal bg-midnight text-white rounded-[26px] border border-amber/35 p-7 md:p-10 shadow-[0_28px_80px_rgba(24,34,52,0.25)]">
                     <div class="text-amber text-xs uppercase tracking-[0.2em] font-bold mb-5">Campaign Offer</div>
-                    <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                         <div class="border border-white/10 bg-white/5 rounded-2xl p-5">
                             <div class="text-white/45 text-[10px] uppercase tracking-[0.16em] font-bold mb-2">From</div>
                             <div class="font-serif text-4xl text-white">$59</div>
@@ -342,10 +332,6 @@
                         <div class="border border-white/10 bg-white/5 rounded-2xl p-5">
                             <div class="text-white/45 text-[10px] uppercase tracking-[0.16em] font-bold mb-2">Regular Price</div>
                             <div class="font-serif text-4xl text-white">$119</div>
-                        </div>
-                        <div class="border border-white/10 bg-white/5 rounded-2xl p-5">
-                            <div class="text-white/45 text-[10px] uppercase tracking-[0.16em] font-bold mb-2">Availability</div>
-                            <div class="font-serif text-2xl text-white">On Indiegogo</div>
                         </div>
                     </div>
                     <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="cta w-full inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-warm">
@@ -384,10 +370,6 @@
                         <p class="mt-4 text-white/62 leading-relaxed">Use it during the 1 to 2 hours before bed.</p>
                     </details>
                     <details class="group border border-white/10 bg-white/[0.04] rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Does it use an app?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">No. Owlnest Lume has no app, no screen, and no notifications.</p>
-                    </details>
-                    <details class="group border border-white/10 bg-white/[0.04] rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Where do I back it?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">On the live Indiegogo campaign.</p>
                     </details>
@@ -400,7 +382,7 @@
                 <div class="mb-8 reveal">
                     <p class="text-amber text-xs uppercase tracking-[0.22em] font-bold mb-4">Trust & Terms</p>
                     <h2 class="font-serif text-3xl md:text-5xl leading-tight tracking-[-0.03em] font-medium mb-4">Campaign Transparency & Policies</h2>
-                    <p class="text-midnight/64 leading-relaxed">Crowdfunding involves development, production, and fulfillment timelines. Please review the policy sections below for campaign terms, privacy, and refund information.</p>
+                    <p class="text-midnight/64 leading-relaxed">Crowdfunding involves production, shipping, and fulfillment timelines. Review the sections below for campaign terms, privacy, and refund information.</p>
                 </div>
 
                 <div class="space-y-3 reveal">
