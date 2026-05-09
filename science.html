@@ -161,6 +161,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .ambient-glow {
             background: radial-gradient(circle at center, rgba(201, 133, 42, 0.12) 0%, rgba(24, 34, 52, 0) 70%);
         }
+
+        .science-panel {
+            border: 1px solid rgba(24, 34, 52, 0.12);
+            background: rgba(255, 255, 255, 0.42);
+        }
+
+        .science-panel-dark {
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .spectrum-visual {
+            background:
+                radial-gradient(circle at 78% 50%, rgba(201, 133, 42, 0.24), rgba(201, 133, 42, 0) 38%),
+                linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+        }
+
+        .chain-arrow {
+            color: rgba(201, 133, 42, 0.85);
+        }
     </style>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -224,9 +244,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="nav-dots hidden xl:flex">
         <a href="#section-1" class="dot active" data-index="0"></a>
         <a href="#section-neutral" class="dot" data-index="1"></a>
-        <a href="#section-supports" class="dot" data-index="2"></a>
-        <a href="#section-data" class="dot" data-index="3"></a>
-        <a href="#section-boundaries" class="dot" data-index="4"></a>
+        <a href="#section-spectrum" class="dot" data-index="2"></a>
+        <a href="#section-chain" class="dot" data-index="3"></a>
+        <a href="#section-data" class="dot" data-index="4"></a>
+        <a href="#section-boundaries" class="dot" data-index="5"></a>
     </div>
 
     <main>
@@ -240,39 +261,96 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </h1>
                 </div>
                 <p class="font-sans text-lg md:text-xl font-light text-white/70 leading-relaxed max-w-xl">
-                    Light is not only something we use to see. At night, spectrum, timing, and intensity can influence how alert or sleep-ready the body feels.
+                    Light affects more than visibility. The spectrum you use before bed can influence how alert or sleep-ready your body feels.
                 </p>
             </div>
         </section>
 
-        <section id="section-neutral" class="py-24 md:py-36 px-6 bg-warm text-midnight section-light border-b border-taupe/10">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 reveal-text">
+        <section id="section-neutral" class="py-20 md:py-28 lg:py-32 px-6 bg-warm text-midnight section-light border-b border-taupe/10">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-12 lg:gap-20 reveal-text">
                 <div>
                     <span class="font-sans text-amber tracking-widest uppercase text-xs font-bold mb-6 block">Nighttime Light Is Not Neutral</span>
                     <h2 class="font-serif text-4xl md:text-6xl leading-tight">Not all warm light is sleep-supporting light.</h2>
                 </div>
-                <div class="space-y-6 font-sans text-base md:text-lg font-light leading-relaxed text-midnight/72">
-                    <p>Bright, blue-rich light is useful during the day. At night, it can keep the room feeling active when your body should be moving toward sleep.</p>
-                    <p>Owlnest Lume focuses on the final 1 to 2 hours before bed: a deep amber, low-blue spectrum that helps reduce blue-rich nighttime light disruption and supports natural melatonin rhythm.</p>
+                <div>
+                    <p class="font-sans text-base md:text-lg font-light leading-relaxed text-midnight/72 max-w-2xl mb-8">
+                        Warm-looking light is not automatically sleep-supporting. The question is not only whether the light looks cozy, but how much blue-rich stimulation it brings into the hours before bed.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="science-panel rounded-[22px] p-6">
+                            <span class="text-[10px] tracking-[0.2em] uppercase text-taupe font-bold">Regular warm light</span>
+                            <h3 class="font-serif text-2xl mt-4 mb-3">Visibility first.</h3>
+                            <p class="text-midnight/65 text-sm leading-relaxed">Warm-looking, but still designed mainly to help you see the room.</p>
+                        </div>
+                        <div class="rounded-[22px] p-6 bg-midnight text-white border border-amber/35">
+                            <span class="text-[10px] tracking-[0.2em] uppercase text-amber font-bold">Owlnest Lume</span>
+                            <h3 class="font-serif text-2xl mt-4 mb-3">Sleep spectrum first.</h3>
+                            <p class="text-white/68 text-sm leading-relaxed">Deep amber, low-blue spectrum designed for the hours before sleep.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="section-supports" class="py-24 md:py-36 px-6 bg-midnight border-t border-white/5">
+        <section id="section-spectrum" class="py-20 md:py-28 lg:py-32 px-6 bg-midnight border-t border-white/5">
             <div class="max-w-6xl mx-auto reveal-text">
-                <div class="max-w-3xl mb-14">
-                    <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-4 block">How It Supports Sleep</span>
-                    <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">A simple chain: better spectrum, better night signal.</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
-                    <div class="border-t border-white/15 pt-8"><h3 class="font-serif text-2xl text-white mb-4">Reduce blue-rich light</h3><p class="text-white/62 leading-relaxed font-light">A low-blue amber direction for the hours before bed.</p></div>
-                    <div class="border-t border-white/15 pt-8"><h3 class="font-serif text-2xl text-white mb-4">Support melatonin rhythm</h3><p class="text-white/62 leading-relaxed font-light">Designed around light timing and spectrum principles studied in sleep science.</p></div>
-                    <div class="border-t border-amber/60 pt-8"><h3 class="font-serif text-2xl text-white mb-4">Prepare for deeper nights</h3><p class="text-white/62 leading-relaxed font-light">A calmer light environment can help the body wind down before sleep.</p></div>
+                <div class="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-12 lg:gap-20 items-center">
+                    <div>
+                        <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-4 block">The Spectrum</span>
+                        <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">Less blue-rich light. More deep amber emphasis.</h2>
+                        <p class="mt-6 text-white/62 font-light leading-relaxed max-w-xl">
+                            This visual is a simplified design diagram, not a lab report. It shows the intended direction: reduce blue-rich nighttime stimulation and emphasize a deeper amber range.
+                        </p>
+                    </div>
+                    <div class="spectrum-visual rounded-[28px] border border-white/10 p-5 md:p-8">
+                        <svg viewBox="0 0 760 360" role="img" aria-label="Simplified spectrum graph comparing blue-rich light and Owlnest Lume amber emphasis" class="w-full h-auto">
+                            <defs>
+                                <linearGradient id="spectrumGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                                    <stop offset="0%" stop-color="#355EDB"/>
+                                    <stop offset="28%" stop-color="#52B6FF"/>
+                                    <stop offset="50%" stop-color="#F2EBDD"/>
+                                    <stop offset="72%" stop-color="#E79A2E"/>
+                                    <stop offset="100%" stop-color="#B73A1D"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="42" y="42" width="676" height="236" rx="18" fill="rgba(15,17,26,0.72)" stroke="rgba(255,255,255,0.12)"/>
+                            <line x1="84" y1="242" x2="678" y2="242" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+                            <line x1="170" y1="68" x2="170" y2="242" stroke="rgba(82,182,255,0.28)" stroke-width="1"/>
+                            <line x1="548" y1="68" x2="548" y2="242" stroke="rgba(201,133,42,0.42)" stroke-width="1"/>
+                            <path d="M84 230 C126 95, 166 78, 214 168 C262 250, 336 225, 420 214 C515 202, 594 134, 678 118" fill="none" stroke="rgba(82,182,255,0.56)" stroke-width="3"/>
+                            <path d="M84 238 C190 238, 286 236, 380 224 C475 208, 545 116, 678 104" fill="none" stroke="#C9852A" stroke-width="4"/>
+                            <rect x="84" y="284" width="594" height="18" rx="9" fill="url(#spectrumGradient)" opacity="0.82"/>
+                            <text x="84" y="326" fill="rgba(255,255,255,0.48)" font-family="Manrope" font-size="12" letter-spacing="2">BLUE-RICH</text>
+                            <text x="536" y="326" fill="rgba(255,255,255,0.62)" font-family="Manrope" font-size="12" letter-spacing="2">DEEP AMBER</text>
+                            <text x="92" y="80" fill="rgba(82,182,255,0.72)" font-family="Manrope" font-size="12" letter-spacing="2">REGULAR LIGHT</text>
+                            <text x="500" y="94" fill="#C9852A" font-family="Manrope" font-size="12" letter-spacing="2">OWL NEST LUME</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="section-data" class="py-24 md:py-36 px-6 bg-warm text-midnight section-light border-t border-taupe/10">
+        <section id="section-chain" class="py-20 md:py-28 lg:py-32 px-6 bg-[#0f111a] border-t border-white/5">
+            <div class="max-w-6xl mx-auto reveal-text">
+                <div class="max-w-3xl mb-12">
+                    <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-4 block">A Simple Chain</span>
+                    <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight">How spectrum becomes sleep readiness.</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-4 md:gap-5 items-stretch">
+                    <div class="science-panel-dark rounded-[22px] p-5"><p class="text-white font-serif text-xl">Deep amber, low-blue spectrum</p></div>
+                    <div class="hidden md:flex items-center chain-arrow text-2xl">→</div>
+                    <div class="science-panel-dark rounded-[22px] p-5"><p class="text-white font-serif text-xl">Reduced nighttime light disruption</p></div>
+                    <div class="hidden md:flex items-center chain-arrow text-2xl">→</div>
+                    <div class="science-panel-dark rounded-[22px] p-5"><p class="text-white font-serif text-xl">Melatonin rhythm support</p></div>
+                    <div class="hidden md:flex items-center chain-arrow text-2xl">→</div>
+                    <div class="science-panel-dark rounded-[22px] p-5"><p class="text-white font-serif text-xl">Easier wind-down</p></div>
+                    <div class="hidden md:flex items-center chain-arrow text-2xl">→</div>
+                    <div class="science-panel-dark rounded-[22px] p-5"><p class="text-white font-serif text-xl">Deeper, better-quality sleep</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-data" class="py-20 md:py-28 lg:py-32 px-6 bg-warm text-midnight section-light border-t border-taupe/10">
             <div class="max-w-6xl mx-auto reveal-text">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20 items-start">
                     <div>
@@ -288,7 +366,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <section id="section-references" class="py-24 md:py-36 px-6 bg-[#0f111a] text-white border-t border-white/5">
+        <section id="section-references" class="py-20 md:py-28 lg:py-32 px-6 bg-[#0f111a] text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto reveal-text">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20">
                     <div>
@@ -313,7 +391,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </div>
         </section>
-        <section id="section-boundaries" class="py-24 md:py-36 px-6 bg-warm text-midnight text-center border-t border-taupe/10 section-light">
+        <section id="section-boundaries" class="py-20 md:py-28 lg:py-32 px-6 bg-warm text-midnight text-center border-t border-taupe/10 section-light">
             <div class="max-w-3xl mx-auto reveal-text">
                 <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-5 block">Disclaimer</span>
                 <h2 class="font-serif text-3xl md:text-5xl text-midnight mb-8">Research-informed, not medical.</h2>
@@ -321,7 +399,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     Owlnest Lume is a sleep-supporting spectrum lamp, not a medical device. The research on this page explains why evening spectrum and timing matter; it does not prove product-specific clinical outcomes.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="products.html" class="inline-flex items-center justify-center border border-midnight/15 text-midnight px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">View Product</a>
+                    <a href="products.html" class="inline-flex items-center justify-center border border-midnight/15 text-midnight px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">Explore Owlnest Lume</a>
                     <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">Back on Indiegogo</a>
                 </div>
             </div>
