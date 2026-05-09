@@ -138,7 +138,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 letter-spacing: 0.16em;
             }
             #main-header .mobile-actions {
-                gap: 1rem;
+                gap: 0.9rem;
+                position: absolute;
+                right: 2.25rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #main-header .mobile-actions button {
+                margin-left: 0 !important;
+            }
+            #main-header .mobile-account-link {
+                display: none;
+            }
+            #main-header .mobile-campaign-link {
+                display: none;
             }
             .home-hero-content {
                 max-width: 100%;
@@ -155,9 +168,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 font-size: 0.95rem !important;
                 line-height: 1.65 !important;
             }
+            .home-hero-chips {
+                max-width: 20rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
             .home-hero-chip {
                 padding-left: 0.85rem !important;
                 padding-right: 0.85rem !important;
+                font-size: 0.625rem !important;
                 letter-spacing: 0.05em !important;
             }
         }
@@ -330,7 +349,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
                 </a>
@@ -339,14 +358,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Mobile Toggle Button -->
         <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
+            <a href="account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
-            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
             </button>
         </div>
     </header>
@@ -363,6 +383,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
             <a href="about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
             <a href="contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
         </nav>
     </div>
 
@@ -401,10 +422,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </h1>
 
                     <p class="home-hero-copy text-white/80 max-w-2xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.2s;">
-                        A deep amber, low-blue spectrum lamp designed to support natural melatonin rhythm and a calmer nighttime environment.
+                        A deep amber, low-blue spectrum lamp designed to support melatonin rhythm, easier sleep, and deeper nights.
                     </p>
 
-                    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-11 reveal-text" style="transition-delay: 0.32s;">
+                    <div class="home-hero-chips flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-11 reveal-text" style="transition-delay: 0.32s;">
                         <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Melatonin rhythm</span>
                         <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Easier wind-down</span>
                         <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Low-blue glow</span>
@@ -447,7 +468,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             Blue-rich light can keep the evening environment feeling alerting, even when you are trying to wind down.
                         </p>
                         <p class="mt-5 font-sans text-lg md:text-xl font-light text-white/76 leading-relaxed">
-                            Owlnest Lume is tuned for the hours before bed, using a deep amber, low-blue spectrum designed to support your body's natural night signal.
+                            Owlnest Lume is tuned for the hours before bed, using a specially tuned deep amber, low-blue spectrum designed to support your body's natural night signal.
                         </p>
                     </div>
                 </div>
@@ -475,8 +496,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </div>
                     <div class="border-t border-amber/60 pt-9">
                         <p class="text-amber font-serif text-4xl mb-5">03</p>
-                        <h3 class="font-serif text-2xl text-midnight mb-3">Sleep-ready atmosphere</h3>
-                        <p class="text-midnight/65 font-light leading-relaxed">Helps create a sleep-supporting light environment for the hours before bed.</p>
+                        <h3 class="font-serif text-2xl text-midnight mb-3">Sleep-supporting environment</h3>
+                        <p class="text-midnight/65 font-light leading-relaxed">Helps create a calmer light environment for the hours before bed.</p>
                     </div>
                 </div>
             </div>
@@ -485,17 +506,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Section 4: Product Snapshot -->
         <section id="section-product" class="section-container bg-midnight section-breathe border-b border-white/5 !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-14 lg:gap-24 items-center">
-                <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-4 md:p-6 overflow-hidden">
+                <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-5 md:p-8 overflow-hidden">
                     <div class="grid grid-cols-1 md:grid-cols-[1fr_0.56fr] gap-4 md:gap-5">
-                        <div class="gallery-frame p-5 md:p-8 flex min-h-[460px] md:min-h-[560px] items-center justify-center">
-                            <img src="lume-real-photo-on.jpg" alt="Owlnest Lume glowing with deep amber low-blue light" class="max-h-[420px] md:max-h-[500px] w-auto max-w-full object-contain rounded-[18px]">
+                        <div class="gallery-frame p-8 md:p-12 flex min-h-[420px] md:min-h-[540px] items-center justify-center">
+                            <img src="lume-real-photo-on.jpg" alt="Owlnest Lume glowing with deep amber low-blue light" class="max-h-[360px] md:max-h-[455px] w-auto max-w-full object-contain rounded-[18px]">
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-5">
-                            <div class="gallery-frame p-3 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="lume-size-reference.jpg" alt="Owlnest Lume size reference" class="max-h-[220px] md:max-h-[255px] w-auto max-w-full object-contain rounded-[14px]">
+                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
+                                <img src="lume-size-reference.jpg" alt="Owlnest Lume size reference" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
                             </div>
-                            <div class="gallery-frame p-3 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="lume-usb-c.jpg" alt="Owlnest Lume USB-C charging detail" class="max-h-[220px] md:max-h-[255px] w-auto max-w-full object-contain rounded-[14px]">
+                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
+                                <img src="lume-bottom-button.jpg" alt="Owlnest Lume bottom-button and USB-C charging detail" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
                             </div>
                         </div>
                     </div>
@@ -506,7 +527,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="max-w-lg reveal-text text-white">
                         <span class="text-amber tracking-[0.2em] uppercase text-xs mb-4 block font-bold">Product Snapshot</span>
                         <h2 class="text-4xl md:text-6xl font-serif text-white leading-tight mb-5">Owlnest Lume</h2>
-                        <p class="font-serif text-2xl text-amber mb-8">A sleep-supporting spectrum lamp for evening wind-down and nighttime living.</p>
+                        <p class="font-serif text-2xl text-amber mb-8">A sleep-supporting spectrum lamp for deeper nights.</p>
                         <p class="mb-9 text-white/68 font-light leading-relaxed">Simple, quiet, and built for the hours before bed.</p>
                         <ul class="space-y-4 text-white/70 font-light border-t border-white/10 pt-8">
                             <li>Deep amber, low-blue spectrum</li>
@@ -520,7 +541,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 Back on Indiegogo
                             </a>
                             <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="premium-cta border border-white/15 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-white/10 hover:border-amber text-center">
-                                View Campaign
+                                Explore Owlnest Lume
                             </a>
                         </div>
                     </div>
@@ -531,7 +552,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Final CTA -->
         <section id="section-final-cta" class="section-container bg-slateblue section-breathe text-center px-6 !min-h-fit">
             <div class="max-w-3xl mx-auto transition-all duration-1000 reveal-text">
-                <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">Most lights help you see.<br>Owlnest Lume is tuned for nighttime living.</h2>
+                <h2 class="font-serif text-4xl md:text-6xl text-white leading-tight mb-8">Most lights help you see.<br>Owlnest Lume is tuned to help you sleep.</h2>
                 <a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
                     Back Owlnest Lume on Indiegogo
                 </a>
@@ -816,9 +837,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 
                 <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                <a id="campaign-entry-go" href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener"
+                <a id="campaign-entry-go" href="/campaign/"
                     class="w-full inline-flex items-center justify-center gap-2 bg-amber text-midnight font-bold px-6 py-4 tracking-widest uppercase text-xs sm:text-sm hover:bg-warm transition active:scale-95">
-                    Back on Indiegogo <i class="fas fa-arrow-right"></i>
+                    View Campaign Page <i class="fas fa-arrow-right"></i>
                 </a>
 
                 <button id="campaign-entry-close"

@@ -77,6 +77,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media (max-width: 640px) {
+            #main-header {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            #main-header .logo-area {
+                gap: 0.55rem;
+            }
+            #main-header .logo-area span {
+                font-size: 1rem;
+                letter-spacing: 0.16em;
+            }
+            #main-header .mobile-actions {
+                gap: 0.9rem;
+                position: absolute;
+                right: 2.25rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #main-header .mobile-actions button {
+                margin-left: 0 !important;
+            }
+            #main-header .mobile-account-link {
+                display: none;
+            }
+            #main-header .mobile-campaign-link {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -106,22 +136,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <a href="campaign/index.html" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
                 </a>
             </div>
         </div>
 
-        <div class="flex lg:hidden items-center gap-5 relative z-50">
-            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Member Login">
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Member Login">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="campaign/index.html" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
-            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
             </button>
         </div>
     </header>
@@ -137,6 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
             <a href="about.html" onclick="toggleMobileMenu()" class="text-amber transition-colors">About Us</a>
             <a href="contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
         </nav>
     </div>
 
@@ -195,8 +227,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <section class="py-24 md:py-36 px-6 bg-midnight text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-center reveal-text visible">
                 <div>
-                    <span class="text-amber tracking-[0.3em] uppercase text-xs mb-5 block font-bold">Fourth-Generation Design</span>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-8">The first three versions were intentionally rejected.</h2>
+                    <span class="text-amber tracking-[0.3em] uppercase text-xs mb-5 block font-bold">Why We Made Lume</span>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-8">A simple lamp for the hours when the room should become quieter.</h2>
                     <p class="font-sans text-base md:text-lg font-light text-white/68 leading-relaxed">
                         We reached the current fourth-generation prototype after a series of design discussions and rejected earlier directions. The current product direction is mature for production: compact form, USB-C charging, bottom-button control, wooden base, and deep amber low-blue light.
                     </p>

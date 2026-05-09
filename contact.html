@@ -91,6 +91,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         #main-header.nav-dark .border-white\/10 {
             border-color: rgba(24, 34, 52, 0.2) !important;
         }
+
+        @media (max-width: 640px) {
+            #main-header {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            #main-header .logo-area {
+                gap: 0.55rem;
+            }
+            #main-header .logo-area span {
+                font-size: 1rem;
+                letter-spacing: 0.16em;
+            }
+            #main-header .mobile-actions {
+                gap: 0.9rem;
+                position: absolute;
+                right: 2.25rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #main-header .mobile-actions button {
+                margin-left: 0 !important;
+            }
+            #main-header .mobile-account-link {
+                display: none;
+            }
+            #main-header .mobile-campaign-link {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -120,22 +150,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <a href="campaign/index.html" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
                 </a>
             </div>
         </div>
 
-        <div class="flex lg:hidden items-center gap-5 relative z-50">
-            <a href="account.html" class="relative active:scale-95 transition text-white/80 hover:text-amber">
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="campaign/index.html" class="relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
-            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2">
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
             </button>
         </div>
     </header>
@@ -151,6 +182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
             <a href="about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
             <a href="contact.html" onclick="toggleMobileMenu()" class="text-amber transition-colors">Contact</a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
         </nav>
     </div>
 
@@ -165,7 +197,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </h1>
                 </div>
                 <p class="font-sans text-base md:text-xl font-light text-white/65 leading-relaxed max-w-2xl">
-                    Questions about the product, campaign, or support? We would love to hear from you.
+                    Questions about the product, campaign, or support? We'd love to hear from you.
                 </p>
             </div>
         </section>
@@ -176,9 +208,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <span class="text-[10px] text-amber tracking-[0.3em] uppercase font-semibold block mb-5">Reach Us</span>
                     <h2 class="text-3xl md:text-4xl font-serif mb-6 text-white">Email and social</h2>
                     <div class="space-y-6 text-white/70 font-light mb-8 text-base">
-                        <p class="leading-relaxed">For product questions, campaign support, business inquiries, or collaboration ideas, this is the cleanest way to reach us.</p>
-                        <p class="flex items-start gap-4"><i class="fas fa-map-marker-alt text-amber text-base mt-1"></i><span>114 Ly Thuong Kiet, Phu Quoc, Vietnam</span></p>
+                        <p class="leading-relaxed">For product questions, campaign support, business inquiries, or collaboration ideas, email is the cleanest way to reach us.</p>
                         <p class="flex items-start gap-4"><i class="fas fa-envelope text-amber text-base mt-1"></i><span>owlnestpq2025@gmail.com</span></p>
+                        <p class="flex items-start gap-4"><i class="fas fa-arrow-up-right-from-square text-amber text-base mt-1"></i><a href="https://www.indiegogo.com/en/projects/owlnest/owlnestlume" target="_blank" rel="noopener" class="hover:text-amber transition-colors">Owlnest Lume on Indiegogo</a></p>
                     </div>
 
                     <div class="flex items-center gap-4 mb-8">
@@ -197,9 +229,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <i class="fab fa-discord text-sm"></i>
                             </a>
                     </div>
-
-                    <div class="w-full min-h-64 lg:min-h-80 overflow-hidden border border-white/10 bg-warm mt-auto">
-                        <iframe title="Owlnest location map in Phu Quoc" width="100%" height="100%" frameborder="0" style="border:0; min-height: 320px;" src="https://maps.google.com/maps?q=114+Lý+Thường+Kiệt,+Phú+Quốc,+Vietnam&hl=en&z=15&output=embed" allowfullscreen></iframe>
+                    <div class="mt-auto border-t border-white/10 pt-6">
+                        <p class="text-[10px] tracking-[0.24em] uppercase text-white/38 mb-3">Typical topics</p>
+                        <p class="text-sm text-white/58 leading-relaxed">Product questions, Indiegogo campaign support, press, partnerships, and post-campaign support.</p>
                     </div>
                 </div>
 
