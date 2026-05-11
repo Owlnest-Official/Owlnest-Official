@@ -117,7 +117,7 @@
       "year_if_available": "Year not clearly available from current Science page",
       "author_or_institution_if_available": "ITRI",
       "key_idea": "Presents ITRI's framing around sleep-related technology and nighttime-supportive environments.",
-      "relevance_to_owlnest_lume": "Supports the broader product context of evidence-informed nighttime living and sleep-adjacent environmental design.",
+      "relevance_to_owlnest_lume": "Supports the broader product context of evidence-informed sleep-supporting light and sleep-adjacent environmental design.",
       "claim_boundary": "Institutional context does not equal product-specific clinical validation for Owlnest Lume.",
       "used_in_design_traceability_matrix": true
     },
@@ -178,16 +178,16 @@
       "science_page_source": "CIE S 026: Measuring Biologically Relevant Light",
       "research_principle": "Biologically relevant light should be measured with more than visible brightness.",
       "product_design_decision": "Frame nighttime design around biological relevance and timing.",
-      "owlnest_lume_implementation": "Circadian rhythm lamp positioning for nighttime use.",
+      "owlnest_lume_implementation": "Sleep-spectrum lamp positioning for nighttime use.",
       "evidence_level": "Institutional standard + design rationale",
       "claim_boundary": "Not proof that Owlnest Lume has completed the same measurements.",
       "validation_still_needed": "Melanopic or equivalent product-specific metrics if available."
     },
     {
       "science_page_source": "Read: Smart Sleep Technology by ITRI",
-      "research_principle": "Timing matters for circadian-friendly lighting environments.",
+      "research_principle": "Timing matters for sleep-supporting lighting environments.",
       "product_design_decision": "Recommend use 1 to 2 hours before bed.",
-      "owlnest_lume_implementation": "Positioned as an evening wind-down lamp, not daytime task lighting.",
+      "owlnest_lume_implementation": "Positioned as a sleep-spectrum lamp for the hours before bed, not daytime task lighting.",
       "evidence_level": "Institutional research + design rationale",
       "claim_boundary": "Does not guarantee sleep improvement.",
       "validation_still_needed": "User study or controlled product-specific test if stronger claims are desired."
@@ -195,8 +195,8 @@
     {
       "science_page_source": "Biologically Relevant Lighting: An Industry Perspective",
       "research_principle": "Lighting can be designed with biological effects in mind.",
-      "product_design_decision": "Position the product as evidence-informed circadian lighting.",
-      "owlnest_lume_implementation": "Sleep-supporting spectrum lamp for evening wind-down and nighttime living.",
+      "product_design_decision": "Position the product as evidence-informed sleep-supporting lighting.",
+      "owlnest_lume_implementation": "Sleep-spectrum lamp tuned to support a more sleep-ready evening.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Does not prove product-specific clinical efficacy.",
       "validation_still_needed": "Product-specific validation summary page."
@@ -213,7 +213,7 @@
     {
       "science_page_source": "High-Efficiency Candlelight OLED with Very Low Color Temperature",
       "research_principle": "Very low color temperature can be intentionally engineered.",
-      "product_design_decision": "Use a low-stimulation spectrum direction for nighttime living.",
+      "product_design_decision": "Use a low-stimulation spectrum direction for the hours before bed.",
       "owlnest_lume_implementation": "Rich deep amber / red-orange dusk-like glow.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Not a quantitative performance claim for Owlnest Lume.",
@@ -250,7 +250,7 @@
       "science_page_source": "Download: Smart Sleep and Care Solutions",
       "research_principle": "Calmer environmental design can support nighttime routines.",
       "product_design_decision": "Frame the product as a non-medical habit and environment support tool.",
-      "owlnest_lume_implementation": "Evening wind-down positioning and simple hardware without extra stimulation.",
+      "owlnest_lume_implementation": "Hours-before-bed positioning and simple hardware without extra stimulation.",
       "evidence_level": "Research report PDF + design rationale",
       "claim_boundary": "Does not establish medical or product-specific sleep claims.",
       "validation_still_needed": "Product-specific user testing or validation summary."
@@ -267,9 +267,9 @@
   ],
   "recommended_wording": [
     "research-informed design",
-    "evidence-informed circadian lighting",
+    "evidence-informed sleep-supporting lighting",
     "designed around published research on evening light exposure and blue-light reduction",
-    "supports a more natural evening wind-down",
+    "supports a more sleep-ready evening",
     "supports natural melatonin rhythm",
     "helps create a calmer nighttime environment",
     "designed for the 1 to 2 hours before bed"
@@ -295,5 +295,5 @@
       "third-party lab or instrument report if available"
     ]
   },
-  "last_updated": "2026-04-20"
+  "last_updated": "2026-05-11"
 }

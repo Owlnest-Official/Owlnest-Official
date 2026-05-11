@@ -10,7 +10,7 @@
 
 ## Claims and Compliance
 
-Owlnest Lume should be described as a sleep-supporting spectrum lamp for evening wind-down and nighttime living.
+Owlnest Lume should be described as a sleep-spectrum lamp / sleep-supporting spectrum lamp tuned to help people sleep, not just see.
 
 Use conservative general-wellness language:
 - supports a more natural evening wind-down

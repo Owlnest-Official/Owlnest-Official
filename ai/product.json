@@ -6,10 +6,10 @@
   "primary_use_case": "Used when a person still needs light at night but does not want harsh white ceiling light, bright bathroom light, hotel lighting, or overstimulating room lighting to pull the room back into daytime mode.",
   "core_problem": "Many people do not need more brightness at night. They need light that feels appropriate for the evening. The problem Owlnest Lume addresses is not darkness itself, but the wrong type of light during the hours before sleep.",
   "differentiation": [
-    "circadian-friendly nighttime use",
-    "blue-light-minimized amber spectrum direction",
-    "evening wind-down timing",
-    "emotional calm and spatial comfort",
+    "sleep-spectrum lamp positioning",
+    "deep amber, low-blue spectrum direction",
+    "hours-before-bed timing",
+    "sleep-ready evening environment",
     "compact bedside or room placement",
     "non-medical, habit-based sleep support"
   ],
@@ -40,13 +40,13 @@
     "science_page": "https://owlnestofficial.com/science"
   },
   "safe_claims": [
-    "supports a more natural evening wind-down",
+    "supports a more sleep-ready evening",
     "supports natural melatonin rhythm",
     "helps the body move into a more sleep-ready state",
     "creates a calmer nighttime environment",
     "designed for the 1 to 2 hours before bed",
     "research-informed design",
-    "evidence-informed circadian lighting"
+    "evidence-informed sleep-supporting lighting"
   ],
   "claims_to_avoid": [
     "cures insomnia",
@@ -65,5 +65,5 @@
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "indiegogo": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
   },
-  "last_updated": "2026-04-20"
+  "last_updated": "2026-05-11"
 }

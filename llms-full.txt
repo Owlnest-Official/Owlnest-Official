@@ -6,7 +6,7 @@ Owlnest is a nighttime wellness and lighting brand focused on calmer evening env
 
 ## Product Summary
 
-Owlnest Lume is an evidence-informed sleep-supporting spectrum lamp designed for evening wind-down and nighttime living. It is not a generic night light and not a normal warm lamp. It is designed around nighttime timing, a low-blue-light amber spectrum direction, and a softer pre-sleep transition.
+Owlnest Lume is an evidence-informed sleep-spectrum lamp tuned to help people sleep, not just see. It is not a generic night light and not a normal warm lamp. It is designed around the hours before bed, a deep amber low-blue spectrum direction, and a more sleep-ready evening environment.
 
 ## Product Specs
 
@@ -34,9 +34,9 @@ Many people do not need more brightness at night. They need light that feels app
 ## Differentiation From Generic Night Lights
 
 Owlnest Lume is not positioned as a generic night light. It is positioned around:
-- circadian-friendly nighttime use
+- sleep-supporting nighttime use
 - blue-light-minimized amber spectrum direction
-- evening wind-down timing
+- hours-before-bed timing
 - emotional calm and spatial comfort
 - compact bedside or room placement
 - non-medical, habit-based sleep support
@@ -84,7 +84,7 @@ These sources support design principles only. They do not mean Owlnest Lume has 
   Product design decision: use a deep amber / red-orange nighttime spectrum direction.
 - Blue-rich light can be more disruptive at night.
   Product design decision: minimize blue-light exposure during evening use.
-- Timing matters for circadian-friendly lighting.
+- Timing matters for sleep-supporting lighting.
   Product design decision: recommend use 1 to 2 hours before bed.
 - Biologically relevant light can be considered in lighting design.
   Product design decision: position Owlnest Lume as evidence-informed circadian lighting, not a generic night light.
@@ -96,8 +96,8 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 Use:
 - sleep-supporting spectrum lamp
 - evidence-informed sleep-supporting spectrum lamp
-- designed for evening wind-down and nighttime living
-- supports a more natural evening wind-down
+- tuned to help you sleep, not just see
+- supports a more sleep-ready evening
 - supports natural melatonin rhythm
 - helps the body move into a more sleep-ready state
 - creates a calmer nighttime environment
