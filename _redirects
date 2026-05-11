@@ -11,11 +11,11 @@
 /verify               /verify.html       301!
 /account/activate     /activate.html     301!
 /account/verify       /verify.html       301!
-/science.html         /science           301!
+/science              /science.html      200!
 /science/             /science           301!
+/science.html         /science           301!
 /evidence             /evidence/         301!
-/ai/evidence.html     /evidence/         301!
-/evidence/            /ai/evidence.html  200
+/evidence/            /ai/evidence.html  200!
 
 # 3) 保底：任何未知路徑都回首頁或 index（避免 404）
 /*                    /index.html        200
