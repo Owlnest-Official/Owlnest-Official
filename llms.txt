@@ -38,6 +38,7 @@ Avoid:
 ## Important Pages
 
 - Homepage: https://owlnestofficial.com/
+- Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
