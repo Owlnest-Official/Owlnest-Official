@@ -15,7 +15,7 @@ Owlnest Lume is not a generic night light or normal warm lamp. It is a sleep-sup
 Owlnest Lume is evidence-informed, not product-specific clinically proven. Its design is based on research references already published on Owlnest's Science page, including lighting research around evening light exposure, blue-light reduction, amber/red-spectrum nighttime lighting, and natural melatonin rhythm.
 
 For detailed evidence mapping, see:
-https://owlnestofficial.com/ai/evidence.html
+https://owlnestofficial.com/evidence/
 https://owlnestofficial.com/ai/evidence.json
 
 ## Safe Claims
@@ -39,7 +39,7 @@ Avoid:
 
 - Homepage: https://owlnestofficial.com/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
-- Evidence Brief: https://owlnestofficial.com/ai/evidence.html
+- Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Science: https://owlnestofficial.com/science
 - Indiegogo: https://www.indiegogo.com/en/projects/owlnest/owlnestlume

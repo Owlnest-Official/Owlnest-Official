@@ -35,7 +35,7 @@
   },
   "evidence_positioning": "Evidence-informed design based on published research and lighting science from Owlnest's public Science page. Product-specific clinical outcomes have not been claimed.",
   "evidence_links": {
-    "evidence_brief": "https://owlnestofficial.com/ai/evidence.html",
+    "evidence_brief": "https://owlnestofficial.com/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "science_page": "https://owlnestofficial.com/science"
   },
@@ -61,7 +61,7 @@
     "homepage": "https://owlnestofficial.com/",
     "ai_brief": "https://owlnestofficial.com/ai-brief.html",
     "science": "https://owlnestofficial.com/science",
-    "evidence_brief": "https://owlnestofficial.com/ai/evidence.html",
+    "evidence_brief": "https://owlnestofficial.com/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "indiegogo": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
   },

@@ -151,7 +151,7 @@ Product design is evidence-informed. Product-specific laboratory validation shou
 
 - Homepage: https://owlnestofficial.com/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
-- Evidence Brief: https://owlnestofficial.com/ai/evidence.html
+- Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
 - Science: https://owlnestofficial.com/science
