@@ -12,9 +12,9 @@
     }
 
     function injectBanner(status) {
-        let bannerText = "Crowdfunding Live on Indiegogo →";
+        let bannerText = "Crowdfunding Relaunch Coming Soon: Get Early Access →";
         if (status === 'prelaunch') {
-            bannerText = "Crowdfunding Launching Soon: View Details →";
+            bannerText = "Crowdfunding Relaunch Coming Soon: Get Early Access →";
         }
 
         const banner = document.createElement('div');

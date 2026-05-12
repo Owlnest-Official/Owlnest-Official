@@ -1,20 +1,20 @@
 {
-  "status": "live",
+  "status": "prelaunch",
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Sleep-Supporting Spectrum Lamp",
   "subtitle": "Designed for the 1 to 2 hours before bed with a deep amber, low-blue spectrum.",
   "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep-supporting spectrum lamp tuned to help you sleep, not just see.",
-  "notice": "Owlnest Lume is currently live on Indiegogo. MSRP remains $119, while campaign pricing is limited to active campaign tiers on the campaign page.",
-  "pricingPreviewEnabled": true,
+  "notice": "Owlnest Lume is preparing for a clearer crowdfunding relaunch. Join the early list on the campaign page for first access before the public launch.",
+  "pricingPreviewEnabled": false,
   "heroPricing": {
-    "eyebrow": "Current Campaign Pricing",
-    "main": "From $59",
-    "subtext": "Up to 50% off • Regular Price $119"
+    "eyebrow": "Crowdfunding Relaunch",
+    "main": "Early access opening soon",
+    "subtext": "Join the early list before the public launch"
   },
   "platformCta": {
-    "label": "Back on Indiegogo",
-    "href": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
+    "label": "Get Early Access",
+    "href": "/campaign/"
   },
   "secondaryCta": {
     "label": "Read Science & FAQ",
@@ -37,8 +37,8 @@
         "Lowest launch price",
         "Limited quantity"
       ],
-      "ctaLabel": "Back This Campaign",
-      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume",
+      "ctaLabel": "Join the Early List",
+      "ctaHref": "/campaign/",
       "featured": true
     },
     {
@@ -51,8 +51,8 @@
         "Early supporter pricing",
         "Limited quantity"
       ],
-      "ctaLabel": "Back This Campaign",
-      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
+      "ctaLabel": "Join the Early List",
+      "ctaHref": "/campaign/"
     },
     {
       "name": "Early Bird",
@@ -61,11 +61,11 @@
       "retailPrice": 119,
       "bullets": [
         "1x Owlnest Lume",
-        "Discounted campaign pricing",
+        "Relaunch access details",
         "Limited quantity"
       ],
-      "ctaLabel": "Back This Campaign",
-      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
+      "ctaLabel": "Join the Early List",
+      "ctaHref": "/campaign/"
     },
     {
       "name": "Standard Backer",
@@ -77,15 +77,15 @@
         "Available after early tiers",
         "Campaign pricing"
       ],
-      "ctaLabel": "Back This Campaign",
-      "ctaHref": "https://www.indiegogo.com/en/projects/owlnest/owlnestlume"
+      "ctaLabel": "Join the Early List",
+      "ctaHref": "/campaign/"
     }
   ],
   "timeline": [
     {
       "date": "Now",
-      "title": "Campaign Launch",
-      "text": "Owlnest Lume is currently available through crowdfunding with campaign-specific pricing."
+      "title": "Relaunch Preparation",
+      "text": "Owlnest Lume is preparing for a clearer crowdfunding relaunch with sharper positioning and product proof."
     },
     {
       "date": "TBA",

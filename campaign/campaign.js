@@ -281,7 +281,7 @@ function renderHero(data, isPrelaunch, isLive) {
         badgeText.textContent = 'Launching Soon';
         badgeDot.classList.add('bg-yellow-500');
     } else if (isLive) {
-        badgeText.textContent = 'Live on Indiegogo';
+        badgeText.textContent = 'Relaunching Soon';
         badgeDot.classList.add('bg-red-500');
     } else {
         badgeText.textContent = 'Campaign Update';
@@ -384,7 +384,7 @@ function renderStats(data, isPrelaunch) {
         progressLabelEl.textContent = 'Campaign Timing';
         progressContainer.classList.add('hidden');
         progressBar.style.width = '0%';
-        statsNoteEl.textContent = 'Reward availability, pricing, and timing will be confirmed on the official Indiegogo campaign page.';
+        statsNoteEl.textContent = 'Reward availability, pricing, and timing will be confirmed when the relaunch campaign opens.';
         return;
     }
 
@@ -397,15 +397,15 @@ function renderStats(data, isPrelaunch) {
     if (!hasReliableStats) {
         raisedLabelEl.textContent = 'Campaign';
         raisedEl.textContent = 'Live';
-        goalLineEl.innerHTML = '<span id="stat-goal">Details on Indiegogo</span>';
+        goalLineEl.innerHTML = '<span id="stat-goal">Relaunch details coming soon</span>';
         backersLabelEl.textContent = 'Backing';
-        backersEl.textContent = 'Indiegogo';
+        backersEl.textContent = 'Prelaunch';
         daysEl.textContent = 'Open';
         daysLabelEl.textContent = 'campaign page';
-        progressLabelEl.textContent = 'Live Campaign Details';
+        progressLabelEl.textContent = 'Relaunch Details';
         progressContainer.classList.add('hidden');
         progressBar.style.width = '0%';
-        statsNoteEl.textContent = 'Live funding totals, backer count, timing, and tier availability are shown on Indiegogo.';
+        statsNoteEl.textContent = 'Relaunch timing, early-bird access, and campaign details will be shared on the campaign page.';
         return;
     }
 
@@ -418,7 +418,7 @@ function renderStats(data, isPrelaunch) {
     daysLabelEl.textContent = 'days left';
     progressLabelEl.textContent = 'Campaign Progress';
     progressContainer.classList.remove('hidden');
-    statsNoteEl.textContent = 'Live totals are refreshed from public campaign data when available. Confirm final reward availability on Indiegogo.';
+    statsNoteEl.textContent = 'Relaunch details will be updated as the new campaign is prepared.';
 
     if (Number.isFinite(raised) && Number.isFinite(goal) && goal > 0) {
         const progress = Math.min((raised / goal) * 100, 100);
@@ -432,7 +432,7 @@ function renderTiers(data, isPrelaunch, canShowTierPrices) {
     const container = document.getElementById('tiers-container');
     const titleEl = document.getElementById('tiers-title');
 
-    titleEl.textContent = isPrelaunch ? 'Launch Pricing Preview' : 'Indiegogo Campaign Offers';
+    titleEl.textContent = isPrelaunch ? 'Relaunch Access Preview' : 'Campaign Relaunch Offers';
 
     if (!Array.isArray(data.tiers) || data.tiers.length === 0) {
         container.innerHTML = `
