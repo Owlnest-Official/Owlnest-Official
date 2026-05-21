@@ -881,6 +881,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         let isScrolling = false;
         let isLampOn = false;
 
+        function cleanHomepageHash() {
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        }
+
+        function scrollToSectionWithoutHash(target) {
+            if (!target) return;
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.setTimeout(cleanHomepageHash, 0);
+            window.setTimeout(cleanHomepageHash, 450);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', event => {
+                const href = anchor.getAttribute('href');
+                if (!href || href === '#') return;
+                const target = document.getElementById(href.slice(1));
+                if (!target) return;
+                event.preventDefault();
+                scrollToSectionWithoutHash(target);
+            });
+        });
+
+        window.addEventListener('hashchange', cleanHomepageHash);
+
         function updateUI() {
             const headerHeight = header ? header.offsetHeight : 80;
             const checkY = window.innerHeight / 2;
@@ -992,6 +1018,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         });
 
         window.addEventListener('load', () => {
+            const initialHash = window.location.hash;
+            if (initialHash) {
+                const target = document.getElementById(initialHash.slice(1));
+                if (target) {
+                    window.setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+                        cleanHomepageHash();
+                    }, 0);
+                } else {
+                    cleanHomepageHash();
+                }
+            }
             updateUI();
             render();
             const yr = document.getElementById('copyright-year');
