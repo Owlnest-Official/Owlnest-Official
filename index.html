@@ -116,8 +116,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: flex !important;
             min-height: 100svh !important;
             height: auto !important;
-            padding: 7rem 0 4rem !important;
+            padding: 6.5rem 0 3.5rem !important;
             overflow: hidden !important;
+            background:
+                linear-gradient(90deg, #F2EBDD 0%, #F2EBDD 52%, #111927 52%, #182234 100%) !important;
         }
 
         @media (max-width: 1023px) {
@@ -126,6 +128,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-top: 80px;
                 padding-bottom: 80px;
                 display: block;
+            }
+            #section-1 {
+                background: #F2EBDD !important;
+                padding-top: 6rem !important;
+                padding-bottom: 3rem !important;
+            }
+            #section-1 > div {
+                min-height: auto !important;
+            }
+            #section-1 .home-hero-product {
+                margin-top: 1.5rem;
+                margin-bottom: 1.75rem;
             }
         }
 
@@ -215,9 +229,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .hero-atmosphere {
             background:
-                radial-gradient(circle at 78% 44%, rgba(201, 133, 42, 0.15), rgba(201, 133, 42, 0) 34%),
-                radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 34%),
-                linear-gradient(135deg, rgba(17, 25, 39, 1), rgba(24, 34, 52, 1) 48%, rgba(10, 16, 28, 1));
+                radial-gradient(circle at 78% 48%, rgba(201, 90, 32, 0.18), rgba(201, 90, 32, 0) 30%),
+                radial-gradient(circle at 20% 20%, rgba(201, 133, 42, 0.10), rgba(201, 133, 42, 0) 34%);
         }
 
         .product-gallery {
@@ -273,9 +286,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 28px;
             border: 1px solid rgba(255,255,255,0.14);
             background:
-                radial-gradient(circle at 50% 48%, rgba(201, 90, 32, 0.28), rgba(201, 90, 32, 0) 56%),
-                linear-gradient(145deg, rgba(255,255,255,0.085), rgba(255,255,255,0.025));
-            box-shadow: 0 28px 74px rgba(0,0,0,0.32);
+                radial-gradient(circle at 50% 46%, rgba(201, 90, 32, 0.34), rgba(201, 90, 32, 0) 56%),
+                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
+                #111927;
+            box-shadow: 0 32px 82px rgba(17,25,39,0.26);
             padding: clamp(0.9rem, 2vw, 1.4rem);
             overflow: hidden;
             max-width: 620px;
@@ -314,9 +328,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         @media (min-width: 1024px) {
             .home-hero-content {
                 display: grid !important;
-                grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.78fr);
+                grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.92fr);
                 align-items: center;
-                gap: clamp(2rem, 5vw, 4.5rem);
+                gap: clamp(2.25rem, 5vw, 5rem);
                 text-align: left;
             }
             .home-hero-content > :not(.home-hero-product) {
@@ -559,37 +573,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="main-container">
 
         <!-- Section 1: Hero -->
-        <section id="section-1" class="section-container bg-midnight active">
+        <section id="section-1" class="section-container section-light active">
             <div class="relative min-h-[calc(100svh-2rem)] w-full overflow-hidden flex items-center">
                 <div class="absolute inset-0 hero-atmosphere z-0 pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-[0.16] z-0 pointer-events-none" style="background-image: radial-gradient(rgba(242,235,221,0.35) 1px, transparent 1px); background-size: 42px 42px;"></div>
+                <div class="absolute inset-0 opacity-[0.20] z-0 pointer-events-none" style="background-image: radial-gradient(rgba(24,34,52,0.28) 1px, transparent 1px); background-size: 42px 42px;"></div>
                 <canvas id="hero-canvas" class="hidden" aria-hidden="true"></canvas>
 
                 <div class="home-hero-content relative z-10 w-full px-6 py-8 md:py-0 max-w-screen-xl mx-auto pointer-events-auto">
 
                     <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Relaunching Soon</span>
 
-                    <h1 class="home-hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.02] mb-6 md:mb-7 reveal-text max-w-3xl" style="transition-delay: 0.14s;">
+                    <h1 class="home-hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.02] mb-6 md:mb-7 reveal-text max-w-3xl" style="transition-delay: 0.14s; color:#182033;">
                         Your room is dark.<br>Your brain is not.
                     </h1>
 
-                    <p class="home-hero-copy text-white/82 max-w-2xl text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6" style="transition-delay: 0.2s;">
+                    <p class="home-hero-copy max-w-2xl text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6" style="transition-delay: 0.2s; color:#455169;">
                         Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.
                     </p>
-                    <p class="home-hero-copy text-white/68 max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-6 md:mb-7" style="transition-delay: 0.24s;">
+                    <p class="home-hero-copy max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-6 md:mb-7" style="transition-delay: 0.24s; color:#5B6578;">
                         A deep amber, low-blue glow designed for the hours before bed. No app. No screen. Just a softer way to help your room let go of the day.
                     </p>
 
                     <figure class="home-hero-product reveal-text" style="transition-delay: 0.28s;">
                         <img src="lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a nighttime room">
                     </figure>
-
-                    <div class="home-hero-chips flex flex-wrap gap-2 md:gap-3 mb-8 md:mb-9 reveal-text" style="transition-delay: 0.32s;">
-                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Deep amber sleep spectrum</span>
-                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Pre-sleep ritual</span>
-                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Gift-ready</span>
-                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">No app. No screen.</span>
-                    </div>
 
                     <div class="reveal-text flex flex-col items-start mt-2" style="transition-delay: 0.38s;">
                         <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto">
@@ -604,6 +611,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-5 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
                             Not a medical device. Individual results may vary.
                         </p>
+                    </div>
+
+                    <div class="home-hero-chips flex flex-wrap gap-2 md:gap-3 mt-7 reveal-text" style="transition-delay: 0.32s;">
+                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Deep amber sleep spectrum</span>
+                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Pre-sleep ritual</span>
+                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Gift-ready</span>
+                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">No app. No screen.</span>
                     </div>
 
                 </div>
