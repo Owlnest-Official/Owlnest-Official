@@ -111,15 +111,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             min-height: 100vh;
         }
 
-        /* Homepage product hero */
+        /* Canvas Scroll Height Preservation */
         #section-1 {
-            display: flex !important;
-            min-height: 100svh !important;
-            height: auto !important;
-            padding: 6.5rem 0 3.5rem !important;
-            overflow: hidden !important;
-            background:
-                linear-gradient(90deg, #F2EBDD 0%, #F2EBDD 52%, #111927 52%, #182234 100%) !important;
+            display: block !important;
+            padding: 0 !important;
+            overflow: visible !important;
+            height: 250vh !important;
+            background: #182234 !important;
+        }
+        @media (min-width: 768px) {
+            #section-1 {
+                height: 400vh !important;
+            }
         }
 
         @media (max-width: 1023px) {
@@ -128,14 +131,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-top: 80px;
                 padding-bottom: 80px;
                 display: block;
-            }
-            #section-1 {
-                background: #F2EBDD !important;
-                padding-top: 6rem !important;
-                padding-bottom: 3rem !important;
-            }
-            #section-1 > div {
-                min-height: auto !important;
             }
             #section-1 .home-hero-product {
                 margin-top: 1.5rem;
@@ -229,8 +224,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .hero-atmosphere {
             background:
-                radial-gradient(circle at 78% 48%, rgba(201, 90, 32, 0.18), rgba(201, 90, 32, 0) 30%),
-                radial-gradient(circle at 20% 20%, rgba(201, 133, 42, 0.10), rgba(201, 133, 42, 0) 34%);
+                radial-gradient(circle at 50% 44%, rgba(201, 133, 42, 0.16), rgba(201, 133, 42, 0) 36%),
+                linear-gradient(180deg, rgba(24, 34, 52, 0.72), rgba(24, 34, 52, 0.2) 46%, rgba(24, 34, 52, 0.9));
         }
 
         .product-gallery {
@@ -573,24 +568,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="main-container">
 
         <!-- Section 1: Hero -->
-        <section id="section-1" class="section-container section-light active">
-            <div class="relative min-h-[calc(100svh-2rem)] w-full overflow-hidden flex items-center">
-                <div class="absolute inset-0 hero-atmosphere z-0 pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-[0.20] z-0 pointer-events-none" style="background-image: radial-gradient(rgba(24,34,52,0.28) 1px, transparent 1px); background-size: 42px 42px;"></div>
-                <canvas id="hero-canvas" class="hidden" aria-hidden="true"></canvas>
+        <section id="section-1" class="section-container bg-midnight active">
+            <div class="sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
+                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
+                <div class="absolute inset-0 hero-atmosphere z-20 pointer-events-none"></div>
 
-                <div class="home-hero-content relative z-10 w-full px-6 py-8 md:py-0 max-w-screen-xl mx-auto pointer-events-auto">
+                <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
 
                     <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Relaunching Soon</span>
 
-                    <h1 class="home-hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.02] mb-6 md:mb-7 reveal-text max-w-3xl" style="transition-delay: 0.14s; color:#182033;">
+                    <h1 class="home-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] mb-7 md:mb-9 reveal-text drop-shadow-2xl max-w-5xl mx-auto" style="transition-delay: 0.14s;">
                         Your room is dark.<br>Your brain is not.
                     </h1>
 
-                    <p class="home-hero-copy max-w-2xl text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-5 md:mb-6" style="transition-delay: 0.2s; color:#455169;">
+                    <p class="home-hero-copy text-white/80 max-w-3xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.2s;">
                         Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.
                     </p>
-                    <p class="home-hero-copy max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-6 md:mb-7" style="transition-delay: 0.24s; color:#5B6578;">
+                    <p class="home-hero-copy text-white/62 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.24s;">
                         A deep amber, low-blue glow designed for the hours before bed. No app. No screen. Just a softer way to help your room let go of the day.
                     </p>
 
@@ -598,8 +593,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <img src="lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a nighttime room">
                     </figure>
 
-                    <div class="reveal-text flex flex-col items-start mt-2" style="transition-delay: 0.38s;">
-                        <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto">
+                    <div class="home-hero-chips flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-11 reveal-text" style="transition-delay: 0.32s;">
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Deep amber sleep spectrum</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Pre-sleep ritual</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Gift-ready</span>
+                        <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">No app. No screen.</span>
+                    </div>
+
+                    <div class="reveal-text pointer-events-auto flex flex-col items-center mt-2" style="transition-delay: 0.38s;">
+                        <div class="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
                             <a href="/campaign/"
                                class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm flex justify-center items-center">
                                 Get Early Access
@@ -611,13 +613,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-5 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
                             Not a medical device. Individual results may vary.
                         </p>
-                    </div>
-
-                    <div class="home-hero-chips flex flex-wrap gap-2 md:gap-3 mt-7 reveal-text" style="transition-delay: 0.32s;">
-                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Deep amber sleep spectrum</span>
-                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Pre-sleep ritual</span>
-                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">Gift-ready</span>
-                        <span class="home-hero-chip border border-midnight/[0.12] bg-white/55 backdrop-blur-sm rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase" style="color:#334155;">No app. No screen.</span>
                     </div>
 
                 </div>
@@ -838,7 +833,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const canvas = document.getElementById('hero-canvas');
         const context = canvas.getContext('2d');
         const section1 = document.getElementById('section-1');
-        const heroCanvasEnabled = false;
 
         const frameCount = 96;
         const currentFrame = index => `${index.toString().padStart(3, '0')}.png`;
@@ -848,7 +842,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         let imagesLoaded = 0;
         let imagesFailed = false;
 
-        for (let i = 1; heroCanvasEnabled && i <= frameCount; i++) {
+        for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
             img.src = currentFrame(i);
             img.onload = () => {
@@ -865,7 +859,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         function render() {
-            if(!heroCanvasEnabled || !canvas || !context) return;
+            if(!canvas || !context) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
 
