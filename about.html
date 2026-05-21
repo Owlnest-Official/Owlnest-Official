@@ -60,6 +60,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow-x: hidden;
             background-color: #182234;
             color: #ffffff;
+            --color-text-primary: #111827;
+            --color-text-secondary: #455169;
+            --color-dark-muted: #D7CDB8;
+            --color-readable-amber: #9A551F;
+        }
+
+        .section-light .text-white,
+        .section-light [class*="text-white/"] {
+            color: var(--color-text-primary) !important;
+        }
+        .section-light [class*="text-midnight/"] {
+            color: var(--color-text-secondary) !important;
+        }
+        .section-light .text-amber {
+            color: var(--color-readable-amber) !important;
+        }
+        .bg-midnight [class*="text-white/6"],
+        .bg-midnight [class*="text-white/5"],
+        .bg-midnight [class*="text-white/4"],
+        [class*="bg-[#111927]"] [class*="text-white/6"],
+        [class*="bg-[#111927]"] [class*="text-white/5"],
+        [class*="bg-[#111927]"] [class*="text-white/4"],
+        .bg-slateblue [class*="text-white/6"],
+        .bg-slateblue [class*="text-white/5"],
+        .bg-slateblue [class*="text-white/4"] {
+            color: var(--color-dark-muted) !important;
         }
 
         #mobile-menu {
@@ -213,6 +239,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <section class="py-24 md:py-36 px-6 bg-[#111927] text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto reveal-text visible">
                 <span class="text-amber tracking-[0.3em] uppercase text-xs mb-5 block font-bold">Meet the Team</span>
+                <div class="max-w-3xl mb-10">
+                    <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-6">Built by a small team focused on product proof.</h2>
+                    <p class="font-sans text-base md:text-lg font-light text-white/68 leading-relaxed">
+                        Owlnest is built by people, but we want the clearest proof to come from the product itself: the prototypes, design decisions, physical details, and production readiness behind Owlnest Lume.
+                    </p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <article class="border border-white/10 bg-white/5 p-6 md:p-8">
                         <p class="text-amber text-[11px] tracking-[0.22em] uppercase font-bold mb-5">Randy</p>
@@ -240,6 +272,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="overflow-hidden bg-warm border border-white/10 aspect-[3/4]">
                     <img src="lume-real-photo-on.jpg" alt="Owlnest Lume fourth-generation product sample with amber glow" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-24 px-6 bg-[#111927] text-white border-t border-white/5">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start reveal-text visible">
+                <div>
+                    <span class="text-amber tracking-[0.24em] uppercase text-xs mb-4 block font-bold">Policies &amp; Transparency</span>
+                    <h2 class="font-serif text-3xl md:text-4xl leading-tight">Clear terms, clear boundaries.</h2>
+                </div>
+                <div class="border-t border-white/10 pt-7">
+                    <p class="font-sans text-base md:text-lg font-light text-white/68 leading-relaxed max-w-3xl">
+                        Read how we handle product claims, warranty, shipping, privacy, terms, and customer responsibilities.
+                    </p>
+                    <a href="disclaimer.html" class="mt-8 inline-flex items-center justify-center border border-white/15 text-white px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-white/10 hover:border-amber transition-colors">View Policies</a>
                 </div>
             </div>
         </section>

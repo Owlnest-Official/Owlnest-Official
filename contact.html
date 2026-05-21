@@ -101,6 +101,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-color: rgba(24, 34, 52, 0.2) !important;
         }
 
+        body {
+            --color-text-primary: #111827;
+            --color-text-secondary: #455169;
+            --color-text-muted: #5B667A;
+            --color-dark-muted: #D7CDB8;
+            --color-readable-amber: #9A551F;
+        }
+
+        .section-light .text-white,
+        .section-light [class*="text-white/"],
+        .bg-warm .text-white,
+        .bg-warm [class*="text-white/"] {
+            color: var(--color-text-primary) !important;
+        }
+        .section-light [class*="text-midnight/"],
+        .bg-warm [class*="text-midnight/"] {
+            color: var(--color-text-secondary) !important;
+        }
+        .bg-warm .text-amber {
+            color: var(--color-readable-amber) !important;
+        }
+        .bg-midnight [class*="text-white/6"],
+        .bg-midnight [class*="text-white/5"],
+        .bg-midnight [class*="text-white/4"] {
+            color: var(--color-dark-muted) !important;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--color-text-muted) !important;
+            opacity: 1;
+        }
+
         @media (max-width: 640px) {
             #main-header {
                 padding-left: 1rem;

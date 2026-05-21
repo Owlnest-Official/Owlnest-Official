@@ -11,17 +11,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Science Behind Owlnest Lume | Sleep-Supporting Light Spectrum</title>
-    <meta name="description" content="Learn how nighttime light affects sleep readiness, melatonin rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
+    <meta name="description" content="Learn how nighttime light affects sleep readiness, natural night rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/science">
     <meta property="og:title" content="The Science Behind Owlnest Lume | Sleep-Supporting Light Spectrum">
-    <meta property="og:description" content="Learn how nighttime light affects sleep readiness, melatonin rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
+    <meta property="og:description" content="Learn how nighttime light affects sleep readiness, natural night rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://owlnestofficial.com/science">
     <meta property="og:image" content="https://owlnestofficial.com/science.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Science Behind Owlnest Lume | Sleep-Supporting Light Spectrum">
-    <meta name="twitter:description" content="Learn how nighttime light affects sleep readiness, melatonin rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
+    <meta name="twitter:description" content="Learn how nighttime light affects sleep readiness, natural night rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.">
     <meta name="twitter:image" content="https://owlnestofficial.com/science.png">
     <script type="application/ld+json">
     {
@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "@id": "https://owlnestofficial.com/science#webpage",
           "url": "https://owlnestofficial.com/science",
           "name": "The Science Behind Owlnest Lume | Sleep-Supporting Light Spectrum",
-          "description": "Learn how nighttime light affects sleep readiness, melatonin rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.",
+          "description": "Learn how nighttime light affects sleep readiness, natural night rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.",
           "about": {
             "@type": "Thing",
             "name": "Sleep-supporting spectrum design principles"
@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "@id": "https://owlnestofficial.com/science#article",
           "headline": "The Science Behind Owlnest Lume",
           "url": "https://owlnestofficial.com/science",
-          "description": "Learn how nighttime light affects sleep readiness, melatonin rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.",
+          "description": "Learn how nighttime light affects sleep readiness, natural night rhythm, and evening wind-down, and why Owlnest Lume uses a deep amber, low-blue sleep-supporting spectrum.",
           "author": {
             "@id": "https://owlnestofficial.com/#organization"
           },
@@ -114,6 +114,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow-x: hidden;
             background-color: #182234;
             color: #ffffff;
+            --color-text-primary: #111827;
+            --color-text-secondary: #455169;
+            --color-text-muted: #5B667A;
+            --color-dark-muted: #D7CDB8;
+            --color-readable-amber: #9A551F;
         }
 
         @media (max-width: 1023px) {
@@ -173,18 +178,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .science-panel {
             border: 1px solid rgba(24, 34, 52, 0.12);
-            background: rgba(255, 255, 255, 0.42);
+            background: rgba(255, 255, 255, 0.58);
+            box-shadow: 0 18px 44px rgba(24,34,52,0.06);
         }
 
         .science-panel-dark {
             border: 1px solid rgba(255, 255, 255, 0.10);
             background: rgba(255, 255, 255, 0.035);
+            box-shadow: 0 18px 44px rgba(0,0,0,0.16);
         }
 
         .spectrum-visual {
             background:
                 radial-gradient(circle at 78% 50%, rgba(201, 133, 42, 0.24), rgba(201, 133, 42, 0) 38%),
                 linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            box-shadow: 0 24px 70px rgba(0,0,0,0.22);
         }
 
         .chain-arrow {
@@ -200,6 +208,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: relative;
             overflow: hidden;
             min-height: 360px;
+            box-shadow: 0 20px 52px rgba(24,34,52,0.08);
+        }
+        .section-light .text-white,
+        .section-light [class*="text-white/"] {
+            color: var(--color-text-primary) !important;
+        }
+        .section-light [class*="text-midnight/"] {
+            color: var(--color-text-secondary) !important;
+        }
+        .section-light .text-amber {
+            color: var(--color-readable-amber) !important;
+        }
+        .section-light a.bg-amber {
+            color: #182234 !important;
+        }
+        .bg-midnight [class*="text-white/6"],
+        .bg-midnight [class*="text-white/5"],
+        .bg-midnight [class*="text-white/4"],
+        [class*="bg-[#0f111a]"] [class*="text-white/6"],
+        [class*="bg-[#0f111a]"] [class*="text-white/5"],
+        [class*="bg-[#0f111a]"] [class*="text-white/4"] {
+            color: var(--color-dark-muted) !important;
         }
 
         .proof-card::before {
@@ -420,7 +450,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="mt-4 text-sm text-white/42 leading-relaxed">Conceptual illustration only. Not clinical data.</p>
                 </div>
                 <figure class="rounded-[28px] border border-white/10 bg-midnight/60 p-3 md:p-5 overflow-hidden">
-                    <img src="asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual melatonin rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[20px]">
+                    <img src="asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual night-rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[20px]">
                 </figure>
             </div>
         </section>
@@ -570,7 +600,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
-                <a href="/what-is-owlnest-lume/" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">What is Lume?</a>
                 <a href="/campaign/" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Join the Early List</a>
                 <a href="manual.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
             </div>

@@ -12,11 +12,11 @@
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Owlnest Lume | Tuned to Help You Sleep</title>
-    <meta name="description" content="Claim early-bird access for Owlnest Lume, a sleep-focused amber light for tired minds, prettier rooms, and better nights.">
+    <title>Owlnest Lume | Relaunching Soon</title>
+    <meta name="description" content="Claim early-bird access for Owlnest Lume, a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/campaign/" />
-    <meta property="og:title" content="Owlnest Lume | Tuned to Help You Sleep">
+    <meta property="og:title" content="Owlnest Lume | Relaunching Soon">
     <meta property="og:description" content="Your room should not still feel like daytime at night. Claim early-bird access before the crowdfunding relaunch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://owlnestofficial.com/campaign/">
@@ -24,7 +24,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Owlnest Lume | Tuned to Help You Sleep">
+    <meta name="twitter:title" content="Owlnest Lume | Relaunching Soon">
     <meta name="twitter:description" content="Your room should not still feel like daytime at night. Claim early-bird access before the crowdfunding relaunch.">
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <script type="application/ld+json">
@@ -35,8 +35,8 @@
           "@type": "WebPage",
           "@id": "https://owlnestofficial.com/campaign/#webpage",
           "url": "https://owlnestofficial.com/campaign/",
-          "name": "Owlnest Lume | Tuned to Help You Sleep",
-          "description": "Claim early-bird access for Owlnest Lume, a sleep-focused amber light for tired minds, prettier rooms, and better nights.",
+          "name": "Owlnest Lume | Relaunching Soon",
+          "description": "Claim early-bird access for Owlnest Lume, a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.",
           "isPartOf": {
             "@type": "WebSite",
             "name": "Owlnest Official",
@@ -45,7 +45,7 @@
           "about": {
             "@type": "Product",
             "name": "Owlnest Lume",
-            "description": "A sleep-focused amber light for tired minds, prettier rooms, and better nights."
+            "description": "A science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights."
           }
         },
         {
@@ -57,15 +57,23 @@
               "name": "What is Owlnest Lume?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Owlnest Lume is a sleep-focused amber light for tired minds, prettier rooms, and better nights."
+                "text": "Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights."
               }
             },
             {
               "@type": "Question",
-              "name": "How is it different from a normal night light?",
+              "name": "Is Owlnest Lume just a night light?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Most night lights are made for basic visibility. Owlnest Lume is designed for pre-sleep use, with a deep amber, low-blue glow that feels softer and more suitable for bedtime."
+                "text": "No. Most night lights are made for basic visibility. Owlnest Lume is a science-informed sleep-spectrum light designed for the hours before bed, using a deep amber, low-blue glow that feels softer and more suitable for pre-sleep use."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why does the spectrum matter?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many everyday lights are designed to help you see clearly. Owlnest Lume is designed for the hours before sleep, using a deep amber, low-blue direction to reduce blue-rich nighttime light exposure."
               }
             },
             {
@@ -185,6 +193,12 @@
             background: #111d2f;
             color: #f7efd8;
             overflow-x: hidden;
+            --color-text-primary: #111827;
+            --color-text-secondary: #455169;
+            --color-text-muted: #5B667A;
+            --color-dark-body: #F5EEDC;
+            --color-dark-muted: #D7CDB8;
+            --color-readable-amber: #9A551F;
         }
         .section-label {
             color: #d8912a;
@@ -200,18 +214,35 @@
             transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
         }
         .cta:hover { transform: translateY(-1px); }
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out;
+        }
+        #mobile-menu.open {
+            transform: translateY(0);
+        }
+        .campaign-nav-link {
+            color: rgba(247, 239, 216, 0.68);
+            transition: color 0.35s ease;
+        }
+        .campaign-nav-link:hover,
+        .campaign-nav-link.is-active {
+            color: #d8912a;
+        }
         .field-shell {
             border: 1px solid rgba(247, 239, 216, 0.14);
-            background: rgba(255, 255, 255, 0.07);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.09);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 18px 48px rgba(0,0,0,0.18);
         }
         .card {
             border: 1px solid rgba(247, 239, 216, 0.11);
             background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 22px 55px rgba(0,0,0,0.14);
         }
         .cream-card {
             border: 1px solid rgba(17, 29, 47, 0.10);
-            background: rgba(255, 255, 255, 0.46);
+            background: rgba(255, 255, 255, 0.66);
+            box-shadow: 0 16px 38px rgba(17,29,47,0.06);
         }
         .hero-glow {
             background:
@@ -222,9 +253,62 @@
         .image-frame img {
             filter: saturate(1.04) contrast(1.03);
         }
+        .proof-chip {
+            border-radius: 16px;
+            border: 1px solid rgba(247,239,216,0.12);
+            background: rgba(247,239,216,0.055);
+            padding: 0.95rem 1rem;
+            color: rgba(247,239,216,0.76);
+            font-size: 0.92rem;
+        }
+        .comparison-card-highlight {
+            background:
+                radial-gradient(circle at 50% 0%, rgba(216,145,42,0.18), transparent 55%),
+                rgba(216,145,42,0.10);
+        }
+        .signup-form input,
+        .signup-form button {
+            font-size: 16px;
+        }
+        .bg-cream .text-white,
+        .bg-cream [class*="text-white/"] {
+            color: var(--color-text-primary) !important;
+        }
+        .bg-cream [class*="text-midnight/"] {
+            color: var(--color-text-secondary) !important;
+        }
+        .bg-cream .section-label,
+        .bg-cream .text-amber {
+            color: var(--color-readable-amber) !important;
+        }
+        .bg-cream input::placeholder {
+            color: var(--color-text-muted) !important;
+            opacity: 1;
+        }
+        .bg-midnight [class*="text-white/6"],
+        .bg-midnight [class*="text-white/5"],
+        .bg-midnight [class*="text-white/4"],
+        [class*="bg-[#0d1727]"] [class*="text-white/6"],
+        [class*="bg-[#0d1727]"] [class*="text-white/5"],
+        [class*="bg-[#0d1727]"] [class*="text-white/4"] {
+            color: var(--color-dark-muted) !important;
+        }
+        .signup-form input::placeholder {
+            color: #D7CDB8;
+            opacity: 1;
+        }
+        .bg-cream .signup-form input::placeholder {
+            color: var(--color-text-muted) !important;
+            opacity: 1;
+        }
         details summary::-webkit-details-marker { display: none; }
         details[open] .accordion-icon { transform: rotate(45deg); }
         .signup-message { min-height: 1.25rem; }
+        @media (max-width: 640px) {
+            .section-label { letter-spacing: 0.11em; }
+            .signup-form { border-radius: 1.15rem; }
+            .hero-glow img { max-height: 18rem; }
+        }
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .cta { transition: none !important; transform: none !important; }
@@ -237,17 +321,48 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-3" aria-label="Owlnest home">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-5">
+            <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Owlnest home">
                 <img src="../logo.png" alt="Owlnest" class="w-9 h-9 object-contain">
                 <span class="text-sm sm:text-base font-bold tracking-[0.16em] uppercase text-white">Owlnest</span>
             </a>
-            <a href="#early-access" data-track-click="click_get_early_access" class="cta inline-flex items-center justify-center bg-amber text-midnight px-4 sm:px-5 py-3 text-[10px] sm:text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm">
+            <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
+                <a href="/" class="campaign-nav-link">Home</a>
+                <a href="/products.html" class="campaign-nav-link">Products</a>
+                <a href="/science" class="campaign-nav-link">Science</a>
+                <a href="/about.html" class="campaign-nav-link">About Us</a>
+                <a href="/contact.html" class="campaign-nav-link">Contact</a>
+                <a href="/campaign/" class="campaign-nav-link is-active">Campaign</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="/account.html" class="hidden lg:inline-flex text-white/65 hover:text-amber transition-colors" title="Member Login" aria-label="Member Login">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#early-access" data-track-click="click_get_early_access" class="cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">
                 Get Early Access
-            </a>
+                </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center justify-center text-white/80 hover:text-amber transition-colors text-xl" aria-label="Toggle menu">
+                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                </button>
+            </div>
         </div>
     </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-20 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-7 text-lg uppercase tracking-[0.18em] font-bold">
+            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="/products.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Account</a>
+            <a href="#early-access" onclick="toggleMobileMenu()" data-track-click="click_get_early_access" class="cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm">
+                Get Early Access
+            </a>
+        </nav>
+    </div>
 
     <main>
         <section id="hero" class="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
@@ -260,15 +375,15 @@
                         Your room is dark.<br>Your brain is not.
                     </h1>
                     <p class="mt-4 sm:mt-6 text-xl sm:text-3xl font-serif leading-tight text-warm">
-                        Owlnest Lume is a sleep-focused amber light for tired minds, prettier rooms, and better nights.
+                        Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.
                     </p>
                     <p class="mt-3 sm:mt-5 max-w-2xl text-base sm:text-xl text-white/72 leading-relaxed">
-                        A small luxury for the hours before bed. Relaunching soon.
+                        A small luxury with a scientific reason to exist. Relaunching soon.
                     </p>
                     <p class="mt-3 sm:mt-5 text-sm sm:text-base text-amber font-bold">Join the early list for first access before the public relaunch.</p>
 
                     <div class="lg:hidden mt-4 hero-glow image-frame rounded-2xl border border-white/12 p-3 shadow-2xl shadow-black/35">
-                        <img src="../lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a dark nighttime room" class="w-full h-32 object-contain rounded-xl">
+                        <img src="../lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a dark nighttime room" class="w-full h-52 object-contain rounded-xl">
                     </div>
 
                     <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
@@ -336,35 +451,25 @@
                 <div class="max-w-3xl">
                     <span class="section-label">The Difference</span>
                     <h2 class="font-serif text-4xl md:text-6xl leading-[1.02] tracking-[-0.035em] text-white">
-                        Not a night light.<br>Not a normal warm lamp.<br>A better light for bedtime.
+                        Not a night light.<br>Not a normal warm lamp.<br>A sleep-spectrum light for the hours before bed.
                     </h2>
-                    <p class="mt-6 text-lg text-white/68 leading-relaxed">Owlnest Lume is designed around the pre-sleep moment: softer light, prettier rooms, and fewer nighttime inputs.</p>
+                    <p class="mt-6 text-lg text-white/68 leading-relaxed">Owlnest Lume uses a science-informed sleep-spectrum direction for the pre-sleep moment: softer light, prettier rooms, and fewer nighttime inputs.</p>
                 </div>
                 <div class="mt-10 grid md:grid-cols-3 gap-4">
                     <article class="card rounded-2xl p-6">
-                        <h3 class="font-serif text-2xl text-white">Normal night light</h3>
-                        <ul class="mt-5 space-y-3 text-white/62 leading-relaxed">
-                            <li>Helps you see</li>
-                            <li>Often too bright</li>
-                            <li>Not designed for sleep timing</li>
-                        </ul>
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-amber mb-5">01</span>
+                        <h3 class="font-serif text-2xl text-white">Night lights</h3>
+                        <p class="mt-5 text-white/62 leading-relaxed">Basic visibility. Often too bright, too harsh, or not designed around pre-sleep timing.</p>
                     </article>
                     <article class="card rounded-2xl p-6">
-                        <h3 class="font-serif text-2xl text-white">Normal warm lamp</h3>
-                        <ul class="mt-5 space-y-3 text-white/62 leading-relaxed">
-                            <li>Looks cozy</li>
-                            <li>Still made for general lighting</li>
-                            <li>Warm-looking does not always mean bedtime-friendly</li>
-                        </ul>
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-amber mb-5">02</span>
+                        <h3 class="font-serif text-2xl text-white">Normal warm lamps</h3>
+                        <p class="mt-5 text-white/62 leading-relaxed">Cozy-looking, but still usually built for general visibility. Warm-looking does not always mean bedtime-friendly.</p>
                     </article>
-                    <article class="rounded-2xl border border-amber/36 bg-amber/10 p-6">
+                    <article class="comparison-card-highlight rounded-2xl border border-amber/36 p-6">
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber text-midnight mb-5">03</span>
                         <h3 class="font-serif text-2xl text-amber">Owlnest Lume</h3>
-                        <ul class="mt-5 space-y-3 text-white/72 leading-relaxed">
-                            <li>Deep amber, low-blue spectrum</li>
-                            <li>Designed for the hours before sleep</li>
-                            <li>No app, no screen, no extra stimulation</li>
-                            <li>Soft glow for a calmer room</li>
-                        </ul>
+                        <p class="mt-5 text-white/72 leading-relaxed">A deep amber, low-blue sleep-supporting spectrum designed for the 1-2 hours before bed. Soft enough for night, purposeful enough to be more than decor.</p>
                     </article>
                 </div>
             </div>
@@ -420,7 +525,7 @@
                 <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-end">
                     <div>
                         <span class="section-label">Bedtime Ritual</span>
-                        <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">A small luxury that helps the day let go.</h2>
+                        <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">A small luxury with a scientific reason to exist.</h2>
                     </div>
                     <p class="text-lg text-midnight/66 leading-relaxed">Use Owlnest Lume before bed while reading, stretching, journaling, packing tomorrow's bag, or doing absolutely nothing.</p>
                 </div>
@@ -440,6 +545,7 @@
                     <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em] text-white">The spectrum matters.</h2>
                     <p class="mt-6 text-lg text-white/68 leading-relaxed">Many everyday lights are designed for visibility first. Owlnest Lume uses a deeper amber, low-blue direction for the hours before sleep, helping reduce blue-rich nighttime stimulation while keeping the room softly visible.</p>
                     <p class="mt-4 text-sm text-white/42 leading-relaxed">Spectrum visuals are simplified illustrations, not proprietary measurement data.</p>
+                    <a href="../science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">Read the Science</a>
                 </div>
                 <figure class="rounded-[1.5rem] border border-white/12 bg-white/[0.045] p-4 sm:p-6 overflow-hidden">
                     <img src="../lume-night-effect.jpg" alt="Owlnest Lume deep amber glow in a nighttime room" class="w-full max-h-[520px] object-contain rounded-[1.1rem]">
@@ -464,18 +570,18 @@
                     </div>
                     <div class="card rounded-2xl p-6 sm:p-8 self-stretch">
                         <h3 class="font-serif text-3xl text-white">Simple by design.</h3>
-                        <ul class="mt-7 grid grid-cols-1 gap-3 text-white/70 leading-relaxed">
-                            <li>11 x 11 x 12 cm</li>
-                            <li>Soft silicone body</li>
-                            <li>Round wooden base</li>
-                            <li>USB-C rechargeable</li>
-                            <li>Bottom-button control</li>
-                            <li>Deep amber glow</li>
-                            <li>No app</li>
-                            <li>No screen</li>
-                            <li>No speaker</li>
-                            <li>No clock</li>
-                            <li>No color modes</li>
+                        <ul class="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 leading-relaxed">
+                            <li class="proof-chip">11 x 11 x 12 cm</li>
+                            <li class="proof-chip">Soft silicone body</li>
+                            <li class="proof-chip">Round wooden base</li>
+                            <li class="proof-chip">USB-C rechargeable</li>
+                            <li class="proof-chip">Bottom-button control</li>
+                            <li class="proof-chip">Deep amber glow</li>
+                            <li class="proof-chip">No app</li>
+                            <li class="proof-chip">No screen</li>
+                            <li class="proof-chip">No speaker</li>
+                            <li class="proof-chip">No clock</li>
+                            <li class="proof-chip">No color modes</li>
                         </ul>
                     </div>
                 </div>
@@ -569,11 +675,15 @@
                 <div class="mt-8 space-y-3">
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What is Owlnest Lume?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is a sleep-focused amber light for tired minds, prettier rooms, and better nights.</p>
+                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.</p>
                     </details>
                     <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">How is it different from a normal night light?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Most night lights are made for basic visibility. Owlnest Lume is designed for pre-sleep use, with a deep amber, low-blue glow that feels softer and more suitable for bedtime.</p>
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Is Owlnest Lume just a night light?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">No. Most night lights are made for basic visibility. Owlnest Lume is a science-informed sleep-spectrum light designed for the hours before bed, using a deep amber, low-blue glow that feels softer and more suitable for pre-sleep use.</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Why does the spectrum matter?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">Many everyday lights are designed to help you see clearly. Owlnest Lume is designed for the hours before sleep, using a deep amber, low-blue direction to reduce blue-rich nighttime light exposure.</p>
                     </details>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">How is it different from a normal warm lamp?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
@@ -638,6 +748,15 @@
     </footer>
 
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu || !icon) return;
+            menu.classList.toggle('open');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
         const params = new URLSearchParams(window.location.search);
