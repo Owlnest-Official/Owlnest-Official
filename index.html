@@ -132,10 +132,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-bottom: 80px;
                 display: block;
             }
-            #section-1 .home-hero-product {
-                margin-top: 1.5rem;
-                margin-bottom: 1.75rem;
-            }
         }
 
         @media (max-width: 640px) {
@@ -191,13 +187,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-right: 0.85rem !important;
                 font-size: 0.625rem !important;
                 letter-spacing: 0.05em !important;
-            }
-            .home-hero-product {
-                width: min(18rem, 92vw);
-                margin: 0 auto 1.5rem;
-            }
-            .home-hero-product img {
-                max-height: 15rem;
             }
         }
 
@@ -277,24 +266,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: var(--color-dark-muted) !important;
         }
 
-        .home-hero-product {
-            border-radius: 28px;
-            border: 1px solid rgba(255,255,255,0.14);
-            background:
-                radial-gradient(circle at 50% 46%, rgba(201, 90, 32, 0.34), rgba(201, 90, 32, 0) 56%),
-                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
-                #111927;
-            box-shadow: 0 32px 82px rgba(17,25,39,0.26);
-            padding: clamp(0.9rem, 2vw, 1.4rem);
-            overflow: hidden;
-            max-width: 620px;
-        }
-        .home-hero-product img {
-            width: 100%;
-            max-height: min(58vh, 36rem);
-            object-fit: contain;
-            border-radius: 20px;
-        }
         .dtc-card {
             border-radius: 24px;
             border: 1px solid rgba(24, 34, 52, 0.10);
@@ -322,29 +293,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         @media (min-width: 1024px) {
             .home-hero-content {
-                display: grid !important;
-                grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.92fr);
+                display: flex !important;
+                flex-direction: column;
                 align-items: center;
-                gap: clamp(2.25rem, 5vw, 5rem);
-                text-align: left;
-            }
-            .home-hero-content > :not(.home-hero-product) {
-                grid-column: 1;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-            .home-hero-product {
-                grid-column: 2;
-                grid-row: 1 / span 8;
-                align-self: center;
-                margin: 0;
-            }
-            .home-hero-product img {
-                max-height: min(58vh, 34rem);
+                justify-content: center;
+                text-align: center;
             }
             .home-hero-chips,
             .home-hero-content .flex {
-                justify-content: flex-start;
+                justify-content: center;
             }
         }
 
@@ -576,6 +533,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
 
+                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
+
                     <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">Owlnest Lume | Relaunching Soon</span>
 
                     <h1 class="home-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] mb-7 md:mb-9 reveal-text drop-shadow-2xl max-w-5xl mx-auto" style="transition-delay: 0.14s;">
@@ -588,10 +547,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="home-hero-copy text-white/62 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.24s;">
                         A deep amber, low-blue glow designed for the hours before bed. No app. No screen. Just a softer way to help your room let go of the day.
                     </p>
-
-                    <figure class="home-hero-product reveal-text" style="transition-delay: 0.28s;">
-                        <img src="lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a nighttime room">
-                    </figure>
 
                     <div class="home-hero-chips flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-11 reveal-text" style="transition-delay: 0.32s;">
                         <span class="home-hero-chip border border-white/[0.14] bg-white/[0.08] backdrop-blur-sm text-white/80 rounded-full px-4 py-2 text-[11px] md:text-xs tracking-[0.08em] uppercase">Deep amber sleep spectrum</span>
@@ -613,6 +568,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-5 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
                             Not a medical device. Individual results may vary.
                         </p>
+                    </div>
+
+                    <div class="absolute bottom-5 hidden lg:flex flex-col items-center text-white/40 pointer-events-none">
+                        <span class="text-[9px] tracking-[0.3em] uppercase mb-3">Scroll</span>
+                        <div class="w-px h-10 bg-white/30"></div>
                     </div>
 
                 </div>
@@ -814,13 +774,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <!-- Footer anchored in dark midnight -->
-        <footer class="bg-midnight border-t border-white/5 py-8 px-6">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                <p class="text-[10px] text-white/40 uppercase tracking-[0.2em]">&copy; <span id="copyright-year"></span> Owlnest Official.</p>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="disclaimer.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Policy</a>
-                    <a href="/campaign/" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Join the Early List</a>
-                    <a href="manual.html" class="text-[10px] text-white/50 hover:text-amber transition uppercase tracking-[0.2em]">Manual</a>
+        <footer class="bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.25fr_0.75fr_0.75fr_0.75fr] gap-10 md:gap-12">
+                <div>
+                    <p class="font-serif text-2xl tracking-[0.18em] text-white">OWLNEST</p>
+                    <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/58">Science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.</p>
+                    <p class="mt-6 text-[10px] text-white/38 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+                </div>
+                <div>
+                    <h3 class="text-[10px] tracking-[0.22em] uppercase text-amber font-bold mb-4">Product</h3>
+                    <nav class="flex flex-col gap-3 text-sm text-white/58">
+                        <a href="products.html" class="hover:text-amber transition-colors">Products</a>
+                        <a href="/what-is-owlnest-lume/" class="hover:text-amber transition-colors">What is Owlnest Lume?</a>
+                        <a href="manual.html" class="hover:text-amber transition-colors">Manual</a>
+                        <a href="/science" class="hover:text-amber transition-colors">Science</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-[10px] tracking-[0.22em] uppercase text-amber font-bold mb-4">Company</h3>
+                    <nav class="flex flex-col gap-3 text-sm text-white/58">
+                        <a href="about.html" class="hover:text-amber transition-colors">About Us</a>
+                        <a href="contact.html" class="hover:text-amber transition-colors">Contact</a>
+                        <a href="/campaign/" class="hover:text-amber transition-colors">Campaign</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-[10px] tracking-[0.22em] uppercase text-amber font-bold mb-4">Support</h3>
+                    <nav class="flex flex-col gap-3 text-sm text-white/58">
+                        <a href="disclaimer.html" class="hover:text-amber transition-colors">Policy</a>
+                        <a href="/campaign/" class="inline-flex w-fit text-amber hover:text-warm transition-colors font-semibold">Join the Early List</a>
+                    </nav>
                 </div>
             </div>
         </footer>
