@@ -172,6 +172,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             #main-header .mobile-account-link,
             #main-header .mobile-campaign-link { display: none; }
         }
+
+        /* Readable Display Heading System Override */
+        :where(h1, h2).font-serif {
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .section-container:not(#section-1) h2.font-serif,
+        main section h2.font-serif,
+        main section:not(#hero) h2.font-serif {
+            max-width: min(100%, 1120px) !important;
+            font-size: clamp(2.25rem, 3.2vw, 3.6rem) !important;
+            line-height: 1.14 !important;
+            letter-spacing: -0.01em !important;
+        }
+
+        .section-container:not(#section-1) .grid > div > h2.font-serif,
+        main section .grid > div > h2.font-serif,
+        main section:not(#hero) .grid > div > h2.font-serif {
+            max-width: min(100%, 900px) !important;
+            font-size: clamp(2.1rem, 2.65vw, 3.1rem) !important;
+            line-height: 1.16 !important;
+        }
+
+        main h1.font-serif:not(.home-hero-title) {
+            max-width: min(100%, 980px) !important;
+            font-size: clamp(2.55rem, 4vw, 4.15rem) !important;
+            line-height: 1.1 !important;
+            letter-spacing: -0.01em !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        main .grid > div > h1.font-serif:not(.home-hero-title) {
+            max-width: min(100%, 900px) !important;
+            font-size: clamp(2.35rem, 3.45vw, 3.55rem) !important;
+            line-height: 1.12 !important;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            .section-container:not(#section-1) .homepage-balanced-grid,
+            .section-container:not(#section-1) .grid[class*="lg:grid-cols-["],
+            main section .grid[class*="lg:grid-cols-["],
+            main section:not(#hero) .grid[class*="lg:grid-cols-"] {
+                grid-template-columns: minmax(0, 1fr) !important;
+            }
+
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                max-width: min(100%, 1040px) !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                max-width: 100% !important;
+                font-size: clamp(2rem, 6vw, 2.65rem) !important;
+                line-height: 1.16 !important;
+                letter-spacing: -0.006em !important;
+            }
+
+            main h1.font-serif:not(.home-hero-title) {
+                max-width: 100% !important;
+                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
+                line-height: 1.14 !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                font-size: clamp(1.95rem, 6.2vw, 2.35rem) !important;
+                line-height: 1.17 !important;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
