@@ -309,12 +309,29 @@
             padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
         }
         main section:not(#hero) h2 {
-            max-width: 840px;
-            font-size: clamp(2.35rem, 4.8vw, 4.65rem) !important;
-            line-height: 1.05 !important;
+            max-width: min(100%, 980px);
+            font-size: clamp(2.35rem, 4vw, 4.25rem) !important;
+            line-height: 1.06 !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
         }
         main section:not(#hero) p {
             line-height: 1.65;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .section-heading {
+            max-width: min(100%, 1080px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .nowrap {
+            white-space: nowrap;
         }
         main section:not(#hero) [class*="gap-10"],
         main section:not(#hero) [class*="gap-14"] {
@@ -392,7 +409,9 @@
                 min-width: 0;
             }
             h1, h2, h3, p {
-                overflow-wrap: break-word;
+                overflow-wrap: normal;
+                word-break: normal;
+                hyphens: none;
             }
             main section:not(#hero) {
                 padding-top: 3.5rem !important;
@@ -400,6 +419,7 @@
             }
             main section:not(#hero) h2 {
                 font-size: clamp(2rem, 10vw, 2.75rem) !important;
+                line-height: 1.05 !important;
             }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -463,7 +483,7 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(216,145,42,0.15),transparent_32%),linear-gradient(135deg,#111d2f_0%,#16253b_48%,#0c1422_100%)]"></div>
             <div class="absolute inset-0 opacity-[0.18]" style="background-image: radial-gradient(rgba(247,239,216,0.45) 1px, transparent 1px); background-size: 42px 42px;"></div>
             <div class="relative max-w-7xl mx-auto w-full grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-16 items-center">
-                <div class="max-w-3xl">
+                <div class="max-w-5xl">
                     <span class="section-label">Owlnest Lume | Prelaunch</span>
                     <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-white">
                         Your room is dark.<br>Your brain is not.
@@ -544,8 +564,8 @@
             <div class="max-w-7xl mx-auto">
                 <div class="max-w-3xl">
                     <span class="section-label">The Difference</span>
-                    <h2 class="font-serif text-4xl md:text-6xl leading-[1.02] tracking-[-0.035em] text-white">
-                        Not a night light.<br>Not a normal warm lamp.<br>A sleep-focused amber spectrum lamp.
+                    <h2 class="section-heading font-serif text-4xl md:text-6xl leading-[1.02] tracking-[-0.035em] text-white">
+                        Not a <span class="nowrap">night light</span>. Not a normal warm lamp. A <span class="nowrap">sleep-focused</span> amber spectrum lamp.
                     </h2>
                     <p class="mt-6 text-lg text-white/68 leading-relaxed">Its deep amber, low-blue spectrum is designed for the 1-2 hours before bed: softer light, fewer nighttime inputs, and a room that feels less like daytime.</p>
                 </div>
@@ -574,7 +594,7 @@
                 <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
                     <div>
                         <span class="section-label">Giftable Wellness</span>
-                        <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">Not another candle.<br>A better way to say "rest well."</h2>
+                        <h2 class="section-heading font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">Not another candle. A better way to say "rest well."</h2>
                     </div>
                     <div>
                         <p class="text-lg text-midnight/66 leading-relaxed">Owlnest Lume is a thoughtful gift for people who work too late, scroll too long, travel often, move into a new space, or simply deserve a softer end to the day.</p>
@@ -654,7 +674,7 @@
             <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-14 items-center">
                 <div>
                     <span class="section-label">Science Support</span>
-                    <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em] text-white">The spectrum matters.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em] text-white">The spectrum matters.</h2>
                     <p class="mt-6 text-lg text-white/68 leading-relaxed">Many everyday lights are designed for visibility first. Owlnest Lume uses a deeper amber, low-blue direction for the hours before sleep, helping reduce blue-rich nighttime stimulation while keeping the room softly visible.</p>
                     <p class="mt-4 text-sm text-white/42 leading-relaxed">Spectrum visuals are simplified illustrations, not proprietary measurement data.</p>
                     <a href="../science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">See the Science</a>
@@ -668,9 +688,9 @@
 
         <section id="proof" class="bg-[#0d1727] px-5 sm:px-8 py-20 sm:py-24">
             <div class="max-w-7xl mx-auto">
-                <div class="max-w-3xl">
+                <div class="max-w-5xl">
                     <span class="section-label">Product Proof</span>
-                    <h2 class="font-serif text-4xl md:text-6xl leading-[1.02] tracking-[-0.035em] text-white">Real product.<br>Real details.<br>No vaporware.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-6xl leading-[1.02] tracking-[-0.035em] text-white">Real product. Real details. No vaporware.</h2>
                     <p class="mt-5 text-white/62 leading-relaxed">Built to be simple enough to use every night.</p>
                 </div>
                 <div class="mt-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-6">

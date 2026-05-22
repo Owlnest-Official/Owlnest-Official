@@ -188,6 +188,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 font-size: 0.625rem !important;
                 letter-spacing: 0.05em !important;
             }
+            .section-container:not(#section-1) h2 {
+                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
+                line-height: 1.06 !important;
+            }
         }
 
         /* Reveal Animations */
@@ -216,18 +220,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .section-container:not(#section-1) h2 {
-            max-width: 840px;
-            font-size: clamp(2.5rem, 5vw, 4.75rem) !important;
-            line-height: 1.05 !important;
+            max-width: min(100%, 980px);
+            font-size: clamp(2.5rem, 4vw, 4.25rem) !important;
+            line-height: 1.06 !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
         }
 
         .section-container:not(#section-1) p {
             font-size: clamp(1rem, 1.22vw, 1.16rem);
             line-height: 1.65;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .section-heading {
+            max-width: min(100%, 1080px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .body-copy {
+            max-width: min(100%, 680px);
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .nowrap {
+            white-space: nowrap;
         }
 
         .section-container:not(#section-1) [class*="gap-24"] {
             gap: clamp(2.5rem, 6vw, 6rem) !important;
+        }
+
+        @media (min-width: 1024px) {
+            #section-problem .homepage-balanced-grid,
+            #section-ritual .homepage-balanced-grid,
+            #section-science-support .homepage-balanced-grid,
+            #section-stage .homepage-balanced-grid {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+            }
+
+            #section-visual-difference .homepage-balanced-grid {
+                grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr) !important;
+            }
+
+            #section-mechanism .section-heading,
+            #section-gift .section-heading {
+                max-width: min(100%, 1120px);
+            }
+
+            #section-visual-difference h2.section-heading {
+                max-width: 760px;
+                font-size: clamp(2.45rem, 3.35vw, 3.45rem) !important;
+                line-height: 1.07 !important;
+            }
+
+            #section-product .product-snapshot-grid {
+                grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+            }
+
+            #section-product .product-copy-panel {
+                max-width: 680px;
+            }
         }
 
         .section-container:not(#section-1) [class*="mb-20"] {
@@ -236,6 +298,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .section-container:not(#section-1) [class*="mt-16"] {
             margin-top: clamp(1.5rem, 3vw, 2.5rem) !important;
+        }
+
+        @media (max-width: 640px) {
+            .section-container:not(#section-1) h2 {
+                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
+                line-height: 1.06 !important;
+            }
+
+            #section-visual-difference h2.section-heading {
+                font-size: clamp(2rem, 8.2vw, 2.15rem) !important;
+                line-height: 1.07 !important;
+            }
         }
 
         .hero-atmosphere {
@@ -609,13 +683,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Section 2: The Problem -->
         <section id="section-problem" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-14 lg:gap-24 items-start">
+                <div class="homepage-balanced-grid grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                     <div>
                         <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">The Problem</span>
-                        <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">The lights are off.<br>The day isn't.</h2>
+                        <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">The lights are off.<br>The day isn't.</h2>
                     </div>
-                    <div class="border-t border-taupe/25 pt-9 lg:mt-16">
-                        <p class="font-sans text-lg md:text-xl font-light text-midnight/72 leading-relaxed">
+                    <div class="border-t border-taupe/25 pt-9 lg:mt-8">
+                        <p class="body-copy font-sans text-lg md:text-xl font-light text-midnight/72 leading-relaxed">
                             After work, screens, messages, and a room full of ordinary light, your body may be tired while your mind still feels switched on. Owlnest Lume helps create a softer signal that the day is finally over.
                         </p>
                     </div>
@@ -625,11 +699,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Section 3: Visual Difference -->
         <section id="section-visual-difference" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-center reveal-text">
+            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-text">
                 <div class="text-white">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Product Intro</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08] mb-6">A sleep-focused amber spectrum lamp for the 1-2 hours before bed.</h2>
-                    <p class="font-sans text-lg font-light text-white/70 leading-relaxed mb-8">
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp for the <span class="nowrap">1-2 hours</span> before bed.</h2>
+                    <p class="body-copy font-sans text-lg font-light text-white/70 leading-relaxed mb-8">
                         Owlnest Lume gives your room a deep amber, low-blue glow designed for pre-sleep use. It is not made to flood the room with brightness. It is made to help the room feel calmer, prettier, and more ready for night.
                     </p>
                     <a href="/campaign/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
@@ -645,9 +719,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Section 3: Difference -->
         <section id="section-mechanism" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
-                <div class="max-w-3xl mb-16 md:mb-20">
+                <div class="max-w-6xl mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Why It Is Different</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Not a night light.<br>Not a normal warm lamp.<br>A sleep-focused amber spectrum lamp.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Not a <span class="nowrap">night light</span>. Not a normal warm lamp. A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp.</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
@@ -672,13 +746,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Ritual -->
         <section id="section-ritual" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-14 lg:gap-24 items-start reveal-text">
+            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start reveal-text">
                 <div>
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Bedtime Ritual</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Ten minutes where the day finally stops asking for things.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Ten minutes where the day finally stops asking for things.</h2>
                 </div>
-                <div class="border-t border-white/15 pt-9 lg:mt-16">
-                    <p class="font-sans text-lg md:text-xl font-light text-white/74 leading-relaxed mb-8">
+                <div class="border-t border-white/15 pt-9 lg:mt-8">
+                    <p class="body-copy font-sans text-lg md:text-xl font-light text-white/74 leading-relaxed mb-8">
                         Turn on Owlnest Lume before bed, lower the rest of the lights, and let your room shift into a slower state. Use it while reading, stretching, journaling, packing tomorrow's bag, or doing absolutely nothing.
                     </p>
                     <a href="/campaign/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
@@ -691,10 +765,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Giftability -->
         <section id="section-gift" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="max-w-3xl mb-14">
+                <div class="max-w-6xl mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Giftable Wellness</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">Not another candle.<br>A better way to say "rest well."</h2>
-                    <p class="mt-6 font-light leading-relaxed text-lg" style="color:#455169;">Owlnest Lume is a thoughtful gift for people who work too late, scroll too long, move into a new space, travel often, or simply deserve a softer end to the day.</p>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">Not another candle. A better way to say "rest well."</h2>
+                    <p class="body-copy mt-6 font-light leading-relaxed text-lg" style="color:#455169;">Owlnest Lume is a thoughtful gift for people who work too late, scroll too long, move into a new space, travel often, or simply deserve a softer end to the day.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
                     <article class="dtc-card p-6" style="background:#FFFAF0 !important; border:1px solid rgba(24,32,51,0.14) !important; border-top:2px solid rgba(154,85,31,0.55) !important;"><span class="text-amber text-xl" style="color:#9A551F !important;">+</span><h3 class="font-serif text-2xl my-3" style="color:#182033 !important;">For the overworked friend</h3><p class="text-sm leading-relaxed" style="color:#455169 !important;">For the person whose workday follows them into bed.</p></article>
@@ -707,7 +781,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Section 4: Product Snapshot -->
         <section id="section-product" class="section-container bg-midnight section-breathe border-b border-white/5 !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-14 lg:gap-24 items-center">
+            <div class="product-snapshot-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-5 md:p-8 overflow-hidden">
                     <div class="grid grid-cols-1 md:grid-cols-[1fr_0.56fr] gap-4 md:gap-5">
                         <div class="gallery-frame p-8 md:p-12 flex min-h-[420px] md:min-h-[540px] items-center justify-center">
@@ -726,7 +800,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </figure>
 
                 <div class="flex items-center">
-                    <div class="max-w-lg reveal-text text-white">
+                    <div class="product-copy-panel reveal-text text-white">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Product Snapshot</span>
                         <h2 class="text-4xl md:text-5xl font-serif text-white leading-[1.08] mb-5">Owlnest Lume</h2>
                         <p class="font-serif text-2xl text-amber mb-8">A small luxury with a scientific reason to exist.</p>
@@ -754,13 +828,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Science Support -->
         <section id="section-science-support" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-14 lg:gap-24 items-start reveal-text">
+            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start reveal-text">
                 <div>
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Science Support</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">The spectrum matters.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">The spectrum matters.</h2>
                 </div>
-                <div class="border-t border-taupe/25 pt-9 lg:mt-16">
-                    <p class="font-sans text-lg md:text-xl font-light leading-relaxed mb-5" style="color:#455169 !important;">
+                <div class="border-t border-taupe/25 pt-9 lg:mt-8">
+                    <p class="body-copy font-sans text-lg md:text-xl font-light leading-relaxed mb-5" style="color:#455169 !important;">
                         Many everyday lights are designed for visibility first. Owlnest Lume uses a deeper amber, low-blue direction for the hours before sleep, helping reduce blue-rich nighttime stimulation while keeping the room softly visible.
                     </p>
                     <p class="text-sm leading-relaxed mb-8" style="color:#5B6578 !important;">Spectrum visuals are simplified illustrations, not proprietary measurement data.</p>

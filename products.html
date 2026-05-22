@@ -189,11 +189,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         main section h2 {
             max-width: 840px;
-            font-size: clamp(2.35rem, 4.6vw, 4.5rem) !important;
+            font-size: clamp(2.4rem, 4vw, 4.25rem) !important;
             line-height: 1.06 !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
         }
         main section p {
             line-height: 1.65;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .section-heading {
+            max-width: min(100%, 1040px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .nowrap {
+            white-space: nowrap;
         }
         main section [class*="gap-20"] {
             gap: clamp(2.5rem, 5vw, 5rem) !important;
@@ -232,7 +249,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 min-width: 0;
             }
             h1, h2, h3, p {
-                overflow-wrap: anywhere;
+                overflow-wrap: normal;
+                word-break: normal;
+                hyphens: none;
             }
             #main-header .logo-area {
                 gap: 0.55rem;
@@ -302,6 +321,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             main section h2 {
                 font-size: clamp(2rem, 10vw, 2.75rem) !important;
+                line-height: 1.05 !important;
             }
         }
     </style>
@@ -379,8 +399,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="product-hero-grid relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-20 items-center reveal-text visible">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs mb-5 block font-bold">Owlnest Lume Collection</span>
-                    <h1 class="product-hero-title max-w-[24rem] md:max-w-none text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.04] mb-7">A better light for bedtime.</h1>
-                    <p class="product-hero-subhead max-w-[24rem] md:max-w-2xl font-serif text-2xl md:text-3xl text-amber mb-6 leading-[1.18]">A sleep-focused amber spectrum lamp for the 1-2 hours before bed.</p>
+                    <h1 class="product-hero-title section-heading text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.04] mb-7">A better light for bedtime.</h1>
+                    <p class="product-hero-subhead max-w-3xl font-serif text-2xl md:text-3xl text-amber mb-6 leading-[1.18]">A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp for the <span class="nowrap">1-2 hours</span> before bed.</p>
                     <p class="product-hero-copy max-w-[24rem] md:max-w-2xl font-sans text-base md:text-lg font-light text-white/68 leading-relaxed mb-8">
                         Designed for people who feel physically tired at night but mentally switched on, without apps, screens, pills, or another complicated routine.
                     </p>
@@ -576,7 +596,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-12 lg:gap-20 items-start">
                     <div>
                         <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Comparison</span>
-                        <h2 class="font-serif text-4xl md:text-5xl leading-[1.08] mb-6">Not a Night Light.<br>Not a Regular Warm Lamp.<br>A Sleep-Spectrum Light for Bedtime.</h2>
+                        <h2 class="section-heading font-serif text-4xl md:text-5xl leading-[1.08] mb-6">Not a night light. Not a regular warm lamp. A sleep-focused amber spectrum lamp for bedtime.</h2>
                         <p class="text-white/65 font-light leading-relaxed">Most lights are built to help you see clearly. Owlnest Lume is built for a different moment: when your room should feel prettier, calmer, and less switched on.</p>
                         <a href="/campaign/" class="mt-8 inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-colors rounded-full">
                             Get Early Access

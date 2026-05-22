@@ -122,12 +122,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             line-height: 1.02 !important;
         }
         main section h2 {
-            max-width: 840px;
-            font-size: clamp(2.25rem, 4.5vw, 4rem) !important;
+            max-width: min(100%, 980px);
+            font-size: clamp(2.35rem, 4vw, 4.25rem) !important;
             line-height: 1.08 !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
         }
         main section p {
             line-height: 1.65;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .section-heading {
+            max-width: min(100%, 1040px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
         }
 
         @media (max-width: 640px) {

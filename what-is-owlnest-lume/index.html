@@ -96,6 +96,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             stroke-width: 4;
             fill: none;
         }
+        main h1,
+        main h2 {
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        main p {
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .section-heading {
+            max-width: min(100%, 1040px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+        .nowrap {
+            white-space: nowrap;
+        }
         @media (max-width: 640px) {
             #main-header {
                 padding-left: 1rem;
@@ -284,7 +306,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-12 lg:gap-16 items-center">
                 <div>
                     <span class="section-label">What is Owlnest Lume?</span>
-                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.06] max-w-5xl">A sleep-focused amber spectrum lamp for tired minds and calmer rooms.</h1>
+                    <h1 class="section-heading font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.8rem] text-white leading-[1.06]">A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp for tired minds and calmer rooms.</h1>
                     <p class="mt-7 max-w-3xl font-sans text-lg md:text-xl font-light text-white/72 leading-relaxed">
                         Owlnest Lume helps your room shift from daytime stimulation into a sleep-ready environment: no app, no screen, just a softer way to let the day end.
                     </p>
@@ -309,7 +331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <span class="section-label">Short Answer</span>
                 <h2 class="font-serif text-4xl md:text-5xl leading-[1.08]">The short answer</h2>
                 <div class="mt-7 max-w-3xl space-y-5 text-midnight/72 leading-relaxed">
-                    <p>Owlnest Lume is not a regular night light or a normal warm lamp. It is a sleep-focused amber spectrum lamp designed for the last 1-2 hours before bed, when your room should start feeling less like daytime.</p>
+                    <p>Owlnest Lume is not a regular night light or a normal warm lamp. It is a sleep-focused amber spectrum lamp designed for the last <span class="nowrap">1-2 hours</span> before bed, when your room should start feeling less like daytime.</p>
                     <p>Its deep amber, low-blue glow gives tired minds a softer cue that the day is finally over.</p>
                 </div>
             </div>
