@@ -480,12 +480,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         @media (min-width: 1024px) {
             .sleep-routine-grid {
-                grid-template-columns: minmax(0, 1.42fr) minmax(360px, 0.58fr) !important;
-                gap: clamp(2rem, 4vw, 4.5rem) !important;
+                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
+                gap: clamp(3rem, 5vw, 5rem) !important;
             }
 
             .sleep-routine-figure {
-                margin-left: max(-2rem, -3vw);
+                margin-left: 0;
             }
         }
 
@@ -499,12 +499,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         @media (min-width: 1024px) {
             main section #sleep-routine-grid.grid.sleep-routine-grid[class*="lg:grid-cols-["] {
-                grid-template-columns: minmax(0, 1.48fr) minmax(340px, 0.52fr) !important;
-                gap: clamp(2rem, 3.5vw, 4rem) !important;
+                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
+                gap: clamp(3rem, 5vw, 5rem) !important;
             }
 
             main section .sleep-routine-figure {
-                margin-left: max(-2.5rem, -3vw);
+                margin-left: 0;
             }
         }
     </style>
@@ -766,16 +766,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <img src="asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
-                <div id="sleep-routine-grid" class="sleep-routine-grid grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-center">
-                    <figure class="sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden lg:order-first">
-                        <img src="asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
-                    </figure>
+                <div id="sleep-routine-grid" class="sleep-routine-grid grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
                     <div>
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Night Routine</span>
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">What people try when sleep doesn’t come easily</h2>
                         <p class="mt-6 text-white/66 leading-relaxed">People often change their nighttime routine before sleep. Owlnest focuses on one part of that environment: the light your room uses before bed.</p>
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">Illustrative summary based on common sleep-behavior patterns.</p>
                     </div>
+                    <figure class="sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                        <img src="asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
+                    </figure>
                 </div>
             </div>
         </section>
