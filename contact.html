@@ -133,10 +133,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             opacity: 1;
         }
 
+        main section {
+            padding-top: clamp(4.5rem, 7vw, 7rem) !important;
+            padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
+        }
+        main section:first-of-type {
+            padding-top: clamp(8rem, 12vw, 11rem) !important;
+            padding-bottom: clamp(4.5rem, 7vw, 6.5rem) !important;
+        }
+        main section h1 {
+            max-width: 760px;
+            font-size: clamp(3rem, 6vw, 5.5rem) !important;
+            line-height: 1.04 !important;
+        }
+        main section h2 {
+            font-size: clamp(2rem, 3.8vw, 3.25rem) !important;
+            line-height: 1.1 !important;
+        }
+        main section p {
+            line-height: 1.65;
+        }
+
         @media (max-width: 640px) {
             #main-header {
                 padding-left: 1rem;
                 padding-right: 1rem;
+            }
+            main, section, section > div {
+                min-width: 0;
+            }
+            h1, h2, h3, p {
+                overflow-wrap: anywhere;
             }
             #main-header .logo-area {
                 gap: 0.55rem;
@@ -160,6 +187,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             #main-header .mobile-campaign-link {
                 display: none;
+            }
+            main section {
+                padding-top: 3.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+            main section:first-of-type {
+                padding-top: 8rem !important;
             }
         }
     </style>
@@ -271,8 +305,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </a>
                     </div>
                     <div class="mt-auto border-t border-white/10 pt-6">
-                        <p class="text-[10px] tracking-[0.24em] uppercase text-white/38 mb-3">Typical topics</p>
-                        <p class="text-sm text-white/58 leading-relaxed">Product questions, crowdfunding relaunch support, press, partnerships, and post-campaign support.</p>
+                        <p class="text-[10px] tracking-[0.24em] uppercase text-white/38 mb-4">Contact categories</p>
+                        <div class="grid sm:grid-cols-2 gap-3 text-sm text-white/62 leading-relaxed">
+                            <div class="border border-white/10 bg-white/5 p-4"><span class="block text-amber text-[10px] tracking-[0.14em] uppercase font-bold mb-2">Product questions</span>Owlnest Lume, features, manual, or use before bed.</div>
+                            <div class="border border-white/10 bg-white/5 p-4"><span class="block text-amber text-[10px] tracking-[0.14em] uppercase font-bold mb-2">Campaign / early access</span>Relaunch timing, early-bird access, and campaign updates.</div>
+                            <div class="border border-white/10 bg-white/5 p-4"><span class="block text-amber text-[10px] tracking-[0.14em] uppercase font-bold mb-2">B2B / wellness spaces</span>Boutique hotels, spas, wellness rooms, and pilot inquiries.</div>
+                            <div class="border border-white/10 bg-white/5 p-4"><span class="block text-amber text-[10px] tracking-[0.14em] uppercase font-bold mb-2">Support</span>Manual, warranty, order, or product support questions.</div>
+                        </div>
                     </div>
                 </div>
 

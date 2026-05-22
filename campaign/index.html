@@ -12,11 +12,11 @@
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Owlnest Lume | Relaunching Soon</title>
-    <meta name="description" content="Claim early-bird access for Owlnest Lume, a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.">
+    <title>Owlnest Lume Relaunch | Early Access</title>
+    <meta name="description" content="Join the Owlnest Lume early list for relaunch updates, early-bird access, and production progress before the public campaign.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/campaign/" />
-    <meta property="og:title" content="Owlnest Lume | Relaunching Soon">
+    <meta property="og:title" content="Owlnest Lume Relaunch | Early Access">
     <meta property="og:description" content="Your room should not still feel like daytime at night. Claim early-bird access before the crowdfunding relaunch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://owlnestofficial.com/campaign/">
@@ -24,7 +24,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Owlnest Lume | Relaunching Soon">
+    <meta name="twitter:title" content="Owlnest Lume Relaunch | Early Access">
     <meta name="twitter:description" content="Your room should not still feel like daytime at night. Claim early-bird access before the crowdfunding relaunch.">
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <script type="application/ld+json">
@@ -35,7 +35,7 @@
           "@type": "WebPage",
           "@id": "https://owlnestofficial.com/campaign/#webpage",
           "url": "https://owlnestofficial.com/campaign/",
-          "name": "Owlnest Lume | Relaunching Soon",
+          "name": "Owlnest Lume Relaunch | Early Access",
           "description": "Claim early-bird access for Owlnest Lume, a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.",
           "isPartOf": {
             "@type": "WebSite",
@@ -304,10 +304,103 @@
         details summary::-webkit-details-marker { display: none; }
         details[open] .accordion-icon { transform: rotate(45deg); }
         .signup-message { min-height: 1.25rem; }
+        main section:not(#hero) {
+            padding-top: clamp(4.5rem, 7vw, 7rem) !important;
+            padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
+        }
+        main section:not(#hero) h2 {
+            max-width: 840px;
+            font-size: clamp(2.35rem, 4.8vw, 4.65rem) !important;
+            line-height: 1.05 !important;
+        }
+        main section:not(#hero) p {
+            line-height: 1.65;
+        }
+        main section:not(#hero) [class*="gap-10"],
+        main section:not(#hero) [class*="gap-14"] {
+            gap: clamp(2rem, 5vw, 4.5rem) !important;
+        }
         @media (max-width: 640px) {
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
             .section-label { letter-spacing: 0.11em; }
             .signup-form { border-radius: 1.15rem; }
             .hero-glow img { max-height: 18rem; }
+            #main-header [data-track-click="click_get_early_access"] {
+                display: none;
+            }
+            #main-header button[aria-label="Toggle menu"] {
+                display: inline-flex !important;
+                position: relative;
+                width: 2.5rem;
+                height: 2.5rem;
+                flex: 0 0 2.5rem;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                z-index: 60;
+                color: #fff;
+            }
+            #main-header button[aria-label="Toggle menu"]::before {
+                content: none;
+            }
+            #main-header .campaign-menu-fallback {
+                display: block;
+                font-size: 1.35rem;
+                line-height: 1;
+            }
+            #main-header button[aria-label="Toggle menu"] i {
+                display: none;
+            }
+            #main-header > div {
+                width: 100%;
+                max-width: 100vw;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+                gap: 1rem;
+            }
+            #hero {
+                width: 100vw;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            #hero > div.relative,
+            #hero .signup-form,
+            #hero figure {
+                width: 100%;
+                max-width: calc(100vw - 2.5rem);
+                box-sizing: border-box;
+            }
+            #hero .signup-form button {
+                width: 100%;
+                max-width: calc(100vw - 4rem);
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                letter-spacing: 0.09em;
+                white-space: normal;
+            }
+            #hero h1,
+            #hero p,
+            #hero span {
+                max-width: 100%;
+            }
+            main, section, section > div {
+                min-width: 0;
+            }
+            h1, h2, h3, p {
+                overflow-wrap: break-word;
+            }
+            main section:not(#hero) {
+                padding-top: 3.5rem !important;
+                padding-bottom: 3.5rem !important;
+            }
+            main section:not(#hero) h2 {
+                font-size: clamp(2rem, 10vw, 2.75rem) !important;
+            }
         }
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
@@ -343,6 +436,7 @@
                 Get Early Access
                 </a>
                 <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center justify-center text-white/80 hover:text-amber transition-colors text-xl" aria-label="Toggle menu">
+                    <span class="campaign-menu-fallback" aria-hidden="true">☰</span>
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
                 </button>
             </div>
@@ -521,6 +615,24 @@
         </section>
 
         <section class="bg-cream text-midnight px-5 sm:px-8 py-20 sm:py-24">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
+                <div>
+                    <span class="section-label">Early Access</span>
+                    <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">What early access gets you.</h2>
+                    <p class="mt-5 text-lg text-midnight/66 leading-relaxed">Join the early list to receive relaunch updates, early-bird pricing details, production progress, and campaign reminders before the public launch.</p>
+                    <a href="#final-early-access" data-track-click="click_claim_early_bird_access" class="cta mt-7 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white">Claim Early-Bird Access</a>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <article class="cream-card rounded-2xl p-6"><h3 class="font-serif text-2xl mb-3">First notice</h3><p class="text-midnight/62">Get notified before the public relaunch.</p></article>
+                    <article class="cream-card rounded-2xl p-6"><h3 class="font-serif text-2xl mb-3">Early-bird access</h3><p class="text-midnight/62">Early-bird pricing details will be shared before relaunch.</p></article>
+                    <article class="cream-card rounded-2xl p-6"><h3 class="font-serif text-2xl mb-3">Production updates</h3><p class="text-midnight/62">Follow product, shipping, and fulfillment progress.</p></article>
+                    <article class="cream-card rounded-2xl p-6"><h3 class="font-serif text-2xl mb-3">Launch reminder</h3><p class="text-midnight/62">Receive a reminder before the campaign opens.</p></article>
+                    <article class="cream-card rounded-2xl p-6 sm:col-span-2"><h3 class="font-serif text-2xl mb-3">Bundle notes</h3><p class="text-midnight/62">Bundle and gift-pack updates will be shared if available.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-cream text-midnight px-5 sm:px-8 py-20 sm:py-24">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-end">
                     <div>
@@ -545,7 +657,7 @@
                     <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em] text-white">The spectrum matters.</h2>
                     <p class="mt-6 text-lg text-white/68 leading-relaxed">Many everyday lights are designed for visibility first. Owlnest Lume uses a deeper amber, low-blue direction for the hours before sleep, helping reduce blue-rich nighttime stimulation while keeping the room softly visible.</p>
                     <p class="mt-4 text-sm text-white/42 leading-relaxed">Spectrum visuals are simplified illustrations, not proprietary measurement data.</p>
-                    <a href="../science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">Read the Science</a>
+                    <a href="../science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">See the Science</a>
                 </div>
                 <figure class="rounded-[1.5rem] border border-white/12 bg-white/[0.045] p-4 sm:p-6 overflow-hidden">
                     <img src="../lume-night-effect.jpg" alt="Owlnest Lume deep amber glow in a nighttime room" class="w-full max-h-[520px] object-contain rounded-[1.1rem]">
@@ -629,15 +741,21 @@
         <section class="bg-[#0d1727] px-5 sm:px-8 py-20 sm:py-24">
             <div class="max-w-5xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-10">
                 <div>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-white">Where Owlnest Lume is now.</h2>
-                    <p class="mt-5 text-lg text-white/66 leading-relaxed">Owlnest Lume is a real physical product with working product details. We are preparing a clearer crowdfunding relaunch with stronger positioning, stronger product proof, and a more focused campaign.</p>
+                    <span class="section-label">Product Readiness</span>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-[1.05] tracking-[-0.03em] text-white">Product readiness.</h2>
+                    <p class="mt-5 text-lg text-white/66 leading-relaxed">Owlnest Lume is not a concept render. We are preparing the relaunch with working product samples, physical product details, and clearer production planning.</p>
+                    <a href="#final-early-access" data-track-click="click_get_early_access" class="cta mt-7 inline-flex items-center justify-center border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">Get Early Access</a>
                 </div>
                 <ul class="grid sm:grid-cols-2 gap-4 text-white/70">
-                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Current stage</span>Working product samples</li>
-                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Relaunch</span>Preparing</li>
-                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Early access</span>Opening soon</li>
-                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Shipping plan</span>To be announced before launch</li>
-                    <li class="card rounded-2xl p-5 sm:col-span-2"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Product updates</span>Shared by email before the public campaign</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Product design</span>Working samples completed</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Core form factor</span>11 x 11 x 12 cm compact lamp</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Controls</span>Bottom-button control, no touch surface</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Charging</span>USB-C rechargeable</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Wireless features</span>None</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">App / screen</span>None</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Campaign status</span>Preparing for relaunch</li>
+                    <li class="card rounded-2xl p-5"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Shipping plan</span>To be confirmed before public relaunch</li>
+                    <li class="card rounded-2xl p-5 sm:col-span-2"><span class="text-amber text-[10px] tracking-[0.14em] uppercase font-bold block mb-2">Next details</span>We will share clearer production, shipping, and fulfillment details before the public relaunch.</li>
                 </ul>
             </div>
         </section>
@@ -673,6 +791,7 @@
                 <span class="section-label">FAQ</span>
                 <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Quick Questions</h2>
                 <div class="mt-8 space-y-3">
+                    <p class="pt-2 text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Product</p>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What is Owlnest Lume?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is a science-informed sleep-spectrum light for tired minds, prettier rooms, and better nights.</p>
@@ -693,9 +812,15 @@
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">When should I use it?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">We recommend using it before bed, especially during your evening wind-down time, around 1-2 hours before sleep.</p>
                     </details>
+                    <p class="pt-6 text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Science & Claims</p>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Is Owlnest Lume for insomnia?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is not a medical device and does not diagnose, treat, cure, or prevent insomnia or any sleep disorder. It is designed to help create a calmer, lower-stimulation light environment before bed.</p>
+                    </details>
+                    <p class="pt-6 text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Gift & Design</p>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Does it use an app or screen?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">No. Owlnest Lume has no app, no screen, no speaker, no clock, and no color modes. It is designed to keep your nighttime environment simple.</p>
                     </details>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Is it a good gift?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
@@ -709,10 +834,7 @@
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What makes it feel premium?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume combines a soft silicone body, warm wooden base, compact form, and deep amber glow in a simple object designed for nightly use.</p>
                     </details>
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Does it use an app or screen?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">No. Owlnest Lume has no app, no screen, no speaker, no clock, and no color modes. It is designed to keep your nighttime environment simple.</p>
-                    </details>
+                    <p class="pt-6 text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Campaign & Relaunch</p>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What stage is the product in?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is a real physical product with working product details. We are preparing a clearer crowdfunding relaunch with stronger positioning and product proof.</p>
@@ -724,6 +846,19 @@
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What happens after I enter my email?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
                         <p class="mt-4 text-white/62 leading-relaxed">You’ll receive relaunch updates, early-bird reminders, and occasional Owlnest product notes. No spam.</p>
+                    </details>
+                    <p class="pt-6 text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Shipping & Support</p>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">When will shipping details be announced?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">Production, shipping, and fulfillment details will be shared before the public relaunch.</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Where can I read the manual?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">The Owlnest Lume manual is available from the Products page under Product Resources.</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">How can I contact the team?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">Use the Contact page for product questions, campaign questions, B2B inquiries, or support.</p>
                     </details>
                 </div>
             </div>

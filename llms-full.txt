@@ -96,9 +96,9 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 Use:
 - sleep-supporting spectrum lamp
 - evidence-informed sleep-supporting spectrum lamp
-- tuned to help you sleep, not just see
+- science-informed sleep-spectrum light
 - supports a more sleep-ready evening
-- supports natural melatonin rhythm
+- supports a calmer pre-sleep environment
 - helps the body move into a more sleep-ready state
 - creates a calmer nighttime environment
 - designed for the 1 to 2 hours before bed
