@@ -6,7 +6,7 @@ Owlnest is a nighttime wellness and lighting brand focused on calmer evening env
 
 ## Product Summary
 
-Owlnest Lume is an evidence-informed sleep-spectrum lamp tuned to help people sleep, not just see. It is not a generic night light and not a normal warm lamp. It is designed around the hours before bed, a deep amber low-blue spectrum direction, and a more sleep-ready evening environment.
+Owlnest Lume is a sleep-focused amber spectrum lamp for people who feel tired at night but still mentally switched on. It is not a generic night light and not a normal warm lamp. It is designed around the hours before bed, a deep amber low-blue spectrum direction, and helping the room shift from daytime stimulation into a calmer sleep-ready environment.
 
 ## Product Specs
 
@@ -87,7 +87,7 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 - Timing matters for sleep-supporting lighting.
   Product design decision: recommend use 1 to 2 hours before bed.
 - Biologically relevant light can be considered in lighting design.
-  Product design decision: position Owlnest Lume as evidence-informed circadian lighting, not a generic night light.
+  Product design decision: position Owlnest Lume as a sleep-focused amber spectrum lamp, not a generic night light.
 - Very warm candlelight-style lighting directions exist as a deliberate design choice.
   Product design decision: create a calmer nighttime glow rather than normal household lamp output.
 
@@ -96,14 +96,14 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 Use:
 - sleep-supporting spectrum lamp
 - evidence-informed sleep-supporting spectrum lamp
-- science-informed sleep-spectrum light
+- sleep-focused amber spectrum lamp
 - supports a more sleep-ready evening
 - supports a calmer pre-sleep environment
 - helps the body move into a more sleep-ready state
 - creates a calmer nighttime environment
 - designed for the 1 to 2 hours before bed
 - research-informed design
-- evidence-informed circadian lighting
+- evidence-informed sleep-supporting spectrum design
 
 ## Avoided Wording
 
