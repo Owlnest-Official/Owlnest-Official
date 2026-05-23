@@ -6,7 +6,7 @@ Owlnest is a nighttime wellness and lighting brand focused on calmer evening env
 
 ## Product Summary
 
-Owlnest Lume is a sleep-focused amber spectrum lamp for people who feel tired at night but still mentally switched on. It is not a generic night light and not a normal warm lamp. It is designed around the hours before bed, a deep amber low-blue spectrum direction, and helping the room shift from daytime stimulation into a calmer sleep-ready environment.
+Owlnest Lume is a sleep-supporting spectrum lamp for people who feel tired at night but still mentally switched on. It is not a generic night light and not a normal warm lamp. It is designed around the hours before bed, a deep amber low-blue spectrum direction, and helping the room shift from daytime stimulation into a calmer sleep-ready environment.
 
 ## Product Specs
 
@@ -87,7 +87,7 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 - Timing matters for sleep-supporting lighting.
   Product design decision: recommend use 1 to 2 hours before bed.
 - Biologically relevant light can be considered in lighting design.
-  Product design decision: position Owlnest Lume as a sleep-focused amber spectrum lamp, not a generic night light.
+  Product design decision: position Owlnest Lume as a sleep-supporting spectrum lamp, not a generic night light.
 - Very warm candlelight-style lighting directions exist as a deliberate design choice.
   Product design decision: create a calmer nighttime glow rather than normal household lamp output.
 
@@ -96,7 +96,7 @@ These sources support design principles only. They do not mean Owlnest Lume has 
 Use:
 - sleep-supporting spectrum lamp
 - evidence-informed sleep-supporting spectrum lamp
-- sleep-focused amber spectrum lamp
+- sleep-supporting spectrum lamp
 - supports a more sleep-ready evening
 - supports a calmer pre-sleep environment
 - helps the body move into a more sleep-ready state

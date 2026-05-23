@@ -178,7 +178,7 @@
       "science_page_source": "CIE S 026: Measuring Biologically Relevant Light",
       "research_principle": "Biologically relevant light should be measured with more than visible brightness.",
       "product_design_decision": "Frame nighttime design around biological relevance and timing.",
-      "owlnest_lume_implementation": "Sleep-spectrum lamp positioning for nighttime use.",
+      "owlnest_lume_implementation": "Sleep-supporting spectrum lamp positioning for nighttime use.",
       "evidence_level": "Institutional standard + design rationale",
       "claim_boundary": "Not proof that Owlnest Lume has completed the same measurements.",
       "validation_still_needed": "Melanopic or equivalent product-specific metrics if available."
@@ -187,7 +187,7 @@
       "science_page_source": "Read: Smart Sleep Technology by ITRI",
       "research_principle": "Timing matters for sleep-supporting lighting environments.",
       "product_design_decision": "Recommend use 1 to 2 hours before bed.",
-      "owlnest_lume_implementation": "Positioned as a sleep-spectrum lamp for the hours before bed, not daytime task lighting.",
+      "owlnest_lume_implementation": "Positioned as a sleep-supporting spectrum lamp for the hours before bed, not daytime task lighting.",
       "evidence_level": "Institutional research + design rationale",
       "claim_boundary": "Does not guarantee sleep improvement.",
       "validation_still_needed": "User study or controlled product-specific test if stronger claims are desired."
@@ -196,7 +196,7 @@
       "science_page_source": "Biologically Relevant Lighting: An Industry Perspective",
       "research_principle": "Lighting can be designed with biological effects in mind.",
       "product_design_decision": "Position the product as evidence-informed sleep-supporting lighting.",
-      "owlnest_lume_implementation": "Sleep-spectrum lamp tuned to support a more sleep-ready evening.",
+      "owlnest_lume_implementation": "Sleep-supporting spectrum lamp designed to support a more sleep-ready evening.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Does not prove product-specific clinical efficacy.",
       "validation_still_needed": "Product-specific validation summary page."
