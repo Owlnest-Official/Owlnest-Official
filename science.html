@@ -188,6 +188,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: 0 18px 44px rgba(0,0,0,0.16);
         }
 
+        .evidence-step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .evidence-step__number {
+            color: rgba(255, 255, 255, 0.28);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+        }
+
+        .science-visual-card img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .reference-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.95rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.035);
+            color: rgba(255, 255, 255, 0.78);
+            text-decoration: none;
+            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, transform 180ms ease;
+        }
+
+        .reference-link:hover,
+        .reference-link:focus-visible {
+            color: #C9852A;
+            border-color: rgba(201, 133, 42, 0.36);
+            background: rgba(201, 133, 42, 0.08);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        .reference-link span:last-child {
+            flex: 0 0 auto;
+            color: rgba(201, 133, 42, 0.85);
+            font-size: 0.9rem;
+        }
+
         .spectrum-visual {
             background:
                 radial-gradient(circle at 78% 50%, rgba(201, 133, 42, 0.24), rgba(201, 133, 42, 0) 38%),
@@ -497,6 +550,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 18px !important;
         }
 
+        @media (max-width: 640px) {
+            .science-visual-card {
+                padding: 0.75rem !important;
+                border-radius: 22px !important;
+            }
+
+            .science-visual-card img {
+                border-radius: 16px !important;
+            }
+        }
+
         @media (min-width: 1024px) {
             main section #sleep-routine-grid.grid.sleep-routine-grid[class*="lg:grid-cols-["] {
                 grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
@@ -648,7 +712,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                     <article class="science-panel-dark rounded-[28px] border border-white/10 p-7 md:p-8">
-                        <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Spectrum</p>
+                        <div class="evidence-step">
+                            <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Spectrum</p>
+                            <span class="evidence-step__number">01</span>
+                        </div>
                         <h3 class="font-serif text-3xl text-white mt-5 leading-tight">Blue-depleted evening light reduced melatonin suppression</h3>
                         <p class="mt-5 text-sm tracking-[0.06em] uppercase text-white/46">Study: The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</p>
                         <p class="mt-5 text-white/68 leading-relaxed">A controlled sleep laboratory study compared standard fluorescent light with blue-depleted LED light at the same bedroom-level brightness before bedtime.</p>
@@ -660,7 +727,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="mt-6 inline-flex text-amber hover:text-white text-xs uppercase tracking-[0.14em] font-bold">Read the study</a>
                     </article>
                     <article class="science-panel-dark rounded-[28px] border border-white/10 p-7 md:p-8">
-                        <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Home Lighting</p>
+                        <div class="evidence-step">
+                            <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Home Lighting</p>
+                            <span class="evidence-step__number">02</span>
+                        </div>
                         <h3 class="font-serif text-3xl text-white mt-5 leading-tight">Ordinary home lighting is not always bedtime-friendly</h3>
                         <p class="mt-5 text-sm tracking-[0.06em] uppercase text-white/46">Study: Evening home lighting adversely impacts the circadian system and sleep</p>
                         <p class="mt-5 text-white/68 leading-relaxed">This Scientific Reports study measured real evening home lighting and found that many home environments may expose people to enough light to meaningfully affect the circadian system before bed.</p>
@@ -672,7 +742,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="mt-6 inline-flex text-amber hover:text-white text-xs uppercase tracking-[0.14em] font-bold">Read the study</a>
                     </article>
                     <article class="science-panel-dark rounded-[28px] border border-white/10 p-7 md:p-8">
-                        <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Timing</p>
+                        <div class="evidence-step">
+                            <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Timing</p>
+                            <span class="evidence-step__number">03</span>
+                        </div>
                         <h3 class="font-serif text-3xl text-white mt-5 leading-tight">Experts recommend much lower light exposure before sleep</h3>
                         <p class="mt-5 text-sm tracking-[0.06em] uppercase text-white/46">Study: Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</p>
                         <p class="mt-5 text-white/68 leading-relaxed">An expert consensus paper recommends high light exposure during the day, much lower melanopic light exposure in the hours before sleep, and very low light exposure during sleep.</p>
@@ -684,7 +757,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="mt-6 inline-flex text-amber hover:text-white text-xs uppercase tracking-[0.14em] font-bold">Read the paper</a>
                     </article>
                     <article class="science-panel-dark rounded-[28px] border border-white/10 p-7 md:p-8">
-                        <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Mechanism</p>
+                        <div class="evidence-step">
+                            <p class="text-[10px] tracking-[0.16em] uppercase text-amber font-bold">Mechanism</p>
+                            <span class="evidence-step__number">04</span>
+                        </div>
                         <h3 class="font-serif text-3xl text-white mt-5 leading-tight">Human melatonin regulation is especially sensitive to blue wavelengths</h3>
                         <p class="mt-5 text-sm tracking-[0.06em] uppercase text-white/46">Study: Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor</p>
                         <p class="mt-5 text-white/68 leading-relaxed">This foundational study identified the blue region of light as especially potent for circadian input related to melatonin regulation.</p>
@@ -739,15 +815,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
-                    <figure class="rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-spectrum-matters.png" loading="lazy" alt="Simplified spectrum explanation for Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
-                    <figure class="rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual melatonin rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[22px]">
                     </figure>
                 </div>
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-14 items-center">
-                    <figure class="rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-wrong-light-vs-sleep-light.png" loading="lazy" alt="Comparison of ordinary nighttime light and Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
                     <div>
@@ -818,7 +894,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-6 text-white/66 leading-relaxed">Sleep efficiency compares time asleep with total time in bed. It is a common way to think about sleep quality and restfulness.</p>
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">Educational information only. Not a claim that Owlnest Lume directly changes sleep efficiency.</p>
                     </div>
-                    <figure class="rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
@@ -829,7 +905,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-6 text-white/66 leading-relaxed">People often change their nighttime routine before sleep. Owlnest focuses on one part of that environment: the light your room uses before bed.</p>
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">Illustrative summary based on common sleep-behavior patterns.</p>
                     </div>
-                    <figure class="sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
@@ -848,25 +924,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
                             <h3 class="font-serif text-2xl mb-5">Core Sleep &amp; Circadian Research</h3>
                             <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
-                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</a>
-                                <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">Evening home lighting adversely impacts the circadian system and sleep</a>
-                                <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</a>
-                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">Action Spectrum for Melatonin Regulation in Humans</a>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans</a>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="reference-link"><span>The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="reference-link"><span>Evening home lighting adversely impacts the circadian system and sleep</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="reference-link"><span>Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="reference-link"><span>Action Spectrum for Melatonin Regulation in Humans</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener" class="reference-link"><span>Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans</span><span aria-hidden="true">↗</span></a>
                             </div>
                         </div>
                         <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
                             <h3 class="font-serif text-2xl mb-5">Lighting Standards &amp; Biological Metrics</h3>
                             <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
-                                <a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">CIE S 026: Measuring Biologically Relevant Light</a>
-                                <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.637221/full" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">Biologically Relevant Lighting: An Industry Perspective</a>
+                                <a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank" rel="noopener" class="reference-link"><span>CIE S 026: Measuring Biologically Relevant Light</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.637221/full" target="_blank" rel="noopener" class="reference-link"><span>Biologically Relevant Lighting: An Industry Perspective</span><span aria-hidden="true">↗</span></a>
                             </div>
                         </div>
                         <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
                             <h3 class="font-serif text-2xl mb-5">Industry Context</h3>
                             <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
-                                <a href="https://itritech.itri.org.tw/blog/smart-sleep/" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">ITRI Smart Sleep Technology</a>
-                                <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=13_content&amp;MmmID=1036233405427625204&amp;SiteID=1&amp;Trt_idx=6098" target="_blank" rel="noopener" class="text-white/76 hover:text-amber underline underline-offset-4">ITRI Quality Pre-Sleep Lighting Environment</a>
+                                <a href="https://itritech.itri.org.tw/blog/smart-sleep/" target="_blank" rel="noopener" class="reference-link"><span>ITRI Smart Sleep Technology</span><span aria-hidden="true">↗</span></a>
+                                <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=13_content&amp;MmmID=1036233405427625204&amp;SiteID=1&amp;Trt_idx=6098" target="_blank" rel="noopener" class="reference-link"><span>ITRI Quality Pre-Sleep Lighting Environment</span><span aria-hidden="true">↗</span></a>
                             </div>
                         </div>
                     </div>
