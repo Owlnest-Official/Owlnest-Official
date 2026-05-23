@@ -550,6 +550,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
         }
 
+        .language-menu {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(0.5rem);
+        }
+
+        .language-menu.open {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
         /* Dynamic Header Color Switching Classes */
         #main-header {
             transition: background-color 0.4s ease, border-color 0.4s ease;
@@ -580,7 +592,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             #main-header.nav-split nav a,
             #main-header.nav-split .flex a i,
-            #main-header.nav-split .flex button i {
+            #main-header.nav-split .flex button i,
+            #main-header.nav-split .language-trigger {
                 color: #ffffff !important;
             }
         }
@@ -697,6 +710,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        EN
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
+                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>繁體中文 <span>ZH-TW · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>简体中文 <span>ZH-CN · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>JA · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>KO · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>FR · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>DE · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>ES · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>IT · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>VI · Coming soon</span></button>
+                    </div>
+                </div>
                 <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
@@ -732,6 +764,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
             <a href="contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
             <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/" class="text-white hover:text-amber">English — EN</a>
+                    <span class="text-white/45">繁體中文 — Coming soon</span>
+                    <span class="text-white/45">简体中文 — Coming soon</span>
+                    <span class="text-white/45">日本語 — Coming soon</span>
+                    <span class="text-white/45">한국어 — Coming soon</span>
+                    <span class="text-white/45">Français — Coming soon</span>
+                    <span class="text-white/45">Deutsch — Coming soon</span>
+                    <span class="text-white/45">Español — Coming soon</span>
+                    <span class="text-white/45">Italiano — Coming soon</span>
+                    <span class="text-white/45">Tiếng Việt — Coming soon</span>
+                </div>
+            </div>
         </nav>
     </div>
 
@@ -838,11 +886,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <!-- Section 3: Difference -->
-        <section id="section-mechanism" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
+        <section id="section-mechanism" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
                 <div class="max-w-6xl mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Why It Is Different</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Not a <span class="nowrap">night light</span>. Not a normal warm lamp. A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Not a <span class="nowrap">night light</span>. Not a normal warm lamp. A <span class="nowrap">sleep-focused</span> <span class="nowrap">amber spectrum</span> lamp.</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
@@ -866,14 +914,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <!-- Ritual -->
-        <section id="section-ritual" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
+        <section id="section-ritual" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start reveal-text">
                 <div>
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Bedtime Ritual</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Ten minutes where the day finally stops asking for things.</h2>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Ten minutes where the day finally stops asking for things.</h2>
                 </div>
-                <div class="border-t border-white/15 pt-9 lg:mt-8">
-                    <p class="body-copy font-sans text-lg md:text-xl font-light text-white/74 leading-relaxed mb-8">
+                <div class="border-t border-taupe/25 pt-9 lg:mt-8">
+                    <p class="body-copy font-sans text-lg md:text-xl font-light text-midnight/72 leading-relaxed mb-8">
                         Turn on Owlnest Lume before bed, lower the rest of the lights, and let your room shift into a slower state. Use it while reading, stretching, journaling, packing tomorrow's bag, or doing absolutely nothing.
                     </p>
                     <a href="/campaign/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">
@@ -1248,6 +1296,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 icon.classList.add('fa-bars');
             }
         }
+
+        function toggleLanguageMenu(event) {
+            event.stopPropagation();
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            const isOpen = menu.classList.toggle('open');
+            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+                menu.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') return;
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            menu.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+        });
 
         // Final rendered contrast lock for the two cream sections that must never show pale text.
         function lockReadableLightSections() {

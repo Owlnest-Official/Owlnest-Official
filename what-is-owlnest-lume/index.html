@@ -380,6 +380,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        EN
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>繁體中文 <span>ZH-TW · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>简体中文 <span>ZH-CN · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>JA · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>KO · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>FR · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>DE · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>ES · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>IT · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>VI · Coming soon</span></button>
+                    </div>
+                </div>
                 <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
@@ -413,7 +432,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
             <a href="/contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
             <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
-        </nav>
+                    <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/" class="text-white hover:text-amber">English — EN</a>
+                    <span class="text-white/45">繁體中文 — Coming soon</span>
+                    <span class="text-white/45">简体中文 — Coming soon</span>
+                    <span class="text-white/45">日本語 — Coming soon</span>
+                    <span class="text-white/45">한국어 — Coming soon</span>
+                    <span class="text-white/45">Français — Coming soon</span>
+                    <span class="text-white/45">Deutsch — Coming soon</span>
+                    <span class="text-white/45">Español — Coming soon</span>
+                    <span class="text-white/45">Italiano — Coming soon</span>
+                    <span class="text-white/45">Tiếng Việt — Coming soon</span>
+                </div>
+            </div></nav>
     </div>
 
     <main>
@@ -701,5 +735,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
     </script>
+<script>
+    function toggleLanguageMenu(event) {
+        event.stopPropagation();
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        const willOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+    document.addEventListener('click', (event) => {
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            menu.classList.add('hidden');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        menu.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+    });
+</script>
 </body>
 </html>

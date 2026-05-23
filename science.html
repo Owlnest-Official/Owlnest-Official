@@ -301,7 +301,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .proof-card::before {
-            content: "";
+            content: ";
             position: absolute;
             inset: 0;
             background: radial-gradient(circle at 50% 42%, rgba(201,133,42,0.28), rgba(201,133,42,0) 48%);
@@ -533,7 +533,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        EN
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>繁體中文 <span>ZH-TW · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>简体中文 <span>ZH-CN · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>JA · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>KO · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>FR · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>DE · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>ES · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>IT · Coming soon</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>VI · Coming soon</span></button>
+                    </div>
+                </div><a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
                     Campaign
                 </a>
@@ -566,7 +584,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="about.html" class="text-white/80 hover:text-amber transition-colors">About Us</a>
             <a href="contact.html" class="text-white/80 hover:text-amber transition-colors">Contact</a>
             <a href="/campaign/" class="text-amber hover:text-white transition-colors">Campaign</a>
-        </nav>
+                    <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/" class="text-white hover:text-amber">English — EN</a>
+                    <span class="text-white/45">繁體中文 — Coming soon</span>
+                    <span class="text-white/45">简体中文 — Coming soon</span>
+                    <span class="text-white/45">日本語 — Coming soon</span>
+                    <span class="text-white/45">한국어 — Coming soon</span>
+                    <span class="text-white/45">Français — Coming soon</span>
+                    <span class="text-white/45">Deutsch — Coming soon</span>
+                    <span class="text-white/45">Español — Coming soon</span>
+                    <span class="text-white/45">Italiano — Coming soon</span>
+                    <span class="text-white/45">Tiếng Việt — Coming soon</span>
+                </div>
+            </div></nav>
     </div>
 
     <div class="nav-dots hidden xl:flex">
@@ -595,7 +628,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </section>
 
-        <section class="section-breathe px-6 bg-[#0f111a] text-white border-t border-white/5">
+        <section class="section-breathe px-6 bg-warm text-midnight section-light border-t border-taupe/10">
             <div class="max-w-6xl mx-auto reveal-text">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-12 lg:gap-20 items-start">
                     <div>
@@ -603,19 +636,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">A faster way to understand the light.</h2>
                     </div>
                     <div>
-                        <p class="text-white/68 leading-relaxed max-w-2xl">Most lights are designed for visibility. Owlnest Lume is designed for the hours before bed. Its deep amber, low-blue spectrum helps reduce blue-rich nighttime light disruption and supports a calmer, sleep-ready environment.</p>
+                        <p class="text-midnight/72 leading-relaxed max-w-2xl">Most lights are designed for visibility. Owlnest Lume is designed for the hours before bed. Its deep amber, low-blue spectrum helps reduce blue-rich nighttime light disruption and supports a calmer, sleep-ready environment.</p>
                         <div class="mt-8 grid md:grid-cols-3 gap-4">
-                            <article class="science-panel-dark rounded-[22px] p-5">
-                                <h3 class="font-serif text-2xl text-white mb-3">Visibility-first light</h3>
-                                <p class="text-sm text-white/62 leading-relaxed">Most lamps are designed to help you see clearly, not necessarily to support a lower-stimulation pre-sleep environment.</p>
+                            <article class="science-panel rounded-[22px] p-5">
+                                <h3 class="font-serif text-2xl text-midnight mb-3">Visibility-first light</h3>
+                                <p class="text-sm text-midnight/65 leading-relaxed">Most lamps are designed to help you see clearly, not necessarily to support a lower-stimulation pre-sleep environment.</p>
                             </article>
-                            <article class="science-panel-dark rounded-[22px] p-5">
-                                <h3 class="font-serif text-2xl text-white mb-3">Blue-rich nighttime exposure</h3>
-                                <p class="text-sm text-white/62 leading-relaxed">Blue-rich nighttime light can make a room feel more alert when it should be slowing down.</p>
+                            <article class="science-panel rounded-[22px] p-5">
+                                <h3 class="font-serif text-2xl text-midnight mb-3">Blue-rich nighttime exposure</h3>
+                                <p class="text-sm text-midnight/65 leading-relaxed">Blue-rich nighttime light can make a room feel more alert when it should be slowing down.</p>
                             </article>
-                            <article class="science-panel-dark rounded-[22px] p-5 border-amber/30">
+                            <article class="science-panel rounded-[22px] p-5 border-amber/30">
                                 <h3 class="font-serif text-2xl text-amber mb-3">Lume's design direction</h3>
-                                <p class="text-sm text-white/62 leading-relaxed">Owlnest Lume is built around a sleep-focused amber spectrum for the 1-2 hours before bed.</p>
+                                <p class="text-sm text-midnight/65 leading-relaxed">Owlnest Lume is built around a sleep-focused amber spectrum for the 1-2 hours before bed.</p>
                             </article>
                         </div>
                     </div>
@@ -930,5 +963,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
     </script>
+<script>
+    function toggleLanguageMenu(event) {
+        event.stopPropagation();
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        const willOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+    document.addEventListener('click', (event) => {
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            menu.classList.add('hidden');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        menu.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+    });
+</script>
 </body>
 </html>
