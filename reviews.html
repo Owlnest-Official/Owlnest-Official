@@ -92,12 +92,10 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/90 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-        <div class="logo-area flex items-center gap-3 relative z-50">
-            <a href="index.html" class="flex items-center gap-3">
-                <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
-                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
-            </a>
-        </div>
+        <a href="/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
+            <img id="nav-logo" src="logo.png" onerror="this.src='logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+            <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
 
         <div class="hidden lg:flex items-center gap-10 nav-links">
             <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
