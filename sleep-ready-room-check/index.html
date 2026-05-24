@@ -132,14 +132,20 @@
                         <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your basic result</p>
                         <h2 id="basic-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                         <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
-                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
                             <input type="hidden" name="quiz_score" id="quiz-score">
+                            <input type="hidden" name="quiz_score_display" id="quiz-score-display">
                             <input type="hidden" name="result_category" id="result-category">
+                            <input type="hidden" name="result_title" id="result-title-field">
+                            <input type="hidden" name="result_summary" id="result-summary-field">
                             <input type="hidden" name="answers" id="answers-field">
+                            <input type="hidden" name="answers_json" id="answers-json-field">
+                            <input type="hidden" name="answers_readable" id="answers-readable-field">
                             <input type="hidden" name="timestamp" id="timestamp-field">
+                            <input type="hidden" name="timestamp_local" id="timestamp-local-field">
                             <input type="hidden" name="page_source" id="page-source-field">
-                            <input type="hidden" name="language" value="en">
+                            <input type="hidden" name="language" id="language-field" value="en">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
                             <h3 class="font-serif text-2xl text-white">Get your full Sleep-Ready Room result.</h3>
@@ -280,16 +286,41 @@
             return answerPayload().reduce((sum, item) => sum + item.score, 0);
         }
 
-        function showLeadCapture() {
+        function readableAnswers() {
+            return answerPayload().map((item, index) => (
+                `${index + 1}. ${item.question}\nAnswer: ${item.answer}\nScore: ${item.score}`
+            )).join('\n\n');
+        }
+
+        function localTimestamp(date = new Date()) {
+            const pad = value => String(value).padStart(2, '0');
+            return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())} local time`;
+        }
+
+        function populateSubmissionFields(date = new Date()) {
             const score = totalScore();
             const result = getResult(score);
+            const answersJson = JSON.stringify(answerPayload());
+            const answersText = readableAnswers();
+            document.getElementById('quiz-score').value = String(score);
+            document.getElementById('quiz-score-display').value = `${score} / 16`;
+            document.getElementById('result-category').value = result.category;
+            document.getElementById('result-title-field').value = result.title;
+            document.getElementById('result-summary-field').value = result.copy;
+            document.getElementById('answers-field').value = answersText;
+            document.getElementById('answers-json-field').value = answersJson;
+            document.getElementById('answers-readable-field').value = answersText;
+            document.getElementById('timestamp-field').value = date.toISOString();
+            document.getElementById('timestamp-local-field').value = localTimestamp(date);
+            document.getElementById('page-source-field').value = window.location.href;
+            document.getElementById('language-field').value = document.documentElement.lang || 'en';
+            return result;
+        }
+
+        function showLeadCapture() {
+            const result = populateSubmissionFields();
             basicResultTitle.textContent = result.title;
             basicResultCopy.textContent = result.copy;
-            document.getElementById('quiz-score').value = String(score);
-            document.getElementById('result-category').value = result.category;
-            document.getElementById('answers-field').value = JSON.stringify(answerPayload());
-            document.getElementById('timestamp-field').value = new Date().toISOString();
-            document.getElementById('page-source-field').value = new URLSearchParams(window.location.search).get('source') || document.referrer || window.location.pathname;
             leadPanel.classList.add('is-visible');
             document.getElementById('quiz-actions').style.display = 'none';
             panelsWrap.style.display = 'none';
@@ -342,9 +373,14 @@
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
+            const submittedAt = new Date();
+            populateSubmissionFields(submittedAt);
             const data = new URLSearchParams(new FormData(form));
             data.set('form-name', 'sleep-ready-room-check');
-            data.set('timestamp', new Date().toISOString());
+            data.set('timestamp', submittedAt.toISOString());
+            data.set('timestamp_local', localTimestamp(submittedAt));
+            data.set('page_source', window.location.href);
+            data.set('language', document.documentElement.lang || 'en');
             data.set('consent', 'yes');
 
             try {
