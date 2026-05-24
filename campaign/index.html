@@ -270,6 +270,28 @@
         .signup-form button {
             font-size: 16px;
         }
+        .campaign-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            margin: 0.75rem 0 0.85rem;
+            padding-inline: 0.25rem;
+            color: rgba(247, 239, 216, 0.86);
+            font-size: 0.8rem;
+            line-height: 1.45;
+            text-align: left;
+        }
+        .campaign-consent input {
+            width: 1rem;
+            height: 1rem;
+            min-height: 1rem;
+            margin-top: 0.12rem;
+            flex: 0 0 auto;
+            accent-color: var(--amber);
+        }
+        .bg-cream .campaign-consent {
+            color: rgba(17, 24, 39, 0.78);
+        }
         .bg-cream .text-white,
         .bg-cream [class*="text-white/"] {
             color: var(--color-text-primary) !important;
@@ -558,10 +580,10 @@
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
                 <a href="/" class="campaign-nav-link">Home</a>
-                <a href="/products.html" class="campaign-nav-link">Products</a>
-                <a href="/science" class="campaign-nav-link">Science</a>
-                <a href="/about.html" class="campaign-nav-link">About Us</a>
-                <a href="/contact.html" class="campaign-nav-link">Contact</a>
+                <a href="/products/" class="campaign-nav-link">Products</a>
+                <a href="/science/" class="campaign-nav-link">Science</a>
+                <a href="/about/" class="campaign-nav-link">About Us</a>
+                <a href="/contact/" class="campaign-nav-link">Contact</a>
                 <a href="/campaign/" class="campaign-nav-link is-active">Campaign</a>
             </nav>
             <div class="flex items-center gap-4">
@@ -599,10 +621,10 @@
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-20 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-7 text-lg uppercase tracking-[0.18em] font-bold">
             <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
-            <a href="/products.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
-            <a href="/about.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="/contact.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
             <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Campaign</a>
             <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Account</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
@@ -652,15 +674,16 @@
                     <a href="/sleep-ready-room-check/?source=campaign_hero" class="mt-5 sm:mt-6 flex items-start gap-4 rounded-2xl border border-white/12 bg-white/[0.06] p-4 text-left hover:border-amber/55 hover:bg-amber/10 transition-colors">
                         <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber text-midnight font-serif text-xl">?</span>
                         <span>
-                            <span class="block font-serif text-xl text-white">Is your room ready for sleep?</span>
-                            <span class="mt-1 block text-sm leading-relaxed text-white/58">Take the 60-second Sleep-Ready Room Check before joining early access.</span>
+                            <span class="block font-serif text-xl text-white">Check your room before the relaunch.</span>
+                            <span class="mt-1 block text-sm leading-relaxed text-white/58">See whether your evening light environment still feels too stimulating before bed, then join the Owlnest early list.</span>
+                            <span class="mt-3 inline-flex text-[10px] uppercase tracking-[0.14em] font-bold text-amber">Take the 60-second Check</span>
                         </span>
                     </a>
 
                     <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
-                        <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="hero" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-hero" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="owlnest-prelaunch">
-                            <input type="hidden" name="source_section" value="hero">
+                            <input type="hidden" name="source_section" value="campaign-hero">
                             <input type="hidden" name="page_path" value="/campaign/">
                             <input type="hidden" name="utm_source">
                             <input type="hidden" name="utm_medium">
@@ -675,6 +698,10 @@
                                     Claim Early-Bird Access
                                 </button>
                             </div>
+                            <label class="campaign-consent">
+                                <input type="checkbox" name="consent" value="yes" required>
+                                <span>I agree to receive Owlnest relaunch updates and understand I can unsubscribe anytime.</span>
+                            </label>
                             <p class="mt-2 sm:mt-3 px-1 text-xs text-white/48">Get first access before the public relaunch. No spam.</p>
                             <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                         </form>
@@ -770,9 +797,9 @@
             <div class="max-w-4xl mx-auto rounded-[2rem] border border-white/12 bg-white/[0.045] p-6 sm:p-8 md:p-10 text-center">
                 <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Want first access before the relaunch?</h2>
                 <p class="mt-4 text-white/62 leading-relaxed">Join the Owlnest early list and we’ll notify you before early-bird access opens.</p>
-                <form class="signup-form mt-7 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="positioning_cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form class="signup-form mt-7 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-positioning" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="owlnest-prelaunch">
-                    <input type="hidden" name="source_section" value="positioning_cta">
+                    <input type="hidden" name="source_section" value="campaign-positioning">
                     <input type="hidden" name="page_path" value="/campaign/">
                     <input type="hidden" name="utm_source">
                     <input type="hidden" name="utm_medium">
@@ -785,6 +812,10 @@
                         <input id="position-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" data-track-click="click_claim_early_bird_access" class="cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm">Claim Early-Bird Access</button>
                     </div>
+                    <label class="campaign-consent">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        <span>I agree to receive Owlnest relaunch updates and understand I can unsubscribe anytime.</span>
+                    </label>
                     <p class="mt-3 px-1 text-xs text-white/48">No spam. Just relaunch updates and early-bird access.</p>
                     <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                 </form>
@@ -832,9 +863,9 @@
                 <div>
                     <span class="section-label">Science Support</span>
                     <h2 class="section-heading font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em] text-white">The spectrum matters.</h2>
-                    <p class="mt-6 text-lg text-white/68 leading-relaxed">Many everyday lights are designed for visibility first. Owlnest Lume uses a deeper amber, low-blue direction for the hours before sleep, helping reduce blue-rich nighttime stimulation while keeping the room softly visible.</p>
+                    <p class="mt-6 text-lg text-white/68 leading-relaxed">Lume is not just warm-looking light. It is designed around research on evening light, blue-rich wavelengths, melatonin-related responses, and circadian signaling. The result is a deep amber, low-blue spectrum made for the hours before bed.</p>
                     <p class="mt-4 text-sm text-white/42 leading-relaxed">Spectrum visuals are simplified illustrations, not proprietary measurement data.</p>
-                    <a href="../science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">See the Science</a>
+                    <a href="/science/" class="inline-flex mt-7 items-center justify-center rounded-full border border-amber/45 px-6 py-3 text-sm font-bold text-amber hover:bg-amber hover:text-midnight transition">See the Science</a>
                 </div>
                 <figure class="rounded-[1.5rem] border border-white/12 bg-white/[0.045] p-4 sm:p-6 overflow-hidden">
                     <img src="../lume-night-effect.jpg" alt="Owlnest Lume deep amber glow in a nighttime room" class="w-full max-h-[520px] object-contain rounded-[1.1rem]">
@@ -881,9 +912,9 @@
             <div class="max-w-4xl mx-auto rounded-[2rem] border border-white/12 bg-white/[0.045] p-6 sm:p-8 md:p-10 text-center">
                 <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">See the relaunch before everyone else.</h2>
                 <p class="mt-4 text-white/62 leading-relaxed">Get product updates, early-bird reminders, and launch timing first.</p>
-                <form class="signup-form mt-7 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="proof_cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form class="signup-form mt-7 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-proof" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="owlnest-prelaunch">
-                    <input type="hidden" name="source_section" value="proof_cta">
+                    <input type="hidden" name="source_section" value="campaign-proof">
                     <input type="hidden" name="page_path" value="/campaign/">
                     <input type="hidden" name="utm_source">
                     <input type="hidden" name="utm_medium">
@@ -896,6 +927,11 @@
                         <input id="proof-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" data-track-click="click_get_early_access" class="cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm">Get Early Access</button>
                     </div>
+                    <label class="campaign-consent">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        <span>I agree to receive Owlnest relaunch updates and understand I can unsubscribe anytime.</span>
+                    </label>
+                    <p class="mt-3 px-1 text-xs text-white/48">No spam. Just relaunch updates and early-bird access.</p>
                     <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                 </form>
             </div>
@@ -942,9 +978,9 @@
                 <span class="section-label">Early-Bird List</span>
                 <h2 class="font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">Early-bird access before the public launch.</h2>
                 <p class="mt-5 text-lg text-midnight/64 leading-relaxed">Join the early list and we’ll let you know before the new campaign goes live.</p>
-                <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="final_cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="campaign-final-cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="owlnest-prelaunch">
-                    <input type="hidden" name="source_section" value="final_cta">
+                    <input type="hidden" name="source_section" value="campaign-final-cta">
                     <input type="hidden" name="page_path" value="/campaign/">
                     <input type="hidden" name="utm_source">
                     <input type="hidden" name="utm_medium">
@@ -957,7 +993,11 @@
                         <input id="final-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" data-track-click="click_claim_early_bird_access" class="cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white">Claim Early-Bird Access</button>
                     </div>
-                    <p class="mt-3 px-1 text-xs text-midnight/48">Limited early-bird details will be announced before launch.</p>
+                    <label class="campaign-consent">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        <span>I agree to receive Owlnest relaunch updates and understand I can unsubscribe anytime.</span>
+                    </label>
+                    <p class="mt-3 px-1 text-xs text-midnight/48">Limited early-bird details will be announced before launch. No spam.</p>
                     <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                 </form>
             </div>
@@ -1120,7 +1160,6 @@
         }
 
         document.querySelectorAll('.signup-form').forEach((form) => {
-            form.setAttribute('novalidate', 'novalidate');
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 if (form.dataset.submitting === 'true') return;

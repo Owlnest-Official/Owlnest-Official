@@ -2,66 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://owlnestofficial.com/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-24</lastmod>
   </url>
   <url>
-    <loc>https://owlnestofficial.com/products.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://owlnestofficial.com/products/</loc>
+    <lastmod>2026-05-24</lastmod>
   </url>
   <url>
-    <loc>https://owlnestofficial.com/reviews.html</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/science</loc>
-    <lastmod>2026-05-23</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/about.html</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/contact.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://owlnestofficial.com/science/</loc>
+    <lastmod>2026-05-24</lastmod>
   </url>
   <url>
     <loc>https://owlnestofficial.com/campaign/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/about/</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/contact/</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/manual/</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/policy/</loc>
+    <lastmod>2026-05-24</lastmod>
   </url>
   <url>
     <loc>https://owlnestofficial.com/what-is-owlnest-lume/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-24</lastmod>
   </url>
   <url>
     <loc>https://owlnestofficial.com/sleep-ready-room-check/</loc>
-    <lastmod>2026-05-23</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/manual.html</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/disclaimer.html</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/evidence/</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/ai/evidence.json</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/llms.txt</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/llms-full.txt</loc>
-    <lastmod>2026-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://owlnestofficial.com/ai/product.json</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-24</lastmod>
   </url>
 </urlset>

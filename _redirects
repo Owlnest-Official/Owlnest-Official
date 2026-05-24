@@ -11,9 +11,37 @@
 /verify               /verify.html       301!
 /account/activate     /activate.html     301!
 /account/verify       /verify.html       301!
-/science              /science.html      200!
-/science/             /science           301!
-/science.html         /science           301!
 
-# 3) 保底：任何未知路徑都回首頁或 index（避免 404）
-/*                    /index.html        200
+# 3) Public clean routes
+/index.html           /                  301!
+
+/products             /products/         301!
+/products/            /products.html     200!
+/products.html        /products/         301!
+
+/science              /science/          301!
+/science/             /science.html      200!
+/science.html         /science/          301!
+
+/campaign             /campaign/         301!
+
+/about                /about/            301!
+/about/               /about.html        200!
+/about.html           /about/            301!
+
+/contact              /contact/          301!
+/contact/             /contact.html      200!
+/contact.html         /contact/          301!
+
+/manual               /manual/           301!
+/manual/              /manual.html       200!
+/manual.html          /manual/           301!
+
+/policy               /policy/           301!
+/policy/              /disclaimer.html   200!
+/disclaimer           /policy/           301!
+/disclaimer/          /policy/           301!
+/disclaimer.html      /policy/           301!
+
+/what-is-owlnest-lume /what-is-owlnest-lume/ 301!
+/sleep-ready-room-check /sleep-ready-room-check/ 301!

@@ -13,7 +13,7 @@
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sleep-Ready Room Check | Owlnest Lume</title>
-    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check to see whether your evening light environment may still feel too stimulating before bed.">
+    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check from Owlnest Lume, a sleep-supporting spectrum lamp designed for the hours before bed.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/sleep-ready-room-check/">
     <meta property="og:title" content="Sleep-Ready Room Check | Owlnest Lume">
@@ -105,10 +105,12 @@
                     <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Sleep-Ready Room Check</span>
                     <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Is your room ready for sleep?</h1>
                     <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Take a 60-second check to see whether your evening light environment still feels too stimulating before bed.</p>
+                    <p class="mt-4 max-w-xl text-base text-white/62 leading-relaxed">No sleep diagnosis. No sleep score anxiety. Just a quick room-readiness check for the hours before bed.</p>
+                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Start the Check</a>
                     <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any sleep disorder.</p>
                 </div>
 
-                <section class="rounded-[28px] border border-white/10 bg-white/[0.055] p-5 sm:p-7 lg:p-8 shadow-2xl shadow-black/30" aria-label="Sleep-Ready Room Check quiz">
+                <section id="room-check-quiz" class="rounded-[28px] border border-white/10 bg-white/[0.055] p-5 sm:p-7 lg:p-8 shadow-2xl shadow-black/30 scroll-mt-28" aria-label="Sleep-Ready Room Check quiz">
                     <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                         <div>
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">60-second check</p>
@@ -129,6 +131,7 @@
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
                         <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your basic result</p>
                         <h2 id="basic-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
+                        <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
                         <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
                             <input type="hidden" name="quiz_score" id="quiz-score">
@@ -137,7 +140,6 @@
                             <input type="hidden" name="timestamp" id="timestamp-field">
                             <input type="hidden" name="page_source" id="page-source-field">
                             <input type="hidden" name="language" value="en">
-                            <input type="hidden" name="consent" id="consent-field" value="false">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
                             <h3 class="font-serif text-2xl text-white">Get your full Sleep-Ready Room result.</h3>
@@ -150,7 +152,7 @@
                             </div>
 
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
-                                <input id="consent-checkbox" type="checkbox" required class="mt-1 h-4 w-4 accent-[#C9852A]">
+                                <input id="consent-checkbox" name="consent" value="yes" type="checkbox" required class="mt-1 h-4 w-4 accent-[#C9852A]">
                                 <span>I agree to receive Owlnest updates and understand I can unsubscribe anytime.</span>
                             </label>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
@@ -162,7 +164,10 @@
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                         <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
                         <p class="mt-5 text-xs text-white/45 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any sleep disorder.</p>
-                        <a href="/campaign/" class="mt-6 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
+                        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                            <a href="/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
+                            <a href="/science/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">See the Science</a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -221,6 +226,7 @@
         const leadPanel = document.getElementById('lead-panel');
         const fullResultPanel = document.getElementById('full-result-panel');
         const basicResultTitle = document.getElementById('basic-result-title');
+        const basicResultCopy = document.getElementById('basic-result-copy');
         const fullResultTitle = document.getElementById('full-result-title');
         const fullResultCopy = document.getElementById('full-result-copy');
         const form = document.getElementById('room-check-form');
@@ -278,6 +284,7 @@
             const score = totalScore();
             const result = getResult(score);
             basicResultTitle.textContent = result.title;
+            basicResultCopy.textContent = result.copy;
             document.getElementById('quiz-score').value = String(score);
             document.getElementById('result-category').value = result.category;
             document.getElementById('answers-field').value = JSON.stringify(answerPayload());
@@ -317,10 +324,6 @@
             }
         });
 
-        consentCheckbox.addEventListener('change', () => {
-            document.getElementById('consent-field').value = consentCheckbox.checked ? 'true' : 'false';
-        });
-
         form.addEventListener('submit', async event => {
             event.preventDefault();
             formMessage.textContent = '';
@@ -342,7 +345,7 @@
             const data = new URLSearchParams(new FormData(form));
             data.set('form-name', 'sleep-ready-room-check');
             data.set('timestamp', new Date().toISOString());
-            data.set('consent', 'true');
+            data.set('consent', 'yes');
 
             try {
                 const response = await fetch('/', {
