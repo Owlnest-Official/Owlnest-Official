@@ -140,7 +140,6 @@
                             <input type="hidden" name="result_title" id="result-title-field">
                             <input type="hidden" name="result_summary" id="result-summary-field">
                             <input type="hidden" name="answers" id="answers-field">
-                            <input type="hidden" name="answers_readable" id="answers-readable-field">
                             <input type="hidden" name="timestamp" id="timestamp-field">
                             <input type="hidden" name="timestamp_local" id="timestamp-local-field">
                             <input type="hidden" name="page_source" id="page-source-field">
@@ -306,7 +305,6 @@
             document.getElementById('result-title-field').value = result.title;
             document.getElementById('result-summary-field').value = result.copy;
             document.getElementById('answers-field').value = answersText;
-            document.getElementById('answers-readable-field').value = answersText;
             document.getElementById('timestamp-field').value = date.toISOString();
             document.getElementById('timestamp-local-field').value = localTimestamp(date);
             document.getElementById('page-source-field').value = window.location.href;
@@ -372,8 +370,10 @@
 
             const submittedAt = new Date();
             populateSubmissionFields(submittedAt);
+            const emailValue = emailInput.value.trim();
             const data = new URLSearchParams(new FormData(form));
             data.set('form-name', 'sleep-ready-room-check');
+            data.set('email', emailValue);
             data.set('timestamp', submittedAt.toISOString());
             data.set('timestamp_local', localTimestamp(submittedAt));
             data.set('page_source', window.location.href);
