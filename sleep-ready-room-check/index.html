@@ -140,7 +140,6 @@
                             <input type="hidden" name="result_title" id="result-title-field">
                             <input type="hidden" name="result_summary" id="result-summary-field">
                             <input type="hidden" name="answers" id="answers-field">
-                            <input type="hidden" name="answers_json" id="answers-json-field">
                             <input type="hidden" name="answers_readable" id="answers-readable-field">
                             <input type="hidden" name="timestamp" id="timestamp-field">
                             <input type="hidden" name="timestamp_local" id="timestamp-local-field">
@@ -300,7 +299,6 @@
         function populateSubmissionFields(date = new Date()) {
             const score = totalScore();
             const result = getResult(score);
-            const answersJson = JSON.stringify(answerPayload());
             const answersText = readableAnswers();
             document.getElementById('quiz-score').value = String(score);
             document.getElementById('quiz-score-display').value = `${score} / 16`;
@@ -308,7 +306,6 @@
             document.getElementById('result-title-field').value = result.title;
             document.getElementById('result-summary-field').value = result.copy;
             document.getElementById('answers-field').value = answersText;
-            document.getElementById('answers-json-field').value = answersJson;
             document.getElementById('answers-readable-field').value = answersText;
             document.getElementById('timestamp-field').value = date.toISOString();
             document.getElementById('timestamp-local-field').value = localTimestamp(date);
