@@ -51,23 +51,44 @@
     <style>
         body { background: #111927; color: #fff; overflow-x: hidden; }
         .choice-card {
-            border: 1px solid rgba(250,239,207,0.14);
-            background: rgba(255,255,255,0.055);
-            transition: border-color .2s ease, background-color .2s ease, transform .2s ease;
+            border: 1px solid rgba(250,239,207,0.16);
+            background: rgba(255,255,255,0.035);
+            transition: border-color .2s ease, background-color .2s ease;
         }
         .choice-card:hover,
         .choice-card.is-selected {
-            border-color: rgba(201,133,42,0.75);
-            background: rgba(201,133,42,0.14);
-            transform: translateY(-1px);
+            border-color: rgba(201,133,42,0.85);
+            background: rgba(201,133,42,0.12);
         }
         .result-panel { display: none; }
         .result-panel.is-visible { display: block; }
+        .result-summary-card {
+            border: 1px solid rgba(250,239,207,0.13);
+            background: rgba(255,255,255,0.04);
+            box-shadow: 0 16px 34px rgba(0,0,0,0.16);
+        }
+        .result-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            border: 1px solid rgba(250,239,207,0.12);
+            background: rgba(17,25,39,0.55);
+            color: rgba(255,255,255,0.78);
+        }
+        .result-status-dot {
+            width: 0.62rem;
+            height: 0.62rem;
+            border-radius: 999px;
+            flex: 0 0 auto;
+        }
+        .result-status-dot.is-low { background: #79B88A; }
+        .result-status-dot.is-moderate { background: #D5A64B; }
+        .result-status-dot.is-strong { background: #D77A6D; }
         .question-panel { display: none; }
         .question-panel.is-active { display: block; }
         .field-shell {
             border: 1px solid rgba(250,239,207,0.14);
-            background: rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.04);
         }
         .sr-only {
             position: absolute;
@@ -99,25 +120,25 @@
 
     <main>
         <section class="relative px-5 sm:px-8 pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(201,133,42,0.22),transparent_36%),linear-gradient(180deg,#111927_0%,#172033_100%)]"></div>
-            <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-16 items-center">
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,#111927_0%,#172033_100%)]"></div>
+            <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-8 lg:gap-12 items-center">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Sleep-Ready Room Check</span>
                     <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Is your room ready for sleep?</h1>
                     <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Take a 60-second check to see whether your evening light environment still feels too stimulating before bed.</p>
                     <p class="mt-4 max-w-xl text-base text-white/62 leading-relaxed">No sleep diagnosis. No sleep score anxiety. Just a quick room-readiness check for the hours before bed.</p>
                     <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Start the Check</a>
-                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any sleep disorder.</p>
+                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                 </div>
 
-                <section id="room-check-quiz" class="rounded-[28px] border border-white/10 bg-white/[0.055] p-5 sm:p-7 lg:p-8 shadow-2xl shadow-black/30 scroll-mt-28" aria-label="Sleep-Ready Room Check quiz">
+                <section id="room-check-quiz" class="rounded-[22px] border border-white/10 bg-white/[0.035] p-5 sm:p-6 lg:p-7 shadow-xl shadow-black/20 scroll-mt-28" aria-label="Sleep-Ready Room Check quiz">
                     <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                         <div>
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">60-second check</p>
-                            <p id="progress-label" class="mt-2 text-sm text-white/58">Question 1 of 8</p>
+                            <p id="progress-label" class="mt-2 text-sm text-white/58">Question 1 of 10</p>
                         </div>
                         <div class="h-2 w-32 rounded-full bg-white/10 overflow-hidden">
-                            <div id="progress-bar" class="h-full w-[12.5%] bg-amber transition-all"></div>
+                            <div id="progress-bar" class="h-full w-[10%] bg-amber transition-all"></div>
                         </div>
                     </div>
 
@@ -129,9 +150,12 @@
                     </div>
 
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
-                        <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your basic result</p>
-                        <h2 id="basic-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                        <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
+                        <div class="result-summary-card rounded-[22px] p-5 sm:p-6">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your basic result</p>
+                            <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
+                            <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
+                            <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
+                        </div>
                         <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
                             <input type="hidden" name="quiz_score" id="quiz-score">
@@ -147,27 +171,29 @@
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
                             <h3 class="font-serif text-2xl text-white">Get your full Sleep-Ready Room result.</h3>
-                            <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to receive your result, sleep-ready room tips, and Owlnest Lume launch updates.</p>
+                            <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to save your result and get Owlnest Lume launch updates.</p>
 
                             <div class="mt-5 flex flex-col sm:flex-row gap-3">
                                 <label class="sr-only" for="room-check-email">Email address</label>
                                 <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
-                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Send My Result</button>
+                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Send me my result and early access</button>
                             </div>
 
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
                                 <input id="consent-checkbox" name="consent" value="yes" type="checkbox" required class="mt-1 h-4 w-4 accent-[#C9852A]">
                                 <span>I agree to receive Owlnest updates and understand I can unsubscribe anytime.</span>
                             </label>
+                            <p class="mt-3 text-xs text-white/45">No spam. Just your result, launch updates, and early-bird access.</p>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
                         </form>
                     </div>
 
                     <div id="full-result-panel" class="result-panel mt-8 rounded-[22px] border border-amber/35 bg-amber/10 p-5 sm:p-6">
                         <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Full result</p>
+                        <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                         <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
-                        <p class="mt-5 text-xs text-white/45 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any sleep disorder.</p>
+                        <p class="mt-5 text-xs text-white/45 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
                             <a href="/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
                             <a href="/science/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">See the Science</a>
@@ -195,30 +221,32 @@
             { id: 'bright_bedside_lighting', text: 'Do you use white, cool, or bright bedside lighting before bed?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
             { id: 'needs_soft_light', text: 'Do you need some light at night, but dislike harsh lamps?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
             { id: 'unfamiliar_room_lighting', text: 'Do hotel, rental, or unfamiliar room lighting make it harder to wind down?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'no_apps_screens_tracking', text: 'Would you prefer a bedtime cue without apps, screens, or sleep tracking?', options: [['No', 0], ['Maybe', 1], ['Yes', 2]] }
+            { id: 'no_apps_screens_tracking', text: 'Would you prefer a bedtime cue without apps, screens, or sleep tracking?', options: [['No', 0], ['Maybe', 1], ['Yes', 2]] },
+            { id: 'pre_sleep_room_activity', text: 'During the 1–2 hours before bed, do you still read, move around, get ready, or spend time in your room?', options: [['Rarely. I usually turn everything off quickly.', 0], ['Sometimes. I still do a few things before sleep.', 1], ['Often. I spend time in my room before I’m ready to sleep.', 2]] },
+            { id: 'night_light_preference', text: 'Which sounds most like what you want at night?', options: [['I just want the room dark.', 0], ['I want enough light to see, but not too much.', 1], ['I want my room to feel calmer and more sleep-ready before bed.', 2]] }
         ];
 
         const results = [
             {
                 min: 0,
-                max: 5,
-                category: 'already_moving_toward_night_mode',
-                title: 'Your room is already moving toward night mode.',
-                copy: 'Your evening environment may already have some lower-stimulation habits. Owlnest Lume can help make that signal more consistent during the hours before bed.'
+                max: 6,
+                category: 'low_match',
+                title: 'Your room may already be fairly sleep-ready.',
+                copy: 'Your evening setup may already be working well for you. Owlnest Lume may still be useful if you want a softer, low-blue light for occasional reading, travel, or nighttime movement.'
             },
             {
-                min: 6,
-                max: 10,
-                category: 'partly_sleep_ready',
-                title: 'Your room is partly sleep-ready.',
-                copy: 'Some parts of your evening environment may support wind-down, while others may still feel too bright, active, or stimulating. A sleep-supporting spectrum lamp can help create a clearer nighttime cue.'
+                min: 7,
+                max: 13,
+                category: 'moderate_match',
+                title: 'Your evening room may still feel a little too active.',
+                copy: 'Your answers suggest that light, screens, or room brightness may still be keeping your space more alert than you want before bed. Owlnest Lume may be a good fit if you want a simpler, softer light for the 1–2 hours before sleep.'
             },
             {
-                min: 11,
-                max: 16,
-                category: 'may_still_feel_too_stimulating',
-                title: 'Your room may still feel too stimulating.',
-                copy: 'Your answers suggest your room may still carry a lot of daytime stimulation into the evening. Owlnest Lume is designed to help reduce nighttime light disruption and create a calmer, sleep-ready environment.'
+                min: 14,
+                max: 20,
+                category: 'strong_match',
+                title: 'Owlnest Lume may be a strong fit for your night.',
+                copy: 'Your answers suggest that your room may often stay visually or mentally active before bed. Lume is designed as a simple, deep amber, low-blue light to help your room feel more ready for night, without an app, screen, or extra bedtime task.'
             }
         ];
 
@@ -233,6 +261,8 @@
         const basicResultCopy = document.getElementById('basic-result-copy');
         const fullResultTitle = document.getElementById('full-result-title');
         const fullResultCopy = document.getElementById('full-result-copy');
+        const basicResultStatus = document.getElementById('basic-result-status');
+        const fullResultStatus = document.getElementById('full-result-status');
         const form = document.getElementById('room-check-form');
         const formMessage = document.getElementById('form-message');
         const submitButton = document.getElementById('submit-room-check');
@@ -243,11 +273,11 @@
         panelsWrap.innerHTML = questions.map((question, index) => `
             <div class="question-panel ${index === 0 ? 'is-active' : ''}" data-question-index="${index}">
                 <p class="text-[10px] uppercase tracking-[0.16em] text-white/42 font-bold">Question ${index + 1}</p>
-                <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white">${question.text}</h2>
+                <h2 class="mt-3 text-2xl md:text-3xl font-semibold leading-tight text-white">${question.text}</h2>
                 <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     ${question.options.map(([label, score]) => `
                         <button type="button" class="choice-card rounded-2xl p-4 text-left" data-score="${score}" data-label="${label}" data-question-id="${question.id}">
-                            <span class="block text-xl font-serif text-white">${label}</span>
+                            <span class="block text-base font-semibold leading-snug text-white">${label}</span>
                             <span class="mt-2 block text-xs uppercase tracking-[0.14em] text-white/38">Score ${score}</span>
                         </button>
                     `).join('')}
@@ -257,6 +287,22 @@
 
         function getResult(score) {
             return results.find(result => score >= result.min && score <= result.max) || results[0];
+        }
+
+        function statusMeta(category) {
+            if (category === 'low_match') return { label: 'Lower need', tone: 'low' };
+            if (category === 'moderate_match') return { label: 'Possible fit', tone: 'moderate' };
+            return { label: 'Strong fit', tone: 'strong' };
+        }
+
+        function renderResultStatus(target, result) {
+            const meta = statusMeta(result.category);
+            const score = totalScore();
+            target.innerHTML = `
+                <span class="result-status-dot is-${meta.tone}" aria-hidden="true"></span>
+                <span>${meta.label}</span>
+                <span class="text-white/42">Score ${score} / 20</span>
+            `;
         }
 
         function updateView() {
@@ -300,7 +346,7 @@
             const result = getResult(score);
             const answersText = readableAnswers();
             document.getElementById('quiz-score').value = String(score);
-            document.getElementById('quiz-score-display').value = `${score} / 16`;
+            document.getElementById('quiz-score-display').value = `${score} / 20`;
             document.getElementById('result-category').value = result.category;
             document.getElementById('result-title-field').value = result.title;
             document.getElementById('result-summary-field').value = result.copy;
@@ -316,6 +362,7 @@
             const result = populateSubmissionFields();
             basicResultTitle.textContent = result.title;
             basicResultCopy.textContent = result.copy;
+            renderResultStatus(basicResultStatus, result);
             leadPanel.classList.add('is-visible');
             document.getElementById('quiz-actions').style.display = 'none';
             panelsWrap.style.display = 'none';
@@ -390,6 +437,7 @@
                 const result = getResult(Number(document.getElementById('quiz-score').value));
                 fullResultTitle.textContent = result.title;
                 fullResultCopy.textContent = result.copy;
+                renderResultStatus(fullResultStatus, result);
                 fullResultPanel.classList.add('is-visible');
                 form.style.display = 'none';
                 formMessage.textContent = '';
@@ -397,7 +445,7 @@
                 formMessage.textContent = 'Something went wrong. Please try again.';
                 formMessage.className = 'mt-3 text-sm text-amber';
                 submitButton.disabled = false;
-                submitButton.textContent = 'Send My Result';
+                submitButton.textContent = 'Send me my result and early access';
             }
         });
 
