@@ -122,12 +122,13 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             background: #111d2f;
             color: #f7efd8;
+            font-family: Manrope, Inter, sans-serif;
             overflow-x: hidden;
             --color-text-primary: #111827;
             --color-text-secondary: #455169;
@@ -140,13 +141,19 @@
             color: #d8912a;
             display: block;
             font-size: 0.68rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.16em;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
+        #hero .font-serif,
+        main .font-serif,
+        footer .font-serif {
+            font-family: Manrope, Inter, sans-serif !important;
+        }
         .cta {
             border-radius: 10px;
+            font-weight: 800;
             transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
         }
         .cta:hover { transform: translateY(-1px); }
@@ -170,6 +177,88 @@
             background: rgba(255, 255, 255, 0.09);
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 18px 48px rgba(0,0,0,0.18);
         }
+        #hero {
+            isolation: isolate;
+            min-height: clamp(720px, 92vh, 860px) !important;
+            padding-top: clamp(6rem, 9vh, 7rem) !important;
+            padding-bottom: clamp(3rem, 6vh, 4.5rem) !important;
+        }
+        #hero::after {
+            content: "";
+            position: absolute;
+            right: 7vw;
+            bottom: 7vh;
+            width: min(34vw, 420px);
+            aspect-ratio: 1;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(240, 90, 36, 0.22), transparent 64%);
+            filter: blur(10px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        #hero h1 {
+            max-width: 660px;
+            font-size: clamp(1.95rem, 3.35vw, 3.5rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.06 !important;
+            letter-spacing: -0.026em !important;
+            text-wrap: balance;
+        }
+        #hero p.font-serif {
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+        #early-access {
+            width: min(100%, 620px);
+        }
+        #early-access .signup-form,
+        [data-source-section="campaign-positioning"],
+        [data-source-section="campaign-final-cta"] {
+            padding: 0.85rem !important;
+            border-radius: 1.35rem !important;
+        }
+        #early-access .signup-form {
+            padding: 0.68rem !important;
+            border-color: rgba(247, 239, 216, 0.095);
+            background: linear-gradient(180deg, rgba(247, 239, 216, 0.07), rgba(247, 239, 216, 0.035));
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 14px 32px rgba(0,0,0,0.16);
+        }
+        #early-access input,
+        [data-source-section="campaign-positioning"] input,
+        [data-source-section="campaign-final-cta"] input {
+            min-height: 3.65rem;
+            border-radius: 0.95rem;
+            background: rgba(8, 16, 28, 0.38);
+        }
+        #early-access input {
+            background: rgba(7, 14, 25, 0.44);
+        }
+        .bg-cream [data-source-section="campaign-final-cta"] input {
+            background: rgba(255, 255, 255, 0.72);
+        }
+        #early-access button,
+        [data-source-section="campaign-positioning"] button,
+        [data-source-section="campaign-final-cta"] button {
+            min-height: 3.65rem;
+            border-radius: 0.95rem;
+            box-shadow: 0 12px 28px rgba(216, 145, 42, 0.24);
+        }
+        #early-access input,
+        #early-access button {
+            min-height: 3.45rem;
+        }
+        #early-access .campaign-consent {
+            margin-top: 0.72rem;
+            margin-bottom: 0.45rem;
+            padding-inline: 0.12rem;
+            color: rgba(247, 239, 216, 0.72);
+            font-size: 0.78rem;
+            gap: 0.7rem;
+            line-height: 1.55;
+        }
+        #early-access .campaign-consent input {
+            margin-top: 0.17rem;
+        }
         .card {
             border: 1px solid rgba(247, 239, 216, 0.11);
             background: rgba(255, 255, 255, 0.045);
@@ -182,9 +271,28 @@
         }
         .hero-glow {
             background:
-                radial-gradient(circle at 50% 55%, rgba(240, 90, 36, 0.42), transparent 32%),
-                radial-gradient(circle at 50% 38%, rgba(216, 145, 42, 0.32), transparent 46%),
-                linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+                radial-gradient(circle at 58% 58%, rgba(240, 90, 36, 0.44), transparent 34%),
+                radial-gradient(circle at 42% 30%, rgba(216, 145, 42, 0.18), transparent 48%),
+                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025));
+        }
+        #hero .image-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.65rem;
+            padding: 0;
+            border-color: rgba(247, 239, 216, 0.07);
+            background:
+                radial-gradient(circle at 55% 62%, rgba(240, 90, 36, 0.24), transparent 48%),
+                rgba(247, 239, 216, 0.035);
+            box-shadow: 0 28px 70px rgba(0,0,0,0.30), 0 0 54px rgba(240,90,36,0.08);
+            transform: none;
+        }
+        #hero .image-frame img {
+            position: relative;
+            z-index: 1;
+            display: block;
+            background: transparent;
+            box-shadow: none;
         }
         .image-frame img {
             filter: saturate(1.04) contrast(1.03);
@@ -263,8 +371,36 @@
         details[open] .accordion-icon { transform: rotate(45deg); }
         .signup-message { min-height: 1.25rem; }
         main section:not(#hero) {
-            padding-top: clamp(4.5rem, 7vw, 7rem) !important;
-            padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
+            padding-top: clamp(3rem, 5vw, 5rem) !important;
+            padding-bottom: clamp(3rem, 5vw, 5rem) !important;
+            position: relative;
+        }
+        main section.campaign-image-section {
+            padding-top: clamp(2.4rem, 4vw, 4rem) !important;
+            padding-bottom: clamp(2.4rem, 4vw, 4rem) !important;
+        }
+        .campaign-check-section {
+            background: #0d1727 !important;
+            color: #111d2f;
+            padding-top: clamp(2rem, 3.5vw, 3.5rem) !important;
+            padding-bottom: clamp(2rem, 3.5vw, 3.5rem) !important;
+        }
+        .campaign-check-card {
+            max-width: 760px;
+            border-color: rgba(247, 239, 216, 0.18) !important;
+            background: rgba(247, 239, 216, 0.92) !important;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+        }
+        main section:not(#hero)::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(247, 239, 216, 0.08), transparent);
+        }
+        main section:not(#hero) > div {
+            position: relative;
+            z-index: 1;
         }
         main section:not(#hero) h2 {
             max-width: min(100%, 980px);
@@ -280,6 +416,31 @@
             overflow-wrap: normal;
             word-break: normal;
             hyphens: none;
+        }
+        main section:not(#hero) img[src^="/assets/campaign/"] {
+            display: block;
+            width: min(100%, 980px);
+            margin-inline: auto;
+            margin-top: clamp(0.8rem, 1.3vw, 1.25rem);
+            border-radius: clamp(1.1rem, 2vw, 1.65rem) !important;
+        }
+        .campaign-mood-crop {
+            width: min(100%, 980px);
+            margin-inline: auto;
+        }
+        .campaign-mood-crop img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transform: none;
+            border: 1px solid rgba(247, 239, 216, 0.10) !important;
+            border-radius: clamp(1.1rem, 2vw, 1.65rem) !important;
+            box-shadow: 0 26px 68px rgba(0, 0, 0, 0.25);
+        }
+        #proof img[src^="/assets/campaign/"],
+        main section:not(#hero) img[src*="prototype-progress"],
+        main section:not(#hero) img[src*="why-back-now"] {
+            width: min(100%, 980px);
         }
         .section-heading {
             max-width: min(100%, 1080px);
@@ -338,6 +499,20 @@
             .section-label { letter-spacing: 0.11em; }
             .signup-form { border-radius: 1.15rem; }
             .hero-glow img { max-height: 18rem; }
+            #hero {
+                min-height: auto;
+            }
+            #hero::after {
+                display: none;
+            }
+            #hero .image-frame {
+                transform: none;
+            }
+            #early-access .signup-form,
+            [data-source-section="campaign-positioning"],
+            [data-source-section="campaign-final-cta"] {
+                padding: 0.7rem !important;
+            }
             #main-header [data-track-click="click_get_early_access"] {
                 display: none;
             }
@@ -609,7 +784,7 @@
                     <p class="mt-3 sm:mt-5 text-sm sm:text-base text-amber font-bold">Launching soon. Join for launch updates and early-bird access.</p>
 
                     <div class="lg:hidden mt-4 hero-glow image-frame rounded-2xl border border-white/12 p-3 shadow-2xl shadow-black/35">
-                        <img src="../lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a dark nighttime room" class="w-full h-52 object-contain rounded-xl">
+                        <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="Nighttime phone pickup moment with Owlnest Lume" class="w-full h-auto rounded-xl">
                     </div>
 
                     <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
@@ -639,38 +814,27 @@
                         </form>
                     </div>
 
-                    <div class="mt-6 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.12em] text-white/70">
-                        <span class="rounded-full border border-white/12 bg-white/7 px-3 py-2">Deep amber</span>
-                        <span class="rounded-full border border-white/12 bg-white/7 px-3 py-2">Low-blue</span>
-                        <span class="rounded-full border border-white/12 bg-white/7 px-3 py-2">No app. No screen.</span>
-                    </div>
                 </div>
 
                 <div class="relative hidden lg:block">
                     <div class="hero-glow image-frame rounded-[2rem] border border-white/12 p-4 sm:p-6 shadow-2xl shadow-black/40">
-                        <img src="../lume-night-effect.jpg" alt="Owlnest Lume glowing deep amber in a dark nighttime room" class="w-full max-h-[620px] object-contain rounded-[1.45rem]">
-                    </div>
-                    <div class="absolute -bottom-5 left-5 right-5 rounded-2xl border border-white/12 bg-midnight/82 backdrop-blur-xl px-5 py-4 shadow-xl">
-                        <p class="text-sm text-white/76"><span class="text-amber font-bold">Owlnest Lume</span> turns the room down before you turn in.</p>
+                        <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="Nighttime phone pickup moment with Owlnest Lume" class="w-full max-h-[620px] object-contain rounded-[1.45rem]">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Problem</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Dark doesn’t always mean sleep-ready.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>Your room can be dark, but still feel too awake.</p>
-                    <p>Bright corners, phone glow, and ordinary room light can keep your space feeling active when your body is trying to slow down.</p>
+                <div class="campaign-mood-crop">
+                    <img src="/assets/campaign/campaign-problem-dark-not-ready.png" alt="Nighttime phone glow in a dark bedroom" loading="lazy">
                 </div>
-                <img src="/assets/campaign/campaign-problem-dark-not-ready.png" alt="Dark bedroom with phone glow showing that dark does not always mean sleep-ready" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-cream text-midnight px-5 sm:px-8 py-14 sm:py-16">
-            <div class="max-w-4xl mx-auto rounded-[2rem] border border-midnight/10 bg-white/60 p-6 sm:p-8 text-center">
+        <section class="campaign-check-section text-midnight px-5 sm:px-8 py-14 sm:py-16">
+            <div class="campaign-check-card mx-auto rounded-[2rem] border border-midnight/10 bg-white/60 p-6 sm:p-8 text-center">
                 <span class="section-label">60-Second Check</span>
                 <h2 class="mt-3 font-serif text-3xl md:text-5xl leading-tight">Is your room still too stimulating before bed?</h2>
                 <p class="mt-4 text-midnight/64 leading-relaxed">Take a quick check to see whether your evening light still feels too active for wind-down.</p>
@@ -678,81 +842,65 @@
             </div>
         </section>
 
-        <section class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Before / With Lume</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Help your room feel less like daytime.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>Less glare. Less phone glow. A softer signal that the day is ending.</p>
-                </div>
                 <img src="/assets/campaign/campaign-room-shift-before-with-lume.png" alt="Before and with Lume comparison showing a darker active room changing into a softer amber sleep-ready room" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Product Definition</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Meet Owlnest Lume</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>A sleep-supporting light for the 1–2 hours before bed.</p>
-                    <p>Deep amber. Low-blue. No app. No screen. No extra bedtime task.</p>
-                </div>
                 <img src="/assets/campaign/campaign-product-definition.png" alt="Owlnest Lume product definition as a sleep-supporting light for the 1 to 2 hours before bed" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Difference</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Warm light isn’t always bedtime light.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>Warm color alone does not make a light right for bedtime.</p>
-                    <p class="text-amber font-bold">Made for sleep, not just visibility.</p>
-                </div>
                 <img src="/assets/campaign/campaign-warm-light-difference.png" alt="Comparison explaining that warm light is not always bedtime light" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
-                <p class="section-label mb-5">Use Scenes</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight mb-5">Where Lume fits into your night</h2>
-                <p class="max-w-3xl mb-7 text-midnight/64 text-lg leading-relaxed">Use Lume during quiet pre-sleep moments: reading, after-shower wind-down, travel nights, or when one person is still awake.</p>
-                <img src="/assets/campaign/campaign-use-scenes.png" alt="Four nighttime use scenes for Owlnest Lume including reading, after-shower wind-down, partner asleep, and hotel nights" class="w-full h-auto rounded-[1.5rem] border border-midnight/10 shadow-2xl shadow-black/20" loading="lazy">
-                <p class="mt-5 text-midnight/55">A thoughtful gift for someone who needs a softer end to the day.</p>
+                <p class="section-label mb-5">Science Background</p>
+                <img src="/assets/campaign/campaign-science-trust.png" alt="Science background explaining that evening light quality matters before sleep" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section id="proof" class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+            <div class="max-w-6xl mx-auto">
+                <p class="section-label mb-5">Simple By Design</p>
+                <img src="/assets/campaign/campaign-what-we-left-out.png" alt="What Owlnest Lume leaves out including no app, no screen, no speaker, and no sleep score" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
+            </div>
+        </section>
+
+        <section class="campaign-image-section bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-20">
+            <div class="max-w-6xl mx-auto">
+                <p class="section-label mb-5">Use Scenes</p>
+                <img src="/assets/campaign/campaign-use-scenes.png" alt="Four nighttime use scenes for Owlnest Lume including reading, after-shower wind-down, partner asleep, and hotel nights" class="w-full h-auto rounded-[1.5rem] border border-midnight/10 shadow-2xl shadow-black/20" loading="lazy">
+            </div>
+        </section>
+
+        <section id="proof" class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Product Proof</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Real size. Simple controls.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>A physical lamp with USB-C charging, one bottom button, a soft body, and no app or screen.</p>
-                </div>
                 <img src="/assets/campaign/campaign-product-details.png" alt="Owlnest Lume product details showing size, USB-C charging, bottom button, deep amber glow, and no app or screen" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Prototype / Progress</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Real product. Real progress.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>Not a concept render. Finished samples, real hardware details, and real product photos.</p>
-                </div>
                 <img src="/assets/campaign/campaign-prototype-progress.png" alt="Owlnest Lume prototype to production progress with finished samples and real hardware details" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
             </div>
         </section>
 
-        <section class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
                 <p class="section-label mb-5">Why Join Now</p>
-                <h2 class="font-serif text-3xl md:text-5xl leading-tight text-white mb-5">Join before launch.</h2>
-                <div class="max-w-3xl mb-7 space-y-4 text-white/68 text-lg leading-relaxed">
-                    <p>Be the first to know when Owlnest Lume goes live.</p>
-                    <p>Get launch updates, production progress, and Early Bird access information.</p>
-                </div>
                 <img src="/assets/campaign/campaign-why-back-now.png" alt="Why back now explainer for helping bring the first batch of Owlnest Lume to life" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy">
                 <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-positioning" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="owlnest-prelaunch">
