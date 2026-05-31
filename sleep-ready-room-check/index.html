@@ -123,11 +123,11 @@
             <div class="absolute inset-0 bg-[linear-gradient(180deg,#111927_0%,#172033_100%)]"></div>
             <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-8 lg:gap-12 items-center">
                 <div>
-                    <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Sleep-Ready Room Check</span>
-                    <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Is your room ready for sleep?</h1>
-                    <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Take a 60-second check to see whether your evening light environment still feels too stimulating before bed.</p>
-                    <p class="mt-4 max-w-xl text-base text-white/62 leading-relaxed">No sleep diagnosis. No sleep score anxiety. Just a quick room-readiness check for the hours before bed.</p>
-                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Start the Check</a>
+                    <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">60-Second Check</span>
+                    <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Would Owlnest Lume fit your night?</h1>
+                    <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Answer a few quick questions about your light, phone habits, and bedtime routine.</p>
+                    <p class="mt-4 max-w-xl text-base text-white/62 leading-relaxed">See whether your evening setup may be a good match for a sleep-supporting spectrum lamp.</p>
+                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Check Your Fit</a>
                     <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                 </div>
 
@@ -151,7 +151,7 @@
 
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
                         <div class="result-summary-card rounded-[22px] p-5 sm:p-6">
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your basic result</p>
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                             <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                             <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                             <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
@@ -170,7 +170,7 @@
                             <input type="hidden" name="language" id="language-field" value="en">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-                            <h3 class="font-serif text-2xl text-white">Get your full Sleep-Ready Room result.</h3>
+                            <h3 class="font-serif text-2xl text-white">Get your Lume Fit Result.</h3>
                             <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to save your result and get Owlnest Lume launch updates.</p>
 
                             <div class="mt-5 flex flex-col sm:flex-row gap-3">
@@ -189,7 +189,7 @@
                     </div>
 
                     <div id="full-result-panel" class="result-panel mt-8 rounded-[22px] border border-amber/35 bg-amber/10 p-5 sm:p-6">
-                        <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Full result</p>
+                        <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                         <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                         <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
@@ -214,16 +214,16 @@
 
     <script>
         const questions = [
-            { id: 'bright_ceiling_lights', text: 'During the hour before bed, do you still use bright ceiling lights?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'visually_active_room', text: 'Does your room still feel visually active after the main lights are off?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'tired_switched_on', text: 'Do you feel physically tired but mentally switched on at night?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'phone_pickup', text: 'Do you put your phone down, then pick it back up again?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'bright_bedside_lighting', text: 'Do you use white, cool, or bright bedside lighting before bed?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'needs_soft_light', text: 'Do you need some light at night, but dislike harsh lamps?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'unfamiliar_room_lighting', text: 'Do hotel, rental, or unfamiliar room lighting make it harder to wind down?', options: [['Rarely', 0], ['Sometimes', 1], ['Often', 2]] },
-            { id: 'no_apps_screens_tracking', text: 'Would you prefer a bedtime cue without apps, screens, or sleep tracking?', options: [['No', 0], ['Maybe', 1], ['Yes', 2]] },
+            { id: 'bright_ceiling_lights', text: 'In the hour before bed, what kind of light are you usually under?', options: [['Mostly dim or low-stimulation light.', 0], ['A mix of dim light and regular room light.', 1], ['Bright ceiling lights, desk lights, or strong room lighting.', 2]] },
+            { id: 'visually_active_room', text: 'After the main lights are off, does your room still feel visually “awake”?', options: [['Rarely. The room already feels calm.', 0], ['Sometimes. It depends on the night.', 1], ['Often. Something still feels too active.', 2]] },
+            { id: 'tired_switched_on', text: 'When your body is tired, does your mind still feel switched on?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
+            { id: 'phone_pickup', text: 'Do you put your phone down, then pick it back up again?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
+            { id: 'bright_bedside_lighting', text: 'Before bed, do you still use white, cool, or bright bedside lighting?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
+            { id: 'needs_soft_light', text: 'Do you still need some light at night, but dislike harsh lamps?', options: [['Rarely. I usually do fine in the dark.', 0], ['Sometimes. I need light for certain moments.', 1], ['Often. I want light, but not the kind that wakes the room up.', 2]] },
+            { id: 'unfamiliar_room_lighting', text: 'When you travel or sleep in unfamiliar rooms, does the lighting make it harder to wind down?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
+            { id: 'no_apps_screens_tracking', text: 'Would a bedtime cue without apps, screens, or sleep tracking feel more realistic for you?', options: [['Not really.', 0], ['Maybe.', 1], ['Yes.', 2]] },
             { id: 'pre_sleep_room_activity', text: 'During the 1–2 hours before bed, do you still read, move around, get ready, or spend time in your room?', options: [['Rarely. I usually turn everything off quickly.', 0], ['Sometimes. I still do a few things before sleep.', 1], ['Often. I spend time in my room before I’m ready to sleep.', 2]] },
-            { id: 'night_light_preference', text: 'Which sounds most like what you want at night?', options: [['I just want the room dark.', 0], ['I want enough light to see, but not too much.', 1], ['I want my room to feel calmer and more sleep-ready before bed.', 2]] }
+            { id: 'night_light_preference', text: 'Which sounds most like what you want before bed?', options: [['I just want the room dark.', 0], ['I want enough light to see, but not too much.', 1], ['I want the room to feel ready for night before I am.', 2]] }
         ];
 
         const results = [
@@ -231,22 +231,22 @@
                 min: 0,
                 max: 6,
                 category: 'low_match',
-                title: 'Your room may already be fairly sleep-ready.',
-                copy: 'Your evening setup may already be working well for you. Owlnest Lume may still be useful if you want a softer, low-blue light for occasional reading, travel, or nighttime movement.'
+                title: 'Owlnest Lume may be an occasional fit for your night.',
+                copy: 'Your answers suggest your current evening setup may already feel fairly low-stimulation. Lume may still be useful for occasional reading, travel, or moments when you want softer light without turning the room fully on.'
             },
             {
                 min: 7,
                 max: 13,
                 category: 'moderate_match',
-                title: 'Your evening room may still feel a little too active.',
-                copy: 'Your answers suggest that light, screens, or room brightness may still be keeping your space more alert than you want before bed. Owlnest Lume may be a good fit if you want a simpler, softer light for the 1–2 hours before sleep.'
+                title: 'Owlnest Lume may fit your bedtime routine.',
+                copy: 'Your answers suggest your room sometimes stays brighter or more active than you want before bed. Lume may be a good fit if you want a simpler sleep-supporting light for the hours before sleep.'
             },
             {
                 min: 14,
                 max: 20,
                 category: 'strong_match',
                 title: 'Owlnest Lume may be a strong fit for your night.',
-                copy: 'Your answers suggest that your room may often stay visually or mentally active before bed. Lume is designed as a simple, deep amber, low-blue light to help your room feel more ready for night, without an app, screen, or extra bedtime task.'
+                copy: 'Your answers suggest your evening routine often includes light, screens, or room activity when your body is trying to slow down. Lume is made for those hours before bed, when you still need light but do not want the room to feel like daytime.'
             }
         ];
 
@@ -290,7 +290,7 @@
         }
 
         function statusMeta(category) {
-            if (category === 'low_match') return { label: 'Lower need', tone: 'low' };
+            if (category === 'low_match') return { label: 'Lower fit', tone: 'low' };
             if (category === 'moderate_match') return { label: 'Possible fit', tone: 'moderate' };
             return { label: 'Strong fit', tone: 'strong' };
         }
@@ -366,7 +366,7 @@
             leadPanel.classList.add('is-visible');
             document.getElementById('quiz-actions').style.display = 'none';
             panelsWrap.style.display = 'none';
-            progressLabel.textContent = 'Basic result ready';
+            progressLabel.textContent = 'Your Lume Fit Result is ready';
             progressBar.style.width = '100%';
         }
 
