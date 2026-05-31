@@ -160,9 +160,13 @@
         #mobile-menu {
             transform: translateY(-100%);
             transition: transform 0.4s ease-in-out;
+            visibility: hidden;
+            pointer-events: none;
         }
         #mobile-menu.open {
             transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
         }
         .campaign-nav-link {
             color: rgba(247, 239, 216, 0.68);
@@ -836,9 +840,10 @@
         <section class="campaign-check-section text-midnight px-5 sm:px-8 py-14 sm:py-16">
             <div class="campaign-check-card mx-auto rounded-[2rem] border border-midnight/10 bg-white/60 p-6 sm:p-8 text-center">
                 <span class="section-label">60-Second Check</span>
-                <h2 class="mt-3 font-serif text-3xl md:text-5xl leading-tight">Is your room still too stimulating before bed?</h2>
-                <p class="mt-4 text-midnight/64 leading-relaxed">Take a quick check to see whether your evening light still feels too active for wind-down.</p>
-                <a href="/sleep-ready-room-check/" data-track-click="click_sleep_ready_check" class="cta mt-6 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white transition">Check Your Room</a>
+                <h2 class="mt-3 font-serif text-3xl md:text-5xl leading-tight">Would Owlnest Lume fit your night?</h2>
+                <p class="mt-4 text-midnight/64 leading-relaxed">Answer a few quick questions about your light, phone habits, and bedtime routine.</p>
+                <p class="mt-3 text-midnight/64 leading-relaxed">See whether your evening setup may be a good match for a sleep-supporting spectrum lamp.</p>
+                <a href="/sleep-ready-room-check/" data-track-click="click_sleep_ready_check" class="cta mt-6 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white transition">Check Your Fit</a>
             </div>
         </section>
 
