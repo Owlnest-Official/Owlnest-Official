@@ -162,6 +162,7 @@
             transition: transform 0.4s ease-in-out;
             visibility: hidden;
             pointer-events: none;
+            overflow-y: auto;
         }
         #mobile-menu.open {
             transform: translateY(0);
@@ -523,25 +524,18 @@
             #main-header button[aria-label="Toggle menu"] {
                 display: inline-flex !important;
                 position: relative;
-                width: 2.5rem;
-                height: 2.5rem;
-                flex: 0 0 2.5rem;
                 align-items: center;
                 justify-content: center;
                 margin-left: auto;
                 z-index: 60;
                 color: #fff;
+                gap: 0.45rem;
             }
             #main-header button[aria-label="Toggle menu"]::before {
                 content: none;
             }
-            #main-header .campaign-menu-fallback {
-                display: block;
-                font-size: 1.35rem;
-                line-height: 1;
-            }
             #main-header button[aria-label="Toggle menu"] i {
-                display: none;
+                display: inline-block;
             }
             #main-header > div {
                 width: 100%;
@@ -727,16 +721,16 @@
                 <a href="#early-access" data-track-click="click_get_early_access" class="cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">
                 Get Early Access
                 </a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center justify-center text-white/80 hover:text-amber transition-colors text-xl" aria-label="Toggle menu">
-                    <span class="campaign-menu-fallback" aria-hidden="true">☰</span>
+                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-20 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-7 text-lg uppercase tracking-[0.18em] font-bold">
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm uppercase tracking-[0.2em] font-semibold text-center">
             <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
             <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
             <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
