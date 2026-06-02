@@ -440,6 +440,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: rgba(255,255,255,0.72);
             box-shadow: 0 18px 44px rgba(24,34,52,0.06);
         }
+        .comparison-muted-card {
+            border-color: rgba(255, 250, 240, 0.22);
+            background: rgba(255, 250, 240, 0.92);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+        }
+        .comparison-muted-card .comparison-number {
+            border: 1px solid rgba(154, 85, 31, 0.20);
+            background: rgba(154, 85, 31, 0.12);
+            color: #9A551F;
+        }
+        .comparison-muted-card h3 {
+            color: #182033 !important;
+        }
+        .comparison-muted-card p:not(.comparison-number) {
+            color: #455169 !important;
+            font-weight: 400;
+        }
         .dtc-card-dark {
             border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.12);
@@ -933,13 +950,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-                    <div class="dtc-card p-7">
-                        <p class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">01</p>
+                    <div class="dtc-card comparison-muted-card p-7">
+                        <p class="comparison-number inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">01</p>
                         <h3 class="font-serif text-2xl text-midnight mb-3">Night lights</h3>
                         <p class="text-midnight/65 font-light leading-relaxed">Help you see, but often feel harsh or too bright.</p>
                     </div>
-                    <div class="dtc-card p-7">
-                        <p class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">02</p>
+                    <div class="dtc-card comparison-muted-card p-7">
+                        <p class="comparison-number inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">02</p>
                         <h3 class="font-serif text-2xl text-midnight mb-3">Warm lamps</h3>
                         <p class="text-midnight/65 font-light leading-relaxed">Look cozy, but are usually made for general lighting.</p>
                     </div>
