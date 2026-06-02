@@ -213,11 +213,11 @@
                     <p class="text-[11px] tracking-[0.2em] uppercase text-amber font-bold mb-3">Share your note</p>
                     <h2 class="font-serif text-3xl md:text-4xl leading-tight">Experienced Owlnest Lume?</h2>
                     <p class="font-sans text-sm md:text-base text-midnight/60 leading-relaxed mt-4 max-w-xl">
-                        The feedback form lives on the Products page so the full product context stays nearby.
+                        Send us your product impressions through the Contact page. We review notes before sharing anything publicly.
                     </p>
                 </div>
-                <a href="products.html#feedback" class="inline-flex items-center justify-center bg-midnight text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-amber hover:text-midnight transition-colors rounded-sm">
-                    Submit Feedback
+                <a href="/contact/" class="inline-flex items-center justify-center bg-midnight text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-amber hover:text-midnight transition-colors rounded-sm">
+                    Share Feedback
                 </a>
             </div>
         </section>
@@ -297,7 +297,7 @@
 
                 const items = Array.isArray(data.reviews) ? data.reviews : [];
                 if (!items.length) {
-                    list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60 md:col-span-2 xl:col-span-3">No public feedback yet. Return to the Products page to share the first note.</div>';
+                    list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60 md:col-span-2 xl:col-span-3">No public feedback yet. Use the Contact page if you want to share a product note with Owlnest.</div>';
                     return;
                 }
 

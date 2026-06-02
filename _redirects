@@ -28,6 +28,9 @@
 /contact              /contact.html                          200
 /contact/             /contact.html                          200
 
+/reviews             /reviews.html                          200
+/reviews/            /reviews.html                          200
+
 /manual               /manual.html                           200
 /manual/              /manual.html                           200
 
