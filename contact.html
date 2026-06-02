@@ -547,7 +547,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             icon.classList.toggle('fa-times');
         }
 
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        const yearEl = document.getElementById('copyright-year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
     </script>
 <script>
     function toggleLanguageMenu(event) {
