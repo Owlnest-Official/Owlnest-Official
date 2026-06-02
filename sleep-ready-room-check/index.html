@@ -126,7 +126,6 @@
                     <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">60-Second Check</span>
                     <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Would Owlnest Lume fit your night?</h1>
                     <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Answer a few quick questions about your light, phone habits, and bedtime routine.</p>
-                    <p class="mt-4 max-w-xl text-base text-white/62 leading-relaxed">See whether your evening setup may be a good match for a sleep-supporting spectrum lamp.</p>
                     <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Check Your Fit</a>
                     <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                 </div>
@@ -186,6 +185,12 @@
                             <p class="mt-3 text-xs text-white/45">No spam. Just your result, launch updates, and early-bird access.</p>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
                         </form>
+                        <div id="submit-success-panel" class="result-panel mt-7 rounded-[22px] border border-amber/30 bg-amber/10 p-5 sm:p-6" role="status" aria-live="polite">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Submission received</p>
+                            <h3 class="mt-3 font-serif text-2xl text-white">Your result is saved.</h3>
+                            <p class="mt-2 text-white/72 leading-relaxed">You're on the early-access list.</p>
+                            <p class="mt-3 text-sm text-white/55 leading-relaxed">We'll keep you updated with Owlnest Lume launch news and early-bird access.</p>
+                        </div>
                     </div>
 
                     <div id="full-result-panel" class="result-panel mt-8 rounded-[22px] border border-amber/35 bg-amber/10 p-5 sm:p-6">
@@ -439,6 +444,7 @@
                 fullResultCopy.textContent = result.copy;
                 renderResultStatus(fullResultStatus, result);
                 fullResultPanel.classList.add('is-visible');
+                document.getElementById('submit-success-panel').classList.add('is-visible');
                 form.style.display = 'none';
                 formMessage.textContent = '';
             } catch (error) {
