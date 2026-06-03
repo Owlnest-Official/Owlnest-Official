@@ -21,6 +21,8 @@
 
 /campaign             /campaign/index.html                   200
 /campaign/            /campaign/index.html                   200
+/zh-tw/campaign              /zh-tw/campaign/index.html                 200
+/zh-tw/campaign/             /zh-tw/campaign/index.html                 200
 
 /about                /about.html                            200
 /about/               /about.html                            200
@@ -44,3 +46,7 @@
 
 /sleep-ready-room-check     /sleep-ready-room-check/index.html     200
 /sleep-ready-room-check/    /sleep-ready-room-check/index.html     200
+/zh-tw/products              /zh-tw/products/index.html                 200
+/zh-tw/products/             /zh-tw/products/index.html                 200
+/zh-tw/sleep-ready-room-check  /zh-tw/sleep-ready-room-check/index.html 200
+/zh-tw/sleep-ready-room-check/ /zh-tw/sleep-ready-room-check/index.html 200
