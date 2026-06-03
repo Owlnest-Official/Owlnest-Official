@@ -18,6 +18,8 @@
 
 /science              /science.html                          200
 /science/             /science.html                          200
+/zh-tw/science              /zh-tw/science/index.html                 200
+/zh-tw/science/             /zh-tw/science/index.html                 200
 
 /campaign             /campaign/index.html                   200
 /campaign/            /campaign/index.html                   200
@@ -43,6 +45,8 @@
 
 /what-is-owlnest-lume       /what-is-owlnest-lume/index.html       200
 /what-is-owlnest-lume/      /what-is-owlnest-lume/index.html       200
+/zh-tw/what-is-owlnest-lume  /zh-tw/what-is-owlnest-lume/index.html   200
+/zh-tw/what-is-owlnest-lume/ /zh-tw/what-is-owlnest-lume/index.html   200
 
 /sleep-ready-room-check     /sleep-ready-room-check/index.html     200
 /sleep-ready-room-check/    /sleep-ready-room-check/index.html     200
