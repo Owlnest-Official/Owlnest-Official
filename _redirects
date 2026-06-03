@@ -28,9 +28,13 @@
 
 /about                /about.html                            200
 /about/               /about.html                            200
+/zh-tw/about              /zh-tw/about/index.html                 200
+/zh-tw/about/             /zh-tw/about/index.html                 200
 
 /contact              /contact.html                          200
 /contact/             /contact.html                          200
+/zh-tw/contact            /zh-tw/contact/index.html               200
+/zh-tw/contact/           /zh-tw/contact/index.html               200
 
 /reviews             /reviews.html                          200
 /reviews/            /reviews.html                          200
