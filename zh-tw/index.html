@@ -709,6 +709,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 line-height: 1.17 !important;
             }
         }
+            body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+        main .font-serif,
+        main h1,
+        main h2,
+        main h3,
+        nav,
+        button,
+        input,
+        textarea,
+        label {
+            font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+        }
+        main h1.font-serif,
+        main h2.font-serif,
+        main h3.font-serif {
+            font-weight: 500 !important;
+            letter-spacing: 0 !important;
+            line-height: 1.12 !important;
+        }
+        .language-menu {
+            opacity: 0;
+            transform: translateY(8px);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .language-menu.open,
+        .language-wrap:hover .language-menu,
+        .language-wrap:focus-within .language-menu {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -733,14 +766,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">研究依據</a>
                 <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於我們</a>
                 <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
-                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber transition-colors duration-300">Lume 適合度檢查</a>
             </nav>
 
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <div class="relative">
+                <div class="relative language-wrap">
                     <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
                         <i class="fas fa-globe text-xs"></i>
                         繁體中文
@@ -1310,6 +1342,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         window.addEventListener('resize', render);
 
         // Mobile Menu Toggle
+        function toggleLanguageMenu(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            const isOpen = menu.classList.toggle('open');
+            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            if (!event.target.closest('.language-wrap')) {
+                menu.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('mobile-menu-icon');
@@ -1324,14 +1376,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        function toggleLanguageMenu(event) {
-            event.stopPropagation();
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            const isOpen = menu.classList.toggle('open');
-            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        }
 
         document.addEventListener('click', (event) => {
             const menu = document.getElementById('language-menu');

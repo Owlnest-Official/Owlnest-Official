@@ -46,6 +46,39 @@
         #mobile-menu { transform: translateY(-100%); transition: transform .35s ease; visibility: hidden; pointer-events: none; overflow-y: auto; }
         #mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
         .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+            body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+        main .font-serif,
+        main h1,
+        main h2,
+        main h3,
+        nav,
+        button,
+        input,
+        textarea,
+        label {
+            font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+        }
+        main h1.font-serif,
+        main h2.font-serif,
+        main h3.font-serif {
+            font-weight: 500 !important;
+            letter-spacing: 0 !important;
+            line-height: 1.12 !important;
+        }
+        .language-menu {
+            opacity: 0;
+            transform: translateY(8px);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .language-menu.open,
+        .language-wrap:hover .language-menu,
+        .language-wrap:focus-within .language-menu {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-amber selection:text-midnight">
@@ -53,33 +86,40 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 w-full z-50 px-5 sm:px-8 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto flex items-center justify-between gap-5">
+    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
+        <div class="w-full flex items-center justify-between gap-6">
             <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
                 <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
                 <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
             </a>
-            <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/62">
+            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
                 <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
                 <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
                 <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
                 <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
                 <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
-                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber transition-colors">Lume 適合度檢查</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-5 border-l border-white/10 pl-6">
+            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
-                <div class="relative group">
-                    <button type="button" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                <div class="relative language-wrap">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
                         <i class="fas fa-globe text-xs"></i>
                         繁體中文
                         <i class="fas fa-chevron-down text-[9px]"></i>
                     </button>
-                    <div class="hidden group-hover:block group-focus-within:block absolute right-0 top-full mt-4 w-56 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
                         <a href="/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span>EN</span></a>
                         <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>簡體中文 <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>即將開放</span></button>
+                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
                 <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
@@ -121,6 +161,14 @@
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
                     <a href="/campaign/" class="text-white hover:text-amber">English — EN</a>
                     <a href="/zh-tw/campaign/" class="text-amber">繁體中文</a>
+                    <span class="text-white/45">簡體中文 — 即將開放</span>
+                    <span class="text-white/45">日本語 — 即將開放</span>
+                    <span class="text-white/45">한국어 — 即將開放</span>
+                    <span class="text-white/45">Français — 即將開放</span>
+                    <span class="text-white/45">Deutsch — 即將開放</span>
+                    <span class="text-white/45">Español — 即將開放</span>
+                    <span class="text-white/45">Italiano — 即將開放</span>
+                    <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
         </nav>
@@ -233,7 +281,67 @@
         <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
     </footer>
 
-    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function toggleLanguageMenu(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            const isOpen = menu.classList.toggle('open');
+            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('language-menu');
+            const trigger = document.querySelector('.language-trigger');
+            if (!menu || !trigger) return;
+            if (!event.target.closest('.language-wrap')) {
+                menu.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('mobile-menu-icon');
