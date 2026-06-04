@@ -43,6 +43,62 @@
         body { background: #111927; color: #fff; overflow-x: hidden; }
         .field-shell { border: 1px solid rgba(250,239,207,.16); background: rgba(255,255,255,.045); }
         .campaign-image-section img { width: 100%; height: auto; border-radius: 1.5rem; }
+        .hero-glow {
+            background:
+                radial-gradient(circle at 58% 58%, rgba(240, 90, 36, 0.44), transparent 34%),
+                radial-gradient(circle at 42% 30%, rgba(216, 145, 42, 0.18), transparent 48%),
+                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025));
+        }
+        #hero .image-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.65rem;
+            padding: 0;
+            border-color: rgba(247, 239, 216, 0.07);
+            background:
+                radial-gradient(circle at 55% 62%, rgba(240, 90, 36, 0.24), transparent 48%),
+                rgba(247, 239, 216, 0.035);
+            box-shadow: 0 28px 70px rgba(0,0,0,0.30), 0 0 54px rgba(240,90,36,0.08);
+            transform: none;
+        }
+        #hero .image-frame img {
+            position: relative;
+            z-index: 1;
+            display: block;
+            background: transparent;
+            box-shadow: none;
+        }
+        .image-frame img { filter: saturate(1.04) contrast(1.03); }
+        .campaign-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            margin: 0.75rem 0 0.85rem;
+            padding-inline: 0.25rem;
+            color: rgba(247, 239, 216, 0.86);
+            font-size: 0.8rem;
+            line-height: 1.45;
+            text-align: left;
+        }
+        .campaign-consent input {
+            width: 1rem;
+            height: 1rem;
+            min-height: 1rem;
+            margin-top: 0.12rem;
+            flex: 0 0 auto;
+            accent-color: #C9852A;
+        }
+        #early-access .campaign-consent {
+            margin-top: 0.72rem;
+            margin-bottom: 0.45rem;
+            padding-inline: 0.12rem;
+            color: rgba(247, 239, 216, 0.72);
+            font-size: 0.78rem;
+            gap: 0.7rem;
+            line-height: 1.55;
+        }
+        #early-access .campaign-consent input { margin-top: 0.17rem; }
+        .bg-cream .campaign-consent { color: rgba(17, 25, 39, 0.66); }
         #mobile-menu { transform: translateY(-100%); transition: transform .35s ease; visibility: hidden; pointer-events: none; overflow-y: auto; }
         #mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
         .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
@@ -85,29 +141,27 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
-                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-5">
+            <a href="/zh-tw/" class="site-brand flex items-center gap-3 shrink-0 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="w-9 h-9 object-contain">
+                <span class="text-sm sm:text-base font-bold tracking-[0.16em] uppercase text-white">Owlnest</span>
             </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+            <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
+                <a href="/zh-tw/" class="campaign-nav-link">首頁</a>
+                <a href="/zh-tw/products/" class="campaign-nav-link">產品</a>
+                <a href="/zh-tw/science/" class="campaign-nav-link">研究依據</a>
+                <a href="/zh-tw/about/" class="campaign-nav-link">關於我們</a>
+                <a href="/zh-tw/contact/" class="campaign-nav-link">聯絡我們</a>
+                <a href="/zh-tw/campaign/" class="campaign-nav-link is-active">募資頁面</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
-                <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            <div class="flex items-center gap-4">
+                <a href="/account.html" class="hidden lg:inline-flex text-white/65 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
+                    <i class="fas fa-user"></i>
                 </a>
-                <div class="relative language-wrap">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i>
-                        繁體中文
-                        <i class="fas fa-chevron-down text-[9px]"></i>
+                <div class="relative hidden lg:block">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/65 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i> 繁體中文 <i class="fas fa-chevron-down text-[9px]"></i>
                     </button>
                     <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
                         <a href="/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span>EN</span></a>
@@ -122,19 +176,8 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
-                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
-                </a>
-            </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                <a href="#early-access" data-track-click="click_get_early_access" class="cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">取得早鳥通知</a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="切換選單">
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
                     <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
                 </button>
@@ -142,20 +185,16 @@
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm uppercase tracking-[0.2em] font-semibold text-center">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">募資頁面</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員登入</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
@@ -171,18 +210,36 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
+            <a href="#early-access" onclick="toggleMobileMenu()" data-track-click="click_get_early_access" class="cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm">取得早鳥通知</a>
         </nav>
     </div>
 
     <main>
-        <section id="hero" class="relative min-h-screen pt-28 pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
-            <div class="absolute inset-0 bg-[linear-gradient(180deg,#111927_0%,#172033_100%)]"></div>
-            <div class="relative max-w-7xl mx-auto grid lg:grid-cols-[.92fr_1.08fr] gap-10 lg:gap-14 items-center">
-                <div>
-                    <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Owlnest Lume</span>
-                    <h1 class="mt-5 font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.02] text-white"><span class="block">把睡前的房間，</span><span class="block">從白天切回<span class="whitespace-nowrap">夜晚</span>。</span></h1>
-                    <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Owlnest Lume 是為睡前 1–2 小時設計的助眠光譜燈。深琥珀、低藍光、無 app、無螢幕，讓房間更適合進入睡前狀態。</p>
-                    <div id="early-access" class="mt-7 max-w-xl">
+        <section id="hero" class="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(216,145,42,0.15),transparent_32%),linear-gradient(135deg,#111d2f_0%,#16253b_48%,#0c1422_100%)]"></div>
+            <div class="absolute inset-0 opacity-[0.18]" style="background-image: radial-gradient(rgba(247,239,216,0.45) 1px, transparent 1px); background-size: 42px 42px;"></div>
+            <div class="relative max-w-7xl mx-auto w-full grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-16 items-center">
+                <div class="max-w-5xl">
+                    <span class="section-label">Owlnest Lume | 即將上市</span>
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-white">
+                        你把手機放下。<br>然後又拿了起來。
+                    </h1>
+                    <p class="mt-4 sm:mt-6 text-xl sm:text-3xl font-serif leading-tight text-warm">
+                        你已經準備睡了。<br>你的房間還沒有。
+                    </p>
+                    <p class="mt-3 sm:mt-5 max-w-2xl text-base sm:text-xl text-white/72 leading-relaxed">
+                        為睡前 1–2 小時設計的助眠光線。
+                    </p>
+                    <p class="mt-3 sm:mt-5 max-w-2xl text-base sm:text-xl text-white/72 leading-relaxed">
+                        深琥珀、低藍光。無 app、無螢幕。
+                    </p>
+                    <p class="mt-3 sm:mt-5 text-sm sm:text-base text-amber font-bold">即將上市。加入名單，取得上市更新與早鳥通知。</p>
+
+                    <div class="lg:hidden mt-4 hero-glow image-frame rounded-2xl border border-white/12 p-3 shadow-2xl shadow-black/35">
+                        <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="夜晚放下手機後又拿起來的情境，旁邊有 Owlnest Lume" class="w-full h-auto rounded-xl">
+                    </div>
+
+                    <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
                         <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-hero" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="owlnest-prelaunch">
                             <input type="hidden" name="source_section" value="zh-campaign-hero">
@@ -193,18 +250,26 @@
                             <input type="hidden" name="utm_content" value="">
                             <input type="hidden" name="utm_term" value="">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-                            <div class="flex flex-col sm:flex-row gap-2">
-                                <label class="sr-only" for="hero-email">Email</label>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <label class="sr-only" for="hero-email">輸入你的 email</label>
                                 <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                                <button type="submit" class="min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream">取得早鳥通知</button>
+                                <button type="submit" data-track-click="click_claim_early_bird_access" class="cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm">取得早鳥通知</button>
                             </div>
-                            <p class="form-message mt-3 text-sm text-white/56" role="status" aria-live="polite">只寄送 Owlnest Lume 上市與早鳥相關更新。</p>
+                            <label class="campaign-consent">
+                                <input type="checkbox" name="consent" value="yes" required>
+                                <span>我同意接收 Owlnest 上市更新，並了解可隨時取消訂閱。</span>
+                            </label>
+                            <p class="mt-2 sm:mt-3 px-1 text-xs text-white/48">不寄垃圾信，只寄上市更新與早鳥通知。</p>
+                            <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                         </form>
                     </div>
                 </div>
-                <figure>
-                    <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="夜晚忍不住重新拿起手機的情境，旁邊有 Owlnest Lume" class="w-full max-h-[620px] object-contain rounded-[1.45rem]">
-                </figure>
+
+                <div class="relative hidden lg:block">
+                    <div class="hero-glow image-frame rounded-[2rem] border border-white/12 p-4 sm:p-6 shadow-2xl shadow-black/40">
+                        <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="夜晚放下手機後又拿起來的情境，旁邊有 Owlnest Lume" class="w-full max-h-[620px] object-contain rounded-[1.45rem]">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -251,10 +316,40 @@
             </div>
         </section>
 
-        <section class="bg-cream text-midnight px-5 sm:px-8 py-20 sm:py-24 text-center">
-            <div class="max-w-3xl mx-auto">
-                <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Final CTA</span>
-                <h2 class="mt-4 font-serif text-4xl md:text-6xl leading-tight">取得 Owlnest Lume 早鳥通知。</h2>
+        <section id="faq" class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
+            <div class="max-w-4xl mx-auto">
+                <span class="section-label">FAQ</span>
+                <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">常見問題</h2>
+                <div class="mt-8 space-y-3">
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">募資頁面什麼時候上線？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">募資頁面準備好後，我們會透過 email 公布正式上線時間。</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">這是完成品還是概念？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume 是真實實體產品，已有完成樣品與硬體細節，目前正在準備募資上市。</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Lume 是醫療產品嗎？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">不是。Owlnest Lume 不是醫療產品，也不提供診斷、治療、治癒或預防用途。它的設計目標是幫助建立更安靜、低刺激的睡前光環境。</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">加入名單後會收到什麼？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">你會收到上市更新、早鳥提醒、產品進度與配送相關資訊。不會寄送垃圾郵件。</p>
+                    </details>
+                    <details class="card rounded-2xl p-5">
+                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">如何聯絡 Owlnest？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
+                        <p class="mt-4 text-white/62 leading-relaxed">你可以透過聯絡頁詢問產品、募資、商務合作或支援問題。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-early-access" class="bg-cream text-midnight px-5 sm:px-8 py-20 sm:py-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="section-label">早鳥名單</span>
+                <h2 class="mt-4 font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">上市前取得早鳥通知。</h2>
+                <p class="mt-5 text-lg text-midnight/64 leading-relaxed">加入名單，收到上市更新、早鳥通知與產品進度。</p>
                 <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="zh-campaign-final-cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="owlnest-prelaunch">
                     <input type="hidden" name="source_section" value="zh-campaign-final-cta">
@@ -269,6 +364,11 @@
                         <input name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" class="min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white">取得早鳥通知</button>
                     </div>
+                    <label class="campaign-consent">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        <span>我同意接收 Owlnest 上市更新，並了解可以隨時取消訂閱。</span>
+                    </label>
+                    <p class="mt-3 px-1 text-xs text-midnight/48">不寄送垃圾郵件，只寄送上市更新與早鳥資訊。</p>
                     <p class="form-message mt-3 text-sm text-midnight/60" role="status" aria-live="polite"></p>
                 </form>
             </div>
@@ -359,7 +459,7 @@
         document.querySelectorAll('.signup-form').forEach(form => {
             form.addEventListener('submit', async event => {
                 event.preventDefault();
-                const message = form.querySelector('.form-message');
+                const message = form.querySelector('.signup-message') || form.querySelector('.form-message');
                 const button = form.querySelector('button[type="submit"]');
                 if (message) message.textContent = '';
                 if (button) { button.disabled = true; button.textContent = '送出中...'; }

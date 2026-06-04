@@ -71,20 +71,22 @@
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-amber selection:text-midnight">
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
-                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
@@ -107,40 +109,37 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
+                    募資頁面
                 </a>
             </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
-            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="募資頁面" aria-label="募資頁面">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+            </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">募資頁面</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員登入</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
@@ -156,6 +155,7 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="mt-2 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm transition-colors">取得早鳥通知</a>
         </nav>
     </div>
 
@@ -269,6 +269,137 @@
                         <p class="mt-4 text-white/70">來源：<a href="https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452026061075714&Pname=P30-31-%E5%B0%81%E9%9D%A2%E6%95%85%E4%BA%8B-%E7%9D%A1%E5%BE%97%E5%A5%BD.pdf&Siteid=1&fd=PublicationsCont_Files" class="text-white hover:text-amber underline underline-offset-4">Downloadable PDF</a></p>
                         <p class="mt-4 text-white/60">與 Lume 的關係：提供睡眠與照護情境中的環境設計背景；不代表 Lume 有醫療或臨床結果。</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:py-24 bg-midnight text-white">
+            <div class="max-w-6xl mx-auto border border-white/10 bg-white/5 rounded-sm p-6 md:p-8">
+                <h2 class="font-serif text-3xl md:text-4xl text-white">設計追溯矩陣</h2>
+                <div class="mt-6 overflow-x-auto">
+                    <table class="min-w-full text-left text-sm text-white/72 border-separate border-spacing-0">
+                        <thead>
+                            <tr>
+                                <th class="p-4 border-b border-white/10 text-white">研究依據頁面來源</th>
+                                <th class="p-4 border-b border-white/10 text-white">研究原則</th>
+                                <th class="p-4 border-b border-white/10 text-white">產品設計決策</th>
+                                <th class="p-4 border-b border-white/10 text-white">Owlnest Lume 的實作方向</th>
+                                <th class="p-4 border-b border-white/10 text-white">證據層級</th>
+                                <th class="p-4 border-b border-white/10 text-white">宣稱邊界</th>
+                                <th class="p-4 border-b border-white/10 text-white">仍需驗證</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">How Light Spectrum Regulates Human Melatonin</td>
+                                <td class="p-4 border-b border-white/10">夜晚光線要看光譜，不只看亮度。</td>
+                                <td class="p-4 border-b border-white/10">採用深琥珀 / 紅橙色的夜間光線方向。</td>
+                                <td class="p-4 border-b border-white/10">接近黃昏感的深琥珀光，而不是白光或淡黃光。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">不是臨床結果宣稱。</td>
+                                <td class="p-4 border-b border-white/10">產品特定光譜測量報告。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">How Evening Room Light Suppresses Melatonin</td>
+                                <td class="p-4 border-b border-white/10">藍光比例較高或較刺激的室內光，在夜間更值得留意。</td>
+                                <td class="p-4 border-b border-white/10">降低夜間使用時的藍光刺激方向。</td>
+                                <td class="p-4 border-b border-white/10">以低藍光方向的琥珀光譜作為設計語境。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">若要做量化宣稱，需要產品特定光譜測量。</td>
+                                <td class="p-4 border-b border-white/10">藍光比例或 melanopic 相關測量。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">CIE S 026: Measuring Biologically Relevant Light</td>
+                                <td class="p-4 border-b border-white/10">與生理相關的光線評估，不應只看可見亮度。</td>
+                                <td class="p-4 border-b border-white/10">以夜間使用、光譜與時機作為設計考量。</td>
+                                <td class="p-4 border-b border-white/10">定位為睡前使用的助眠光譜燈。</td>
+                                <td class="p-4 border-b border-white/10">標準文件 + 設計理由</td>
+                                <td class="p-4 border-b border-white/10">不代表 Owlnest Lume 已完成同等測量。</td>
+                                <td class="p-4 border-b border-white/10">產品特定 melanopic 或相近指標。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Read: Smart Sleep Technology by ITRI</td>
+                                <td class="p-4 border-b border-white/10">睡前光環境的時機很重要。</td>
+                                <td class="p-4 border-b border-white/10">建議睡前 1–2 小時使用。</td>
+                                <td class="p-4 border-b border-white/10">以睡前時段為主，不作為白天工作照明。</td>
+                                <td class="p-4 border-b border-white/10">機構研究 + 設計理由</td>
+                                <td class="p-4 border-b border-white/10">不保證睡眠結果。</td>
+                                <td class="p-4 border-b border-white/10">若需更強宣稱，需使用者研究或產品特定測試。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Biologically Relevant Lighting: An Industry Perspective</td>
+                                <td class="p-4 border-b border-white/10">照明可以納入生理相關影響作為設計考量。</td>
+                                <td class="p-4 border-b border-white/10">以助眠光譜燈定位產品。</td>
+                                <td class="p-4 border-b border-white/10">支持更適合進入睡前狀態的夜晚光環境。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">不等於產品特定臨床效果證明。</td>
+                                <td class="p-4 border-b border-white/10">產品特定驗證摘要。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Blue-Hazard-Free Candlelight-Style OLED</td>
+                                <td class="p-4 border-b border-white/10">燭光風格、較低藍光的光線方向可作為夜間設計參考。</td>
+                                <td class="p-4 border-b border-white/10">偏向更深的琥珀 / 紅橙色光線特徵。</td>
+                                <td class="p-4 border-b border-white/10">用助眠光感取代一般暖光燈輸出。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">不是宣稱 Lume 具備相同材料或光譜表現。</td>
+                                <td class="p-4 border-b border-white/10">光譜功率分布報告。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">High-Efficiency Candlelight OLED with Very Low Color Temperature</td>
+                                <td class="p-4 border-b border-white/10">超低色溫光線可以被刻意工程化。</td>
+                                <td class="p-4 border-b border-white/10">睡前時段採用低刺激光譜方向。</td>
+                                <td class="p-4 border-b border-white/10">深琥珀 / 紅橙色的夜晚光感。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">不是 Owlnest Lume 的量化性能宣稱。</td>
+                                <td class="p-4 border-b border-white/10">色溫測量與光譜報告。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Candle Light-Style Organic Light-Emitting Diodes</td>
+                                <td class="p-4 border-b border-white/10">燭光風格可被視為明確的照明設計方向。</td>
+                                <td class="p-4 border-b border-white/10">避免把產品說成一般暖光燈。</td>
+                                <td class="p-4 border-b border-white/10">以夜間轉換工具與接近燭光的視覺意圖定位。</td>
+                                <td class="p-4 border-b border-white/10">公開研究 + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">支持方向與外觀，不代表產品特定效果。</td>
+                                <td class="p-4 border-b border-white/10">受控產品照片與光譜測量。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Download: Ultra-Low Color Temperature OLED Technology</td>
+                                <td class="p-4 border-b border-white/10">超低色溫技術與夜間友善光線設計相關。</td>
+                                <td class="p-4 border-b border-white/10">朝較低刺激的暖色光譜方向設計。</td>
+                                <td class="p-4 border-b border-white/10">適合床邊或房間擺放的深琥珀夜間光。</td>
+                                <td class="p-4 border-b border-white/10">技術 PDF + 設計轉譯</td>
+                                <td class="p-4 border-b border-white/10">技術背景不等於產品驗證。</td>
+                                <td class="p-4 border-b border-white/10">第三方或儀器光譜報告。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Download: Human-Centric Lighting for Healthcare Environments</td>
+                                <td class="p-4 border-b border-white/10">以人為中心的照明原則會影響空間感受與功能。</td>
+                                <td class="p-4 border-b border-white/10">把夜間光線視為環境設計，而不只是照明。</td>
+                                <td class="p-4 border-b border-white/10">將情緒安定與空間舒適納入產品概念。</td>
+                                <td class="p-4 border-b border-white/10">下載型 PDF + 設計理由</td>
+                                <td class="p-4 border-b border-white/10">不顯示此消費產品具有臨床結果。</td>
+                                <td class="p-4 border-b border-white/10">若需更強證據，需使用環境測試。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-white/10">Download: Smart Sleep and Care Solutions</td>
+                                <td class="p-4 border-b border-white/10">更安靜的環境設計可支持夜間流程。</td>
+                                <td class="p-4 border-b border-white/10">將產品框定為非醫療的習慣與環境支持工具。</td>
+                                <td class="p-4 border-b border-white/10">睡前時段定位，以及不增加刺激的簡單硬體。</td>
+                                <td class="p-4 border-b border-white/10">研究報告 PDF + 設計理由</td>
+                                <td class="p-4 border-b border-white/10">不建立醫療或產品特定睡眠宣稱。</td>
+                                <td class="p-4 border-b border-white/10">產品特定使用者測試或驗證摘要。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">Red Light and Sleep Quality in Athletes</td>
+                                <td class="p-4">紅光譜策略與夜間行為、恢復導向環境可能相關。</td>
+                                <td class="p-4">支持紅橙色設計方向。</td>
+                                <td class="p-4">深琥珀 / 紅橙色的黃昏感光線。</td>
+                                <td class="p-4">公開研究 + 設計轉譯</td>
+                                <td class="p-4">不是宣稱 Owlnest Lume 複製運動員研究結果。</td>
+                                <td class="p-4">產品特定光譜驗證與未來可能的使用者研究。</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

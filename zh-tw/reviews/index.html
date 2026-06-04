@@ -82,21 +82,22 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
 
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
-                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
@@ -119,40 +120,37 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
+                    募資頁面
                 </a>
             </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
-            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="募資頁面" aria-label="募資頁面">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+            </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">募資頁面</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員登入</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
@@ -168,6 +166,7 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="mt-2 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm transition-colors">取得早鳥通知</a>
         </nav>
     </div>
 

@@ -86,21 +86,22 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
 
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
-                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="text-amber border-b border-amber pb-1">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/science/" class="text-amber transition-colors duration-300 border-b border-amber pb-1">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
@@ -123,40 +124,37 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
+                    募資頁面
                 </a>
             </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
-            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="募資頁面" aria-label="募資頁面">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+            </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
-            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">研究依據</a>
+            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-amber transition-colors">研究依據</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">募資頁面</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員登入</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
@@ -172,24 +170,36 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="mt-2 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm transition-colors">取得早鳥通知</a>
         </nav>
     </div>
 
     <main>
-        <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 bg-midnight overflow-hidden">
-            <div class="max-w-6xl mx-auto">
-                <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">研究背景</span>
-                <h1 class="mt-5 max-w-5xl font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white"><span class="block">研究支持設計原則，</span><span class="block">不是產品<span class="whitespace-nowrap">臨床驗證</span>。</span></h1>
-                <p class="mt-7 max-w-3xl text-lg md:text-xl text-white/72 leading-relaxed">Owlnest Lume 的設計參考了夜晚光線暴露、光譜、時機與低刺激環境相關研究。這些研究幫助我們判斷睡前光線該避免什麼，但不代表 Lume 已完成產品臨床驗證。</p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="#studies" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-8 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">看研究重點</a>
-                    <a href="/zh-tw/products/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-8 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">了解 Lume</a>
+        <section id="section-1" class="relative pt-36 pb-24 md:pt-48 md:pb-32 px-6 bg-midnight overflow-hidden">
+            <div class="absolute inset-0 ambient-glow pointer-events-none"></div>
+            <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-20 items-end reveal-text visible">
+                <div>
+                    <span class="text-amber tracking-[0.14em] uppercase text-xs mb-6 block font-bold">研究依據</span>
+                    <h1 class="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.08] mb-6">
+                        助眠光線背後的研究依據
+                    </h1>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                        <a href="#section-findings" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-white transition-colors">看研究重點</a>
+                        <a href="/zh-tw/products/" class="inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-white hover:text-midnight transition-colors">了解 Owlnest Lume</a>
+                    </div>
                 </div>
-                <p class="mt-6 max-w-3xl text-sm text-white/48 leading-relaxed">Owlnest Lume 不是醫療產品。以下研究是一般光線與睡前環境的背景資料，不等於產品特定結果。</p>
+                <div class="space-y-6">
+                    <p class="font-sans text-lg md:text-xl font-light text-white/76 leading-relaxed max-w-xl">
+                        Owlnest Lume 從一個簡單想法開始：睡前使用的光，會影響夜晚的狀態。研究指出，夜晚光線的顏色、時機與亮度，可能影響身體在夜間感到清醒的程度。
+                    </p>
+                    <p class="rounded-[24px] border border-amber/25 bg-white/5 p-5 text-sm leading-relaxed text-white/64">
+                        這些研究談的是一般光線。它們不是 Owlnest Lume 的產品臨床測試。
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
+        <section id="section-blue-rich-problem" class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
             <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-12 items-start">
                 <div>
                     <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold">白話說明</span>
@@ -204,7 +214,7 @@
             </div>
         </section>
 
-        <section id="studies" class="py-20 md:py-28 px-6 bg-[#0f111a] text-white border-t border-white/5">
+        <section id="section-findings" class="py-20 md:py-28 px-6 bg-[#0f111a] text-white border-t border-white/5">
             <div class="max-w-7xl mx-auto">
                 <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold">研究重點</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-5xl leading-tight">四個研究重點，如何影響 Lume 的設計方向。</h2>
@@ -238,7 +248,7 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
+        <section id="section-design" class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
             <div class="max-w-6xl mx-auto mb-12">
                 <div class="border border-taupe/15 bg-[#fffaf0] p-6 md:p-8 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-center">
                     <div>
@@ -274,7 +284,7 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-midnight text-white border-t border-white/5">
+        <section id="section-visuals" class="py-20 md:py-28 px-6 bg-midnight text-white border-t border-white/5">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-16 items-start mb-12 md:mb-16">
                     <div>
@@ -322,7 +332,7 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
+        <section id="section-anchors" class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-16 items-start">
                     <div>
@@ -379,7 +389,7 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-[#0f111a] text-white border-t border-white/5">
+        <section id="section-references" class="py-20 md:py-28 px-6 bg-[#0f111a] text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-start">
                     <div>
@@ -417,7 +427,7 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-warm section-light text-center border-t border-taupe/10">
+        <section id="section-boundaries" class="py-20 md:py-28 px-6 bg-warm section-light text-center border-t border-taupe/10">
             <div class="max-w-3xl mx-auto">
                 <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold">宣稱邊界</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-5xl leading-tight">研究啟發設計，不是醫療宣稱。</h2>

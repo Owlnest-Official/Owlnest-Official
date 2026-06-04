@@ -84,21 +84,22 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
 
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
-                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
                     <i class="fas fa-user text-lg transition-colors duration-300"></i>
                 </a>
@@ -121,40 +122,37 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
+                    募資頁面
                 </a>
             </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
-            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="募資頁面" aria-label="募資頁面">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+            </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">募資頁面</a>
+            <a href="/account.html" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員登入</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
@@ -170,6 +168,7 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="mt-2 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm transition-colors">取得早鳥通知</a>
         </nav>
     </div>
 
@@ -217,57 +216,59 @@
 
                     <div class="space-y-5">
                         <section class="guide-card p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">使用方式</h2>
+                            <h2 class="font-serif text-3xl mb-5">如何使用 Owlnest Lume</h2>
                             <div class="space-y-4 text-midnight/68 leading-relaxed">
-                                <p>1. 將 Owlnest Lume 放在床邊、書桌邊或房間中不會直射眼睛的位置。</p>
-                                <p>2. 建議在睡前 1–2 小時打開，作為取代主燈、白光或過亮床頭燈的低刺激光線。</p>
-                                <p>3. 用底部按鍵開關，不需要 app、不需要螢幕，也不需要再多做一個睡前任務。</p>
-                                <p>4. 把它當作讓房間進入睡前狀態的環境提示，而不是立即入睡或固定結果的保證。</p>
+                                <p>1. 將 Owlnest Lume 放在床邊或房間中適合支持夜晚環境的位置，不要把它當成明亮工作燈使用。</p>
+                                <p>2. 建議在睡前最後 1–2 小時打開，特別是當你希望房間感覺更安靜、不要像白天一樣明亮時。</p>
+                                <p>3. 用它取代較亮的主燈、刺眼床頭燈或讓旅宿房間太活躍的照明。</p>
+                                <p>4. 把它當成可重複使用的睡前環境提示，不是立即入睡結果的承諾。</p>
                             </div>
                         </section>
 
                         <section class="guide-card p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">充電</h2>
-                            <div class="space-y-4 text-midnight/68 leading-relaxed">
-                                <p>使用 USB-C 線為 Owlnest Lume 充電。請使用相容、狀態良好的充電線與電源來源。</p>
-                                <p>充電時請讓產品保持乾燥，避免讓充電接口接觸水分或潮濕環境。</p>
-                                <p>如果充電線、接口或產品外觀有明顯損傷，請先停止使用並聯絡產品支援。</p>
+                            <h2 class="font-serif text-3xl mb-5">Owlnest Lume 是什麼，也不是什麼</h2>
+                            <div class="grid gap-8 md:grid-cols-2">
+                                <div>
+                                    <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">它是</div>
+                                    <ul class="space-y-3 text-midnight/68 leading-relaxed list-disc pl-5">
+                                        <li>一盞助眠光譜燈。</li>
+                                        <li>給臥室或睡前流程使用的夜間放鬆工具。</li>
+                                        <li>圍繞 1500K–1800K 琥珀光與低刺激夜間使用設計的產品。</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">它不是</div>
+                                    <ul class="space-y-3 text-midnight/68 leading-relaxed list-disc pl-5">
+                                        <li>不是只為看路或辨識方向的一般小夜燈。</li>
+                                        <li>不是醫療產品，也不提供診斷或醫療建議。</li>
+                                        <li>不是日出鬧鐘、白噪音機或 app 型睡眠工具。</li>
+                                    </ul>
+                                </div>
                             </div>
                         </section>
 
                         <section class="guide-card p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">擺放位置</h2>
+                            <h2 class="font-serif text-3xl mb-5">安全與保養</h2>
                             <div class="space-y-4 text-midnight/68 leading-relaxed">
-                                <p>適合放在床邊、臥室角落、旅宿房間或睡前會停留的空間。讓光線柔和地落在環境裡即可，不需要把它當成工作燈使用。</p>
-                                <p>避免放在容易摔落、被壓到、靠近水源或長時間高溫的位置。</p>
+                                <p>請使用相容的充電配件，並遵守一般電池產品安全注意事項。</p>
+                                <p>不要拆解燈具，也不要讓充電部件接觸水分。</p>
+                                <p>清潔時請使用柔軟乾布，避免強力溶劑或研磨清潔用品。</p>
+                                <p>請避免極端高溫、長時間直接接觸水分，以及可能壓壞或尖銳彎折產品的環境。</p>
                             </div>
                         </section>
 
                         <section class="guide-card p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">保養方式</h2>
+                            <h2 class="font-serif text-3xl mb-5">保固、退換貨與募資支援</h2>
                             <div class="space-y-4 text-midnight/68 leading-relaxed">
-                                <p>清潔時請先關閉電源，使用柔軟乾布輕拭表面。</p>
-                                <p>避免使用酒精、強力溶劑、研磨清潔用品或大量水分清潔產品。</p>
-                                <p>不要自行拆解、改裝或嘗試修理內部零件。</p>
+                                <p>募資支持的產品預計在出貨後提供標準 1 年製造瑕疵有限保固。</p>
+                                <p>由於產品正在準備募資，退款時程、支持方案調整與履約條款會依募資頁面與平台階段說明，而不是一般即時零售結帳規則。</p>
+                                <p>產品支援、保固或使用問題，請聯絡 <a href="mailto:owlnestpq2025@gmail.com" class="text-amber font-semibold hover:text-midnight transition-colors">owlnestpq2025@gmail.com</a>。</p>
                             </div>
-                        </section>
-
-                        <section class="guide-card p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">常見問題排查</h2>
-                            <ul class="space-y-4 text-midnight/68 leading-relaxed list-disc pl-5">
-                                <li>無法開啟：請先確認是否已充電，並重新按下底部按鍵。</li>
-                                <li>無法充電：請更換相容的 USB-C 線或電源來源再試一次。</li>
-                                <li>光線看起來偏深琥珀：這是 Lume 的睡前低刺激光線方向，不是一般白光或裝飾彩光模式。</li>
-                                <li>仍有問題：請透過聯絡頁或 email 與 Owlnest 聯絡。</li>
-                            </ul>
                         </section>
 
                         <section class="dark-card text-white p-7 md:p-9">
-                            <h2 class="font-serif text-3xl mb-5">產品支援與重要說明</h2>
-                            <div class="space-y-4 text-white/70 leading-relaxed">
-                                <p>Owlnest Lume 是一般睡前環境支持產品，不是醫療產品，不提供診斷、治療或醫療建議。</p>
-                                <p>如果你有產品使用、保固、手冊或訂單相關問題，請到 <a href="/zh-tw/contact/" class="text-amber hover:text-white">聯絡我們</a> 留下訊息。</p>
-                            </div>
+                            <h2 class="font-serif text-3xl mb-5">重要說明</h2>
+                            <p class="text-white/68 leading-relaxed">Owlnest Lume 依夜間友善光線原則與更安靜的睡前環境設計。它不是醫療產品，不提供診斷或醫療建議，應理解為睡前時段的環境支持產品。</p>
                         </section>
                     </div>
                 </div>

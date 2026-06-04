@@ -440,6 +440,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: rgba(255,255,255,0.72);
             box-shadow: 0 18px 44px rgba(24,34,52,0.06);
         }
+        .comparison-muted-card {
+            border-color: rgba(255, 250, 240, 0.22);
+            background: rgba(255, 250, 240, 0.92);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+        }
+        .comparison-muted-card .comparison-number {
+            border: 1px solid rgba(154, 85, 31, 0.20);
+            background: rgba(154, 85, 31, 0.12);
+            color: #9A551F;
+        }
+        .comparison-muted-card h3 {
+            color: #182033 !important;
+        }
         .dtc-card-dark {
             border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.12);
@@ -793,7 +806,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
+                    募資頁面
                 </a>
             </div>
         </div>
@@ -803,7 +816,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知">
+            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="募資頁面">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
             <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
@@ -826,7 +839,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
             <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">募資頁面</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
@@ -929,15 +942,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <!-- Lume 適合度檢查 Teaser -->
-        <section class="section-container bg-warm text-midnight section-light px-6 pb-14 md:pb-20 border-b border-taupe/20 !min-h-fit">
-            <div class="max-w-6xl mx-auto reveal-text">
-                <div class="rounded-[28px] border border-taupe/15 bg-[#fffaf0] p-6 md:p-8 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-center">
-                    <div>
+        <section class="section-container bg-midnight text-midnight px-6 py-14 md:py-20 border-b border-white/5 !min-h-fit">
+            <div class="max-w-4xl mx-auto reveal-text">
+                <div class="rounded-[32px] border border-amber/18 bg-[#fffaf0] px-6 py-9 text-center shadow-[0_24px_80px_rgba(0,0,0,0.22)] sm:px-8 md:px-12 md:py-12">
+                    <div class="mx-auto max-w-2xl">
                         <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-3">Lume 適合度檢查</span>
                         <h2 class="font-serif text-3xl md:text-4xl leading-tight" style="color:#182033;">Owlnest Lume 適合你的夜晚嗎？</h2>
-                        <p class="mt-4 max-w-2xl text-base md:text-lg leading-relaxed" style="color:#455169;">花 60 秒檢查你的睡前光環境，看看房間裡是不是還留著太多白天的刺激感。</p>
+                        <p class="mx-auto mt-4 max-w-xl text-base md:text-lg leading-relaxed" style="color:#455169;">花 60 秒檢查你的睡前光環境，看看房間裡是不是還留著太多白天的刺激感。</p>
                     </div>
-                    <a href="/zh-tw/sleep-ready-room-check/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">
+                    <a href="/zh-tw/sleep-ready-room-check/" class="premium-cta mt-7 inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">
                         看看是否適合你
                     </a>
                 </div>
@@ -967,18 +980,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <section id="section-mechanism" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text w-full">
                 <div class="max-w-6xl mb-10 md:mb-12">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">差異</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">不是小夜燈。<br>不是一般暖光燈。<br>是一盞助眠光譜燈。</h2>
+                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">為什麼不同</span>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">為睡眠準備，不只是看得見。</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-                    <div class="dtc-card p-7">
-                        <p class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">01</p>
+                    <div class="dtc-card comparison-muted-card p-7">
+                        <p class="comparison-number inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">01</p>
                         <h3 class="font-serif text-2xl text-midnight mb-3">小夜燈</h3>
                         <p class="text-midnight/65 font-light leading-relaxed">主要是為了讓你看得見。很多小夜燈不是太亮，就是太刺眼，也沒有針對睡前時段的光線刺激做設計。</p>
                     </div>
-                    <div class="dtc-card p-7">
-                        <p class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">02</p>
+                    <div class="dtc-card comparison-muted-card p-7">
+                        <p class="comparison-number inline-flex h-10 w-10 items-center justify-center rounded-full bg-midnight/5 text-amber font-serif text-2xl mb-5">02</p>
                         <h3 class="font-serif text-2xl text-midnight mb-3">一般暖光燈</h3>
                         <p class="text-midnight/65 font-light leading-relaxed">看起來溫暖，不代表適合睡前。很多暖光燈仍然是為一般照明設計，重點是看清楚，不是幫房間降低刺激感。</p>
                     </div>

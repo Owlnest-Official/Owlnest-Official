@@ -96,93 +96,18 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
-        <div class="w-full flex items-center justify-between gap-6">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+    <header class="fixed top-0 left-0 w-full z-50 px-5 sm:px-8 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-5">
+            <a href="/zh-tw/" class="site-brand flex items-center gap-3 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
                 <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
                 <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
             </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
-                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
-            </nav>
-            <div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
-                <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <div class="relative language-wrap">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i>
-                        繁體中文
-                        <i class="fas fa-chevron-down text-[9px]"></i>
-                    </button>
-                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
-                        <a href="/sleep-ready-room-check/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span>EN</span></a>
-                        <a href="/zh-tw/sleep-ready-room-check/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>簡體中文 <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>即將開放</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
-                    </div>
-                </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
-                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    取得早鳥通知
-                </a>
-            </div>
-            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
-                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-                </a>
-                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
+            <div class="flex items-center gap-4">
+                <a href="/sleep-ready-room-check/" class="inline-flex text-[11px] tracking-[0.14em] uppercase font-bold text-white/60 hover:text-amber transition-colors">English</a>
+                <a href="/zh-tw/campaign/" class="hidden sm:inline-flex items-center justify-center rounded-full bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-cream transition-colors">取得早鳥通知</a>
             </div>
         </div>
     </header>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
-            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
-                <i class="fas fa-user"></i> 會員登入
-            </a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
-            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
-            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
-            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
-            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
-            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Lume 適合度檢查</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
-            <div class="text-center">
-                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
-                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
-                    <a href="/sleep-ready-room-check/" class="text-white hover:text-amber">English — EN</a>
-                    <a href="/zh-tw/sleep-ready-room-check/" class="text-amber">繁體中文</a>
-                    <span class="text-white/45">簡體中文 — 即將開放</span>
-                    <span class="text-white/45">日本語 — 即將開放</span>
-                    <span class="text-white/45">한국어 — 即將開放</span>
-                    <span class="text-white/45">Français — 即將開放</span>
-                    <span class="text-white/45">Deutsch — 即將開放</span>
-                    <span class="text-white/45">Español — 即將開放</span>
-                    <span class="text-white/45">Italiano — 即將開放</span>
-                    <span class="text-white/45">Tiếng Việt — 即將開放</span>
-                </div>
-            </div>
-        </nav>
-    </div>
 
     <main>
         <section class="relative px-5 sm:px-8 pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
@@ -431,13 +356,7 @@
                 submitButton.disabled = false;
                 submitButton.textContent = '送出結果並加入早鳥通知';
             }
-            event.stopPropagation();
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            const isOpen = menu.classList.toggle('open');
-            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        }
+        });
 
 
 
