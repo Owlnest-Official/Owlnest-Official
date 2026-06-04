@@ -41,11 +41,15 @@
 
 /manual               /manual.html                           200
 /manual/              /manual.html                           200
+/zh-tw/manual              /zh-tw/manual/index.html                 200
+/zh-tw/manual/             /zh-tw/manual/index.html                 200
 
 /policy               /disclaimer.html                       200
 /policy/              /disclaimer.html                       200
 /disclaimer           /disclaimer.html                       200
 /disclaimer/          /disclaimer.html                       200
+/zh-tw/disclaimer          /zh-tw/disclaimer/index.html             200
+/zh-tw/disclaimer/         /zh-tw/disclaimer/index.html             200
 
 /what-is-owlnest-lume       /what-is-owlnest-lume/index.html       200
 /what-is-owlnest-lume/      /what-is-owlnest-lume/index.html       200
