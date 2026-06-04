@@ -27,6 +27,7 @@
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <link rel="icon" type="image/png" href="/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -52,39 +53,77 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between gap-5">
-            <a href="/zh-tw/" class="flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="w-9 h-9 object-contain">
+    <header class="fixed top-0 left-0 w-full z-50 px-5 sm:px-8 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-5">
+            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
                 <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
             </a>
-            <nav class="hidden lg:flex items-center gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/65">
-                <a href="/zh-tw/" class="hover:text-amber">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber">產品</a>
-                <a href="/zh-tw/campaign/" class="text-amber border-b border-amber pb-1">募資頁面</a>
-                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber">Lume 適合度檢查</a>
+            <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/62">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber transition-colors">Lume 適合度檢查</a>
             </nav>
-            <div class="hidden lg:flex items-center gap-5">
-                <a href="/campaign/" class="text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber">English</a>
-                <a href="#early-access" class="rounded-full bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-cream">取得早鳥通知</a>
+            <div class="hidden lg:flex items-center gap-5 border-l border-white/10 pl-6">
+                <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <div class="relative group">
+                    <button type="button" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        繁體中文
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div class="hidden group-hover:block group-focus-within:block absolute right-0 top-full mt-4 w-56 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                        <a href="/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span>EN</span></a>
+                        <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
+                    </div>
+                </div>
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    取得早鳥通知
+                </a>
             </div>
-            <button type="button" onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white text-xs tracking-[0.16em] uppercase font-bold" aria-label="開啟選單">
-                <span id="mobile-menu-icon">☰</span><span>MENU</span>
-            </button>
+            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
+                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+                </a>
+                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-6 text-2xl font-serif tracking-[0.08em]">
-            <a href="/zh-tw/">首頁</a>
-            <a href="/zh-tw/products/">產品</a>
-            <a href="/zh-tw/campaign/" class="text-amber">募資頁面</a>
-            <a href="/zh-tw/sleep-ready-room-check/">Lume 適合度檢查</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
+        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
+            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
+                <i class="fas fa-user"></i> 會員登入
+            </a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
+            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
+            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
+            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
+            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
+            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/campaign/" class="text-white hover:text-amber">English — EN</a>
+                    <a href="/zh-tw/campaign/" class="text-amber">繁體中文</a>
+                </div>
+            </div>
         </nav>
-        <div class="mt-10 flex flex-col items-center gap-3 text-sm text-white/58">
-            <span class="text-amber">繁體中文</span>
-            <a href="/campaign/" class="hover:text-amber">English</a>
-        </div>
     </div>
 
     <main>
@@ -93,7 +132,7 @@
             <div class="relative max-w-7xl mx-auto grid lg:grid-cols-[.92fr_1.08fr] gap-10 lg:gap-14 items-center">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">Owlnest Lume</span>
-                    <h1 class="mt-5 font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.02] text-white">把睡前的房間，從白天切回夜晚。</h1>
+                    <h1 class="mt-5 font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.02] text-white"><span class="block">把睡前的房間，</span><span class="block">從白天切回<span class="whitespace-nowrap">夜晚</span>。</span></h1>
                     <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Owlnest Lume 是為睡前 1–2 小時設計的助眠光譜燈。深琥珀、低藍光、無 app、無螢幕，讓房間更適合進入睡前狀態。</p>
                     <div id="early-access" class="mt-7 max-w-xl">
                         <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-hero" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -200,7 +239,13 @@
             const icon = document.getElementById('mobile-menu-icon');
             if (!menu || !icon) return;
             menu.classList.toggle('open');
-            icon.textContent = menu.classList.contains('open') ? '×' : '☰';
+            const isOpen = menu.classList.contains('open');
+            if (icon.classList.contains('fas')) {
+                icon.classList.toggle('fa-bars', !isOpen);
+                icon.classList.toggle('fa-times', isOpen);
+            } else {
+                icon.textContent = isOpen ? '×' : '☰';
+            }
         }
         document.querySelectorAll('.signup-form').forEach(form => {
             form.addEventListener('submit', async event => {
