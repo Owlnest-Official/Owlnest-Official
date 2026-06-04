@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>證據備註 | Owlnest</title>
+    <meta name="description" content="Owlnest Lume 證據備註：整理夜晚光線、藍光、光譜、研究背景與宣稱邊界。研究提供設計參考，不代表產品特定臨床驗證。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://owlnestofficial.com/zh-tw/evidence/">
+    <meta property="og:title" content="證據備註 | Owlnest">
+    <meta property="og:description" content="研究背景、來源連結與 Owlnest Lume 的宣稱邊界。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://owlnestofficial.com/zh-tw/evidence/">
+    <meta property="og:image" content="https://owlnestofficial.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="證據備註 | Owlnest">
+    <meta name="twitter:description" content="研究背景、來源連結與 Owlnest Lume 的宣稱邊界。">
+    <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Noto Sans TC"', '"Manrope"', 'sans-serif'], serif: ['"Noto Serif TC"', 'serif'] },
+                    colors: { midnight: '#111927', amber: '#C9852A', warm: '#F2EBDD', cream: '#FAEFCF', slateblue: '#51627A', taupe: '#8B7A69' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background:#111927; color:#fff; overflow-x:hidden; }
+        .source-card { border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.045); }
+        #mobile-menu { transform:translateY(-100%); transition:transform .35s ease; visibility:hidden; pointer-events:none; overflow-y:auto; }
+        #mobile-menu.open { transform:translateY(0); visibility:visible; pointer-events:auto; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-amber selection:text-midnight">
+    <header class="fixed top-0 left-0 w-full z-50 px-5 sm:px-8 py-5 bg-midnight/88 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-5">
+            <a href="/zh-tw/" class="site-brand flex items-center gap-3 no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-8 w-auto object-contain">
+                <span class="font-serif text-lg tracking-[0.2em] font-bold text-white">OWLNEST</span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/62">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors">研究依據</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors">關於我們</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber transition-colors">Lume 適合度檢查</a>
+            </nav>
+            <div class="hidden lg:flex items-center gap-5 border-l border-white/10 pl-6">
+                <a href="/account.html" class="relative group text-white/60 hover:text-amber transition-colors" title="會員登入" aria-label="會員登入">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <div class="relative group">
+                    <button type="button" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        繁體中文
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div class="hidden group-hover:block group-focus-within:block absolute right-0 top-full mt-4 w-56 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                        <a href="/evidence/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span>EN</span></a>
+                        <a href="/zh-tw/evidence/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
+                    </div>
+                </div>
+                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-amber hover:text-white transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    取得早鳥通知
+                </a>
+            </div>
+            <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+                <a href="/account.html" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員登入">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="取得早鳥通知" aria-label="取得早鳥通知">
+                    <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+                </a>
+                <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
+                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
+        <nav class="flex flex-col gap-7 text-sm tracking-[0.18em] uppercase font-semibold text-center">
+            <a href="/account.html" class="hover:text-amber transition-colors flex items-center justify-center gap-3 text-amber">
+                <i class="fas fa-user"></i> 會員登入
+            </a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
+            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
+            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">研究依據</a>
+            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於我們</a>
+            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
+            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume 適合度檢查</a>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">取得早鳥通知</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-1"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/evidence/" class="text-white hover:text-amber">English — EN</a>
+                    <a href="/zh-tw/evidence/" class="text-amber">繁體中文</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="pt-36 pb-20 md:pt-48 md:pb-28 px-6 bg-midnight border-b border-white/5">
+            <div class="max-w-6xl mx-auto">
+                <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">證據備註</span>
+                <h1 class="mt-5 max-w-5xl font-serif text-5xl md:text-7xl leading-[1.02] text-white">研究背景、來源與宣稱邊界。</h1>
+                <p class="mt-7 max-w-3xl text-lg md:text-xl text-white/70 leading-relaxed">這份公開備註整理 Owlnest Lume 背後的光線設計參考：夜晚光線暴露、藍光比例、低刺激睡前環境，以及不能過度延伸的宣稱邊界。</p>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:py-24 bg-[#111927]">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-5">
+                <article class="source-card p-6 md:p-8">
+                    <h2 class="font-serif text-3xl text-white">證據摘要</h2>
+                    <p class="mt-5 text-white/72 leading-relaxed">Owlnest Lume 是研究參考下的設計。相關研究支持的是夜晚光線品質、光譜、時機與低刺激環境等設計原則。</p>
+                    <p class="mt-4 text-white/58 leading-relaxed">重要邊界：這些研究不代表 Owlnest Lume 已完成產品特定臨床驗證，也不代表產品可以診斷、治療或保證任何睡眠結果。</p>
+                </article>
+                <article class="source-card p-6 md:p-8">
+                    <h2 class="font-serif text-3xl text-white">資料來源</h2>
+                    <p class="mt-5 text-white/72 leading-relaxed">以下來源延續自 Owlnest 的公開 Science / 研究依據頁面，用來說明設計背景，而不是建立產品療效宣稱。</p>
+                    <ul class="mt-5 space-y-3 text-white/72 leading-relaxed break-words">
+                        <li><a href="/zh-tw/science/" class="text-white hover:text-amber underline underline-offset-4">研究依據頁面</a></li>
+                        <li><a href="https://owlnestofficial.com/ai-brief.html" class="text-white hover:text-amber underline underline-offset-4">AI Brief</a></li>
+                        <li><a href="https://owlnestofficial.com/ai/product.json" class="text-white hover:text-amber underline underline-offset-4">Product JSON</a></li>
+                        <li><a href="https://owlnestofficial.com/ai/evidence.json" class="text-white hover:text-amber underline underline-offset-4">Evidence JSON</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:py-24 bg-warm text-midnight">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-5">
+                <article class="bg-white/80 border border-midnight/10 p-6">
+                    <h2 class="font-serif text-2xl">第一層：公開研究</h2>
+                    <p class="mt-4 text-midnight/68 leading-relaxed">已發表研究、標準文件、機構文章與技術資料，提供夜晚光線設計的背景。</p>
+                </article>
+                <article class="bg-white/80 border border-midnight/10 p-6">
+                    <h2 class="font-serif text-2xl">第二層：設計轉譯</h2>
+                    <p class="mt-4 text-midnight/68 leading-relaxed">Owlnest 將研究背景轉成深琥珀、低刺激、睡前使用、無 app、無螢幕的簡單硬體方向。</p>
+                </article>
+                <article class="bg-white/80 border border-midnight/10 p-6">
+                    <h2 class="font-serif text-2xl">第三層：產品驗證</h2>
+                    <p class="mt-4 text-midnight/68 leading-relaxed">產品特定光譜、照度或第三方測試資料若取得，應另外清楚公開。目前不把研究背景說成產品特定臨床驗證。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:py-24 bg-midnight">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-serif text-4xl text-white">研究來源</h2>
+                <div class="mt-8 grid lg:grid-cols-2 gap-5">
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Red Light and Sleep Quality in Athletes</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/" class="text-white hover:text-amber underline underline-offset-4">PMC3499892</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持紅橙光、低刺激夜晚光線方向的設計背景；不代表 Owlnest Lume 具備相同研究結果。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">CIE S 026: Measuring Biologically Relevant Light</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" class="text-white hover:text-amber underline underline-offset-4">CIE publication page</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持「光不只看亮度，也要看光譜與生理相關指標」的設計語境。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">How Light Spectrum Regulates Human Melatonin</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://pubmed.ncbi.nlm.nih.gov/11487664/" class="text-white hover:text-amber underline underline-offset-4">PubMed</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持夜晚光線光譜重要性的背景；不等於產品能改變或保證生理結果。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">How Evening Room Light Suppresses Melatonin</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" class="text-white hover:text-amber underline underline-offset-4">PubMed</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持減少夜晚刺激光干擾的設計方向；不代表產品特定臨床驗證。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Biologically Relevant Lighting: An Industry Perspective</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8215265/" class="text-white hover:text-amber underline underline-offset-4">PMC8215265</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持以光環境設計討論夜晚燈具，而不是只看一般照明亮度。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Blue-Hazard-Free Candlelight-Style OLED</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.sciencedirect.com/science/article/abs/pii/S1566119921002317" class="text-white hover:text-amber underline underline-offset-4">ScienceDirect</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持燭光風格、低藍光方向作為夜晚光線設計參考；不代表 Lume 擁有相同材料或光譜表現。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">High-Efficiency Candlelight OLED with Very Low Color Temperature</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8707034/" class="text-white hover:text-amber underline underline-offset-4">PMC8707034</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持超低色溫、燭光感光線可以被刻意設計的技術背景。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Candle Light-Style Organic Light-Emitting Diodes</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.201203209" class="text-white hover:text-amber underline underline-offset-4">Wiley</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持燭光風格是明確光線方向，不是一般暖光燈的模糊說法。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Smart Sleep Technology by ITRI</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://itritech.itri.org.tw/blog/smart-sleep/" class="text-white hover:text-amber underline underline-offset-4">ITRI webpage</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持睡前環境與時間安排可作為產品設計背景。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Ultra-Low Color Temperature OLED Technology</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452025756363357&Pname=350_p059_067_%E5%91%A8%E5%8D%93%E7%85%87_%E8%B6%85%E4%BD%8E%E8%89%B2%E6%BA%ABOLED%E5%85%89%E6%BA%90%E6%A8%A1%E7%B5%84%E4%B9%8B%E8%A3%BD%E9%80%A0%E6%8A%80%E8%A1%93.pdf&Siteid=1&fd=PublicationsCont_Files" class="text-white hover:text-amber underline underline-offset-4">Downloadable PDF</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：提供低色溫光源技術背景；不是 Lume 的產品測試報告。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Human-Centric Lighting for Healthcare Environments</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452026061075714&Pname=P12-15-%E5%89%B5%E6%96%B0%E4%B9%8B%E9%91%B0-%E4%BA%BA%E5%9B%A0%E7%85%A7%E6%98%8E.pdf&Siteid=1&fd=PublicationsCont_Files" class="text-white hover:text-amber underline underline-offset-4">Downloadable PDF</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：支持以人為中心的光環境思考；不建立醫療效果宣稱。</p>
+                    </article>
+                    <article class="source-card p-6">
+                        <h3 class="font-serif text-2xl text-white">Smart Sleep and Care Solutions</h3>
+                        <p class="mt-4 text-white/70">來源：<a href="https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452026061075714&Pname=P30-31-%E5%B0%81%E9%9D%A2%E6%95%85%E4%BA%8B-%E7%9D%A1%E5%BE%97%E5%A5%BD.pdf&Siteid=1&fd=PublicationsCont_Files" class="text-white hover:text-amber underline underline-offset-4">Downloadable PDF</a></p>
+                        <p class="mt-4 text-white/60">與 Lume 的關係：提供睡眠與照護情境中的環境設計背景；不代表 Lume 有醫療或臨床結果。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:py-24 bg-warm text-midnight">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-5">
+                <article class="bg-white/80 border border-midnight/10 p-6 md:p-8">
+                    <h2 class="font-serif text-3xl">建議使用的說法</h2>
+                    <ul class="mt-5 space-y-3 text-midnight/70 leading-relaxed list-disc pl-5">
+                        <li>研究參考下的設計</li>
+                        <li>支持更安靜、低刺激的睡前環境</li>
+                        <li>為睡前 1–2 小時設計</li>
+                        <li>個人體驗可能不同</li>
+                    </ul>
+                </article>
+                <article class="bg-white/80 border border-midnight/10 p-6 md:p-8">
+                    <h2 class="font-serif text-3xl">避免使用的說法</h2>
+                    <ul class="mt-5 space-y-3 text-midnight/70 leading-relaxed list-disc pl-5">
+                        <li>把一般研究說成產品臨床結果</li>
+                        <li>把環境支持說成疾病處理</li>
+                        <li>把個人體驗說成固定結果</li>
+                        <li>產品已完成醫療驗證</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-midnight border-t border-white/5 py-14 px-6 text-center">
+        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
+        <p class="mt-4 text-sm text-white/72">研究背景與宣稱邊界。</p>
+        <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu || !icon) return;
+            menu.classList.toggle('open');
+            const isOpen = menu.classList.contains('open');
+            if (icon.classList.contains('fas')) {
+                icon.classList.toggle('fa-bars', !isOpen);
+                icon.classList.toggle('fa-times', isOpen);
+            } else {
+                icon.textContent = isOpen ? '×' : '☰';
+            }
+        }
+    </script>
+</body>
+</html>
