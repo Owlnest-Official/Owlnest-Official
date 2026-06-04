@@ -1227,20 +1227,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }
             }
 
-            // Advanced Header Color Switching (Restored Logic)
+            // Keep the header visually consistent across all sections.
             if (header) {
                 header.classList.remove('nav-dark', 'nav-split');
-                if (window.innerWidth >= 1024 && currentSec && currentSec.id === 'section-product' && !isLampOn) {
-                    header.classList.add('nav-split');
-                    if (navLogo) navLogo.src = 'logo.png';
-                } else {
-                    if (isBgLight) {
-                        header.classList.add('nav-dark');
-                        if (navLogo) navLogo.src = 'logo.png';
-                    } else {
-                        if (navLogo) navLogo.src = 'logo2.png';
-                    }
-                }
+                if (navLogo) navLogo.src = 'logo2.png';
             }
         }
 

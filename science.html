@@ -1063,15 +1063,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }
             });
 
-            // Advanced Header Color Switching
+            // Keep the header visually consistent across all sections.
             if (header) {
-                if (isBgLight) {
-                    header.classList.add('nav-dark');
-                    if (navLogo) navLogo.src = 'logo.png';
-                } else {
-                    header.classList.remove('nav-dark');
-                    if (navLogo) navLogo.src = 'logo2.png';
-                }
+                header.classList.remove('nav-dark');
+                if (navLogo) navLogo.src = 'logo2.png';
             }
         }
 
