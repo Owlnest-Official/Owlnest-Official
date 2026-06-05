@@ -42,8 +42,20 @@ Avoid:
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
-- Science: https://owlnestofficial.com/science
-- Campaign relaunch page: https://owlnestofficial.com/campaign/
+- Science: https://owlnestofficial.com/science/
+- Campaign page: https://owlnestofficial.com/campaign/
+
+## Traditional Chinese Pages
+
+- Traditional Chinese homepage: https://owlnestofficial.com/zh-tw/
+- Traditional Chinese products: https://owlnestofficial.com/zh-tw/products/
+- Traditional Chinese science: https://owlnestofficial.com/zh-tw/science/
+- Traditional Chinese definition: https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/
+- Traditional Chinese fit check: https://owlnestofficial.com/zh-tw/sleep-ready-room-check/
+- Traditional Chinese evidence notes: https://owlnestofficial.com/zh-tw/evidence/
+- Traditional Chinese campaign page: https://owlnestofficial.com/zh-tw/campaign/
+
+Traditional Chinese content uses `zh-Hant` and is written for Traditional Chinese readers, with a natural Taiwanese brand voice. English remains the x-default language.
 
 ## Product Facts
 
