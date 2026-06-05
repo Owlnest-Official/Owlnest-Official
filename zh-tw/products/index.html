@@ -185,13 +185,15 @@
 
     <main>
         <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 bg-midnight overflow-hidden">
-            <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-center">
+            <div class="product-hero-grid relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-12 lg:gap-20 items-center reveal-text visible">
                 <div>
-                    <span class="text-amber tracking-[0.14em] uppercase text-xs mb-5 block font-bold">Owlnest Lume</span>
-                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.04] text-white mb-7"><span class="block">助眠光譜燈。</span></h1>
-                    <p class="text-xl md:text-2xl text-amber leading-relaxed">為睡前那段時間設計的燈。</p>
-                    <p class="mt-5 text-white/68 leading-relaxed">Owlnest Lume 讓房間在晚間放鬆時，有一種深琥珀、低藍光的光感。沒有 app。沒有螢幕。就是一盞簡單的燈。</p>
-                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <span class="text-amber tracking-[0.16em] uppercase text-xs mb-5 block font-bold">Owlnest Lume</span>
+                    <h1 class="product-hero-title section-heading text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.04] mb-7">助眠光譜燈。</h1>
+                    <p class="product-hero-subhead max-w-3xl font-serif text-2xl md:text-3xl text-amber mb-6 leading-[1.18]">為睡前那段時間設計的燈。</p>
+                    <p class="product-hero-copy max-w-[24rem] md:max-w-2xl font-sans text-base md:text-lg font-light text-white/68 leading-relaxed mb-8">
+                        Owlnest Lume 讓房間在晚間放鬆時，有一種深琥珀、低藍光的光感。沒有 app。沒有螢幕。就是一盞簡單的燈。
+                    </p>
+                    <div class="product-hero-actions max-w-[21rem] md:max-w-none flex flex-col sm:flex-row gap-4">
                         <a href="/zh-tw/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">取得早鳥通知</a>
                         <a href="/zh-tw/sleep-ready-room-check/" class="inline-flex items-center justify-center rounded-full border border-white/15 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:border-amber hover:text-amber">看看是否適合你</a>
                     </div>
@@ -200,8 +202,8 @@
                         <a href="/zh-tw/manual/" class="hover:text-amber underline underline-offset-4 transition-colors">看使用手冊</a>
                     </div>
                 </div>
-                <figure class="bg-[#111927] border border-white/10 p-4 md:p-7 shadow-2xl shadow-black/25">
-                    <div class="bg-midnight/70 border border-white/10 p-4 md:p-8 flex items-center justify-center min-h-[360px] md:min-h-[520px]">
+                <figure class="product-hero-figure max-w-[24rem] md:max-w-none bg-[#111927] border border-white/10 p-4 md:p-7 shadow-2xl shadow-black/25">
+                    <div class="product-hero-image-wrap bg-midnight/70 border border-white/10 p-4 md:p-8 flex items-center justify-center min-h-[390px] md:min-h-[520px]">
                         <img src="/lume-real-photo-on.jpg" alt="Owlnest Lume 發出深琥珀低藍光" class="max-h-[420px] md:max-h-[500px] w-auto max-w-full object-contain rounded-sm">
                     </div>
                     <figcaption class="mt-5 text-[10px] tracking-[0.22em] uppercase text-white/45">實體樣品，深琥珀光線</figcaption>
@@ -210,26 +212,30 @@
         </section>
 
         <section class="py-20 md:py-28 px-6 bg-warm section-light border-t border-taupe/10">
-            <div class="max-w-7xl mx-auto">
-                <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">What It Is</span>
-                <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-10">為睡前那段時間設計。</h2>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <article class="card p-7"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">產品類型</p><h3 class="font-serif text-2xl mb-4">助眠光譜燈</h3><p class="text-midnight/68 leading-relaxed">晚間放鬆時使用的實體燈具，在房間完全暗下來之前使用。</p></article>
-                    <article class="card p-7"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">光線</p><h3 class="font-serif text-2xl mb-4">深琥珀。低藍光。</h3><p class="text-midnight/68 leading-relaxed">比一般室內照明更安靜的光感，為一天最後一段時間設計。</p></article>
-                    <article class="card p-7"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">使用方式</p><h3 class="font-serif text-2xl mb-4">無 app。無螢幕。</h3><p class="text-midnight/68 leading-relaxed">一個按鍵、USB-C 充電，放進你的睡前習慣裡就好。</p></article>
+            <div class="max-w-7xl mx-auto reveal-text">
+                <div class="max-w-4xl">
+                    <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">What It Is</span>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-[1.08] mb-6">為睡前那段時間設計。</h2>
+                </div>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+                    <article class="dtc-product-card p-7 lg:p-8"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">產品類型</p><h3 class="font-serif text-2xl lg:text-[1.72rem] leading-tight mb-5">助眠光譜燈</h3><p class="text-midnight/65 leading-relaxed">晚間放鬆時使用的實體燈具，在房間完全暗下來之前使用。</p></article>
+                    <article class="dtc-product-card p-7 lg:p-8"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">光線</p><h3 class="font-serif text-2xl lg:text-[1.72rem] leading-tight mb-5">深琥珀。低藍光。</h3><p class="text-midnight/65 leading-relaxed">比一般室內照明更安靜的光感，為一天最後一段時間設計。</p></article>
+                    <article class="dtc-product-card p-7 lg:p-8 md:col-span-2 xl:col-span-1"><p class="text-[10px] tracking-[0.14em] uppercase text-amber font-bold mb-4">使用方式</p><h3 class="font-serif text-2xl lg:text-[1.72rem] leading-tight mb-5">無 app。無螢幕。</h3><p class="text-midnight/65 leading-relaxed">一個按鍵、USB-C 充電，放進你的睡前習慣裡就好。</p></article>
                 </div>
             </div>
         </section>
 
         <section class="py-20 md:py-28 px-6 bg-slateblue text-white border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Why It Is Different</span>
-                <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-6">為睡眠準備設計，不只是照明。</h2>
-                <p class="max-w-3xl text-white/68 leading-relaxed">普通小夜燈多半是為了看得見。一般暖光燈多半是為了氣氛。Lume 是為睡前那段還需要光、但不想讓房間繼續像白天的時間設計。</p>
-                <div class="mt-10 grid md:grid-cols-3 gap-6">
-                    <article class="border border-white/10 bg-midnight/25 p-7 lg:p-8"><h3 class="font-serif text-2xl mb-4">普通小夜燈</h3><p class="text-white/65 leading-relaxed">方便移動和辨識方向，但通常不是以睡前光環境為核心。</p></article>
-                    <article class="border border-white/10 bg-midnight/25 p-7 lg:p-8"><h3 class="font-serif text-2xl mb-4">一般暖光燈</h3><p class="text-white/65 leading-relaxed">看起來溫暖，但仍可能是一般室內照明邏輯。</p></article>
-                    <article class="border border-amber/35 bg-midnight/45 p-7 lg:p-8 md:col-span-2 xl:col-span-1"><h3 class="font-serif text-2xl text-amber mb-4">Owlnest Lume</h3><p class="text-white/75 leading-relaxed">為睡前 1–2 小時設計的深琥珀低藍光燈。</p></article>
+            <div class="max-w-7xl mx-auto reveal-text">
+                <div class="max-w-4xl">
+                    <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Why It Is Different</span>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl leading-[1.08] mb-6">為睡眠準備設計，不只是看得見。</h2>
+                    <p class="text-white/68 font-light leading-relaxed">多數小燈是為了讓你看得見。很多暖光燈是為了房間氣氛。Lume 是為晚間那段時間設計，讓房間不要一直維持在太清醒的狀態。</p>
+                </div>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+                    <article class="border border-white/10 bg-midnight/25 p-7 lg:p-8"><h3 class="font-serif text-2xl leading-tight mb-4">普通小夜燈</h3><p class="text-sm text-white/65 leading-relaxed">適合基本可見度，但通常不是以睡前房間環境為核心。</p></article>
+                    <article class="border border-white/10 bg-midnight/25 p-7 lg:p-8"><h3 class="font-serif text-2xl leading-tight mb-4">一般暖光燈</h3><p class="text-sm text-white/65 leading-relaxed">看起來溫暖，但常常仍是一般房間照明優先。</p></article>
+                    <article class="border border-amber/35 bg-midnight/45 p-7 lg:p-8 md:col-span-2 xl:col-span-1"><h3 class="font-serif text-2xl text-amber leading-tight mb-4">Owlnest Lume</h3><p class="text-sm text-white/75 leading-relaxed">為睡前時段設計的深琥珀、低藍光燈。</p></article>
                 </div>
             </div>
         </section>
