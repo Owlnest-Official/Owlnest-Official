@@ -1,12 +1,12 @@
 import { signOut } from "./authGuard.js";
 
 const NAV = [
-  { key: "dashboard", href: "./index.html", icon: "fa-solid fa-chart-pie", label: "Dashboard" },
-  { key: "products",  href: "./products.html", icon: "fa-solid fa-box", label: "My Products" },
-  { key: "orders",    href: "./orders.html", icon: "fa-solid fa-receipt", label: "Orders" },
-  { key: "support",   href: "./support.html", icon: "fa-solid fa-headset", label: "Warranty & Support" },
-  { key: "profile",   href: "./profile.html", icon: "fa-solid fa-user", label: "Profile & Security" },
-  { key: "settings",  href: "./settings.html", icon: "fa-solid fa-gear", label: "Settings" },
+  { key: "dashboard", href: "/account/", icon: "fa-solid fa-chart-pie", label: "Dashboard" },
+  { key: "products",  href: "/account/products.html", icon: "fa-solid fa-box", label: "My Products" },
+  { key: "orders",    href: "/account/orders.html", icon: "fa-solid fa-receipt", label: "Orders" },
+  { key: "support",   href: "/account/support.html", icon: "fa-solid fa-headset", label: "Warranty & Support" },
+  { key: "profile",   href: "/account/profile.html", icon: "fa-solid fa-user", label: "Profile & Security" },
+  { key: "settings",  href: "/account/settings.html", icon: "fa-solid fa-gear", label: "Settings" },
 ];
 
 let isInitialized = false;
@@ -18,7 +18,7 @@ export function renderNav(activeKey = "dashboard") {
   // 1. Render Structure (No inline styles)
   mount.innerHTML = `
     <div class="nav-brand">
-      <img src="../logo.png" alt="Owlnest" />
+      <img src="/logo.png" alt="Owlnest" />
       <span>Owlnest</span>
     </div>
 
@@ -32,7 +32,7 @@ export function renderNav(activeKey = "dashboard") {
     </div>
 
     <div class="nav-bottom">
-      <a class="nav-item" href="../index.html">
+      <a class="nav-item" href="/">
         <i class="fa-solid fa-arrow-left nav-ico"></i>
         <span>Back to Home</span>
       </a>
