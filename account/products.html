@@ -243,13 +243,32 @@
       `;
     }
 
-    function openModal(){
+    function updateTokenHelper(){
+      setActivateBtnState();
+
+      const t = normalizedToken(keyEl.value);
+      if (!t) {
+        msgEl.textContent = "Paste your 12-character Activation Token to continue.";
+        msgEl.className = "modal-msg info";
+        return;
+      }
+      if (t.length !== 12) {
+        msgEl.textContent = `Token length: ${t.length}/12 (please paste the full 12 characters)`;
+        msgEl.className = "modal-msg info";
+      } else {
+        msgEl.textContent = "Looks good. Click Confirm & Activate.";
+        msgEl.className = "modal-msg info";
+      }
+    }
+
+    function openModal(prefillToken = ""){
       msgEl.textContent = "Paste your 12-character Activation Token to continue.";
       msgEl.className = "modal-msg info";
-      keyEl.value = "";
+      keyEl.value = normalizedToken(prefillToken);
       doBtn.disabled = true;
       modal.classList.add("show");
       modal.setAttribute("aria-hidden", "false");
+      updateTokenHelper();
       setTimeout(() => keyEl.focus(), 50);
     }
 
@@ -284,21 +303,7 @@
       const before = keyEl.value;
       const after = before.toUpperCase();
       if (before !== after) keyEl.value = after;
-      setActivateBtnState();
-
-      const t = normalizedToken(keyEl.value);
-      if (!t) {
-        msgEl.textContent = "Paste your 12-character Activation Token to continue.";
-        msgEl.className = "modal-msg info";
-        return;
-      }
-      if (t.length !== 12) {
-        msgEl.textContent = `Token length: ${t.length}/12 (please paste the full 12 characters)`;
-        msgEl.className = "modal-msg info";
-      } else {
-        msgEl.textContent = "Looks good. Click Confirm & Activate.";
-        msgEl.className = "modal-msg info";
-      }
+      updateTokenHelper();
     });
 
     async function activateToken(){
@@ -367,6 +372,12 @@
     keyEl.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && !doBtn.disabled) activateToken();
     });
+
+    (function openActivationFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const urlToken = params.get("token") || params.get("key");
+      if (urlToken) openModal(urlToken);
+    })();
 
     async function loadProducts(){
       const user = await requireUser();

@@ -148,8 +148,9 @@
         } else {
           msgEl.textContent = message || "This token is valid and has not been activated yet. Register it now to claim ownership.";
           const t = normalizeToken(token || inputEl.value);
-          // ✅ 兼容：同時帶 token 與 key（以免你的 activate.html 還在讀 key）
-          actLink.href = `activate.html?token=${encodeURIComponent(t)}&key=${encodeURIComponent(t)}`;
+          // Keep token + key for compatibility, but send users to the real account activation UI.
+          const activationPath = `/account/products.html?token=${encodeURIComponent(t)}&key=${encodeURIComponent(t)}`;
+          actLink.href = `/member-login.html?next=${encodeURIComponent(activationPath)}`;
           actLink.classList.remove("hidden");
         }
       } else {
