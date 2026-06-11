@@ -163,9 +163,16 @@
                             <p class="mt-4 text-sm text-white/50 leading-relaxed">Please avoid uploading photos that include faces, children, private documents, or sensitive personal information.</p>
 
                             <div class="mt-6 grid gap-4">
-                                <label class="block">
+                                <label for="sleep-environment-photo" class="block rounded-2xl border border-white/12 bg-midnight/45 p-4 cursor-pointer hover:border-amber/70 transition-colors">
                                     <span class="sr-only">Upload room photo for optional AI room-light check</span>
-                                    <input id="sleep-environment-photo" name="sleep_environment_photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" class="block w-full text-sm text-white/70 file:mr-4 file:rounded-xl file:border-0 file:bg-amber file:px-4 file:py-3 file:text-xs file:font-bold file:uppercase file:tracking-[0.12em] file:text-midnight hover:file:bg-cream">
+                                    <span class="flex flex-col sm:flex-row sm:items-center gap-3">
+                                        <span class="inline-flex min-h-12 items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">Choose room photo</span>
+                                        <span class="text-sm text-white/62">
+                                            <span id="selected-photo-name">No photo selected</span>
+                                            <span class="mt-1 block text-xs text-white/42">JPG, PNG, or WebP up to 8 MB</span>
+                                        </span>
+                                    </span>
+                                    <input id="sleep-environment-photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" class="sr-only">
                                 </label>
 
                                 <div id="photo-preview-wrap" class="hidden rounded-2xl border border-white/10 bg-black/20 p-3">
@@ -548,6 +555,7 @@
             const previewWrap = document.getElementById('photo-preview-wrap');
             const preview = document.getElementById('photo-preview');
             const consent = document.getElementById('photo-analysis-consent');
+            const selectedPhotoName = document.getElementById('selected-photo-name');
             if (!input || !analyzeButton || !skipButton || !continueButton || !consent) return;
 
             function refreshAnalyzeState() {
@@ -561,6 +569,7 @@
                     preview.removeAttribute('src');
                 }
                 if (previewWrap) previewWrap.classList.add('hidden');
+                if (selectedPhotoName) selectedPhotoName.textContent = 'No photo selected';
                 setPhotoMessage('');
                 refreshAnalyzeState();
             }
@@ -587,6 +596,7 @@
                     preview.src = URL.createObjectURL(file);
                     previewWrap.classList.remove('hidden');
                 }
+                if (selectedPhotoName) selectedPhotoName.textContent = file.name;
                 refreshAnalyzeState();
             });
 
@@ -694,9 +704,9 @@
             data.set('email', emailValue);
             data.set('timestamp', submittedAt.toISOString());
             data.set('timestamp_local', localTimestamp(submittedAt));
-                data.set('page_source', window.location.href);
-                data.set('language', document.documentElement.lang || 'en');
-                data.set('consent', 'yes');
+            data.set('page_source', window.location.href);
+            data.set('language', document.documentElement.lang || 'en');
+            data.set('consent', 'yes');
 
             try {
                 const response = await fetch('/', {
@@ -705,17 +715,7 @@
                     body: data.toString()
                 });
                 if (!response.ok) throw new Error('Submission failed');
-                const result = getResult(Number(document.getElementById('quiz-score').value));
-                if (aiAnalysisState) {
-                    fullResultTitle.textContent = aiAnalysisState.combined_result_title || aiAnalysisState.archetype_name || result.title;
-                    fullResultCopy.textContent = [aiAnalysisState.summary, aiAnalysisState.product_guidance].filter(Boolean).join(' ');
-                    renderAiStatus(fullResultStatus, aiAnalysisState);
-                } else {
-                    fullResultTitle.textContent = result.title;
-                    fullResultCopy.textContent = result.copy;
-                    renderResultStatus(fullResultStatus, result);
-                }
-                fullResultPanel.classList.add('is-visible');
+                fullResultPanel.classList.remove('is-visible');
                 document.getElementById('submit-success-panel').classList.add('is-visible');
                 form.style.display = 'none';
                 formMessage.textContent = '';
