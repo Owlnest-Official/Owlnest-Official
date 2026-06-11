@@ -12,64 +12,6 @@ const ARCHETYPES = [
   { id: "overlit_night_room", min: 89, max: 100, name: "Overlit Night Room" },
 ];
 
-const RESPONSE_SCHEMA = {
-  type: "object",
-  additionalProperties: false,
-  required: [
-    "quiz_score_40",
-    "photo_score_60",
-    "total_score_100",
-    "archetype_id",
-    "archetype_name",
-    "combined_result_title",
-    "light_risk_level",
-    "color_temperature_estimate",
-    "color_temperature_match",
-    "detected_lume",
-    "overpush_guardrail_applied",
-    "observed_light_issues",
-    "summary",
-    "product_guidance",
-    "confidence",
-  ],
-  properties: {
-    quiz_score_40: { type: "integer", minimum: 0, maximum: 40 },
-    photo_score_60: { type: "integer", minimum: 0, maximum: 60 },
-    total_score_100: { type: "integer", minimum: 0, maximum: 100 },
-    archetype_id: { type: "string", enum: ARCHETYPES.map((item) => item.id) },
-    archetype_name: { type: "string" },
-    combined_result_title: { type: "string" },
-    light_risk_level: { type: "string", enum: ["low", "moderate", "high"] },
-    color_temperature_estimate: {
-      type: "string",
-      enum: ["very_warm_amber", "warm_white", "neutral_white", "cool_white", "mixed", "too_dark_unknown"],
-    },
-    color_temperature_match: { type: "string", enum: ["lume_like", "somewhat_warm", "not_lume_like", "unknown"] },
-    detected_lume: { type: "boolean" },
-    overpush_guardrail_applied: { type: "boolean" },
-    observed_light_issues: { type: "array", items: { type: "string" }, maxItems: 6 },
-    summary: { type: "string" },
-    product_guidance: { type: "string" },
-    confidence: { type: "string", enum: ["low", "medium", "high"] },
-  },
-};
-
-const SYSTEM_PROMPT = `
-You are Owlnest's bedtime room-light analysis engine.
-Your score represents Owlnest Lume product fit and bedtime-light improvement opportunity, not medical sleep quality.
-Write user-facing copy as if analyzing the room or bedtime light environment, not the photo.
-Do not diagnose, treat, cure, or prevent any condition. Do not promise deeper sleep, cured insomnia, or guaranteed sleep improvement.
-Owlnest Lume is a deep amber, low-blue sleep-supporting spectrum lamp for the 1-2 hours before bed.
-
-Evaluate visible light, likely color temperature, broad room brightness, direct glare, screen glow, and whether the room still feels visually active before sleep.
-Ordinary warm-white lamps, daylight, and cozy decor are not the same as a deep amber low-blue bedtime light.
-If large bright surfaces are illuminated, treat that as broad ambient light exposure.
-Screen, TV, phone, or monitor glow can be high-stimulation even when the room is otherwise dim.
-Nearly all-dark or deep amber low-blue rooms should score lower unless other stimulating light is visible.
-
-Return only valid JSON matching the schema.
-`;
-
 exports.handler = async (event) => {
   const headers = {
     "Access-Control-Allow-Origin": "https://owlnestofficial.com",
@@ -86,10 +28,10 @@ exports.handler = async (event) => {
     return respond(headers, 405, { success: false, error: "method_not_allowed" });
   }
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  const model = process.env.OPENAI_VISION_MODEL;
+  const apiUrl = safeUrl(process.env.LUME_AI_ANALYSIS_API_URL);
+  const apiKey = String(process.env.LUME_AI_ANALYSIS_API_KEY || "").trim();
 
-  if (!apiKey || !model) {
+  if (!apiUrl) {
     return respond(headers, 503, { success: false, error: "analysis_unavailable" });
   }
 
@@ -116,77 +58,45 @@ exports.handler = async (event) => {
 
   const rawQuizScore = clampInt(parsed.fields.raw_quiz_score, 0, 20);
   const quizScore40 = clampInt(parsed.fields.quiz_score_40, 0, 40);
-  const resultCategory = safeText(parsed.fields.result_category, 40) || "unknown";
-  const answersJson = safeText(parsed.fields.answers_json, 6000) || "[]";
-  const answersText = safeText(parsed.fields.answers_text, 6000);
-  const imageDataUrl = `data:${photo.contentType};base64,${photo.content.toString("base64")}`;
+  const requestContext = {
+    language: "en",
+    raw_quiz_score: rawQuizScore,
+    quiz_score_40: quizScore40,
+    result_category: safeText(parsed.fields.result_category, 40) || "unknown",
+    answers_json: safeText(parsed.fields.answers_json, 6000) || "[]",
+    answers_text: safeText(parsed.fields.answers_text, 6000),
+  };
 
   try {
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model,
-        input: [
-          { role: "system", content: [{ type: "input_text", text: SYSTEM_PROMPT }] },
-          {
-            role: "user",
-            content: [
-              {
-                type: "input_text",
-                text: buildUserPrompt({ rawQuizScore, quizScore40, resultCategory, answersJson, answersText }),
-              },
-              { type: "input_image", image_url: imageDataUrl, detail: "high" },
-            ],
-          },
-        ],
-        text: {
-          format: {
-            type: "json_schema",
-            name: "sleep_environment_analysis",
-            strict: true,
-            schema: RESPONSE_SCHEMA,
-          },
-        },
-      }),
+    const externalAnalysis = await requestExternalAnalysis({
+      apiUrl,
+      apiKey,
+      photo,
+      requestContext,
     });
-
-    if (!response.ok) {
-      return respond(headers, 502, { success: false, error: "analysis_failed" });
-    }
-
-    const data = await response.json();
-    const analysis = normalizeAnalysis(parseResponseJson(data), quizScore40);
+    const analysis = normalizeAnalysis(externalAnalysis, quizScore40);
     return respond(headers, 200, analysis);
   } catch (error) {
     return respond(headers, 502, { success: false, error: "analysis_failed" });
   }
 };
 
-function buildUserPrompt({ rawQuizScore, quizScore40, resultCategory, answersJson, answersText }) {
-  const archetypeTable = ARCHETYPES.map((item) => `${item.min}-${item.max}: ${item.name} (${item.id})`).join("\n");
-  return `Return language: English.
-Raw quiz score: ${rawQuizScore}/20.
-Quiz score contribution: ${quizScore40}/40.
-Original quiz category: ${resultCategory}.
-
-Quiz answers JSON:
-${answersJson}
-
-Quiz answers text:
-${answersText}
-
-Archetypes:
-${archetypeTable}
-
-Assign photo_score_60 from 0 to 60, then combine it with quiz_score_40 for total_score_100.
-Higher score means stronger Owlnest Lume fit or greater bedtime room-light improvement opportunity.
-Use safe labels such as Sleep-Ready Room Score, Bedtime Light Environment Score, Owlnest Lume Fit, and room-light improvement opportunity.
-Avoid medical claims, diagnosis, treatment, insomnia, disorders, guaranteed sleep outcomes, melatonin production claims, or clinical proof claims.
-In summary and product_guidance, speak about the bedtime light environment, visible room-light stimulation, screen glow, and lower-stimulation light.`;
+async function requestExternalAnalysis({ apiUrl, apiKey, photo, requestContext }) {
+  // TODO: Fill this adaptor after 老哥 provides the API contract:
+  // endpoint URL, HTTP method, auth method, request format, expected image field name,
+  // quiz payload requirements, response schema, image limit, and error shape.
+  //
+  // Keep the browser calling only this Netlify Function. Do not expose apiUrl/apiKey
+  // in frontend JavaScript. Do not log photo content or user-provided answer text.
+  //
+  // A likely implementation may build FormData or JSON here, attach server-side auth,
+  // call apiUrl with fetch(), then pass the returned JSON to normalizeAnalysis().
+  // The exact shape is intentionally not guessed in this checkpoint.
+  void apiUrl;
+  void apiKey;
+  void photo;
+  void requestContext;
+  throw new Error("external_api_contract_required");
 }
 
 function parseMultipartEvent(event) {
@@ -253,25 +163,9 @@ function matchDispositionValue(text, key) {
   return match ? match[1] : "";
 }
 
-function parseResponseJson(data) {
-  if (typeof data.output_text === "string" && data.output_text.trim()) {
-    return JSON.parse(data.output_text);
-  }
-
-  const parts = [];
-  for (const output of data.output || []) {
-    for (const content of output.content || []) {
-      if (content.type === "output_text" && content.text) parts.push(content.text);
-    }
-  }
-
-  if (!parts.length) throw new Error("missing model output");
-  return JSON.parse(parts.join("\n"));
-}
-
 function normalizeAnalysis(analysis, quizScore40) {
   const photoScore60 = clampInt(analysis.photo_score_60, 0, 60);
-  const totalScore100 = clampInt(quizScore40 + photoScore60, 0, 100);
+  const totalScore100 = clampInt(analysis.total_score_100, 0, 100) || clampInt(quizScore40 + photoScore60, 0, 100);
   const archetype = ARCHETYPES.find((item) => totalScore100 >= item.min && totalScore100 <= item.max) || ARCHETYPES[0];
 
   return {
@@ -279,13 +173,13 @@ function normalizeAnalysis(analysis, quizScore40) {
     quiz_score_40: quizScore40,
     photo_score_60: photoScore60,
     total_score_100: totalScore100,
-    archetype_id: archetype.id,
-    archetype_name: archetype.name,
+    archetype_id: safeKnownArchetype(analysis.archetype_id) || archetype.id,
+    archetype_name: safeText(analysis.archetype_name, 80) || archetype.name,
     combined_result_title: safeText(analysis.combined_result_title, 140) || "Your bedtime light environment has room to soften.",
     light_risk_level: enumValue(analysis.light_risk_level, ["low", "moderate", "high"], "moderate"),
     color_temperature_estimate: enumValue(
       analysis.color_temperature_estimate,
-      ["very_warm_amber", "warm_white", "neutral_white", "cool_white", "mixed", "too_dark_unknown"],
+      ["very_warm_amber", "warm_white", "neutral_white", "cool_white", "mixed", "too_dark_unknown", "unknown"],
       "unknown"
     ),
     color_temperature_match: enumValue(
@@ -302,6 +196,22 @@ function normalizeAnalysis(analysis, quizScore40) {
     product_guidance: safeText(analysis.product_guidance, 520),
     confidence: enumValue(analysis.confidence, ["low", "medium", "high"], "medium"),
   };
+}
+
+function safeKnownArchetype(value) {
+  const id = String(value || "").trim();
+  return ARCHETYPES.some((item) => item.id === id) ? id : "";
+}
+
+function safeUrl(value) {
+  const url = String(value || "").trim();
+  if (!url) return "";
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" ? parsed.toString() : "";
+  } catch {
+    return "";
+  }
 }
 
 function enumValue(value, allowed, fallback) {
