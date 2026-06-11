@@ -71,6 +71,42 @@
             background: rgba(255,255,255,0.04);
             box-shadow: 0 16px 34px rgba(0,0,0,0.16);
         }
+        .result-copy {
+            line-height: 1.72;
+        }
+        .result-copy p + p,
+        .result-guidance {
+            margin-top: 1rem;
+        }
+        .result-guidance-title {
+            color: rgba(250,239,207,0.88);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+        .result-guidance-list {
+            margin-top: 0.55rem;
+            display: grid;
+            gap: 0.45rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.62;
+        }
+        .result-guidance-list li {
+            position: relative;
+            padding-left: 1rem;
+        }
+        .result-guidance-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 0.35rem;
+            height: 0.35rem;
+            border-radius: 999px;
+            background: #C9852A;
+        }
         .result-status {
             display: inline-flex;
             align-items: center;
@@ -155,12 +191,53 @@
                         <button id="next-question" type="button" class="rounded-full bg-amber px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold text-midnight hover:bg-cream disabled:opacity-45 disabled:pointer-events-none">Next</button>
                     </div>
 
+                    <section id="photo-analysis-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
+                        <div class="field-shell rounded-[22px] p-5 sm:p-6">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Optional AI room-light check</p>
+                            <h2 class="mt-4 font-serif text-3xl md:text-4xl leading-tight text-white">Want a quick AI look at your bedtime light environment?</h2>
+                            <p class="mt-4 text-white/68 leading-relaxed">Upload or take a photo of your room as it usually looks before sleep. We'll analyze visible light, screen glow, and overall nighttime stimulation. You can skip this step and still get your quiz result.</p>
+                            <p class="mt-4 text-sm text-white/50 leading-relaxed">Please avoid uploading photos that include faces, children, private documents, or sensitive personal information.</p>
+
+                            <div class="mt-6 grid gap-4">
+                                <label for="sleep-environment-photo" class="block rounded-2xl border border-white/12 bg-midnight/45 p-4 cursor-pointer hover:border-amber/70 transition-colors">
+                                    <span class="sr-only">Upload room photo for optional AI room-light check</span>
+                                    <span class="flex flex-col sm:flex-row sm:items-center gap-3">
+                                        <span class="inline-flex min-h-12 items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">Choose room photo</span>
+                                        <span class="text-sm text-white/62">
+                                            <span id="selected-photo-name">No photo selected</span>
+                                            <span class="mt-1 block text-xs text-white/42">JPG, PNG, or WebP up to 8 MB</span>
+                                        </span>
+                                    </span>
+                                    <input id="sleep-environment-photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" class="sr-only">
+                                </label>
+
+                                <div id="photo-preview-wrap" class="hidden rounded-2xl border border-white/10 bg-black/20 p-3">
+                                    <img id="photo-preview" alt="Room light preview" class="max-h-72 w-full rounded-xl object-contain">
+                                    <button id="remove-photo" type="button" class="mt-3 rounded-xl border border-white/12 px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white/72 hover:border-amber/70 hover:text-white">Remove photo</button>
+                                </div>
+
+                                <label class="flex items-start gap-3 text-sm text-white/62 leading-relaxed">
+                                    <input id="photo-analysis-consent" type="checkbox" class="mt-1 h-4 w-4 accent-[#C9852A]">
+                                    <span>I agree that Owlnest may use this photo to generate an AI room-light analysis. I understand this is optional and not a medical assessment.</span>
+                                </label>
+
+                                <p id="photo-analysis-message" class="text-sm text-white/60" role="status" aria-live="polite"></p>
+
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button id="analyze-photo" type="button" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50" disabled>Analyze my room light</button>
+                                    <button id="skip-photo-analysis" type="button" class="min-h-14 rounded-xl border border-white/12 px-6 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">Skip photo analysis</button>
+                                    <button id="continue-quiz-only" type="button" class="min-h-14 rounded-xl border border-white/12 px-6 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">Continue with quiz-only result</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
                         <div class="result-summary-card rounded-[22px] p-5 sm:p-6">
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                             <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                             <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                            <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
+                            <div id="basic-result-copy" class="result-copy mt-4 text-white/68"></div>
                         </div>
                         <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
@@ -174,6 +251,23 @@
                             <input type="hidden" name="timestamp_local" id="timestamp-local-field">
                             <input type="hidden" name="page_source" id="page-source-field">
                             <input type="hidden" name="language" id="language-field" value="en">
+                            <input type="hidden" name="analysis_mode" id="analysis-mode-field" value="quiz_only">
+                            <input type="hidden" name="quiz_score_40" id="quiz-score-40-field">
+                            <input type="hidden" name="ai_photo_uploaded" id="ai-photo-uploaded-field" value="no">
+                            <input type="hidden" name="ai_photo_score_60" id="ai-photo-score-60-field">
+                            <input type="hidden" name="ai_total_score_100" id="ai-total-score-100-field">
+                            <input type="hidden" name="ai_archetype_id" id="ai-archetype-id-field">
+                            <input type="hidden" name="ai_archetype_name" id="ai-archetype-name-field">
+                            <input type="hidden" name="ai_light_risk_level" id="ai-light-risk-level-field">
+                            <input type="hidden" name="ai_color_temperature_estimate" id="ai-color-temperature-estimate-field">
+                            <input type="hidden" name="ai_color_temperature_match" id="ai-color-temperature-match-field">
+                            <input type="hidden" name="ai_detected_lume" id="ai-detected-lume-field">
+                            <input type="hidden" name="ai_overpush_guardrail_applied" id="ai-overpush-guardrail-field">
+                            <input type="hidden" name="ai_main_light_source" id="ai-main-light-source-field">
+                            <input type="hidden" name="ai_observed_light_issues" id="ai-observed-light-issues-field">
+                            <input type="hidden" name="ai_summary" id="ai-summary-field">
+                            <input type="hidden" name="ai_product_guidance" id="ai-product-guidance-field">
+                            <input type="hidden" name="ai_confidence" id="ai-confidence-field">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
                             <h3 class="font-serif text-2xl text-white">Get your Lume Fit Result.</h3>
@@ -204,7 +298,7 @@
                         <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                         <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                        <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
+                        <div id="full-result-copy" class="result-copy mt-4 text-white/72"></div>
                         <p class="mt-5 text-xs text-white/45 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
                             <a href="/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
@@ -279,8 +373,14 @@
         const formMessage = document.getElementById('form-message');
         const submitButton = document.getElementById('submit-room-check');
         const consentCheckbox = document.getElementById('consent-checkbox');
+        const photoAnalysisPanel = document.getElementById('photo-analysis-panel');
+        const quizActions = document.getElementById('quiz-actions');
+        const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
+        const maxPhotoBytes = 8 * 1024 * 1024;
+        const allowedPhotoTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
         let current = 0;
         const answers = {};
+        let aiAnalysisState = null;
 
         panelsWrap.innerHTML = questions.map((question, index) => `
             <div class="question-panel ${index === 0 ? 'is-active' : ''}" data-question-index="${index}">
@@ -342,6 +442,10 @@
             return answerPayload().reduce((sum, item) => sum + item.score, 0);
         }
 
+        function quizScore40() {
+            return Math.round((totalScore() / 20) * 40);
+        }
+
         function readableAnswers() {
             return answerPayload().map((item, index) => (
                 `${index + 1}. ${item.question}\nAnswer: ${item.answer}\nScore: ${item.score}`
@@ -367,19 +471,277 @@
             document.getElementById('timestamp-local-field').value = localTimestamp(date);
             document.getElementById('page-source-field').value = window.location.href;
             document.getElementById('language-field').value = document.documentElement.lang || 'en';
+            document.getElementById('quiz-score-40-field').value = String(quizScore40());
             return result;
+        }
+
+        function setFieldValue(id, value) {
+            const node = document.getElementById(id);
+            if (node) node.value = value == null ? '' : String(value);
+        }
+
+        function resetAiFields() {
+            aiAnalysisState = null;
+            setFieldValue('analysis-mode-field', 'quiz_only');
+            setFieldValue('quiz-score-40-field', quizScore40());
+            setFieldValue('ai-photo-uploaded-field', 'no');
+            [
+                'ai-photo-score-60-field',
+                'ai-total-score-100-field',
+                'ai-archetype-id-field',
+                'ai-archetype-name-field',
+                'ai-light-risk-level-field',
+                'ai-color-temperature-estimate-field',
+                'ai-color-temperature-match-field',
+                'ai-detected-lume-field',
+                'ai-overpush-guardrail-field',
+                'ai-main-light-source-field',
+                'ai-observed-light-issues-field',
+                'ai-summary-field',
+                'ai-product-guidance-field',
+                'ai-confidence-field'
+            ].forEach(id => setFieldValue(id, ''));
+        }
+
+        function writeAiFields(analysis) {
+            aiAnalysisState = analysis;
+            setFieldValue('analysis-mode-field', 'ai_photo');
+            setFieldValue('quiz-score-40-field', analysis.quiz_score_40 ?? quizScore40());
+            setFieldValue('ai-photo-uploaded-field', 'yes');
+            setFieldValue('ai-photo-score-60-field', analysis.photo_score_60);
+            setFieldValue('ai-total-score-100-field', analysis.total_score_100);
+            setFieldValue('ai-archetype-id-field', analysis.archetype_id);
+            setFieldValue('ai-archetype-name-field', analysis.archetype_name);
+            setFieldValue('ai-light-risk-level-field', analysis.light_risk_level);
+            setFieldValue('ai-color-temperature-estimate-field', analysis.color_temperature_estimate);
+            setFieldValue('ai-color-temperature-match-field', analysis.color_temperature_match);
+            setFieldValue('ai-detected-lume-field', analysis.detected_lume ? 'yes' : 'no');
+            setFieldValue('ai-overpush-guardrail-field', analysis.overpush_guardrail_applied ? 'yes' : 'no');
+            setFieldValue('ai-main-light-source-field', analysis.main_light_source);
+            setFieldValue('ai-observed-light-issues-field', Array.isArray(analysis.observed_light_issues) ? analysis.observed_light_issues.join('\n') : '');
+            setFieldValue('ai-summary-field', analysis.summary);
+            setFieldValue('ai-product-guidance-field', analysis.product_guidance);
+            setFieldValue('ai-confidence-field', analysis.confidence);
+        }
+
+        function renderAiStatus(target, analysis) {
+            const level = String(analysis.light_risk_level || '').toLowerCase();
+            const tone = level === 'low' ? 'low' : level === 'high' ? 'strong' : 'moderate';
+            const label = analysis.archetype_name || 'AI room-light check';
+            const score = Number.isFinite(Number(analysis.total_score_100)) ? Number(analysis.total_score_100) : '';
+            target.innerHTML = `
+                <span class="result-status-dot is-${tone}" aria-hidden="true"></span>
+                <span>${label}</span>
+                <span class="text-white/42">${score === '' ? 'AI-enhanced result' : `Score ${score} / 100`}</span>
+            `;
+        }
+
+        function trimText(text, maxLength) {
+            const value = String(text || '').replace(/\s+/g, ' ').trim();
+            if (value.length <= maxLength) return value;
+            const clipped = value.slice(0, Math.max(0, maxLength - 1));
+            const breakAt = Math.max(clipped.lastIndexOf('. '), clipped.lastIndexOf(', '), clipped.lastIndexOf(' '));
+            return `${(breakAt > 80 ? clipped.slice(0, breakAt) : clipped).trim()}…`;
+        }
+
+        function limitList(items, maxItems) {
+            return (Array.isArray(items) ? items : [])
+                .map(item => trimText(item, 80))
+                .filter(Boolean)
+                .slice(0, maxItems);
+        }
+
+        function splitGuidance(text) {
+            const value = trimText(text, 280);
+            if (!value) return [];
+            const parts = value
+                .split(/\n+|(?:^|\s)[•*-]\s+|;\s+|(?<=\.)\s+/)
+                .map(item => trimText(item.replace(/^[•*-]\s*/, ''), 130))
+                .filter(Boolean);
+            return (parts.length ? parts : [value]).slice(0, 2);
+        }
+
+        function renderCopyBlock(target, summary, guidance = '', observedIssues = []) {
+            const safeSummary = trimText(summary, 280);
+            const guidanceItems = splitGuidance(guidance);
+            const issueItems = guidanceItems.length ? [] : limitList(observedIssues, 3);
+            const tryItems = guidanceItems.length ? guidanceItems : issueItems;
+
+            target.innerHTML = '';
+            if (safeSummary) {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = safeSummary;
+                target.appendChild(paragraph);
+            }
+
+            if (tryItems.length) {
+                const wrap = document.createElement('div');
+                wrap.className = 'result-guidance';
+                const label = document.createElement('p');
+                label.className = 'result-guidance-title';
+                label.textContent = 'Try this:';
+                const list = document.createElement('ul');
+                list.className = 'result-guidance-list';
+                tryItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    list.appendChild(li);
+                });
+                wrap.appendChild(label);
+                wrap.appendChild(list);
+                target.appendChild(wrap);
+            }
+        }
+
+        function renderLeadResult(result, analysis = null) {
+            if (analysis) {
+                basicResultTitle.textContent = trimText(analysis.combined_result_title || analysis.archetype_name || result.title, 100);
+                renderCopyBlock(basicResultCopy, analysis.summary, analysis.product_guidance, analysis.observed_light_issues);
+                renderAiStatus(basicResultStatus, analysis);
+                return;
+            }
+            basicResultTitle.textContent = result.title;
+            renderCopyBlock(basicResultCopy, result.copy);
+            renderResultStatus(basicResultStatus, result);
         }
 
         function showLeadCapture() {
             const result = populateSubmissionFields();
-            basicResultTitle.textContent = result.title;
-            basicResultCopy.textContent = result.copy;
-            renderResultStatus(basicResultStatus, result);
+            renderLeadResult(result, aiAnalysisState);
             leadPanel.classList.add('is-visible');
-            document.getElementById('quiz-actions').style.display = 'none';
+            quizActions.style.display = 'none';
             panelsWrap.style.display = 'none';
-            progressLabel.textContent = 'Your Lume Fit Result is ready';
+            if (photoAnalysisPanel) photoAnalysisPanel.classList.add('hidden');
+            progressLabel.textContent = aiAnalysisState ? 'Your AI room-light result is ready' : 'Your Lume Fit Result is ready';
             progressBar.style.width = '100%';
+        }
+
+        function showQuizOnlyResult() {
+            resetAiFields();
+            showLeadCapture();
+        }
+
+        function setPhotoMessage(message, tone = 'muted') {
+            const node = document.getElementById('photo-analysis-message');
+            if (!node) return;
+            node.textContent = message;
+            node.className = tone === 'warning' ? 'text-sm text-amber' : 'text-sm text-white/60';
+        }
+
+        function showPhotoAnalysisStep() {
+            resetAiFields();
+            document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
+            panelsWrap.style.display = 'none';
+            quizActions.style.display = 'none';
+            leadPanel.classList.remove('is-visible');
+            if (photoAnalysisPanel) photoAnalysisPanel.classList.remove('hidden');
+            progressLabel.textContent = 'Optional AI room-light check';
+            progressBar.style.width = '100%';
+        }
+
+        function setupPhotoAnalysisStep() {
+            const input = document.getElementById('sleep-environment-photo');
+            const analyzeButton = document.getElementById('analyze-photo');
+            const skipButton = document.getElementById('skip-photo-analysis');
+            const continueButton = document.getElementById('continue-quiz-only');
+            const removeButton = document.getElementById('remove-photo');
+            const previewWrap = document.getElementById('photo-preview-wrap');
+            const preview = document.getElementById('photo-preview');
+            const consent = document.getElementById('photo-analysis-consent');
+            const selectedPhotoName = document.getElementById('selected-photo-name');
+            if (!input || !analyzeButton || !skipButton || !continueButton || !consent) return;
+
+            function refreshAnalyzeState() {
+                analyzeButton.disabled = !input.files || !input.files[0] || !consent.checked;
+            }
+
+            function clearPhoto() {
+                input.value = '';
+                if (preview) {
+                    if (preview.src && preview.src.startsWith('blob:')) URL.revokeObjectURL(preview.src);
+                    preview.removeAttribute('src');
+                }
+                if (previewWrap) previewWrap.classList.add('hidden');
+                if (selectedPhotoName) selectedPhotoName.textContent = 'No photo selected';
+                setPhotoMessage('');
+                refreshAnalyzeState();
+            }
+
+            input.addEventListener('change', () => {
+                setPhotoMessage('');
+                const file = input.files && input.files[0];
+                if (!file) {
+                    clearPhoto();
+                    return;
+                }
+                if (!allowedPhotoTypes.has(file.type)) {
+                    clearPhoto();
+                    setPhotoMessage('Please upload a JPEG, PNG, or WebP image.', 'warning');
+                    return;
+                }
+                if (file.size > maxPhotoBytes) {
+                    clearPhoto();
+                    setPhotoMessage('Please upload an image smaller than 8 MB.', 'warning');
+                    return;
+                }
+                if (preview && previewWrap) {
+                    if (preview.src && preview.src.startsWith('blob:')) URL.revokeObjectURL(preview.src);
+                    preview.src = URL.createObjectURL(file);
+                    previewWrap.classList.remove('hidden');
+                }
+                if (selectedPhotoName) selectedPhotoName.textContent = file.name;
+                refreshAnalyzeState();
+            });
+
+            consent.addEventListener('change', refreshAnalyzeState);
+            removeButton?.addEventListener('click', clearPhoto);
+            skipButton.addEventListener('click', showQuizOnlyResult);
+            continueButton.addEventListener('click', showQuizOnlyResult);
+
+            analyzeButton.addEventListener('click', async () => {
+                const file = input.files && input.files[0];
+                if (!file) {
+                    setPhotoMessage('Please choose a room photo first.', 'warning');
+                    return;
+                }
+                if (!consent.checked) {
+                    setPhotoMessage('Please agree to the optional AI room-light analysis before uploading.', 'warning');
+                    return;
+                }
+
+                analyzeButton.disabled = true;
+                skipButton.disabled = true;
+                continueButton.disabled = true;
+                setPhotoMessage('Analyzing your bedtime light environment...');
+
+                const formData = new FormData();
+                formData.set('photo', file);
+                formData.set('language', 'en');
+                formData.set('raw_quiz_score', String(totalScore()));
+                formData.set('quiz_score_40', String(quizScore40()));
+                formData.set('result_category', getResult(totalScore()).category);
+                formData.set('answers_json', JSON.stringify(answerPayload()));
+                formData.set('answers_text', readableAnswers());
+
+                try {
+                    const response = await fetch(aiEndpoint, { method: 'POST', body: formData });
+                    const analysis = await response.json().catch(() => null);
+                    if (!response.ok || !analysis || analysis.success === false) {
+                        throw new Error('AI room-light analysis unavailable');
+                    }
+                    writeAiFields(analysis);
+                    showLeadCapture();
+                } catch (error) {
+                    setPhotoMessage('Photo analysis could not complete. You can continue with your quiz-only result.', 'warning');
+                    showQuizOnlyResult();
+                } finally {
+                    skipButton.disabled = false;
+                    continueButton.disabled = false;
+                    refreshAnalyzeState();
+                }
+            });
+
+            refreshAnalyzeState();
         }
 
         panelsWrap.addEventListener('click', event => {
@@ -405,7 +767,7 @@
                 current += 1;
                 updateView();
             } else {
-                showLeadCapture();
+                showPhotoAnalysisStep();
             }
         });
 
@@ -446,11 +808,7 @@
                     body: data.toString()
                 });
                 if (!response.ok) throw new Error('Submission failed');
-                const result = getResult(Number(document.getElementById('quiz-score').value));
-                fullResultTitle.textContent = result.title;
-                fullResultCopy.textContent = result.copy;
-                renderResultStatus(fullResultStatus, result);
-                fullResultPanel.classList.add('is-visible');
+                fullResultPanel.classList.remove('is-visible');
                 document.getElementById('submit-success-panel').classList.add('is-visible');
                 form.style.display = 'none';
                 formMessage.textContent = '';
@@ -462,6 +820,7 @@
             }
         });
 
+        setupPhotoAnalysisStep();
         updateView();
     </script>
 </body>
