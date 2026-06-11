@@ -258,6 +258,7 @@
                             <input type="hidden" name="ai_total_score_100" id="ai-total-score-100-field">
                             <input type="hidden" name="ai_archetype_id" id="ai-archetype-id-field">
                             <input type="hidden" name="ai_archetype_name" id="ai-archetype-name-field">
+                            <input type="hidden" name="ai_combined_result_title" id="ai-combined-result-title-field">
                             <input type="hidden" name="ai_light_risk_level" id="ai-light-risk-level-field">
                             <input type="hidden" name="ai_color_temperature_estimate" id="ai-color-temperature-estimate-field">
                             <input type="hidden" name="ai_color_temperature_match" id="ai-color-temperature-match-field">
@@ -290,7 +291,7 @@
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Submission received</p>
                             <h3 class="mt-3 font-serif text-2xl text-white">Your result is saved.</h3>
                             <p class="mt-2 text-white/72 leading-relaxed">You're on the early-access list.</p>
-                            <p class="mt-3 text-sm text-white/55 leading-relaxed">We'll keep you updated with Owlnest Lume launch news and early-bird access.</p>
+                            <p id="result-email-status" class="mt-3 text-sm text-white/55 leading-relaxed">We'll keep you updated with Owlnest Lume launch news and early-bird access.</p>
                         </div>
                     </div>
 
@@ -490,6 +491,7 @@
                 'ai-total-score-100-field',
                 'ai-archetype-id-field',
                 'ai-archetype-name-field',
+                'ai-combined-result-title-field',
                 'ai-light-risk-level-field',
                 'ai-color-temperature-estimate-field',
                 'ai-color-temperature-match-field',
@@ -512,6 +514,7 @@
             setFieldValue('ai-total-score-100-field', analysis.total_score_100);
             setFieldValue('ai-archetype-id-field', analysis.archetype_id);
             setFieldValue('ai-archetype-name-field', analysis.archetype_name);
+            setFieldValue('ai-combined-result-title-field', analysis.combined_result_title);
             setFieldValue('ai-light-risk-level-field', analysis.light_risk_level);
             setFieldValue('ai-color-temperature-estimate-field', analysis.color_temperature_estimate);
             setFieldValue('ai-color-temperature-match-field', analysis.color_temperature_match);
@@ -603,6 +606,52 @@
             basicResultTitle.textContent = result.title;
             renderCopyBlock(basicResultCopy, result.copy);
             renderResultStatus(basicResultStatus, result);
+        }
+
+        function currentResultEmailPayload(email) {
+            const get = id => {
+                const node = document.getElementById(id);
+                return node ? node.value : '';
+            };
+            return {
+                email,
+                first_name: '',
+                analysis_mode: get('analysis-mode-field') || 'quiz_only',
+                quiz_result_category: get('result-category'),
+                raw_quiz_score: get('quiz-score'),
+                quiz_score_40: get('quiz-score-40-field'),
+                quiz_summary: get('result-summary-field'),
+                quiz_recommendation: get('result-summary-field'),
+                ai_photo_uploaded: get('ai-photo-uploaded-field'),
+                ai_archetype_name: get('ai-archetype-name-field'),
+                ai_photo_score_60: get('ai-photo-score-60-field'),
+                ai_total_score_100: get('ai-total-score-100-field'),
+                ai_light_risk_level: get('ai-light-risk-level-field'),
+                ai_combined_result_title: get('ai-combined-result-title-field'),
+                ai_main_light_source: get('ai-main-light-source-field'),
+                ai_summary: get('ai-summary-field'),
+                ai_product_guidance: get('ai-product-guidance-field'),
+                source: window.location.href,
+                campaign: 'sleep-ready-room-check'
+            };
+        }
+
+        async function sendResultEmail(payload) {
+            if (!payload.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+                return false;
+            }
+            try {
+                const response = await fetch('/.netlify/functions/send-sleep-check-result', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) return false;
+                const result = await response.json();
+                return Boolean(result && result.success);
+            } catch {
+                return false;
+            }
         }
 
         function showLeadCapture() {
@@ -812,6 +861,13 @@
                 document.getElementById('submit-success-panel').classList.add('is-visible');
                 form.style.display = 'none';
                 formMessage.textContent = '';
+                const emailStatus = document.getElementById('result-email-status');
+                const emailSent = await sendResultEmail(currentResultEmailPayload(emailValue));
+                if (emailStatus) {
+                    emailStatus.textContent = emailSent
+                        ? 'Your result email is on its way.'
+                        : 'Your result was saved. We will keep you updated with Owlnest Lume launch news and early-bird access.';
+                }
             } catch (error) {
                 formMessage.textContent = 'Something went wrong. Please try again.';
                 formMessage.className = 'mt-3 text-sm text-amber';
