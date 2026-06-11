@@ -44,6 +44,19 @@ Rules:
 13. Do not include phrases like "不需要強推購買", "硬推", "畫面中沒有看到 Lume", "照片顯示", "這張照片", or "Owlnest Lume 引導" in user-facing fields.
 14. Use a relaxed, warm tone while explaining professional light concepts.
 
+Copy style:
+- Write for a consumer quiz result card, not a report.
+- Use plain English for US consumers unless Traditional Chinese is requested.
+- Keep archetype_name to 2-5 words.
+- Keep combined_result_title under 90 characters.
+- Keep summary under 240 characters.
+- Keep product_guidance under 240 characters.
+- Use 1-2 short sentences only.
+- Avoid long paragraphs, repeated ideas, and technical over-explaining.
+- Do not say the room "needs" Owlnest Lume.
+- Mention Owlnest Lume only as a possible fit, not a required solution.
+- Prefer concrete visible-light observations over abstract science language.
+
 Return only valid JSON matching the schema.
 `;
 
@@ -81,7 +94,7 @@ const RESPONSE_SCHEMA = {
     detected_lume: { type: "boolean" },
     overpush_guardrail_applied: { type: "boolean" },
     main_light_source: { type: "string" },
-    observed_light_issues: { type: "array", items: { type: "string" }, maxItems: 6 },
+    observed_light_issues: { type: "array", items: { type: "string" }, maxItems: 3 },
     summary: { type: "string" },
     product_guidance: { type: "string" },
     confidence: { type: "string", enum: ["low", "medium", "high"] },
@@ -193,7 +206,9 @@ If the room looks cozy/warm but has strong daylight through a window, bright whi
 If a dark room has clear blue/cool screen or TV light reflected on the user, bed, blanket, wall, or bedding, the photo_score_60 should usually be 42-55, not 10-25.
 If the "blue" is mainly outdoor dusk/twilight color seen through a window, and the indoor light is warm around 2200K-2700K, the photo_score_60 should usually be around 30-38, not 42-55.
 User-facing copy should say room or bedtime environment, not photo or image.
-If the environment is 1500K/Lume-like or shows Lume, lower sales pressure internally but do not say this explicitly. Explain how a gentle amber transition light can make the routine feel softer, calmer, and more settled.`;
+If the environment is 1500K/Lume-like or shows Lume, lower sales pressure internally but do not say this explicitly. Explain how a gentle amber transition light can make the routine feel softer, calmer, and more settled.
+Keep visible result copy card-friendly: combined_result_title under 90 characters, summary under 240 characters, product_guidance under 240 characters, main_light_source under 80 characters, and at most 3 observed_light_issues under 80 characters each.
+Use product_guidance as 1-2 short practical suggestions. Do not write a long paragraph.`;
 }
 
 function parseMultipartEvent(event) {
@@ -288,7 +303,7 @@ function normalizeAnalysis(analysis, quizScore40, language) {
     total_score_100: total,
     archetype_id: archetype.id,
     archetype_name: language === "zh-tw" ? archetype.zh : archetype.en,
-    combined_result_title: safeText(analysis.combined_result_title, 140) || "Your bedtime light environment has room to soften.",
+    combined_result_title: safeText(analysis.combined_result_title, 90) || "Your bedtime light environment has room to soften.",
     light_risk_level: enumValue(analysis.light_risk_level, ["low", "moderate", "high"], "moderate"),
     color_temperature_estimate: enumValue(
       analysis.color_temperature_estimate,
@@ -302,12 +317,12 @@ function normalizeAnalysis(analysis, quizScore40, language) {
     ),
     detected_lume: Boolean(analysis.detected_lume),
     overpush_guardrail_applied: Boolean(analysis.overpush_guardrail_applied),
-    main_light_source: safeText(analysis.main_light_source, 160),
+    main_light_source: safeText(analysis.main_light_source, 80),
     observed_light_issues: Array.isArray(analysis.observed_light_issues)
-      ? analysis.observed_light_issues.map((item) => safeText(item, 160)).filter(Boolean).slice(0, 6)
+      ? analysis.observed_light_issues.map((item) => safeText(item, 80)).filter(Boolean).slice(0, 3)
       : [],
-    summary: safeText(analysis.summary, 520),
-    product_guidance: safeText(analysis.product_guidance, 520),
+    summary: safeText(analysis.summary, 240),
+    product_guidance: safeText(analysis.product_guidance, 240),
     confidence: enumValue(analysis.confidence, ["low", "medium", "high"], "medium"),
   };
 }

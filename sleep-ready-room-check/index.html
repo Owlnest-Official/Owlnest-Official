@@ -71,6 +71,42 @@
             background: rgba(255,255,255,0.04);
             box-shadow: 0 16px 34px rgba(0,0,0,0.16);
         }
+        .result-copy {
+            line-height: 1.72;
+        }
+        .result-copy p + p,
+        .result-guidance {
+            margin-top: 1rem;
+        }
+        .result-guidance-title {
+            color: rgba(250,239,207,0.88);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+        .result-guidance-list {
+            margin-top: 0.55rem;
+            display: grid;
+            gap: 0.45rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.62;
+        }
+        .result-guidance-list li {
+            position: relative;
+            padding-left: 1rem;
+        }
+        .result-guidance-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 0.35rem;
+            height: 0.35rem;
+            border-radius: 999px;
+            background: #C9852A;
+        }
         .result-status {
             display: inline-flex;
             align-items: center;
@@ -201,7 +237,7 @@
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                             <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                             <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                            <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
+                            <div id="basic-result-copy" class="result-copy mt-4 text-white/68"></div>
                         </div>
                         <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
@@ -262,7 +298,7 @@
                         <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
                         <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                        <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
+                        <div id="full-result-copy" class="result-copy mt-4 text-white/72"></div>
                         <p class="mt-5 text-xs text-white/45 leading-relaxed">This check is for educational and product-fit purposes only. It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
                             <a href="/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
@@ -500,15 +536,72 @@
             `;
         }
 
+        function trimText(text, maxLength) {
+            const value = String(text || '').replace(/\s+/g, ' ').trim();
+            if (value.length <= maxLength) return value;
+            const clipped = value.slice(0, Math.max(0, maxLength - 1));
+            const breakAt = Math.max(clipped.lastIndexOf('. '), clipped.lastIndexOf(', '), clipped.lastIndexOf(' '));
+            return `${(breakAt > 80 ? clipped.slice(0, breakAt) : clipped).trim()}…`;
+        }
+
+        function limitList(items, maxItems) {
+            return (Array.isArray(items) ? items : [])
+                .map(item => trimText(item, 80))
+                .filter(Boolean)
+                .slice(0, maxItems);
+        }
+
+        function splitGuidance(text) {
+            const value = trimText(text, 280);
+            if (!value) return [];
+            const parts = value
+                .split(/\n+|(?:^|\s)[•*-]\s+|;\s+|(?<=\.)\s+/)
+                .map(item => trimText(item.replace(/^[•*-]\s*/, ''), 130))
+                .filter(Boolean);
+            return (parts.length ? parts : [value]).slice(0, 2);
+        }
+
+        function renderCopyBlock(target, summary, guidance = '', observedIssues = []) {
+            const safeSummary = trimText(summary, 280);
+            const guidanceItems = splitGuidance(guidance);
+            const issueItems = guidanceItems.length ? [] : limitList(observedIssues, 3);
+            const tryItems = guidanceItems.length ? guidanceItems : issueItems;
+
+            target.innerHTML = '';
+            if (safeSummary) {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = safeSummary;
+                target.appendChild(paragraph);
+            }
+
+            if (tryItems.length) {
+                const wrap = document.createElement('div');
+                wrap.className = 'result-guidance';
+                const label = document.createElement('p');
+                label.className = 'result-guidance-title';
+                label.textContent = 'Try this:';
+                const list = document.createElement('ul');
+                list.className = 'result-guidance-list';
+                tryItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    list.appendChild(li);
+                });
+                wrap.appendChild(label);
+                wrap.appendChild(list);
+                target.appendChild(wrap);
+            }
+        }
+
         function renderLeadResult(result, analysis = null) {
             if (analysis) {
-                basicResultTitle.textContent = analysis.combined_result_title || analysis.archetype_name || result.title;
-                basicResultCopy.textContent = [analysis.summary, analysis.product_guidance].filter(Boolean).join(' ');
+                basicResultTitle.textContent = trimText(analysis.combined_result_title || analysis.archetype_name || result.title, 100);
+                renderCopyBlock(basicResultCopy, analysis.summary, analysis.product_guidance, analysis.observed_light_issues);
                 renderAiStatus(basicResultStatus, analysis);
                 return;
             }
             basicResultTitle.textContent = result.title;
-            basicResultCopy.textContent = result.copy;
+            renderCopyBlock(basicResultCopy, result.copy);
             renderResultStatus(basicResultStatus, result);
         }
 
