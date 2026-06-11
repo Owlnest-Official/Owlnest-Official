@@ -220,6 +220,7 @@
                             <input type="hidden" name="ai_color_temperature_match" id="ai-color-temperature-match-field">
                             <input type="hidden" name="ai_detected_lume" id="ai-detected-lume-field">
                             <input type="hidden" name="ai_overpush_guardrail_applied" id="ai-overpush-guardrail-field">
+                            <input type="hidden" name="ai_main_light_source" id="ai-main-light-source-field">
                             <input type="hidden" name="ai_observed_light_issues" id="ai-observed-light-issues-field">
                             <input type="hidden" name="ai_summary" id="ai-summary-field">
                             <input type="hidden" name="ai_product_guidance" id="ai-product-guidance-field">
@@ -332,7 +333,7 @@
         const photoAnalysisPanel = document.getElementById('photo-analysis-panel');
         const quizActions = document.getElementById('quiz-actions');
         const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
-        const maxPhotoBytes = 4 * 1024 * 1024;
+        const maxPhotoBytes = 8 * 1024 * 1024;
         const allowedPhotoTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
         let current = 0;
         const answers = {};
@@ -451,6 +452,7 @@
                 'ai-color-temperature-match-field',
                 'ai-detected-lume-field',
                 'ai-overpush-guardrail-field',
+                'ai-main-light-source-field',
                 'ai-observed-light-issues-field',
                 'ai-summary-field',
                 'ai-product-guidance-field',
@@ -472,6 +474,7 @@
             setFieldValue('ai-color-temperature-match-field', analysis.color_temperature_match);
             setFieldValue('ai-detected-lume-field', analysis.detected_lume ? 'yes' : 'no');
             setFieldValue('ai-overpush-guardrail-field', analysis.overpush_guardrail_applied ? 'yes' : 'no');
+            setFieldValue('ai-main-light-source-field', analysis.main_light_source);
             setFieldValue('ai-observed-light-issues-field', Array.isArray(analysis.observed_light_issues) ? analysis.observed_light_issues.join('\n') : '');
             setFieldValue('ai-summary-field', analysis.summary);
             setFieldValue('ai-product-guidance-field', analysis.product_guidance);
@@ -576,7 +579,7 @@
                 }
                 if (file.size > maxPhotoBytes) {
                     clearPhoto();
-                    setPhotoMessage('Please upload an image smaller than 4 MB.', 'warning');
+                    setPhotoMessage('Please upload an image smaller than 8 MB.', 'warning');
                     return;
                 }
                 if (preview && previewWrap) {
