@@ -100,23 +100,23 @@ function buildResultEmail(payload) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Sleep-Ready Check result from Owlnest</title>
 </head>
-<body style="margin:0;background:#111827;color:#132033;font-family:Arial,Helvetica,sans-serif;">
+<body style="margin:0;background:#07111f;color:#f6efe3;font-family:Arial,Helvetica,sans-serif;">
   <div style="display:none;max-height:0;overflow:hidden;">${escapeHtml(intro)}</div>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#111827;padding:22px 12px;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#07111f;padding:22px 12px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#fbf4e8;border-radius:20px;overflow:hidden;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#0f1b2d;border-radius:20px;overflow:hidden;border:1px solid #26364f;">
           <tr>
             <td style="padding:26px 22px 16px;">
-              <p style="margin:0 0 14px;color:#c9852a;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;">Owlnest</p>
-              <h1 style="margin:0;color:#111827;font-size:28px;line-height:1.18;font-weight:700;">${escapeHtml(heading)}</h1>
-              <p style="margin:12px 0 0;color:#344256;font-size:15px;line-height:1.58;">${escapeHtml(intro)}</p>
+              <p style="margin:0 0 14px;color:#d58b22;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;">Owlnest</p>
+              <h1 style="margin:0;color:#fff6e8;font-size:28px;line-height:1.18;font-weight:700;">${escapeHtml(heading)}</h1>
+              <p style="margin:12px 0 0;color:#d8dfeb;font-size:15px;line-height:1.58;">${escapeHtml(intro)}</p>
             </td>
           </tr>
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
-                <h2 style="margin:0 0 12px;color:#111827;font-size:21px;line-height:1.28;">Your result</h2>
+              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+                <h2 style="margin:0 0 12px;color:#fff6e8;font-size:21px;line-height:1.28;">Your result</h2>
                 ${resultRows.map((row) => resultRowHtml(row.label, row.value)).join("")}
               </div>
             </td>
@@ -124,32 +124,32 @@ function buildResultEmail(payload) {
           ${isAiPhoto ? `
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
-                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">What AI noticed</h2>
-                <p style="margin:0;color:#344256;font-size:15px;line-height:1.58;">${escapeHtml(noticed)}</p>
+              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+                <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">What AI noticed</h2>
+                <p style="margin:0;color:#d8dfeb;font-size:15px;line-height:1.58;">${escapeHtml(noticed)}</p>
               </div>
             </td>
           </tr>` : ""}
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
-                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">${isAiPhoto ? "Try this" : "Try this tonight"}</h2>
+              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+                <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">${isAiPhoto ? "Try this" : "Try this tonight"}</h2>
                 ${bulletListHtml(tryItems)}
               </div>
             </td>
           </tr>
           <tr>
             <td style="padding:0 22px 20px;">
-              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
-                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">The science</h2>
-                <p style="margin:0 0 10px;color:#344256;font-size:15px;line-height:1.58;">Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more alert than your body may want at night.</p>
-                <p style="margin:0;color:#344256;font-size:15px;line-height:1.58;">Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window, using a deep amber, low-blue spectrum to create a calmer, lower-stimulation light environment before bed.</p>
-                <p style="margin:14px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#9b621c;font-size:15px;font-weight:700;">Read the science</a></p>
+              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+                <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">Why sleep with a light on?</h2>
+                <p style="margin:0 0 10px;color:#d8dfeb;font-size:15px;line-height:1.58;">Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.</p>
+                <p style="margin:0;color:#d8dfeb;font-size:15px;line-height:1.58;">Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.</p>
+                <p style="margin:14px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#f0b04f;font-size:15px;font-weight:700;">Read the science</a></p>
               </div>
             </td>
           </tr>
           <tr>
-            <td style="padding:20px 22px 24px;background:#111827;color:#d8cdbb;">
+            <td style="padding:20px 22px 24px;background:#07111f;color:#cbd5e1;">
               <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.</p>
               <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">Reply to: ${escapeHtml(replyTo)}</p>
               ${unsubscribeUrl ? `<p style="margin:0 0 8px;font-size:12px;line-height:1.52;"><a href="${escapeAttribute(unsubscribeUrl)}" style="color:#f2c98a;">Unsubscribe</a></p>` : ""}
@@ -177,9 +177,9 @@ function buildResultEmail(payload) {
     isAiPhoto ? "Try this" : "Try this tonight",
     tryText,
     "",
-    "The science",
-    "Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more alert than your body may want at night.",
-    "Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window, using a deep amber, low-blue spectrum to create a calmer, lower-stimulation light environment before bed.",
+    "Why sleep with a light on?",
+    "Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.",
+    "Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.",
     `Read the science: ${scienceUrl}`,
     "",
     "This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.",
@@ -283,11 +283,11 @@ function resultCategoryLabel(value) {
 }
 
 function resultRowHtml(label, value) {
-  return `<p style="margin:0 0 8px;color:#344256;font-size:15px;line-height:1.55;"><strong style="color:#111827;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
+  return `<p style="margin:0 0 8px;color:#d8dfeb;font-size:15px;line-height:1.55;"><strong style="color:#fff6e8;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
 }
 
 function bulletListHtml(items) {
-  return `<ul style="margin:0;padding:0 0 0 18px;color:#344256;font-size:15px;line-height:1.58;">${items.map((item) => `<li style="margin:0 0 7px;">${escapeHtml(item)}</li>`).join("")}</ul>`;
+  return `<ul style="margin:0;padding:0 0 0 18px;color:#d8dfeb;font-size:15px;line-height:1.58;">${items.map((item) => `<li style="margin:0 0 7px;">${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
 function normalizeEmail(value) {
