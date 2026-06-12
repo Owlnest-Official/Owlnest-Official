@@ -77,10 +77,21 @@ function buildResultEmail(payload) {
   const scienceUrl = safeUrl(process.env.OWLNEST_SCIENCE_URL) || DEFAULT_SCIENCE_URL;
   const unsubscribeUrl = safeUrl(process.env.RESULT_EMAIL_UNSUBSCRIBE_URL);
   const physicalAddress = safeText(process.env.OWLNEST_PHYSICAL_ADDRESS, 240);
-  const replyTo = safeText(process.env.RESULT_EMAIL_REPLY_TO, 160);
-  const suggestion = mode === "ai_photo" ? aiSuggestion(payload) : quizSuggestion(payload);
-  const resultRows = mode === "ai_photo" ? aiRows(payload) : quizRows(payload);
+  const replyTo = safeText(process.env.RESULT_EMAIL_REPLY_TO, 160) || "owlnestpq2025@gmail.com";
+  const isAiPhoto = mode === "ai_photo";
+  const heading = isAiPhoto ? "Your Sleep-Ready Room Check result" : "Your Sleep-Ready Check result";
+  const intro = "Thanks for taking the Sleep-Ready Check. Here's a copy of your result.";
+  const resultRows = isAiPhoto ? aiRows(payload) : quizRows(payload);
   const resultTextRows = resultRows.map((row) => `${row.label}: ${row.value}`).join("\n");
+  const noticed = aiSummary(payload);
+  const tryItems = isAiPhoto ? aiTryItems(payload) : quizTryItems(payload);
+  const tryText = tryItems.map((item) => `- ${item}`).join("\n");
+  const footerParts = [
+    "This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.",
+    `Reply to: ${replyTo}`,
+  ];
+  if (unsubscribeUrl) footerParts.push(`Unsubscribe: ${unsubscribeUrl}`);
+  if (physicalAddress) footerParts.push(physicalAddress);
 
   const html = `<!doctype html>
 <html lang="en">
@@ -90,50 +101,59 @@ function buildResultEmail(payload) {
   <title>Your Sleep-Ready Check result from Owlnest</title>
 </head>
 <body style="margin:0;background:#111827;color:#132033;font-family:Arial,Helvetica,sans-serif;">
-  <div style="display:none;max-height:0;overflow:hidden;">Thanks for taking the Sleep-Ready Check. Your result is inside.</div>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#111827;padding:32px 16px;">
+  <div style="display:none;max-height:0;overflow:hidden;">${escapeHtml(intro)}</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#111827;padding:22px 12px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#fbf4e8;border-radius:22px;overflow:hidden;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#fbf4e8;border-radius:20px;overflow:hidden;">
           <tr>
-            <td style="padding:34px 30px 20px;">
-              <p style="margin:0 0 18px;color:#c9852a;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;">Owlnest</p>
-              <h1 style="margin:0;color:#111827;font-size:32px;line-height:1.15;font-weight:700;">Your Sleep-Ready Check result</h1>
-              <p style="margin:16px 0 0;color:#344256;font-size:16px;line-height:1.65;">Thanks for taking the Sleep-Ready Check.</p>
+            <td style="padding:26px 22px 16px;">
+              <p style="margin:0 0 14px;color:#c9852a;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;">Owlnest</p>
+              <h1 style="margin:0;color:#111827;font-size:28px;line-height:1.18;font-weight:700;">${escapeHtml(heading)}</h1>
+              <p style="margin:12px 0 0;color:#344256;font-size:15px;line-height:1.58;">${escapeHtml(intro)}</p>
             </td>
           </tr>
           <tr>
-            <td style="padding:0 30px 22px;">
-              <div style="border:1px solid #e0d2bd;border-radius:18px;padding:22px;background:#fffaf2;">
-                <h2 style="margin:0 0 16px;color:#111827;font-size:20px;line-height:1.3;">Your result</h2>
+            <td style="padding:0 22px 14px;">
+              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
+                <h2 style="margin:0 0 12px;color:#111827;font-size:21px;line-height:1.28;">Your result</h2>
                 ${resultRows.map((row) => resultRowHtml(row.label, row.value)).join("")}
               </div>
             </td>
           </tr>
+          ${isAiPhoto ? `
           <tr>
-            <td style="padding:0 30px 22px;">
-              <div style="border:1px solid #e0d2bd;border-radius:18px;padding:22px;background:#fffaf2;">
-                <h2 style="margin:0 0 12px;color:#111827;font-size:20px;line-height:1.3;">What we'd suggest</h2>
-                <p style="margin:0;color:#344256;font-size:15px;line-height:1.7;">${escapeHtml(suggestion)}</p>
+            <td style="padding:0 22px 14px;">
+              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
+                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">What AI noticed</h2>
+                <p style="margin:0;color:#344256;font-size:15px;line-height:1.58;">${escapeHtml(noticed)}</p>
+              </div>
+            </td>
+          </tr>` : ""}
+          <tr>
+            <td style="padding:0 22px 14px;">
+              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
+                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">${isAiPhoto ? "Try this" : "Try this tonight"}</h2>
+                ${bulletListHtml(tryItems)}
               </div>
             </td>
           </tr>
           <tr>
-            <td style="padding:0 30px 26px;">
-              <div style="border:1px solid #e0d2bd;border-radius:18px;padding:22px;background:#fffaf2;">
-                <h2 style="margin:0 0 12px;color:#111827;font-size:20px;line-height:1.3;">The science</h2>
-                <p style="margin:0 0 12px;color:#344256;font-size:15px;line-height:1.7;">Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more visually alert than your body may want at night.</p>
-                <p style="margin:0;color:#344256;font-size:15px;line-height:1.7;">Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window. Its deep amber, low-blue spectrum is made to create a calmer, lower-stimulation light environment before bed.</p>
-                <p style="margin:16px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#9b621c;font-weight:700;">Read the science</a></p>
+            <td style="padding:0 22px 20px;">
+              <div style="border:1px solid #e0d2bd;border-radius:16px;padding:18px;background:#fffaf2;">
+                <h2 style="margin:0 0 10px;color:#111827;font-size:21px;line-height:1.28;">The science</h2>
+                <p style="margin:0 0 10px;color:#344256;font-size:15px;line-height:1.58;">Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more alert than your body may want at night.</p>
+                <p style="margin:0;color:#344256;font-size:15px;line-height:1.58;">Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window, using a deep amber, low-blue spectrum to create a calmer, lower-stimulation light environment before bed.</p>
+                <p style="margin:14px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#9b621c;font-size:15px;font-weight:700;">Read the science</a></p>
               </div>
             </td>
           </tr>
           <tr>
-            <td style="padding:24px 30px 34px;background:#111827;color:#d8cdbb;">
-              <p style="margin:0 0 8px;font-size:12px;line-height:1.6;">This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.</p>
-              <p style="margin:0 0 8px;font-size:12px;line-height:1.6;">You can unsubscribe at any time.${unsubscribeUrl ? ` <a href="${escapeAttribute(unsubscribeUrl)}" style="color:#f2c98a;">Unsubscribe</a>.` : ""}</p>
-              ${replyTo ? `<p style="margin:0 0 8px;font-size:12px;line-height:1.6;">Reply to: ${escapeHtml(replyTo)}</p>` : ""}
-              ${physicalAddress ? `<p style="margin:0;font-size:12px;line-height:1.6;">${escapeHtml(physicalAddress)}</p>` : ""}
+            <td style="padding:20px 22px 24px;background:#111827;color:#d8cdbb;">
+              <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.</p>
+              <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">Reply to: ${escapeHtml(replyTo)}</p>
+              ${unsubscribeUrl ? `<p style="margin:0 0 8px;font-size:12px;line-height:1.52;"><a href="${escapeAttribute(unsubscribeUrl)}" style="color:#f2c98a;">Unsubscribe</a></p>` : ""}
+              ${physicalAddress ? `<p style="margin:0;font-size:12px;line-height:1.52;">${escapeHtml(physicalAddress)}</p>` : ""}
             </td>
           </tr>
         </table>
@@ -146,67 +166,112 @@ function buildResultEmail(payload) {
   const textParts = [
     "Owlnest",
     "",
-    "Thanks for taking the Sleep-Ready Check.",
+    heading,
+    "",
+    intro,
     "",
     "Your result",
     resultTextRows,
     "",
-    "What we'd suggest",
-    suggestion,
+    ...(isAiPhoto ? ["What AI noticed", noticed, ""] : []),
+    isAiPhoto ? "Try this" : "Try this tonight",
+    tryText,
     "",
     "The science",
-    "Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more visually alert than your body may want at night.",
-    "Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window. Its deep amber, low-blue spectrum is made to create a calmer, lower-stimulation light environment before bed.",
+    "Most lights are designed to help you see. During the 1-2 hours before bed, bright or blue-rich light can make a room feel more alert than your body may want at night.",
+    "Owlnest Lume is a sleep-supporting spectrum lamp designed for this pre-sleep window, using a deep amber, low-blue spectrum to create a calmer, lower-stimulation light environment before bed.",
     `Read the science: ${scienceUrl}`,
     "",
     "This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.",
-    "You can unsubscribe at any time.",
+    `Reply to: ${replyTo}`,
   ];
 
   if (unsubscribeUrl) textParts.push(`Unsubscribe: ${unsubscribeUrl}`);
-  if (replyTo) textParts.push(`Reply to: ${replyTo}`);
   if (physicalAddress) textParts.push(physicalAddress);
 
   return { html, text: textParts.filter((part) => part !== "").join("\n") };
 }
 
 function quizRows(payload) {
+  const category = resultCategoryLabel(payload.quiz_result_category);
   return [
-    { label: "Quiz result", value: resultCategoryLabel(payload.quiz_result_category) },
-    { label: "Quiz-only score", value: `${numberText(payload.quiz_score_40, 0)} / 40` },
-    { label: "Summary", value: safeText(payload.quiz_summary, 360) || "Your answers show how your room light may affect the hours before bed." },
+    { label: "Result", value: category },
+    { label: "Score", value: `${numberText(payload.quiz_score_40, 0)} / 40` },
+    { label: "Short meaning", value: quizMeaning(category) },
   ];
 }
 
 function aiRows(payload) {
-  return [
-    { label: "Quiz result", value: resultCategoryLabel(payload.quiz_result_category) },
+  const mainLight = safeText(payload.ai_main_light_source, 90);
+  const riskLevel = lightRiskLabel(payload.ai_light_risk_level);
+  const rows = [
+    { label: "Overall result", value: safeText(payload.ai_combined_result_title, 120) || safeText(payload.ai_archetype_name, 120) || "Your room-light result" },
+    { label: "Total score", value: `${numberText(payload.ai_total_score_100, 0)} / 100` },
     { label: "Quiz score", value: `${numberText(payload.quiz_score_40, 0)} / 40` },
-    { label: "AI room-light result", value: safeText(payload.ai_archetype_name, 120) || "Room-light check" },
-    { label: "Room-light score", value: `${numberText(payload.ai_photo_score_60, 0)} / 60` },
-    { label: "Total Sleep-Ready Room Score", value: `${numberText(payload.ai_total_score_100, 0)} / 100` },
-    { label: "Summary", value: safeText(payload.ai_summary, 360) || "Your room-light analysis is ready." },
+  ];
+  if (hasNumber(payload.ai_photo_score_60)) rows.push({ label: "Photo score", value: `${numberText(payload.ai_photo_score_60, 0)} / 60` });
+  if (mainLight) rows.push({ label: "Main light source", value: mainLight });
+  if (riskLevel) rows.push({ label: "Light risk level", value: riskLevel });
+  return rows;
+}
+
+function quizMeaning(category) {
+  if (category === "High Match") {
+    return "Your answers suggest your room may still feel visually active when your body is trying to wind down.";
+  }
+  if (category === "Medium Match") {
+    return "Your routine has some calmer signals, but a few light sources may still be keeping the room alert.";
+  }
+  return "Your answers suggest your current setup may already be relatively calm and sleep-aware.";
+}
+
+function quizTryItems(payload) {
+  const category = resultCategoryLabel(payload.quiz_result_category);
+  if (category === "High Match") {
+    return [
+      "Lower bright overhead lights 1-2 hours before bed.",
+      "Reduce screen glow when your room is supposed to wind down.",
+      "Use a lower-stimulation amber light if you still need visibility at night.",
+    ];
+  }
+  if (category === "Medium Match") {
+    return [
+      "Start dimming your room earlier in the evening.",
+      "Watch for bright bathroom, desk, or phone light before bed.",
+      "Try keeping one softer light source for the pre-sleep window.",
+    ];
+  }
+  return [
+    "Your current routine already looks relatively sleep-aware.",
+    "Keep bright or blue-rich light away from the final part of the night.",
+    "Use soft, low-stimulation light only when you need it.",
   ];
 }
 
-function quizSuggestion(payload) {
-  const provided = safeText(payload.quiz_recommendation, 420);
-  if (provided) return provided;
-
-  const category = String(payload.quiz_result_category || "").toLowerCase();
-  if (category.includes("strong") || category.includes("high")) {
-    return "Lower bright overhead light earlier, move screen light away from bed, and use lower-position soft light before bed.";
-  }
-  if (category.includes("moderate") || category.includes("medium")) {
-    return "Keep the calm parts of your routine, then identify one or two light sources that still feel too bright.";
-  }
-  return "Your current setup may already be relatively calm; Owlnest Lume may still be useful as a softer evening cue.";
+function aiSummary(payload) {
+  return safeText(payload.ai_summary, 260) || "Your room-light analysis points to a few visible light cues worth adjusting before bed.";
 }
 
-function aiSuggestion(payload) {
-  const provided = safeText(payload.ai_product_guidance, 420);
-  if (provided) return provided;
-  return "Try reducing visible bright or screen-based light near the bed, then use a lower, deeper amber light during the final part of your evening.";
+function aiTryItems(payload) {
+  const summary = aiSummary(payload);
+  const guidance = safeText(payload.ai_product_guidance, 260);
+  const guidanceItems = splitSuggestionItems(guidance);
+  if (guidanceItems.length && !isNearDuplicate(guidance, summary)) {
+    return guidanceItems.slice(0, 3);
+  }
+  return [
+    "Reduce bright overhead light before bed.",
+    "Keep screens from becoming the main light source.",
+    "Use a softer amber light for the 1-2 hours before sleep.",
+  ];
+}
+
+function splitSuggestionItems(value) {
+  return safeText(value, 260)
+    .split(/\n+|(?:^|\s)[•*-]\s+|;\s+|(?<=\.)\s+/)
+    .map((item) => safeText(item.replace(/^[•*-]\s*/, ""), 120))
+    .filter(Boolean)
+    .slice(0, 3);
 }
 
 function resultCategoryLabel(value) {
@@ -218,7 +283,11 @@ function resultCategoryLabel(value) {
 }
 
 function resultRowHtml(label, value) {
-  return `<p style="margin:0 0 10px;color:#344256;font-size:15px;line-height:1.65;"><strong style="color:#111827;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
+  return `<p style="margin:0 0 8px;color:#344256;font-size:15px;line-height:1.55;"><strong style="color:#111827;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
+}
+
+function bulletListHtml(items) {
+  return `<ul style="margin:0;padding:0 0 0 18px;color:#344256;font-size:15px;line-height:1.58;">${items.map((item) => `<li style="margin:0 0 7px;">${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
 function normalizeEmail(value) {
@@ -232,6 +301,36 @@ function isValidEmail(value) {
 function numberText(value, fallback) {
   const number = Number.parseInt(String(value), 10);
   return Number.isFinite(number) ? String(number) : String(fallback);
+}
+
+function hasNumber(value) {
+  return Number.isFinite(Number.parseInt(String(value), 10));
+}
+
+function lightRiskLabel(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  if (normalized === "low") return "Low";
+  if (normalized === "moderate") return "Moderate";
+  if (normalized === "high") return "High";
+  return "";
+}
+
+function isNearDuplicate(a, b) {
+  const left = normalizeForCompare(a);
+  const right = normalizeForCompare(b);
+  if (!left || !right) return false;
+  if (left === right) return true;
+  const shorter = left.length < right.length ? left : right;
+  const longer = left.length < right.length ? right : left;
+  return shorter.length > 40 && longer.includes(shorter);
+}
+
+function normalizeForCompare(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function safeUrl(value) {
