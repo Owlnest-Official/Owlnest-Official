@@ -298,9 +298,10 @@
                             </div>
 
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
-                                <input id="consent-checkbox" name="consent" value="yes" type="checkbox" required class="mt-1 h-4 w-4 accent-[#C9852A]">
+                                <input id="consent-checkbox" name="consent" value="yes" type="checkbox" class="mt-1 h-4 w-4 accent-[#C9852A]" aria-describedby="consent-error">
                                 <span>I agree to receive Owlnest updates and understand I can unsubscribe anytime.</span>
                             </label>
+                            <p id="consent-error" class="mt-2 hidden text-sm text-amber" role="alert">Please check the box to receive your result and updates.</p>
                             <p class="mt-3 text-xs text-white/45">No spam. Just your result, launch updates, and early-bird access.</p>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
                         </form>
@@ -391,6 +392,7 @@
         const formMessage = document.getElementById('form-message');
         const submitButton = document.getElementById('submit-room-check');
         const consentCheckbox = document.getElementById('consent-checkbox');
+        const consentError = document.getElementById('consent-error');
         const photoAnalysisPanel = document.getElementById('photo-analysis-panel');
         const quizActions = document.getElementById('quiz-actions');
         const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
@@ -844,8 +846,10 @@
                 return;
             }
             if (!consentCheckbox.checked) {
-                formMessage.textContent = 'Please agree to receive Owlnest updates before submitting.';
-                formMessage.className = 'mt-3 text-sm text-amber';
+                if (consentError) {
+                    consentError.textContent = 'Please check the box to receive your result and updates.';
+                    consentError.classList.remove('hidden');
+                }
                 return;
             }
             submitButton.disabled = true;
@@ -888,6 +892,15 @@
                 submitButton.textContent = 'Send me my result and early access';
             }
         });
+
+        if (consentCheckbox && consentError) {
+            consentCheckbox.addEventListener('change', () => {
+                if (consentCheckbox.checked) {
+                    consentError.classList.add('hidden');
+                    consentError.textContent = '';
+                }
+            });
+        }
 
         setupPhotoAnalysisStep();
         updateView();

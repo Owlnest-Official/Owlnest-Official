@@ -98,24 +98,27 @@ function buildResultEmail(payload) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark only">
+  <meta name="supported-color-schemes" content="dark">
   <title>Your Sleep-Ready Check result from Owlnest</title>
 </head>
-<body style="margin:0;background:#07111f;color:#f6efe3;font-family:Arial,Helvetica,sans-serif;">
+<body style="margin:0;background-color:#07111f;background:#07111f;color:#f6efe3;font-family:Arial,Helvetica,sans-serif;">
   <div style="display:none;max-height:0;overflow:hidden;">${escapeHtml(intro)}</div>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#07111f;padding:22px 12px;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color:#07111f;background:#07111f;padding:22px 12px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#0f1b2d;border-radius:20px;overflow:hidden;border:1px solid #26364f;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background-color:#101d33;background:#101d33;border-radius:20px;overflow:hidden;border:1px solid rgba(240,176,79,0.32);">
           <tr>
-            <td style="padding:26px 22px 16px;">
-              <p style="margin:0 0 14px;color:#d58b22;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;">Owlnest</p>
+            <td style="padding:26px 22px 16px;border-top:4px solid #d88a24;background-color:#101d33;background:#101d33;">
+              <p style="margin:0 0 14px;color:#f0b04f;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;">Owlnest</p>
               <h1 style="margin:0;color:#fff6e8;font-size:28px;line-height:1.18;font-weight:700;">${escapeHtml(heading)}</h1>
-              <p style="margin:12px 0 0;color:#d8dfeb;font-size:15px;line-height:1.58;">${escapeHtml(intro)}</p>
+              <p style="margin:12px 0 0;color:#e8edf7;font-size:15px;line-height:1.58;">${escapeHtml(intro)}</p>
             </td>
           </tr>
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+              <div style="border:1px solid rgba(240,176,79,0.28);border-radius:16px;padding:18px;background-color:#15243d;background:#15243d;">
+                <div style="width:38px;height:2px;background-color:#d88a24;background:#d88a24;margin:0 0 13px;"></div>
                 <h2 style="margin:0 0 12px;color:#fff6e8;font-size:21px;line-height:1.28;">Your result</h2>
                 ${resultRows.map((row) => resultRowHtml(row.label, row.value)).join("")}
               </div>
@@ -124,15 +127,17 @@ function buildResultEmail(payload) {
           ${isAiPhoto ? `
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+              <div style="border:1px solid rgba(240,176,79,0.28);border-radius:16px;padding:18px;background-color:#15243d;background:#15243d;">
+                <div style="width:38px;height:2px;background-color:#d88a24;background:#d88a24;margin:0 0 13px;"></div>
                 <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">What AI noticed</h2>
-                <p style="margin:0;color:#d8dfeb;font-size:15px;line-height:1.58;">${escapeHtml(noticed)}</p>
+                <p style="margin:0;color:#e8edf7;font-size:15px;line-height:1.58;">${escapeHtml(noticed)}</p>
               </div>
             </td>
           </tr>` : ""}
           <tr>
             <td style="padding:0 22px 14px;">
-              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+              <div style="border:1px solid rgba(240,176,79,0.28);border-radius:16px;padding:18px;background-color:#15243d;background:#15243d;">
+                <div style="width:38px;height:2px;background-color:#d88a24;background:#d88a24;margin:0 0 13px;"></div>
                 <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">${isAiPhoto ? "Try this" : "Try this tonight"}</h2>
                 ${bulletListHtml(tryItems)}
               </div>
@@ -140,16 +145,17 @@ function buildResultEmail(payload) {
           </tr>
           <tr>
             <td style="padding:0 22px 20px;">
-              <div style="border:1px solid #2c3d58;border-radius:16px;padding:18px;background:#142238;">
+              <div style="border:1px solid rgba(240,176,79,0.28);border-radius:16px;padding:18px;background-color:#15243d;background:#15243d;">
+                <div style="width:38px;height:2px;background-color:#d88a24;background:#d88a24;margin:0 0 13px;"></div>
                 <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">Why sleep with a light on?</h2>
-                <p style="margin:0 0 10px;color:#d8dfeb;font-size:15px;line-height:1.58;">Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.</p>
-                <p style="margin:0;color:#d8dfeb;font-size:15px;line-height:1.58;">Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.</p>
+                <p style="margin:0 0 10px;color:#e8edf7;font-size:15px;line-height:1.58;">Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.</p>
+                <p style="margin:0;color:#e8edf7;font-size:15px;line-height:1.58;">Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.</p>
                 <p style="margin:14px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#f0b04f;font-size:15px;font-weight:700;">Read the science</a></p>
               </div>
             </td>
           </tr>
           <tr>
-            <td style="padding:20px 22px 24px;background:#07111f;color:#cbd5e1;">
+            <td style="padding:20px 22px 24px;background-color:#0b1628;background:#0b1628;color:#b9c3d6;">
               <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.</p>
               <p style="margin:0 0 8px;font-size:12px;line-height:1.52;">Reply to: ${escapeHtml(replyTo)}</p>
               ${unsubscribeUrl ? `<p style="margin:0 0 8px;font-size:12px;line-height:1.52;"><a href="${escapeAttribute(unsubscribeUrl)}" style="color:#f2c98a;">Unsubscribe</a></p>` : ""}
@@ -283,11 +289,11 @@ function resultCategoryLabel(value) {
 }
 
 function resultRowHtml(label, value) {
-  return `<p style="margin:0 0 8px;color:#d8dfeb;font-size:15px;line-height:1.55;"><strong style="color:#fff6e8;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
+  return `<p style="margin:0 0 8px;color:#e8edf7;font-size:15px;line-height:1.55;"><strong style="color:#f0b04f;">${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`;
 }
 
 function bulletListHtml(items) {
-  return `<ul style="margin:0;padding:0 0 0 18px;color:#d8dfeb;font-size:15px;line-height:1.58;">${items.map((item) => `<li style="margin:0 0 7px;">${escapeHtml(item)}</li>`).join("")}</ul>`;
+  return `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin:0;color:#e8edf7;font-size:15px;line-height:1.58;">${items.map((item) => `<tr><td valign="top" style="width:16px;padding:0 8px 7px 0;color:#f0b04f;font-size:16px;line-height:1.45;">•</td><td style="padding:0 0 7px;color:#e8edf7;font-size:15px;line-height:1.58;">${escapeHtml(item)}</td></tr>`).join("")}</table>`;
 }
 
 function normalizeEmail(value) {
