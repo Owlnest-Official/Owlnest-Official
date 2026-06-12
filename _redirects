@@ -7,8 +7,7 @@
 /%E9%A6%96%E9%A0%81    /?utm_source=qr&utm_medium=offline&utm_campaign=legacy_qr&utm_content=home_cn   302!
 
 # Account and verification routes
-/account              /account/index.html    200!
-/account/             /account/index.html    200!
+/account              /account/              301
 /activate             /activate.html     200
 /verify               /verify.html       200
 /account/activate     /activate.html     200
