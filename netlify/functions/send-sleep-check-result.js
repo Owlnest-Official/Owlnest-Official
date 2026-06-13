@@ -223,34 +223,34 @@ function aiRows(payload) {
 
 function quizMeaning(category) {
   if (category === "High Match") {
-    return "Your answers suggest your room may still feel visually active when your body is trying to wind down.";
+    return "Your answers suggest your room may still be sending a daytime-like signal at night.";
   }
   if (category === "Medium Match") {
-    return "Your routine has some calmer signals, but a few light sources may still be keeping the room alert.";
+    return "Your room may not be extreme, but mixed light, screens, or overhead brightness can still send the wrong signal at night.";
   }
-  return "Your answers suggest your current setup may already be relatively calm and sleep-aware.";
+  return "Your bedroom already looks relatively sleep-friendly, so Owlnest Lume may be less essential as your main sleep light.";
 }
 
 function quizTryItems(payload) {
   const category = resultCategoryLabel(payload.quiz_result_category);
   if (category === "High Match") {
     return [
-      "Lower bright overhead lights 1-2 hours before bed.",
-      "Reduce screen glow when your room is supposed to wind down.",
-      "Use a lower-stimulation amber light if you still need visibility at night.",
+      "Use Owlnest Lume as a bedroom sleep spectrum lamp made to stay on while you sleep.",
+      "Reduce bright overhead light and screen glow that can send the wrong signal at night.",
+      "Let darkness remove disruptive light while Lume adds the right night-friendly signal.",
     ];
   }
   if (category === "Medium Match") {
     return [
-      "Start dimming your room earlier in the evening.",
-      "Watch for bright bathroom, desk, or phone light before bed.",
-      "Try keeping one softer light source for the pre-sleep window.",
+      "Use Lume in your bedroom or relaxation zone when overhead or cool-white light feels too active.",
+      "Watch for bathroom, desk, or phone light that keeps the room feeling awake.",
+      "Replace harsh light with a calmer sleep spectrum made for nighttime.",
     ];
   }
   return [
-    "Your current routine already looks relatively sleep-aware.",
-    "Keep bright or blue-rich light away from the final part of the night.",
-    "Use soft, low-stimulation light only when you need it.",
+    "Your bedroom may already be relatively low-risk.",
+    "Try Lume where harsh overhead light breaks the mood: bath, shower wind-down, spa corner, or meditation space.",
+    "It can also work beautifully in a guest room or bathroom night routine.",
   ];
 }
 
@@ -266,9 +266,9 @@ function aiTryItems(payload) {
     return guidanceItems.slice(0, 3);
   }
   return [
-    "Reduce bright overhead light before bed.",
+    "Reduce bright overhead light at night.",
     "Keep screens from becoming the main light source.",
-    "Use a softer amber light for the 1-2 hours before sleep.",
+    "Use a night-friendly sleep spectrum where the room still feels too visually active.",
   ];
 }
 

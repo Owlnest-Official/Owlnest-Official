@@ -13,7 +13,7 @@
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owlnest Lume Fit Check | Owlnest</title>
-    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check from Owlnest Lume, a sleep-supporting spectrum lamp designed for the hours before bed.">
+    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check from Owlnest Lume, a sleep spectrum lamp made to stay on through the night.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/sleep-ready-room-check/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/sleep-ready-room-check/">
@@ -184,17 +184,17 @@
             <div class="absolute inset-0 bg-[linear-gradient(180deg,#111927_0%,#172033_100%)]"></div>
             <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-8 lg:gap-12 items-center">
                 <div>
-                    <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">60-Second Check</span>
-                    <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Would Owlnest Lume fit your night?</h1>
-                    <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Answer a few quick questions about your light, phone habits, and bedtime routine.</p>
-                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Check Your Fit</a>
+                    <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">AI Room Light Check</span>
+                    <h1 class="mt-5 font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] text-white">Is your room sending the wrong signal?</h1>
+                    <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/72 leading-relaxed">Answer 10 quick questions.<br>Add a room photo for an AI light reading.</p>
+                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">Check My Room Light</a>
                     <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">This check is for educational and product-fit purposes only.<br>It is not a medical assessment and does not diagnose, treat, cure, or prevent any condition.</p>
                 </div>
 
                 <section id="room-check-quiz" class="rounded-[22px] border border-white/10 bg-white/[0.035] p-5 sm:p-6 lg:p-7 shadow-xl shadow-black/20 scroll-mt-28" aria-label="Sleep-Ready Room Check quiz">
                     <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                         <div>
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">60-second check</p>
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">AI room light check</p>
                             <p id="progress-label" class="mt-2 text-sm text-white/58">Question 1 of 10</p>
                         </div>
                         <div class="h-2 w-32 rounded-full bg-white/10 overflow-hidden">
@@ -208,6 +208,25 @@
                         <button id="prev-question" type="button" class="rounded-full border border-white/14 px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold text-white/70 hover:border-amber hover:text-amber disabled:opacity-35 disabled:pointer-events-none">Back</button>
                         <button id="next-question" type="button" class="rounded-full bg-amber px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold text-midnight hover:bg-cream disabled:opacity-45 disabled:pointer-events-none">Next</button>
                     </div>
+
+                    <section id="result-choice-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
+                        <div class="field-shell rounded-[22px] p-4 sm:p-6">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Result options</p>
+                            <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white">Choose your result</h2>
+                            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                                <article class="rounded-2xl border border-white/12 bg-midnight/45 p-4">
+                                    <h3 class="font-serif text-2xl text-white">Questionnaire result</h3>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">A fast read based on your answers.</p>
+                                    <button id="choose-quiz-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">Continue without photo</button>
+                                </article>
+                                <article class="rounded-2xl border border-amber/35 bg-amber/10 p-4">
+                                    <h3 class="font-serif text-2xl text-white">AI room light analysis</h3>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">Upload a room photo so AI can read visible light sources, screens, and glow.</p>
+                                    <button id="choose-ai-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-white/18 px-5 text-white text-xs font-bold uppercase tracking-[0.12em] hover:border-amber hover:text-amber">Add AI photo analysis</button>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
 
                     <section id="photo-analysis-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
                         <div class="field-shell rounded-[22px] p-4 sm:p-6">
@@ -243,21 +262,17 @@
 
                                 <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                                     <button id="analyze-photo" type="button" class="min-h-12 rounded-xl bg-amber px-6 py-3 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50" disabled>Analyze my room light</button>
-                                    <button id="continue-quiz-only" type="button" class="min-h-12 rounded-xl border border-white/12 px-6 py-3 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">Continue without photo</button>
+                                    <button id="back-to-result-choice" type="button" class="min-h-12 rounded-xl border border-white/12 px-6 py-3 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">Back to result options</button>
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
-                        <div class="result-summary-card rounded-[22px] p-5 sm:p-6">
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Your Lume Fit Result</p>
-                            <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
-                            <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                            <div id="basic-result-copy" class="result-copy mt-4 text-white/68"></div>
-                        </div>
-                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
+                            <input type="hidden" name="sleep_check_session_id" id="sleep-check-session-id">
+                            <input type="hidden" name="lead_stage" id="lead-stage-field">
                             <input type="hidden" name="quiz_score" id="quiz-score">
                             <input type="hidden" name="quiz_score_display" id="quiz-score-display">
                             <input type="hidden" name="result_category" id="result-category">
@@ -288,13 +303,14 @@
                             <input type="hidden" name="ai_confidence" id="ai-confidence-field">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-                            <h3 class="font-serif text-2xl text-white">Get your Lume Fit Result.</h3>
-                            <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to save your result and get Owlnest Lume launch updates.</p>
+                            <h3 class="font-serif text-2xl text-white">Where should we send your result?</h3>
+                            <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to receive your Sleep-Ready result.</p>
+                            <p class="mt-2 text-xs text-white/45 leading-relaxed">You can continue with your questionnaire result or add an AI room-light analysis after this step.</p>
 
                             <div class="mt-5 flex flex-col sm:flex-row gap-3">
                                 <label class="sr-only" for="room-check-email">Email address</label>
-                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
-                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Send me my result and early access</button>
+                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
+                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Continue</button>
                             </div>
 
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
@@ -302,15 +318,9 @@
                                 <span>I agree to receive Owlnest updates and understand I can unsubscribe anytime.</span>
                             </label>
                             <p id="consent-error" class="mt-2 hidden text-sm text-amber" role="alert">Please check the box to receive your result and updates.</p>
-                            <p class="mt-3 text-xs text-white/45">No spam. Just your result, launch updates, and early-bird access.</p>
+                            <p class="mt-3 text-xs text-white/45">We'll send a copy to your inbox.</p>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
                         </form>
-                        <div id="submit-success-panel" class="result-panel mt-7 rounded-[22px] border border-amber/30 bg-amber/10 p-5 sm:p-6" role="status" aria-live="polite">
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">Submission received</p>
-                            <h3 class="mt-3 font-serif text-2xl text-white">Your result is saved.</h3>
-                            <p class="mt-2 text-white/72 leading-relaxed">You're on the early-access list.</p>
-                            <p id="result-email-status" class="mt-3 text-sm text-white/55 leading-relaxed">We'll keep you updated with Owlnest Lume launch news and early-bird access.</p>
-                        </div>
                     </div>
 
                     <div id="full-result-panel" class="result-panel mt-8 rounded-[22px] border border-amber/35 bg-amber/10 p-5 sm:p-6">
@@ -323,6 +333,7 @@
                             <a href="/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">Get Early Access</a>
                             <a href="/science/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">See the Science</a>
                         </div>
+                        <p id="result-email-status" class="mt-5 text-sm text-white/55 leading-relaxed">We've sent a copy of your result to your inbox.</p>
                     </div>
                 </section>
             </div>
@@ -332,7 +343,7 @@
     <footer class="site-footer bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
         <div class="footer-centered max-w-[720px] mx-auto text-center">
             <p class="footer-brand font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-            <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Sleep-supporting spectrum lamp for the hours before bed.</p>
+            <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Sleep spectrum lamp made to stay on through the night.</p>
             <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
         </div>
     </footer>
@@ -346,8 +357,8 @@
             { id: 'bright_bedside_lighting', text: 'Before bed, do you still use white, cool, or bright bedside lighting?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
             { id: 'needs_soft_light', text: 'Do you still need some light at night, but dislike harsh lamps?', options: [['Rarely. I usually do fine in the dark.', 0], ['Sometimes. I need light for certain moments.', 1], ['Often. I want light, but not the kind that wakes the room up.', 2]] },
             { id: 'unfamiliar_room_lighting', text: 'When you travel or sleep in unfamiliar rooms, does the lighting make it harder to wind down?', options: [['Rarely.', 0], ['Sometimes.', 1], ['Often.', 2]] },
-            { id: 'no_apps_screens_tracking', text: 'Would a bedtime cue without apps, screens, or sleep tracking feel more realistic for you?', options: [['Not really.', 0], ['Maybe.', 1], ['Yes.', 2]] },
-            { id: 'pre_sleep_room_activity', text: 'During the 1–2 hours before bed, do you still read, move around, get ready, or spend time in your room?', options: [['Rarely. I usually turn everything off quickly.', 0], ['Sometimes. I still do a few things before sleep.', 1], ['Often. I spend time in my room before I’m ready to sleep.', 2]] },
+            { id: 'no_apps_screens_tracking', text: 'Would a night-friendly light without apps, screens, or sleep tracking feel more realistic for you?', options: [['Not really.', 0], ['Maybe.', 1], ['Yes.', 2]] },
+            { id: 'pre_sleep_room_activity', text: 'At night, before you are ready to sleep, do you still read, move around, get ready, or spend time in your room?', options: [['Rarely. I usually turn everything off quickly.', 0], ['Sometimes. I still do a few things before sleep.', 1], ['Often. I spend time in my room before I’m ready to sleep.', 2]] },
             { id: 'night_light_preference', text: 'Which sounds most like what you want before bed?', options: [['I just want the room dark.', 0], ['I want enough light to see, but not too much.', 1], ['I want the room to feel ready for night before I am.', 2]] }
         ];
 
@@ -356,22 +367,22 @@
                 min: 0,
                 max: 6,
                 category: 'low_match',
-                title: 'Owlnest Lume may be an occasional fit for your night.',
-                copy: 'Your answers suggest your current evening setup may already feel fairly low-stimulation. Lume may still be useful for occasional reading, travel, or moments when you want softer light without turning the room fully on.'
+                title: 'Your bedroom may already be relatively sleep-friendly.',
+                copy: 'Owlnest Lume may be less essential as your main sleep light, but its night-friendly spectrum can still work beautifully where harsh overhead light breaks the mood: a bath, shower wind-down, spa corner, meditation space, or guest room.'
             },
             {
                 min: 7,
                 max: 13,
                 category: 'moderate_match',
-                title: 'Owlnest Lume may fit your bedtime routine.',
-                copy: 'Your answers suggest your room sometimes stays brighter or more active than you want before bed. Lume may be a good fit if you want a simpler sleep-supporting light for the hours before sleep.'
+                title: 'Your room may be sending mixed signals at night.',
+                copy: 'Your room may not be extreme, but mixed light, screens, or overhead brightness can still send the wrong signal at night. Owlnest Lume can support your bedroom or relaxation zone with a calmer sleep spectrum made for nighttime.'
             },
             {
                 min: 14,
                 max: 20,
                 category: 'strong_match',
                 title: 'Owlnest Lume may be a strong fit for your night.',
-                copy: 'Your answers suggest your evening routine often includes light, screens, or room activity when your body is trying to slow down. Lume is made for those hours before bed, when you still need light but do not want the room to feel like daytime.'
+                copy: 'Your answers suggest your room may still be sending a daytime-like signal at night. Owlnest Lume is designed as a sleep spectrum lamp made to stay on while you sleep, helping add the right night-friendly signal.'
             }
         ];
 
@@ -380,13 +391,13 @@
         const progressBar = document.getElementById('progress-bar');
         const prevButton = document.getElementById('prev-question');
         const nextButton = document.getElementById('next-question');
+        const resultChoicePanel = document.getElementById('result-choice-panel');
+        const chooseQuizResultButton = document.getElementById('choose-quiz-result');
+        const chooseAiResultButton = document.getElementById('choose-ai-result');
         const leadPanel = document.getElementById('lead-panel');
         const fullResultPanel = document.getElementById('full-result-panel');
-        const basicResultTitle = document.getElementById('basic-result-title');
-        const basicResultCopy = document.getElementById('basic-result-copy');
         const fullResultTitle = document.getElementById('full-result-title');
         const fullResultCopy = document.getElementById('full-result-copy');
-        const basicResultStatus = document.getElementById('basic-result-status');
         const fullResultStatus = document.getElementById('full-result-status');
         const form = document.getElementById('room-check-form');
         const formMessage = document.getElementById('form-message');
@@ -395,12 +406,19 @@
         const consentError = document.getElementById('consent-error');
         const photoAnalysisPanel = document.getElementById('photo-analysis-panel');
         const quizActions = document.getElementById('quiz-actions');
+        const sessionIdField = document.getElementById('sleep-check-session-id');
+        const leadStageField = document.getElementById('lead-stage-field');
         const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
         const maxPhotoBytes = 8 * 1024 * 1024;
         const allowedPhotoTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
         let current = 0;
         const answers = {};
         let aiAnalysisState = null;
+        let selectedResultMode = 'undecided';
+        let capturedEmail = '';
+        let resultEmailSent = false;
+        const sleepCheckSessionId = createSessionId();
+        if (sessionIdField) sessionIdField.value = sleepCheckSessionId;
 
         panelsWrap.innerHTML = questions.map((question, index) => `
             <div class="question-panel ${index === 0 ? 'is-active' : ''}" data-question-index="${index}">
@@ -477,6 +495,11 @@
             return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())} local time`;
         }
 
+        function createSessionId() {
+            if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+            return `sleep-check-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+        }
+
         function populateSubmissionFields(date = new Date()) {
             const score = totalScore();
             const result = getResult(score);
@@ -492,6 +515,7 @@
             document.getElementById('page-source-field').value = window.location.href;
             document.getElementById('language-field').value = document.documentElement.lang || 'en';
             document.getElementById('quiz-score-40-field').value = String(quizScore40());
+            if (sessionIdField) sessionIdField.value = sleepCheckSessionId;
             return result;
         }
 
@@ -522,6 +546,18 @@
                 'ai-product-guidance-field',
                 'ai-confidence-field'
             ].forEach(id => setFieldValue(id, ''));
+        }
+
+        function prepareAiPendingFields() {
+            resetAiFields();
+            setFieldValue('analysis-mode-field', 'ai_photo_pending');
+            setFieldValue('ai-photo-uploaded-field', 'pending');
+        }
+
+        function prepareUndecidedFields() {
+            resetAiFields();
+            setFieldValue('analysis-mode-field', 'undecided');
+            setFieldValue('ai-photo-uploaded-field', '');
         }
 
         function writeAiFields(analysis) {
@@ -615,16 +651,16 @@
             }
         }
 
-        function renderLeadResult(result, analysis = null) {
+        function renderFinalResult(result, analysis = null) {
             if (analysis) {
-                basicResultTitle.textContent = trimText(analysis.combined_result_title || analysis.archetype_name || result.title, 100);
-                renderCopyBlock(basicResultCopy, analysis.summary, analysis.product_guidance, analysis.observed_light_issues);
-                renderAiStatus(basicResultStatus, analysis);
+                fullResultTitle.textContent = trimText(analysis.combined_result_title || analysis.archetype_name || result.title, 100);
+                renderCopyBlock(fullResultCopy, analysis.summary, analysis.product_guidance, analysis.observed_light_issues);
+                renderAiStatus(fullResultStatus, analysis);
                 return;
             }
-            basicResultTitle.textContent = result.title;
-            renderCopyBlock(basicResultCopy, result.copy);
-            renderResultStatus(basicResultStatus, result);
+            fullResultTitle.textContent = result.title;
+            renderCopyBlock(fullResultCopy, result.copy);
+            renderResultStatus(fullResultStatus, result);
         }
 
         function currentResultEmailPayload(email) {
@@ -635,6 +671,8 @@
             return {
                 email,
                 first_name: '',
+                sleep_check_session_id: sleepCheckSessionId,
+                lead_stage: get('lead-stage-field'),
                 analysis_mode: get('analysis-mode-field') || 'quiz_only',
                 quiz_result_category: get('result-category'),
                 raw_quiz_score: get('quiz-score'),
@@ -673,20 +711,116 @@
             }
         }
 
-        function showLeadCapture() {
-            const result = populateSubmissionFields();
-            renderLeadResult(result, aiAnalysisState);
-            leadPanel.classList.add('is-visible');
-            quizActions.style.display = 'none';
+        function hideAllPostQuizPanels() {
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            leadPanel.classList.remove('is-visible');
+            fullResultPanel.classList.remove('is-visible');
+        }
+
+        function showResultChoiceStep() {
+            document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
             panelsWrap.style.display = 'none';
-            if (photoAnalysisPanel) photoAnalysisPanel.classList.add('hidden');
-            progressLabel.textContent = aiAnalysisState ? 'Your AI room-light result is ready' : 'Your Lume Fit Result is ready';
+            quizActions.style.display = 'none';
+            hideAllPostQuizPanels();
+            resultChoicePanel?.classList.remove('hidden');
+            progressLabel.textContent = 'Choose your result';
             progressBar.style.width = '100%';
         }
 
-        function showQuizOnlyResult() {
-            resetAiFields();
-            showLeadCapture();
+        function showEmailGate(mode) {
+            selectedResultMode = mode;
+            populateSubmissionFields();
+            if (mode === 'ai_photo') {
+                prepareAiPendingFields();
+            } else if (mode === 'undecided') {
+                prepareUndecidedFields();
+            } else {
+                resetAiFields();
+            }
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            fullResultPanel.classList.remove('is-visible');
+            leadPanel.classList.add('is-visible');
+            form.style.display = '';
+            formMessage.textContent = '';
+            formMessage.className = 'mt-3 text-sm text-white/60';
+            submitButton.disabled = false;
+            submitButton.textContent = mode === 'ai_photo' ? 'Analyze my room light' : mode === 'quiz_only' ? 'Show my result' : 'Continue';
+            progressLabel.textContent = 'Result delivery';
+            progressBar.style.width = '100%';
+        }
+
+        function showFinalResult(email, analysis = null) {
+            const result = populateSubmissionFields();
+            renderFinalResult(result, analysis);
+            leadPanel.classList.remove('is-visible');
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            fullResultPanel.classList.add('is-visible');
+            progressLabel.textContent = analysis ? 'Your AI room-light result is ready' : 'Your questionnaire result is ready';
+            progressBar.style.width = '100%';
+            const emailStatus = document.getElementById('result-email-status');
+            if (emailStatus) {
+                emailStatus.textContent = email
+                    ? `We've sent a copy of your result to ${email}.`
+                    : "We've sent a copy of your result to your inbox.";
+            }
+        }
+
+        async function submitLead(stage, email) {
+            const submittedAt = new Date();
+            populateSubmissionFields(submittedAt);
+            setFieldValue('lead-stage-field', stage);
+            const data = new URLSearchParams(new FormData(form));
+            data.set('form-name', 'sleep-ready-room-check');
+            data.set('sleep_check_session_id', sleepCheckSessionId);
+            data.set('lead_stage', stage);
+            data.set('email', email);
+            data.set('timestamp', submittedAt.toISOString());
+            data.set('timestamp_local', localTimestamp(submittedAt));
+            data.set('page_source', window.location.href);
+            data.set('language', document.documentElement.lang || 'en');
+            data.set('consent', 'yes');
+
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: data.toString()
+            });
+            if (!response.ok) throw new Error('Submission failed');
+        }
+
+        async function sendCapturedResultEmail(email) {
+            resultEmailSent = await sendResultEmail(currentResultEmailPayload(email));
+            const emailStatus = document.getElementById('result-email-status');
+            if (emailStatus && !resultEmailSent) {
+                emailStatus.textContent = "Your result is ready. We could not send the email copy right now, but you can still review it here.";
+            }
+            return resultEmailSent;
+        }
+
+        async function runPhotoAnalysis() {
+            const input = document.getElementById('sleep-environment-photo');
+            const file = input?.files && input.files[0];
+            if (!file) throw new Error('Missing room photo');
+
+            const formData = new FormData();
+            formData.set('photo', file);
+            formData.set('language', 'en');
+            formData.set('raw_quiz_score', String(totalScore()));
+            formData.set('quiz_score_40', String(quizScore40()));
+            formData.set('result_category', getResult(totalScore()).category);
+            formData.set('answers_json', JSON.stringify(answerPayload()));
+            formData.set('answers_text', readableAnswers());
+
+            const response = await fetch(aiEndpoint, { method: 'POST', body: formData });
+            const analysis = await response.json().catch(() => null);
+            if (!response.ok || !analysis || analysis.success === false) {
+                throw new Error('AI room-light analysis unavailable');
+            }
+            writeAiFields(analysis);
+            return analysis;
         }
 
         function setPhotoMessage(message, tone = 'muted') {
@@ -697,11 +831,13 @@
         }
 
         function showPhotoAnalysisStep() {
-            resetAiFields();
+            prepareAiPendingFields();
             document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
             panelsWrap.style.display = 'none';
             quizActions.style.display = 'none';
+            resultChoicePanel?.classList.add('hidden');
             leadPanel.classList.remove('is-visible');
+            fullResultPanel.classList.remove('is-visible');
             if (photoAnalysisPanel) photoAnalysisPanel.classList.remove('hidden');
             progressLabel.textContent = 'Optional AI room-light check';
             progressBar.style.width = '100%';
@@ -710,16 +846,16 @@
         function setupPhotoAnalysisStep() {
             const input = document.getElementById('sleep-environment-photo');
             const analyzeButton = document.getElementById('analyze-photo');
-            const continueButton = document.getElementById('continue-quiz-only');
+            const backButton = document.getElementById('back-to-result-choice');
             const removeButton = document.getElementById('remove-photo');
             const previewWrap = document.getElementById('photo-preview-wrap');
             const preview = document.getElementById('photo-preview');
             const consent = document.getElementById('photo-analysis-consent');
             const selectedPhotoName = document.getElementById('selected-photo-name');
-            if (!input || !analyzeButton || !continueButton || !consent) return;
+            if (!input || !analyzeButton || !backButton || !consent) return;
 
             function refreshAnalyzeState() {
-                analyzeButton.disabled = !input.files || !input.files[0] || !consent.checked;
+                analyzeButton.disabled = !capturedEmail || !input.files || !input.files[0] || !consent.checked;
             }
 
             function clearPhoto() {
@@ -762,7 +898,7 @@
 
             consent.addEventListener('change', refreshAnalyzeState);
             removeButton?.addEventListener('click', clearPhoto);
-            continueButton.addEventListener('click', showQuizOnlyResult);
+            backButton.addEventListener('click', showResultChoiceStep);
 
             analyzeButton.addEventListener('click', async () => {
                 const file = input.files && input.files[0];
@@ -775,32 +911,20 @@
                     return;
                 }
 
+                setPhotoMessage('');
+                selectedResultMode = 'ai_photo';
                 analyzeButton.disabled = true;
-                continueButton.disabled = true;
-                setPhotoMessage('Analyzing your bedtime light environment...');
-
-                const formData = new FormData();
-                formData.set('photo', file);
-                formData.set('language', 'en');
-                formData.set('raw_quiz_score', String(totalScore()));
-                formData.set('quiz_score_40', String(quizScore40()));
-                formData.set('result_category', getResult(totalScore()).category);
-                formData.set('answers_json', JSON.stringify(answerPayload()));
-                formData.set('answers_text', readableAnswers());
-
+                backButton.disabled = true;
+                setPhotoMessage('Analyzing your room light...');
                 try {
-                    const response = await fetch(aiEndpoint, { method: 'POST', body: formData });
-                    const analysis = await response.json().catch(() => null);
-                    if (!response.ok || !analysis || analysis.success === false) {
-                        throw new Error('AI room-light analysis unavailable');
-                    }
-                    writeAiFields(analysis);
-                    showLeadCapture();
-                } catch (error) {
-                    setPhotoMessage('Photo analysis could not complete. You can continue with your quiz-only result.', 'warning');
-                    showQuizOnlyResult();
-                } finally {
-                    continueButton.disabled = false;
+                    const analysis = await runPhotoAnalysis();
+                    await submitLead('ai_photo_result', capturedEmail);
+                    showFinalResult(capturedEmail, analysis);
+                    await sendCapturedResultEmail(capturedEmail);
+                } catch {
+                    setPhotoMessage('Photo analysis could not complete. Please try again or continue without photo.', 'warning');
+                    analyzeButton.disabled = false;
+                    backButton.disabled = false;
                     refreshAnalyzeState();
                 }
             });
@@ -831,9 +955,24 @@
                 current += 1;
                 updateView();
             } else {
-                showPhotoAnalysisStep();
+                showEmailGate('undecided');
             }
         });
+
+        chooseQuizResultButton?.addEventListener('click', async () => {
+            selectedResultMode = 'quiz_only';
+            resetAiFields();
+            try {
+                await submitLead('quiz_only_result', capturedEmail);
+                showFinalResult(capturedEmail);
+                await sendCapturedResultEmail(capturedEmail);
+            } catch {
+                formMessage.textContent = 'Something went wrong. Please try again.';
+                formMessage.className = 'mt-3 text-sm text-amber';
+                showEmailGate('undecided');
+            }
+        });
+        chooseAiResultButton?.addEventListener('click', showPhotoAnalysisStep);
 
         form.addEventListener('submit', async event => {
             event.preventDefault();
@@ -853,43 +992,30 @@
                 return;
             }
             submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-
-            const submittedAt = new Date();
-            populateSubmissionFields(submittedAt);
+            submitButton.textContent = selectedResultMode === 'ai_photo' ? 'Analyzing...' : 'Preparing...';
             const emailValue = emailInput.value.trim();
-            const data = new URLSearchParams(new FormData(form));
-            data.set('form-name', 'sleep-ready-room-check');
-            data.set('email', emailValue);
-            data.set('timestamp', submittedAt.toISOString());
-            data.set('timestamp_local', localTimestamp(submittedAt));
-            data.set('page_source', window.location.href);
-            data.set('language', document.documentElement.lang || 'en');
-            data.set('consent', 'yes');
+            capturedEmail = emailValue;
 
             try {
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: data.toString()
-                });
-                if (!response.ok) throw new Error('Submission failed');
-                fullResultPanel.classList.remove('is-visible');
-                document.getElementById('submit-success-panel').classList.add('is-visible');
-                form.style.display = 'none';
-                formMessage.textContent = '';
-                const emailStatus = document.getElementById('result-email-status');
-                const emailSent = await sendResultEmail(currentResultEmailPayload(emailValue));
-                if (emailStatus) {
-                    emailStatus.textContent = emailSent
-                        ? 'Your result email is on its way.'
-                        : 'Your result was saved. We will keep you updated with Owlnest Lume launch news and early-bird access.';
+                if (selectedResultMode === 'undecided') {
+                    prepareUndecidedFields();
+                    await submitLead('email_gate_completed', emailValue);
+                    leadPanel.classList.remove('is-visible');
+                    showResultChoiceStep();
+                } else {
+                    resetAiFields();
+                    await submitLead('quiz_only_result', emailValue);
+                    showFinalResult(emailValue);
+                    await sendCapturedResultEmail(emailValue);
                 }
+                formMessage.textContent = '';
             } catch (error) {
-                formMessage.textContent = 'Something went wrong. Please try again.';
+                formMessage.textContent = selectedResultMode === 'ai_photo'
+                    ? 'Something went wrong with the photo analysis. Please try again or choose the questionnaire result.'
+                    : 'Something went wrong. Please try again.';
                 formMessage.className = 'mt-3 text-sm text-amber';
                 submitButton.disabled = false;
-                submitButton.textContent = 'Send me my result and early access';
+                submitButton.textContent = selectedResultMode === 'ai_photo' ? 'Analyze my room light' : selectedResultMode === 'quiz_only' ? 'Show my result' : 'Continue';
             }
         });
 
