@@ -52,10 +52,11 @@ Copy style:
 - Write for a consumer quiz result card, not a report.
 - Use plain English for US consumers unless Traditional Chinese is requested.
 - Keep archetype_name to 2-5 words.
-- Keep combined_result_title under 90 characters.
-- Keep summary under 240 characters.
-- Keep product_guidance under 240 characters.
-- Use 1-2 short sentences only.
+- Keep combined_result_title to 6-9 English words when possible. It should feel like a result title, not a report heading.
+- Keep summary to no more than 2 short sentences and 45-55 words. Mention the room light condition, why it matters at night, and what signal the room sends.
+- Keep observed_light_issues to at most 3 concise bullets, 8-12 words each.
+- Keep product_guidance to 2-3 short sentences. Match low, moderate, or high risk without hard selling.
+- Keep every sentence short and easy to scan.
 - Avoid long paragraphs, repeated ideas, and technical over-explaining.
 - Do not say the room "needs" Owlnest Lume.
 - Mention Owlnest Lume only as a possible fit, not a required solution.
@@ -212,8 +213,8 @@ If a dark room has clear blue/cool screen or TV light reflected on the user, bed
 If the "blue" is mainly outdoor dusk/twilight color seen through a window, and the indoor light is warm around 2200K-2700K, the photo_score_60 should usually be around 30-38, not 42-55.
 User-facing copy should say room or bedtime environment, not photo or image.
 If the environment is 1500K/Lume-like or shows Lume, lower sales pressure internally but do not say this explicitly. Explain how a stable night-friendly sleep spectrum can reduce the need for harsher overhead or screen-heavy light.
-Keep visible result copy card-friendly: combined_result_title under 90 characters, summary under 240 characters, product_guidance under 240 characters, main_light_source under 80 characters, and at most 3 observed_light_issues under 80 characters each.
-Use product_guidance as 1-2 short practical suggestions. Match guidance to risk level: low risk should include alternate spaces such as bath, shower wind-down, spa corner, meditation space, guest room, or bathroom night routine; moderate risk can suggest bedroom or relaxation-zone use; high risk can recommend Lume for the bedroom sleep environment as a sleep spectrum lamp made to stay on while sleeping. Do not write a long paragraph.`;
+Keep visible result copy card-friendly: combined_result_title should be 6-9 words when possible; summary should be no more than 2 short sentences and 45-55 words; product_guidance should be 2-3 short sentences; main_light_source under 80 characters; observed_light_issues should have at most 3 concise bullets, 8-12 words each.
+Use product_guidance as short practical guidance. Match guidance to risk level: low risk should include alternate spaces such as bath, shower wind-down, spa corner, meditation space, guest room, or bathroom night routine; moderate risk can suggest bedroom or relaxation-zone use; high risk can recommend Lume for the bedroom sleep environment as a sleep spectrum lamp made to stay on while sleeping. Do not write a long paragraph.`;
 }
 
 function parseMultipartEvent(event) {

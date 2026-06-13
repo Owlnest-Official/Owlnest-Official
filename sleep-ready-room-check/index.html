@@ -13,7 +13,7 @@
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owlnest Lume Fit Check | Owlnest</title>
-    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check from Owlnest Lume, a sleep-supporting spectrum lamp designed for the hours before bed.">
+    <meta name="description" content="Take Owlnest's 60-second Sleep-Ready Room Check from Owlnest Lume, a sleep spectrum lamp made to stay on through the night.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/sleep-ready-room-check/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/sleep-ready-room-check/">
@@ -217,12 +217,12 @@
                                 <article class="rounded-2xl border border-white/12 bg-midnight/45 p-4">
                                     <h3 class="font-serif text-2xl text-white">Questionnaire result</h3>
                                     <p class="mt-3 text-sm text-white/62 leading-relaxed">A fast read based on your answers.</p>
-                                    <button id="choose-quiz-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">View questionnaire result</button>
+                                    <button id="choose-quiz-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">Continue without photo</button>
                                 </article>
                                 <article class="rounded-2xl border border-amber/35 bg-amber/10 p-4">
                                     <h3 class="font-serif text-2xl text-white">AI room light analysis</h3>
                                     <p class="mt-3 text-sm text-white/62 leading-relaxed">Upload a room photo so AI can read visible light sources, screens, and glow.</p>
-                                    <button id="choose-ai-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-white/18 px-5 text-white text-xs font-bold uppercase tracking-[0.12em] hover:border-amber hover:text-amber">Add AI photo check</button>
+                                    <button id="choose-ai-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-white/18 px-5 text-white text-xs font-bold uppercase tracking-[0.12em] hover:border-amber hover:text-amber">Add AI photo analysis</button>
                                 </article>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                                 <p id="photo-analysis-message" class="text-sm text-white/60" role="status" aria-live="polite"></p>
 
                                 <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
-                                    <button id="analyze-photo" type="button" class="min-h-12 rounded-xl bg-amber px-6 py-3 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50" disabled>Continue to AI analysis</button>
+                                    <button id="analyze-photo" type="button" class="min-h-12 rounded-xl bg-amber px-6 py-3 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50" disabled>Analyze my room light</button>
                                     <button id="back-to-result-choice" type="button" class="min-h-12 rounded-xl border border-white/12 px-6 py-3 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">Back to result options</button>
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                     </section>
 
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
-                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
                             <input type="hidden" name="sleep_check_session_id" id="sleep-check-session-id">
                             <input type="hidden" name="lead_stage" id="lead-stage-field">
@@ -305,11 +305,12 @@
 
                             <h3 class="font-serif text-2xl text-white">Where should we send your result?</h3>
                             <p class="mt-3 text-sm text-white/62 leading-relaxed">Enter your email to receive your Sleep-Ready result.</p>
+                            <p class="mt-2 text-xs text-white/45 leading-relaxed">You can continue with your questionnaire result or add an AI room-light analysis after this step.</p>
 
                             <div class="mt-5 flex flex-col sm:flex-row gap-3">
                                 <label class="sr-only" for="room-check-email">Email address</label>
-                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
-                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Show my result</button>
+                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
+                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">Continue</button>
                             </div>
 
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
@@ -413,7 +414,7 @@
         let current = 0;
         const answers = {};
         let aiAnalysisState = null;
-        let selectedResultMode = 'quiz_only';
+        let selectedResultMode = 'undecided';
         let capturedEmail = '';
         let resultEmailSent = false;
         const sleepCheckSessionId = createSessionId();
@@ -551,6 +552,12 @@
             resetAiFields();
             setFieldValue('analysis-mode-field', 'ai_photo_pending');
             setFieldValue('ai-photo-uploaded-field', 'pending');
+        }
+
+        function prepareUndecidedFields() {
+            resetAiFields();
+            setFieldValue('analysis-mode-field', 'undecided');
+            setFieldValue('ai-photo-uploaded-field', '');
         }
 
         function writeAiFields(analysis) {
@@ -712,7 +719,6 @@
         }
 
         function showResultChoiceStep() {
-            resetAiFields();
             document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
             panelsWrap.style.display = 'none';
             quizActions.style.display = 'none';
@@ -727,6 +733,8 @@
             populateSubmissionFields();
             if (mode === 'ai_photo') {
                 prepareAiPendingFields();
+            } else if (mode === 'undecided') {
+                prepareUndecidedFields();
             } else {
                 resetAiFields();
             }
@@ -738,7 +746,7 @@
             formMessage.textContent = '';
             formMessage.className = 'mt-3 text-sm text-white/60';
             submitButton.disabled = false;
-            submitButton.textContent = mode === 'ai_photo' ? 'Continue to AI analysis' : 'Show my result';
+            submitButton.textContent = mode === 'ai_photo' ? 'Analyze my room light' : mode === 'quiz_only' ? 'Show my result' : 'Continue';
             progressLabel.textContent = 'Result delivery';
             progressBar.style.width = '100%';
         }
@@ -847,7 +855,7 @@
             if (!input || !analyzeButton || !backButton || !consent) return;
 
             function refreshAnalyzeState() {
-                analyzeButton.disabled = !input.files || !input.files[0] || !consent.checked;
+                analyzeButton.disabled = !capturedEmail || !input.files || !input.files[0] || !consent.checked;
             }
 
             function clearPhoto() {
@@ -892,7 +900,7 @@
             removeButton?.addEventListener('click', clearPhoto);
             backButton.addEventListener('click', showResultChoiceStep);
 
-            analyzeButton.addEventListener('click', () => {
+            analyzeButton.addEventListener('click', async () => {
                 const file = input.files && input.files[0];
                 if (!file) {
                     setPhotoMessage('Please choose a room photo first.', 'warning');
@@ -904,7 +912,21 @@
                 }
 
                 setPhotoMessage('');
-                showEmailGate('ai_photo');
+                selectedResultMode = 'ai_photo';
+                analyzeButton.disabled = true;
+                backButton.disabled = true;
+                setPhotoMessage('Analyzing your room light...');
+                try {
+                    const analysis = await runPhotoAnalysis();
+                    await submitLead('ai_photo_result', capturedEmail);
+                    showFinalResult(capturedEmail, analysis);
+                    await sendCapturedResultEmail(capturedEmail);
+                } catch {
+                    setPhotoMessage('Photo analysis could not complete. Please try again or continue without photo.', 'warning');
+                    analyzeButton.disabled = false;
+                    backButton.disabled = false;
+                    refreshAnalyzeState();
+                }
             });
 
             refreshAnalyzeState();
@@ -933,11 +955,23 @@
                 current += 1;
                 updateView();
             } else {
-                showResultChoiceStep();
+                showEmailGate('undecided');
             }
         });
 
-        chooseQuizResultButton?.addEventListener('click', () => showEmailGate('quiz_only'));
+        chooseQuizResultButton?.addEventListener('click', async () => {
+            selectedResultMode = 'quiz_only';
+            resetAiFields();
+            try {
+                await submitLead('quiz_only_result', capturedEmail);
+                showFinalResult(capturedEmail);
+                await sendCapturedResultEmail(capturedEmail);
+            } catch {
+                formMessage.textContent = 'Something went wrong. Please try again.';
+                formMessage.className = 'mt-3 text-sm text-amber';
+                showEmailGate('undecided');
+            }
+        });
         chooseAiResultButton?.addEventListener('click', showPhotoAnalysisStep);
 
         form.addEventListener('submit', async event => {
@@ -963,15 +997,11 @@
             capturedEmail = emailValue;
 
             try {
-                if (selectedResultMode === 'ai_photo') {
-                    prepareAiPendingFields();
-                    await submitLead('ai_photo_email_gate', emailValue);
-                    formMessage.textContent = 'Analyzing your room light...';
-                    formMessage.className = 'mt-3 text-sm text-white/60';
-                    const analysis = await runPhotoAnalysis();
-                    await submitLead('ai_photo_result', emailValue);
-                    showFinalResult(emailValue, analysis);
-                    await sendCapturedResultEmail(emailValue);
+                if (selectedResultMode === 'undecided') {
+                    prepareUndecidedFields();
+                    await submitLead('email_gate_completed', emailValue);
+                    leadPanel.classList.remove('is-visible');
+                    showResultChoiceStep();
                 } else {
                     resetAiFields();
                     await submitLead('quiz_only_result', emailValue);
@@ -985,7 +1015,7 @@
                     : 'Something went wrong. Please try again.';
                 formMessage.className = 'mt-3 text-sm text-amber';
                 submitButton.disabled = false;
-                submitButton.textContent = selectedResultMode === 'ai_photo' ? 'Continue to AI analysis' : 'Show my result';
+                submitButton.textContent = selectedResultMode === 'ai_photo' ? 'Analyze my room light' : selectedResultMode === 'quiz_only' ? 'Show my result' : 'Continue';
             }
         });
 
