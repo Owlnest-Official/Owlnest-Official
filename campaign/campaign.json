@@ -1,20 +1,45 @@
 {
-  "status": "prelaunch",
+  "status": "preorder_live",
   "active": true,
   "lang": "en",
-  "title": "Owlnest Lume: Sleep-Supporting Spectrum Lamp",
-  "subtitle": "Designed for the 1 to 2 hours before bed with a deep amber, low-blue spectrum.",
-  "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep-supporting spectrum lamp tuned to help you sleep, not just see.",
-  "notice": "Owlnest Lume is preparing for a clearer crowdfunding relaunch. Join the early list on the campaign page for first access before the public launch.",
-  "pricingPreviewEnabled": false,
+  "title": "Owlnest Lume: Sleep Spectrum Lamp",
+  "subtitle": "A melatonin-supporting sleep spectrum lamp made to stay on while you sleep.",
+  "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep spectrum lamp tuned for night-friendly sleep.",
+  "notice": "Owlnest Lume preorder is open now. Choose Single Lume or Duo Lume inside PayPal checkout.",
+  "preorder": {
+    "enabled": true,
+    "paymentEnabled": true,
+    "preorderIsLive": true,
+    "paymentProvider": "paypal",
+    "paymentUrl": "https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A",
+    "closesAt": "2026-07-20T23:59:00-04:00",
+    "timezoneLabel": "New York time",
+    "ctaLive": "Preorder Now",
+    "pricing": [
+      {
+        "name": "Single Lume",
+        "quantity": "1 × Owlnest Lume",
+        "price": "$59",
+        "currency": "USD"
+      },
+      {
+        "name": "Duo Lume",
+        "quantity": "2 × Owlnest Lume",
+        "price": "$100",
+        "currency": "USD"
+      }
+    ],
+    "shippingCopy": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026.",
+    "finePrint": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
+  },
   "heroPricing": {
-    "eyebrow": "Crowdfunding Relaunch",
-    "main": "Early access opening soon",
-    "subtext": "Join the early list before the public launch"
+    "eyebrow": "Preorder Open Now",
+    "main": "Single Lume $59 / Duo Lume $100",
+    "subtext": "Choose Single or Duo inside PayPal"
   },
   "platformCta": {
-    "label": "Get Early Access",
-    "href": "/campaign/"
+    "label": "Preorder Now",
+    "href": "https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A"
   },
   "secondaryCta": {
     "label": "Read Science & FAQ",
@@ -26,103 +51,38 @@
     "backers": null,
     "daysLeft": null
   },
-  "tiers": [
-    {
-      "name": "Ultra Early Bird",
-      "badge": "Best Deal",
-      "price": 59,
-      "retailPrice": 119,
-      "bullets": [
-        "1x Owlnest Lume",
-        "Lowest launch price",
-        "Limited quantity"
-      ],
-      "ctaLabel": "Join the Early List",
-      "ctaHref": "/campaign/",
-      "featured": true
-    },
-    {
-      "name": "Super Early Bird",
-      "badge": "Popular",
-      "price": 69,
-      "retailPrice": 119,
-      "bullets": [
-        "1x Owlnest Lume",
-        "Early supporter pricing",
-        "Limited quantity"
-      ],
-      "ctaLabel": "Join the Early List",
-      "ctaHref": "/campaign/"
-    },
-    {
-      "name": "Early Bird",
-      "badge": "Launch Price",
-      "price": 79,
-      "retailPrice": 119,
-      "bullets": [
-        "1x Owlnest Lume",
-        "Relaunch access details",
-        "Limited quantity"
-      ],
-      "ctaLabel": "Join the Early List",
-      "ctaHref": "/campaign/"
-    },
-    {
-      "name": "Standard Backer",
-      "badge": "Campaign Price",
-      "price": 89,
-      "retailPrice": 119,
-      "bullets": [
-        "1x Owlnest Lume",
-        "Available after early tiers",
-        "Campaign pricing"
-      ],
-      "ctaLabel": "Join the Early List",
-      "ctaHref": "/campaign/"
-    }
-  ],
   "timeline": [
     {
-      "date": "Now",
-      "title": "Relaunch Preparation",
-      "text": "Owlnest Lume is preparing for a clearer crowdfunding relaunch with sharper positioning and product proof."
+      "date": "July 20, 2026",
+      "title": "Preorder Closes",
+      "text": "The preorder window closes at 11:59 PM New York time."
     },
     {
-      "date": "TBA",
-      "title": "Production Preparation",
-      "text": "Final production scheduling, QA checks, and packaging preparation."
-    },
-    {
-      "date": "TBA",
-      "title": "Mass Production",
-      "text": "Manufacturing and final assembly begin."
-    },
-    {
-      "date": "TBA",
-      "title": "Shipping",
-      "text": "Orders begin shipping to supported regions."
+      "date": "After Closing",
+      "title": "Fulfillment Preparation",
+      "text": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026."
     }
   ],
   "faq": [
     {
       "q": "What is Owlnest Lume?",
-      "a": "Owlnest Lume is a sleep-supporting spectrum lamp designed for nighttime use, especially during the 1 to 2 hours before bed."
+      "a": "Owlnest Lume is a melatonin-supporting sleep spectrum lamp made to stay on while you sleep."
     },
     {
       "q": "How is Owlnest Lume different from a normal warm lamp or night light?",
-      "a": "Owlnest Lume is designed around a deep amber, low-blue spectrum for evening use. It is meant to feel gentler and more sleep-compatible than ordinary bright or generic warm lighting."
+      "a": "Owlnest Lume is designed around a night-friendly sleep spectrum. It is made for sleep, not just visibility."
     },
     {
-      "q": "Do you ship internationally?",
-      "a": "We plan to ship to select regions including the US, UK, EU, and Taiwan. Final shipping costs and supported destinations will be confirmed at launch."
+      "q": "When does preorder close?",
+      "a": "The preorder window closes July 20, 2026 at 11:59 PM New York time."
     },
     {
-      "q": "How do I join the Discord community?",
-      "a": "Our Discord is optional and open to anyone who wants to follow the project. Verified owners can request product-owner access after delivery through the Member Portal."
+      "q": "Are shipping and taxes included today?",
+      "a": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
     },
     {
       "q": "Is there a warranty?",
-      "a": "All campaign orders are expected to include a standard 1-year limited warranty covering manufacturing defects."
+      "a": "Preorder units are expected to include a standard 1-year limited warranty covering manufacturing defects."
     }
   ]
 }
