@@ -778,6 +778,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const header = document.getElementById('main-header');
         const navLogo = document.getElementById('nav-logo');
         let isScrolling = false;
+        const PAYPAL_PREORDER_URL = 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A';
+
+        function owlnestTrack(eventName, params = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        document.querySelectorAll(`a[href="${PAYPAL_PREORDER_URL}"]`).forEach(link => {
+            link.addEventListener('click', () => {
+                const section = link.closest('section');
+                owlnestTrack('preorder_paypal_click', {
+                    source_page: 'products',
+                    source_section: section?.id || 'products_preorder',
+                    cta_text: 'Preorder Now',
+                    destination: 'paypal',
+                    payment_provider: 'paypal',
+                    product_name: 'Owlnest Lume',
+                    currency: 'USD',
+                    single_price: 59,
+                    duo_price: 100,
+                    preorder_status: 'open'
+                });
+            });
+        });
 
         function updateUI() {
             const headerHeight = header ? header.offsetHeight : 80;

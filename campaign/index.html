@@ -1131,12 +1131,25 @@
         const params = new URLSearchParams(window.location.search);
         const utmValues = Object.fromEntries(utmKeys.map((key) => [key, params.get(key) || '']));
 
-        function trackEvent(name, details = {}) {
+        function owlnestTrack(eventName, params = {}) {
             window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({ event: name, ...details });
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        function trackEvent(name, details = {}) {
+            owlnestTrack(name, details);
         }
 
         trackEvent('view_prelaunch_campaign', { page_path: window.location.pathname });
+        owlnestTrack('view_preorder_campaign', {
+            source_page: 'campaign',
+            preorder_status: 'open',
+            product_name: 'Owlnest Lume'
+        });
 
         const preorderConfig = {
             paymentUrl: 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A',
@@ -1170,12 +1183,31 @@
             });
         });
 
+        function preorderClickPayload(button) {
+            const sourceSection = button.closest('section')?.id || button.closest('form')?.dataset.sourceSection || 'campaign_nav';
+            return {
+                source_page: 'campaign',
+                source_section: sourceSection,
+                cta_text: 'Preorder Now',
+                destination: 'paypal',
+                payment_provider: 'paypal',
+                product_name: 'Owlnest Lume',
+                currency: 'USD',
+                single_price: 59,
+                duo_price: 100,
+                preorder_status: 'open'
+            };
+        }
+
         document.querySelectorAll('[data-track-click]').forEach((button) => {
             button.addEventListener('click', () => {
                 trackEvent(button.dataset.trackClick, {
                     source_section: button.closest('form')?.dataset.sourceSection || 'nav',
                     page_path: window.location.pathname
                 });
+                if (button.href === preorderConfig.paymentUrl) {
+                    owlnestTrack('preorder_paypal_click', preorderClickPayload(button));
+                }
             });
         });
 
@@ -1258,6 +1290,15 @@
                     trackEvent('submit_early_access_email', {
                         source_section: form.dataset.sourceSection || '',
                         page_path: window.location.pathname
+                    });
+                    owlnestTrack('campaign_email_submit', {
+                        source_page: 'campaign',
+                        lead_type: 'preorder_updates',
+                        preorder_status: 'open'
+                    });
+                    owlnestTrack('generate_lead', {
+                        source_page: 'campaign',
+                        lead_type: 'preorder_updates'
                     });
                     if (form.dataset.stayOnPage === 'true') {
                         setMessage(form, form.dataset.successMessage || 'You’re on the preorder list. We’ll email you shipping and production updates.', 'success');

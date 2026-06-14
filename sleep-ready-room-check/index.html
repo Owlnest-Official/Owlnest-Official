@@ -417,6 +417,9 @@
         let selectedResultMode = 'undecided';
         let capturedEmail = '';
         let resultEmailSent = false;
+        let sleepCheckStartTracked = false;
+        let aiPhotoStartTracked = false;
+        const resultViewTrackedModes = new Set();
         const sleepCheckSessionId = createSessionId();
         if (sessionIdField) sessionIdField.value = sleepCheckSessionId;
 
@@ -437,6 +440,23 @@
 
         function getResult(score) {
             return results.find(result => score >= result.min && score <= result.max) || results[0];
+        }
+
+        function owlnestTrack(eventName, params = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        function trackSleepCheckStart() {
+            if (sleepCheckStartTracked) return;
+            sleepCheckStartTracked = true;
+            owlnestTrack('sleep_check_start', {
+                source_page: 'sleep_ready_room_check'
+            });
         }
 
         function statusMeta(category) {
@@ -766,6 +786,26 @@
                     ? `We've sent a copy of your result to ${email}.`
                     : "We've sent a copy of your result to your inbox.";
             }
+            const resultMode = analysis ? 'ai_photo' : 'quiz_only';
+            if (!resultViewTrackedModes.has(resultMode)) {
+                resultViewTrackedModes.add(resultMode);
+                if (analysis) {
+                    owlnestTrack('sleep_check_ai_result_view', {
+                        source_page: 'sleep_ready_room_check',
+                        analysis_mode: 'ai_photo',
+                        ai_total_score_100: Number(analysis.total_score_100) || 0,
+                        ai_light_risk_level: analysis.light_risk_level || '',
+                        ai_archetype_id: analysis.archetype_id || ''
+                    });
+                } else {
+                    owlnestTrack('sleep_check_result_view', {
+                        source_page: 'sleep_ready_room_check',
+                        analysis_mode: 'quiz_only',
+                        result_category: result.category,
+                        quiz_score_40: quizScore40()
+                    });
+                }
+            }
         }
 
         async function submitLead(stage, email) {
@@ -831,6 +871,12 @@
         }
 
         function showPhotoAnalysisStep() {
+            if (!aiPhotoStartTracked) {
+                aiPhotoStartTracked = true;
+                owlnestTrack('sleep_check_ai_photo_start', {
+                    source_page: 'sleep_ready_room_check'
+                });
+            }
             prepareAiPendingFields();
             document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
             panelsWrap.style.display = 'none';
@@ -935,6 +981,7 @@
         panelsWrap.addEventListener('click', event => {
             const button = event.target.closest('.choice-card');
             if (!button) return;
+            trackSleepCheckStart();
             const questionId = button.dataset.questionId;
             answers[questionId] = {
                 label: button.dataset.label,
@@ -1000,6 +1047,15 @@
                 if (selectedResultMode === 'undecided') {
                     prepareUndecidedFields();
                     await submitLead('email_gate_completed', emailValue);
+                    owlnestTrack('sleep_check_email_submit', {
+                        source_page: 'sleep_ready_room_check',
+                        lead_type: 'sleep_check_result',
+                        analysis_mode: selectedResultMode || 'undecided'
+                    });
+                    owlnestTrack('generate_lead', {
+                        source_page: 'sleep_ready_room_check',
+                        lead_type: 'sleep_check_result'
+                    });
                     leadPanel.classList.remove('is-visible');
                     showResultChoiceStep();
                 } else {
