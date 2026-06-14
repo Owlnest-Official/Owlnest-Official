@@ -1,21 +1,20 @@
 {
-  "status": "preorder_waitlist",
+  "status": "preorder_live",
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Sleep Spectrum Lamp",
   "subtitle": "A melatonin-supporting sleep spectrum lamp made to stay on while you sleep.",
   "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep spectrum lamp tuned for night-friendly sleep.",
-  "notice": "Owlnest Lume preorder opens June 20, 2026 at 9:00 AM New York time.",
+  "notice": "Owlnest Lume preorder is open now. Choose Single Lume or Duo Lume inside PayPal checkout.",
   "preorder": {
     "enabled": true,
     "paymentEnabled": true,
+    "preorderIsLive": true,
     "paymentProvider": "paypal",
     "paymentUrl": "https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A",
-    "opensAt": "2026-06-20T09:00:00-04:00",
     "closesAt": "2026-07-20T23:59:00-04:00",
     "timezoneLabel": "New York time",
     "ctaLive": "Preorder Now",
-    "ctaBeforeOpen": "Join the Preorder List",
     "pricing": [
       {
         "name": "Single Lume",
@@ -34,12 +33,12 @@
     "finePrint": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
   },
   "heroPricing": {
-    "eyebrow": "Preorder Opens June 20",
+    "eyebrow": "Preorder Open Now",
     "main": "Single Lume $59 / Duo Lume $100",
-    "subtext": "Join the preorder list before checkout opens"
+    "subtext": "Choose Single or Duo inside PayPal"
   },
   "platformCta": {
-    "label": "Join the Preorder List",
+    "label": "Preorder Now",
     "href": "/campaign/#preorder"
   },
   "secondaryCta": {
@@ -53,11 +52,6 @@
     "daysLeft": null
   },
   "timeline": [
-    {
-      "date": "June 20, 2026",
-      "title": "Preorder Opens",
-      "text": "Preorder checkout opens at 9:00 AM New York time with Single Lume and Duo Lume options inside the same PayPal checkout."
-    },
     {
       "date": "July 20, 2026",
       "title": "Preorder Closes",
@@ -79,8 +73,8 @@
       "a": "Owlnest Lume is designed around a night-friendly sleep spectrum. It is made for sleep, not just visibility."
     },
     {
-      "q": "When does preorder open?",
-      "a": "Preorders open June 20, 2026 at 9:00 AM New York time and close July 20, 2026 at 11:59 PM New York time."
+      "q": "When does preorder close?",
+      "a": "The preorder window closes July 20, 2026 at 11:59 PM New York time."
     },
     {
       "q": "Are shipping and taxes included today?",
