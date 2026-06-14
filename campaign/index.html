@@ -784,12 +784,18 @@
                         Deep amber.<br>Low-blue.<br>No app.<br>No screen.
                     </p>
                     <p class="mt-3 sm:mt-5 text-sm sm:text-base text-amber font-bold">Preorder is open now.<br>Choose Single or Duo inside PayPal.</p>
+                    <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-xl">
+                        <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">Preorder Now</a>
+                        <a href="#preorder" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl border border-white/18 px-7 text-xs font-bold uppercase tracking-[0.14em] text-white hover:border-amber hover:bg-white/8" data-cta-name="learn_more">View Preorder Details</a>
+                    </div>
+                    <p class="mt-4 max-w-xl text-xs leading-relaxed text-white/52">Preorder item. Fulfillment begins July 20, 2026. Shipping, taxes, duties, and import fees are not included today.</p>
 
                     <div class="lg:hidden mt-4 hero-glow image-frame rounded-2xl border border-white/12 p-3 shadow-2xl shadow-black/35">
                         <img src="/assets/campaign/campaign-hero-phone-back-up.gif" alt="Nighttime phone pickup moment with Owlnest Lume" class="w-full h-auto rounded-xl">
                     </div>
 
-                    <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
+                    <div id="early-access" class="mt-6 sm:mt-8 max-w-xl">
+                        <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.18em] text-white/46">Get preorder updates</p>
                         <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-hero" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
                             <input type="hidden" name="form-name" value="campaign-email">
                             <input type="hidden" name="source_section" value="campaign-hero">
@@ -906,29 +912,41 @@
         </section>
 
         <section id="preorder" class="bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-24">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-14 items-start">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-[0.96fr_1.04fr] gap-8 lg:gap-12 xl:gap-16 items-start">
                     <div>
                         <span class="section-label">Preorder Open Now</span>
                         <h2 class="mt-3 font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">Owlnest Lume Preorder</h2>
                         <p class="mt-5 text-lg text-midnight/68 leading-relaxed">
-                            Choose Single Lume or Duo Lume inside PayPal checkout.<br>
-                            Preorder window closes July 20, 2026 at 11:59 PM New York time.
+                            Choose Single Lume or Duo Lume inside PayPal checkout.
                         </p>
-                        <p class="mt-5 text-base text-midnight/62 leading-relaxed">
-                            Secure checkout via PayPal.<br>
-                            Choose Single or Duo inside PayPal.
-                        </p>
+                        <div class="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                            <div class="rounded-2xl border border-midnight/10 bg-white/65 p-5">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-amber">Preorder window</p>
+                                <p class="mt-3 text-sm leading-relaxed text-midnight/68">Preorder window closes July 20, 2026 at 11:59 PM New York time.</p>
+                            </div>
+                            <div class="rounded-2xl border border-midnight/10 bg-white/65 p-5">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-amber">Fulfillment</p>
+                                <p class="mt-3 text-sm leading-relaxed text-midnight/68">Fulfillment is scheduled to begin July 20, 2026.</p>
+                            </div>
+                            <div class="rounded-2xl border border-midnight/10 bg-white/65 p-5">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-amber">Checkout</p>
+                                <p class="mt-3 text-sm leading-relaxed text-midnight/68">Secure checkout via PayPal.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rounded-[2rem] border border-midnight/10 bg-white/70 p-6 sm:p-8 shadow-[0_24px_80px_rgba(24,32,51,0.08)]">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <button type="button" class="preorder-tier text-left rounded-2xl border border-midnight/12 bg-[#fffaf0] p-5 transition hover:border-amber/60 hover:shadow-lg" data-tier-interest="single">
+                    <div class="rounded-[2.25rem] border border-midnight/10 bg-[#fffaf0] p-5 sm:p-7 lg:p-8 shadow-[0_28px_90px_rgba(24,32,51,0.10)]">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber">Checkout Summary</p>
+                        <h3 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">Choose your preorder package</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-midnight/60">Choose Single or Duo inside PayPal checkout.</p>
+                        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                            <button type="button" class="preorder-tier text-left rounded-2xl border border-midnight/12 bg-white p-5 sm:p-6 transition hover:border-amber/60 hover:shadow-lg" data-tier-interest="single">
                                 <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Single Lume</span>
                                 <h3 class="mt-3 font-serif text-3xl">1 × Owlnest Lume</h3>
                                 <p class="mt-2 text-4xl font-serif text-midnight">$59</p>
                                 <p class="mt-4 text-sm leading-relaxed text-midnight/62">For one bedroom, bath, spa corner, meditation space, or night-friendly relaxation area.</p>
                             </button>
-                            <button type="button" class="preorder-tier text-left rounded-2xl border border-amber/40 bg-[#fff7e8] p-5 shadow-[0_18px_60px_rgba(216,138,36,0.12)] transition hover:border-amber" data-tier-interest="duo">
+                            <button type="button" class="preorder-tier text-left rounded-2xl border border-amber/45 bg-[#fff7e8] p-5 sm:p-6 shadow-[0_18px_60px_rgba(216,138,36,0.12)] transition hover:border-amber" data-tier-interest="duo">
                                 <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</span>
                                 <h3 class="mt-3 font-serif text-3xl">2 × Owlnest Lume</h3>
                                 <p class="mt-2 text-4xl font-serif text-midnight">$100</p>
@@ -936,17 +954,18 @@
                             </button>
                         </div>
 
-                        <div class="mt-6 rounded-2xl border border-midnight/10 bg-midnight p-5 text-white">
+                        <div class="mt-6 rounded-[1.6rem] border border-midnight/10 bg-midnight p-5 sm:p-6 text-white">
                             <div id="preorder-live-wrap">
-                                <p class="text-[10px] uppercase tracking-[0.2em] text-amber font-bold">Preorder is open</p>
-                                <p class="mt-3 text-white/72 leading-relaxed">Secure checkout via PayPal.<br>Choose Single or Duo inside PayPal.</p>
-                                <div class="mt-5 rounded-2xl border border-amber/35 bg-amber/10 p-4 text-left">
-                                    <p class="text-[10px] uppercase tracking-[0.2em] text-amber font-bold">Preorder Notice</p>
-                                    <p class="mt-3 text-sm leading-relaxed text-white/78">This is a preorder, not an in-stock purchase.<br>Orders do not ship immediately. All preorder orders are scheduled for batch fulfillment starting July 20, 2026.</p>
-                                    <p class="mt-3 text-sm leading-relaxed text-white/62">Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment.</p>
+                                <p class="font-serif text-2xl text-white">Ready to preorder?</p>
+                                <p class="mt-3 text-sm text-white/68 leading-relaxed">Secure checkout via PayPal.</p>
+                                <div class="mt-5 rounded-2xl border border-amber/35 bg-amber/10 p-5 text-left">
+                                    <p class="font-serif text-xl text-warm">Preorder Notice</p>
+                                    <p class="mt-3 text-sm leading-relaxed text-white/80">This is a preorder, not an in-stock purchase.<br>Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026.</p>
+                                    <p class="mt-3 text-sm leading-relaxed text-white/66">Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment.</p>
                                 </div>
                                 <p class="mt-5 text-xs leading-relaxed text-white/55">By clicking Preorder Now, you understand this is a preorder and fulfillment is scheduled to begin July 20, 2026.</p>
                                 <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">Preorder Now</a>
+                                <p class="mt-3 text-center text-xs text-white/48">Choose Single or Duo inside PayPal checkout.</p>
                             </div>
                             <div id="preorder-closed-wrap" class="hidden">
                                 <p class="text-[10px] uppercase tracking-[0.2em] text-amber font-bold">Preorder window closed</p>
@@ -954,8 +973,8 @@
                             </div>
                         </div>
 
-                        <div id="preorder-signup" class="mt-6">
-                            <h3 class="font-serif text-2xl">Want a reminder before the preorder window closes?</h3>
+                        <div id="preorder-signup" class="mt-6 rounded-[1.4rem] border border-midnight/10 bg-white/60 p-4 sm:p-5">
+                            <h3 class="font-serif text-2xl">Get preorder updates</h3>
                             <p class="mt-2 text-sm text-midnight/62 leading-relaxed">Join the preorder list for shipping and production updates.</p>
                             <form class="signup-form mt-5 rounded-2xl border border-midnight/12 bg-white/70 p-3 sm:p-2" data-source-section="campaign-preorder" data-stay-on-page="true" data-success-message="You’re on the preorder list. We’ll email you shipping and production updates." name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
                                 <input type="hidden" name="form-name" value="campaign-email">
@@ -985,10 +1004,6 @@
                             </form>
                         </div>
 
-                        <div class="mt-6 space-y-2 text-sm leading-relaxed text-midnight/58">
-                            <p>This is a preorder. Orders do not ship immediately. All preorder orders are scheduled for batch fulfillment starting July 20, 2026.</p>
-                            <p>Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment.</p>
-                        </div>
                     </div>
                 </div>
             </div>

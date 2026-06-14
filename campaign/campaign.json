@@ -29,7 +29,7 @@
         "currency": "USD"
       }
     ],
-    "shippingCopy": "This is a preorder. Orders do not ship immediately. All preorder orders are scheduled for batch fulfillment starting July 20, 2026.",
+    "shippingCopy": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026.",
     "finePrint": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
   },
   "heroPricing": {
@@ -60,7 +60,7 @@
     {
       "date": "After Closing",
       "title": "Fulfillment Preparation",
-      "text": "This is a preorder. Orders do not ship immediately. All preorder orders are scheduled for batch fulfillment starting July 20, 2026."
+      "text": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026."
     }
   ],
   "faq": [
