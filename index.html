@@ -129,6 +129,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
+        body.home-sequence-complete #section-1 {
+            height: 100vh !important;
+        }
+
         @media (max-width: 1023px) {
             .section-container {
                 height: auto;
@@ -1097,11 +1101,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         const frameCount = 96;
         const currentFrame = index => `${index.toString().padStart(3, '0')}.png`;
+        const HOME_SEQUENCE_SETTINGS = {
+            desktopCompleteOnWheel: true,
+            mobileCompleteOnSwipe: true,
+            desktopPlayDurationMs: 550,
+            mobilePlayDurationMs: 480,
+            wheelTriggerDelta: 10,
+            swipeTriggerDistance: 28,
+            frameSampleStep: 1
+        };
 
         const images = [];
         const skySequence = { frame: 0 };
         let imagesLoaded = 0;
         let imagesFailed = false;
+        let heroSequenceCompleted = false;
+        let heroSequencePlaying = false;
+        let heroTouchStartY = null;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
@@ -1251,6 +1268,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         function updateHeroAnimation() {
             if(!section1) return;
+            if (heroSequenceCompleted || heroSequencePlaying) return;
             const rect = section1.getBoundingClientRect();
             const sectionHeight = section1.offsetHeight;
             const windowHeight = window.innerHeight;
@@ -1258,21 +1276,97 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (rect.top <= 0 && rect.bottom >= 0) {
                     const scrollTop = Math.abs(rect.top);
                     const maxScroll = sectionHeight - windowHeight;
+                    if (maxScroll <= 0) return;
                     let scrollFraction = scrollTop / maxScroll;
 
                     scrollFraction = Math.max(0, Math.min(1, scrollFraction));
 
-                    const frameIndex = Math.min(
-                        frameCount - 1,
-                        Math.ceil(scrollFraction * frameCount)
-                    );
-
-                    if (frameIndex >= 0 && frameIndex < frameCount) {
-                        skySequence.frame = frameIndex;
-                        render();
-                    }
+                    setHeroSequenceProgress(scrollFraction);
             }
         }
+
+        function setHeroSequenceProgress(progress) {
+            const clampedProgress = Math.max(0, Math.min(1, progress));
+            const sampledFrame = Math.ceil(clampedProgress * (frameCount - 1));
+            const frameStep = Math.max(1, HOME_SEQUENCE_SETTINGS.frameSampleStep || 1);
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.round(sampledFrame / frameStep) * frameStep
+            );
+            skySequence.frame = frameIndex;
+            render();
+        }
+
+        function isHeroSequenceActive() {
+            if (!section1 || heroSequenceCompleted) return false;
+            const rect = section1.getBoundingClientRect();
+            return rect.top <= 1 && rect.bottom >= window.innerHeight * 0.5;
+        }
+
+        function completeHeroSequence(durationMs) {
+            if (heroSequenceCompleted) return;
+            if (prefersReducedMotion) {
+                setHeroSequenceProgress(1);
+                heroSequenceCompleted = true;
+                document.body.classList.add('home-sequence-complete');
+                return;
+            }
+
+            heroSequencePlaying = true;
+            const startFrame = skySequence.frame;
+            const startProgress = Math.max(0, Math.min(1, startFrame / (frameCount - 1)));
+            const startedAt = performance.now();
+            const duration = Math.max(120, durationMs || HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
+
+            function playFrame(now) {
+                const elapsed = now - startedAt;
+                const rawProgress = Math.min(1, elapsed / duration);
+                const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
+                const progress = startProgress + (1 - startProgress) * easedProgress;
+                setHeroSequenceProgress(progress);
+
+                if (rawProgress < 1) {
+                    window.requestAnimationFrame(playFrame);
+                    return;
+                }
+
+                setHeroSequenceProgress(1);
+                heroSequencePlaying = false;
+                heroSequenceCompleted = true;
+                document.body.classList.add('home-sequence-complete');
+            }
+
+            window.requestAnimationFrame(playFrame);
+        }
+
+        window.addEventListener('wheel', event => {
+            if (!HOME_SEQUENCE_SETTINGS.desktopCompleteOnWheel || prefersReducedMotion) return;
+            if (event.deltaY <= HOME_SEQUENCE_SETTINGS.wheelTriggerDelta) return;
+            if (!isHeroSequenceActive()) return;
+            event.preventDefault();
+            completeHeroSequence(HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
+        }, { passive: false });
+
+        window.addEventListener('touchstart', event => {
+            if (!HOME_SEQUENCE_SETTINGS.mobileCompleteOnSwipe || prefersReducedMotion) return;
+            if (!isHeroSequenceActive()) return;
+            heroTouchStartY = event.touches && event.touches.length ? event.touches[0].clientY : null;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', event => {
+            if (!HOME_SEQUENCE_SETTINGS.mobileCompleteOnSwipe || prefersReducedMotion) return;
+            if (heroTouchStartY === null || !isHeroSequenceActive()) return;
+            const currentY = event.touches && event.touches.length ? event.touches[0].clientY : heroTouchStartY;
+            const swipeDistance = heroTouchStartY - currentY;
+            if (swipeDistance <= HOME_SEQUENCE_SETTINGS.swipeTriggerDistance) return;
+            event.preventDefault();
+            heroTouchStartY = null;
+            completeHeroSequence(HOME_SEQUENCE_SETTINGS.mobilePlayDurationMs);
+        }, { passive: false });
+
+        window.addEventListener('touchend', () => {
+            heroTouchStartY = null;
+        }, { passive: true });
 
         window.addEventListener('scroll', () => {
             if (!isScrolling) {
@@ -1300,6 +1394,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             updateUI();
             render();
+            if (prefersReducedMotion) {
+                completeHeroSequence(0);
+            }
             const yr = document.getElementById('copyright-year');
             if(yr) yr.textContent = new Date().getFullYear();
         });
