@@ -77,7 +77,7 @@ function buildResultEmail(payload) {
   const scienceUrl = safeUrl(process.env.OWLNEST_SCIENCE_URL) || DEFAULT_SCIENCE_URL;
   const unsubscribeUrl = safeUrl(process.env.RESULT_EMAIL_UNSUBSCRIBE_URL);
   const physicalAddress = safeText(process.env.OWLNEST_PHYSICAL_ADDRESS, 240);
-  const replyTo = safeText(process.env.RESULT_EMAIL_REPLY_TO, 160) || "owlnestpq2025@gmail.com";
+  const replyTo = safeText(process.env.RESULT_EMAIL_REPLY_TO, 160) || "team@owlnestofficial.com";
   const isAiPhoto = mode === "ai_photo";
   const heading = isAiPhoto ? "Your Sleep-Ready Room Check result" : "Your Sleep-Ready Check result";
   const intro = "Thanks for taking the Sleep-Ready Check. Here's a copy of your result.";
