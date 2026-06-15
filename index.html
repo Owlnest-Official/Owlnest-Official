@@ -207,6 +207,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 max-width: 100%;
                 padding-left: 1.25rem;
                 padding-right: 1.25rem;
+                margin-top: 0 !important;
+                padding-top: 6.25rem !important;
+                padding-bottom: 2rem !important;
+                justify-content: flex-start !important;
+            }
+            .home-hero-mark {
+                display: block !important;
+                width: 4.75rem !important;
+                margin-bottom: 1rem !important;
+                opacity: 1 !important;
             }
             .home-hero-title {
                 max-width: 21rem !important;
@@ -609,7 +619,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gap: 1rem;
         }
         @media (min-width: 1280px) {
-            .nav-dots { display: flex; }
+            .nav-dots { display: none; }
         }
 
         .dot {
@@ -889,7 +899,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
 
-                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
+                    <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="home-hero-mark w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
 
                     <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">OWLNEST | SLEEP TECHNOLOGY</span>
 
@@ -1334,8 +1344,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const HOME_SEQUENCE_SETTINGS = {
             desktopCompleteOnWheel: true,
             mobileCompleteOnSwipe: true,
-            desktopPlayDurationMs: 550,
-            mobilePlayDurationMs: 480,
+            desktopPlayDurationMs: 520,
+            mobilePlayDurationMs: 460,
+            requiredGesturesToComplete: 2,
             wheelTriggerDelta: 10,
             swipeTriggerDistance: 28,
             frameSampleStep: 1
@@ -1347,6 +1358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         let imagesFailed = false;
         let heroSequenceCompleted = false;
         let heroSequencePlaying = false;
+        let heroSequenceGestureCount = 0;
         let heroTouchStartY = null;
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1564,12 +1576,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             return rect.top <= 1 && rect.bottom >= window.innerHeight * 0.5;
         }
 
-        function completeHeroSequence(durationMs) {
+        function completeHeroSequence(durationMs, targetProgress = 1) {
             if (heroSequenceCompleted) return;
+            const target = Math.max(0, Math.min(1, targetProgress));
             if (prefersReducedMotion) {
-                setHeroSequenceProgress(1);
-                heroSequenceCompleted = true;
-                document.body.classList.add('home-sequence-complete');
+                setHeroSequenceProgress(target);
+                if (target >= 1) {
+                    heroSequenceCompleted = true;
+                    document.body.classList.add('home-sequence-complete');
+                }
                 return;
             }
 
@@ -1583,7 +1598,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 const elapsed = now - startedAt;
                 const rawProgress = Math.min(1, elapsed / duration);
                 const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
-                const progress = startProgress + (1 - startProgress) * easedProgress;
+                const progress = startProgress + (target - startProgress) * easedProgress;
                 setHeroSequenceProgress(progress);
 
                 if (rawProgress < 1) {
@@ -1591,13 +1606,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     return;
                 }
 
-                setHeroSequenceProgress(1);
+                setHeroSequenceProgress(target);
                 heroSequencePlaying = false;
-                heroSequenceCompleted = true;
-                document.body.classList.add('home-sequence-complete');
+                if (target >= 1) {
+                    heroSequenceCompleted = true;
+                    document.body.classList.add('home-sequence-complete');
+                }
             }
 
             window.requestAnimationFrame(playFrame);
+        }
+
+        function advanceHeroSequence(durationMs) {
+            if (heroSequenceCompleted || heroSequencePlaying) return;
+            const requiredGestures = Math.max(1, HOME_SEQUENCE_SETTINGS.requiredGesturesToComplete || 1);
+            heroSequenceGestureCount = Math.min(requiredGestures, heroSequenceGestureCount + 1);
+            completeHeroSequence(durationMs, heroSequenceGestureCount / requiredGestures);
         }
 
         window.addEventListener('wheel', event => {
@@ -1605,7 +1629,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (event.deltaY <= HOME_SEQUENCE_SETTINGS.wheelTriggerDelta) return;
             if (!isHeroSequenceActive()) return;
             event.preventDefault();
-            completeHeroSequence(HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
+            advanceHeroSequence(HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
         }, { passive: false });
 
         window.addEventListener('touchstart', event => {
@@ -1622,7 +1646,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             if (swipeDistance <= HOME_SEQUENCE_SETTINGS.swipeTriggerDistance) return;
             event.preventDefault();
             heroTouchStartY = null;
-            completeHeroSequence(HOME_SEQUENCE_SETTINGS.mobilePlayDurationMs);
+            advanceHeroSequence(HOME_SEQUENCE_SETTINGS.mobilePlayDurationMs);
         }, { passive: false });
 
         window.addEventListener('touchend', () => {
