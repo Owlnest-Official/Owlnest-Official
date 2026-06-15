@@ -33,6 +33,7 @@
   <style>
     body { margin: 0; overflow-x: hidden; background-color: #faefcf; }
   </style>
+  <link rel="stylesheet" href="assets/css/consent.css">
 </head>
 
 <body class="bg-brand-cream text-brand-dark min-h-screen font-sans flex flex-col">
@@ -169,6 +170,7 @@
   </main>
 
   <footer class="relative z-10 py-10 text-center text-xs text-brand-dark/60 border-t border-brand-dark/5 mt-auto bg-brand-cream">
+    <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-3 text-[11px] uppercase tracking-[0.14em] text-brand-dark/55 hover:text-brand-gold">Cookie Settings</button>
     <p>&copy; 2025 Owlnest Official. All Rights Reserved.</p>
   </footer>
 
@@ -380,6 +382,7 @@
       await loadOrders();
     })();
   </script>
+  <script src="assets/js/consent.js" defer></script>
 </body>
 </html>
 
