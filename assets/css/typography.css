@@ -1,0 +1,137 @@
+/*
+  Owlnest typography layer.
+  Keeps page-specific art direction, while reducing oversized headings,
+  poster-like body copy, and heavy Traditional Chinese type.
+*/
+
+:root {
+    --owl-type-hero: clamp(2.35rem, 5vw, 4rem);
+    --owl-type-section: clamp(2rem, 3.7vw, 3.25rem);
+    --owl-type-card: clamp(1.35rem, 2vw, 1.9rem);
+    --owl-type-body: clamp(1rem, 1.05vw, 1.08rem);
+    --owl-type-lead: clamp(1.05rem, 1.35vw, 1.25rem);
+    --owl-type-small: clamp(0.84rem, 0.9vw, 0.95rem);
+    --owl-leading-title: 1.08;
+    --owl-leading-body: 1.64;
+}
+
+main h1.font-serif,
+.owlnest-hero-title,
+.home-hero-title,
+.product-hero-title {
+    font-size: var(--owl-type-hero) !important;
+    line-height: var(--owl-leading-title) !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+}
+
+main h2.font-serif,
+.owlnest-section-title,
+.section-heading {
+    font-size: var(--owl-type-section) !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+}
+
+main h3.font-serif,
+.owlnest-card-title {
+    font-size: var(--owl-type-card) !important;
+    line-height: 1.16 !important;
+    letter-spacing: 0 !important;
+    font-weight: 500 !important;
+}
+
+main p,
+main li,
+.owlnest-section-copy,
+.owlnest-card-copy,
+.body-copy {
+    font-size: var(--owl-type-body);
+    line-height: var(--owl-leading-body);
+}
+
+main .text-lg,
+main .text-xl,
+main .md\:text-xl,
+main .md\:text-2xl,
+.owlnest-hero-subtitle,
+.product-hero-subhead {
+    font-size: var(--owl-type-lead) !important;
+    line-height: 1.55 !important;
+}
+
+main .text-sm,
+main .text-xs,
+.owlnest-small {
+    line-height: 1.55;
+}
+
+.owlnest-eyebrow,
+main .section-label,
+main .uppercase.tracking-\[0\.16em\],
+main .tracking-\[0\.16em\].uppercase {
+    font-size: var(--owl-type-small) !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.15em !important;
+    font-weight: 800 !important;
+}
+
+main .text-5xl,
+main .text-6xl,
+main .md\:text-6xl,
+main .md\:text-7xl,
+main .lg\:text-7xl {
+    line-height: 1.08 !important;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --owl-type-hero: clamp(2.1rem, 10vw, 2.65rem);
+        --owl-type-section: clamp(1.85rem, 8vw, 2.25rem);
+        --owl-type-card: clamp(1.28rem, 6vw, 1.55rem);
+        --owl-type-body: 1rem;
+        --owl-type-lead: 1.04rem;
+    }
+
+    main h1.font-serif,
+    .owlnest-hero-title,
+    .home-hero-title,
+    .product-hero-title,
+    main h2.font-serif,
+    .owlnest-section-title,
+    .section-heading {
+        text-wrap: balance;
+    }
+}
+
+html[lang="zh-Hant"] {
+    --owl-type-hero: clamp(2.15rem, 4.7vw, 3.6rem);
+    --owl-type-section: clamp(1.9rem, 3.4vw, 3rem);
+    --owl-type-card: clamp(1.28rem, 1.9vw, 1.68rem);
+    --owl-type-body: clamp(1rem, 1vw, 1.06rem);
+    --owl-type-lead: clamp(1.04rem, 1.25vw, 1.16rem);
+}
+
+html[lang="zh-Hant"] body,
+html[lang="zh-Hant"] main {
+    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif !important;
+}
+
+html[lang="zh-Hant"] main .font-serif {
+    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif !important;
+}
+
+html[lang="zh-Hant"] main h1.font-serif,
+html[lang="zh-Hant"] main h2.font-serif,
+html[lang="zh-Hant"] main h3.font-serif,
+html[lang="zh-Hant"] .section-heading {
+    font-weight: 600 !important;
+    line-height: 1.16 !important;
+    letter-spacing: 0 !important;
+}
+
+html[lang="zh-Hant"] main p,
+html[lang="zh-Hant"] main li {
+    line-height: 1.72;
+}
