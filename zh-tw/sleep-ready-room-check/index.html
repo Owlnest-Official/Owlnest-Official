@@ -45,89 +45,158 @@
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owlnest Lume 適合度檢查 | Owlnest</title>
-    <meta name="description" content="用 60 秒回答幾個關於光線、手機習慣和睡前流程的問題，看看 Owlnest Lume 是否適合你的夜晚">
+    <title>AI 房間光線檢查 | Owlnest Official</title>
+    <meta name="description" content="Answer 10 quick questions and optionally add a room photo for an AI light reading. See whether your room is sending the wrong nighttime signal.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/zh-tw/sleep-ready-room-check/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/sleep-ready-room-check/">
     <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/sleep-ready-room-check/">
     <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/sleep-ready-room-check/">
-    <meta property="og:title" content="Owlnest Lume 適合度檢查 | Owlnest">
-    <meta property="og:description" content="看看 Owlnest Lume 是否適合你的睡前光環境">
+    <meta property="og:title" content="AI 房間光線檢查 | Owlnest Official">
+    <meta property="og:description" content="Answer 10 quick questions and optionally add a room photo for an AI light reading. See whether your room is sending the wrong nighttime signal.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:url" content="https://owlnestofficial.com/zh-tw/sleep-ready-room-check/">
     <meta property="og:image" content="https://owlnestofficial.com/lume-real-photo-on.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Owlnest Lume 適合度檢查 | Owlnest">
-    <meta name="twitter:description" content="回答幾個問題，看看 Owlnest Lume 是否適合你的夜晚">
+    <meta name="twitter:title" content="AI 房間光線檢查 | Owlnest Official">
+    <meta name="twitter:description" content="Answer 10 quick questions and optionally add a room photo for an AI light reading. See whether your room is sending the wrong nighttime signal.">
     <meta name="twitter:image" content="https://owlnestofficial.com/lume-real-photo-on.jpg">
-    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="icon" type="image/png" href="../logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['"Noto Sans TC"', '"Manrope"', 'sans-serif'], serif: ['"Noto Serif TC"', 'serif'] },
-                    colors: { midnight: '#111927', amber: '#C9852A', warm: '#F2EBDD', cream: '#FAEFCF', slateblue: '#51627A' }
+                    fontFamily: {
+                        sans: ['"Manrope"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        midnight: '#111927',
+                        amber: '#C9852A',
+                        warm: '#F2EBDD',
+                        cream: '#FAEFCF',
+                        slateblue: '#51627A',
+                        taupe: '#8B7A69'
+                    }
                 }
             }
         }
     </script>
     <style>
-        body { background:#111927; color:#fff; overflow-x:hidden; }
-        .choice-card { border:1px solid rgba(250,239,207,.16); background:rgba(255,255,255,.035); transition:border-color .2s ease, background-color .2s ease; }
-        .choice-card:hover,.choice-card.is-selected { border-color:rgba(201,133,42,.85); background:rgba(201,133,42,.12); }
-        .result-panel { display:none; }
-        .result-panel.is-visible { display:block; }
-        .question-panel { display:none; }
-        .question-panel.is-active { display:block; }
-        .field-shell,.result-summary-card { border:1px solid rgba(250,239,207,.14); background:rgba(255,255,255,.04); }
-        .result-status { display:inline-flex; align-items:center; gap:.55rem; border:1px solid rgba(250,239,207,.12); background:rgba(17,25,39,.55); color:rgba(255,255,255,.78); }
-        .result-status-dot { width:.62rem; height:.62rem; border-radius:999px; flex:0 0 auto; }
-        .result-status-dot.is-low { background:#79B88A; }
-        .result-status-dot.is-moderate { background:#D5A64B; }
-        .result-status-dot.is-strong { background:#D77A6D; }
-        .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-        #mobile-menu { transform: translateY(-100%); transition: transform .35s ease; visibility: hidden; pointer-events: none; overflow-y: auto; }
-        #mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
-            body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-        main .font-serif,
-        main h1,
-        main h2,
-        main h3,
-        nav,
-        button,
-        input,
-        textarea,
-        label {
-            font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+        body { background: #111927; color: #fff; overflow-x: hidden; }
+        .choice-card {
+            border: 1px solid rgba(250,239,207,0.16);
+            background: rgba(255,255,255,0.035);
+            transition: border-color .2s ease, background-color .2s ease;
         }
-        main h1.font-serif,
-        main h2.font-serif,
-        main h3.font-serif {
-            font-weight: 500 !important;
-            letter-spacing: 0 !important;
-            line-height: 1.12 !important;
+        .choice-card:hover,
+        .choice-card.is-selected {
+            border-color: rgba(201,133,42,0.85);
+            background: rgba(201,133,42,0.12);
         }
-        .language-menu {
+        .result-panel { display: none; }
+        .result-panel.is-visible { display: block; }
+        .result-summary-card {
+            border: 1px solid rgba(250,239,207,0.13);
+            background: rgba(255,255,255,0.04);
+            box-shadow: 0 16px 34px rgba(0,0,0,0.16);
+        }
+        .result-copy {
+            line-height: 1.72;
+        }
+        .result-copy p + p,
+        .result-guidance {
+            margin-top: 1rem;
+        }
+        .result-guidance-title {
+            color: rgba(250,239,207,0.88);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+        .result-guidance-list {
+            margin-top: 0.55rem;
+            display: grid;
+            gap: 0.45rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.62;
+        }
+        .result-guidance-list li {
+            position: relative;
+            padding-left: 1rem;
+        }
+        .result-guidance-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 0.35rem;
+            height: 0.35rem;
+            border-radius: 999px;
+            background: #C9852A;
+        }
+        .result-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            border: 1px solid rgba(250,239,207,0.12);
+            background: rgba(17,25,39,0.55);
+            color: rgba(255,255,255,0.78);
+        }
+        .result-status-dot {
+            width: 0.62rem;
+            height: 0.62rem;
+            border-radius: 999px;
+            flex: 0 0 auto;
+        }
+        .result-status-dot.is-low { background: #79B88A; }
+        .result-status-dot.is-moderate { background: #D5A64B; }
+        .result-status-dot.is-strong { background: #D77A6D; }
+        .question-panel { display: none; }
+        .question-panel.is-active { display: block; }
+        .field-shell {
+            border: 1px solid rgba(250,239,207,0.14);
+            background: rgba(255,255,255,0.04);
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .photo-upload-card {
+            position: relative;
+            cursor: pointer;
+        }
+        .native-photo-input {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             opacity: 0;
-            transform: translateY(8px);
-            visibility: hidden;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .photo-upload-card span,
+        .photo-upload-card img,
+        .photo-upload-card button {
             pointer-events: none;
         }
-        .language-menu.open,
-        .language-wrap:hover .language-menu,
-        .language-wrap:focus-within .language-menu {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-            pointer-events: auto;
-        }
+            main .font-serif, main h1, main h2, main h3, nav, button, input, textarea, label { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; }
+        main h1.font-serif, main h2.font-serif, main h3.font-serif { font-weight: 500 !important; letter-spacing: 0 !important; line-height: 1.12 !important; }
     </style>
-    <link rel="stylesheet" href="../assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
 </head>
 <body class="font-sans antialiased selection:bg-amber selection:text-midnight">
@@ -143,7 +212,7 @@
             </a>
             <div class="flex items-center gap-4">
                 <a href="/sleep-ready-room-check/" class="inline-flex text-[11px] tracking-[0.14em] uppercase font-bold text-white/60 hover:text-amber transition-colors">English</a>
-                <a href="/zh-tw/campaign/" class="hidden sm:inline-flex items-center justify-center rounded-full bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-cream transition-colors">取得早鳥通知</a>
+                <a href="/zh-tw/zh-tw/campaign/#preorder" class="hidden sm:inline-flex items-center justify-center rounded-full bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-cream transition-colors">查看預購詳情</a>
             </div>
         </div>
     </header>
@@ -154,19 +223,21 @@
             <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-8 lg:gap-12 items-center">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs md:text-sm font-black"><span class="text-base md:text-xl">AI</span> 房間光線檢查</span>
-                    <h1 class="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.04] text-white">你的房間正在傳錯夜晚訊號嗎？</h1>
-                    <p class="mt-6 max-w-2xl text-base md:text-lg text-white/72 leading-relaxed">回答 10 個問題<br>也可以加入房間照片，讓 AI 讀取光線狀態 </p>
-                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">檢查房間光線</a>
-                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">這是教育與房間光線參考，不是醫療評估，也不提供診斷、治療或預防任何疾病的建議 </p>
+                    <h1 class="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.025em] text-white">你的房間正在傳錯夜晚訊號嗎？</h1>
+                    <p class="mt-6 max-w-2xl text-base md:text-lg text-white/72 leading-relaxed">回答 10 個問題<br>也可以加入房間照片，讓 AI 讀取光線狀態</p>
+                    <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">檢查房間光線</a>
+                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">這是教育與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
                 </div>
 
-                <section id="room-check-quiz" class="rounded-[22px] border border-white/10 bg-white/[0.035] p-5 sm:p-6 lg:p-7 shadow-xl shadow-black/20 scroll-mt-28" aria-label="Owlnest Lume 適合度檢查">
+                <section id="room-check-quiz" class="rounded-[22px] border border-white/10 bg-white/[0.035] p-5 sm:p-6 lg:p-7 shadow-xl shadow-black/20 scroll-mt-28" aria-label="AI 房間光線檢查問卷">
                     <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                         <div>
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">AI 房間光線檢查</p>
                             <p id="progress-label" class="mt-2 text-sm text-white/58">第 1 題，共 10 題</p>
                         </div>
-                        <div class="h-2 w-32 rounded-full bg-white/10 overflow-hidden"><div id="progress-bar" class="h-full w-[10%] bg-amber transition-all"></div></div>
+                        <div class="h-2 w-32 rounded-full bg-white/10 overflow-hidden">
+                            <div id="progress-bar" class="h-full w-[10%] bg-amber transition-all"></div>
+                        </div>
                     </div>
 
                     <div id="quiz-panels" class="mt-7"></div>
@@ -176,15 +247,70 @@
                         <button id="next-question" type="button" class="rounded-full bg-amber px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold text-midnight hover:bg-cream disabled:opacity-45 disabled:pointer-events-none">下一題</button>
                     </div>
 
-                    <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
-                        <div class="result-summary-card rounded-[22px] p-5 sm:p-6">
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">你的 Lume 適合度結果</p>
-                            <div id="basic-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
-                            <h2 id="basic-result-title" class="mt-5 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                            <p id="basic-result-copy" class="mt-4 text-white/68 leading-relaxed"></p>
+                    <section id="result-choice-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
+                        <div class="field-shell rounded-[22px] p-4 sm:p-6">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">結果選項</p>
+                            <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white">選擇你的結果</h2>
+                            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                                <article class="rounded-2xl border border-white/12 bg-midnight/45 p-4">
+                                    <h3 class="font-serif text-2xl text-white">問卷結果</h3>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">依照你的回答，快速判斷房間光線狀態。</p>
+                                    <button id="choose-quiz-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">不加照片，直接看結果</button>
+                                </article>
+                                <article class="rounded-2xl border border-amber/35 bg-amber/10 p-4">
+                                    <h3 class="font-serif text-2xl text-white">AI 房間光線分析</h3>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">上傳房間照片，讓 AI 讀取可見光源、螢幕光與整體亮度。</p>
+                                    <button id="choose-ai-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-white/18 px-5 text-white text-xs font-bold uppercase tracking-[0.12em] hover:border-amber hover:text-amber">加入 AI 照片分析</button>
+                                </article>
+                            </div>
                         </div>
-                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    </section>
+
+                    <section id="photo-analysis-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
+                        <div class="field-shell rounded-[22px] p-4 sm:p-6">
+                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">選填 AI 照片檢查</p>
+                            <h2 class="mt-3 font-serif text-2xl sm:text-3xl md:text-4xl leading-tight text-white">讓 AI 檢查你的房間光線</h2>
+                            <p class="mt-3 max-w-2xl text-sm sm:text-base text-white/68 leading-relaxed">上傳一張房間平常夜晚的照片<br>我們會查看可見光源、螢幕光與夜間刺激感</p>
+                            <p class="mt-3 text-xs sm:text-sm text-white/45 leading-relaxed">請避開臉部、孩童、文件或個人資訊</p>
+
+                            <div class="mt-5 grid gap-3 sm:gap-4">
+                                <label class="photo-upload-card block rounded-2xl border border-white/12 bg-midnight/45 p-3 sm:p-4 hover:border-amber/70 transition-colors">
+                                    <input id="sleep-environment-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp,image/*" class="native-photo-input">
+                                    <span class="sr-only">上傳房間照片給 AI 光線檢查</span>
+                                    <span class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                                        <span class="inline-flex min-h-11 items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">選擇房間照片</span>
+                                        <span class="text-sm text-white/62">
+                                            <span id="selected-photo-name">尚未選擇照片</span>
+                                            <span class="mt-1 block text-xs text-white/42">JPG、PNG 或 WebP，最高 8 MB</span>
+                                        </span>
+                                    </span>
+                                </label>
+
+                                <div id="photo-preview-wrap" class="hidden rounded-2xl border border-white/10 bg-black/20 p-3">
+                                    <img id="photo-preview" alt="房間光線預覽" class="max-h-72 w-full rounded-xl object-contain">
+                                    <button id="remove-photo" type="button" class="mt-3 rounded-xl border border-white/12 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white/72 hover:border-amber/70 hover:text-white">移除照片</button>
+                                </div>
+
+                                <label class="flex items-start gap-3 text-sm text-white/62 leading-relaxed">
+                                    <input id="photo-analysis-consent" type="checkbox" class="mt-1 h-4 w-4 accent-[#C9852A]">
+                                    <span>我同意讓 Owlnest 分析這張照片。這是選填項目，不是醫療評估。</span>
+                                </label>
+
+                                <p id="photo-analysis-message" class="text-sm text-white/60" role="status" aria-live="polite"></p>
+
+                                <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
+                                    <button id="analyze-photo" type="button" class="min-h-12 rounded-xl bg-amber px-6 py-3 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50" disabled>分析房間光線</button>
+                                    <button id="back-to-result-choice" type="button" class="min-h-12 rounded-xl border border-white/12 px-6 py-3 text-white/72 text-xs font-bold tracking-[0.12em] uppercase hover:border-amber/70 hover:text-white">回到結果選項</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
+                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
                             <input type="hidden" name="form-name" value="sleep-ready-room-check">
+                            <input type="hidden" name="sleep_check_session_id" id="sleep-check-session-id">
+                            <input type="hidden" name="lead_stage" id="lead-stage-field">
                             <input type="hidden" name="quiz_score" id="quiz-score">
                             <input type="hidden" name="quiz_score_display" id="quiz-score-display">
                             <input type="hidden" name="result_category" id="result-category">
@@ -194,71 +320,108 @@
                             <input type="hidden" name="timestamp" id="timestamp-field">
                             <input type="hidden" name="timestamp_local" id="timestamp-local-field">
                             <input type="hidden" name="page_source" id="page-source-field">
-                            <input type="hidden" name="language" id="language-field" value="zh-Hant">
+                            <input type="hidden" name="language" id="language-field" value="en">
+                            <input type="hidden" name="analysis_mode" id="analysis-mode-field" value="quiz_only">
+                            <input type="hidden" name="quiz_score_40" id="quiz-score-40-field">
+                            <input type="hidden" name="ai_photo_uploaded" id="ai-photo-uploaded-field" value="no">
+                            <input type="hidden" name="ai_photo_score_60" id="ai-photo-score-60-field">
+                            <input type="hidden" name="ai_total_score_100" id="ai-total-score-100-field">
+                            <input type="hidden" name="ai_archetype_id" id="ai-archetype-id-field">
+                            <input type="hidden" name="ai_archetype_name" id="ai-archetype-name-field">
+                            <input type="hidden" name="ai_combined_result_title" id="ai-combined-result-title-field">
+                            <input type="hidden" name="ai_light_risk_level" id="ai-light-risk-level-field">
+                            <input type="hidden" name="ai_color_temperature_estimate" id="ai-color-temperature-estimate-field">
+                            <input type="hidden" name="ai_color_temperature_match" id="ai-color-temperature-match-field">
+                            <input type="hidden" name="ai_detected_lume" id="ai-detected-lume-field">
+                            <input type="hidden" name="ai_overpush_guardrail_applied" id="ai-overpush-guardrail-field">
+                            <input type="hidden" name="ai_main_light_source" id="ai-main-light-source-field">
+                            <input type="hidden" name="ai_observed_light_issues" id="ai-observed-light-issues-field">
+                            <input type="hidden" name="ai_summary" id="ai-summary-field">
+                            <input type="hidden" name="ai_product_guidance" id="ai-product-guidance-field">
+                            <input type="hidden" name="ai_confidence" id="ai-confidence-field">
                             <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-                            <h3 class="font-serif text-2xl text-white">儲存你的 Lume 適合度結果</h3>
-                            <p class="mt-3 text-sm text-white/62 leading-relaxed">輸入 email，儲存結果並收到 Owlnest Lume 上市與早鳥通知 </p>
+                            <h3 class="font-serif text-2xl text-white">你的結果要寄到哪裡？</h3>
+                            <p class="mt-3 text-sm text-white/62 leading-relaxed">輸入 email，接收你的房間光線檢查結果。</p>
+                            <p class="mt-2 text-xs text-white/45 leading-relaxed">完成這一步後，你可以直接看問卷結果，或加入 AI 房間光線分析。</p>
+
                             <div class="mt-5 flex flex-col sm:flex-row gap-3">
                                 <label class="sr-only" for="room-check-email">Email</label>
-                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" required class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
-                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">送出結果並加入早鳥通知</button>
+                                <input id="room-check-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" class="min-h-14 flex-1 rounded-xl border border-white/12 bg-midnight/70 px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55">
+                                <button id="submit-room-check" type="submit" class="min-h-14 rounded-xl bg-amber px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream disabled:opacity-50">繼續</button>
                             </div>
+
                             <label class="mt-4 flex items-start gap-3 text-sm text-white/62 leading-relaxed">
-                                <input id="consent-checkbox" name="consent" value="yes" type="checkbox" required class="mt-1 h-4 w-4 accent-[#C9852A]">
-                                <span>我同意收到 Owlnest 更新，並了解我可以隨時取消訂閱 </span>
+                                <input id="consent-checkbox" name="consent" value="yes" type="checkbox" class="mt-1 h-4 w-4 accent-[#C9852A]" aria-describedby="consent-error">
+                                <span>我同意接收 Owlnest 更新，並了解可以隨時取消訂閱。</span>
                             </label>
-                            <p class="mt-3 text-xs text-white/45">不寄垃圾信，只寄結果、上市進度與早鳥通知 </p>
+                            <p id="consent-error" class="mt-2 hidden text-sm text-amber" role="alert">請勾選同意接收結果與 Owlnest 更新。</p>
+                            <p class="mt-3 text-xs text-white/45">我們會把結果寄到你的信箱。</p>
                             <p id="form-message" class="mt-3 text-sm" role="status" aria-live="polite"></p>
                         </form>
-                        <div id="submit-success-panel" class="result-panel mt-7 rounded-[22px] border border-amber/30 bg-amber/10 p-5 sm:p-6" role="status" aria-live="polite">
-                            <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">已收到</p>
-                            <h3 class="mt-3 font-serif text-2xl text-white">你的結果已儲存</h3>
-                            <p class="mt-2 text-white/72 leading-relaxed">你已加入早鳥通知名單 </p>
-                            <p class="mt-3 text-sm text-white/55 leading-relaxed">我們會通知你 Owlnest Lume 的上市消息與早鳥資訊 </p>
-                        </div>
                     </div>
 
                     <div id="full-result-panel" class="result-panel mt-8 rounded-[22px] border border-amber/35 bg-amber/10 p-5 sm:p-6">
-                        <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">你的 Lume 適合度結果</p>
+                        <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">你的房間光線結果</p>
                         <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
-                        <p id="full-result-copy" class="mt-4 text-white/72 leading-relaxed"></p>
-                        <p class="mt-5 text-xs text-white/45 leading-relaxed">這是教育與產品適合度參考，不是醫療評估 </p>
+                        <div id="full-result-copy" class="result-copy mt-4 text-white/72"></div>
+                        <p class="mt-5 text-xs text-white/45 leading-relaxed">這是教育與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-                            <a href="/zh-tw/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">取得早鳥通知</a>
-                            <a href="/zh-tw/products/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">了解產品</a>
+                            <a href="/zh-tw/campaign/#preorder" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">查看預購詳情</a>
+                            <a href="/zh-tw/science/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">閱讀科學說明</a>
                         </div>
+                        <p id="result-email-status" class="mt-5 text-sm text-white/55 leading-relaxed">我們已將結果寄到你的信箱。</p>
                     </div>
                 </section>
             </div>
         </section>
     </main>
 
-    <footer class="bg-midnight border-t border-white/5 py-14 px-6 text-center">
-        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-        <p class="mt-4 text-sm text-white/72">為睡前設計的助眠光譜燈 </p>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
-        <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+    <footer class="site-footer bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
+        <div class="footer-centered max-w-[720px] mx-auto text-center">
+            <p class="footer-brand font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
+            <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">可以開著睡的睡眠光譜燈。</p>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
+            <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
         const questions = [
-            { id: 'bright_ceiling_lights', text: '睡前一小時，你通常在什麼樣的光線下？', options: [['大多是昏暗或低刺激的光 ', 0], ['有時是柔和光，有時是一般室內燈 ', 1], ['常是天花板燈、桌燈或明亮房間光 ', 2]] },
-            { id: 'visually_active_room', text: '主燈關掉後，你的房間還會覺得很「醒」嗎？', options: [['很少，房間通常已經很安靜 ', 0], ['有時候，看當天狀況 ', 1], ['常常，總覺得還太活躍 ', 2]] },
-            { id: 'tired_switched_on', text: '身體已經累了，但腦袋還像開著嗎？', options: [['很少 ', 0], ['有時候 ', 1], ['常常 ', 2]] },
-            { id: 'phone_pickup', text: '你會放下手機後，又忍不住拿起來嗎？', options: [['很少 ', 0], ['有時候 ', 1], ['常常 ', 2]] },
-            { id: 'bright_bedside_lighting', text: '睡前還會使用偏白、偏冷或很亮的床邊燈嗎？', options: [['很少 ', 0], ['有時候 ', 1], ['常常 ', 2]] },
-            { id: 'needs_soft_light', text: '你晚上還需要一點光，但不喜歡刺眼燈光嗎？', options: [['很少，我通常可以直接全暗 ', 0], ['有時候，某些時刻需要一點光 ', 1], ['常常，我需要光，但不想讓房間被喚醒 ', 2]] },
-            { id: 'unfamiliar_room_lighting', text: '旅行或住在不熟悉的房間時，光線會讓你比較難放鬆嗎？', options: [['很少 ', 0], ['有時候 ', 1], ['常常 ', 2]] },
-            { id: 'no_apps_screens_tracking', text: '不用 app、螢幕或睡眠追蹤的睡前提示，對你來說會更實際嗎？', options: [['不太會 ', 0], ['也許會 ', 1], ['會 ', 2]] },
-            { id: 'pre_sleep_room_activity', text: '睡前 1–2 小時，你還會閱讀、整理、移動或待在房間裡嗎？', options: [['很少，我通常很快就全關燈 ', 0], ['有時候，睡前還會做幾件事 ', 1], ['常常，我會在房間裡待一段時間才準備睡 ', 2]] },
-            { id: 'night_light_preference', text: '哪一句最像你睡前想要的狀態？', options: [['我只想讓房間全暗 ', 0], ['我想看得見，但不要太亮 ', 1], ['我希望房間比我更早進入夜晚狀態 ', 2]] }
+            { id: 'bright_ceiling_lights', text: '睡前這段時間，你通常在什麼光線下？', options: [['大多是低刺激、偏暗的光', 0], ['有時柔和，有時是一般房間燈', 1], ['常是天花板燈、桌燈或明亮照明', 2]] },
+            { id: 'visually_active_room', text: '主燈關掉後，房間還會覺得很「醒」嗎？', options: [['很少，房間通常已經安靜', 0], ['有時候，看當天狀況', 1], ['常常，總覺得還太亮或太活躍', 2]] },
+            { id: 'tired_switched_on', text: '身體累了，但腦袋還像開著嗎？', options: [['很少', 0], ['有時候', 1], ['常常', 2]] },
+            { id: 'phone_pickup', text: '你會放下手機後，又忍不住拿起來嗎？', options: [['很少', 0], ['有時候', 1], ['常常', 2]] },
+            { id: 'bright_bedside_lighting', text: '夜晚還會使用偏白、偏冷或很亮的床邊光嗎？', options: [['很少', 0], ['有時候', 1], ['常常', 2]] },
+            { id: 'needs_soft_light', text: '你晚上需要看得見，但不想讓房間被亮光喚醒嗎？', options: [['很少，我通常可以全暗', 0], ['有時候，某些時刻需要一點光', 1], ['常常，我想要光，但不想要刺激感', 2]] },
+            { id: 'unfamiliar_room_lighting', text: '旅行或住在陌生房間時，光線會影響你進入夜晚狀態嗎？', options: [['很少', 0], ['有時候', 1], ['常常', 2]] },
+            { id: 'no_apps_screens_tracking', text: '沒有 app、螢幕或睡眠分數的實體光源，對你來說會更實際嗎？', options: [['不太會', 0], ['也許會', 1], ['會', 2]] },
+            { id: 'pre_sleep_room_activity', text: '晚上準備睡前，你還會閱讀、走動、整理或待在房間裡嗎？', options: [['很少，我通常很快全關燈', 0], ['有時候，睡前還會做幾件事', 1], ['常常，我會在房間裡待一段時間', 2]] },
+            { id: 'night_light_preference', text: '哪一句最像你想要的夜晚房間？', options: [['我只想讓房間全暗', 0], ['我想看得見，但不要太亮', 1], ['我希望房間有更適合夜晚的光訊號', 2]] }
         ];
 
         const results = [
-            { min: 0, max: 6, category: 'low_match', title: 'Owlnest Lume 可能是你夜晚的偶爾搭配 ', copy: '你的答案顯示，目前的睡前環境可能已經偏低刺激 Lume 仍可能適合閱讀、旅行，或需要柔和光線但不想打開房間主燈的時刻 ' },
-            { min: 7, max: 13, category: 'moderate_match', title: 'Owlnest Lume 可能適合你的睡前流程 ', copy: '你的答案顯示，房間有時可能比你希望的更明亮或更活躍 如果你想用更簡單的睡前光線支持夜晚轉換，Lume 可能會是合適選項 ' },
-            { min: 14, max: 20, category: 'strong_match', title: 'Owlnest Lume 可能很適合你的夜晚 ', copy: '你的答案顯示，睡前常有光線、螢幕或房間活動，當身體準備慢下來時，環境可能仍偏刺激 Lume 是為睡前仍需要光、但不想讓房間像白天的時刻設計 ' }
+            {
+                min: 0,
+                max: 6,
+                category: 'low_match',
+                title: '你的房間可能已經相對安靜',
+                copy: 'Owlnest Lume 不一定要成為你的主要睡眠燈，但它的夜晚光譜仍適合容易被強光打斷的空間：浴室、淋浴後、SPA 角落、冥想區或客房。'
+            },
+            {
+                min: 7,
+                max: 13,
+                category: 'moderate_match',
+                title: '你的房間可能正在傳混合訊號',
+                copy: '房間不一定很亮，但混合光、螢幕光或主燈仍可能讓夜晚太清醒。Owlnest Lume 可以用更安靜的睡眠光譜，支持臥室或放鬆空間。'
+            },
+            {
+                min: 14,
+                max: 20,
+                category: 'strong_match',
+                title: 'Owlnest Lume 可能很適合你的夜晚',
+                copy: '你的答案顯示，房間夜晚可能仍像白天一樣活躍。Owlnest Lume 是可以開著睡的睡眠光譜燈，幫助房間加入更適合夜晚的光訊號。'
+            }
         ];
 
         const panelsWrap = document.getElementById('quiz-panels');
@@ -266,20 +429,37 @@
         const progressBar = document.getElementById('progress-bar');
         const prevButton = document.getElementById('prev-question');
         const nextButton = document.getElementById('next-question');
+        const resultChoicePanel = document.getElementById('result-choice-panel');
+        const chooseQuizResultButton = document.getElementById('choose-quiz-result');
+        const chooseAiResultButton = document.getElementById('choose-ai-result');
         const leadPanel = document.getElementById('lead-panel');
         const fullResultPanel = document.getElementById('full-result-panel');
-        const basicResultTitle = document.getElementById('basic-result-title');
-        const basicResultCopy = document.getElementById('basic-result-copy');
         const fullResultTitle = document.getElementById('full-result-title');
         const fullResultCopy = document.getElementById('full-result-copy');
-        const basicResultStatus = document.getElementById('basic-result-status');
         const fullResultStatus = document.getElementById('full-result-status');
         const form = document.getElementById('room-check-form');
         const formMessage = document.getElementById('form-message');
         const submitButton = document.getElementById('submit-room-check');
         const consentCheckbox = document.getElementById('consent-checkbox');
+        const consentError = document.getElementById('consent-error');
+        const photoAnalysisPanel = document.getElementById('photo-analysis-panel');
+        const quizActions = document.getElementById('quiz-actions');
+        const sessionIdField = document.getElementById('sleep-check-session-id');
+        const leadStageField = document.getElementById('lead-stage-field');
+        const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
+        const maxPhotoBytes = 8 * 1024 * 1024;
+        const allowedPhotoTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
         let current = 0;
         const answers = {};
+        let aiAnalysisState = null;
+        let selectedResultMode = 'undecided';
+        let capturedEmail = '';
+        let resultEmailSent = false;
+        let sleepCheckStartTracked = false;
+        let aiPhotoStartTracked = false;
+        const resultViewTrackedModes = new Set();
+        const sleepCheckSessionId = createSessionId();
+        if (sessionIdField) sessionIdField.value = sleepCheckSessionId;
 
         panelsWrap.innerHTML = questions.map((question, index) => `
             <div class="question-panel ${index === 0 ? 'is-active' : ''}" data-question-index="${index}">
@@ -289,189 +469,662 @@
                     ${question.options.map(([label, score]) => `
                         <button type="button" class="choice-card rounded-2xl p-4 text-left" data-score="${score}" data-label="${label}" data-question-id="${question.id}">
                             <span class="block text-base font-semibold leading-snug text-white">${label}</span>
+                            <span class="mt-2 block text-xs uppercase tracking-[0.14em] text-white/38">分數 ${score}</span>
                         </button>
                     `).join('')}
                 </div>
             </div>
         `).join('');
 
-        function getResult(score) { return results.find(result => score >= result.min && score <= result.max) || results[0]; }
-        function statusMeta(category) {
-            if (category === 'low_match') return { label: '較低適合度', tone: 'low' };
-            if (category === 'moderate_match') return { label: '可能適合', tone: 'moderate' };
-            return { label: '高度適合', tone: 'strong' };
+        function getResult(score) {
+            return results.find(result => score >= result.min && score <= result.max) || results[0];
         }
-        function totalScore() { return answerPayload().reduce((sum, item) => sum + item.score, 0); }
+
+        function owlnestTrack(eventName, params = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        function trackSleepCheckStart() {
+            if (sleepCheckStartTracked) return;
+            sleepCheckStartTracked = true;
+            owlnestTrack('sleep_check_start', {
+                source_page: 'sleep_ready_room_check'
+            });
+        }
+
+        function statusMeta(category) {
+            if (category === 'low_match') return { label: '較低匹配', tone: 'low' };
+            if (category === 'moderate_match') return { label: '可能匹配', tone: 'moderate' };
+            return { label: '高度匹配', tone: 'strong' };
+        }
+
         function renderResultStatus(target, result) {
             const meta = statusMeta(result.category);
             const score = totalScore();
-            target.innerHTML = `<span class="result-status-dot is-${meta.tone}" aria-hidden="true"></span><span>${meta.label}</span><span class="text-white/42">分數 ${score} / 20</span>`;
+            target.innerHTML = `
+                <span class="result-status-dot is-${meta.tone}" aria-hidden="true"></span>
+                <span>${meta.label}</span>
+                <span class="text-white/42">分數 ${score} / 20</span>
+            `;
         }
+
         function updateView() {
-            document.querySelectorAll('.question-panel').forEach((panel, index) => panel.classList.toggle('is-active', index === current));
+            document.querySelectorAll('.question-panel').forEach((panel, index) => {
+                panel.classList.toggle('is-active', index === current);
+            });
             progressLabel.textContent = `第 ${current + 1} 題，共 ${questions.length} 題`;
             progressBar.style.width = `${((current + 1) / questions.length) * 100}%`;
             prevButton.disabled = current === 0;
-            nextButton.textContent = current === questions.length - 1 ? '查看結果' : '下一題';
-            nextButton.disabled = !answers[questions[current].id];
+            nextButton.textContent = current === questions.length - 1 ? '查看結果' : 'Next';
+            const question = questions[current];
+            nextButton.disabled = !answers[question.id];
         }
+
         function answerPayload() {
-            return questions.map(question => ({ id: question.id, question: question.text, answer: answers[question.id]?.label || '', score: Number(answers[question.id]?.score || 0) }));
+            return questions.map(question => ({
+                id: question.id,
+                question: question.text,
+                answer: answers[question.id]?.label || '',
+                score: Number(answers[question.id]?.score || 0)
+            }));
         }
+
+        function totalScore() {
+            return answerPayload().reduce((sum, item) => sum + item.score, 0);
+        }
+
+        function quizScore40() {
+            return Math.round((totalScore() / 20) * 40);
+        }
+
         function readableAnswers() {
-            return answerPayload().map((item, index) => `${index + 1}. ${item.question}\nAnswer: ${item.answer}\nScore: ${item.score}`).join('\n\n');
+            return answerPayload().map((item, index) => (
+                `${index + 1}. ${item.question}\n回答：${item.answer}\n分數：${item.score}`
+            )).join('\n\n');
         }
+
         function localTimestamp(date = new Date()) {
             const pad = value => String(value).padStart(2, '0');
-            return `${date.getFullYear()}-${pad(date.getMonth()+1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())} local time`;
+            return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())} local time`;
         }
+
+        function createSessionId() {
+            if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+            return `sleep-check-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+        }
+
         function populateSubmissionFields(date = new Date()) {
             const score = totalScore();
             const result = getResult(score);
+            const answersText = readableAnswers();
             document.getElementById('quiz-score').value = String(score);
             document.getElementById('quiz-score-display').value = `${score} / 20`;
             document.getElementById('result-category').value = result.category;
             document.getElementById('result-title-field').value = result.title;
             document.getElementById('result-summary-field').value = result.copy;
-            document.getElementById('answers-field').value = readableAnswers();
+            document.getElementById('answers-field').value = answersText;
             document.getElementById('timestamp-field').value = date.toISOString();
             document.getElementById('timestamp-local-field').value = localTimestamp(date);
             document.getElementById('page-source-field').value = window.location.href;
-            document.getElementById('language-field').value = document.documentElement.lang || 'zh-Hant';
+            document.getElementById('language-field').value = document.documentElement.lang || 'en';
+            document.getElementById('quiz-score-40-field').value = String(quizScore40());
+            if (sessionIdField) sessionIdField.value = sleepCheckSessionId;
             return result;
         }
-        function showLeadCapture() {
-            const result = populateSubmissionFields();
-            basicResultTitle.textContent = result.title;
-            basicResultCopy.textContent = result.copy;
-            renderResultStatus(basicResultStatus, result);
-            leadPanel.classList.add('is-visible');
-            document.getElementById('quiz-actions').style.display = 'none';
+
+        function setFieldValue(id, value) {
+            const node = document.getElementById(id);
+            if (node) node.value = value == null ? '' : String(value);
+        }
+
+        function resetAiFields() {
+            aiAnalysisState = null;
+            setFieldValue('analysis-mode-field', 'quiz_only');
+            setFieldValue('quiz-score-40-field', quizScore40());
+            setFieldValue('ai-photo-uploaded-field', 'no');
+            [
+                'ai-photo-score-60-field',
+                'ai-total-score-100-field',
+                'ai-archetype-id-field',
+                'ai-archetype-name-field',
+                'ai-combined-result-title-field',
+                'ai-light-risk-level-field',
+                'ai-color-temperature-estimate-field',
+                'ai-color-temperature-match-field',
+                'ai-detected-lume-field',
+                'ai-overpush-guardrail-field',
+                'ai-main-light-source-field',
+                'ai-observed-light-issues-field',
+                'ai-summary-field',
+                'ai-product-guidance-field',
+                'ai-confidence-field'
+            ].forEach(id => setFieldValue(id, ''));
+        }
+
+        function prepareAiPendingFields() {
+            resetAiFields();
+            setFieldValue('analysis-mode-field', 'ai_photo_pending');
+            setFieldValue('ai-photo-uploaded-field', 'pending');
+        }
+
+        function prepareUndecidedFields() {
+            resetAiFields();
+            setFieldValue('analysis-mode-field', 'undecided');
+            setFieldValue('ai-photo-uploaded-field', '');
+        }
+
+        function writeAiFields(analysis) {
+            aiAnalysisState = analysis;
+            setFieldValue('analysis-mode-field', 'ai_photo');
+            setFieldValue('quiz-score-40-field', analysis.quiz_score_40 ?? quizScore40());
+            setFieldValue('ai-photo-uploaded-field', 'yes');
+            setFieldValue('ai-photo-score-60-field', analysis.photo_score_60);
+            setFieldValue('ai-total-score-100-field', analysis.total_score_100);
+            setFieldValue('ai-archetype-id-field', analysis.archetype_id);
+            setFieldValue('ai-archetype-name-field', analysis.archetype_name);
+            setFieldValue('ai-combined-result-title-field', analysis.combined_result_title);
+            setFieldValue('ai-light-risk-level-field', analysis.light_risk_level);
+            setFieldValue('ai-color-temperature-estimate-field', analysis.color_temperature_estimate);
+            setFieldValue('ai-color-temperature-match-field', analysis.color_temperature_match);
+            setFieldValue('ai-detected-lume-field', analysis.detected_lume ? 'yes' : 'no');
+            setFieldValue('ai-overpush-guardrail-field', analysis.overpush_guardrail_applied ? 'yes' : 'no');
+            setFieldValue('ai-main-light-source-field', analysis.main_light_source);
+            setFieldValue('ai-observed-light-issues-field', Array.isArray(analysis.observed_light_issues) ? analysis.observed_light_issues.join('\n') : '');
+            setFieldValue('ai-summary-field', analysis.summary);
+            setFieldValue('ai-product-guidance-field', analysis.product_guidance);
+            setFieldValue('ai-confidence-field', analysis.confidence);
+        }
+
+        function renderAiStatus(target, analysis) {
+            const level = String(analysis.light_risk_level || '').toLowerCase();
+            const tone = level === 'low' ? 'low' : level === 'high' ? 'strong' : 'moderate';
+            const label = analysis.archetype_name || 'AI room-light check';
+            const score = Number.isFinite(Number(analysis.total_score_100)) ? Number(analysis.total_score_100) : '';
+            target.innerHTML = `
+                <span class="result-status-dot is-${tone}" aria-hidden="true"></span>
+                <span>${label}</span>
+                <span class="text-white/42">${score === '' ? 'AI 加強結果' : `分數 ${score} / 100`}</span>
+            `;
+        }
+
+        function trimText(text, maxLength) {
+            const value = String(text || '').replace(/\s+/g, ' ').trim();
+            if (value.length <= maxLength) return value;
+            const clipped = value.slice(0, Math.max(0, maxLength - 1));
+            const breakAt = Math.max(clipped.lastIndexOf('. '), clipped.lastIndexOf(', '), clipped.lastIndexOf(' '));
+            return `${(breakAt > 80 ? clipped.slice(0, breakAt) : clipped).trim()}…`;
+        }
+
+        function limitList(items, maxItems) {
+            return (Array.isArray(items) ? items : [])
+                .map(item => trimText(item, 80))
+                .filter(Boolean)
+                .slice(0, maxItems);
+        }
+
+        function splitGuidance(text) {
+            const value = trimText(text, 280);
+            if (!value) return [];
+            const parts = value
+                .split(/\n+|(?:^|\s)[•*-]\s+|;\s+|(?<=\.)\s+/)
+                .map(item => trimText(item.replace(/^[•*-]\s*/, ''), 130))
+                .filter(Boolean);
+            return (parts.length ? parts : [value]).slice(0, 2);
+        }
+
+        function renderCopyBlock(target, summary, guidance = '', observedIssues = []) {
+            const safeSummary = trimText(summary, 280);
+            const guidanceItems = splitGuidance(guidance);
+            const issueItems = guidanceItems.length ? [] : limitList(observedIssues, 3);
+            const tryItems = guidanceItems.length ? guidanceItems : issueItems;
+
+            target.innerHTML = '';
+            if (safeSummary) {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = safeSummary;
+                target.appendChild(paragraph);
+            }
+
+            if (tryItems.length) {
+                const wrap = document.createElement('div');
+                wrap.className = 'result-guidance';
+                const label = document.createElement('p');
+                label.className = 'result-guidance-title';
+                label.textContent = '今晚可以試試：';
+                const list = document.createElement('ul');
+                list.className = 'result-guidance-list';
+                tryItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    list.appendChild(li);
+                });
+                wrap.appendChild(label);
+                wrap.appendChild(list);
+                target.appendChild(wrap);
+            }
+        }
+
+        function renderFinalResult(result, analysis = null) {
+            if (analysis) {
+                fullResultTitle.textContent = trimText(analysis.combined_result_title || analysis.archetype_name || result.title, 100);
+                renderCopyBlock(fullResultCopy, analysis.summary, analysis.product_guidance, analysis.observed_light_issues);
+                renderAiStatus(fullResultStatus, analysis);
+                return;
+            }
+            fullResultTitle.textContent = result.title;
+            renderCopyBlock(fullResultCopy, result.copy);
+            renderResultStatus(fullResultStatus, result);
+        }
+
+        function currentResultEmailPayload(email) {
+            const get = id => {
+                const node = document.getElementById(id);
+                return node ? node.value : '';
+            };
+            return {
+                email,
+                first_name: '',
+                sleep_check_session_id: sleepCheckSessionId,
+                lead_stage: get('lead-stage-field'),
+                analysis_mode: get('analysis-mode-field') || 'quiz_only',
+                quiz_result_category: get('result-category'),
+                raw_quiz_score: get('quiz-score'),
+                quiz_score_40: get('quiz-score-40-field'),
+                quiz_summary: get('result-summary-field'),
+                quiz_recommendation: get('result-summary-field'),
+                ai_photo_uploaded: get('ai-photo-uploaded-field'),
+                ai_archetype_name: get('ai-archetype-name-field'),
+                ai_photo_score_60: get('ai-photo-score-60-field'),
+                ai_total_score_100: get('ai-total-score-100-field'),
+                ai_light_risk_level: get('ai-light-risk-level-field'),
+                ai_combined_result_title: get('ai-combined-result-title-field'),
+                ai_main_light_source: get('ai-main-light-source-field'),
+                ai_summary: get('ai-summary-field'),
+                ai_product_guidance: get('ai-product-guidance-field'),
+                source: window.location.href,
+                campaign: 'sleep-ready-room-check'
+            };
+        }
+
+        async function sendResultEmail(payload) {
+            if (!payload.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+                return false;
+            }
+            try {
+                const response = await fetch('/.netlify/functions/send-sleep-check-result', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) return false;
+                const result = await response.json();
+                return Boolean(result && result.success);
+            } catch {
+                return false;
+            }
+        }
+
+        function hideAllPostQuizPanels() {
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            leadPanel.classList.remove('is-visible');
+            fullResultPanel.classList.remove('is-visible');
+        }
+
+        function showResultChoiceStep() {
+            document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
             panelsWrap.style.display = 'none';
-            progressLabel.textContent = '你的 Lume 適合度結果已完成';
+            quizActions.style.display = 'none';
+            hideAllPostQuizPanels();
+            resultChoicePanel?.classList.remove('hidden');
+            progressLabel.textContent = '選擇你的結果';
             progressBar.style.width = '100%';
         }
+
+        function showEmailGate(mode) {
+            selectedResultMode = mode;
+            populateSubmissionFields();
+            if (mode === 'ai_photo') {
+                prepareAiPendingFields();
+            } else if (mode === 'undecided') {
+                prepareUndecidedFields();
+            } else {
+                resetAiFields();
+            }
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            fullResultPanel.classList.remove('is-visible');
+            leadPanel.classList.add('is-visible');
+            form.style.display = '';
+            formMessage.textContent = '';
+            formMessage.className = 'mt-3 text-sm text-white/60';
+            submitButton.disabled = false;
+            submitButton.textContent = mode === 'ai_photo' ? '分析房間光線' : mode === 'quiz_only' ? '查看結果' : '繼續';
+            progressLabel.textContent = '結果寄送';
+            progressBar.style.width = '100%';
+        }
+
+        function showFinalResult(email, analysis = null) {
+            const result = populateSubmissionFields();
+            renderFinalResult(result, analysis);
+            leadPanel.classList.remove('is-visible');
+            resultChoicePanel?.classList.add('hidden');
+            photoAnalysisPanel?.classList.add('hidden');
+            fullResultPanel.classList.add('is-visible');
+            progressLabel.textContent = analysis ? '你的 AI 房間光線結果已完成' : '你的問卷結果已完成';
+            progressBar.style.width = '100%';
+            const emailStatus = document.getElementById('result-email-status');
+            if (emailStatus) {
+                emailStatus.textContent = email
+                    ? `我們已將結果寄到 ${email}。`
+                    : "我們已將結果寄到你的信箱。";
+            }
+            const resultMode = analysis ? 'ai_photo' : 'quiz_only';
+            if (!resultViewTrackedModes.has(resultMode)) {
+                resultViewTrackedModes.add(resultMode);
+                if (analysis) {
+                    owlnestTrack('sleep_check_ai_result_view', {
+                        source_page: 'sleep_ready_room_check',
+                        analysis_mode: 'ai_photo',
+                        ai_total_score_100: Number(analysis.total_score_100) || 0,
+                        ai_light_risk_level: analysis.light_risk_level || '',
+                        ai_archetype_id: analysis.archetype_id || ''
+                    });
+                } else {
+                    owlnestTrack('sleep_check_result_view', {
+                        source_page: 'sleep_ready_room_check',
+                        analysis_mode: 'quiz_only',
+                        result_category: result.category,
+                        quiz_score_40: quizScore40()
+                    });
+                }
+            }
+        }
+
+        async function submitLead(stage, email) {
+            const submittedAt = new Date();
+            populateSubmissionFields(submittedAt);
+            setFieldValue('lead-stage-field', stage);
+            const data = new URLSearchParams(new FormData(form));
+            data.set('form-name', 'sleep-ready-room-check');
+            data.set('sleep_check_session_id', sleepCheckSessionId);
+            data.set('lead_stage', stage);
+            data.set('email', email);
+            data.set('timestamp', submittedAt.toISOString());
+            data.set('timestamp_local', localTimestamp(submittedAt));
+            data.set('page_source', window.location.href);
+            data.set('language', document.documentElement.lang || 'en');
+            data.set('consent', 'yes');
+
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: data.toString()
+            });
+            if (!response.ok) throw new Error('Submission failed');
+        }
+
+        async function sendCapturedResultEmail(email) {
+            resultEmailSent = await sendResultEmail(currentResultEmailPayload(email));
+            const emailStatus = document.getElementById('result-email-status');
+            if (emailStatus && !resultEmailSent) {
+                emailStatus.textContent = "你的結果已完成。Email 目前未能寄出，但你仍可以在這裡查看結果。";
+            }
+            return resultEmailSent;
+        }
+
+        async function runPhotoAnalysis() {
+            const input = document.getElementById('sleep-environment-photo');
+            const file = input?.files && input.files[0];
+            if (!file) throw new Error('Missing room photo');
+
+            const formData = new FormData();
+            formData.set('photo', file);
+            formData.set('language', 'zh-Hant');
+            formData.set('raw_quiz_score', String(totalScore()));
+            formData.set('quiz_score_40', String(quizScore40()));
+            formData.set('result_category', getResult(totalScore()).category);
+            formData.set('answers_json', JSON.stringify(answerPayload()));
+            formData.set('answers_text', readableAnswers());
+
+            const response = await fetch(aiEndpoint, { method: 'POST', body: formData });
+            const analysis = await response.json().catch(() => null);
+            if (!response.ok || !analysis || analysis.success === false) {
+                throw new Error('AI room-light analysis unavailable');
+            }
+            writeAiFields(analysis);
+            return analysis;
+        }
+
+        function setPhotoMessage(message, tone = 'muted') {
+            const node = document.getElementById('photo-analysis-message');
+            if (!node) return;
+            node.textContent = message;
+            node.className = tone === 'warning' ? 'text-sm text-amber' : 'text-sm text-white/60';
+        }
+
+        function showPhotoAnalysisStep() {
+            if (!aiPhotoStartTracked) {
+                aiPhotoStartTracked = true;
+                owlnestTrack('sleep_check_ai_photo_start', {
+                    source_page: 'sleep_ready_room_check'
+                });
+            }
+            prepareAiPendingFields();
+            document.querySelectorAll('.question-panel').forEach(panel => panel.classList.remove('is-active'));
+            panelsWrap.style.display = 'none';
+            quizActions.style.display = 'none';
+            resultChoicePanel?.classList.add('hidden');
+            leadPanel.classList.remove('is-visible');
+            fullResultPanel.classList.remove('is-visible');
+            if (photoAnalysisPanel) photoAnalysisPanel.classList.remove('hidden');
+            progressLabel.textContent = '選填 AI 房間光線檢查';
+            progressBar.style.width = '100%';
+        }
+
+        function setupPhotoAnalysisStep() {
+            const input = document.getElementById('sleep-environment-photo');
+            const analyzeButton = document.getElementById('analyze-photo');
+            const backButton = document.getElementById('back-to-result-choice');
+            const removeButton = document.getElementById('remove-photo');
+            const previewWrap = document.getElementById('photo-preview-wrap');
+            const preview = document.getElementById('photo-preview');
+            const consent = document.getElementById('photo-analysis-consent');
+            const selectedPhotoName = document.getElementById('selected-photo-name');
+            if (!input || !analyzeButton || !backButton || !consent) return;
+
+            function refreshAnalyzeState() {
+                analyzeButton.disabled = !capturedEmail || !input.files || !input.files[0] || !consent.checked;
+            }
+
+            function clearPhoto() {
+                input.value = '';
+                if (preview) {
+                    if (preview.src && preview.src.startsWith('blob:')) URL.revokeObjectURL(preview.src);
+                    preview.removeAttribute('src');
+                }
+                if (previewWrap) previewWrap.classList.add('hidden');
+                if (selectedPhotoName) selectedPhotoName.textContent = '尚未選擇照片';
+                setPhotoMessage('');
+                refreshAnalyzeState();
+            }
+
+            input.addEventListener('change', () => {
+                setPhotoMessage('');
+                const file = input.files && input.files[0];
+                if (!file) {
+                    clearPhoto();
+                    return;
+                }
+                if (!allowedPhotoTypes.has(file.type)) {
+                    clearPhoto();
+                    setPhotoMessage('請上傳 JPEG、PNG 或 WebP 圖片。', 'warning');
+                    return;
+                }
+                if (file.size > maxPhotoBytes) {
+                    clearPhoto();
+                    setPhotoMessage('請上傳小於 8 MB 的圖片。', 'warning');
+                    return;
+                }
+                if (preview && previewWrap) {
+                    if (preview.src && preview.src.startsWith('blob:')) URL.revokeObjectURL(preview.src);
+                    preview.src = URL.createObjectURL(file);
+                    previewWrap.classList.remove('hidden');
+                }
+                if (selectedPhotoName) selectedPhotoName.textContent = file.name;
+                refreshAnalyzeState();
+            });
+
+            consent.addEventListener('change', refreshAnalyzeState);
+            removeButton?.addEventListener('click', clearPhoto);
+            backButton.addEventListener('click', showResultChoiceStep);
+
+            analyzeButton.addEventListener('click', async () => {
+                const file = input.files && input.files[0];
+                if (!file) {
+                    setPhotoMessage('請先選擇房間照片。', 'warning');
+                    return;
+                }
+                if (!consent.checked) {
+                    setPhotoMessage('上傳前請先同意選填的 AI 房間光線分析。', 'warning');
+                    return;
+                }
+
+                setPhotoMessage('');
+                selectedResultMode = 'ai_photo';
+                analyzeButton.disabled = true;
+                backButton.disabled = true;
+                setPhotoMessage('正在分析你的房間光線...');
+                try {
+                    const analysis = await runPhotoAnalysis();
+                    await submitLead('ai_photo_result', capturedEmail);
+                    showFinalResult(capturedEmail, analysis);
+                    await sendCapturedResultEmail(capturedEmail);
+                } catch {
+                    setPhotoMessage('照片分析未能完成。請再試一次，或不加照片直接看結果。', 'warning');
+                    analyzeButton.disabled = false;
+                    backButton.disabled = false;
+                    refreshAnalyzeState();
+                }
+            });
+
+            refreshAnalyzeState();
+        }
+
         panelsWrap.addEventListener('click', event => {
             const button = event.target.closest('.choice-card');
             if (!button) return;
-            answers[button.dataset.questionId] = { label: button.dataset.label, score: Number(button.dataset.score) };
+            trackSleepCheckStart();
+            const questionId = button.dataset.questionId;
+            answers[questionId] = {
+                label: button.dataset.label,
+                score: Number(button.dataset.score)
+            };
             button.parentElement.querySelectorAll('.choice-card').forEach(choice => choice.classList.remove('is-selected'));
             button.classList.add('is-selected');
             updateView();
         });
-        prevButton.addEventListener('click', () => { if (current > 0) current -= 1; updateView(); });
-        nextButton.addEventListener('click', () => { if (current < questions.length - 1) { current += 1; updateView(); } else { showLeadCapture(); } });
+
+        prevButton.addEventListener('click', () => {
+            if (current > 0) current -= 1;
+            updateView();
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (current < questions.length - 1) {
+                current += 1;
+                updateView();
+            } else {
+                showEmailGate('undecided');
+            }
+        });
+
+        chooseQuizResultButton?.addEventListener('click', async () => {
+            selectedResultMode = 'quiz_only';
+            resetAiFields();
+            try {
+                await submitLead('quiz_only_result', capturedEmail);
+                showFinalResult(capturedEmail);
+                await sendCapturedResultEmail(capturedEmail);
+            } catch {
+                formMessage.textContent = '發生問題，請再試一次。';
+                formMessage.className = 'mt-3 text-sm text-amber';
+                showEmailGate('undecided');
+            }
+        });
+        chooseAiResultButton?.addEventListener('click', showPhotoAnalysisStep);
+
         form.addEventListener('submit', async event => {
             event.preventDefault();
             formMessage.textContent = '';
             formMessage.className = 'mt-3 text-sm text-white/60';
             const emailInput = document.getElementById('room-check-email');
-            if (!emailInput.value || !emailInput.validity.valid) { formMessage.textContent = '請輸入有效的 email '; formMessage.className = 'mt-3 text-sm text-amber'; return; }
-            if (!consentCheckbox.checked) { formMessage.textContent = '送出前請先同意接收 Owlnest 更新 '; formMessage.className = 'mt-3 text-sm text-amber'; return; }
+            if (!emailInput.value || !emailInput.validity.valid) {
+                formMessage.textContent = '請輸入有效的 email。';
+                formMessage.className = 'mt-3 text-sm text-amber';
+                return;
+            }
+            if (!consentCheckbox.checked) {
+                if (consentError) {
+                    consentError.textContent = '請勾選同意接收結果與 Owlnest 更新。';
+                    consentError.classList.remove('hidden');
+                }
+                return;
+            }
             submitButton.disabled = true;
-            submitButton.textContent = '送出中...';
-            const submittedAt = new Date();
-            populateSubmissionFields(submittedAt);
-            const data = new URLSearchParams(new FormData(form));
-            data.set('form-name', 'sleep-ready-room-check');
-            data.set('timestamp', submittedAt.toISOString());
-            data.set('timestamp_local', localTimestamp(submittedAt));
-            data.set('page_source', window.location.href);
-            data.set('language', document.documentElement.lang || 'zh-Hant');
-            data.set('consent', 'yes');
+            submitButton.textContent = selectedResultMode === 'ai_photo' ? '分析中...' : '準備中...';
+            const emailValue = emailInput.value.trim();
+            capturedEmail = emailValue;
+
             try {
-                const response = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data.toString() });
-                if (!response.ok) throw new Error('Submission failed');
-                const result = getResult(Number(document.getElementById('quiz-score').value));
-                fullResultTitle.textContent = result.title;
-                fullResultCopy.textContent = result.copy;
-                renderResultStatus(fullResultStatus, result);
-                fullResultPanel.classList.add('is-visible');
-                document.getElementById('submit-success-panel').classList.add('is-visible');
-                form.style.display = 'none';
+                if (selectedResultMode === 'undecided') {
+                    prepareUndecidedFields();
+                    await submitLead('email_gate_completed', emailValue);
+                    owlnestTrack('sleep_check_email_submit', {
+                        source_page: 'sleep_ready_room_check',
+                        lead_type: 'sleep_check_result',
+                        analysis_mode: selectedResultMode || 'undecided'
+                    });
+                    owlnestTrack('generate_lead', {
+                        source_page: 'sleep_ready_room_check',
+                        lead_type: 'sleep_check_result'
+                    });
+                    leadPanel.classList.remove('is-visible');
+                    showResultChoiceStep();
+                } else {
+                    resetAiFields();
+                    await submitLead('quiz_only_result', emailValue);
+                    showFinalResult(emailValue);
+                    await sendCapturedResultEmail(emailValue);
+                }
+                formMessage.textContent = '';
             } catch (error) {
-                formMessage.textContent = '送出時發生問題，請稍後再試 ';
+                formMessage.textContent = selectedResultMode === 'ai_photo'
+                    ? '照片分析發生問題。請再試一次，或選擇問卷結果。'
+                    : '發生問題，請再試一次。';
                 formMessage.className = 'mt-3 text-sm text-amber';
                 submitButton.disabled = false;
-                submitButton.textContent = '送出結果並加入早鳥通知';
+                submitButton.textContent = selectedResultMode === 'ai_photo' ? '分析房間光線' : selectedResultMode === 'quiz_only' ? '查看結果' : '繼續';
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        function toggleLanguageMenu(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            const isOpen = menu.classList.toggle('open');
-            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (consentCheckbox && consentError) {
+            consentCheckbox.addEventListener('change', () => {
+                if (consentCheckbox.checked) {
+                    consentError.classList.add('hidden');
+                    consentError.textContent = '';
+                }
+            });
         }
 
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            if (!event.target.closest('.language-wrap')) {
-                menu.classList.remove('open');
-                trigger.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
-            if (!menu || !icon) return;
-            menu.classList.toggle('open');
-            const isOpen = menu.classList.contains('open');
-            if (icon.classList.contains('fas')) {
-                icon.classList.toggle('fa-bars', !isOpen);
-                icon.classList.toggle('fa-times', isOpen);
-            } else {
-                icon.textContent = isOpen ? '×' : '☰';
-            }
-        }
+        setupPhotoAnalysisStep();
         updateView();
     </script>
-    <script src="../assets/js/consent.js" defer></script>
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

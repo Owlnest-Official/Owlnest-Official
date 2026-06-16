@@ -215,7 +215,7 @@
                         <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>即將開放</span></button>
                     </div>
                 </div>
-                <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm" rel="noopener noreferrer">立即預購</a>
+                <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">立即預購</a>
                 <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="切換選單">
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
                     <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
@@ -249,7 +249,7 @@
                     <span class="text-white/45">Tiếng Việt — 即將開放</span>
                 </div>
             </div>
-            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" onclick="toggleMobileMenu()" data-track-click="click_preorder_paypal" class="cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm" rel="noopener noreferrer">立即預購</a>
+            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" onclick="toggleMobileMenu()" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">立即預購</a>
         </nav>
     </div>
 
@@ -275,8 +275,8 @@
                     <p class="mt-3 sm:mt-5 text-sm sm:text-base text-amber font-bold">預購已開放<br>單入或雙入會在 PayPal 內選擇</p>
 
                     <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-xl">
-                        <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" rel="noopener noreferrer">立即預購</a>
-                        <a href="#preorder" class="cta inline-flex min-h-14 items-center justify-center rounded-xl border border-white/18 px-7 text-xs font-bold uppercase tracking-[0.14em] text-white hover:border-amber hover:bg-white/8">查看預購詳情</a>
+                        <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">立即預購</a>
+                        <a href="#preorder" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl border border-white/18 px-7 text-xs font-bold uppercase tracking-[0.14em] text-white hover:border-amber hover:bg-white/8" data-cta-name="learn_more">查看預購詳情</a>
                     </div>
                     <p class="mt-4 max-w-xl text-xs leading-relaxed text-white/58">
                         這是預購商品 2026 年 7 月 20 日開始批次履行 運費、稅金、關稅與進口費用會在履行前另行確認
@@ -288,8 +288,8 @@
                     </div>
 
                     <div id="early-access" class="mt-5 sm:mt-7 max-w-xl">
-                        <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-hero" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                            <input type="hidden" name="form-name" value="owlnest-prelaunch">
+                        <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-hero" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="campaign-email">
                             <input type="hidden" name="source_section" value="zh-campaign-hero">
                             <input type="hidden" name="page_path" value="/zh-tw/campaign/">
                             <input type="hidden" name="utm_source" value="">
@@ -301,7 +301,7 @@
                             <div class="flex flex-col sm:flex-row gap-3">
                                 <label class="sr-only" for="hero-email">輸入你的 email</label>
                                 <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                                <button type="submit" data-track-click="click_get_preorder_updates" class="cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm">取得更新</button>
+                                <button type="submit" data-track-click="click_get_preorder_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm" data-cta-name="early_access">取得更新</button>
                             </div>
                             <label class="campaign-consent">
                                 <input type="checkbox" name="consent" value="yes" required>
@@ -325,14 +325,14 @@
             <div class="max-w-3xl mx-auto rounded-[26px] bg-cream text-midnight p-7 sm:p-10 text-center">
                 <span class="text-amber tracking-[0.16em] uppercase text-xs font-black"><span class="text-base md:text-xl">AI</span> 房間光線檢查</span>
                 <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">你的房間正在傳錯夜晚訊號嗎？</h2>
-                <p class="mt-4 text-midnight/68 leading-relaxed">回答 10 個問題<br>也可以加入房間照片，讓 AI 讀取光線狀態 </p>
-                <a href="/zh-tw/sleep-ready-room-check/" class="mt-6 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white transition">檢查房間光線</a>
+                <p class="mt-4 text-midnight/68 leading-relaxed">回答 10 個問題<br>也可以加入房間照片，讓 AI 讀取光線狀態</p>
+                <a href="/zh-tw/sleep-ready-room-check/" data-track-click="click_sleep_ready_check" class="cta js-campaign-cta mt-6 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white transition" data-cta-name="sleep_ready_check">檢查房間光線</a>
             </div>
         </section>
 
         <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-problem-dark-not-ready.png" alt="夜晚房間仍然被手機和刺激光線喚醒" loading="lazy"></div></section>
         <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-room-shift-before-with-lume.png" alt="使用 Lume 前後，房間從刺激光轉為更柔和的睡前狀態" loading="lazy"></div></section>
-        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-product-definition.png" alt="Owlnest Lume 產品定義，為睡前 1 到 2 小時設計的助眠光線" loading="lazy"></div></section>
+        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-product-definition.png" alt="Owlnest Lume 產品定義，為整晚夜間光譜設計的睡眠光線" loading="lazy"></div></section>
         <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-warm-light-difference.png" alt="說明暖光不一定等於睡前光" loading="lazy"></div></section>
         <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-science-trust.png" alt="研究依據說明夜晚光線品質的重要性" loading="lazy"></div></section>
         <section class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20"><div class="max-w-5xl mx-auto"><img src="/assets/campaign/campaign-what-we-left-out.png" alt="Owlnest Lume 移除 app、螢幕、喇叭與睡眠分數" loading="lazy"></div></section>
@@ -392,7 +392,7 @@
                                 <p class="mt-3 text-sm leading-relaxed text-[rgba(250,239,207,0.82)]">今日價格僅為產品價格 運費、稅金、關稅與進口費用不包含在今日付款內，會在履行前另行確認</p>
                                 <p class="mt-3 text-sm leading-relaxed"><a href="/preorder-policy.html" class="text-[#D8952E] hover:text-[#FAEFCF] underline underline-offset-4">閱讀預購條款</a></p>
                             </div>
-                            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" rel="noopener noreferrer">立即預購</a>
+                            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">立即預購</a>
                             <p class="mt-3 text-center text-xs text-[rgba(250,239,207,0.68)]">單入或雙入會在 PayPal 內選擇</p>
                         </div>
                     </div>
@@ -405,8 +405,8 @@
                 <span class="text-amber tracking-[0.16em] uppercase text-xs font-bold">為什麼現在預購</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-5xl leading-tight text-white">首批 Owlnest Lume<br>預購開放中</h2>
                 <p class="mt-5 text-white/68 leading-relaxed">預購已開放<br>單入或雙入會在 PayPal 內選擇</p>
-                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-positioning" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="owlnest-prelaunch">
+                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-positioning" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="campaign-email">
                     <input type="hidden" name="source_section" value="zh-campaign-positioning">
                     <input type="hidden" name="page_path" value="/zh-tw/campaign/">
                     <input type="hidden" name="utm_source" value="">
@@ -417,7 +417,7 @@
                     <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                     <div class="flex flex-col sm:flex-row gap-2">
                         <input name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                        <button type="submit" class="min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream">取得更新</button>
+                        <button type="submit" data-track-click="click_get_preorder_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream" data-cta-name="early_access">取得更新</button>
                     </div>
                     <p class="form-message mt-3 text-sm text-white/56" role="status" aria-live="polite"></p>
                 </form>
@@ -458,8 +458,8 @@
                 <span class="section-label">預購更新</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-6xl leading-[1.04] tracking-[-0.035em]">取得預購<br>履行更新</h2>
                 <p class="mt-5 text-lg text-midnight/64 leading-relaxed">加入名單，收到預購、產品進度與履行更新 </p>
-                <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="zh-campaign-final-cta" name="owlnest-prelaunch" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="owlnest-prelaunch">
+                <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="zh-campaign-final-cta" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="campaign-email">
                     <input type="hidden" name="source_section" value="zh-campaign-final-cta">
                     <input type="hidden" name="page_path" value="/zh-tw/campaign/">
                     <input type="hidden" name="utm_source" value="">
@@ -470,7 +470,7 @@
                     <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                     <div class="flex flex-col sm:flex-row gap-2">
                         <input name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                        <button type="submit" class="min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white">取得更新</button>
+                        <button type="submit" data-track-click="click_get_preorder_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white" data-cta-name="early_access">取得更新</button>
                     </div>
                     <label class="campaign-consent">
                         <input type="checkbox" name="consent" value="yes" required>
@@ -564,25 +564,155 @@
                 icon.textContent = isOpen ? '×' : '☰';
             }
         }
-        document.querySelectorAll('.signup-form').forEach(form => {
-            form.addEventListener('submit', async event => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+        const params = new URLSearchParams(window.location.search);
+        const utmValues = Object.fromEntries(utmKeys.map((key) => [key, params.get(key) || '']));
+
+        function owlnestTrack(eventName, params = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        function trackEvent(name, details = {}) {
+            owlnestTrack(name, details);
+        }
+
+        owlnestTrack('view_preorder_campaign', {
+            source_page: 'zh_campaign',
+            preorder_status: 'open',
+            product_name: 'Owlnest Lume'
+        });
+
+        const preorderConfig = {
+            paymentUrl: 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A',
+            closesAt: '2026-07-20T23:59:00-04:00'
+        };
+
+        function preorderClickPayload(button) {
+            const sourceSection = button.closest('section')?.id || button.closest('form')?.dataset.sourceSection || 'zh_campaign_nav';
+            return {
+                source_page: 'zh_campaign',
+                source_section: sourceSection,
+                cta_text: button.textContent.trim(),
+                destination: 'paypal',
+                payment_provider: 'paypal',
+                product_name: 'Owlnest Lume',
+                currency: 'USD',
+                single_price: 59,
+                duo_price: 100,
+                preorder_status: 'open'
+            };
+        }
+
+        document.querySelectorAll('[data-track-click]').forEach((button) => {
+            button.addEventListener('click', () => {
+                trackEvent(button.dataset.trackClick, {
+                    source_section: button.closest('form')?.dataset.sourceSection || button.closest('section')?.id || 'nav',
+                    page_path: window.location.pathname
+                });
+                if (button.getAttribute('href') === preorderConfig.paymentUrl) {
+                    owlnestTrack('preorder_paypal_click', preorderClickPayload(button));
+                }
+            });
+        });
+
+        function fillTrackingFields(form) {
+            const sourceField = form.querySelector('[name="source_section"]');
+            const pathField = form.querySelector('[name="page_path"]');
+            if (sourceField) sourceField.value = form.dataset.sourceSection || '';
+            if (pathField) pathField.value = window.location.pathname;
+            utmKeys.forEach((key) => {
+                const field = form.querySelector(`[name="${key}"]`);
+                if (field) field.value = utmValues[key];
+            });
+        }
+
+        function encodeFormData(form) {
+            fillTrackingFields(form);
+            const data = new FormData(form);
+            data.set('form-name', 'campaign-email');
+            return new URLSearchParams(data).toString();
+        }
+
+        function setMessage(form, text, type) {
+            const message = form.querySelector('.signup-message') || form.querySelector('.form-message');
+            if (!message) return;
+            message.textContent = text;
+            message.classList.remove('text-emerald-300', 'text-red-300', 'text-white/58', 'text-midnight/60');
+            message.classList.add(type === 'success' ? 'text-emerald-300' : type === 'error' ? 'text-red-300' : 'text-white/58');
+        }
+
+        document.querySelectorAll('.signup-form').forEach((form) => {
+            form.addEventListener('submit', async (event) => {
                 event.preventDefault();
-                const message = form.querySelector('.signup-message') || form.querySelector('.form-message');
+                if (form.dataset.submitting === 'true') return;
+                const input = form.querySelector('input[type="email"]');
                 const button = form.querySelector('button[type="submit"]');
-                if (message) message.textContent = '';
-                if (button) { button.disabled = true; button.textContent = '送出中...'; }
-                form.querySelector('[name="page_path"]').value = window.location.pathname;
-                const data = new URLSearchParams(new FormData(form));
-                data.set('form-name', 'owlnest-prelaunch');
+                const originalButtonText = button?.textContent || '取得更新';
+                const email = input?.value.trim() || '';
+                fillTrackingFields(form);
+
+                if (!emailPattern.test(email)) {
+                    setMessage(form, '請輸入有效的 email', 'error');
+                    input?.focus();
+                    return;
+                }
+
+                form.dataset.submitting = 'true';
+                if (button) {
+                    button.disabled = true;
+                    button.classList.add('opacity-70');
+                    button.textContent = '送出中...';
+                }
+                setMessage(form, '正在送出...', 'neutral');
+
                 try {
-                    const response = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data.toString() });
-                    if (!response.ok) throw new Error('Submission failed');
+                    if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+                        await new Promise((resolve) => setTimeout(resolve, 250));
+                    } else {
+                        const response = await fetch('/', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: encodeFormData(form)
+                        });
+                        if (!response.ok) throw new Error('submit_failed');
+                    }
+
                     form.reset();
-                    if (message) message.textContent = '已收到 謝謝你加入 Owlnest Lume 預購更新 ';
+                    fillTrackingFields(form);
+                    trackEvent('submit_early_access_email', {
+                        source_section: form.dataset.sourceSection || '',
+                        page_path: window.location.pathname
+                    });
+                    owlnestTrack('campaign_email_submit', {
+                        source_page: 'zh_campaign',
+                        lead_type: 'preorder_updates',
+                        preorder_status: 'open'
+                    });
+                    owlnestTrack('generate_lead', {
+                        source_page: 'zh_campaign',
+                        lead_type: 'preorder_updates'
+                    });
+
+                    if (form.dataset.stayOnPage === 'true') {
+                        setMessage(form, form.dataset.successMessage || '已收到，謝謝你加入 Owlnest Lume 預購更新', 'success');
+                    } else {
+                        window.location.href = form.getAttribute('action') || '/campaign-success.html';
+                    }
                 } catch (error) {
-                    if (message) message.textContent = '送出時發生問題，請稍後再試 ';
+                    setMessage(form, '送出時發生問題，請稍後再試', 'error');
                 } finally {
-                    if (button) { button.disabled = false; button.textContent = '取得更新'; }
+                    if (button) {
+                        button.disabled = false;
+                        button.classList.remove('opacity-70');
+                        button.textContent = originalButtonText;
+                    }
+                    form.dataset.submitting = 'false';
                 }
             });
         });

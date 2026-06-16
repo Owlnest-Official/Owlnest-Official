@@ -262,10 +262,10 @@
             <div class="product-hero-grid relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-12 lg:gap-20 items-center reveal-text visible">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs mb-5 block font-bold">Owlnest Lume</span>
-                    <h1 class="product-hero-title section-heading text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.04] mb-7">睡眠光譜燈</h1>
-                    <p class="product-hero-subhead max-w-3xl font-serif text-2xl md:text-3xl text-amber mb-6 leading-[1.18]">可以開著睡的夜晚光譜 </p>
+                    <h1 class="product-hero-title section-heading text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.05] mb-7">Owlnest Lume</h1>
+                    <p class="product-hero-subhead max-w-3xl font-serif text-xl md:text-2xl text-amber mb-6 leading-[1.18]">支持自然褪黑激素節律的睡眠光譜燈<br>可以開著睡 </p>
                     <p class="product-hero-copy max-w-[24rem] md:max-w-2xl font-sans text-base md:text-lg font-light text-white/68 leading-relaxed mb-8">
-                        Owlnest Lume 使用深琥珀、低藍光的睡眠光譜，為夜晚加入更適合睡眠的光訊號 沒有 app，沒有螢幕，就是一盞簡單的實體燈
+                        為睡眠而設計的夜間友善光譜，不只是看得見 沒有 app，沒有螢幕，就是一盞簡單的實體燈
                     </p>
                     <div class="product-hero-actions max-w-[21rem] md:max-w-none flex flex-col sm:flex-row gap-4">
                         <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm" rel="noopener noreferrer">立即預購</a>
@@ -446,6 +446,35 @@
 
 
             <script>
+        const PAYPAL_PREORDER_URL = 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A';
+
+        function owlnestTrack(eventName, params = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: eventName,
+                event_source: 'owlnest_site',
+                ...params
+            });
+        }
+
+        document.querySelectorAll(`a[href="${PAYPAL_PREORDER_URL}"]`).forEach(link => {
+            link.addEventListener('click', () => {
+                const section = link.closest('section');
+                owlnestTrack('preorder_paypal_click', {
+                    source_page: 'zh_products',
+                    source_section: section?.id || 'zh_products_preorder',
+                    cta_text: '立即預購',
+                    destination: 'paypal',
+                    payment_provider: 'paypal',
+                    product_name: 'Owlnest Lume',
+                    currency: 'USD',
+                    single_price: 59,
+                    duo_price: 100,
+                    preorder_status: 'open'
+                });
+            });
+        });
+
         function toggleLanguageMenu(event) {
             event.preventDefault();
             event.stopPropagation();
