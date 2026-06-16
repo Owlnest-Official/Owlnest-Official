@@ -223,10 +223,10 @@
             <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-8 lg:gap-12 items-center">
                 <div>
                     <span class="text-amber tracking-[0.16em] uppercase text-xs md:text-sm font-black"><span class="text-base md:text-xl">AI</span> 房間光線檢查</span>
-                    <h1 class="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.025em] text-white">你的房間正在傳錯夜晚訊號嗎？</h1>
-                    <p class="mt-6 max-w-2xl text-base md:text-lg text-white/72 leading-relaxed">回答 10 個問題<br>也可以加入房間照片，讓 AI 讀取光線狀態</p>
+                    <h1 class="mt-5 font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.025em] text-white">你的房間光線還太像白天嗎？</h1>
+                    <p class="mt-6 max-w-2xl text-base md:text-lg text-white/72 leading-relaxed">回答 10 個問題<br>也可以加一張房間照片，讓 AI 幫你看光線</p>
                     <a href="#room-check-quiz" class="mt-7 inline-flex items-center justify-center rounded-full bg-amber text-midnight px-7 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream transition-colors">檢查房間光線</a>
-                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">這是教育與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
+                    <p class="mt-5 max-w-xl text-sm text-white/48 leading-relaxed">這是教育用途與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
                 </div>
 
                 <section id="room-check-quiz" class="rounded-[22px] border border-white/10 bg-white/[0.035] p-5 sm:p-6 lg:p-7 shadow-xl shadow-black/20 scroll-mt-28" aria-label="AI 房間光線檢查問卷">
@@ -250,16 +250,16 @@
                     <section id="result-choice-panel" class="hidden mt-8 border-t border-white/10 pt-7" aria-live="polite">
                         <div class="field-shell rounded-[22px] p-4 sm:p-6">
                             <p class="text-[10px] uppercase tracking-[0.16em] text-amber font-bold">結果選項</p>
-                            <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white">選擇你的結果</h2>
+                            <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white">選擇查看方式</h2>
                             <div class="mt-6 grid gap-3 sm:grid-cols-2">
                                 <article class="rounded-2xl border border-white/12 bg-midnight/45 p-4">
                                     <h3 class="font-serif text-2xl text-white">問卷結果</h3>
-                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">依照你的回答，快速判斷房間光線狀態。</p>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">依照你的回答，快速看房間光線狀態。</p>
                                     <button id="choose-quiz-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-amber px-5 text-midnight text-xs font-bold uppercase tracking-[0.12em] hover:bg-cream">不加照片，直接看結果</button>
                                 </article>
                                 <article class="rounded-2xl border border-amber/35 bg-amber/10 p-4">
                                     <h3 class="font-serif text-2xl text-white">AI 房間光線分析</h3>
-                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">上傳房間照片，讓 AI 讀取可見光源、螢幕光與整體亮度。</p>
+                                    <p class="mt-3 text-sm text-white/62 leading-relaxed">上傳房間照片，讓 AI 看可見光源、螢幕光與整體亮度。</p>
                                     <button id="choose-ai-result" type="button" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-white/18 px-5 text-white text-xs font-bold uppercase tracking-[0.12em] hover:border-amber hover:text-amber">加入 AI 照片分析</button>
                                 </article>
                             </div>
@@ -366,7 +366,7 @@
                         <div id="full-result-status" class="result-status mt-4 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.12em]"></div>
                         <h2 id="full-result-title" class="mt-3 font-serif text-3xl md:text-4xl leading-tight text-white"></h2>
                         <div id="full-result-copy" class="result-copy mt-4 text-white/72"></div>
-                        <p class="mt-5 text-xs text-white/45 leading-relaxed">這是教育與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
+                        <p class="mt-5 text-xs text-white/45 leading-relaxed">這是教育用途與房間光線參考，不是醫療評估<br>不提供診斷、治療、治癒或預防任何疾病的建議</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
                             <a href="/zh-tw/campaign/#preorder" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:bg-cream">查看預購詳情</a>
                             <a href="/zh-tw/science/" class="inline-flex items-center justify-center rounded-full border border-white/18 text-white px-6 py-3 text-xs uppercase tracking-[0.14em] font-bold hover:border-amber hover:text-amber">閱讀科學說明</a>
@@ -397,7 +397,7 @@
             { id: 'unfamiliar_room_lighting', text: '旅行或住在陌生房間時，光線會影響你進入夜晚狀態嗎？', options: [['很少', 0], ['有時候', 1], ['常常', 2]] },
             { id: 'no_apps_screens_tracking', text: '沒有 app、螢幕或睡眠分數的實體光源，對你來說會更實際嗎？', options: [['不太會', 0], ['也許會', 1], ['會', 2]] },
             { id: 'pre_sleep_room_activity', text: '晚上準備睡前，你還會閱讀、走動、整理或待在房間裡嗎？', options: [['很少，我通常很快全關燈', 0], ['有時候，睡前還會做幾件事', 1], ['常常，我會在房間裡待一段時間', 2]] },
-            { id: 'night_light_preference', text: '哪一句最像你想要的夜晚房間？', options: [['我只想讓房間全暗', 0], ['我想看得見，但不要太亮', 1], ['我希望房間有更適合夜晚的光訊號', 2]] }
+            { id: 'night_light_preference', text: '你比較想要哪種夜晚房間？', options: [['我只想讓房間全暗', 0], ['我想看得見，但不要太亮', 1], ['我希望房間有更適合夜晚的光', 2]] }
         ];
 
         const results = [
@@ -412,15 +412,15 @@
                 min: 7,
                 max: 13,
                 category: 'moderate_match',
-                title: '你的房間可能正在傳混合訊號',
-                copy: '房間不一定很亮，但混合光、螢幕光或主燈仍可能讓夜晚太清醒。Owlnest Lume 可以用更安靜的睡眠光譜，支持臥室或放鬆空間。'
+                title: '你的房間光線可能有點混亂',
+                copy: '房間不一定很亮，但混合光、螢幕光或主燈，還是可能讓夜晚太清醒。Owlnest Lume 可以用更安靜的睡眠光譜，陪伴臥室或放鬆空間。'
             },
             {
                 min: 14,
                 max: 20,
                 category: 'strong_match',
                 title: 'Owlnest Lume 可能很適合你的夜晚',
-                copy: '你的答案顯示，房間夜晚可能仍像白天一樣活躍。Owlnest Lume 是可以開著睡的睡眠光譜燈，幫助房間加入更適合夜晚的光訊號。'
+                copy: '你的答案顯示，房間在晚上可能還太像白天。Owlnest Lume 是可以開著睡的睡眠光譜燈，能用更適合夜晚的光陪你整晚。'
             }
         ];
 
@@ -782,7 +782,7 @@
             quizActions.style.display = 'none';
             hideAllPostQuizPanels();
             resultChoicePanel?.classList.remove('hidden');
-            progressLabel.textContent = '選擇你的結果';
+            progressLabel.textContent = '選擇查看方式';
             progressBar.style.width = '100%';
         }
 
