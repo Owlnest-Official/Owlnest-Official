@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owlnest Science | Sleep Spectrum and Night-Friendly Light</title>
+    <title>Science | Owlnest Official</title>
     <meta name="description" content="Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/science/">
@@ -259,6 +259,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .science-text-lockup {
             max-width: 440px;
+        }
+
+        .science-info-spotlight {
+            display: grid;
+            gap: clamp(1.75rem, 3.5vw, 3rem);
+        }
+
+        .science-info-spotlight .science-text-lockup {
+            max-width: 620px;
+        }
+
+        @media (min-width: 1024px) {
+            .science-info-spotlight {
+                grid-template-columns: minmax(280px, 0.5fr) minmax(0, 1fr);
+                align-items: end;
+            }
+
+            .science-info-spotlight .science-visual-card {
+                grid-column: 1 / -1;
+                width: 100%;
+                max-width: min(100%, 1320px);
+                justify-self: center;
+            }
+
+            .science-info-spotlight--wide .science-visual-card {
+                max-width: min(100%, 1480px);
+            }
         }
 
         .reference-card {
@@ -1006,7 +1033,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <section class="section-breathe px-6 bg-midnight text-white border-t border-white/5">
             <div class="max-w-[1500px] mx-auto space-y-14 reveal-text">
-                <div class="science-large-visual-row grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
+                <div class="science-info-spotlight">
                     <div class="science-text-lockup">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Sleep Quality</span>
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">What sleep efficiency means</h2>
@@ -1017,7 +1044,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <img src="asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
-                <div id="sleep-routine-grid" class="sleep-routine-grid science-large-visual-row science-large-visual-row--wide grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
+                <div id="sleep-routine-grid" class="science-info-spotlight science-info-spotlight--wide">
                     <div class="science-text-lockup">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Night Routine</span>
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">What people try when sleep doesn't come easily</h2>
