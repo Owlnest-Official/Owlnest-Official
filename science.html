@@ -253,6 +253,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             object-fit: contain;
         }
 
+        .science-visual-card--large {
+            padding: clamp(0.55rem, 0.9vw, 0.85rem) !important;
+        }
+
+        .science-text-lockup {
+            max-width: 440px;
+        }
+
+        .reference-card {
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 28px;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+            padding: clamp(1.25rem, 2vw, 1.8rem);
+            box-shadow: 0 22px 58px rgba(0,0,0,0.18);
+        }
+
+        .reference-card::before {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 2px;
+            margin-bottom: 1.15rem;
+            background: rgba(201, 133, 42, 0.92);
+        }
+
         .reference-link {
             display: flex;
             align-items: center;
@@ -574,9 +600,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         @media (min-width: 1024px) {
-            .sleep-routine-grid {
-                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
-                gap: clamp(3rem, 5vw, 5rem) !important;
+            .science-large-visual-row {
+                grid-template-columns: minmax(280px, 0.58fr) minmax(680px, 1.42fr) !important;
+                gap: clamp(2.5rem, 4vw, 4rem) !important;
+            }
+
+            .science-large-visual-row--wide {
+                grid-template-columns: minmax(260px, 0.5fr) minmax(760px, 1.5fr) !important;
             }
 
             .sleep-routine-figure {
@@ -604,9 +634,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         @media (min-width: 1024px) {
-            main section #sleep-routine-grid.grid.sleep-routine-grid[class*="lg:grid-cols-["] {
-                grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important;
-                gap: clamp(3rem, 5vw, 5rem) !important;
+            main section .science-large-visual-row.grid[class*="lg:grid-cols-["] {
+                grid-template-columns: minmax(280px, 0.58fr) minmax(680px, 1.42fr) !important;
+                gap: clamp(2.5rem, 4vw, 4rem) !important;
+            }
+
+            main section .science-large-visual-row--wide.grid[class*="lg:grid-cols-["] {
+                grid-template-columns: minmax(260px, 0.5fr) minmax(760px, 1.5fr) !important;
             }
 
             main section .sleep-routine-figure {
@@ -889,7 +923,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <section id="section-visuals" class="section-breathe px-6 bg-midnight text-white border-t border-white/5">
-            <div class="max-w-7xl mx-auto reveal-text">
+            <div class="max-w-[1500px] mx-auto reveal-text">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-16 items-start mb-12 md:mb-16">
                     <div>
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Visualizing the Principle</span>
@@ -900,15 +934,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
-                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-spectrum-matters.png" loading="lazy" alt="Simplified spectrum explanation for Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
-                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual melatonin rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[22px]">
                     </figure>
                 </div>
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-14 items-center">
-                    <figure class="science-visual-card rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-wrong-light-vs-sleep-light.png" loading="lazy" alt="Comparison of ordinary nighttime light and Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
                     <div>
@@ -971,26 +1005,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <section class="section-breathe px-6 bg-midnight text-white border-t border-white/5">
-            <div class="max-w-7xl mx-auto space-y-14 reveal-text">
-                <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
-                    <div>
+            <div class="max-w-[1500px] mx-auto space-y-14 reveal-text">
+                <div class="science-large-visual-row grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
+                    <div class="science-text-lockup">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Sleep Quality</span>
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">What sleep efficiency means</h2>
                         <p class="mt-6 text-white/66 leading-relaxed">Sleep efficiency compares time asleep with total time in bed.<br>It is a common way to think about sleep quality and restfulness.</p>
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">Educational information only.<br>This does not claim that Owlnest Lume changes sleep efficiency.</p>
                     </div>
-                    <figure class="science-visual-card rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card science-visual-card--large rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
-                <div id="sleep-routine-grid" class="sleep-routine-grid grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
-                    <div>
+                <div id="sleep-routine-grid" class="sleep-routine-grid science-large-visual-row science-large-visual-row--wide grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-center">
+                    <div class="science-text-lockup">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Night Routine</span>
                         <h2 class="font-serif text-4xl md:text-5xl leading-[1.1]">What people try when sleep doesn't come easily</h2>
                         <p class="mt-6 text-white/66 leading-relaxed">People often change their nighttime routine before sleep.<br>Owlnest focuses on one part of that environment: the light your room uses before bed.</p>
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">A simple summary of common nighttime behavior patterns.</p>
                     </div>
-                    <figure class="science-visual-card sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
+                    <figure class="science-visual-card science-visual-card--large sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
                         <img src="asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
@@ -998,38 +1032,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </section>
 
         <section id="section-references" class="section-breathe px-6 bg-[#0f111a] text-white border-t border-white/5">
-            <div class="max-w-6xl mx-auto reveal-text">
-                <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20 items-start">
-                    <div>
-                        <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-4 block">Further Technical References</span>
-                        <h2 class="font-serif text-4xl md:text-5xl leading-tight">The supporting research context</h2>
-                        <p class="mt-6 text-white/58 leading-relaxed">The four studies above are the main sources on this page.<br>These extra references are for visitors who want more detail on evening light, measurement, and industry context.</p>
-                    </div>
-                    <div class="space-y-8">
-                        <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
-                            <h3 class="font-serif text-2xl mb-5">Core Sleep &amp; Circadian Research</h3>
-                            <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
-                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="reference-link"><span>The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</span><span aria-hidden="true">↗</span></a>
-                                <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="reference-link"><span>Evening home lighting adversely impacts the circadian system and sleep</span><span aria-hidden="true">↗</span></a>
-                                <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="reference-link"><span>Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</span><span aria-hidden="true">↗</span></a>
-                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="reference-link"><span>Action Spectrum for Melatonin Regulation in Humans</span><span aria-hidden="true">↗</span></a>
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener" class="reference-link"><span>Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans</span><span aria-hidden="true">↗</span></a>
-                            </div>
+            <div class="max-w-[1180px] mx-auto reveal-text">
+                <div class="mx-auto max-w-3xl text-center mb-10 md:mb-12">
+                    <span class="text-amber tracking-[0.2em] uppercase text-xs font-bold mb-4 block">Reference Library</span>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-tight">Research context</h2>
+                    <p class="mt-5 text-white/58 leading-relaxed">Core sources stay above.<br>These links are for deeper reading.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6">
+                    <article class="reference-card lg:col-span-2">
+                        <h3 class="font-serif text-2xl md:text-3xl mb-5">Core sleep and light research</h3>
+                        <div class="grid grid-cols-1 gap-3 text-sm leading-relaxed">
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="reference-link"><span>The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</span><span aria-hidden="true">↗</span></a>
+                            <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="reference-link"><span>Evening home lighting adversely impacts the circadian system and sleep</span><span aria-hidden="true">↗</span></a>
+                            <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="reference-link"><span>Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</span><span aria-hidden="true">↗</span></a>
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="reference-link"><span>Action Spectrum for Melatonin Regulation in Humans</span><span aria-hidden="true">↗</span></a>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener" class="reference-link"><span>Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans</span><span aria-hidden="true">↗</span></a>
                         </div>
-                        <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
-                            <h3 class="font-serif text-2xl mb-5">Lighting Standards &amp; Biological Metrics</h3>
-                            <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
+                    </article>
+                    <div class="grid grid-cols-1 gap-5 lg:gap-6">
+                        <article class="reference-card">
+                            <h3 class="font-serif text-2xl mb-5">Light metrics</h3>
+                            <div class="grid grid-cols-1 gap-3 text-sm leading-relaxed">
                                 <a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank" rel="noopener" class="reference-link"><span>CIE S 026: Measuring Biologically Relevant Light</span><span aria-hidden="true">↗</span></a>
                                 <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.637221/full" target="_blank" rel="noopener" class="reference-link"><span>Biologically Relevant Lighting: An Industry Perspective</span><span aria-hidden="true">↗</span></a>
                             </div>
-                        </div>
-                        <div class="rounded-[26px] border border-white/10 bg-white/5 p-6 md:p-7">
-                            <h3 class="font-serif text-2xl mb-5">Industry Context</h3>
-                            <div class="grid grid-cols-1 gap-4 text-sm leading-relaxed">
+                        </article>
+                        <article class="reference-card">
+                            <h3 class="font-serif text-2xl mb-5">Industry context</h3>
+                            <div class="grid grid-cols-1 gap-3 text-sm leading-relaxed">
                                 <a href="https://itritech.itri.org.tw/blog/smart-sleep/" target="_blank" rel="noopener" class="reference-link"><span>ITRI Smart Sleep Technology</span><span aria-hidden="true">↗</span></a>
                                 <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=13_content&amp;MmmID=1036233405427625204&amp;SiteID=1&amp;Trt_idx=6098" target="_blank" rel="noopener" class="reference-link"><span>ITRI Quality Pre-Sleep Lighting Environment</span><span aria-hidden="true">↗</span></a>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
