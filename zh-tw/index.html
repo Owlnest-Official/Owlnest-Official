@@ -162,6 +162,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
+        body.home-sequence-complete #section-1 {
+            height: 100vh !important;
+        }
+
         @media (max-width: 1023px) {
             .section-container {
                 height: auto;
@@ -1261,6 +1265,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         let heroSequenceCompleted = false;
         let heroSequencePlaying = false;
         let heroSequenceGestureCount = 0;
+        let heroSequencePlayToken = 0;
         let heroTouchStartY = null;
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1486,12 +1491,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
 
             heroSequencePlaying = true;
+            const playToken = ++heroSequencePlayToken;
             const startFrame = skySequence.frame;
             const startProgress = Math.max(0, Math.min(1, startFrame / (frameCount - 1)));
             const startedAt = performance.now();
             const duration = Math.max(120, durationMs || HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
 
             function playFrame(now) {
+                if (playToken !== heroSequencePlayToken) return;
                 const elapsed = now - startedAt;
                 const rawProgress = Math.min(1, elapsed / duration);
                 const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
@@ -1515,7 +1522,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         function advanceHeroSequence(durationMs) {
-            if (heroSequenceCompleted || heroSequencePlaying) return;
+            if (heroSequenceCompleted) return;
             const requiredGestures = Math.max(1, HOME_SEQUENCE_SETTINGS.requiredGesturesToComplete || 1);
             heroSequenceGestureCount = Math.min(requiredGestures, heroSequenceGestureCount + 1);
             completeHeroSequence(durationMs, heroSequenceGestureCount / requiredGestures);
