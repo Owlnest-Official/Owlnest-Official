@@ -777,11 +777,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-10 nav-links">
             <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/" class="text-amber transition-colors duration-300 border-b border-amber pb-1">Home</a>
-                <a href="/products/" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/products/" class="hover:text-amber transition-colors duration-300">Lume</a>
                 <a href="/science/" class="hover:text-amber transition-colors duration-300">Science</a>
-                <a href="/about/" class="hover:text-amber transition-colors duration-300">About Us</a>
-                <a href="/contact/" class="hover:text-amber transition-colors duration-300">Contact</a>
+                <a href="/sleep-ready-room-check/" class="hover:text-amber transition-colors duration-300">Room Check</a>
+                <a href="/about/" class="hover:text-amber transition-colors duration-300">About</a>
             </nav>
 
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
@@ -797,19 +796,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
                         <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
                         <a href="/zh-tw/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">繁體中文</a>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>簡體中文 <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>日本語 <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>한국어 <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Français <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Deutsch <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Español <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Italiano <span>Coming soon</span></button>
-                        <button type="button" class="w-full flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/45 cursor-not-allowed" disabled>Tiếng Việt <span>Coming soon</span></button>
                     </div>
                 </div>
                 <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    Campaign
+                    Preorder
                 </a>
             </div>
         </div>
@@ -819,7 +810,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Campaign">
+            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Preorder">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
             <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
@@ -832,27 +823,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-            <a href="/" onclick="toggleMobileMenu()" class="text-amber transition-colors">Home</a>
-            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
-            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact</a>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Campaign</a>
-            <a href="/account/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Account</a>
+            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a><a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a><a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Room Check</a><a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About</a><a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
                     <a href="/" class="text-white hover:text-amber">English — EN</a>
                     <a href="/zh-tw/" class="text-white hover:text-amber">繁體中文</a>
-                    <span class="text-white/45">簡體中文 — Coming soon</span>
-                    <span class="text-white/45">日本語 — Coming soon</span>
-                    <span class="text-white/45">한국어 — Coming soon</span>
-                    <span class="text-white/45">Français — Coming soon</span>
-                    <span class="text-white/45">Deutsch — Coming soon</span>
-                    <span class="text-white/45">Español — Coming soon</span>
-                    <span class="text-white/45">Italiano — Coming soon</span>
-                    <span class="text-white/45">Tiếng Việt — Coming soon</span>
                 </div>
             </div>
         </nav>
@@ -871,33 +848,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <img src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Brand Mark" class="home-hero-mark w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
 
-                    <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">OWLNEST | SLEEP TECHNOLOGY</span>
+                    <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">OWLNEST LUME</span>
 
                     <h1 class="home-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] mb-7 md:mb-9 reveal-text drop-shadow-2xl max-w-5xl mx-auto" style="transition-delay: 0.14s;">
-                        Sleep with the right light on.
+                        Turn the day off, not the room.
                     </h1>
 
                     <p class="home-hero-copy text-white/80 max-w-3xl mx-auto text-base sm:text-lg md:text-xl font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.2s;">
-                        Darkness removes the wrong signal.<br>
-                        Owlnest Lume adds a sleep spectrum made to stay on through the night.
+                        Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp for the last 1-2 hours before bed and low-light nights.
                     </p>
                     <p class="home-hero-copy text-white/62 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light leading-relaxed reveal-text mb-7 md:mb-8 drop-shadow-md" style="transition-delay: 0.24s;">
-                        A melatonin-supporting lamp.<br>
-                        Not a night light.
+                        For people who need a little light at night without bringing daytime back.
                     </p>
 
                     <div class="home-hero-bottom reveal-text pointer-events-auto" style="transition-delay: 0.38s;">
                         <div class="home-hero-actions flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0">
                             <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A"
                                class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm flex justify-center items-center" rel="noopener noreferrer">
-                                Preorder Now
+                                Preorder Lume
                             </a>
-                            <a href="/science/" class="premium-cta w-full sm:w-auto border border-white/20 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 hover:border-amber flex justify-center items-center">
-                            Discover Owlnest Lume
+                            <a href="/sleep-ready-room-check/" class="premium-cta w-full sm:w-auto border border-white/20 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-white/10 hover:border-amber flex justify-center items-center">
+                            Check My Room Light
                             </a>
                         </div>
                         <p class="mt-5 text-white/68 text-[11px] md:text-xs font-semibold tracking-[0.08em] uppercase">
-                            First-batch preorder now open · Single $59 / Duo $100 · Fulfillment begins July 20, 2026
+                            First batch: Single $59 / Duo $100. Fulfillment begins July 20, 2026. Research-informed. Not a medical device.
                         </p>
                         <p class="mt-4 text-white/45 text-[11px] md:text-xs font-light tracking-[0.08em] uppercase">
                             <a href="/preorder-policy.html" class="hover:text-amber transition-colors underline underline-offset-4">Preorder terms apply.</a>
@@ -1285,7 +1260,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <footer class="site-footer bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
             <div class="footer-centered max-w-[720px] mx-auto text-center">
                 <p class="footer-brand font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-                <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Sleep spectrum lamp made to stay on while you sleep.</p>
+                <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Sleep-spectrum lamp for calmer pre-sleep light and low-light nights.</p>
                 <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
                     <a href="/preorder-policy.html" class="hover:text-amber transition-colors">Preorder Policy</a>
                     <a href="/disclaimer/" class="hover:text-amber transition-colors">Policy</a>
@@ -1772,7 +1747,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     </script>
 
-    <!-- Campaign Entry Modal -->
+    <!-- Preorder Entry Modal -->
     <div id="campaign-entry-modal" class="fixed inset-0 z-[9999] hidden">
         <div class="absolute inset-0 bg-midnight/80 backdrop-blur-sm"></div>
 
@@ -1782,13 +1757,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="flex items-start justify-between gap-4">
                 <div>
                     <div class="text-[10px] tracking-[0.35em] uppercase text-amber font-bold">
-                    Campaign
+                    Preorder
                     </div>
                     <h3 class="font-serif text-2xl sm:text-3xl mt-2 text-white">
                     Owlnest Lume Preorder Open Now
                     </h3>
                     <p class="text-white/60 mt-3 text-sm sm:text-base font-light leading-relaxed">
-                    Sleep spectrum lamp made to stay on through the night.<br>Preorder now inside PayPal.
+                    Sleep-spectrum lamp for calmer pre-sleep light and low-light nights.<br>Select Single or Duo on this page before secure PayPal checkout.
                     <br><a href="/preorder-policy.html" class="text-amber hover:text-warm underline underline-offset-4">Preorder terms apply.</a>
                     </p>
                 </div>
@@ -1882,5 +1857,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })();
     </script>
     <script src="assets/js/consent.js" defer></script>
+    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
+        <div class="mx-auto flex max-w-md gap-3">
+            <a href="/campaign/#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">Preorder Lume</a>
+            <a href="/sleep-ready-room-check/" class="flex-1 rounded-full border border-white/15 px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-white">Room Check</a>
+        </div>
+    </div>
 </body>
 </html>
