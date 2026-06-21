@@ -110,22 +110,62 @@
 
     function createUi() {
         removeExistingUi();
+        var isZhTw = document.documentElement.lang && document.documentElement.lang.toLowerCase().indexOf('zh') === 0;
+        var labels = isZhTw ? {
+            bannerLabel: 'Cookie 同意設定',
+            privacyTitle: '你的隱私選擇',
+            privacyCopy: '我們使用 Cookie 了解網站成效並改善廣告體驗。必要 Cookie 會保持啟用。你可以全部接受、拒絕非必要 Cookie，或管理偏好設定。',
+            acceptAll: '全部接受',
+            rejectNonEssential: '拒絕非必要 Cookie',
+            manageSettings: '管理設定',
+            preferencesLabel: 'Cookie 設定',
+            preferencesTitle: 'Cookie 設定',
+            preferencesCopy: '選擇 Owlnest 在本站使用非必要 Cookie 的方式。',
+            closePreferences: '關閉 Cookie 設定',
+            essentialTitle: '必要 Cookie',
+            essentialCopy: '必要 Cookie 會保持啟用，以確保網站正常運作。',
+            alwaysOn: '一律啟用',
+            analyticsTitle: '分析 Cookie',
+            analyticsCopy: '幫助我們了解訪客如何使用網站，以改善整體體驗。',
+            marketingTitle: '行銷 Cookie',
+            marketingCopy: '幫助我們衡量並改善廣告成效。',
+            savePreferences: '儲存設定'
+        } : {
+            bannerLabel: 'Cookie consent',
+            privacyTitle: 'Your privacy choices',
+            privacyCopy: 'We use cookies to understand site performance and improve advertising. Essential cookies are always on. You can accept all cookies, reject non-essential cookies, or manage your preferences.',
+            acceptAll: 'Accept all',
+            rejectNonEssential: 'Reject non-essential',
+            manageSettings: 'Manage settings',
+            preferencesLabel: 'Cookie preferences',
+            preferencesTitle: 'Cookie preferences',
+            preferencesCopy: 'Choose how Owlnest may use non-essential cookies on this site.',
+            closePreferences: 'Close cookie preferences',
+            essentialTitle: 'Essential cookies',
+            essentialCopy: 'Essential cookies are always on because they help the website function properly.',
+            alwaysOn: 'Always on',
+            analyticsTitle: 'Analytics cookies',
+            analyticsCopy: 'Help us understand how visitors use the site so we can improve the experience.',
+            marketingTitle: 'Marketing cookies',
+            marketingCopy: 'Help us measure and improve advertising performance.',
+            savePreferences: 'Save preferences'
+        };
 
         var banner = document.createElement('section');
         banner.id = 'owlnest-cookie-banner';
         banner.className = 'owlnest-cookie-banner';
-        banner.setAttribute('aria-label', 'Cookie consent');
+        banner.setAttribute('aria-label', labels.bannerLabel);
         banner.hidden = Boolean(getSavedConsent());
         banner.innerHTML = [
             '<div class="owlnest-cookie-banner__inner">',
             '<div>',
-            '<h2 class="owlnest-cookie-banner__title">Your privacy choices</h2>',
-            '<p class="owlnest-cookie-banner__copy">We use cookies to understand site performance and improve advertising. Essential cookies are always on. You can accept all cookies, reject non-essential cookies, or manage your preferences.</p>',
+            '<h2 class="owlnest-cookie-banner__title">' + labels.privacyTitle + '</h2>',
+            '<p class="owlnest-cookie-banner__copy">' + labels.privacyCopy + '</p>',
             '</div>',
             '<div class="owlnest-cookie-actions">',
-            '<button type="button" class="owlnest-cookie-button owlnest-cookie-button--primary" data-consent-action="accept_all">Accept all</button>',
-            '<button type="button" class="owlnest-cookie-button" data-consent-action="reject_non_essential">Reject non-essential</button>',
-            '<button type="button" class="owlnest-cookie-button" data-consent-action="manage_settings">Manage settings</button>',
+            '<button type="button" class="owlnest-cookie-button owlnest-cookie-button--primary" data-consent-action="accept_all">' + labels.acceptAll + '</button>',
+            '<button type="button" class="owlnest-cookie-button" data-consent-action="reject_non_essential">' + labels.rejectNonEssential + '</button>',
+            '<button type="button" class="owlnest-cookie-button" data-consent-action="manage_settings">' + labels.manageSettings + '</button>',
             '</div>',
             '</div>'
         ].join('');
@@ -134,34 +174,34 @@
         panel.id = 'owlnest-cookie-panel';
         panel.className = 'owlnest-cookie-panel';
         panel.hidden = true;
-        panel.setAttribute('aria-label', 'Cookie preferences');
+        panel.setAttribute('aria-label', labels.preferencesLabel);
         panel.innerHTML = [
             '<div class="owlnest-cookie-panel__dialog" role="dialog" aria-modal="true" aria-labelledby="owlnest-cookie-title">',
             '<div class="owlnest-cookie-panel__header">',
             '<div>',
-            '<h2 id="owlnest-cookie-title" class="owlnest-cookie-panel__title">Cookie preferences</h2>',
-            '<p class="owlnest-cookie-panel__copy">Choose how Owlnest may use non-essential cookies on this site.</p>',
+            '<h2 id="owlnest-cookie-title" class="owlnest-cookie-panel__title">' + labels.preferencesTitle + '</h2>',
+            '<p class="owlnest-cookie-panel__copy">' + labels.preferencesCopy + '</p>',
             '</div>',
-            '<button type="button" class="owlnest-cookie-close" aria-label="Close cookie preferences" data-consent-close>&times;</button>',
+            '<button type="button" class="owlnest-cookie-close" aria-label="' + labels.closePreferences + '" data-consent-close>&times;</button>',
             '</div>',
             '<div class="owlnest-cookie-panel__body">',
             '<div class="owlnest-cookie-choice">',
-            '<div><h3>Essential cookies</h3><p class="owlnest-cookie-panel__copy">Essential cookies are always on because they help the website function properly.</p></div>',
-            '<span class="owlnest-cookie-panel__copy">Always on</span>',
+            '<div><h3>' + labels.essentialTitle + '</h3><p class="owlnest-cookie-panel__copy">' + labels.essentialCopy + '</p></div>',
+            '<span class="owlnest-cookie-panel__copy">' + labels.alwaysOn + '</span>',
             '</div>',
             '<div class="owlnest-cookie-choice">',
-            '<div><h3>Analytics cookies</h3><p class="owlnest-cookie-panel__copy">Help us understand how visitors use the site so we can improve the experience.</p></div>',
+            '<div><h3>' + labels.analyticsTitle + '</h3><p class="owlnest-cookie-panel__copy">' + labels.analyticsCopy + '</p></div>',
             '<label class="owlnest-cookie-toggle"><input type="checkbox" data-consent-toggle="analytics"><span class="owlnest-cookie-slider"></span></label>',
             '</div>',
             '<div class="owlnest-cookie-choice">',
-            '<div><h3>Marketing cookies</h3><p class="owlnest-cookie-panel__copy">Help us measure and improve advertising performance.</p></div>',
+            '<div><h3>' + labels.marketingTitle + '</h3><p class="owlnest-cookie-panel__copy">' + labels.marketingCopy + '</p></div>',
             '<label class="owlnest-cookie-toggle"><input type="checkbox" data-consent-toggle="marketing"><span class="owlnest-cookie-slider"></span></label>',
             '</div>',
             '</div>',
             '<div class="owlnest-cookie-panel__footer">',
-            '<button type="button" class="owlnest-cookie-button owlnest-cookie-button--primary" data-consent-action="save_preferences">Save preferences</button>',
-            '<button type="button" class="owlnest-cookie-button" data-consent-action="accept_all">Accept all</button>',
-            '<button type="button" class="owlnest-cookie-button" data-consent-action="reject_non_essential">Reject non-essential</button>',
+            '<button type="button" class="owlnest-cookie-button owlnest-cookie-button--primary" data-consent-action="save_preferences">' + labels.savePreferences + '</button>',
+            '<button type="button" class="owlnest-cookie-button" data-consent-action="accept_all">' + labels.acceptAll + '</button>',
+            '<button type="button" class="owlnest-cookie-button" data-consent-action="reject_non_essential">' + labels.rejectNonEssential + '</button>',
             '</div>',
             '</div>'
         ].join('');
