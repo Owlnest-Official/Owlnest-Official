@@ -14,6 +14,8 @@
 /account/verify       /verify.html       200
 
 # Public page routes
+/r/:slug              /products/?ref=:slug                 302
+
 /products             /products.html                         200
 /products/            /products.html                         200
 
