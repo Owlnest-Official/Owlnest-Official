@@ -37,11 +37,13 @@
     </script>
     <!-- End Google Consent Mode v2 default -->
 <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+        }
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -134,8 +136,8 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" href="../logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <script>
         tailwind.config = {
             theme: {
@@ -712,8 +714,69 @@
                 line-height: 1.14 !important;
             }
         }
+        /* Consistent public header: dark glass on every section and page. */
+        #main-header,
+        #main-header.nav-dark,
+        #main-header.nav-split,
+        #main-header.is-scrolled,
+        #main-header.is-light,
+        #main-header.header--light,
+        #main-header.header--transparent,
+        #main-header.header--inverse {
+            background: rgba(12, 18, 30, 0.78) !important;
+            backdrop-filter: blur(18px) saturate(130%) !important;
+            -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18) !important;
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .brand span,
+        #main-header .site-brand span,
+        #main-header .primary-nav a,
+        #main-header .language-trigger,
+        #main-header .header-actions > a,
+        #main-header button[aria-label="Toggle menu"] {
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .header-actions svg,
+        #main-header .language-trigger i {
+            color: rgba(246, 240, 226, 0.82) !important;
+        }
+
+        #main-header .primary-nav a:hover,
+        #main-header .language-trigger:hover,
+        #main-header .header-actions > a:hover,
+        #main-header button[aria-label="Toggle menu"]:hover,
+        #main-header .header-actions > a:hover svg,
+        #main-header .language-trigger:hover i {
+            color: #C9852A !important;
+        }
+
+        #main-header .header-actions > a[href="/campaign/"],
+        #main-header .header-actions > a[href="/campaign/"]:hover {
+            background: #C9852A !important;
+            color: #182234 !important;
+        }
+
+        #main-header .brand img,
+        #main-header .site-brand img,
+        #nav-logo {
+            height: 2.25rem !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        @media (min-width: 768px) {
+            #main-header .brand img,
+            #main-header .site-brand img,
+            #nav-logo {
+                height: 2.5rem !important;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="../assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
 </head>
 <body class="font-sans antialiased">
@@ -721,64 +784,75 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-5">
-            <a href="/" class="site-brand flex items-center gap-3 shrink-0 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
-                <img src="../logo2.png" onerror="this.src='../logo.png'" alt="Owlnest" class="w-9 h-9 object-contain">
-                <span class="text-sm sm:text-base font-bold tracking-[0.16em] uppercase text-white">Owlnest</span>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
+        <div class="header-inner mx-auto grid h-[72px] max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8">
+            <a href="/" class="brand site-brand flex items-center gap-3 justify-self-start cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
+                <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-8 md:h-10 w-auto object-contain transition-all duration-300">
+                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
             </a>
-            <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
-                <a href="/products/" class="campaign-nav-link">Lume</a>
-                <a href="/science/" class="campaign-nav-link">Science</a>
-                <a href="/sleep-ready-room-check/" class="campaign-nav-link">Room Check</a>
-                <a href="/about/" class="campaign-nav-link">About</a>
-                <a href="/campaign/" class="campaign-nav-link is-active">Preorder</a>
+
+            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
+                <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="/products/" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/science/" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="/about/" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="/contact/" class="hover:text-amber transition-colors duration-300">Contact Us</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <a href="/account/" class="hidden lg:inline-flex text-white/65 hover:text-amber transition-colors" title="Member Login" aria-label="Member Login">
-                    <i class="fas fa-user"></i>
+
+            <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
+                <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
+                <a href="/account/" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/64 hover:text-amber transition-colors" rel="nofollow">
+                    <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
                 </a>
-                <div class="relative hidden lg:block">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/65 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i> EN <i class="fas fa-chevron-down text-[9px]"></i>
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        EN
+                        <i class="fas fa-chevron-down text-[9px]"></i>
                     </button>
                     <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
                         <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
-                        <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">繁體中文</a>
+                        <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
                     </div>
                 </div>
-                <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">
-                Preorder Lume
-                </a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
-                </button>
+                <a href="/campaign/" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder</a>
             </div>
+
+            <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
+            </button>
         </div>
     </header>
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm uppercase tracking-[0.2em] font-semibold text-center">
-            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
+            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
             <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
-            <a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Room Check</a>
-            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About</a>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a>
+<div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
                     <a href="/" class="text-white hover:text-amber">English — EN</a>
-                    <a href="/zh-tw/campaign/" class="text-white hover:text-amber">繁體中文</a>
+                    <a href="/zh-tw/campaign/" class="text-white/80 hover:text-amber transition-colors">繁體中文</a>
                 </div>
             </div>
-            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" onclick="toggleMobileMenu()" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">
-                Preorder Lume
-            </a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
         </nav>
     </div>
+
 
     <main>
         <section id="hero" class="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
@@ -1134,7 +1208,8 @@
                 <a href="/preorder-policy.html" class="hover:text-amber transition-colors">Preorder Policy</a>
                 <a href="/disclaimer/" class="hover:text-amber transition-colors">Policy</a>
                 <a href="/contact/" class="hover:text-amber transition-colors">Contact</a>
-            </div>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
+            </div>
+                <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
             <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
         </div>
     </footer>
@@ -1368,7 +1443,7 @@
         trigger.setAttribute('aria-expanded', 'false');
     });
 </script>
-    <script src="../assets/js/consent.js" defer></script>
+    <script src="/assets/js/consent.js" defer></script>
     <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
         <div class="mx-auto flex max-w-md gap-3">
             <a href="#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">Preorder Lume</a>

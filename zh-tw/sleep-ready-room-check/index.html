@@ -37,11 +37,13 @@
     </script>
     <!-- End Google Consent Mode v2 default -->
 <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+        }
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,8 +64,8 @@
     <meta name="twitter:title" content="AI 房間光線檢查｜Owlnest Lume">
     <meta name="twitter:description" content="回答 10 個問題，也可以上傳房間照片，看看夜晚光線是否仍太接近白天">
     <meta name="twitter:image" content="https://owlnestofficial.com/lume-real-photo-on.jpg">
-    <link rel="icon" type="image/png" href="../logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {

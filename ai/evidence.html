@@ -16,8 +16,8 @@
     <meta name="twitter:title" content="Owlnest Lume Evidence Brief | Sleep-Supporting Spectrum">
     <meta name="twitter:description" content="A research-informed brief on nighttime light, blue-rich light disruption, natural night rhythm, and how Owlnest Lume is designed to support a calmer pre-sleep environment.">
     <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
-    <link rel="icon" type="image/png" href="../logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -34,6 +34,67 @@
 
         #mobile-menu.open {
             transform: translateY(0);
+        }
+        /* Consistent public header: dark glass on every section and page. */
+        #main-header,
+        #main-header.nav-dark,
+        #main-header.nav-split,
+        #main-header.is-scrolled,
+        #main-header.is-light,
+        #main-header.header--light,
+        #main-header.header--transparent,
+        #main-header.header--inverse {
+            background: rgba(12, 18, 30, 0.78) !important;
+            backdrop-filter: blur(18px) saturate(130%) !important;
+            -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18) !important;
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .brand span,
+        #main-header .site-brand span,
+        #main-header .primary-nav a,
+        #main-header .language-trigger,
+        #main-header .header-actions > a,
+        #main-header button[aria-label="Toggle menu"] {
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .header-actions svg,
+        #main-header .language-trigger i {
+            color: rgba(246, 240, 226, 0.82) !important;
+        }
+
+        #main-header .primary-nav a:hover,
+        #main-header .language-trigger:hover,
+        #main-header .header-actions > a:hover,
+        #main-header button[aria-label="Toggle menu"]:hover,
+        #main-header .header-actions > a:hover svg,
+        #main-header .language-trigger:hover i {
+            color: #C9852A !important;
+        }
+
+        #main-header .header-actions > a[href="/campaign/"],
+        #main-header .header-actions > a[href="/campaign/"]:hover {
+            background: #C9852A !important;
+            color: #182234 !important;
+        }
+
+        #main-header .brand img,
+        #main-header .site-brand img,
+        #nav-logo {
+            height: 2.25rem !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        @media (min-width: 768px) {
+            #main-header .brand img,
+            #main-header .site-brand img,
+            #nav-logo {
+                height: 2.5rem !important;
+            }
         }
     </style>
     <script>
@@ -189,40 +250,75 @@
     </script>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
-    <header class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5">
-        <div class="flex items-center gap-3 relative z-50">
-            <a href="../index.html" class="flex items-center gap-3">
-                <img src="../logo.png" onerror="this.src='../logo2.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain">
-                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white">OWLNEST</span>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
+        <div class="header-inner mx-auto grid h-[72px] max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8">
+            <a href="/" class="brand site-brand flex items-center gap-3 justify-self-start cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
+                <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-8 md:h-10 w-auto object-contain transition-all duration-300">
+                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
             </a>
-        </div>
 
-        <div class="hidden lg:flex items-center gap-10">
-            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="../index.html" class="hover:text-amber transition-colors duration-300">Home</a>
+            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
+                <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
                 <a href="/products/" class="hover:text-amber transition-colors duration-300">Products</a>
-                <a href="/science" class="hover:text-amber transition-colors duration-300">Science</a>
-                <a href="../about.html" class="hover:text-amber transition-colors duration-300">About Us</a>
-                <a href="../contact.html" class="hover:text-amber transition-colors duration-300">Contact</a>
+                <a href="/science/" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="/about/" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="/contact/" class="hover:text-amber transition-colors duration-300">Contact Us</a>
             </nav>
-        </div>
 
-        <div class="flex lg:hidden items-center gap-5 relative z-50">
-            <button onclick="toggleMobileMenu()" class="text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
-                <span id="mobile-menu-icon">Menu</span>
+            <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
+                <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
+                <a href="/account/" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/64 hover:text-amber transition-colors" rel="nofollow">
+                    <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </a>
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        EN
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
+                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
+                        <a href="/zh-tw/evidence/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
+                    </div>
+                </div>
+                <a href="/campaign/" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder</a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
             </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
-        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-            <a href="../index.html" class="text-white/80 hover:text-amber transition-colors">Home</a>
-            <a href="/products/" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/science" class="text-white/80 hover:text-amber transition-colors">Science</a>
-            <a href="../about.html" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="../contact.html" class="text-white/80 hover:text-amber transition-colors">Contact</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
+            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a>
+<div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/" class="text-white hover:text-amber">English — EN</a>
+                    <a href="/zh-tw/evidence/" class="text-white/80 hover:text-amber transition-colors">繁體中文</a>
+                </div>
+            </div>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
         </nav>
     </div>
+
 
     <main class="pt-28 md:pt-36 pb-16">
         <section class="px-6">
@@ -630,6 +726,8 @@
             <p class="mt-4 max-w-xl mx-auto md:mx-0 text-sm leading-relaxed text-white/58">Sleep-supporting spectrum lamp for the hours before bed.</p>
             <p class="mt-6 text-[10px] text-white/38 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
         </div>
+        <div class="mt-6 text-[10px] tracking-[0.16em] uppercase text-white/45">
+        </div>
     </footer>
 
     <script>
@@ -642,6 +740,19 @@
         }
 
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        function toggleLanguageMenu(event) {
+            if (event) event.stopPropagation();
+            var menu = document.getElementById('language-menu');
+            if (!menu) return;
+            menu.classList.toggle('hidden');
+        }
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('language-menu');
+            if (!menu) return;
+            if (!event.target.closest('.language-trigger')) menu.classList.add('hidden');
+        });
     </script>
 </body>
 </html>

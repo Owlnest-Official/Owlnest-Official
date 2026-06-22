@@ -36,29 +36,31 @@
     </script>
     <!-- End Google Consent Mode v2 default -->
     <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+}
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science | Owlnest Official</title>
-    <meta name="description" content="Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.">
+    <meta name="description" content="Explore the science behind calmer night light, sleep-spectrum design, and how blue-rich light at night can keep a room feeling too awake.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/science/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/science/">
     <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/science/">
     <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/science/">
     <meta property="og:title" content="Owlnest Science | Sleep Spectrum and Night-Friendly Light">
-    <meta property="og:description" content="Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.">
+    <meta property="og:description" content="Explore the science behind calmer night light, sleep-spectrum design, and how blue-rich light at night can keep a room feeling too awake.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://owlnestofficial.com/science/">
     <meta property="og:image" content="https://owlnestofficial.com/science.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Owlnest Science | Sleep Spectrum and Night-Friendly Light">
-    <meta name="twitter:description" content="Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.">
+    <meta name="twitter:description" content="Explore the science behind calmer night light, sleep-spectrum design, and how blue-rich light at night can keep a room feeling too awake.">
     <meta name="twitter:image" content="https://owlnestofficial.com/science.png">
     <script type="application/ld+json">
     {
@@ -79,7 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "@id": "https://owlnestofficial.com/science/#webpage",
           "url": "https://owlnestofficial.com/science/",
           "name": "Owlnest Science | Sleep Spectrum and Night-Friendly Light",
-          "description": "Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.",
+          "description": "Explore the science behind calmer night light, sleep-spectrum design, and how blue-rich light at night can keep a room feeling too awake.",
           "about": {
             "@type": "Thing",
             "name": "Sleep spectrum and night-friendly light design principles"
@@ -99,7 +101,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "@id": "https://owlnestofficial.com/science/#article",
           "headline": "The Science Behind Owlnest Lume",
           "url": "https://owlnestofficial.com/science/",
-          "description": "Explore the science behind night-friendly light, sleep spectrum design, and why Owlnest Lume is made to stay on while you sleep.",
+          "description": "Explore the science behind calmer night light, sleep-spectrum design, and how blue-rich light at night can keep a room feeling too awake.",
           "author": {
             "@id": "https://owlnestofficial.com/#organization"
           },
@@ -114,9 +116,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
 
-    <link rel="icon" type="image/png" href="logo.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
@@ -193,24 +194,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
             visibility: visible;
             pointer-events: auto;
-        }
-
-        /* Dynamic Header Color Switching Classes */
-        #main-header {
-            transition: background-color 0.5s ease, border-color 0.5s ease;
-        }
-        #main-header.nav-dark {
-            background-color: rgba(242, 235, 221, 0.95) !important;
-            border-bottom-color: rgba(24, 34, 52, 0.1) !important;
-        }
-        #main-header.nav-dark .logo-area span,
-        #main-header.nav-dark nav a,
-        #main-header.nav-dark .flex a i,
-        #main-header.nav-dark .flex button i {
-            color: #182234 !important;
-        }
-        #main-header.nav-dark .border-white\/10 {
-            border-color: rgba(24, 34, 52, 0.2) !important;
         }
 
         /* Ambient Glow Effect */
@@ -674,57 +657,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 margin-left: 0;
             }
         }
+        /* Consistent public header: dark glass on every section and page. */
+        #main-header,
+        #main-header.nav-dark,
+        #main-header.nav-split,
+        #main-header.is-scrolled,
+        #main-header.is-light,
+        #main-header.header--light,
+        #main-header.header--transparent,
+        #main-header.header--inverse {
+            background: rgba(12, 18, 30, 0.78) !important;
+            backdrop-filter: blur(18px) saturate(130%) !important;
+            -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18) !important;
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .brand span,
+        #main-header .site-brand span,
+        #main-header .primary-nav a,
+        #main-header .language-trigger,
+        #main-header .header-actions > a,
+        #main-header button[aria-label="Toggle menu"] {
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .header-actions svg,
+        #main-header .language-trigger i {
+            color: rgba(246, 240, 226, 0.82) !important;
+        }
+
+        #main-header .primary-nav a:hover,
+        #main-header .language-trigger:hover,
+        #main-header .header-actions > a:hover,
+        #main-header button[aria-label="Toggle menu"]:hover,
+        #main-header .header-actions > a:hover svg,
+        #main-header .language-trigger:hover i {
+            color: #C9852A !important;
+        }
+
+        #main-header .header-actions > a[href="/campaign/"],
+        #main-header .header-actions > a[href="/campaign/"]:hover {
+            background: #C9852A !important;
+            color: #182234 !important;
+        }
+
+        #main-header .brand img,
+        #main-header .site-brand img,
+        #nav-logo {
+            height: 2.25rem !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        @media (min-width: 768px) {
+            #main-header .brand img,
+            #main-header .site-brand img,
+            #nav-logo {
+                height: 2.5rem !important;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-        <a href="/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
-             <img id="nav-logo" src="logo2.png" onerror="this.src='logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
-             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
-        </a>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
+        <div class="header-inner mx-auto grid h-[72px] max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8">
+            <a href="/" class="brand site-brand flex items-center gap-3 justify-self-start cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
+                <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-8 md:h-10 w-auto object-contain transition-all duration-300">
+                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+            </a>
 
-        <div class="hidden lg:flex items-center gap-10 nav-links">
-            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/products/" class="hover:text-amber transition-colors duration-300">Lume</a>
-                <a href="/science/" class="text-amber transition-colors duration-300 border-b border-amber pb-1">Science</a>
-                <a href="/sleep-ready-room-check/" class="hover:text-amber transition-colors duration-300">Room Check</a>
-                <a href="/about/" class="hover:text-amber transition-colors duration-300">About</a>
+            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
+                <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="/products/" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/science/" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="/about/" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="/contact/" class="hover:text-amber transition-colors duration-300">Contact Us</a>
             </nav>
 
-            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
-                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Login">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
+                <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
+                <a href="/account/" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/64 hover:text-amber transition-colors" rel="nofollow">
+                    <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
                 </a>
-                                <div class="relative">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
                         <i class="fas fa-globe text-xs"></i>
                         EN
                         <i class="fas fa-chevron-down text-[9px]"></i>
                     </button>
                     <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
                         <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
-                        <a href="/zh-tw/science/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">繁體中文</a>
+                        <a href="/zh-tw/science/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
                     </div>
                 </div>
-                <a href="/campaign/" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
-                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    Preorder
-                </a>
+                <a href="/campaign/" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder</a>
             </div>
-        </div>
 
-        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
-                <i class="fas fa-user text-lg transition-colors duration-300"></i>
-            </a>
-            <a href="/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Preorder">
-                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-            </a>
-            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
+            <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
                 <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
             </button>
@@ -733,21 +771,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
-            <a href="/science/" onclick="toggleMobileMenu()" class="text-amber transition-colors">Science</a>
-            <a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Room Check</a>
-            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About</a>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Preorder</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a>
+<div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
                     <a href="/" class="text-white hover:text-amber">English — EN</a>
-                    <a href="/zh-tw/science/" class="text-white hover:text-amber">繁體中文</a>
+                    <a href="/zh-tw/science/" class="text-white/80 hover:text-amber transition-colors">繁體中文</a>
                 </div>
             </div>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
         </nav>
     </div>
+
 
     <div class="nav-dots hidden xl:flex">
         <a href="#section-1" class="dot active" data-index="0"></a>
@@ -892,8 +938,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="rounded-[32px] border border-amber/18 bg-[#fffaf0] px-6 py-9 text-center shadow-[0_24px_80px_rgba(0,0,0,0.22)] sm:px-8 md:px-12 md:py-12">
                     <div class="mx-auto max-w-2xl">
                         <span class="text-amber tracking-[0.16em] uppercase text-xs md:text-sm block font-black mb-3"><span class="text-base md:text-xl">AI</span> Room Light Check</span>
-                        <h2 class="font-serif text-3xl md:text-4xl leading-tight" style="color:#182033;">Is your room sending the wrong signal?</h2>
-                        <p class="mx-auto mt-4 max-w-xl text-base md:text-lg leading-relaxed" style="color:#455169;">Answer 10 quick questions.<br>Add a room photo for an AI light reading.</p>
+                        <h2 class="font-serif text-3xl md:text-4xl leading-tight" style="color:#182033;">Is your room still acting like daytime?</h2>
+                        <p class="mx-auto mt-4 max-w-xl text-base md:text-lg leading-relaxed" style="color:#455169;">Answer a few quick questions.<br>Add a room photo if you want an optional AI room-light reading.</p>
                     </div>
                     <a href="/sleep-ready-room-check/?source=science" class="premium-cta mt-7 inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">
                         Check My Room Light
@@ -943,15 +989,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
                     <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
-                        <img src="asset-spectrum-matters.png" loading="lazy" alt="Simplified spectrum explanation for Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
+                    <img src="/asset-spectrum-matters.png" loading="lazy" alt="Simplified spectrum explanation for Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
                     <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
-                        <img src="asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual melatonin rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[22px]">
+                    <img src="/asset-melatonin-rhythm.png" loading="lazy" alt="Conceptual melatonin rhythm chart comparing lower-disruption light and blue-rich nighttime light" class="w-full h-auto rounded-[22px]">
                     </figure>
                 </div>
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-8 lg:gap-14 items-center">
                     <figure class="science-visual-card science-visual-card--large rounded-[30px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
-                        <img src="asset-wrong-light-vs-sleep-light.png" loading="lazy" alt="Comparison of ordinary nighttime light and Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
+                    <img src="/asset-wrong-light-vs-sleep-light.png" loading="lazy" alt="Comparison of ordinary nighttime light and Owlnest Lume sleep-supporting light" class="w-full h-auto rounded-[22px]">
                     </figure>
                     <div>
                         <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-4 block">Warm Light vs Lume</span>
@@ -1022,7 +1068,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">Educational information only.<br>This does not claim that Owlnest Lume changes sleep efficiency.</p>
                     </div>
                     <figure class="science-visual-card science-visual-card--large rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
-                        <img src="asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
+                        <img src="/asset-sleep-efficiency.png" loading="lazy" alt="Infographic explaining the sleep efficiency formula" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
                 <div id="sleep-routine-grid" class="science-info-spotlight science-info-spotlight--wide">
@@ -1033,7 +1079,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="mt-4 text-sm text-white/42 leading-relaxed">A simple summary of common nighttime behavior patterns.</p>
                     </div>
                     <figure class="science-visual-card science-visual-card--large sleep-routine-figure rounded-[28px] border border-white/10 bg-[#111927] p-3 md:p-5 overflow-hidden">
-                        <img src="asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
+                        <img src="/asset-sleep-doesnt-come-easily.png" loading="lazy" alt="Infographic showing common sleep routine behaviors people try when sleep does not come easily" class="w-full h-auto rounded-[20px]">
                     </figure>
                 </div>
             </div>
@@ -1099,6 +1145,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Sleep-supporting spectrum lamp for the hours before bed.</p>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
             <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
         </div>
+        <div class="mt-6 text-[10px] tracking-[0.16em] uppercase text-white/45">
+        </div>
     </footer>
 
     <script>
@@ -1149,8 +1197,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             // Keep the header visually consistent across all sections.
             if (header) {
-                header.classList.remove('nav-dark');
-                if (navLogo) navLogo.src = 'logo2.png';
             }
         }
 
@@ -1222,6 +1268,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         trigger.setAttribute('aria-expanded', 'false');
     });
 </script>
-    <script src="assets/js/consent.js" defer></script>
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 </html>
