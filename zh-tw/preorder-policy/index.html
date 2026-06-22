@@ -106,8 +106,7 @@
             visibility:visible;
             pointer-events:auto;
         }
-        main section p, main section li { line-height:1.65; }
-    </style>
+        main section p, main section li { line-height:1.65; }</style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
 </head>
@@ -172,6 +171,12 @@
             <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">預購</a>
             <a href="/account/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">會員中心</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a>
             <div class="text-center">
                 <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
                 <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
