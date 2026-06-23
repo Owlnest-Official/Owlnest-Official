@@ -34,6 +34,15 @@ export type PayPalOrderRequest = {
 export type PayPalOrderResponse = {
   id: string;
   status: string;
+  approval_url: string;
+};
+
+export type PayPalCaptureResponse = {
+  id: string;
+  status: string;
+  capture_id: string | null;
+  payer_email: string | null;
+  payer_name: string | null;
 };
 
 function baseUrl(env: string | undefined): string {
@@ -93,8 +102,51 @@ export async function createPayPalOrder(
     throw new Error("PAYPAL_CREATE_ORDER_ERROR");
   }
 
+  const approvalUrl = Array.isArray(data.links)
+    ? data.links.find((link: { rel?: string; href?: string }) => link.rel === "approve")?.href
+    : null;
+
+  if (!approvalUrl) {
+    throw new Error("PAYPAL_APPROVAL_URL_MISSING");
+  }
+
   return {
     id: data.id,
     status: data.status || "CREATED",
+    approval_url: approvalUrl,
+  };
+}
+
+export async function capturePayPalOrder(
+  accessToken: string,
+  paypalOrderId: string,
+): Promise<PayPalCaptureResponse> {
+  const response = await fetch(
+    `${baseUrl(Deno.env.get("PAYPAL_ENV"))}/v2/checkout/orders/${encodeURIComponent(paypalOrderId)}/capture`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+    },
+  );
+
+  const data = await response.json().catch(() => null);
+
+  if (!response.ok) {
+    const issue = data?.details?.[0]?.issue || data?.name || "PAYPAL_CAPTURE_ERROR";
+    throw new Error(`PAYPAL_CAPTURE_ERROR:${issue}`);
+  }
+
+  const capture = data?.purchase_units?.[0]?.payments?.captures?.[0] || null;
+  const payerName = [data?.payer?.name?.given_name, data?.payer?.name?.surname].filter(Boolean).join(" ") || null;
+
+  return {
+    id: data?.id || paypalOrderId,
+    status: data?.status || "COMPLETED",
+    capture_id: capture?.id || null,
+    payer_email: data?.payer?.email_address || null,
+    payer_name: payerName,
   };
 }

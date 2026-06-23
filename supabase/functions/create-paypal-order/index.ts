@@ -136,6 +136,7 @@ Deno.serve(async (request) => {
 
     return jsonResponse({
       paypal_order_id: paypalOrder.id,
+      approval_url: paypalOrder.approval_url,
       status: "pending",
       package: body.package,
       currency: "USD",
@@ -164,6 +165,10 @@ Deno.serve(async (request) => {
 
     if (code === "PAYPAL_CREATE_ORDER_ERROR") {
       return errorResponse("PAYPAL_CREATE_ORDER_ERROR", "Unable to create PayPal order.", 502);
+    }
+
+    if (code === "PAYPAL_APPROVAL_URL_MISSING") {
+      return errorResponse("PAYPAL_APPROVAL_URL_MISSING", "PayPal approval URL was not returned.", 502);
     }
 
     if (code === "CREATOR_UNITS_LOOKUP_ERROR") {
