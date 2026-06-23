@@ -11,19 +11,129 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/consent.css">
+  <style>
+    :root {
+      --midnight: #111d2f;
+      --ink: #172133;
+      --cream: #f7efd8;
+      --ivory: #fffaf0;
+      --amber: #d8912a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle at top, #1d2a40 0, var(--midnight) 46%, #09111f 100%);
+      color: var(--ink);
+      font-family: Manrope, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+    .status-card {
+      width: min(100%, 720px);
+      background: linear-gradient(180deg, var(--ivory), var(--cream));
+      border: 1px solid rgba(216, 145, 42, 0.28);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+      padding: clamp(32px, 7vw, 56px);
+      text-align: center;
+    }
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--midnight);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+    }
+    .brand-mark {
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      align-items: center;
+      justify-content: center;
+      background: var(--midnight);
+      border-radius: 50%;
+    }
+    .brand-mark img {
+      display: block;
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+    .kicker {
+      margin: 32px 0 0;
+      color: #a86512;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px 0 0;
+      color: var(--midnight);
+      font-family: Georgia, "Noto Serif TC", "Times New Roman", serif;
+      font-size: clamp(38px, 8vw, 58px);
+      line-height: 1.05;
+    }
+    .message {
+      max-width: 570px;
+      margin: 22px auto 0;
+      color: rgba(17, 29, 47, 0.78);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .checkout-actions {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 34px;
+    }
+    .checkout-actions.is-visible { display: flex; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
+      color: #fff7e8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .button-primary { background: var(--midnight); }
+    .button-primary:hover { background: #24324a; }
+    .button-secondary {
+      border: 1px solid rgba(17, 29, 47, 0.24);
+      color: var(--midnight);
+    }
+    .button-secondary:hover { border-color: var(--amber); }
+  </style>
 </head>
-<body class="min-h-screen bg-[#111d2f] text-white font-sans">
-  <main class="min-h-screen flex items-center justify-center px-6 py-16">
-    <section class="w-full max-w-2xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl shadow-black/30 sm:p-12">
-      <img src="/logo2.png" alt="Owlnest" class="mx-auto h-12 w-auto object-contain">
-      <p id="checkout-kicker" class="mt-8 text-[10px] font-bold uppercase tracking-[0.32em] text-[#d8912a]">付款確認中</p>
-      <h1 id="checkout-title" class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">正在確認付款</h1>
-      <p id="checkout-message" class="mx-auto mt-5 max-w-xl leading-relaxed text-white/72">
+<body>
+  <main>
+    <section class="status-card" aria-labelledby="checkout-title">
+      <div class="brand-lockup">
+        <span class="brand-mark"><img src="/logo2.png" alt="Owlnest"></span>
+        <span>OWLNEST</span>
+      </div>
+      <p id="checkout-kicker" class="kicker">付款確認中</p>
+      <h1 id="checkout-title">正在確認付款</h1>
+      <p id="checkout-message" class="message">
         請先不要關閉此頁，我們正在確認你的 PayPal 預購付款
       </p>
-      <div id="checkout-actions" class="mt-8 hidden flex-wrap items-center justify-center gap-3">
-        <a href="/zh-tw/products/" class="inline-flex items-center justify-center rounded-full bg-[#d8912a] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#111d2f] transition hover:bg-white">回到產品頁</a>
-        <a href="/zh-tw/contact/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:border-[#d8912a] hover:bg-white/10">聯絡我們</a>
+      <div id="checkout-actions" class="checkout-actions">
+        <a href="/zh-tw/products/" class="button button-primary">回到產品頁</a>
+        <a href="/zh-tw/contact/" class="button button-secondary">聯絡我們</a>
       </div>
     </section>
   </main>
@@ -41,13 +151,12 @@
         kicker.textContent = kickerText;
         title.textContent = titleText;
         message.textContent = messageText;
-        actions.classList.remove("hidden");
-        actions.classList.add("flex");
+        actions.classList.add("is-visible");
       }
 
       async function captureOrder() {
         if (!paypalOrderId) {
-          showState("付款錯誤", "付款無法完成", "這個回傳連結沒有 PayPal 訂單編號請重新嘗試，或聯絡我們協助確認");
+          showState("付款錯誤", "付款無法完成", "這個回傳連結沒有 PayPal 訂單編號。請重新嘗試，或聯絡我們協助確認");
           return;
         }
 
@@ -66,13 +175,13 @@
 
           const errorCode = data?.error?.message || data?.error?.code || "";
           if (errorCode === "ORDER_NOT_APPROVED") {
-            showState("付款尚未完成", "PayPal 付款尚未核准", "PayPal 顯示此訂單尚未完成核准請回到結帳流程並完成 PayPal 付款確認");
+            showState("付款尚未完成", "PayPal 付款尚未核准", "PayPal 顯示此訂單尚未完成核准。請回到結帳流程並完成 PayPal 付款確認");
             return;
           }
 
-          showState("付款錯誤", "付款無法完成", "你的 PayPal 付款尚未完成請重新嘗試，或聯絡我們協助確認");
+          showState("付款錯誤", "付款無法完成", "你的 PayPal 付款尚未完成。請重新嘗試，或聯絡我們協助確認");
         } catch (_error) {
-          showState("付款錯誤", "付款無法完成", "目前無法確認 PayPal 付款請重新嘗試，或聯絡我們協助確認");
+          showState("付款錯誤", "付款無法完成", "目前無法確認 PayPal 付款。請重新嘗試，或聯絡我們協助確認");
         }
       }
 
