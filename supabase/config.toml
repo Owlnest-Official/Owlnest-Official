@@ -1,0 +1,4 @@
+project_id = "owlnest-official"
+
+[functions.create-paypal-order]
+verify_jwt = false

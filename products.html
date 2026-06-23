@@ -793,20 +793,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         First batch: Single $59 / Duo $100.<br>
                         Fulfillment begins July 20, 2026.
                     </p>
-                    <p id="creator-referral-message" class="mx-auto mt-5 hidden max-w-2xl rounded-full border border-amber/25 bg-amber/10 px-5 py-3 text-sm font-medium text-amber" aria-live="polite"></p>
+                    <form id="creator-code-form" class="mx-auto mt-4 flex max-w-md flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:items-end" novalidate>
+                        <label class="flex-1 text-left">
+                            <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Discount code</span>
+                            <input id="creator-code-input" name="discount_code" type="text" inputmode="text" autocomplete="off" placeholder="Enter discount code" class="mt-2 w-full rounded-full border border-white/10 bg-midnight/70 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white placeholder:text-white/30 focus:border-amber focus:outline-none">
+                        </label>
+                        <button type="submit" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-midnight transition-colors hover:bg-warm">Apply</button>
+                    </form>
+                    <p id="creator-code-feedback" class="mx-auto mt-3 hidden max-w-md text-sm text-amber/90" aria-live="polite"></p>
                 </div>
                 <div class="mt-10 grid gap-5 md:grid-cols-2">
                     <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
                         <p class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Single Lume</p>
                         <h3 class="mt-3 font-serif text-3xl">1 × Owlnest Lume</h3>
-                        <p class="mt-3 font-serif text-5xl text-amber">$59</p>
+                        <p class="mt-3 font-serif text-5xl text-amber" data-creator-price data-original-price="59">
+                            <span data-price-current>$59</span>
+                        </p>
+                        <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">For one bedside or one room.</p>
                         <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm" rel="noopener noreferrer">Preorder Single</a>
                     </article>
                     <article class="rounded-2xl border border-amber/35 bg-white/8 p-6">
                         <p class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</p>
                         <h3 class="mt-3 font-serif text-3xl">2 × Owlnest Lume</h3>
-                        <p class="mt-3 font-serif text-5xl text-amber">$100</p>
+                        <p class="mt-3 font-serif text-5xl text-amber" data-creator-price data-original-price="100">
+                            <span data-price-current>$100</span>
+                        </p>
+                        <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">For two sides of the bed, two rooms, or one home plus one travel setup.</p>
                         <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm" rel="noopener noreferrer">Preorder Duo</a>
                     </article>
