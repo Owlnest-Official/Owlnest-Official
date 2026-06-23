@@ -14,15 +14,47 @@ import {
 type CreateOrderBody = {
   package?: unknown;
   creator_referral?: CreatorReferralHint | null;
+  checkout_paths?: {
+    success?: unknown;
+    cancel?: unknown;
+  } | null;
   client_context?: {
     page?: string;
     locale?: string;
   };
 };
 
-function siteUrl(): string {
-  const configuredUrl = Deno.env.get("SITE_URL") || Deno.env.get("PUBLIC_SITE_URL") || "https://owlnestofficial.com";
-  return configuredUrl.replace(/\/+$/, "");
+const DEFAULT_SITE_ORIGIN = "https://owlnestofficial.com";
+const ALLOWED_SITE_ORIGINS = new Set([
+  "http://localhost:8888",
+  "http://127.0.0.1:8888",
+  "https://owlnestofficial.com",
+  "https://www.owlnestofficial.com",
+]);
+const ALLOWED_CHECKOUT_PATHS = new Set([
+  "/checkout/success/",
+  "/checkout/cancel/",
+  "/zh-tw/checkout/success/",
+  "/zh-tw/checkout/cancel/",
+]);
+
+function safeRequestOrigin(request: Request): string {
+  const origin = request.headers.get("Origin") || "";
+  return ALLOWED_SITE_ORIGINS.has(origin) ? origin : DEFAULT_SITE_ORIGIN;
+}
+
+function defaultCheckoutPaths(locale?: string): { success: string; cancel: string } {
+  const isTraditionalChinese = locale === "zh-tw";
+  return {
+    success: isTraditionalChinese ? "/zh-tw/checkout/success/" : "/checkout/success/",
+    cancel: isTraditionalChinese ? "/zh-tw/checkout/cancel/" : "/checkout/cancel/",
+  };
+}
+
+function safeCheckoutPath(path: unknown, fallback: string): string {
+  if (typeof path !== "string") return fallback;
+  const trimmedPath = path.trim();
+  return ALLOWED_CHECKOUT_PATHS.has(trimmedPath) ? trimmedPath : fallback;
 }
 
 Deno.serve(async (request) => {
@@ -71,11 +103,12 @@ Deno.serve(async (request) => {
       : { percentEffective: 0, amount: 0, breakdown: [] };
 
     const accessToken = await getPayPalAccessToken();
-    const baseSiteUrl = siteUrl();
-    const isTraditionalChinese = body.client_context?.locale === "zh-tw";
-    const checkoutBasePath = isTraditionalChinese ? "/zh-tw/checkout" : "/checkout";
-    const returnUrl = `${baseSiteUrl}${checkoutBasePath}/success/`;
-    const cancelUrl = `${baseSiteUrl}${checkoutBasePath}/cancel/`;
+    const safeOrigin = safeRequestOrigin(request);
+    const fallbackPaths = defaultCheckoutPaths(body.client_context?.locale);
+    const returnPath = safeCheckoutPath(body.checkout_paths?.success, fallbackPaths.success);
+    const cancelPath = safeCheckoutPath(body.checkout_paths?.cancel, fallbackPaths.cancel);
+    const returnUrl = `${safeOrigin}${returnPath}`;
+    const cancelUrl = `${safeOrigin}${cancelPath}`;
     const paypalOrder = await createPayPalOrder(accessToken, {
       intent: "CAPTURE",
       payment_source: {

@@ -223,9 +223,24 @@
     return null;
   }
 
+  function checkoutPaths() {
+    if (pageLocale() === "zh-tw") {
+      return {
+        success: "/zh-tw/checkout/success/",
+        cancel: "/zh-tw/checkout/cancel/"
+      };
+    }
+
+    return {
+      success: "/checkout/success/",
+      cancel: "/checkout/cancel/"
+    };
+  }
+
   function buildCheckoutRequest(packageKey) {
     const body = {
       package: packageKey,
+      checkout_paths: checkoutPaths(),
       client_context: {
         page: "products",
         locale: pageLocale()
