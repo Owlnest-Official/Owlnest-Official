@@ -380,21 +380,35 @@
                         Single Lume 預購價：$59<br>
                         Duo Lume 預購價：$100
                     </p>
+                    <form id="creator-code-form" class="mx-auto mt-4 flex max-w-md flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:items-end" novalidate>
+                        <label class="flex-1 text-left">
+                            <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Discount code</span>
+                            <input id="creator-code-input" name="discount_code" type="text" inputmode="text" autocomplete="off" placeholder="Enter discount code" class="mt-2 w-full rounded-full border border-white/10 bg-midnight/70 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white placeholder:text-white/30 focus:border-amber focus:outline-none">
+                        </label>
+                        <button type="submit" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-midnight transition-colors hover:bg-warm">Apply</button>
+                    </form>
+                    <p id="creator-code-feedback" class="mx-auto mt-3 hidden max-w-md text-sm text-amber/90" aria-live="polite"></p>
                 </div>
-                <div class="mt-10 grid gap-5 md:grid-cols-2">
+                <div id="preorder-options" class="mt-10 grid gap-5 md:grid-cols-2">
                     <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
                         <p class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Single Lume</p>
                         <h3 class="mt-3 font-serif text-3xl">1 × Owlnest Lume</h3>
-                        <p class="mt-3 font-serif text-5xl text-amber">$59</p>
+                        <p class="mt-3 font-serif text-5xl text-amber" data-creator-price data-original-price="59">
+                            <span data-price-current>$59</span>
+                        </p>
+                        <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">適合一側床邊或一個房間</p>
-                        <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm" rel="noopener noreferrer">預購 Single</a>
+                        <button type="button" data-checkout-package="single" data-checkout-label="預購 Single" data-checkout-loading-label="正在前往 PayPal..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Single</button>
                     </article>
                     <article class="rounded-2xl border border-amber/35 bg-white/8 p-6">
                         <p class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</p>
                         <h3 class="mt-3 font-serif text-3xl">2 × Owlnest Lume</h3>
-                        <p class="mt-3 font-serif text-5xl text-amber">$100</p>
+                        <p class="mt-3 font-serif text-5xl text-amber" data-creator-price data-original-price="100">
+                            <span data-price-current>$100</span>
+                        </p>
+                        <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">適合床的兩側、兩個房間，或家中一盞加旅行一盞</p>
-                        <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm" rel="noopener noreferrer">預購 Duo</a>
+                        <button type="button" data-checkout-package="duo" data-checkout-label="預購 Duo" data-checkout-loading-label="正在前往 PayPal..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Duo</button>
                     </article>
                 </div>
                 <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-white/64">
@@ -403,8 +417,9 @@
                     <p class="text-white/78">這是預購商品<br>運費、稅金、關稅與進口費用，將在出貨前另行確認</p>
                     <p class="mt-3"><a href="/zh-tw/preorder-policy/" class="text-amber hover:text-warm underline underline-offset-4">閱讀預購條款</a></p>
                 </div>
+                <p id="checkout-feedback" class="mx-auto mt-4 hidden max-w-md text-center text-sm text-amber/90" aria-live="polite"></p>
                 <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-colors rounded-full" rel="noopener noreferrer">預購 Lume</a>
+                    <a href="#preorder-options" class="inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm transition-colors rounded-full">選擇方案</a>
                     <a href="/zh-tw/sleep-ready-room-check/" class="inline-flex items-center justify-center border border-white/15 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-white/10 hover:border-amber transition-colors rounded-full">檢查房間光線</a>
                 </div>
             </div>
@@ -464,8 +479,6 @@
 
 
             <script>
-        const PAYPAL_PREORDER_URL = 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A';
-
         function owlnestTrack(eventName, params = {}) {
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -474,24 +487,6 @@
                 ...params
             });
         }
-
-        document.querySelectorAll(`a[href="${PAYPAL_PREORDER_URL}"]`).forEach(link => {
-            link.addEventListener('click', () => {
-                const section = link.closest('section');
-                owlnestTrack('preorder_paypal_click', {
-                    source_page: 'zh_products',
-                    source_section: section?.id || 'zh_products_preorder',
-                    cta_text: '立即預購',
-                    destination: 'paypal',
-                    payment_provider: 'paypal',
-                    product_name: 'Owlnest Lume',
-                    currency: 'USD',
-                    single_price: 59,
-                    duo_price: 100,
-                    preorder_status: 'open'
-                });
-            });
-        });
 
         function toggleLanguageMenu(event) {
             event.preventDefault();
@@ -527,6 +522,7 @@
             }
         }
     </script>
+    <script src="/assets/js/referral.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
     <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
         <div class="mx-auto flex max-w-md gap-3">

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>付款狀態 | Owlnest Official</title>
+  <link rel="icon" type="image/png" href="/logo2.png" />
+  <link rel="stylesheet" href="/assets/css/tailwind-public.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/consent.css">
+</head>
+<body class="min-h-screen bg-[#111d2f] text-white font-sans">
+  <main class="min-h-screen flex items-center justify-center px-6 py-16">
+    <section class="w-full max-w-2xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl shadow-black/30 sm:p-12">
+      <img src="/logo2.png" alt="Owlnest" class="mx-auto h-12 w-auto object-contain">
+      <p id="checkout-kicker" class="mt-8 text-[10px] font-bold uppercase tracking-[0.32em] text-[#d8912a]">付款確認中</p>
+      <h1 id="checkout-title" class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">正在確認付款</h1>
+      <p id="checkout-message" class="mx-auto mt-5 max-w-xl leading-relaxed text-white/72">
+        請先不要關閉此頁，我們正在確認你的 PayPal 預購付款
+      </p>
+      <div id="checkout-actions" class="mt-8 hidden flex-wrap items-center justify-center gap-3">
+        <a href="/zh-tw/products/" class="inline-flex items-center justify-center rounded-full bg-[#d8912a] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#111d2f] transition hover:bg-white">回到產品頁</a>
+        <a href="/zh-tw/contact/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:border-[#d8912a] hover:bg-white/10">聯絡我們</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      const CAPTURE_ENDPOINT = "https://khoiplqugajmybmultzs.supabase.co/functions/v1/capture-paypal-order";
+      const params = new URLSearchParams(window.location.search);
+      const paypalOrderId = params.get("paypal_order_id") || params.get("token");
+      const kicker = document.getElementById("checkout-kicker");
+      const title = document.getElementById("checkout-title");
+      const message = document.getElementById("checkout-message");
+      const actions = document.getElementById("checkout-actions");
+
+      function showState(kickerText, titleText, messageText) {
+        kicker.textContent = kickerText;
+        title.textContent = titleText;
+        message.textContent = messageText;
+        actions.classList.remove("hidden");
+        actions.classList.add("flex");
+      }
+
+      async function captureOrder() {
+        if (!paypalOrderId) {
+          showState("付款錯誤", "付款無法完成", "這個回傳連結沒有 PayPal 訂單編號請重新嘗試，或聯絡我們協助確認");
+          return;
+        }
+
+        try {
+          const response = await fetch(CAPTURE_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ paypal_order_id: paypalOrderId })
+          });
+          const data = await response.json().catch(() => ({}));
+
+          if (response.ok && (data.status === "paid" || data.status === "already_paid" || data.status === "captured")) {
+            showState("付款成功", "訂單已確認", "我們已收到你的預購付款，後續會透過 email 更新預購與出貨資訊");
+            return;
+          }
+
+          const errorCode = data?.error?.message || data?.error?.code || "";
+          if (errorCode === "ORDER_NOT_APPROVED") {
+            showState("付款尚未完成", "PayPal 付款尚未核准", "PayPal 顯示此訂單尚未完成核准請回到結帳流程並完成 PayPal 付款確認");
+            return;
+          }
+
+          showState("付款錯誤", "付款無法完成", "你的 PayPal 付款尚未完成請重新嘗試，或聯絡我們協助確認");
+        } catch (_error) {
+          showState("付款錯誤", "付款無法完成", "目前無法確認 PayPal 付款請重新嘗試，或聯絡我們協助確認");
+        }
+      }
+
+      captureOrder();
+    })();
+  </script>
+  <script src="/assets/js/consent.js" defer></script>
+</body>
+</html>

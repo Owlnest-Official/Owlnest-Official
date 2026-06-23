@@ -72,8 +72,10 @@ Deno.serve(async (request) => {
 
     const accessToken = await getPayPalAccessToken();
     const baseSiteUrl = siteUrl();
-    const returnUrl = `${baseSiteUrl}/products/?paypal_return=1`;
-    const cancelUrl = `${baseSiteUrl}/products/?paypal_cancel=1`;
+    const isTraditionalChinese = body.client_context?.locale === "zh-tw";
+    const checkoutBasePath = isTraditionalChinese ? "/zh-tw/checkout" : "/checkout";
+    const returnUrl = `${baseSiteUrl}${checkoutBasePath}/success/`;
+    const cancelUrl = `${baseSiteUrl}${checkoutBasePath}/cancel/`;
     const paypalOrder = await createPayPalOrder(accessToken, {
       intent: "CAPTURE",
       payment_source: {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Payment Status | Owlnest Official</title>
+  <link rel="icon" type="image/png" href="/logo2.png" />
+  <link rel="stylesheet" href="/assets/css/tailwind-public.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/consent.css">
+</head>
+<body class="min-h-screen bg-[#111d2f] text-white font-sans">
+  <main class="min-h-screen flex items-center justify-center px-6 py-16">
+    <section class="w-full max-w-2xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl shadow-black/30 sm:p-12">
+      <img src="/logo2.png" alt="Owlnest" class="mx-auto h-12 w-auto object-contain">
+      <p id="checkout-kicker" class="mt-8 text-[10px] font-bold uppercase tracking-[0.32em] text-[#d8912a]">Payment Processing</p>
+      <h1 id="checkout-title" class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">Confirming your payment.</h1>
+      <p id="checkout-message" class="mx-auto mt-5 max-w-xl leading-relaxed text-white/72">
+        Please keep this page open while we confirm your PayPal preorder payment.
+      </p>
+      <div id="checkout-actions" class="mt-8 hidden flex-wrap items-center justify-center gap-3">
+        <a href="/products/" class="inline-flex items-center justify-center rounded-full bg-[#d8912a] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#111d2f] transition hover:bg-white">Back to Products</a>
+        <a href="/contact/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:border-[#d8912a] hover:bg-white/10">Contact Support</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      const CAPTURE_ENDPOINT = "https://khoiplqugajmybmultzs.supabase.co/functions/v1/capture-paypal-order";
+      const params = new URLSearchParams(window.location.search);
+      const paypalOrderId = params.get("paypal_order_id") || params.get("token");
+      const kicker = document.getElementById("checkout-kicker");
+      const title = document.getElementById("checkout-title");
+      const message = document.getElementById("checkout-message");
+      const actions = document.getElementById("checkout-actions");
+
+      function showState(kickerText, titleText, messageText) {
+        kicker.textContent = kickerText;
+        title.textContent = titleText;
+        message.textContent = messageText;
+        actions.classList.remove("hidden");
+        actions.classList.add("flex");
+      }
+
+      async function captureOrder() {
+        if (!paypalOrderId) {
+          showState(
+            "Payment Error",
+            "Payment could not be completed",
+            "We could not find a PayPal order on this return link. Please try checkout again or contact support."
+          );
+          return;
+        }
+
+        try {
+          const response = await fetch(CAPTURE_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ paypal_order_id: paypalOrderId })
+          });
+          const data = await response.json().catch(() => ({}));
+
+          if (response.ok && (data.status === "paid" || data.status === "already_paid" || data.status === "captured")) {
+            showState(
+              "Payment Successful",
+              "Order confirmed",
+              "We have received your preorder payment. We will send preorder and fulfillment updates by email."
+            );
+            return;
+          }
+
+          const errorCode = data?.error?.message || data?.error?.code || "";
+          if (errorCode === "ORDER_NOT_APPROVED") {
+            showState(
+              "Payment Pending",
+              "Payment has not been completed",
+              "PayPal says this order has not been approved yet. Please return to checkout and complete the PayPal approval step."
+            );
+            return;
+          }
+
+          showState(
+            "Payment Error",
+            "Payment could not be completed",
+            "Your PayPal payment was not completed. Please try again or contact support if the issue continues."
+          );
+        } catch (_error) {
+          showState(
+            "Payment Error",
+            "Payment could not be completed",
+            "We could not confirm your PayPal payment right now. Please try again or contact support."
+          );
+        }
+      }
+
+      captureOrder();
+    })();
+  </script>
+  <script src="/assets/js/consent.js" defer></script>
+</body>
+</html>
