@@ -2,6 +2,17 @@ export type PayPalEnv = "sandbox" | "live";
 
 export type PayPalOrderRequest = {
   intent: "CAPTURE";
+  payment_source?: {
+    paypal: {
+      experience_context: {
+        brand_name: string;
+        shipping_preference: "NO_SHIPPING";
+        user_action: "PAY_NOW";
+        return_url: string;
+        cancel_url: string;
+      };
+    };
+  };
   purchase_units: Array<{
     reference_id: string;
     description: string;
@@ -103,7 +114,9 @@ export async function createPayPalOrder(
   }
 
   const approvalUrl = Array.isArray(data.links)
-    ? data.links.find((link: { rel?: string; href?: string }) => link.rel === "approve")?.href
+    ? data.links.find((link: { rel?: string; href?: string }) =>
+        link.rel === "approve" || link.rel === "payer-action"
+      )?.href
     : null;
 
   if (!approvalUrl) {

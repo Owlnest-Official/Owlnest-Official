@@ -20,6 +20,11 @@ type CreateOrderBody = {
   };
 };
 
+function siteUrl(): string {
+  const configuredUrl = Deno.env.get("SITE_URL") || Deno.env.get("PUBLIC_SITE_URL") || "https://owlnestofficial.com";
+  return configuredUrl.replace(/\/+$/, "");
+}
+
 Deno.serve(async (request) => {
   if (request.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -66,8 +71,22 @@ Deno.serve(async (request) => {
       : { percentEffective: 0, amount: 0, breakdown: [] };
 
     const accessToken = await getPayPalAccessToken();
+    const baseSiteUrl = siteUrl();
+    const returnUrl = `${baseSiteUrl}/products/?paypal_return=1`;
+    const cancelUrl = `${baseSiteUrl}/products/?paypal_cancel=1`;
     const paypalOrder = await createPayPalOrder(accessToken, {
       intent: "CAPTURE",
+      payment_source: {
+        paypal: {
+          experience_context: {
+            brand_name: "Owlnest",
+            shipping_preference: "NO_SHIPPING",
+            user_action: "PAY_NOW",
+            return_url: returnUrl,
+            cancel_url: cancelUrl,
+          },
+        },
+      },
       purchase_units: [
         {
           reference_id: price.sku,
