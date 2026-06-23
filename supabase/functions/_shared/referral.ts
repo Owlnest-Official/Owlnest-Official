@@ -112,10 +112,7 @@ export async function findValidCreator(
   const { data, error } = await query.maybeSingle();
   if (error || !data) return null;
 
-  const creator = data as CreatorPartner;
-  if (!isValidCreatorDiscount(creator)) return null;
-
-  return creator;
+  return data as CreatorPartner;
 }
 
 export function discountAmountForCreator(
