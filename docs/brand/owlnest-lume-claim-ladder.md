@@ -30,7 +30,7 @@ A low-blue sleep-spectrum lamp designed to support natural melatonin and better 
 
 Traditional Chinese:
 
-低藍光睡眠光譜燈，支持自然褪黑激素，幫助身體進入更好睡的夜晚狀態
+低藍光睡眠光譜燈，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
 
 ## Brand Spine
 
@@ -48,7 +48,7 @@ Traditional Chinese:
 
 關掉白天，不必關掉整個房間
 
-支持褪黑激素，保留夜晚需要的光，睡得更好
+幫助促進自然褪黑激素分泌，保留夜晚需要的光，睡得更好
 
 低藍光睡眠光譜，幫助身體留在夜晚模式
 
@@ -84,7 +84,7 @@ The spectrum is designed to support natural melatonin and help the body stay in 
 
 Traditional Chinese:
 
-這樣的光譜設計用來支持自然褪黑激素，幫助身體留在夜晚模式
+這樣的光譜設計用來幫助促進自然褪黑激素分泌，讓身體留在夜晚模式
 
 ### Level 4: Sleep outcome
 
@@ -117,15 +117,15 @@ These can be used loudly in homepage copy, Products page, ads, KOL brief, IG, pa
 
 ### Traditional Chinese
 
-* 支持自然褪黑激素
-* 支持更好睡眠
+* 幫助促進自然褪黑激素分泌
+* 幫助睡得更好
 * 低藍光睡眠光譜
 * 為睡眠設計的深琥珀光
 * 幫助身體留在夜晚模式
 * 為更好夜晚設計的睡眠光譜燈
 * 幫助減少夜間藍光暴露
 * 給晚上需要光、但不想把白天帶回房間的人
-* 為整夜低光環境而設計
+* 為整晚留一點柔和的光而設計
 * 不是普通小夜燈
 * 不是另一個睡眠 app
 * 關掉白天，不必關掉整個房間
@@ -152,11 +152,11 @@ Do not use these as naked hero headlines without explanation.
 * 幫助促進自然褪黑激素分泌
 * 幫助更容易入睡
 * 幫助睡得更久
-* 支持更深、更穩定的睡眠
+* 幫助睡得更深、更穩
 * 設計用來減少干擾褪黑激素的藍光
-* 依據身體自然夜間節律設計
-* 幫助建立更支持睡眠的光環境
-* 可作為不想全黑時的柔和低光選擇
+* 依照身體夜晚的自然節奏來設計
+* 幫助打造更適合睡眠的夜晚光線
+* 不想全黑的時候，可以留一點柔和的光
 
 ## Yellow Claim Usage Conditions
 
@@ -212,10 +212,10 @@ English:
 
 Traditional Chinese:
 
-* 為整夜低光環境而設計
-* 適合夜晚低光使用
+* 為整晚留一點柔和的光而設計
+* 適合夜晚需要柔和光線時使用
 * 給不想全黑、但又不想開普通燈的人
-* 適合睡前、夜醒與低光夜晚
+* 適合睡前、半夜醒來，或夜晚想留一點柔和光的時候
 
 ### Safe to use with product context
 
@@ -226,7 +226,7 @@ English:
 
 Traditional Chinese:
 
-* 可作為整晚柔和低光使用
+* 整晚可以留一點柔和的光
 * 整夜保持柔和，不把房間照回白天
 
 ### Avoid as main headline
@@ -242,7 +242,7 @@ Traditional Chinese:
 
 Reason:
 
-These are not the best wording because they can sound like a guaranteed sleep-effect claim. Prefer all-night low-light use / 整夜低光環境.
+These are not the best wording because they can sound like a guaranteed sleep-effect claim. Prefer all-night low-light use / 整晚柔和光線.
 
 ## Approved English Phrases
 
@@ -274,7 +274,7 @@ These are not the best wording because they can sound like a guaranteed sleep-ef
 ### 主標 / 廣告鉤子
 
 * 關掉白天，不必關掉整個房間
-* 支持褪黑激素，保留夜晚需要的光，睡得更好
+* 幫助促進自然褪黑激素分泌，保留夜晚需要的光，睡得更好
 * 晚上需要光，但不需要把白天帶回房間
 * 低藍光睡眠光譜，為更好睡眠而設計
 * 深琥珀睡眠光，幫助身體留在夜晚模式
@@ -283,15 +283,15 @@ These are not the best wording because they can sound like a guaranteed sleep-ef
 
 ### 產品說明
 
-* Owlnest Lume 使用深琥珀、低藍光睡眠光譜，支持自然褪黑激素與更好睡眠
+* Owlnest Lume 使用深琥珀、低藍光睡眠光譜，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
 * 它保留夜晚需要的光，同時減少把房間照回白天的高藍光刺激
-* 適合睡前、夜醒與整夜低光環境
+* 適合睡前、半夜醒來，或整晚留一點柔和的光
 * 給不想全黑、但也不想開普通燈的人
 
 ### 科學 / FAQ
 
 * 夜間高藍光可能干擾身體自然的褪黑激素節律
-* Lume 設計用來減少夜間藍光暴露，支持更適合睡眠的光環境
+* Lume 設計用來減少夜間藍光暴露，打造更適合睡眠的夜晚光線
 * 深琥珀、低藍光光譜，讓房間可用，同時幫助身體留在夜晚模式
 
 ## Three Messaging Rules
