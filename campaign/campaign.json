@@ -3,9 +3,9 @@
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Sleep Spectrum Lamp",
-  "subtitle": "A melatonin-supporting sleep spectrum lamp made to stay on while you sleep.",
+  "subtitle": "A deep amber, low-blue sleep-spectrum lamp for nights that still need light.",
   "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep spectrum lamp tuned for night-friendly sleep.",
-  "notice": "Owlnest Lume preorder is open now. Choose Single Lume or Duo Lume inside PayPal checkout.",
+  "notice": "Owlnest Lume preorder is open now. Choose Single Lume or Duo Lume before secure PayPal checkout.",
   "preorder": {
     "enabled": true,
     "paymentEnabled": true,
@@ -35,7 +35,7 @@
   "heroPricing": {
     "eyebrow": "Preorder Open Now",
     "main": "Single Lume $59 / Duo Lume $100",
-    "subtext": "Choose Single or Duo inside PayPal"
+    "subtext": "Choose Single or Duo before PayPal"
   },
   "platformCta": {
     "label": "Preorder Now",
@@ -66,7 +66,7 @@
   "faq": [
     {
       "q": "What is Owlnest Lume?",
-      "a": "Owlnest Lume is a melatonin-supporting sleep spectrum lamp made to stay on while you sleep."
+      "a": "Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp for bedtime, night wake-ups, and rooms that still need light."
     },
     {
       "q": "How is Owlnest Lume different from a normal warm lamp or night light?",
