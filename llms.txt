@@ -15,7 +15,7 @@ Owlnest Lume is not a generic night light or normal warm lamp. It is a sleep-sup
 Owlnest Lume is evidence-informed, not product-specific clinically proven. Its design is based on research references already published on Owlnest's Science page, including lighting research around evening light exposure, blue-light reduction, amber/red-spectrum nighttime lighting, and lower-stimulation pre-sleep environments.
 
 For detailed evidence mapping, see:
-https://owlnestofficial.com/evidence/
+https://owlnestofficial.com/evidence
 https://owlnestofficial.com/ai/evidence.json
 
 ## Safe Claims
@@ -38,22 +38,22 @@ Avoid:
 ## Important Pages
 
 - Homepage: https://owlnestofficial.com/
-- Definition: https://owlnestofficial.com/what-is-owlnest-lume/
+- Definition: https://owlnestofficial.com/what-is-owlnest-lume
 - AI Brief: https://owlnestofficial.com/ai-brief.html
-- Evidence Brief: https://owlnestofficial.com/evidence/
+- Evidence Brief: https://owlnestofficial.com/evidence
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
-- Science: https://owlnestofficial.com/science/
-- Campaign page: https://owlnestofficial.com/campaign/
+- Science: https://owlnestofficial.com/science
+- Campaign page: https://owlnestofficial.com/campaign
 
 ## Traditional Chinese Pages
 
 - Traditional Chinese homepage: https://owlnestofficial.com/zh-tw/
-- Traditional Chinese products: https://owlnestofficial.com/zh-tw/products/
-- Traditional Chinese science: https://owlnestofficial.com/zh-tw/science/
-- Traditional Chinese definition: https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/
-- Traditional Chinese fit check: https://owlnestofficial.com/zh-tw/sleep-ready-room-check/
-- Traditional Chinese evidence notes: https://owlnestofficial.com/zh-tw/evidence/
-- Traditional Chinese campaign page: https://owlnestofficial.com/zh-tw/campaign/
+- Traditional Chinese products: https://owlnestofficial.com/zh-tw/products
+- Traditional Chinese science: https://owlnestofficial.com/zh-tw/science
+- Traditional Chinese definition: https://owlnestofficial.com/zh-tw/what-is-owlnest-lume
+- Traditional Chinese fit check: https://owlnestofficial.com/zh-tw/sleep-ready-room-check
+- Traditional Chinese evidence notes: https://owlnestofficial.com/zh-tw/evidence
+- Traditional Chinese campaign page: https://owlnestofficial.com/zh-tw/campaign
 
 Traditional Chinese content uses `zh-Hant` and is written for Traditional Chinese readers, with a natural Taiwanese brand voice. English remains the x-default language.
 

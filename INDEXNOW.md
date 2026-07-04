@@ -10,10 +10,10 @@
 
 - `https://owlnestofficial.com/`
 - `https://owlnestofficial.com/zh-tw/`
-- `https://owlnestofficial.com/science/`
-- `https://owlnestofficial.com/zh-tw/science/`
-- `https://owlnestofficial.com/products/`
-- `https://owlnestofficial.com/zh-tw/products/`
+- `https://owlnestofficial.com/science`
+- `https://owlnestofficial.com/zh-tw/science`
+- `https://owlnestofficial.com/products`
+- `https://owlnestofficial.com/zh-tw/products`
 - `https://owlnestofficial.com/ai-brief.html`
 - `https://owlnestofficial.com/ai/evidence.html`
 - `https://owlnestofficial.com/llms.txt`
@@ -50,11 +50,11 @@ Example payload:
   "key": "233e9c55-e142-4e7d-83b2-adaf541519d7",
   "urlList": [
     "https://owlnestofficial.com/",
-    "https://owlnestofficial.com/science/",
-    "https://owlnestofficial.com/products/",
+    "https://owlnestofficial.com/science",
+    "https://owlnestofficial.com/products",
     "https://owlnestofficial.com/zh-tw/",
-    "https://owlnestofficial.com/zh-tw/science/",
-    "https://owlnestofficial.com/zh-tw/products/"
+    "https://owlnestofficial.com/zh-tw/science",
+    "https://owlnestofficial.com/zh-tw/products"
   ]
 }
 ```

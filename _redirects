@@ -1,5 +1,5 @@
 # =========================
-# Owlnest Redirects (Emergency Safe Rewrites)
+# Owlnest Redirects
 # =========================
 
 # Legacy packaging QR code
@@ -8,66 +8,91 @@
 
 # Account and verification routes
 /account              /account/              301
-/activate             /activate.html     200
-/verify               /verify.html       200
-/account/activate     /activate.html     200
-/account/verify       /verify.html       200
+/activate             /activate.html         200
+/verify               /verify.html           200
+/account/activate     /activate.html         200
+/account/verify       /verify.html           200
 
-# Public page routes
-/r/:slug              /products/?ref=:slug                 302
+# Private tracking route
+/r/:slug              /products?ref=:slug    302
 
-/products             /products.html                         200
-/products/            /products.html                         200
+# Canonical URL redirects
+/index.html                         /                         301
+/zh-tw                              /zh-tw/                   301
+/zh-tw/index.html                   /zh-tw/                   301
+/policy                             /disclaimer               301
+/policy/                            /disclaimer               301
+/products/                           /products                  301
+/products.html                       /products                  301
+/science/                            /science                   301
+/science.html                        /science                   301
+/campaign/                           /campaign                  301
+/campaign/index.html                 /campaign                  301
+/about/                              /about                     301
+/about.html                          /about                     301
+/contact/                            /contact                   301
+/contact.html                        /contact                   301
+/reviews/                            /reviews                   301
+/reviews.html                        /reviews                   301
+/manual/                             /manual                    301
+/manual.html                         /manual                    301
+/disclaimer/                         /disclaimer                301
+/disclaimer.html                     /disclaimer                301
+/preorder-policy/                    /preorder-policy           301
+/preorder-policy.html                /preorder-policy           301
+/what-is-owlnest-lume/               /what-is-owlnest-lume      301
+/what-is-owlnest-lume/index.html     /what-is-owlnest-lume      301
+/evidence/                           /evidence                  301
+/evidence/index.html                 /evidence                  301
+/sleep-ready-room-check/             /sleep-ready-room-check    301
+/sleep-ready-room-check/index.html   /sleep-ready-room-check    301
+/zh-tw/products/                     /zh-tw/products            301
+/zh-tw/products/index.html           /zh-tw/products            301
+/zh-tw/science/                      /zh-tw/science             301
+/zh-tw/science/index.html            /zh-tw/science             301
+/zh-tw/campaign/                     /zh-tw/campaign            301
+/zh-tw/campaign/index.html           /zh-tw/campaign            301
+/zh-tw/about/                        /zh-tw/about               301
+/zh-tw/about/index.html              /zh-tw/about               301
+/zh-tw/contact/                      /zh-tw/contact             301
+/zh-tw/contact/index.html            /zh-tw/contact             301
+/zh-tw/reviews/                      /zh-tw/reviews             301
+/zh-tw/reviews/index.html            /zh-tw/reviews             301
+/zh-tw/manual/                       /zh-tw/manual              301
+/zh-tw/manual/index.html             /zh-tw/manual              301
+/zh-tw/disclaimer/                   /zh-tw/disclaimer          301
+/zh-tw/disclaimer/index.html         /zh-tw/disclaimer          301
+/zh-tw/preorder-policy/              /zh-tw/preorder-policy     301
+/zh-tw/preorder-policy/index.html    /zh-tw/preorder-policy     301
+/zh-tw/what-is-owlnest-lume/         /zh-tw/what-is-owlnest-lume 301
+/zh-tw/what-is-owlnest-lume/index.html /zh-tw/what-is-owlnest-lume 301
+/zh-tw/evidence/                     /zh-tw/evidence            301
+/zh-tw/evidence/index.html           /zh-tw/evidence            301
+/zh-tw/sleep-ready-room-check/       /zh-tw/sleep-ready-room-check 301
+/zh-tw/sleep-ready-room-check/index.html /zh-tw/sleep-ready-room-check 301
 
-/science              /science.html                          200
-/science/             /science.html                          200
-/zh-tw/science              /zh-tw/science/index.html                 200
-/zh-tw/science/             /zh-tw/science/index.html                 200
-
-/campaign             /campaign/index.html                   200
-/campaign/            /campaign/index.html                   200
-/zh-tw/campaign              /zh-tw/campaign/index.html                 200
-/zh-tw/campaign/             /zh-tw/campaign/index.html                 200
-
-/about                /about.html                            200
-/about/               /about.html                            200
-/zh-tw/about              /zh-tw/about/index.html                 200
-/zh-tw/about/             /zh-tw/about/index.html                 200
-
-/contact              /contact.html                          200
-/contact/             /contact.html                          200
-/zh-tw/contact            /zh-tw/contact/index.html               200
-/zh-tw/contact/           /zh-tw/contact/index.html               200
-
-/reviews             /reviews.html                          200
-/reviews/            /reviews.html                          200
-/zh-tw/reviews              /zh-tw/reviews/index.html                 200
-/zh-tw/reviews/             /zh-tw/reviews/index.html                 200
-
-/manual               /manual.html                           200
-/manual/              /manual.html                           200
-/zh-tw/manual              /zh-tw/manual/index.html                 200
-/zh-tw/manual/             /zh-tw/manual/index.html                 200
-
-/policy               /disclaimer.html                       200
-/policy/              /disclaimer.html                       200
-/disclaimer           /disclaimer.html                       200
-/disclaimer/          /disclaimer.html                       200
-/zh-tw/disclaimer          /zh-tw/disclaimer/index.html             200
-/zh-tw/disclaimer/         /zh-tw/disclaimer/index.html             200
-/zh-tw/preorder-policy     /zh-tw/preorder-policy/index.html        200
-/zh-tw/preorder-policy/    /zh-tw/preorder-policy/index.html        200
-
-/what-is-owlnest-lume       /what-is-owlnest-lume/index.html       200
-/what-is-owlnest-lume/      /what-is-owlnest-lume/index.html       200
-/zh-tw/what-is-owlnest-lume  /zh-tw/what-is-owlnest-lume/index.html   200
-/zh-tw/what-is-owlnest-lume/ /zh-tw/what-is-owlnest-lume/index.html   200
-/zh-tw/evidence             /zh-tw/evidence/index.html                200
-/zh-tw/evidence/            /zh-tw/evidence/index.html                200
-
-/sleep-ready-room-check     /sleep-ready-room-check/index.html     200
-/sleep-ready-room-check/    /sleep-ready-room-check/index.html     200
-/zh-tw/products              /zh-tw/products/index.html                 200
-/zh-tw/products/             /zh-tw/products/index.html                 200
-/zh-tw/sleep-ready-room-check  /zh-tw/sleep-ready-room-check/index.html 200
-/zh-tw/sleep-ready-room-check/ /zh-tw/sleep-ready-room-check/index.html 200
+# Clean public page rewrites
+/products                            /products.html                       200
+/science                             /science.html                        200
+/campaign                            /campaign/index.html                 200
+/about                               /about.html                          200
+/contact                             /contact.html                        200
+/reviews                             /reviews.html                        200
+/manual                              /manual.html                         200
+/disclaimer                          /disclaimer.html                     200
+/preorder-policy                     /preorder-policy.html                200
+/what-is-owlnest-lume                /what-is-owlnest-lume/index.html     200
+/evidence                            /evidence/index.html                 200
+/sleep-ready-room-check              /sleep-ready-room-check/index.html   200
+/zh-tw/products                      /zh-tw/products/index.html           200
+/zh-tw/science                       /zh-tw/science/index.html            200
+/zh-tw/campaign                      /zh-tw/campaign/index.html           200
+/zh-tw/about                         /zh-tw/about/index.html              200
+/zh-tw/contact                       /zh-tw/contact/index.html            200
+/zh-tw/reviews                       /zh-tw/reviews/index.html            200
+/zh-tw/manual                        /zh-tw/manual/index.html             200
+/zh-tw/disclaimer                    /zh-tw/disclaimer/index.html         200
+/zh-tw/preorder-policy               /zh-tw/preorder-policy/index.html    200
+/zh-tw/what-is-owlnest-lume          /zh-tw/what-is-owlnest-lume/index.html 200
+/zh-tw/evidence                      /zh-tw/evidence/index.html           200
+/zh-tw/sleep-ready-room-check        /zh-tw/sleep-ready-room-check/index.html 200

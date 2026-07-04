@@ -75,8 +75,8 @@
             color: #C9852A !important;
         }
 
-        #main-header .header-actions > a[href="/campaign/"],
-        #main-header .header-actions > a[href="/campaign/"]:hover {
+        #main-header .header-actions > a[href="/campaign"],
+        #main-header .header-actions > a[href="/campaign"]:hover {
             background: #C9852A !important;
             color: #182234 !important;
         }
@@ -180,10 +180,10 @@
 
             <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
                 <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
-                <a href="/products/" class="hover:text-amber transition-colors duration-300">Products</a>
-                <a href="/science/" class="hover:text-amber transition-colors duration-300">Science</a>
-                <a href="/about/" class="hover:text-amber transition-colors duration-300">About Us</a>
-                <a href="/contact/" class="hover:text-amber transition-colors duration-300">Contact Us</a>
+                <a href="/products" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/science" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="/about" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="/contact" class="hover:text-amber transition-colors duration-300">Contact Us</a>
             </nav>
 
             <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
@@ -205,7 +205,7 @@
                         <a href="/zh-tw/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
                     </div>
                 </div>
-                <a href="/campaign/" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder</a>
+                <a href="/campaign" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder</a>
             </div>
 
             <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
@@ -218,10 +218,10 @@
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
             <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
-            <a href="/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
-            <a href="/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -236,7 +236,7 @@
                     <a href="/zh-tw/" class="text-white/80 hover:text-amber transition-colors">繁體中文</a>
                 </div>
             </div>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
+            <a href="/campaign" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">Preorder</a>
         </nav>
     </div>
 <main class="pt-28 md:pt-36 pb-16">
@@ -312,8 +312,8 @@
                     Important boundary: This means the product is research-informed. It does not mean Owlnest Lume is a medical device or that product-specific clinical outcomes have been proven.
                 </p>
                 <ul class="mt-5 space-y-3 text-white/72 leading-relaxed break-words">
-                    <li><a href="https://owlnestofficial.com/science/" class="text-white hover:text-amber underline underline-offset-4">Science page</a></li>
-                    <li><a href="https://owlnestofficial.com/evidence/" class="text-white hover:text-amber underline underline-offset-4">Evidence Brief</a></li>
+                    <li><a href="https://owlnestofficial.com/science" class="text-white hover:text-amber underline underline-offset-4">Science page</a></li>
+                    <li><a href="https://owlnestofficial.com/evidence" class="text-white hover:text-amber underline underline-offset-4">Evidence Brief</a></li>
                     <li><a href="https://owlnestofficial.com/ai/evidence.json" class="text-white hover:text-amber underline underline-offset-4">Evidence JSON</a></li>
                 </ul>
             </div>
@@ -399,14 +399,14 @@
                     <h2 class="font-serif text-2xl md:text-3xl text-white">Important Links</h2>
                     <ul class="mt-5 space-y-3 text-white/72 leading-relaxed break-words">
                         <li><a href="https://owlnestofficial.com/" class="text-white hover:text-amber underline underline-offset-4">Homepage</a></li>
-                        <li><a href="https://owlnestofficial.com/science/" class="text-white hover:text-amber underline underline-offset-4">Science page</a></li>
-                        <li><a href="https://owlnestofficial.com/evidence/" class="text-white hover:text-amber underline underline-offset-4">Evidence Brief</a></li>
+                        <li><a href="https://owlnestofficial.com/science" class="text-white hover:text-amber underline underline-offset-4">Science page</a></li>
+                        <li><a href="https://owlnestofficial.com/evidence" class="text-white hover:text-amber underline underline-offset-4">Evidence Brief</a></li>
                         <li><a href="https://owlnestofficial.com/ai/evidence.json" class="text-white hover:text-amber underline underline-offset-4">Evidence JSON</a></li>
                         <li><a href="https://owlnestofficial.com/ai/product.json" class="text-white hover:text-amber underline underline-offset-4">Product JSON</a></li>
-                        <li><a href="/campaign/" class="text-white hover:text-amber underline underline-offset-4">Campaign page</a></li>
+                        <li><a href="/campaign" class="text-white hover:text-amber underline underline-offset-4">Campaign page</a></li>
                         <li><a href="https://owlnestofficial.com/zh-tw/" class="text-white hover:text-amber underline underline-offset-4">Traditional Chinese homepage</a></li>
-                        <li><a href="https://owlnestofficial.com/zh-tw/science/" class="text-white hover:text-amber underline underline-offset-4">Traditional Chinese Science page</a></li>
-                        <li><a href="https://owlnestofficial.com/zh-tw/evidence/" class="text-white hover:text-amber underline underline-offset-4">Traditional Chinese Evidence Notes</a></li>
+                        <li><a href="https://owlnestofficial.com/zh-tw/science" class="text-white hover:text-amber underline underline-offset-4">Traditional Chinese Science page</a></li>
+                        <li><a href="https://owlnestofficial.com/zh-tw/evidence" class="text-white hover:text-amber underline underline-offset-4">Traditional Chinese Evidence Notes</a></li>
                     </ul>
                 </article>
             </div>

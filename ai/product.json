@@ -35,9 +35,9 @@
   },
   "evidence_positioning": "Evidence-informed design based on published research and lighting science from Owlnest's public Science page. Product-specific clinical outcomes have not been claimed.",
   "evidence_links": {
-    "evidence_brief": "https://owlnestofficial.com/evidence/",
+    "evidence_brief": "https://owlnestofficial.com/evidence",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
-    "science_page": "https://owlnestofficial.com/science/"
+    "science_page": "https://owlnestofficial.com/science"
   },
   "safe_claims": [
     "supports a more sleep-ready evening",
@@ -59,12 +59,12 @@
   ],
   "important_links": {
     "homepage": "https://owlnestofficial.com/",
-    "definition": "https://owlnestofficial.com/what-is-owlnest-lume/",
+    "definition": "https://owlnestofficial.com/what-is-owlnest-lume",
     "ai_brief": "https://owlnestofficial.com/ai-brief.html",
-    "science": "https://owlnestofficial.com/science/",
-    "evidence_brief": "https://owlnestofficial.com/evidence/",
+    "science": "https://owlnestofficial.com/science",
+    "evidence_brief": "https://owlnestofficial.com/evidence",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
-    "campaign": "https://owlnestofficial.com/campaign/"
+    "campaign": "https://owlnestofficial.com/campaign"
   },
   "last_updated": "2026-06-05",
   "language_versions": {
@@ -73,10 +73,10 @@
   },
   "localized_links": {
     "zh-Hant_homepage": "https://owlnestofficial.com/zh-tw/",
-    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
-    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
-    "zh-Hant_definition": "https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/",
-    "zh-Hant_fit_check": "https://owlnestofficial.com/zh-tw/sleep-ready-room-check/",
-    "zh-Hant_campaign": "https://owlnestofficial.com/zh-tw/campaign/"
+    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products",
+    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science",
+    "zh-Hant_definition": "https://owlnestofficial.com/zh-tw/what-is-owlnest-lume",
+    "zh-Hant_fit_check": "https://owlnestofficial.com/zh-tw/sleep-ready-room-check",
+    "zh-Hant_campaign": "https://owlnestofficial.com/zh-tw/campaign"
   }
 }

@@ -297,12 +297,12 @@
   },
   "last_updated": "2026-06-05",
   "language_versions": {
-    "en": "https://owlnestofficial.com/evidence/",
-    "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"
+    "en": "https://owlnestofficial.com/evidence",
+    "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence"
   },
   "localized_links": {
-    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
-    "zh-Hant_evidence_notes": "https://owlnestofficial.com/zh-tw/evidence/",
-    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/"
+    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science",
+    "zh-Hant_evidence_notes": "https://owlnestofficial.com/zh-tw/evidence",
+    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products"
   }
 }
