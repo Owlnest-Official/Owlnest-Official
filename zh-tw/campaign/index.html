@@ -213,11 +213,11 @@
                 <span class="text-sm sm:text-base font-bold tracking-[0.16em] uppercase text-white">Owlnest</span>
             </a>
             <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
+                <a href="/zh-tw/" class="campaign-nav-link">首頁</a>
                 <a href="/zh-tw/products/" class="campaign-nav-link">Lume</a>
                 <a href="/zh-tw/science/" class="campaign-nav-link">科學</a>
-                <a href="/zh-tw/sleep-ready-room-check/" class="campaign-nav-link">房間檢查</a>
                 <a href="/zh-tw/about/" class="campaign-nav-link">關於</a>
-                <a href="/zh-tw/campaign/" class="campaign-nav-link is-active">預購</a>
+                <a href="/zh-tw/contact/" class="campaign-nav-link">聯絡我們</a>
             </nav>
             <div class="flex items-center gap-4">
                 <a href="/account/" class="hidden lg:inline-flex text-white/65 hover:text-amber transition-colors" title="會員中心" aria-label="會員中心">
@@ -232,7 +232,7 @@
                         <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
                     </div>
                 </div>
-                <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">預購 Lume</a>
+                <a href="/zh-tw/products/" class="inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">預購 LUME</a>
                 <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="切換選單">
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
                     <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
@@ -243,11 +243,12 @@
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-5 text-sm uppercase tracking-[0.2em] font-semibold text-center">
+
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
             <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">科學</a>
-            <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">房間檢查</a>
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">預購</a>
+            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -262,7 +263,10 @@
                     <a href="/zh-tw/campaign/" class="text-amber">繁體中文</a>
                 </div>
             </div>
-            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" onclick="toggleMobileMenu()" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-4 inline-flex items-center justify-center bg-amber text-midnight px-6 py-4 text-xs font-bold tracking-[0.14em] uppercase hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">預購 Lume</a>
+                        <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
+                <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">預購 LUME</a>
+                <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
+            </div>
         </nav>
     </div>
 

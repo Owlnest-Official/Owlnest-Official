@@ -793,10 +793,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-10 nav-links">
             <nav class="flex gap-8 text-xs font-semibold text-white/60">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
                 <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">Lume</a>
                 <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">科學</a>
-                <a href="/zh-tw/sleep-ready-room-check/" class="hover:text-amber transition-colors duration-300">房間檢查</a>
                 <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
 
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
@@ -814,10 +815,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="/zh-tw/" class="flex items-center justify-between px-3 py-2 text-xs text-amber">繁體中文</a>
                     </div>
                 </div>
-                <a href="/zh-tw/campaign/" class="inline-flex items-center gap-2 text-xs font-semibold text-amber hover:text-white transition-colors">
-                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    預購
-                </a>
+                <a href="/zh-tw/products/" class="inline-flex items-center gap-2 text-xs font-semibold text-amber hover:text-white transition-colors"><i class="fas fa-arrow-up-right-from-square text-xs"></i>預購 LUME</a>
             </div>
         </div>
 
@@ -826,7 +824,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="/zh-tw/campaign/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="預購">
+            <a href="/zh-tw/products/" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="預購 LUME">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
             <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
@@ -839,7 +837,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-center items-center pt-16 lg:hidden text-white">
         <nav class="flex flex-col gap-8 text-sm font-semibold text-center">
-            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a><a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">科學</a><a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">房間檢查</a><a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a><a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber hover:text-white transition-colors">預購</a>
+
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
+            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">科學</a>
+            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
+            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -854,7 +857,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <a href="/zh-tw/" class="text-amber">繁體中文</a>
                 </div>
             </div>
-        </nav>
+
+            <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
+                <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">預購 LUME</a>
+                <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
+            </div></nav>
     </div>
 
     <div class="main-container">
@@ -1840,7 +1847,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/assets/js/consent.js" defer></script>
     <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
         <div class="mx-auto flex max-w-md gap-3">
-            <a href="/zh-tw/campaign/#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">預購 Lume</a>
+            <a href="/zh-tw/products/" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">預購 Lume</a>
             <a href="/zh-tw/sleep-ready-room-check/" class="flex-1 rounded-full border border-white/15 px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-white">房間檢查</a>
         </div>
     </div>
