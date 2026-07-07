@@ -660,7 +660,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         Warm-looking is not always sleep-ready. Lume keeps night usable.
                     </p>
                 </div>
-                <div class="mt-8 grid gap-5 md:grid-cols-2">
+                <div class="mt-8 md:hidden overflow-hidden rounded-[24px] border border-midnight/10 bg-white/45 text-sm">
+                    <div class="grid border-b border-midnight/10 text-[11px] font-bold uppercase tracking-[0.1em] text-midnight" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                        <div class="p-3">Warm lamp</div>
+                        <div class="p-3 bg-amber/12 text-amber">Owlnest Lume</div>
+                    </div>
+                    <div class="divide-y divide-midnight/10">
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">Looks warm, not always sleep-ready</div>
+                            <div class="p-3 bg-amber/10 text-midnight">Deep amber, low-blue spectrum</div>
+                        </div>
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">For visibility or atmosphere</div>
+                            <div class="p-3 bg-amber/10 text-midnight">Reduces nighttime blue light</div>
+                        </div>
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">May keep the room awake</div>
+                            <div class="p-3 bg-amber/10 text-midnight">Keeps the room usable without daytime</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 hidden gap-5 md:grid md:grid-cols-2">
                     <article class="dtc-product-card p-6 lg:p-7">
                         <h3 class="font-serif text-2xl leading-tight mb-5">Normal warm lamp</h3>
                         <ul class="space-y-3 text-sm text-midnight/68 leading-relaxed">
@@ -992,11 +1012,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
     <script src="/assets/js/referral.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
-    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
-        <div class="mx-auto flex max-w-md gap-3">
-            <a href="#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">Preorder Lume</a>
-            <a href="/sleep-ready-room-check" class="flex-1 rounded-full border border-white/15 px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-white">Room Check</a>
-        </div>
-    </div>
 </body>
 </html>

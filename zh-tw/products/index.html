@@ -287,7 +287,27 @@
                         看起來暖，不代表適合睡前。Lume 用深琥珀、低藍光睡眠光譜，讓房間不亮回白天
                     </p>
                 </div>
-                <div class="mt-8 grid gap-5 md:grid-cols-2">
+                <div class="mt-8 md:hidden overflow-hidden rounded-[24px] border border-midnight/10 bg-white/45 text-sm">
+                    <div class="grid border-b border-midnight/10 text-[11px] font-bold text-midnight" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                        <div class="p-3">普通暖燈</div>
+                        <div class="p-3 bg-amber/12 text-amber">Owlnest Lume</div>
+                    </div>
+                    <div class="divide-y divide-midnight/10">
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">看起來暖，不一定適合睡前</div>
+                            <div class="p-3 bg-amber/10 text-midnight">深琥珀、低藍光睡眠光譜</div>
+                        </div>
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">主要是照明或氛圍</div>
+                            <div class="p-3 bg-amber/10 text-midnight">幫助減少夜間藍光暴露</div>
+                        </div>
+                        <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                            <div class="p-3 text-midnight/62">有時仍太有白天感</div>
+                            <div class="p-3 bg-amber/10 text-midnight">房間還能用，但不把白天帶回來</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 hidden gap-5 md:grid md:grid-cols-2">
                     <article class="dtc-product-card p-6 lg:p-7">
                         <h3 class="font-serif text-2xl leading-tight mb-5">普通暖燈</h3>
                         <ul class="space-y-3 text-sm text-midnight/68 leading-relaxed">
@@ -558,11 +578,5 @@
     </script>
     <script src="/assets/js/referral.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
-    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
-        <div class="mx-auto flex max-w-md gap-3">
-            <a href="#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">預購 Lume</a>
-            <a href="/zh-tw/sleep-ready-room-check" class="flex-1 rounded-full border border-white/15 px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-white">房間檢查</a>
-        </div>
-    </div>
 </body>
 </html>

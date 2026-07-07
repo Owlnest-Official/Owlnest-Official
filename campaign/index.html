@@ -881,7 +881,7 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(216,145,42,0.15),transparent_32%),linear-gradient(135deg,#111d2f_0%,#16253b_48%,#0c1422_100%)]"></div>
             <div class="absolute inset-0 opacity-[0.18]" style="background-image: radial-gradient(rgba(247,239,216,0.45) 1px, transparent 1px); background-size: 42px 42px;"></div>
             <div class="relative max-w-7xl mx-auto w-full grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-16 items-center">
-                <div class="max-w-5xl">
+                <div class="max-w-5xl min-w-0" style="width: min(100%, calc(100vw - 40px)); max-width: 100%; overflow-wrap: anywhere;">
                     <span class="section-label">Owlnest Lume | Preorder Open Now</span>
                     <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-[-0.02em] font-medium text-white">
                         You were ready for bed.<br>Your room wasn’t.
@@ -1029,7 +1029,7 @@
         <section id="preorder" class="bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-24">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-[0.96fr_1.04fr] gap-8 lg:gap-12 xl:gap-16 items-start">
-                    <div>
+                    <div class="min-w-0" style="width: min(100%, calc(100vw - 40px)); max-width: 100%; overflow-wrap: anywhere;">
                         <span class="section-label">Preorder Open Now</span>
                         <h2 class="mt-3 font-serif text-4xl md:text-5xl leading-[1.06] tracking-[-0.02em]">Owlnest Lume Preorder</h2>
                         <p class="mt-5 text-lg text-midnight/68 leading-relaxed">
@@ -1466,11 +1466,5 @@
     });
 </script>
     <script src="/assets/js/consent.js" defer></script>
-    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-midnight/94 px-4 py-3 backdrop-blur-xl md:hidden">
-        <div class="mx-auto flex max-w-md gap-3">
-            <a href="#preorder" class="flex-1 rounded-full bg-amber px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-midnight">Preorder Lume</a>
-            <a href="/sleep-ready-room-check" class="flex-1 rounded-full border border-white/15 px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.12em] text-white">Room Check</a>
-        </div>
-    </div>
 </body>
 </html>
