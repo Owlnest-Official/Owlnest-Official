@@ -77,6 +77,55 @@ main .tracking-\[0\.16em\].uppercase {
     font-weight: 800 !important;
 }
 
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(h1, h2, .owlnest-eyebrow, .section-label):first-child,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > p:first-child,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > h1:first-of-type,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > h2:first-of-type,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child > :is(h1, h2, p, .owlnest-eyebrow, .section-label),
+main > section > :is(.grid, .md\:grid, .lg\:grid, .xl\:grid) > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child,
+main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl).grid > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child,
+main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > .grid > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(h1, h2, p) + p,
+main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child > p,
+main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl).grid > div > :is(h1, h2) + p,
+main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > .grid > div > :is(h1, h2) + p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)),
+main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)),
+main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: clamp(2.25rem, 4vw, 3.5rem) !important;
+}
+
+main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)),
+main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)),
+main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) {
+    order: -1 !important;
+    width: min(100%, 56rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2),
+main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2),
+main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
 main .text-5xl,
 main .text-6xl,
 main .md\:text-6xl,
