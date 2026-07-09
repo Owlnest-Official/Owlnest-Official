@@ -101,26 +101,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Manrope"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    },
-                    colors: {
-                        midnight: '#182234',
-                        amber: '#C9852A',
-                        warm: '#F2EBDD',
-                        slateblue: '#51627A',
-                        taupe: '#8B7A69'
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -303,6 +283,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow-wrap: normal;
             word-break: normal;
             hyphens: none;
+        }
+
+        .section-header-centered {
+            max-width: min(100%, 820px);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .section-header-centered .section-heading,
+        .section-header-centered .body-copy,
+        .section-header-centered p {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .nowrap {
@@ -495,6 +489,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border: 1px solid rgba(24, 34, 52, 0.10);
             background: rgba(255,255,255,0.72);
             box-shadow: 0 18px 44px rgba(24,34,52,0.06);
+        }
+        .comparison-mobile {
+            display: block;
+        }
+        .comparison-desktop {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .comparison-mobile {
+                display: none !important;
+            }
+            .comparison-desktop {
+                display: block !important;
+            }
         }
         .comparison-muted-card {
             border-color: rgba(255, 250, 240, 0.22);
@@ -938,12 +946,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Homepage Preorder -->
         <section id="section-home-preorder" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="homepage-balanced-grid grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 lg:gap-16 items-start">
-                    <div>
-                        <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Preorder</span>
-                        <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Choose your Lume</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+                <div class="section-header-centered mb-10 md:mb-12">
+                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Preorder</span>
+                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Choose your Lume</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
                         <article class="dtc-card flex h-full flex-col p-7 md:p-8 bg-[#fffaf0] border border-midnight/10 shadow-[0_18px_60px_rgba(24,32,51,0.08)]">
                             <p class="text-[10px] tracking-[0.18em] uppercase font-bold text-amber mb-4">For one bedside</p>
                             <h3 class="font-serif text-3xl text-midnight mb-4">Single Lume</h3>
@@ -970,7 +977,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 Preorder Duo
                             </a>
                         </article>
-                    </div>
                 </div>
                 <p class="mt-6 text-center"><a href="/preorder-policy" class="text-[11px] font-bold uppercase tracking-[0.14em] text-amber underline underline-offset-4 hover:text-midnight transition-colors">Read Preorder Policy</a></p>
             </div>
@@ -978,8 +984,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Section 3: Visual Difference -->
         <section id="section-visual-difference" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-balanced-grid max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-text">
-                <div class="text-white">
+            <div class="max-w-6xl mx-auto px-6 reveal-text">
+                <div class="section-header-centered text-white mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Night-tuned light</span>
                     <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">Not a night light. Not decor.</h2>
                     <p class="body-copy font-sans text-lg font-light text-white/70 leading-relaxed mb-8">
@@ -989,7 +995,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         Preorder Now
                     </a>
                 </div>
-                <figure class="rounded-[28px] border border-white/10 bg-midnight/60 p-2 md:p-4 overflow-hidden">
+                <figure class="mx-auto max-w-5xl rounded-[28px] border border-white/10 bg-midnight/60 p-2 md:p-4 overflow-hidden">
                     <img src="/asset-wrong-light-vs-sleep-light.png" loading="lazy" alt="Comparison of typical nighttime light and Owlnest Lume sleep spectrum light" class="w-full h-auto rounded-[20px]">
                 </figure>
             </div>
@@ -997,34 +1003,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Why Not Total Darkness -->
         <section id="section-darkness" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start reveal-text">
-                <div>
+            <div class="max-w-6xl mx-auto px-6 reveal-text">
+                <div class="section-header-centered mb-8 md:mb-10">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Why not total darkness?</span>
                     <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Not darkness.<br>The right signal.</h2>
-                </div>
-                <div class="border-t border-taupe/25 pt-9 lg:mt-8">
-                    <p class="body-copy font-sans text-lg md:text-xl font-light leading-relaxed mb-7" style="color:#455169;">
+                    <p class="body-copy font-sans text-lg md:text-xl font-light leading-relaxed mt-6 mb-0" style="color:#455169;">
                         Lume keeps the room usable<br>
                         without bringing daytime back.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">Tuned sleep spectrum</p>
-                        <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">Supports natural melatonin timing</p>
-                        <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">No app, screen, speaker, Wi-Fi, or Bluetooth</p>
-                    </div>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">Tuned sleep spectrum</p>
+                    <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">Supports natural melatonin timing</p>
+                    <p class="rounded-2xl border border-midnight/10 bg-white/45 p-4 text-sm font-semibold" style="color:#182033;">No app, screen, speaker, Wi-Fi, or Bluetooth</p>
                 </div>
             </div>
         </section>
 
         <!-- Comparison Table -->
-        <section id="section-comparison-table" class="section-container bg-midnight text-white section-breathe border-b border-white/5 !min-h-fit">
+        <section id="section-comparison-table" class="section-container bg-midnight text-white py-14 md:py-20 border-b border-white/5 !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="mb-10 md:mb-12">
+                <div class="section-header-centered mb-6 md:mb-8">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Night-tuned light</span>
                     <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Wrong light vs sleep light</h2>
-                    <p class="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-white/64">Most night lights help you see. Lume helps the room enter night mode.</p>
+                    <p class="mt-4 max-w-2xl text-base md:text-lg leading-relaxed text-white/64">Most night lights help you see. Lume helps the room enter night mode.</p>
                 </div>
-                <div class="md:hidden overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]">
+                <div class="comparison-mobile overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]">
                     <div class="grid grid-cols-3 border-b border-white/10 text-[10px] font-bold uppercase tracking-[0.1em] text-amber" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
                         <div class="p-3">Night light</div>
                         <div class="p-3">Warm lamp</div>
@@ -1065,7 +1069,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                     </div>
                 </div>
-                <div class="hidden md:block overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]">
+                <div class="comparison-desktop overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]">
                     <div class="grid grid-cols-[0.8fr_1fr_1fr_1fr] border-b border-white/10 text-xs font-bold uppercase tracking-[0.14em] text-amber">
                         <div class="p-5">Compare</div>
                         <div class="p-5">Ordinary night light</div>
@@ -1123,7 +1127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </figure>
 
                 <div class="flex items-center">
-                    <div class="product-copy-panel reveal-text text-white">
+                    <div class="product-copy-panel reveal-text text-white text-center mx-auto">
                         <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Product Snapshot</span>
                         <h2 class="text-4xl md:text-5xl font-serif text-white leading-[1.08] mb-5">Owlnest Lume</h2>
                         <p class="font-serif text-2xl text-amber mb-8">Real product.<br>Simple hardware.<br>Quiet by design.</p>
@@ -1136,7 +1140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <span class="proof-spec">Bottom-button control</span>
                             <span class="proof-spec">No app.<br>No screen.</span>
                         </div>
-                        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                             <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" class="premium-cta bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm text-center" rel="noopener noreferrer">
                                 Preorder Now
                             </a>
@@ -1153,7 +1157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Use Scenes -->
         <section id="section-ritual" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="max-w-6xl mb-10 md:mb-12">
+                <div class="section-header-centered mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Use Scenes</span>
                     <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Where it fits</h2>
                     <p class="body-copy mt-6 font-light leading-relaxed text-lg" style="color:#455169;">For nights that need light, not daytime.</p>
@@ -1170,7 +1174,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- How To Use -->
         <section id="section-how-to-use" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
             <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="max-w-3xl mb-10 md:mb-12">
+                <div class="section-header-centered mb-10 md:mb-12">
                     <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">How to use Owlnest Lume</span>
                     <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Three simple steps.</h2>
                 </div>
@@ -1229,6 +1233,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <i class="fas fa-book-open text-amber mb-5 block"></i>
                         <h3 class="font-serif text-2xl mb-3" style="color:#182033;">Natural melatonin timing</h3>
                         <p class="text-sm leading-relaxed" style="color:#455169 !important;">Designed around the body's night signal, not a clinical promise.</p>
+                    </article>
+                    <article class="rounded-[28px] border border-midnight/10 bg-[#fffaf0] p-7 shadow-[0_18px_60px_rgba(24,32,51,0.06)]">
+                        <i class="fas fa-moon text-amber mb-5 block"></i>
+                        <h3 class="font-serif text-2xl mb-3" style="color:#182033;">Room night mode</h3>
+                        <p class="text-sm leading-relaxed" style="color:#455169 !important;">Keeps the room usable without turning the day back on.</p>
                     </article>
                 </div>
                 <a href="/science" class="premium-cta mt-10 inline-flex items-center justify-center border border-midnight/15 px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-amber/10" style="color:#182033 !important;">
