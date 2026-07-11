@@ -53,8 +53,8 @@ Example payload:
     "https://owlnestofficial.com/science",
     "https://owlnestofficial.com/products",
     "https://owlnestofficial.com/zh-tw/",
-    "https://owlnestofficial.com/zh-tw/science",
-    "https://owlnestofficial.com/zh-tw/products"
+    "https://owlnestofficial.com/zh-tw/science/",
+    "https://owlnestofficial.com/zh-tw/products/"
   ]
 }
 ```

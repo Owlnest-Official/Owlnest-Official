@@ -150,30 +150,30 @@ Product design is evidence-informed. Product-specific laboratory validation shou
 ## Important Links
 
 - Homepage: https://owlnestofficial.com/
-- Definition: https://owlnestofficial.com/what-is-owlnest-lume
+- Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
-- Evidence Brief: https://owlnestofficial.com/evidence
+- Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
 - Science: https://owlnestofficial.com/science
-- Campaign page: https://owlnestofficial.com/campaign
+- Campaign page: https://owlnestofficial.com/campaign/
 
 ## Traditional Chinese Discovery
 
 Owlnest also provides a complete Traditional Chinese public site under `/zh-tw/`. These pages are localized in `zh-Hant`, use Traditional Chinese language labels, and are intended for Traditional Chinese readers including Taiwan, Hong Kong, Macau, and overseas Traditional Chinese users. The copy voice is natural to Taiwanese readers while preserving the same non-medical claim boundaries as the English site.
 
 - Traditional Chinese homepage: https://owlnestofficial.com/zh-tw/
-- Traditional Chinese campaign page: https://owlnestofficial.com/zh-tw/campaign
-- Traditional Chinese products: https://owlnestofficial.com/zh-tw/products
-- Traditional Chinese science: https://owlnestofficial.com/zh-tw/science
-- Traditional Chinese definition: https://owlnestofficial.com/zh-tw/what-is-owlnest-lume
-- Traditional Chinese fit check: https://owlnestofficial.com/zh-tw/sleep-ready-room-check
-- Traditional Chinese about: https://owlnestofficial.com/zh-tw/about
-- Traditional Chinese contact: https://owlnestofficial.com/zh-tw/contact
-- Traditional Chinese manual: https://owlnestofficial.com/zh-tw/manual
-- Traditional Chinese policy: https://owlnestofficial.com/zh-tw/disclaimer
-- Traditional Chinese reviews: https://owlnestofficial.com/zh-tw/reviews
-- Traditional Chinese evidence notes: https://owlnestofficial.com/zh-tw/evidence
+- Traditional Chinese campaign page: https://owlnestofficial.com/zh-tw/campaign/
+- Traditional Chinese products: https://owlnestofficial.com/zh-tw/products/
+- Traditional Chinese science: https://owlnestofficial.com/zh-tw/science/
+- Traditional Chinese definition: https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/
+- Traditional Chinese fit check: https://owlnestofficial.com/zh-tw/sleep-ready-room-check/
+- Traditional Chinese about: https://owlnestofficial.com/zh-tw/about/
+- Traditional Chinese contact: https://owlnestofficial.com/zh-tw/contact/
+- Traditional Chinese manual: https://owlnestofficial.com/zh-tw/manual/
+- Traditional Chinese policy: https://owlnestofficial.com/zh-tw/disclaimer/
+- Traditional Chinese reviews: https://owlnestofficial.com/zh-tw/reviews/
+- Traditional Chinese evidence notes: https://owlnestofficial.com/zh-tw/evidence/
 
 For language alternates, English pages are the x-default pages and Traditional Chinese pages are the `zh-Hant` alternates.
 
