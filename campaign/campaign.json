@@ -11,9 +11,9 @@
     "paymentEnabled": true,
     "preorderIsLive": true,
     "paymentProvider": "paypal",
-    "paymentUrl": "https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A",
-    "closesAt": "2026-07-20T23:59:00-04:00",
-    "timezoneLabel": "New York time",
+    "checkoutPath": "/products/#preorder",
+    "fulfillmentBeginsOn": "2026-07-20",
+    "availability": "Open while first-batch allocation is available",
     "ctaLive": "Preorder Now",
     "pricing": [
       {
@@ -39,7 +39,7 @@
   },
   "platformCta": {
     "label": "Preorder Now",
-    "href": "https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A"
+    "href": "/products/#preorder"
   },
   "secondaryCta": {
     "label": "Read Science & FAQ",
@@ -54,13 +54,13 @@
   "timeline": [
     {
       "date": "July 20, 2026",
-      "title": "Preorder Closes",
-      "text": "The preorder window closes at 11:59 PM New York time."
+      "title": "First-batch fulfillment begins",
+      "text": "The first batch is scheduled to begin fulfillment on July 20, 2026."
     },
     {
-      "date": "After Closing",
-      "title": "Fulfillment Preparation",
-      "text": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026."
+      "date": "As orders progress",
+      "title": "Production and shipping updates",
+      "text": "Customers receive production, shipping, and fulfillment updates by email as they are ready."
     }
   ],
   "faq": [
@@ -73,8 +73,8 @@
       "a": "Owlnest Lume is designed around a night-friendly sleep spectrum. It is made for sleep, not just visibility."
     },
     {
-      "q": "When does preorder close?",
-      "a": "The preorder window closes July 20, 2026 at 11:59 PM New York time."
+      "q": "When does first-batch fulfillment begin?",
+      "a": "First-batch fulfillment is scheduled to begin July 20, 2026. Preorder remains open while allocation is available."
     },
     {
       "q": "Are shipping and taxes included today?",

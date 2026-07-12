@@ -222,7 +222,7 @@
                         <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
                     </div>
                 </div>
-                <a href="/zh-tw/products/" class="inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">預購 LUME</a>
+                <a href="/zh-tw/products/#preorder" class="inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">預購 LUME</a>
                 <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="切換選單">
                     <i class="fas fa-bars" id="mobile-menu-icon"></i>
                     <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
@@ -254,7 +254,7 @@
                 </div>
             </div>
                         <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">預購 LUME</a>
+                <a href="/zh-tw/products/#preorder" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">預購 LUME</a>
                 <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
             </div>
         </nav>
@@ -280,7 +280,7 @@
                         特調睡眠光譜<br>無 app、無螢幕<br>一個按鍵
                     </p>
                     <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-xl">
-                        <a href="#preorder" data-track-click="click_preorder_paypal" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign">預購 Lume</a>
+                        <a href="#preorder" data-track-click="click_preorder_details" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign">預購 Lume</a>
                         <a href="#preorder" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl border border-white/18 px-7 text-xs font-bold uppercase tracking-[0.14em] text-white hover:border-amber hover:bg-white/8" data-cta-name="learn_more">預購 Lume</a>
                     </div>
                     <p class="mt-4 max-w-xl text-xs leading-relaxed text-white/58"><a href="/zh-tw/preorder-policy/" class="text-amber hover:text-warm underline underline-offset-4">閱讀預購條款</a></p>
@@ -406,6 +406,7 @@
                     <div>
                         <span class="section-label">預購開放中</span>
                         <h2 class="mt-3 font-serif text-4xl md:text-5xl leading-[1.06] tracking-[-0.02em]">Owlnest Lume 預購</h2>
+                        <p class="mt-5 text-midnight/64 leading-relaxed">首批預計自 2026 年 7 月 20 日開始安排出貨；預購將在首批數量額滿前持續開放</p>
                     </div>
                     <div class="rounded-[2.25rem] border border-midnight/10 bg-[#fffaf0] p-5 sm:p-7 lg:p-8 shadow-[0_28px_90px_rgba(24,32,51,0.10)]">
                         <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber">預購</p>
@@ -427,7 +428,7 @@
 
                         <div class="mt-6 rounded-[1.6rem] border border-midnight/10 bg-midnight p-5 sm:p-6 text-[#FAEFCF]">
                             <p class="font-serif text-2xl text-[#FAEFCF]">準備預購了嗎？</p>
-                            <a href="https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A" data-track-click="click_preorder_paypal" class="cta js-campaign-cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign" rel="noopener noreferrer">預購 Lume</a>
+                            <a href="/zh-tw/products/#preorder" data-track-click="click_preorder_options" class="cta js-campaign-cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="support_campaign">選擇 Single 或 Duo</a>
                             <p class="mt-4 text-center text-xs"><a href="/zh-tw/preorder-policy/" class="text-[#D8952E] hover:text-[#FAEFCF] underline underline-offset-4">閱讀預購條款</a></p>
                         </div>
                     </div>
@@ -629,8 +630,9 @@
         });
 
         const preorderConfig = {
-            paymentUrl: 'https://www.paypal.com/ncp/payment/35Z8XGSMAHU2A',
-            closesAt: '2026-07-20T23:59:00-04:00'
+            destinationUrl: '/zh-tw/products/#preorder',
+            fulfillmentBeginsOn: '2026-07-20',
+            status: 'open'
         };
 
         function preorderClickPayload(button) {
@@ -639,7 +641,7 @@
                 source_page: 'zh_campaign',
                 source_section: sourceSection,
                 cta_text: button.textContent.trim(),
-                destination: 'paypal',
+                destination: 'products_preorder',
                 payment_provider: 'paypal',
                 product_name: 'Owlnest Lume',
                 currency: 'USD',
@@ -655,8 +657,8 @@
                     source_section: button.closest('form')?.dataset.sourceSection || button.closest('section')?.id || 'nav',
                     page_path: window.location.pathname
                 });
-                if (button.getAttribute('href') === preorderConfig.paymentUrl) {
-                    owlnestTrack('preorder_paypal_click', preorderClickPayload(button));
+                if (button.getAttribute('href') === preorderConfig.destinationUrl) {
+                    owlnestTrack('preorder_package_selection_click', preorderClickPayload(button));
                 }
             });
         });
