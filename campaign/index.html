@@ -751,8 +751,8 @@
             color: #C9852A !important;
         }
 
-        #main-header .header-actions > a[href="/products/#preorder"],
-        #main-header .header-actions > a[href="/products/#preorder"]:hover {
+        #main-header .header-actions > a[href="#preorder"],
+        #main-header .header-actions > a[href="#preorder"]:hover {
             background: #C9852A !important;
             color: #182234 !important;
         }
@@ -774,9 +774,9 @@
         }
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
-    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/typography.css?v=20260712-campaign-layout">
 </head>
-<body class="font-sans antialiased">
+<body class="campaign-page font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -815,7 +815,7 @@
                         <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
                     </div>
                 </div>
-                <a href="/products/#preorder" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder Lume</a>
+                <a href="#preorder" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Preorder Lume</a>
             </div>
 
             <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
@@ -848,7 +848,7 @@
                 </div>
             </div>
                         <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/products/#preorder" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">Preorder Lume</a>
+                <a href="#preorder" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">Preorder Lume</a>
                 <a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">Room Check</a>
             </div>
         </nav>
@@ -1013,18 +1013,18 @@
                         <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber">Preorder</p>
                         <h3 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">Choose your preorder package</h3>
                         <div class="mt-6 grid sm:grid-cols-2 gap-4">
-                            <a href="/products/#preorder" class="preorder-tier block text-left rounded-2xl border border-midnight/12 bg-white p-5 sm:p-6 transition hover:border-amber/60 hover:shadow-lg" data-tier-interest="single">
+                            <button type="button" class="preorder-tier text-left rounded-2xl border border-midnight/12 bg-white p-5 sm:p-6 transition hover:border-amber/60 hover:shadow-lg" data-tier-interest="single">
                                 <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Single Lume</span>
                                 <h3 class="mt-3 font-serif text-3xl">1 × Owlnest Lume</h3>
                                 <p class="mt-2 text-4xl font-serif text-midnight">$59</p>
                                 <p class="mt-4 text-sm leading-relaxed text-midnight/62">For one bedroom or night-use room.</p>
-                            </a>
-                            <a href="/products/#preorder" class="preorder-tier block text-left rounded-2xl border border-amber/45 bg-[#fff7e8] p-5 sm:p-6 shadow-[0_18px_60px_rgba(216,138,36,0.12)] transition hover:border-amber" data-tier-interest="duo">
+                            </button>
+                            <button type="button" class="preorder-tier text-left rounded-2xl border border-amber/45 bg-[#fff7e8] p-5 sm:p-6 shadow-[0_18px_60px_rgba(216,138,36,0.12)] transition hover:border-amber" data-tier-interest="duo">
                                 <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</span>
                                 <h3 class="mt-3 font-serif text-3xl">2 × Owlnest Lume</h3>
                                 <p class="mt-2 text-4xl font-serif text-midnight">$100</p>
                                 <p class="mt-4 text-sm leading-relaxed text-midnight/62">For two rooms or home plus travel.</p>
-                            </a>
+                            </button>
                         </div>
 
                         <div class="mt-6 rounded-[1.6rem] border border-midnight/10 bg-midnight p-5 sm:p-6 text-[#FAEFCF]">
@@ -1231,6 +1231,8 @@
                 document.querySelectorAll('input[name="tier_interest"]').forEach((field) => {
                     field.value = interest;
                 });
+                document.getElementById('preorder-signup')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                document.getElementById('preorder-email')?.focus({ preventScroll: true });
             });
         });
 

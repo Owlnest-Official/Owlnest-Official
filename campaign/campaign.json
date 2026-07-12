@@ -39,7 +39,7 @@
   },
   "platformCta": {
     "label": "Preorder Now",
-    "href": "/products/#preorder"
+    "href": "/campaign/#preorder"
   },
   "secondaryCta": {
     "label": "Read Science & FAQ",

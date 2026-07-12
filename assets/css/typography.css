@@ -257,3 +257,45 @@ html[lang="zh-Hant"] main p,
 html[lang="zh-Hant"] main li {
     line-height: 1.72;
 }
+
+/* Campaign is a narrative landing page: preserve its intended split-screen flow. */
+@media (min-width: 1024px) {
+    body.campaign-page #hero > .max-w-7xl.grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr) !important;
+        align-items: center !important;
+        gap: 4rem !important;
+    }
+
+    body.campaign-page #preorder > .max-w-7xl > .grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr) !important;
+        align-items: start !important;
+        gap: 3rem !important;
+    }
+
+    body.campaign-page #hero > .max-w-7xl.grid > *,
+    body.campaign-page #preorder > .max-w-7xl > .grid > * {
+        order: initial !important;
+        width: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.campaign-page #hero > .max-w-7xl.grid > div:first-child,
+    body.campaign-page #preorder > .max-w-7xl > .grid > div:first-child {
+        max-width: none !important;
+        text-align: left !important;
+    }
+
+    body.campaign-page #hero > .max-w-7xl.grid > div:first-child > :is(h1, h2, p, span, div),
+    body.campaign-page #preorder > .max-w-7xl > .grid > div:first-child > :is(h1, h2, p, span, div) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+
+    body.campaign-page #hero > .max-w-7xl.grid > div:first-child > div.flex {
+        justify-content: flex-start !important;
+    }
+}
