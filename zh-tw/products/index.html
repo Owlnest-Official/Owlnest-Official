@@ -483,10 +483,10 @@
                     <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-5">選擇預購方案</h2>
                     <form id="creator-code-form" class="mx-auto mt-4 flex max-w-md flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:items-end" novalidate>
                         <label class="flex-1 text-left">
-                            <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Discount code</span>
-                            <input id="creator-code-input" name="discount_code" type="text" inputmode="text" autocomplete="off" placeholder="Enter discount code" class="mt-2 w-full rounded-full border border-white/10 bg-midnight/70 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white placeholder:text-white/30 focus:border-amber focus:outline-none">
+                            <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">折扣碼</span>
+                            <input id="creator-code-input" name="discount_code" type="text" inputmode="text" autocomplete="off" placeholder="輸入折扣碼" class="mt-2 w-full rounded-full border border-white/10 bg-midnight/70 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white placeholder:text-white/30 focus:border-amber focus:outline-none">
                         </label>
-                        <button type="submit" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-midnight transition-colors hover:bg-warm">Apply</button>
+                        <button type="submit" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-midnight transition-colors hover:bg-warm">套用</button>
                     </form>
                     <p id="creator-code-feedback" class="mx-auto mt-3 hidden max-w-md text-sm text-amber/90" aria-live="polite"></p>
                 </div>
@@ -499,7 +499,7 @@
                         </p>
                         <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">適合一側床邊或一個房間</p>
-                        <button type="button" data-checkout-package="single" data-checkout-label="預購 Single" data-checkout-loading-label="正在前往 PayPal..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Single</button>
+                        <button type="button" data-shopify-checkout-package="single" data-checkout-label="預購 Single" data-checkout-loading-label="正在前往安全結帳..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Single</button>
                     </article>
                     <article class="rounded-2xl border border-amber/35 bg-white/8 p-6">
                         <p class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</p>
@@ -509,7 +509,7 @@
                         </p>
                         <p class="mt-2 hidden text-sm font-semibold text-amber" data-creator-price-note></p>
                         <p class="mt-4 text-sm leading-relaxed text-white/68">適合床的兩側、兩個房間，或家中加旅行</p>
-                        <button type="button" data-checkout-package="duo" data-checkout-label="預購 Duo" data-checkout-loading-label="正在前往 PayPal..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Duo</button>
+                        <button type="button" data-shopify-checkout-package="duo" data-checkout-label="預購 Duo" data-checkout-loading-label="正在前往安全結帳..." class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm disabled:cursor-wait disabled:opacity-70">預購 Duo</button>
                     </article>
                 </div>
                 <p class="mt-6 text-center text-sm"><a href="/zh-tw/preorder-policy/" class="text-amber hover:text-warm underline underline-offset-4">閱讀預購條款</a></p>
@@ -618,7 +618,8 @@
             }
         }
     </script>
-    <script src="/assets/js/referral.js" defer></script>
+    <script src="/assets/js/referral.js?v=20260714-2" defer></script>
+    <script src="/assets/js/shopify-checkout.js?v=20260714" defer></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

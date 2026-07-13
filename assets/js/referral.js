@@ -118,7 +118,9 @@
     });
 
     document.querySelectorAll("[data-creator-price-note]").forEach((note) => {
-      note.textContent = `${discountLabel} off with discount code`;
+      note.textContent = pageLocale() === "zh-tw"
+        ? `折扣碼已折抵 ${discountLabel}`
+        : `${discountLabel} off with discount code`;
       note.classList.remove("hidden");
     });
   }
@@ -312,12 +314,26 @@
     const input = document.getElementById(CODE_INPUT_ID);
     if (!form || !input) return;
 
+    const storedReferral = readStoredReferral();
+    if (
+      storedReferral?.attribution_source === "discount_code" &&
+      isValidFixedDiscount(storedReferral)
+    ) {
+      input.value = normalizeCode(storedReferral.discount_code);
+      applyCreatorReferral(storedReferral);
+    }
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const code = normalizeCode(input.value);
 
       if (!code) {
-        renderCodeFeedback("Code not found. Please check and try again.", true);
+        renderCodeFeedback(
+          pageLocale() === "zh-tw"
+            ? "找不到這組折扣碼，請確認後再試一次。"
+            : "Code not found. Please check and try again.",
+          true
+        );
         return;
       }
 
@@ -327,7 +343,12 @@
       try {
         const creator = await fetchCreatorByCode(code);
         if (!isValidFixedDiscount(creator)) {
-          renderCodeFeedback("Code not found. Please check and try again.", true);
+          renderCodeFeedback(
+            pageLocale() === "zh-tw"
+              ? "找不到這組折扣碼，請確認後再試一次。"
+              : "Code not found. Please check and try again.",
+            true
+          );
           return;
         }
 
@@ -335,7 +356,12 @@
         applyCreatorReferral(referral);
       } catch (error) {
         log("Discount code lookup skipped.", error.message);
-        renderCodeFeedback("Code not found. Please check and try again.", true);
+        renderCodeFeedback(
+          pageLocale() === "zh-tw"
+            ? "找不到這組折扣碼，請確認後再試一次。"
+            : "Code not found. Please check and try again.",
+          true
+        );
       }
     });
   }
