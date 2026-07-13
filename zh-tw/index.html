@@ -47,21 +47,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owlnest Lume | Owlnest Official</title>
+    <title>首頁 | Owlnest Official</title>
     <meta name="description" content="Owlnest Lume 是為夜晚特調的睡眠光譜燈，給夜晚留一點剛剛好的光">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/zh-tw/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/">
     <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/">
     <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/">
-    <meta property="og:title" content="Owlnest Lume | Owlnest Official">
+    <meta property="og:title" content="首頁 | Owlnest Official">
     <meta property="og:description" content="Owlnest Lume 是為夜晚特調的睡眠光譜燈，給夜晚留一點剛剛好的光">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:url" content="https://owlnestofficial.com/zh-tw/">
     <meta property="og:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Owlnest Lume | Owlnest Official">
+    <meta name="twitter:title" content="首頁 | Owlnest Official">
     <meta name="twitter:description" content="Owlnest Lume 是為夜晚特調的睡眠光譜燈，給夜晚留一點剛剛好的光">
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <script type="application/ld+json">
@@ -993,7 +993,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </a>
                 </div>
                 <figure class="mx-auto max-w-5xl rounded-[28px] border border-white/10 bg-midnight/60 p-2 md:p-4 overflow-hidden">
-                    <img src="/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png" loading="lazy" alt="一般夜間光線與 Owlnest Lume 睡眠光譜燈比較" class="w-full h-auto rounded-[20px]">
+                    <img src="/.netlify/images?url=/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png&amp;w=1122&amp;q=78" srcset="/.netlify/images?url=/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png&amp;w=480&amp;q=78 480w, /.netlify/images?url=/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png&amp;w=768&amp;q=78 768w, /.netlify/images?url=/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png&amp;w=1122&amp;q=78 1122w" sizes="(max-width: 1024px) calc(100vw - 3rem), 960px" width="1122" height="1402" loading="lazy" decoding="async" alt="一般夜間光線與 Owlnest Lume 睡眠光譜燈比較" class="w-full h-auto rounded-[20px]">
                 </figure>
             </div>
         </section>
@@ -1249,7 +1249,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const section1 = document.getElementById('section-1');
 
         const frameCount = 96;
-        const currentFrame = index => `/${index.toString().padStart(3, '0')}.png`;
+        const heroFrameWidth = window.innerWidth <= 640 ? 640 : (window.innerWidth <= 1024 ? 1024 : 1280);
+        const currentFrame = index => `/.netlify/images?url=/${index.toString().padStart(3, '0')}.png&w=${heroFrameWidth}&q=72`;
         const HOME_SEQUENCE_SETTINGS = {
             desktopCompleteOnWheel: true,
             mobileCompleteOnSwipe: true,

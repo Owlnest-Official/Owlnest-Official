@@ -272,14 +272,14 @@
                         <p class="hidden" aria-hidden="true">
                             <label><span class="sr-only">Bot field</span><input name="bot-field" tabindex="-1" autocomplete="off"></label>
                         </p>
-                        <label class="block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">姓名</label>
-                        <input type="text" name="name" placeholder="你的姓名" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
+                        <label for="contact-name" class="block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">姓名</label>
+                        <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="你的姓名" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
 
-                        <label class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">Email</label>
-                        <input type="email" name="email" placeholder="你的 email" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
+                        <label for="contact-email" class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">Email</label>
+                        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="你的 email" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
 
-                        <label class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">留言</label>
-                        <textarea name="message" rows="6" placeholder="想告訴我們什麼？" class="w-full bg-white/50 border border-midnight/15 p-4 text-midnight placeholder:text-midnight/35 text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
+                        <label for="contact-message" class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">留言</label>
+                        <textarea id="contact-message" name="message" rows="6" placeholder="想告訴我們什麼？" class="w-full bg-white/50 border border-midnight/15 p-4 text-midnight placeholder:text-midnight/35 text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
 
                         <button type="submit" class="mt-7 w-full bg-midnight text-white py-4 text-xs uppercase tracking-[0.16em] font-bold hover:bg-amber hover:text-midnight transition">送出</button>
                     </form>

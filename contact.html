@@ -547,16 +547,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </p>
 
                         <div class="mb-6 lg:mb-8">
-                            <input type="text" name="name" placeholder="YOUR NAME" class="w-full bg-transparent border-b border-midnight/25 py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm focus:outline-none focus:border-amber transition" required>
+                            <label for="contact-name" class="text-[10px] text-midnight/55 tracking-[0.2em] uppercase mb-2 block font-semibold">Name</label>
+                            <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="YOUR NAME" class="w-full bg-transparent border-b border-midnight/25 py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm focus:outline-none focus:border-amber transition" required>
                         </div>
 
                         <div class="mb-6 lg:mb-8">
-                            <input type="email" name="email" placeholder="YOUR EMAIL" class="w-full bg-transparent border-b border-midnight/25 py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm focus:outline-none focus:border-amber transition" required>
+                            <label for="contact-email" class="text-[10px] text-midnight/55 tracking-[0.2em] uppercase mb-2 block font-semibold">Email</label>
+                            <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="YOUR EMAIL" class="w-full bg-transparent border-b border-midnight/25 py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm focus:outline-none focus:border-amber transition" required>
                         </div>
 
                         <div class="mb-8 lg:mb-10">
-                            <label class="text-[10px] text-midnight/55 tracking-[0.2em] uppercase mb-3 block font-semibold">Message</label>
-                            <textarea name="message" rows="6" placeholder="How can we help you?" class="w-full bg-white/50 border border-midnight/15 p-4 text-midnight placeholder:text-midnight/35 text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
+                            <label for="contact-message" class="text-[10px] text-midnight/55 tracking-[0.2em] uppercase mb-3 block font-semibold">Message</label>
+                            <textarea id="contact-message" name="message" rows="6" placeholder="How can we help you?" class="w-full bg-white/50 border border-midnight/15 p-4 text-midnight placeholder:text-midnight/35 text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-midnight text-white font-semibold py-4 uppercase tracking-widest text-xs hover:bg-amber hover:text-midnight transition duration-300 rounded-sm">

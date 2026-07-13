@@ -222,21 +222,62 @@
 
 @media (max-width: 640px) {
     .owlnest-cookie-banner {
-        bottom: 0.75rem;
+        bottom: max(0.5rem, env(safe-area-inset-bottom));
         width: min(calc(100% - 1rem), 780px);
-        border-radius: 20px;
+        border-radius: 16px;
     }
 
-    .owlnest-cookie-banner__inner,
+    .owlnest-cookie-banner__inner {
+        gap: 0.75rem;
+        padding: 0.85rem;
+    }
+
     .owlnest-cookie-panel__header,
     .owlnest-cookie-panel__body,
     .owlnest-cookie-panel__footer {
-        padding: 1rem;
+        padding: 0.85rem;
+    }
+
+    .owlnest-cookie-banner__title {
+        font-size: 1.15rem;
+    }
+
+    .owlnest-cookie-banner__copy {
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+
+    .owlnest-cookie-button {
+        min-height: 38px;
+        padding: 0.55rem 0.65rem;
+        font-size: 0.66rem;
+        letter-spacing: 0.04em;
+        text-transform: none;
     }
 
     .owlnest-cookie-actions,
     .owlnest-cookie-panel__footer {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .owlnest-cookie-actions .owlnest-cookie-button--primary,
+    .owlnest-cookie-panel__footer .owlnest-cookie-button--primary {
+        grid-column: 1 / -1;
+    }
+
+    .owlnest-cookie-panel {
+        padding: 0.5rem;
+    }
+
+    .owlnest-cookie-panel__dialog {
+        max-height: calc(100dvh - 1rem);
+        border-radius: 18px;
+    }
+
+    .owlnest-cookie-choice {
+        gap: 0.75rem;
+        padding: 0.8rem 0;
     }
 }

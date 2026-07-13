@@ -64,6 +64,80 @@
     <meta name="twitter:title" content="預購 | Owlnest Official">
     <meta name="twitter:description" content="為夜晚特調的睡眠光譜燈。">
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://owlnestofficial.com/zh-tw/campaign/#webpage",
+          "url": "https://owlnestofficial.com/zh-tw/campaign/",
+          "name": "預購 | Owlnest Official",
+          "description": "Owlnest Lume 是為夜晚特調的睡眠光譜燈，適合夜晚想留一點柔和光的時候。",
+          "inLanguage": "zh-Hant-TW",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://owlnestofficial.com/#website",
+            "name": "Owlnest Official",
+            "url": "https://owlnestofficial.com/"
+          },
+          "about": {
+            "@type": "Product",
+            "@id": "https://owlnestofficial.com/zh-tw/products/#owlnest-lume-product-page",
+            "name": "Owlnest Lume",
+            "description": "Owlnest Lume 是低藍光睡眠光譜燈，適合睡前、半夜醒來，或夜晚需要柔和光線時使用。"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://owlnestofficial.com/zh-tw/campaign/#faq",
+          "inLanguage": "zh-Hant-TW",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "預購現在可以下單嗎？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "這是完成品還是概念？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "是。已有完成樣品與硬體細節。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Lume 是醫療器材嗎？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不是。Lume 不是醫療器材，也不是失眠治療產品。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "加入名單後會收到什麼？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "你會收到預購、產品進度與出貨資訊，不會寄垃圾信。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "如何聯絡 Owlnest？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。產品、預購、合作或支援問題都能詢問。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -452,7 +526,8 @@
                     <input type="hidden" name="utm_term" value="">
                     <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                     <div class="flex flex-col sm:flex-row gap-2">
-                        <input name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
+                        <label class="sr-only" for="positioning-email">輸入你的 email</label>
+                        <input id="positioning-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" data-track-click="click_get_preorder_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream" data-cta-name="early_access">取得更新</button>
                     </div>
                     <p class="form-message mt-3 text-sm text-white/56" role="status" aria-live="polite"></p>
@@ -505,7 +580,8 @@
                     <input type="hidden" name="utm_term" value="">
                     <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                     <div class="flex flex-col sm:flex-row gap-2">
-                        <input name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
+                        <label class="sr-only" for="final-email">輸入你的 email</label>
+                        <input id="final-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
                         <button type="submit" data-track-click="click_get_preorder_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white" data-cta-name="early_access">取得更新</button>
                     </div>
                     <label class="campaign-consent">
