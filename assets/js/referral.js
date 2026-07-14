@@ -1,5 +1,6 @@
 (function () {
   const STORAGE_KEY = "owlnest_creator_referral";
+  const DISCOUNT_STORAGE_KEY = "owlnest_checkout_discount";
   const ATTRIBUTION_DAYS = 30;
   const SUPABASE_URL = "https://khoiplqugajmybmultzs.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_ic3b9TeYt7SuXxLIhLuyvA_FWHYVb0Z";
@@ -32,11 +33,37 @@
 
   function readStoredReferral() {
     try {
+      const raw = sessionStorage.getItem(DISCOUNT_STORAGE_KEY);
+      if (raw) {
+        const referral = JSON.parse(raw);
+        if (
+          referral?.attribution_source === "discount_code" &&
+          referral.expires_at &&
+          Date.now() < Date.parse(referral.expires_at)
+        ) {
+          return referral;
+        }
+
+        sessionStorage.removeItem(DISCOUNT_STORAGE_KEY);
+        log("Checkout discount was invalid or expired and was removed.");
+      }
+    } catch (error) {
+      sessionStorage.removeItem(DISCOUNT_STORAGE_KEY);
+      log("Checkout discount was invalid and was removed.");
+    }
+
+    try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return null;
 
       const referral = JSON.parse(raw);
       if (!referral || !referral.expires_at) return null;
+
+      if (referral.attribution_source === "discount_code") {
+        localStorage.removeItem(STORAGE_KEY);
+        log("Legacy saved discount was removed.");
+        return null;
+      }
 
       if (Date.now() >= Date.parse(referral.expires_at)) {
         localStorage.removeItem(STORAGE_KEY);
@@ -67,7 +94,12 @@
       attribution_source: attributionSource
     };
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(referral));
+    if (attributionSource === "discount_code") {
+      sessionStorage.setItem(DISCOUNT_STORAGE_KEY, JSON.stringify(referral));
+      localStorage.removeItem(STORAGE_KEY);
+    } else {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(referral));
+    }
     return referral;
   }
 

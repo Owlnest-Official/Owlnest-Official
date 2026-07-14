@@ -2,6 +2,7 @@
   const STOREFRONT_ENDPOINT = "https://wfqwyu-ic.myshopify.com/api/2026-04/graphql.json";
   const STOREFRONT_ACCESS_TOKEN = "a5908ba677610f83178568fc8bf25de7";
   const REFERRAL_STORAGE_KEY = "owlnest_creator_referral";
+  const DISCOUNT_STORAGE_KEY = "owlnest_checkout_discount";
   const CHECKOUT_FEEDBACK_ID = "checkout-feedback";
 
   const PACKAGES = {
@@ -69,17 +70,61 @@
 
   function readStoredReferral() {
     try {
+      const raw = sessionStorage.getItem(DISCOUNT_STORAGE_KEY);
+      if (raw) {
+        const referral = JSON.parse(raw);
+        if (
+          referral?.attribution_source === "discount_code" &&
+          referral.expires_at &&
+          Date.now() < Date.parse(referral.expires_at)
+        ) {
+          return referral;
+        }
+
+        sessionStorage.removeItem(DISCOUNT_STORAGE_KEY);
+      }
+    } catch (error) {
+      sessionStorage.removeItem(DISCOUNT_STORAGE_KEY);
+    }
+
+    try {
       const raw = localStorage.getItem(REFERRAL_STORAGE_KEY);
       if (!raw) return null;
 
       const referral = JSON.parse(raw);
       if (!referral?.expires_at || Date.now() >= Date.parse(referral.expires_at)) {
+        localStorage.removeItem(REFERRAL_STORAGE_KEY);
+        return null;
+      }
+
+      if (referral.attribution_source === "discount_code") {
+        localStorage.removeItem(REFERRAL_STORAGE_KEY);
         return null;
       }
 
       return referral;
     } catch (error) {
       return null;
+    }
+  }
+
+  function consumeDiscountReferral(referral) {
+    if (!referral?.discountCode) return;
+
+    try {
+      sessionStorage.removeItem(DISCOUNT_STORAGE_KEY);
+    } catch (error) {
+      // Shopify still enforces one use per customer if browser storage is unavailable.
+    }
+
+    try {
+      const raw = localStorage.getItem(REFERRAL_STORAGE_KEY);
+      const storedReferral = raw ? JSON.parse(raw) : null;
+      if (storedReferral?.attribution_source === "discount_code") {
+        localStorage.removeItem(REFERRAL_STORAGE_KEY);
+      }
+    } catch (error) {
+      localStorage.removeItem(REFERRAL_STORAGE_KEY);
     }
   }
 
@@ -223,10 +268,10 @@
       throw new Error("DISCOUNT_NOT_APPLICABLE");
     }
 
-    return result.cart;
+    return { cart: result.cart, referral };
   }
 
-  function trackCheckout(packageKey, cart) {
+  function trackCheckout(packageKey, cart, referral) {
     if (typeof window.owlnestTrack !== "function") return;
 
     const selectedPackage = PACKAGES[packageKey];
@@ -237,7 +282,7 @@
       payment_provider: "shopify",
       currency: cart?.cost?.totalAmount?.currencyCode || "USD",
       product_amount: Number(cart?.cost?.totalAmount?.amount || selectedPackage.amount),
-      creator_tracking: Boolean(readCheckoutReferral())
+      creator_tracking: Boolean(referral)
     });
   }
 
@@ -254,8 +299,9 @@
         button.textContent = loadingText;
 
         try {
-          const cart = await createCart(packageKey);
-          trackCheckout(packageKey, cart);
+          const { cart, referral } = await createCart(packageKey);
+          trackCheckout(packageKey, cart, referral);
+          consumeDiscountReferral(referral);
           window.location.assign(localizedCheckoutUrl(cart.checkoutUrl));
         } catch (error) {
           console.error("[Owlnest Shopify checkout]", error.message);
