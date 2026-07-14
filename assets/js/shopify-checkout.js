@@ -46,6 +46,17 @@
     return window.location.pathname.startsWith("/zh-tw/") ? "zh-tw" : "en";
   }
 
+  function pageSource() {
+    const path = window.location.pathname;
+    if (path === "/" || path === "/zh-tw/" || path === "/zh-tw") {
+      return pageLocale() === "zh-tw" ? "zh_home" : "home";
+    }
+    if (path.includes("/campaign")) {
+      return pageLocale() === "zh-tw" ? "zh_campaign" : "campaign";
+    }
+    return pageLocale() === "zh-tw" ? "zh_products" : "products";
+  }
+
   function normalizeSlug(value) {
     const slug = String(value || "").trim().toLowerCase();
     return /^[a-z0-9][a-z0-9_-]{0,63}$/.test(slug) ? slug : "";
@@ -108,7 +119,7 @@
   function checkoutAttributes(packageKey, referral) {
     const locale = pageLocale();
     const attributes = [
-      { key: "owlnest_source", value: locale === "zh-tw" ? "zh-tw/products" : "products" },
+      { key: "owlnest_source", value: pageSource() },
       { key: "owlnest_package", value: packageKey },
       { key: "owlnest_locale", value: locale }
     ];
@@ -219,8 +230,8 @@
     if (typeof window.owlnestTrack !== "function") return;
 
     const selectedPackage = PACKAGES[packageKey];
-    window.owlnestTrack("preorder_checkout_redirect", {
-      source_page: pageLocale() === "zh-tw" ? "zh_products" : "products",
+    window.owlnestTrack("checkout_redirect", {
+      source_page: pageSource(),
       package: packageKey,
       destination: "shopify_checkout",
       payment_provider: "shopify",

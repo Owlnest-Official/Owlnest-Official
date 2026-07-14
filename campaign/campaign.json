@@ -1,20 +1,20 @@
 {
-  "status": "preorder_live",
+  "status": "available_now",
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Sleep Spectrum Lamp",
   "subtitle": "A deep amber, low-blue sleep-spectrum lamp for nights that still need light.",
   "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep spectrum lamp tuned for night-friendly sleep.",
-  "notice": "Owlnest Lume preorder is open now. Choose Single Lume or Duo Lume before secure PayPal checkout.",
+  "notice": "Owlnest Lume is available now. Choose Single Lume or Duo Lume before secure Shopify checkout.",
   "preorder": {
     "enabled": true,
     "paymentEnabled": true,
-    "preorderIsLive": true,
-    "paymentProvider": "paypal",
-    "checkoutPath": "/products/#preorder",
-    "fulfillmentBeginsOn": "2026-07-20",
-    "availability": "Open while first-batch allocation is available",
-    "ctaLive": "Preorder Now",
+    "preorderIsLive": false,
+    "paymentProvider": "shopify",
+    "checkoutPath": "/products/#buy",
+    "fulfillmentBeginsOn": null,
+    "availability": "In stock while inventory remains",
+    "ctaLive": "Buy Now",
     "pricing": [
       {
         "name": "Single Lume",
@@ -29,17 +29,17 @@
         "currency": "USD"
       }
     ],
-    "shippingCopy": "This is a preorder. Orders do not ship immediately. Batch fulfillment is scheduled to begin July 20, 2026.",
-    "finePrint": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
+    "shippingCopy": "Owlnest Lume is available now. Shipping and delivery details are shown at checkout.",
+    "finePrint": "Shopify checkout shows product price, applicable shipping, and any store-collected taxes before payment."
   },
   "heroPricing": {
-    "eyebrow": "Preorder Open Now",
+    "eyebrow": "Available Now",
     "main": "Single Lume $59 / Duo Lume $100",
-    "subtext": "Choose Single or Duo before PayPal"
+    "subtext": "Choose Single or Duo before Shopify checkout"
   },
   "platformCta": {
-    "label": "Preorder Now",
-    "href": "/campaign/#preorder"
+    "label": "Buy Now",
+    "href": "/products/#buy"
   },
   "secondaryCta": {
     "label": "Read Science & FAQ",
@@ -53,9 +53,9 @@
   },
   "timeline": [
     {
-      "date": "July 20, 2026",
-      "title": "First-batch fulfillment begins",
-      "text": "The first batch is scheduled to begin fulfillment on July 20, 2026."
+      "date": "After purchase",
+      "title": "Order processing",
+      "text": "Customers receive order and shipping updates by email as their order progresses."
     },
     {
       "date": "As orders progress",
@@ -73,16 +73,16 @@
       "a": "Owlnest Lume is designed around a night-friendly sleep spectrum. It is made for sleep, not just visibility."
     },
     {
-      "q": "When does first-batch fulfillment begin?",
-      "a": "First-batch fulfillment is scheduled to begin July 20, 2026. Preorder remains open while allocation is available."
+      "q": "Can I order now?",
+      "a": "Yes. Owlnest Lume is available now while inventory remains."
     },
     {
       "q": "Are shipping and taxes included today?",
-      "a": "Product price only. Shipping, taxes, duties, and import fees are not included today and will be confirmed before fulfillment."
+      "a": "Shopify checkout shows applicable shipping and any store-collected taxes before payment. Destination duties not collected at checkout may still apply."
     },
     {
       "q": "Is there a warranty?",
-      "a": "Preorder units are expected to include a standard 1-year limited warranty covering manufacturing defects."
+      "a": "Owlnest Lume includes a standard 1-year limited warranty covering manufacturing defects."
     }
   ]
 }

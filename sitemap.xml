@@ -182,4 +182,18 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/preorder-policy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/preorder-policy" />
   </url>
+  <url>
+    <loc>https://owlnestofficial.com/faq/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlnestofficial.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/faq/" />
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/zh-tw/faq/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlnestofficial.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/faq/" />
+  </url>
 </urlset>
