@@ -116,3 +116,54 @@
 .bg-warm .relative:has(> img) .absolute .text-amber {
   color: #d8952e !important;
 }
+
+/*
+  Public utility compatibility layer.
+  The static Tailwind bundle predates several utilities now used by the
+  marketing pages. Keep those utilities explicit so text never falls back to
+  an inherited color and light sections never become transparent.
+*/
+.bg-cream { background-color: #f7efd8; }
+.text-cream { color: #f7efd8; }
+.bg-midnight\/88 { background-color: rgba(24, 34, 52, 0.88); }
+.bg-white\/8 { background-color: rgba(255, 255, 255, 0.08); }
+.bg-white\/42 { background-color: rgba(255, 255, 255, 0.42); }
+.border-amber\/18 { border-color: rgba(201, 133, 42, 0.18); }
+.border-midnight\/12 { border-color: rgba(24, 34, 52, 0.12); }
+.border-midnight\/18 { border-color: rgba(24, 34, 52, 0.18); }
+.border-white\/12 { border-color: rgba(255, 255, 255, 0.12); }
+.border-white\/14 { border-color: rgba(255, 255, 255, 0.14); }
+.border-white\/18 { border-color: rgba(255, 255, 255, 0.18); }
+.text-amber\/90 { color: rgba(201, 133, 42, 0.90); }
+.text-midnight\/30 { color: rgba(24, 34, 52, 0.30); }
+.text-midnight\/48 { color: rgba(24, 34, 52, 0.48); }
+.text-midnight\/58 { color: rgba(24, 34, 52, 0.58); }
+.text-midnight\/62 { color: rgba(24, 34, 52, 0.62); }
+.text-midnight\/64 { color: rgba(24, 34, 52, 0.64); }
+.text-midnight\/68 { color: rgba(24, 34, 52, 0.68); }
+.text-midnight\/72 { color: rgba(24, 34, 52, 0.72); }
+.text-midnight\/76 { color: rgba(24, 34, 52, 0.76); }
+.text-white\/25 { color: rgba(255, 255, 255, 0.25); }
+.text-white\/38 { color: rgba(255, 255, 255, 0.38); }
+.text-white\/42 { color: rgba(255, 255, 255, 0.42); }
+.text-white\/46 { color: rgba(255, 255, 255, 0.46); }
+.text-white\/48 { color: rgba(255, 255, 255, 0.48); }
+.text-white\/56 { color: rgba(255, 255, 255, 0.56); }
+.text-white\/58 { color: rgba(255, 255, 255, 0.58); }
+.text-white\/62 { color: rgba(255, 255, 255, 0.62); }
+.text-white\/64 { color: rgba(255, 255, 255, 0.64); }
+.text-white\/66 { color: rgba(255, 255, 255, 0.66); }
+.text-white\/68 { color: rgba(255, 255, 255, 0.68); }
+.text-white\/72 { color: rgba(255, 255, 255, 0.72); }
+.text-white\/74 { color: rgba(255, 255, 255, 0.74); }
+.text-white\/78 { color: rgba(255, 255, 255, 0.78); }
+.text-white\/84 { color: rgba(255, 255, 255, 0.84); }
+.placeholder\:text-white\/30::placeholder { color: rgba(255, 255, 255, 0.30); }
+.placeholder\:text-white\/38::placeholder { color: rgba(255, 255, 255, 0.38); }
+.hover\:bg-cream:hover { background-color: #f7efd8; }
+.hover\:bg-white\/8:hover { background-color: rgba(255, 255, 255, 0.08); }
+
+footer [class*="text-white/3"],
+footer [class*="text-white/4"] {
+  color: rgba(245, 238, 220, 0.68) !important;
+}

@@ -299,3 +299,85 @@ html[lang="zh-Hant"] main li {
         justify-content: flex-start !important;
     }
 }
+
+/* Shared readability safeguards for public marketing pages. */
+:root {
+    --owl-readable-amber-on-light: #8b4818;
+    --owl-readable-amber-on-dark: #e6a64b;
+    --owl-readable-text-on-light: #455169;
+    --owl-readable-text-on-dark: #f5eedc;
+    --owl-readable-amber-on-slate: #ffe0a3;
+}
+
+main :is(.bg-midnight, [class*="bg-[#0"], [class*="bg-[#1"]) .text-amber {
+    color: var(--owl-readable-amber-on-dark) !important;
+}
+
+main :is(
+    .section-light,
+    .bg-warm,
+    .bg-cream,
+    .bg-white,
+    [class*="bg-[#f"],
+    .campaign-check-card
+) :is(.text-amber, .section-label) {
+    color: var(--owl-readable-amber-on-light) !important;
+}
+
+main :is(
+    .section-light,
+    .bg-warm,
+    .bg-cream,
+    .bg-white,
+    [class*="bg-[#f"],
+    .campaign-check-card
+) [class*="text-midnight/"] {
+    color: var(--owl-readable-text-on-light) !important;
+}
+
+main [class*="text-white/2"],
+main [class*="text-white/3"],
+main [class*="text-white/4"] {
+    color: rgba(245, 238, 220, 0.72) !important;
+}
+
+main .bg-slateblue [class*="text-white/"] {
+    color: var(--owl-readable-text-on-dark) !important;
+}
+
+main .bg-slateblue .text-amber {
+    color: var(--owl-readable-amber-on-slate) !important;
+}
+
+main .bg-warm .bg-midnight .text-amber,
+main .section-light .bg-midnight .text-amber,
+main .faq-contact-card .text-amber,
+main aside.bg-midnight .text-amber {
+    color: var(--owl-readable-amber-on-dark) !important;
+}
+
+main :is(.section-light, .bg-warm, .bg-cream) .bg-midnight.text-white {
+    color: var(--owl-readable-text-on-dark) !important;
+}
+
+main .dark-card.text-white {
+    background-color: #182234 !important;
+    color: var(--owl-readable-text-on-dark) !important;
+}
+
+main .evidence-step__number {
+    color: rgba(245, 238, 220, 0.72) !important;
+}
+
+main :is(.bg-white, [class*="bg-[#f"]) .text-taupe {
+    color: #6b5b4a !important;
+}
+
+#main-header .header-actions > a.bg-amber.text-midnight {
+    color: #182234 !important;
+}
+
+footer [class*="text-white/3"],
+footer [class*="text-white/4"] {
+    color: rgba(245, 238, 220, 0.68) !important;
+}
