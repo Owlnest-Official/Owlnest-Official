@@ -1,356 +1,245 @@
-# Owlnest Lume Claim Ladder & Messaging Spine
+# Owlnest Lume Claim Ladder and Messaging Spine
 
-Status: Master messaging reference
-Use for: website copy, Products page, Science page, FAQ, KOL brief, ads, packaging, customer support
-Do not treat this as public page copy by default. This is the internal source of truth.
+Status: Current derived claims reference
 
-## Core Borrowed-Cognition Logic
+Effective date: 2026-07-18
 
-Owlnest Lume should not be positioned as a normal lamp, a decorative lamp, or just a pretty room light.
+Primary authorities:
 
-The brand should borrow what people already understand:
+- `docs/OWLNEST_BRAND_TRUTH.md`
+- `docs/LUME_PRODUCT_TRUTH.md`
 
-1. Light affects how the body feels
-2. Blue-rich light can make people feel more awake
-3. Night needs a different kind of light than day
-4. Total darkness is not always practical
-5. A normal night light helps you see, but it is not necessarily designed for sleep
+Use this file for website copy, product explanations, Science and FAQ drafts, creator briefs, advertising, packaging, and customer-support drafts. If this file ever conflicts with either Truth document, the Truth documents win.
 
-Owlnest Lume sits between total darkness and normal light:
+## 1. Message Ownership
 
-Total darkness is not always convenient.
-Normal light can bring daytime back into the room.
-Lume gives people a sleep-spectrum light option for nights when they still need light.
+| Layer | Official English | Official Traditional Chinese | Job |
+| --- | --- | --- | --- |
+| Owlnest brand tagline | Made for life after dark. | 為天黑後的生活而生。 | Defines the brand world |
+| Owlnest emotional line | Home begins after dark. | 天黑之後，家才真正開始。 | Adds selective brand emotion |
+| Lume product tagline | Night deserves its own light. | 夜晚，值得有自己的光。 | States Lume's point of view |
+| Lume Hero hook | Your room knows it’s night. Your light doesn’t. | 房間知道夜深了，燈卻還不知道。 | Names the nighttime-light mismatch |
+| Product definition | Lume is a sleep-spectrum lamp, specially tuned for after dark. | Lume 是為天黑後特別調製的睡眠光譜燈。 | Explains what Lume is |
+| Science bridge | Your body uses light to tell time. | 身體會從光，判斷現在是什麼時候。 | Connects light with body time |
+| Comparison line | After dark, ordinary light gets it wrong. | 天黑之後，普通的燈就用錯了。 | Opens a comparison |
 
-## Core Product Claim
+Do not interchange these lines or stack all of them in one block.
 
-English:
+`Turn the day off, not the room.` is optional secondary campaign language. It is not the official Owlnest tagline, Lume tagline, or primary Hero hook.
 
-A low-blue sleep-spectrum lamp designed to support natural melatonin and better sleep.
+## 2. Claim Ladder
 
-Traditional Chinese:
+### Level 1: Human problem and room feeling
 
-低藍光睡眠光譜燈，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
+Use prominently:
 
-## Brand Spine
+- Your room knows it’s night. Your light doesn’t.
+- Your ceiling light still thinks it’s daytime.
+- Your room isn’t ugly. The light is wrong.
+- Night still needs some light, but it does not need daytime brought back into the room.
+- Helps create a calmer nighttime environment.
+- Helps the body move into a more sleep-ready state.
 
-English:
+Traditional Chinese examples:
 
-Turn the day off, not the room.
+- 房間知道夜深了，燈卻還不知道。
+- 晚上需要一點光，但不需要把白天帶回房間。
+- 讓房間保留剛剛好的光。
+- 幫助身體進入夜晚模式。
 
-Support melatonin. Keep the room usable. Sleep better.
+### Level 2: Category and product difference
 
-A low-blue sleep-spectrum lamp designed to help your body stay in night mode.
+Use prominently:
 
-Deep amber light for better sleep, without going completely dark.
-
-Traditional Chinese:
-
-關掉白天，不必關掉整個房間
-
-幫助促進自然褪黑激素分泌，保留夜晚需要的光，睡得更好
-
-低藍光睡眠光譜，幫助身體留在夜晚模式
-
-深琥珀睡眠光，讓房間不必全黑，也更適合睡
-
-## Messaging Hierarchy
-
-### Level 1: Human tension
-
-Start with the everyday problem:
-
-People need light at night, but they do not want to bring daytime back into the room.
+- Night deserves its own light.
+- Lume is a sleep-spectrum lamp, specially tuned for after dark.
+- Not a night light. A sleep-spectrum lamp.
+- Lume is light specially tuned for nighttime.
+- Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep.
+- Warm is how light looks. Spectrum is what the light contains.
 
 Traditional Chinese:
 
-晚上需要一點光，但不想把白天帶回房間
+- 夜晚，值得有自己的光。
+- Lume 是為天黑後特別調製的睡眠光譜燈。
+- 不是普通小夜燈，是睡眠光譜燈。
+- 為夜晚特別調製的光。
+- 普通暖光只是看起來溫暖；Lume 從光譜開始為睡眠設計。
+- 暖，是光看起來的樣子；光譜，是光真正包含的內容。
 
-### Level 2: Product mechanism
+At the first important use of `sleep spectrum` / `睡眠光譜`, provide the plain-language nighttime explanation.
 
-Then explain the product:
+### Level 3: Physiological design intent
 
-Lume uses deep amber, low-blue sleep-spectrum light to reduce nighttime blue-light exposure.
+Use with `designed to`, `supports`, `research-informed`, or another conservative qualifier:
 
-Traditional Chinese:
+- Designed to support the body's natural melatonin rhythm.
+- Supports a more natural evening wind-down.
+- Supports a more sleep-ready nighttime environment.
+- Research-informed design.
+- Evidence-informed circadian lighting.
 
-Lume 使用深琥珀、低藍光睡眠光譜，減少夜間高藍光刺激
+Approved Traditional Chinese:
 
-### Level 3: Body benefit
+- 設計用來支持身體自然的褪黑激素節律。
+- 幫助身體進入夜晚模式。
+- 研究知情設計。
 
-Then connect to the body:
+This level states design intent or environment role. It does not state a measured hormone or sleep outcome.
 
-The spectrum is designed to support natural melatonin and help the body stay in night mode.
+### Level 4: Product evidence
 
-Traditional Chinese:
+Use only with real product-specific records and test conditions:
 
-這樣的光譜設計用來幫助促進自然褪黑激素分泌，讓身體留在夜晚模式
+- measured Lume spectral power distribution
+- measured ordinary warm-lamp comparison
+- defined distance, angle, output setting, equipment, environment, and date
+- product-specific illuminance or melanopic metrics
 
-### Level 4: Sleep outcome
+Current status: **pending**.
 
-Then state the sleep benefit:
+General studies, institutional sources, product photography, and conceptual diagrams do not satisfy this level.
 
-Better sleep, without going completely dark.
+### Level 5: Sleep outcomes
 
-Traditional Chinese:
+Safe general-wellness direction:
 
-不必全黑，也能更適合睡
+- designed for better nights
+- helps create a more sleep-ready nighttime setting
+- helps the room feel ready for sleep
+- designed to help people wind down before sleep
 
-## Green Claims
+Requires stronger product-specific evidence before affirmative use:
 
-These can be used loudly in homepage copy, Products page, ads, KOL brief, IG, packaging front, and product cards.
+- helps people fall asleep faster
+- helps people sleep longer
+- improves sleep quality
+- supports deeper sleep
+- supports stable sleep through the night
+
+Never promise a fixed result for every person.
+
+## 3. Approved Product and Feature Language
 
 ### English
 
-* Supports natural melatonin
-* Supports better sleep
-* Low-blue sleep spectrum
-* Deep amber light for sleep
-* Designed to help your body stay in night mode
-* A sleep-spectrum lamp for better nights
-* Helps reduce nighttime blue-light exposure
-* For people who need light at night without bringing daytime back
-* Built for all-night low-light use
-* Not a normal night light
-* Not another app
-* Turn the day off, not the room
+- Owlnest Lume is a sleep-spectrum lamp.
+- Lume uses a specially tuned sleep spectrum.
+- Lume is light specially tuned for nighttime.
+- Designed to support the body's natural melatonin rhythm.
+- Research-informed design.
+- Not a normal night light.
+- No App. No screen. One physical button.
+- Deep amber, saturated orange-red glow.
 
 ### Traditional Chinese
 
-* 幫助促進自然褪黑激素分泌
-* 幫助睡得更好
-* 低藍光睡眠光譜
-* 為睡眠設計的深琥珀光
-* 幫助身體留在夜晚模式
-* 為更好夜晚設計的睡眠光譜燈
-* 幫助減少夜間藍光暴露
-* 給晚上需要光、但不想把白天帶回房間的人
-* 為整晚留一點柔和的光而設計
-* 不是普通小夜燈
-* 不是另一個睡眠 app
-* 關掉白天，不必關掉整個房間
+- Owlnest Lume 是睡眠光譜燈。
+- Lume 使用特調睡眠光譜。
+- Lume 使用為夜晚特別調製的光。
+- 設計用來支持身體自然的褪黑激素節律。
+- 不是普通小夜燈。
+- 沒有 App、沒有螢幕，只有一個實體按鈕。
+- 深琥珀、飽和橘紅暮光。
 
-## Yellow Claims
+## 4. Conditional Claims
 
-These can be used in Science, FAQ, product explanation, KOL science notes, or longer educational copy.
+### Melatonin secretion
 
-Do not use these as naked hero headlines without explanation.
+`Helps promote natural melatonin secretion` / `幫助促進自然褪黑激素分泌` is not a primary product claim. Use it only in a longer Science or FAQ context that:
 
-### English
+- identifies it as design intent informed by general research
+- does not claim Lume measured hormone changes in users
+- does not promise the same result for everyone
+- preserves the product-evidence boundary
 
-* Helps promote natural melatonin secretion
-* Helps you fall asleep more easily
-* Helps you sleep longer
-* Supports deeper, more stable sleep
-* Designed to reduce melatonin-disrupting blue light
-* Designed around the body's natural nighttime rhythm
-* Helps create a sleep-supporting light environment
-* Can be left on as a soft low-light option for people who do not want total darkness
+Preferred primary wording:
 
-### Traditional Chinese
+> Designed to support the body's natural melatonin rhythm.
 
-* 幫助促進自然褪黑激素分泌
-* 幫助更容易入睡
-* 幫助睡得更久
-* 幫助睡得更深、更穩
-* 設計用來減少干擾褪黑激素的藍光
-* 依照身體夜晚的自然節奏來設計
-* 幫助打造更適合睡眠的夜晚光線
-* 不想全黑的時候，可以留一點柔和的光
+### Better sleep
 
-## Yellow Claim Usage Conditions
+`Better sleep` may describe an intended general-wellness direction only when paired with design or environment language. Do not present it as measured product performance.
 
-Yellow claims should be paired with at least one of these:
+### Timing
 
-* Spectrum mechanism explanation
-* Blue light / melatonin / nighttime rhythm background
-* Designed to / helps / supports wording
-* Context that does not imply everyone gets the same guaranteed result
+The final `1 to 2 hours` before bed may be described as practical wind-down guidance, not a tested threshold, required protocol, or guaranteed path to sleep.
 
-## Red Claims
+### Overnight light
 
-Do not use these. They make the product sound like a disease treatment, medical cure, or guaranteed biological result.
+Approved:
 
-### English
+- Use Lume before bed or during the night when a small amount of light is needed.
+- At bedtime, switch it off unless some light is still needed.
+- Individual rooms and light sensitivities vary.
 
-* Treats insomnia
-* Cures sleep disorders
-* Prevents sleep disorders
-* Guaranteed to make you sleep longer
-* Guaranteed better sleep
-* Clinically proven to treat sleep problems
-* Raises melatonin levels in everyone
-* Fixes your circadian rhythm
-* Medical-grade sleep treatment
-* Doctor-approved insomnia solution
+Not approved:
 
-### Traditional Chinese
+- built for all-night low-light use
+- made to stay on while you sleep
+- designed to stay soft through the night
+- leaving it on improves sleep
+- leaving it on cannot affect sleep or melatonin
 
-* 治療失眠
-* 治癒睡眠障礙
-* 預防睡眠疾病
-* 保證讓你睡更久
-* 保證睡更好
-* 臨床證實治療睡眠問題
-* 保證提升每個人的褪黑激素
-* 修復生理時鐘
-* 醫療級睡眠治療
-* 醫師認證失眠解方
+Physical ability to remain on is not evidence of an all-night biological benefit.
 
-## Overnight / All-Night Low-Light Use
+## 5. Retired Positioning
 
-Owlnest Lume should keep its all-night low-light use value. Do not remove this product meaning.
+Do not use as Lume's product name, category, headline, metadata identity, first-sentence description, or main consumer benefit:
 
-### Safe to use loudly
+- low-blue / low blue / 低藍光
+- low-blue sleep spectrum
+- no-blue / no blue light / 無藍光
+- zero-blue
+- blue-light-free
+- blue-light-minimized
+- 防藍光燈 / 藍光過濾燈
+- night-tuned spectrum
 
-English:
+Research content may accurately discuss blue-rich light, short-wavelength light, or a study's actual condition. That does not authorize reusing these terms as Lume's identity.
 
-* Built for all-night low-light use
-* Designed for low-light nights
-* A soft light option for people who do not want total darkness
-* For bedtime, night wake-ups, and low-light nights
+## 6. Prohibited Claims
 
-Traditional Chinese:
+Do not say or imply that Lume:
 
-* 為整晚留一點柔和的光而設計
-* 適合夜晚需要柔和光線時使用
-* 給不想全黑、但又不想開普通燈的人
-* 適合睡前、半夜醒來，或夜晚想留一點柔和光的時候
+- treats or cures insomnia
+- treats, diagnoses, prevents, or cures a sleep disorder
+- guarantees faster, longer, deeper, more stable, or better sleep
+- guarantees melatonin production or raises melatonin in every person
+- fixes or resets a circadian rhythm
+- is clinically proven without product-specific clinical testing
+- is a medical device or medical-grade treatment
+- causes weight loss, burns fat, boosts metabolism, or controls appetite
+- builds muscle or guarantees recovery
+- repairs skin or provides anti-aging results
+- treats anxiety or another mental-health condition
+- improves memory
+- makes babies sleep better
+- prevents falls
 
-### Safe to use with product context
+## 7. Evidence Language
 
-English:
+Approved:
 
-* Can be left on as a soft overnight light
-* Designed to stay soft through the night
+- research-informed
+- evidence-informed design
+- general research supports the design principles
+- product-specific measurement is pending
+- educational or conceptual illustration
 
-Traditional Chinese:
+Not approved:
 
-* 整晚可以留一點柔和的光
-* 整夜保持柔和，不把房間照回白天
+- measured Lume spectrum without a real report
+- a conceptual curve labeled as product data
+- clinically validated Lume
+- product-specific melatonin or sleep outcomes inferred from general studies
+- exact blue-light reduction, CCT, illuminance, distance, angle, or melanopic claims without records
 
-### Avoid as main headline
-
-English:
-
-* Made to stay on while you sleep
-
-Traditional Chinese:
-
-* 開著睡也沒問題
-* 開著睡不影響睡眠
-
-Reason:
-
-These are not the best wording because they can sound like a guaranteed sleep-effect claim. Prefer all-night low-light use / 整晚柔和光線.
-
-## Approved English Phrases
-
-### Hero / Ad Hooks
-
-* Turn the day off, not the room.
-* Support melatonin. Keep the room usable. Sleep better.
-* Need light at night? Don't bring daytime back.
-* A low-blue sleep-spectrum lamp designed for better sleep.
-* Deep amber light that helps your body stay in night mode.
-* Not a normal night light. A sleep-spectrum lamp.
-* The light your body expects after dark.
-
-### Product Explanation
-
-* Owlnest Lume uses a deep amber, low-blue sleep spectrum to support natural melatonin and better sleep.
-* It gives you the light you need at night without bringing back the blue-rich brightness of daytime.
-* Designed for bedtime, night wake-ups, and all-night low-light use.
-* For people who do not want total darkness, but do not want a normal lamp either.
-
-### Science / FAQ
-
-* Blue-rich light at night can interfere with the body's natural melatonin rhythm.
-* Lume is designed to reduce nighttime blue-light exposure and support a more sleep-ready light environment.
-* Its deep amber, low-blue spectrum helps keep the room usable while supporting the body's natural night mode.
-
-## Approved Traditional Chinese Phrases
-
-### 主標 / 廣告鉤子
-
-* 關掉白天，不必關掉整個房間
-* 幫助促進自然褪黑激素分泌，保留夜晚需要的光，睡得更好
-* 晚上需要光，但不需要把白天帶回房間
-* 低藍光睡眠光譜，為更好睡眠而設計
-* 深琥珀睡眠光，幫助身體留在夜晚模式
-* 不是普通小夜燈，是睡眠光譜燈
-* 天黑後，給身體它期待的光
-
-### 產品說明
-
-* Owlnest Lume 使用深琥珀、低藍光睡眠光譜，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
-* 它保留夜晚需要的光，同時減少把房間照回白天的高藍光刺激
-* 適合睡前、半夜醒來，或整晚留一點柔和的光
-* 給不想全黑、但也不想開普通燈的人
-
-### 科學 / FAQ
-
-* 夜間高藍光可能干擾身體自然的褪黑激素節律
-* Lume 設計用來減少夜間藍光暴露，打造更適合睡眠的夜晚光線
-* 深琥珀、低藍光光譜，讓房間可用，同時幫助身體留在夜晚模式
-
-## Three Messaging Rules
-
-### Rule 1: Start with the night problem, then explain the science
-
-Do not start with 480nm, ipRGC, or melatonin.
-
-Start with the human problem:
-
-People need light at night, but they do not want to bring daytime back into the room.
-
-Then explain:
-
-Lume uses low-blue sleep-spectrum light to support melatonin and better sleep.
-
-### Rule 2: Place Lume between total darkness and normal light
-
-Do not sell Lume as a decorative lamp.
-Do not sell Lume as a normal night light.
-Do not sell Lume as another sleep app.
-
-Lume's position:
-
-Total darkness is not always practical.
-Normal light can feel too much like daytime.
-Lume is the low-blue sleep-spectrum option for nights when people still need light.
-
-### Rule 3: Talk about better sleep, not disease treatment
-
-Allowed:
-
-* supports better sleep
-* helps you fall asleep more easily
-* helps you sleep longer
-* supports natural melatonin
-* helps promote natural melatonin secretion
-
-Do not use:
-
-* cures insomnia
-* treats sleep disorders
-* guaranteed sleep improvement
-* clinically proven treatment
-
-The difference:
-
-Owlnest Lume uses spectrum design to support the body's natural sleep state. It is not a disease treatment.
-
-## Implementation Notes
-
-When creating website copy, ads, KOL scripts, FAQ, or product cards:
-
-* Do not reduce Lume to a calmer lamp
-* Do not reduce Lume to a decorative lamp
-* Do not reduce Lume to a normal night light
-* Do not make Lume sound like a sleep app
-* Keep the melatonin and better sleep value clear
-* Keep the all-night low-light use value clear
-* Lead with the everyday night problem
-* Use science to explain why Lume is different
-* Keep the phrase Turn the day off, not the room as the main brand line
+## 8. Implementation Rules
+
+- Start with the human nighttime problem, not a wavelength lesson.
+- Give each section one job: brand, product point of view, problem, definition, difference, evidence, or benefit.
+- Keep science present through one short bridge and a deeper Science entry.
+- Do not reduce Lume to a decorative lamp, normal night light, or a single missing spectral parameter.
+- Do not invent hardware features, measurements, certifications, or studies.
+- Keep English and Traditional Chinese facts aligned while writing natural Taiwan Traditional Chinese.

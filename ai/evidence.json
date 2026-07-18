@@ -2,7 +2,7 @@
   "brand": "Owlnest",
   "product_name": "Owlnest Lume",
   "source_of_truth": "Existing Owlnest Science page",
-  "evidence_positioning": "Owlnest Lume is an evidence-informed sleep-supporting spectrum lamp. Published research and institutional references on the Science page support the underlying lighting principles. Product-specific clinical outcomes have not been claimed.",
+  "evidence_positioning": "Owlnest Lume is a research-informed sleep-spectrum lamp, specially tuned for after dark. Published research and institutional references support general lighting principles, not product-specific clinical outcomes.",
   "claim_boundary": "The research sources support design principles only. They do not mean Owlnest Lume has completed product-specific clinical trials or can diagnose, treat, cure, or prevent disease.",
   "evidence_levels": [
     {
@@ -13,12 +13,12 @@
     {
       "level": "Level 2",
       "name": "Design Translation",
-      "summary": "Owlnest Lume translates these principles into a compact evening lamp with a deep amber / red-orange dusk-like glow, blue-light-minimized spectrum direction, use timing 1 to 2 hours before bed, and a low-stimulation nighttime lighting environment."
+      "summary": "Owlnest Lume translates these principles into a compact sleep-spectrum lamp with a deep amber / saturated orange-red dusk-like glow and a specially tuned sleep spectrum. Public product-specific spectrum measurement remains pending."
     },
     {
       "level": "Level 3",
       "name": "Product-Specific Validation",
-      "summary": "Product-specific validation should include spectral power distribution, CCT measurement, illuminance at common bedside distances, blue-light or melanopic data if available, and testing context. Current status: pending."
+      "summary": "Product-specific validation should include spectral power distribution, a same-condition ordinary warm lamp comparison, illuminance at stated distances, angle, melanopic metrics if available, output conditions, method, and limitations. Current status: pending."
     }
   ],
   "research_sources": [
@@ -117,7 +117,7 @@
       "year_if_available": "Year not clearly available from current Science page",
       "author_or_institution_if_available": "ITRI",
       "key_idea": "Presents ITRI's framing around sleep-related technology and nighttime-supportive environments.",
-      "relevance_to_owlnest_lume": "Supports the broader product context of evidence-informed sleep-supporting light and sleep-adjacent environmental design.",
+      "relevance_to_owlnest_lume": "Supports the broader product context of research-informed nighttime light and sleep-adjacent environmental design.",
       "claim_boundary": "Institutional context does not equal product-specific clinical validation for Owlnest Lume.",
       "used_in_design_traceability_matrix": true
     },
@@ -168,8 +168,8 @@
     {
       "science_page_source": "How Evening Room Light Suppresses Melatonin",
       "research_principle": "Blue-rich or stimulating room light can be more disruptive at night.",
-      "product_design_decision": "Minimize blue-light exposure during evening use.",
-      "owlnest_lume_implementation": "Blue-light-minimized amber spectrum direction.",
+      "product_design_decision": "Design light specifically for nighttime use.",
+      "owlnest_lume_implementation": "Specially tuned sleep spectrum; product-specific SPD and melanopic data are pending.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Needs product-specific spectral measurement for quantitative claims.",
       "validation_still_needed": "Blue-light ratio or melanopic measurement."
@@ -178,7 +178,7 @@
       "science_page_source": "CIE S 026: Measuring Biologically Relevant Light",
       "research_principle": "Biologically relevant light should be measured with more than visible brightness.",
       "product_design_decision": "Frame nighttime design around biological relevance and timing.",
-      "owlnest_lume_implementation": "Sleep-supporting spectrum lamp positioning for nighttime use.",
+      "owlnest_lume_implementation": "Sleep-spectrum lamp, specially tuned for after dark.",
       "evidence_level": "Institutional standard + design rationale",
       "claim_boundary": "Not proof that Owlnest Lume has completed the same measurements.",
       "validation_still_needed": "Melanopic or equivalent product-specific metrics if available."
@@ -186,8 +186,8 @@
     {
       "science_page_source": "Read: Smart Sleep Technology by ITRI",
       "research_principle": "Timing matters for sleep-supporting lighting environments.",
-      "product_design_decision": "Recommend use 1 to 2 hours before bed.",
-      "owlnest_lume_implementation": "Positioned as a sleep-supporting spectrum lamp for the hours before bed, not daytime task lighting.",
+      "product_design_decision": "Use after dark during the wind-down; the final 1 to 2 hours is practical guidance, not a tested threshold.",
+      "owlnest_lume_implementation": "Sleep-spectrum lamp specially tuned for after dark, including brief nighttime wake-ups when a small amount of light is needed.",
       "evidence_level": "Institutional research + design rationale",
       "claim_boundary": "Does not guarantee sleep improvement.",
       "validation_still_needed": "User study or controlled product-specific test if stronger claims are desired."
@@ -195,8 +195,8 @@
     {
       "science_page_source": "Biologically Relevant Lighting: An Industry Perspective",
       "research_principle": "Lighting can be designed with biological effects in mind.",
-      "product_design_decision": "Position the product as evidence-informed sleep-supporting lighting.",
-      "owlnest_lume_implementation": "Sleep-supporting spectrum lamp designed to support a more sleep-ready evening.",
+      "product_design_decision": "Position the product as research-informed nighttime lighting.",
+      "owlnest_lume_implementation": "Sleep-spectrum lamp designed to support the body's natural melatonin rhythm.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Does not prove product-specific clinical efficacy.",
       "validation_still_needed": "Product-specific validation summary page."
@@ -205,7 +205,7 @@
       "science_page_source": "Blue-Hazard-Free Candlelight-Style OLED",
       "research_principle": "Warm, candlelight-style spectrum directions can reduce blue-heavy nighttime light characteristics.",
       "product_design_decision": "Favor a deeper amber / red-orange dusk-like light signature.",
-      "owlnest_lume_implementation": "Sleep-supporting glow instead of ordinary warm lamp output.",
+      "owlnest_lume_implementation": "Specially tuned nighttime glow instead of ordinary warm lamp output.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Not a claim that Owlnest Lume has identical spectral performance.",
       "validation_still_needed": "Spectral power distribution report."
@@ -213,7 +213,7 @@
     {
       "science_page_source": "High-Efficiency Candlelight OLED with Very Low Color Temperature",
       "research_principle": "Very low color temperature can be intentionally engineered.",
-      "product_design_decision": "Use a low-stimulation spectrum direction for the hours before bed.",
+      "product_design_decision": "Use a specially tuned sleep spectrum for after dark.",
       "owlnest_lume_implementation": "Rich deep amber / red-orange dusk-like glow.",
       "evidence_level": "Published research + design translation",
       "claim_boundary": "Not a quantitative performance claim for Owlnest Lume.",
@@ -250,7 +250,7 @@
       "science_page_source": "Download: Smart Sleep and Care Solutions",
       "research_principle": "Calmer environmental design can support nighttime routines.",
       "product_design_decision": "Frame the product as a non-medical habit and environment support tool.",
-      "owlnest_lume_implementation": "Hours-before-bed positioning and simple hardware without extra stimulation.",
+      "owlnest_lume_implementation": "After-dark wind-down positioning and simple hardware without an app or screen.",
       "evidence_level": "Research report PDF + design rationale",
       "claim_boundary": "Does not establish medical or product-specific sleep claims.",
       "validation_still_needed": "Product-specific user testing or validation summary."
@@ -267,12 +267,14 @@
   ],
   "recommended_wording": [
     "research-informed design",
-    "evidence-informed sleep-supporting lighting",
-    "designed around published research on evening light exposure and blue-light reduction",
-    "supports a more sleep-ready evening",
-    "supports natural melatonin rhythm",
-    "helps create a calmer nighttime environment",
-    "designed for the 1 to 2 hours before bed"
+    "sleep-spectrum lamp",
+    "specially tuned sleep spectrum",
+    "light specially tuned for nighttime",
+    "specially tuned for after dark",
+    "designed to support the body's natural melatonin rhythm",
+    "research-informed",
+    "supports a more sleep-ready nighttime environment",
+    "the final 1 to 2 hours before bed as practical guidance, not a tested threshold"
   ],
   "avoided_wording": [
     "clinically proven",
@@ -287,15 +289,15 @@
     "current_status": "Product design is evidence-informed. Product-specific laboratory validation should be added when available.",
     "recommended_next_steps": [
       "spectral power distribution report",
-      "CCT measurement",
+      "same-condition ordinary warm lamp spectral comparison",
       "illuminance / lux at common bedside distances",
-      "blue-light percentage or melanopic equivalent daylight illuminance if available",
-      "test distance and test environment",
+      "melanopic equivalent daylight illuminance or other melanopic metrics if available",
+      "test distance, angle, output setting, date, instrument, and environment",
       "photos of actual product under controlled lighting",
       "third-party lab or instrument report if available"
     ]
   },
-  "last_updated": "2026-06-05",
+  "last_updated": "2026-07-18",
   "language_versions": {
     "en": "https://owlnestofficial.com/evidence/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"

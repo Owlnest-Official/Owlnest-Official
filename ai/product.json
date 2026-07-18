@@ -1,61 +1,101 @@
 {
   "brand": "Owlnest",
+  "brand_category": "Nighttime living",
+  "brand_tagline": "Made for life after dark.",
   "product_name": "Owlnest Lume",
-  "category": "sleep-supporting spectrum lamp",
-  "use_timing": "1 to 2 hours before bed",
-  "primary_use_case": "Used when a person still needs light at night but does not want harsh white ceiling light, bright bathroom light, hotel lighting, or overstimulating room lighting to pull the room back into daytime mode.",
-  "core_problem": "Many people do not need more brightness at night. They need light that feels appropriate for the evening. The problem Owlnest Lume addresses is not darkness itself, but the wrong type of light during the hours before sleep.",
+  "product_tagline": "Night deserves its own light.",
+  "hero_hook": "Your room knows it’s night. Your light doesn’t.",
+  "category": "sleep-spectrum lamp",
+  "technical_term": "specially tuned sleep spectrum",
+  "plain_language": "Light specially tuned for nighttime.",
+  "definition": "Lume is a sleep-spectrum lamp, specially tuned for after dark.",
+  "science_bridge": "Your body uses light to tell time.",
+  "design_intent": "Designed to support the body's natural melatonin rhythm.",
+  "primary_use_case": "Used after dark when a person still needs light but does not want ordinary daytime-like room lighting.",
+  "use_timing": {
+    "primary": "After dark during the wind-down before bed.",
+    "guidance": "The final 1 to 2 hours before bed is practical guidance, not a product-tested threshold.",
+    "night_wakeups": "Suitable for brief nighttime wake-ups when a small amount of light is still needed.",
+    "bedtime": "Switch Lume off at bedtime unless a small light is still needed. Owlnest does not claim that all-night use improves sleep or has no effect on melatonin."
+  },
+  "core_problem": "Your body uses light to tell time, but ordinary room lighting is usually not designed around life after dark.",
   "differentiation": [
-    "sleep-supporting spectrum lamp positioning",
-    "deep amber, low-blue spectrum direction",
-    "hours-before-bed timing",
-    "sleep-ready evening environment",
-    "compact bedside or room placement",
-    "non-medical, habit-based sleep support"
+    "sleep-spectrum lamp positioning",
+    "specially tuned sleep spectrum",
+    "light specially tuned for nighttime",
+    "designed from the spectrum up for sleep rather than only looking warm",
+    "deep amber, saturated orange-red dusk-like glow",
+    "simple physical operation without an app, screen, or subscription",
+    "non-medical sleep-environment tool"
   ],
   "specs": {
-    "size_cm": {
-      "width": 11,
-      "depth": 11,
-      "height": 12
-    },
-    "shape": "small egg-shaped lamp with a simple round wooden base",
-    "light_color": "rich deep amber / red-orange dusk-like glow",
-    "controls": "bottom power button",
+    "height": "approximately 14 to 15 cm",
+    "shape": "small egg-shaped lamp",
+    "material": "soft silicone lamp body",
+    "base": "simple round wooden base",
+    "light_color": "rich deep amber / saturated orange-red dusk-like glow that colors nearby surfaces",
+    "controls": "one physical button on the bottom",
     "charging": "USB-C rechargeable",
     "features_not_included": [
       "app",
-      "Bluetooth",
+      "screen",
       "clock",
       "speaker",
+      "Bluetooth",
+      "touch controls",
+      "RGB color changing",
       "projector",
-      "alarm",
-      "color-changing modes"
+      "subscription",
+      "sleep score"
+    ],
+    "unconfirmed_features_not_to_claim": [
+      "brightness adjustment",
+      "multiple modes",
+      "timer",
+      "automatic dimming"
     ]
   },
-  "evidence_positioning": "Evidence-informed design based on published research and lighting science from Owlnest's public Science page. Product-specific clinical outcomes have not been claimed.",
+  "evidence_status": {
+    "general_research": "Available on the public Science and Evidence pages as background for design principles.",
+    "product_spd": "Pending public product-specific measurement.",
+    "ordinary_warm_lamp_comparison": "Pending a public same-condition measurement.",
+    "melanopic_metrics": "Pending public product-specific measurement conditions and results.",
+    "product_clinical_outcomes": "Not available and not claimed."
+  },
   "evidence_links": {
     "evidence_brief": "https://owlnestofficial.com/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "science_page": "https://owlnestofficial.com/science"
   },
-  "safe_claims": [
-    "supports a more sleep-ready evening",
-    "supports natural melatonin rhythm",
-    "helps the body move into a more sleep-ready state",
-    "creates a calmer nighttime environment",
-    "designed for the 1 to 2 hours before bed",
-    "research-informed design",
-    "evidence-informed sleep-supporting lighting"
+  "approved_claims": [
+    "sleep-spectrum lamp",
+    "specially tuned sleep spectrum",
+    "light specially tuned for nighttime",
+    "specially tuned for after dark",
+    "designed for nighttime",
+    "designed to support the body's natural melatonin rhythm",
+    "research-informed",
+    "supports a more sleep-ready nighttime environment"
+  ],
+  "conditional_claims_requiring_more_product_evidence": [
+    "helps promote natural melatonin secretion",
+    "helps you fall asleep faster",
+    "helps you sleep longer",
+    "improves sleep quality",
+    "supports deeper sleep",
+    "supports stable sleep through the night"
   ],
   "claims_to_avoid": [
     "cures insomnia",
     "treats sleep disorders",
-    "guarantees deeper sleep",
-    "clinically proven unless product-specific clinical testing exists",
+    "guarantees better sleep",
+    "guarantees faster sleep onset",
+    "guarantees longer sleep",
     "guarantees melatonin production",
-    "resets the circadian rhythm",
-    "medically validated sleep treatment"
+    "clinically proven to treat sleep problems",
+    "medical-grade sleep treatment",
+    "blue-light-free or no-blue positioning",
+    "all-night use improves sleep or has no effect on melatonin"
   ],
   "important_links": {
     "homepage": "https://owlnestofficial.com/",
@@ -66,7 +106,7 @@
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "campaign": "https://owlnestofficial.com/campaign/"
   },
-  "last_updated": "2026-06-05",
+  "last_updated": "2026-07-18",
   "language_versions": {
     "en": "https://owlnestofficial.com/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/"
@@ -76,7 +116,6 @@
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
     "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
     "zh-Hant_definition": "https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/",
-    "zh-Hant_fit_check": "https://owlnestofficial.com/zh-tw/sleep-ready-room-check/",
     "zh-Hant_campaign": "https://owlnestofficial.com/zh-tw/campaign/"
   }
 }

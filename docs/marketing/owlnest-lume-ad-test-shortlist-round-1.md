@@ -1,8 +1,10 @@
 # Owlnest Lume Ad Test Shortlist Round 1
 
-Status: Internal first-round creative testing shortlist
-Use for: Meta ads, TikTok tests, UGC prompts, static ad concepts, retargeting experiments
-Do not treat this as final public campaign copy without review.
+> [!WARNING]
+> **Status: Historical Round 1 test archive — superseded as current positioning guidance.**
+> Preserve this file as a record of the earlier test plan only. Do not relaunch its low-blue product answers, stronger sleep outcomes, or evaluation rules without rebuilding them through the current Truth documents and claim ladder.
+
+Original use: Meta ads, TikTok tests, UGC prompts, static ad concepts, and retargeting experiments.
 
 Source files:
 

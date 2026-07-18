@@ -1,8 +1,10 @@
 # Owlnest Lume Ad Hook Bank
 
-Status: Internal ad testing reference
-Use for: Meta ads, TikTok hooks, IG captions, creator briefs, email subject lines, retargeting tests
-Do not treat this as a landing page or final public campaign. This is a testing bank.
+> [!WARNING]
+> **Status: Historical hook bank — not approved current campaign copy.**
+> Hooks may be reviewed as raw observations, but many product answers still resolve to retired low-blue or broad better-sleep positioning. Reassign each surviving hook to the current brand hierarchy and claim ladder before any test or publication.
+
+Original use: Meta ads, TikTok hooks, IG captions, creator briefs, email subject lines, and retargeting tests.
 
 Source strategy:
 

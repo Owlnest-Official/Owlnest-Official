@@ -22,6 +22,6 @@ export function fmtShortDate(iso) {
  */
 export function displayNameFromActivation(item) {
   const t = (item?.display_token ?? "").toString().trim();
-  if (t) return `Sleep Aid Lamp ${t}`;
+  if (t) return `Owlnest Lume ${t}`;
   return "Registered";
 }

@@ -1,157 +1,186 @@
 # Owlnest Lume Product Facts Block
 
-Internal brand guidance for future website, ads, KOL briefs, FAQ, and customer support copy.
+Status: Current derived product-facts reference
 
-Use this as a source block for concise, consistent product explanations. Keep claims conservative and aligned with Owlnest Lume as a sleep-spectrum lamp, not a medical device.
+Effective date: 2026-07-18
 
-## English Product Facts Block
+Primary authorities:
 
-Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp designed to support natural melatonin and better sleep.
+- `docs/OWLNEST_BRAND_TRUTH.md`
+- `docs/LUME_PRODUCT_TRUTH.md`
 
-It helps reduce nighttime blue-light exposure, keeps the room usable, and helps your body stay in night mode.
+Use this file for concise website, FAQ, creator, advertising, and customer-support drafts. If a fact is missing or conflicts with either Truth document, do not infer it.
 
-Not a normal night light. Not a decorative lamp. Not another app.
-
-Turn the day off, not the room.
-
-## 繁中 Product Facts Block
-
-Owlnest Lume 是一盞 deep amber 深琥珀、低藍光睡眠光譜燈，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
-
-它能減少夜間高藍光刺激，讓房間留一點剛剛好的光，不用全黑，也不會亮得像白天
-
-不是普通小夜燈。不是裝飾燈。不是另一個睡眠 app
-
-關掉白天，不必關掉整個房間
-
-## Product Page Short Version
+## 1. Product Definition
 
 ### English
 
-Title:
-Product Facts
+Owlnest Lume is a sleep-spectrum lamp, specially tuned for after dark.
 
-Body:
-Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp designed to support natural melatonin and better sleep.
+It uses a specially tuned sleep spectrum: light specially tuned for nighttime.
 
-It helps reduce nighttime blue-light exposure, keeps the room usable, and helps your body stay in night mode.
+Lume is designed to support the body's natural melatonin rhythm and help create a more sleep-ready nighttime environment. This is a design intention, not a measured hormone or sleep-outcome claim.
 
-Not a normal night light. Not a decorative lamp. Not another app.
+Not a normal night light. Not an ordinary warm lamp. Not a decorative or RGB lamp. Not a red-light therapy device. Not a medical device.
 
-Turn the day off, not the room.
+### Traditional Chinese
 
-### 繁中
+Owlnest Lume 是為天黑後特別調製的睡眠光譜燈。
 
-標題：
-產品重點
+它使用特調睡眠光譜，也就是為夜晚特別調製的光。
 
-內文：
-Owlnest Lume 是一盞 deep amber 深琥珀、低藍光睡眠光譜燈，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態
+它的設計用來支持身體自然的褪黑激素節律，幫助房間進入更適合準備睡覺的夜晚狀態。這是產品設計目標，不代表已量測每個人的荷爾蒙或睡眠結果。
 
-它能減少夜間高藍光刺激，讓房間留一點剛剛好的光，不用全黑，也不會亮得像白天
+不是普通小夜燈，不是一般暖光燈、裝飾燈或 RGB 燈，也不是紅光治療或醫療器材。
 
-不是普通小夜燈。不是裝飾燈。不是另一個睡眠 app
+## 2. Verified Appearance
 
-關掉白天，不必關掉整個房間
+- small egg-shaped lamp body
+- soft silicone material
+- simple round wooden base
+- approximately 14 to 15 cm tall
+- deep amber, saturated orange-red, dusk-like glow
+- nearby surfaces visibly take on an orange-red cast
 
-## FAQ Long Version
+Do not depict or describe Lume emitting white, pale-yellow, blue, purple, or RGB color-changing light.
+
+## 3. Verified Hardware
+
+- USB-C charging
+- one physical button on the bottom
+- no App
+- no screen
+- no clock
+- no speaker
+- no Bluetooth
+- no touch controls
+- no RGB
+- no projector
+- no subscription
+- no sleep score
+
+Do not add or imply adjustable brightness, dimming, multiple modes, a timer, automatic fading, Sleep Mode, Evening Mode, or another unverified function.
+
+## 4. Usage Facts
+
+Primary use:
+
+- after dark when ordinary room lighting feels too daytime-like
+- during the wind-down period before bed
+- during brief nighttime wake-ups when a small amount of light is needed
+
+The final `1 to 2 hours` before bed may be offered as practical wind-down guidance. It is not a tested threshold or universal requirement.
+
+At bedtime, switch Lume off unless a small amount of light is still needed. Do not promote continuous overnight use as a sleep benefit.
+
+Place Lume upright on a stable, dry, level surface near the bed or another low-light nighttime area. Keep it away from water, open flame, heaters, direct heat, and fabric that could cover the lamp.
+
+Lume may provide soft light for simple cues, brief reading, or settling down. It is not a bright task lamp or the sole safety light for stairs, obstacles, hazards, or detailed tasks.
+
+No verified numeric distance, eye angle, brightness setting, illuminance, or room-position rule is established in the repository.
+
+## 5. Evidence Status
+
+Available:
+
+- general light-at-night, spectrum, melatonin, CIE, and ITRI research
+- real product and hardware photography
+
+Pending:
+
+- product-specific spectral power distribution report
+- measured Lume-versus-warm-lamp SPD comparison
+- spectrometer output and test conditions
+- verified CCT range
+- illuminance at defined distances and angles
+- melanopic EDI or equivalent product-specific metric
+- product-specific clinical or controlled sleep-outcome study
+
+General research supports design principles only. Product photographs support appearance and hardware facts only. Conceptual diagrams are not product measurements.
+
+## 6. Known Specification Boundaries
+
+- Use `approximately 14 to 15 cm tall` until final width, depth, and production measurements are reconfirmed.
+- Do not reuse the older `11 x 11 x 12 cm` dimensions.
+- Treat the older `1500K-1800K` range as pending validation; do not publish it as measured product data.
+- Do not publish quantitative blue-light reduction, SPD, illuminance, distance, angle, or melanopic claims without a real report.
+
+## 7. Approved Short Blocks
+
+### English product card
+
+**Lume is a sleep-spectrum lamp, specially tuned for after dark.**
+
+Light specially tuned for nighttime. Deep amber, saturated orange-red glow. One physical button, USB-C charging, no App, and no screen.
+
+Research-informed design. Not a medical device.
+
+### Traditional Chinese product card
+
+**Lume 是為天黑後特別調製的睡眠光譜燈。**
+
+為夜晚特別調製的光。深琥珀、飽和橘紅暮光；一顆實體按鈕、USB-C 充電，沒有 App，也沒有螢幕。
+
+研究知情設計，不是醫療器材。
+
+## 8. FAQ Source Answers
 
 ### What is Owlnest Lume?
 
-Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp for the last 1 to 2 hours before bed and low-light nights. It is designed to keep the room usable without turning the space back into a daytime lighting environment.
+Lume is a sleep-spectrum lamp, specially tuned for after dark. Its deep amber, orange-red glow gives the room light made specifically for nighttime, with one physical button and no App or screen.
 
 ### Is it a normal night light?
 
-No. A normal night light is usually made for visibility. Owlnest Lume is designed around nighttime light principles: deep amber tone, reduced blue-rich stimulation, simple physical control, and a softer room signal before sleep.
+No. A normal night light is mainly made for visibility. Lume is designed from the spectrum up for nighttime and sleep-environment use.
 
-### Is it a decorative lamp?
+### How is it different from an ordinary warm lamp?
 
-No. It can look calm in a room, but its purpose is not decoration first. It is a sleep-supporting spectrum lamp built for calmer pre-sleep and nighttime light.
-
-### Does it replace a sleep app?
-
-No. Owlnest Lume is not another app, screen, routine tracker, or notification system. It is a physical light designed to reduce evening visual stimulation.
-
-### Does it make the room completely dark?
-
-No. The goal is not total darkness. Lume helps keep just enough low, deep amber light in the room so you can move, read simple cues, or settle down without turning on harsh room lighting.
+Warm is how light looks. Spectrum is what the light contains. Ordinary warm light may only look warm; Lume is designed from the spectrum up for sleep. Product-specific comparison measurements are still pending.
 
 ### Is it a medical device?
 
-No. Owlnest Lume is not a medical device and is not clinically validated to treat or cure sleep disorders. It is a research-informed sleep-spectrum lamp designed to support a calmer nighttime light environment.
+No. Lume is a research-informed sleep-environment tool. It is not a medical device and does not treat or cure insomnia or another sleep disorder.
 
-### Can you leave it on at night?
+### Can it stay on all night?
 
-Use it as a soft low-light option when you need a little light before sleep or during the night. Individual sleep environments vary, and Lume should be used in the way that feels most comfortable for the room.
+Use Lume before bed or during the night when a small amount of light is needed. At bedtime, switch it off unless some light is still needed. Do not infer that leaving it on improves sleep or cannot affect melatonin; product-specific overnight conditions have not been established.
 
-### 繁中 FAQ 長版
+### Owlnest Lume 是什麼？
 
-#### Owlnest Lume 是什麼？
+Lume 是為天黑後特別調製的睡眠光譜燈。深琥珀、飽和橘紅暮光，是為夜晚特別調製的光；一顆實體按鈕，沒有 App 或螢幕。
 
-Owlnest Lume 是一盞 deep amber 深琥珀、低藍光睡眠光譜燈，適合睡前 1 到 2 小時與夜晚想留一點柔和光的時候使用。它的重點不是把房間照亮，而是讓房間留一點剛剛好的光，不把夜晚重新變成白天。
+### 它是一般小夜燈嗎？
 
-#### 它是一般小夜燈嗎？
+不是。一般小夜燈主要讓人看得見；Lume 從光譜開始，為夜晚與睡眠環境設計。
 
-不是。一般小夜燈多半只是為了看得見。Owlnest Lume 是依照夜間光線原則設計，使用深琥珀、低藍光光線，讓房間留在更安靜的夜晚狀態。
+### 它和普通暖光燈有什麼不同？
 
-#### 它是裝飾燈嗎？
+暖，是光看起來的樣子；光譜，是光真正包含的內容。普通暖光可能只是看起來溫暖；Lume 從光譜開始為睡眠設計。目前產品專屬的實測對照仍待完成。
 
-不是。Lume 可以讓房間看起來更安定，但它不是以裝飾為主。它是一盞睡眠光譜燈，重點是睡前與夜晚需要柔和光線時使用。
+### 它是醫療器材嗎？
 
-#### 它是睡眠 app 嗎？
+不是。Lume 是研究知情的睡眠環境工具，不是醫療器材，也不治療或治癒失眠與其他睡眠障礙。
 
-不是。Lume 沒有 app、沒有螢幕、沒有通知，也不需要複雜設定。它是一盞實體燈，讓睡前少一個螢幕、少一點刺激。
+### 可以整晚開著嗎？
 
-#### 它會讓房間全黑嗎？
+睡前或半夜仍需要一點光時可以使用 Lume。準備睡覺時，除非仍需要一點光，否則請將它關掉。不要把能保持開啟直接解讀成改善睡眠或不影響褪黑激素；目前尚未建立產品專屬的整夜使用條件。
 
-不會。Lume 的目的不是讓房間完全黑，而是在你還需要一點光的時候，提供比較不刺激的深琥珀柔和光線。
-
-#### 它是醫療器材嗎？
-
-不是。Owlnest Lume 不是醫療器材，也不是治療睡眠問題的產品。它是研究知情的睡眠光譜燈，設計目標是讓房間變成更適合睡眠的夜晚光線。
-
-## KOL Bullet Points
+## 9. Approved Short Phrases
 
 ### English
 
-- Deep amber, low-blue sleep-spectrum lamp.
-- Made for the last 1 to 2 hours before bed and low-light nights.
-- Helps reduce nighttime blue-light exposure.
-- Keeps the room usable without turning it back into daytime.
-- Not a normal night light, decorative lamp, or sleep app.
-- One button, no screen, no app.
+- A sleep-spectrum lamp, specially tuned for after dark.
+- Light specially tuned for nighttime.
+- Night deserves its own light.
+- Ordinary warm light only looks warm.
+- One physical button. No App. No screen.
 - Research-informed design, not a medical device.
-- Turn the day off, not the room.
 
-### 繁中
+### Traditional Chinese
 
-- deep amber 深琥珀、低藍光睡眠光譜燈
-- 適合睡前 1 到 2 小時與夜晚想留一點柔和光的時候
-- 幫助減少夜間高藍光刺激
-- 房間不用全黑，也不會亮得像白天
-- 不是普通小夜燈、不是裝飾燈、不是另一個睡眠 app
-- 一個按鍵，沒有螢幕，沒有 app
-- 研究知情設計，非醫療器材
-- 關掉白天，不必關掉整個房間
-
-## Customer Service / Ad Short Phrases
-
-### English
-
-- Deep amber, low-blue light for calmer nights.
-- A sleep-spectrum lamp, not a night light.
-- Keep the room usable without turning it back into day.
-- For the last hour before bed and low-light nights.
-- One button. No app. No screen.
-- Turn the day off, not the room.
-- Research-informed nighttime light, not a medical device.
-
-### 繁中
-
-- 深琥珀、低藍光，讓夜晚更安靜
-- 睡眠光譜燈，不是一般夜燈
-- 房間不用全黑，也不用亮得像白天
-- 適合睡前與夜晚想留一點柔和光的時候
-- 一個按鍵，沒有 app，沒有螢幕
-- 關掉白天，不必關掉整個房間
-- 研究知情的夜間光線設計，非醫療器材
+- 為天黑後特別調製的睡眠光譜燈。
+- 為夜晚特別調製的光。
+- 夜晚，值得有自己的光。
+- 普通暖光只是看起來溫暖。
+- 一顆實體按鈕，沒有 App，也沒有螢幕。
+- 研究知情設計，不是醫療器材。

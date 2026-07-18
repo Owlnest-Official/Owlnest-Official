@@ -2,9 +2,9 @@
   "status": "available_now",
   "active": true,
   "lang": "en",
-  "title": "Owlnest Lume: Sleep Spectrum Lamp",
-  "subtitle": "A deep amber, low-blue sleep-spectrum lamp for nights that still need light.",
-  "description": "Owlnest Lume is not a generic night light or a normal warm lamp. It is a sleep spectrum lamp tuned for night-friendly sleep.",
+  "title": "Owlnest Lume: Sleep-Spectrum Lamp",
+  "subtitle": "Night deserves its own light.",
+  "description": "Lume is a sleep-spectrum lamp, specially tuned for after dark. Ordinary warm light only looks warm; Lume is designed from the spectrum up for sleep.",
   "notice": "Owlnest Lume is available now. Choose Single Lume or Duo Lume before secure Shopify checkout.",
   "preorder": {
     "enabled": true,
@@ -66,11 +66,11 @@
   "faq": [
     {
       "q": "What is Owlnest Lume?",
-      "a": "Owlnest Lume is a deep amber, low-blue sleep-spectrum lamp for bedtime, night wake-ups, and rooms that still need light."
+      "a": "Lume is a sleep-spectrum lamp, specially tuned for after dark."
     },
     {
       "q": "How is Owlnest Lume different from a normal warm lamp or night light?",
-      "a": "Owlnest Lume is designed around a night-friendly sleep spectrum. It is made for sleep, not just visibility."
+      "a": "Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep."
     },
     {
       "q": "Can I order now?",

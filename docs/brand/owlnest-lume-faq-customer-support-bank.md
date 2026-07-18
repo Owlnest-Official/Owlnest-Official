@@ -1,8 +1,10 @@
 # Owlnest Lume FAQ and Customer Support Answer Bank
 
-Status: Internal answer bank
-Use for: FAQ, customer support, DMs, creator replies, ad comments, and future product page FAQ
-Do not treat this as a public page by default.
+> [!WARNING]
+> **Status: Historical answer bank — not approved for current customer use.**
+> This file has not been reconciled with the 2026-07-17 positioning. Do not copy its low-blue product identity, all-night guidance, stronger melatonin wording, or sleep-outcome answers into FAQ, support, DMs, creator replies, or public pages. Read `docs/OWLNEST_BRAND_TRUTH.md`, `docs/LUME_PRODUCT_TRUTH.md`, and the current product-facts block first.
+
+Original use: FAQ, customer support, DMs, creator replies, ad comments, and future product-page FAQ.
 
 ## Main Positioning
 

@@ -147,9 +147,9 @@ function buildResultEmail(payload) {
             <td style="padding:0 22px 20px;">
               <div style="border:1px solid rgba(240,176,79,0.28);border-radius:16px;padding:18px;background-color:#15243d;background:#15243d;">
                 <div style="width:38px;height:2px;background-color:#d88a24;background:#d88a24;margin:0 0 13px;"></div>
-                <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">Why sleep with a light on?</h2>
-                <p style="margin:0 0 10px;color:#e8edf7;font-size:15px;line-height:1.58;">Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.</p>
-                <p style="margin:0;color:#e8edf7;font-size:15px;line-height:1.58;">Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.</p>
+                <h2 style="margin:0 0 10px;color:#fff6e8;font-size:21px;line-height:1.28;">Why nighttime light matters</h2>
+                <p style="margin:0 0 10px;color:#e8edf7;font-size:15px;line-height:1.58;">Lume is made for the moments after dark when the room still needs a little light.</p>
+                <p style="margin:0;color:#e8edf7;font-size:15px;line-height:1.58;">Bright or blue-rich light can send a daytime-like signal at night. Lume is a sleep-spectrum lamp, specially tuned for after dark and designed to support the body's natural melatonin rhythm. Use it before bed or during brief nighttime wake-ups when a small amount of light is needed.</p>
                 <p style="margin:14px 0 0;"><a href="${escapeAttribute(scienceUrl)}" style="color:#f0b04f;font-size:15px;font-weight:700;">Read the science</a></p>
               </div>
             </td>
@@ -183,9 +183,9 @@ function buildResultEmail(payload) {
     isAiPhoto ? "Try this" : "Try this tonight",
     tryText,
     "",
-    "Why sleep with a light on?",
-    "Darkness removes the wrong light signal. Owlnest Lume is designed to add the right one.",
-    "Bright or blue-rich light can suppress natural melatonin production and tell the brain it is still daytime. Owlnest Lume uses a specially tuned sleep spectrum made to stay on while you sleep, helping promote natural melatonin secretion with a night-friendly light signal.",
+    "Why nighttime light matters",
+    "Lume is made for the moments after dark when the room still needs a little light.",
+    "Bright or blue-rich light can send a daytime-like signal at night. Lume is a sleep-spectrum lamp, specially tuned for after dark and designed to support the body's natural melatonin rhythm. Use it before bed or during brief nighttime wake-ups when a small amount of light is needed.",
     `Read the science: ${scienceUrl}`,
     "",
     "This is not a medical assessment. Owlnest Lume is not a medical device. Individual experiences may vary.",
@@ -235,16 +235,16 @@ function quizTryItems(payload) {
   const category = resultCategoryLabel(payload.quiz_result_category);
   if (category === "High Match") {
     return [
-      "Use Owlnest Lume as a bedroom sleep spectrum lamp made to stay on while you sleep.",
+      "Use Lume during wind-down before bed, or during brief nighttime wake-ups when a small amount of light is needed.",
       "Reduce bright overhead light and screen glow that can send the wrong signal at night.",
-      "Let darkness remove disruptive light while Lume adds the right night-friendly signal.",
+      "At bedtime, switch it off unless a little light is still needed.",
     ];
   }
   if (category === "Medium Match") {
     return [
       "Use Lume in your bedroom or relaxation zone when overhead or cool-white light feels too active.",
       "Watch for bathroom, desk, or phone light that keeps the room feeling awake.",
-      "Replace harsh light with a calmer sleep spectrum made for nighttime.",
+      "Replace harsh light with light specially tuned for nighttime.",
     ];
   }
   return [

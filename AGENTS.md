@@ -1,109 +1,116 @@
 # Owlnest Website Agent Instructions
 
-## Owlnest Lume Brand and Marketing Instructions
+## Required Reading Order
 
-### Required First Step
+For any task involving Owlnest or Lume marketing, website copy, brand documents, ads, FAQ, creator materials, SEO, structured data, AI-readable content, or Traditional Chinese copy, read these files in order:
 
-For any task involving Owlnest Lume marketing, website copy, brand documents, ads, FAQ, creator materials, or Traditional Chinese copy, first read:
+1. `docs/OWLNEST_BRAND_TRUTH.md`
+2. `docs/LUME_PRODUCT_TRUTH.md`
+3. `docs/brand/owlnest-lume-operating-brief.md`
 
-- `docs/brand/owlnest-lume-operating-brief.md`
+The two root-level Truth documents are the primary authority. If any older brief, bank, draft, public page, runtime prompt, or generated artifact conflicts with them, the Truth documents win.
 
-Then read any relevant source docs listed inside that operating brief.
-
-### Source-of-Truth Docs
+Current derived references:
 
 - `docs/brand/owlnest-lume-claim-ladder.md`
 - `docs/brand/owlnest-lume-product-facts-block.md`
 - `docs/brand/normal-warm-lamp-vs-lume-comparison.md`
-- `docs/marketing/owlnest-lume-adjacent-problem-angles.md`
-- `docs/marketing/owlnest-lume-ad-hook-bank.md`
-- `docs/marketing/owlnest-lume-ad-test-shortlist-round-1.md`
 
-## Core Rules
+Files explicitly marked as historical or superseded are idea archives only. Do not use their product answers or claims verbatim without reconciling them against the current Truth documents.
 
-- Preserve the existing visual system, typography, colors, layout style, and brand tone.
-- Do not change checkout, payment, Snipcart, Supabase, login, account pages, or Netlify functions without explicit instruction.
-- Do not expose supplier details, costs, private agreements, internal strategy, team details, or unpublished operations.
-- Prefer minimal, reversible changes.
-- Summarize files changed after every task.
+## Brand and Product Architecture
+
+Owlnest is a nighttime-living home-lifestyle brand, not only a lamp or sleep-technology company.
+
+- Brand category: `Nighttime living` / `夜晚生活`
+- Owlnest brand tagline: `Made for life after dark.` / `為天黑後的生活而生。`
+- Lume product tagline: `Night deserves its own light.` / `夜晚，值得有自己的光。`
+- Lume Hero hook: `Your room knows it’s night. Your light doesn’t.`
+- Product definition: `Lume is a sleep-spectrum lamp, specially tuned for after dark.`
+- Technical term: `specially tuned sleep spectrum` / `特調睡眠光譜`
+- Plain-language explanation: `Light specially tuned for nighttime.` / `為夜晚特別調製的光。`
+- Science bridge: `Your body uses light to tell time.` / `身體會從光，判斷現在是什麼時候。`
+
+Do not interchange the Owlnest brand tagline, Lume product tagline, Hero hook, or product definition. Give each section one job.
+
+Retired as Lume's formal product positioning:
+
+- low-blue / low blue / 低藍光
+- no-blue / zero-blue / 無藍光
+- blue-light-free / blue-light-minimized
+- night-tuned spectrum
+
+These terms may appear only in accurately attributed research context or, where the Truth documents allow it, as a validated technical characteristic after real product measurement. They must not become Lume's category, headline, metadata identity, or first-sentence product definition.
 
 ## Claims and Compliance
 
-Owlnest Lume should be described as a sleep-spectrum lamp / sleep-supporting spectrum lamp tuned to help people sleep, not just see.
+Approved conservative language includes:
 
-Core product positioning:
+- Sleep-spectrum lamp
+- Specially tuned sleep spectrum
+- Light specially tuned for nighttime
+- Designed to support the body's natural melatonin rhythm
+- Research-informed design
+- Helps create a calmer nighttime environment
+- Helps the body move into a more sleep-ready state
+- Supports a more sleep-ready nighttime environment
 
-- English: Owlnest Lume is a low-blue sleep-spectrum lamp designed to support natural melatonin and better sleep.
-- Traditional Chinese: Owlnest Lume 是低藍光睡眠光譜燈，幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態。
+Claims requiring stronger product-specific evidence before affirmative use include:
 
-Use conservative general-wellness language:
-- supports a more natural evening wind-down
-- supports natural melatonin rhythm
-- helps create a calmer nighttime environment
-- helps the body move into a more sleep-ready state
-- research-informed design
-- evidence-informed circadian lighting
+- helps promote natural melatonin secretion
+- helps people fall asleep faster
+- helps people sleep longer
+- improves sleep quality
+- supports deeper or more stable sleep
+- claims that leaving Lume on all night improves sleep or cannot affect melatonin
 
-Avoid medical claims:
-- cures insomnia
-- treats sleep disorders
-- clinically proven
-- guarantees deeper sleep
+Do not claim or imply that Lume:
+
+- cures insomnia or treats a sleep disorder
+- guarantees faster, longer, deeper, or better sleep
 - guarantees melatonin production
-- medically validated
-
-Also do not claim:
-
-- causes weight loss
-- burns fat
-- boosts metabolism
-- controls appetite
-- builds muscle
-- repairs skin
-- treats anxiety
+- is clinically proven without real product-specific clinical testing
+- is a medical device or medical-grade treatment
+- fixes or resets a circadian rhythm
+- causes weight loss, burns fat, boosts metabolism, or controls appetite
+- builds muscle or guarantees recovery
+- repairs skin or provides anti-aging outcomes
+- treats anxiety or another mental-health condition
 - improves memory
 - makes babies sleep better
 - prevents falls
-- medical-grade treatment
 
-### Traditional Chinese Rules
+Lume is a sleep-environment tool, not a medical device.
 
-English may use "support."
+## Usage and Evidence Boundaries
 
-Traditional Chinese consumer-facing copy must not use:
+- Use Lume after dark, during the wind-down period before bed, or during brief nighttime wake-ups when a small amount of light is needed.
+- The final `1 to 2 hours` before bed may be described as practical guidance, not a tested threshold or universal requirement.
+- At bedtime, switch Lume off unless a small amount of light is still needed.
+- Do not make all-night use a primary selling claim or infer a biological outcome from color, softness, or visual appearance.
+- Do not publish a fixed distance, angle, illuminance, melanopic metric, CCT range, or spectral result until supported by product-specific records.
 
-- 支持
-- 低光環境
-- 光環境產品
-- 健康光線產品
-- 維持
-- 用戶
-- 質量
-- 解決方案
-- 科學助眠
-- 助眠燈
+The current repository contains general research and real product/hardware photography, but no public product-specific SPD report, measured warm-lamp comparison, defined illuminance conditions, melanopic metrics, or clinical sleep-outcome study.
 
-Use Taiwan-natural wording:
+- Label conceptual diagrams as educational or conceptual.
+- Never present AI-generated or conceptual curves as measured evidence.
+- General research supports design principles only; it does not prove Lume-specific biological or clinical outcomes.
 
-- 睡前光線
-- 夜晚光線
-- 夜晚柔和光線
-- 幫助促進自然褪黑激素分泌
-- 幫助身體進入夜晚模式
-- 幫助睡得更好
-- 讓房間保留剛剛好的光
-- 不用全黑，也不會亮得像白天
-- 晚上需要一點光，但不需要把白天帶回房間
+## Traditional Chinese Rules
 
-Research references from the Science page support design principles only. They do not prove product-specific clinical outcomes unless actual product-specific clinical testing is present.
+- Write naturally for Taiwan readers; do not translate English sentence structure mechanically.
+- Preserve contrast, imagery, brevity, and the assigned job of each line.
+- Avoid mainland-style wording and generic wellness filler.
+- Avoid generic uses of `支持` in consumer-facing prose. The exact approved statement `設計用來支持身體自然的褪黑激素節律` is an intentional exception and must not be strengthened into a measured outcome.
+- Prefer concrete phrases such as `睡前光線`, `夜晚光線`, `讓房間保留剛剛好的光`, and `晚上需要一點光，但不需要把白天帶回房間` where they fit the section's job.
+- Do not use `低藍光燈`, `無藍光燈`, `防藍光燈`, `藍光過濾燈`, or `助眠燈` as Lume's formal product identity.
 
-## Evidence Handling
+## Core Engineering Rules
 
-Use the existing Science page as the source of truth for research references.
-Do not invent papers, lab reports, measured values, certifications, or clinical trials.
-If product-specific spectrum validation is not available, label it as pending.
-
-## Engineering Guardrails
+- Preserve the existing visual system, typography, colors, layout style, and brand tone.
+- Prefer minimal, reversible changes.
+- Do not expose supplier details, costs, private agreements, internal strategy, team details, or unpublished operations.
+- Summarize files changed after every task.
 
 Do not touch these areas unless explicitly requested:
 
@@ -113,6 +120,7 @@ Do not touch these areas unless explicitly requested:
 - Supabase
 - discount code logic
 - account / auth
+- Netlify functions
 - images
 - `_incoming/`
 

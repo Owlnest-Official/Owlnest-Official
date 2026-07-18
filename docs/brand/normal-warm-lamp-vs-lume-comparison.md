@@ -1,288 +1,159 @@
-# Normal Warm Lamp vs Owlnest Lume
+# Ordinary Warm Lamp vs Owlnest Lume
 
-Copy draft for comparison graphic, website modules, IG carousel, KOL scripts, and ad testing.
+Status: Current derived comparison reference
 
-Source logic:
-- People already know blue light can make them feel awake.
-- People already know night needs a different kind of light than day.
-- People still need light at night.
-- Total darkness is not always practical.
-- Normal night lights mainly help you see, but they are not necessarily designed for sleep.
+Effective date: 2026-07-18
 
-Core Lume claim:
+Primary authorities:
 
-> A low-blue sleep-spectrum lamp designed to support natural melatonin and better sleep.
+- `docs/OWLNEST_BRAND_TRUTH.md`
+- `docs/LUME_PRODUCT_TRUTH.md`
 
-Brand line:
+Use this file for Products, Campaign, website modules, creator scripts, and advertising drafts. Do not add measured differences or biological outcomes that are not supported by product-specific evidence.
 
-> Turn the day off, not the room.  
-> Support melatonin. Keep the room usable. Sleep better.
+## 1. Comparison Principle
 
----
+The comparison is not `warm versus not warm` and it is not `blue light versus zero blue light`.
 
-## 1. English Version
+The approved distinction is:
 
-### Normal Warm Lamp vs Owlnest Lume
+> Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep.
 
-| | Normal warm lamp | Owlnest Lume |
-|---|---|---|
-| Purpose | Mainly made for visibility or atmosphere. | Designed for better nights, bedtime, night wake-ups, and all-night low-light use. |
-| Light spectrum | Looks warm, but is not necessarily designed for sleep. | Deep amber, low-blue sleep spectrum. |
-| Nighttime blue-light exposure | May still bring too much daytime-like brightness into the room. | Helps reduce nighttime blue-light exposure. |
-| Melatonin support | Not designed around melatonin support. | Designed to support natural melatonin and better sleep. |
-| Room usability | Helps you see, but may feel too bright for night. | Keeps the room usable without bringing daytime back. |
-| Best for | General lighting, atmosphere, and visibility. | Bedtime, night wake-ups, baby care, bathroom trips, reading, and all-night low-light use. |
-| What it is not | Not necessarily a sleep-focused light. | Not a normal night light. Not a decorative lamp. Not another app. Not a medical treatment. |
+> 普通暖光只是看起來溫暖；Lume 從光譜開始為睡眠設計。
 
-### 3-second takeaway
+Plain-language explanation:
 
-A normal warm lamp may look cozy.  
-Owlnest Lume is built for night.
+> Warm is how light looks. Spectrum is what the light contains.
 
-Deep amber. Low blue. Designed to support melatonin and better sleep.
+> 暖，是光看起來的樣子；光譜，是光真正包含的內容。
 
-### Graphic caption
+Do not imply that every ordinary warm lamp is harmful. The point is that ordinary lighting is usually designed for general visibility or atmosphere, while Lume is designed specifically for nighttime and the sleep environment.
 
-Warm-looking light is not the same as sleep-spectrum light.
+## 2. English Comparison
 
-Owlnest Lume uses deep amber, low-blue light to help reduce nighttime blue-light exposure, keep the room usable, and support natural melatonin.
+### Ordinary warm lamp vs Owlnest Lume
 
----
+| Dimension | Ordinary warm lamp | Owlnest Lume |
+| --- | --- | --- |
+| Primary design purpose | General visibility, atmosphere, or broad room lighting. | Nighttime and the sleep environment. |
+| How the light is described | Warm appearance or color. | A specially tuned sleep spectrum: light specially tuned for nighttime. |
+| Role after dark | May still make a room feel like general daytime lighting, depending on output and placement. | Designed to help the room move away from a daytime-like signal while keeping some light available. |
+| Product category | General lamp or warm light. | Sleep-spectrum lamp. |
+| Operation | Varies by product; smart lamps may add apps, screens, settings, or color controls. | One physical button, USB-C charging, no App, and no screen. |
+| Evidence entry | Product-specific evidence varies by lamp. | General research informs the design; Lume-specific SPD and measured warm-lamp comparison are pending. See the Science page for the research boundary. |
 
-## 2. Traditional Chinese Version
+### Three-second takeaway
 
-### 普通暖燈 vs Owlnest Lume
+An ordinary warm lamp may look warm.
 
-| | 普通暖燈 | Owlnest Lume |
-|---|---|---|
-| 用途 | 主要是讓你看得到，或讓房間有氣氛。 | 為更好睡的夜晚設計，適合睡前、半夜醒來與整晚留一點柔和的光。 |
-| 光譜 | 看起來是暖光，但不一定是為睡眠設計。 | 深琥珀、低藍光睡眠光譜。 |
-| 夜間藍光暴露 | 有時還是會把房間照得太像白天。 | 幫助減少夜間藍光暴露。 |
-| 褪黑激素 | 不是依照促進自然褪黑激素分泌的光譜邏輯設計。 | 設計用來幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態。 |
-| 房間可用性 | 讓你看得到，但晚上可能還是太亮。 | 房間還看得到，但不把白天帶回來。 |
-| 適合情境 | 一般照明、氣氛、看得到。 | 睡前、半夜醒來、照顧小孩、去洗手間、閱讀，以及整晚留一點柔和的光。 |
-| 它不是什麼 | 不一定是以睡眠為核心設計的光。 | 不是普通小夜燈。不是裝飾燈。不是另一個 app。不是醫療治療產品。 |
+Lume is designed from the spectrum up for sleep.
 
-### 3 秒看懂
+### Short website block
 
-普通暖燈看起來溫暖。  
-Owlnest Lume 是為夜晚設計。
+**Warm is how light looks. Spectrum is what the light contains.**
 
-深琥珀、低藍光，幫助減少夜間藍光暴露，幫助促進自然褪黑激素分泌，讓夜晚更好睡。
+Ordinary warm light may only look warm. Lume is a sleep-spectrum lamp, specially tuned for after dark.
 
-### 圖卡說明
+Product-specific measured comparison is pending. Read the Science page for the research and evidence boundary.
 
-看起來暖，不等於適合睡。
+## 3. Traditional Chinese Comparison
 
-Owlnest Lume 使用深琥珀、低藍光睡眠光譜，幫助減少夜間藍光暴露，讓房間還看得到，但不把白天帶回來。
+### 普通暖光燈 vs Owlnest Lume
 
----
+| 比較面向 | 普通暖光燈 | Owlnest Lume |
+| --- | --- | --- |
+| 主要設計目的 | 一般照明、氣氛或讓房間看得見。 | 為夜晚與睡眠環境設計。 |
+| 光線怎麼被定義 | 著重看起來溫暖的顏色。 | 使用特調睡眠光譜，也就是為夜晚特別調製的光。 |
+| 天黑後的角色 | 依亮度與擺放位置不同，仍可能讓房間保留一般照明的白天感。 | 設計用來讓房間離開白天感，同時保留仍需要的一點光。 |
+| 產品類型 | 一般燈具或暖光燈。 | 睡眠光譜燈。 |
+| 操作方式 | 依產品不同；智慧燈可能加入 App、螢幕、設定或變色控制。 | 一顆實體按鈕、USB-C 充電，沒有 App，也沒有螢幕。 |
+| 科學證據入口 | 視各燈具的產品資料而定。 | 設計參考一般研究；Lume 專屬 SPD 與普通暖光燈實測對照仍待完成。研究與證據邊界請見 Science 頁。 |
 
-## 3. Short Version for Website
+### 三秒看懂
+
+普通暖光可能只是看起來溫暖。
+
+Lume 從光譜開始為睡眠設計。
+
+### 網站短版
+
+**暖，是光看起來的樣子；光譜，是光真正包含的內容。**
+
+普通暖光可能只是看起來溫暖；Lume 是為天黑後特別調製的睡眠光譜燈。
+
+產品專屬的實測對照仍待完成。研究內容與證據邊界請見 Science 頁。
+
+## 4. Product-Evidence Card
+
+Until real measurements are available, use a clearly marked pending state.
+
+### English placeholder
+
+**Measured spectrum comparison — pending**
+
+Lume-specific SPD and an ordinary warm-lamp comparison have not yet been published. Future data must show identical measurement conditions, including equipment, date, output setting, distance, angle, illuminance, and room context.
+
+Current educational diagrams are conceptual and must not be labeled as measured product data.
+
+### Traditional Chinese placeholder
+
+**實測光譜對照——待補**
+
+目前尚未公開 Lume 專屬 SPD 與普通暖光燈實測對照。未來資料必須標示相同量測條件，包括設備、日期、輸出設定、距離、角度、照度與房間情境。
+
+現有教育圖為概念示意，不可標示為產品實測資料。
+
+## 5. Approved Supporting Lines
 
 ### English
 
-**Normal warm lamp vs Owlnest Lume**
-
-A normal warm lamp may look cozy, but it is not necessarily designed for sleep.
-
-Owlnest Lume uses a deep amber, low-blue sleep spectrum to help reduce nighttime blue-light exposure, support natural melatonin, and keep the room usable without bringing daytime back.
-
-**Not a normal night light. A sleep-spectrum lamp for better nights.**
+- After dark, ordinary light gets it wrong.
+- Night deserves its own light.
+- Not a night light. A sleep-spectrum lamp.
+- Light specially tuned for nighttime.
+- One physical button. No App. No screen.
+- Your body uses light to tell time.
 
 ### Traditional Chinese
 
-**普通暖燈 vs Owlnest Lume**
-
-普通暖燈看起來溫暖，但不一定是為睡眠設計。
-
-Owlnest Lume 使用深琥珀、低藍光睡眠光譜，幫助減少夜間藍光暴露，幫助促進自然褪黑激素分泌；房間還看得到，但不把白天帶回來。
-
-**不是普通小夜燈，是為更好夜晚設計的睡眠光譜燈。**
-
----
-
-## 4. Square IG Carousel Version
-
-### English Carousel
-
-#### Slide 1
-**Normal warm lamp vs Owlnest Lume**
-
-They are not the same light.
-
-#### Slide 2
-**Normal warm lamp**
-
-Looks warm.  
-But not necessarily designed for sleep.
-
-#### Slide 3
-**Normal warm lamp**
-
-Mainly made for visibility or atmosphere.
-
-It may still bring too much daytime-like brightness into the room.
-
-#### Slide 4
-**Owlnest Lume**
-
-Deep amber.  
-Low blue.  
-Sleep spectrum.
-
-#### Slide 5
-**Designed for night mode**
-
-Helps reduce nighttime blue-light exposure.
-
-Designed to support natural melatonin and better sleep.
-
-#### Slide 6
-**Light you can live with at night**
-
-Keeps the room usable without bringing daytime back.
-
-#### Slide 7
-**Best for**
-
-Bedtime.  
-Night wake-ups.  
-Baby care.  
-Bathroom trips.  
-Reading.  
-All-night low-light use.
-
-#### Slide 8
-**Turn the day off, not the room.**
-
-Not a normal night light.  
-Not another app.  
-A low-blue sleep-spectrum lamp for better nights.
-
-### Traditional Chinese Carousel
-
-#### Slide 1
-**普通暖燈 vs Owlnest Lume**
-
-看起來像，邏輯不一樣。
-
-#### Slide 2
-**普通暖燈**
-
-看起來是暖光。  
-但不一定是為睡眠設計。
-
-#### Slide 3
-**普通暖燈**
-
-主要是讓你看得到，或讓房間有氣氛。
-
-有時還是會把房間照得太像白天。
-
-#### Slide 4
-**Owlnest Lume**
-
-深琥珀。  
-低藍光。  
-睡眠光譜。
-
-#### Slide 5
-**為夜晚模式設計**
-
-幫助減少夜間藍光暴露。
-
-設計用來幫助促進自然褪黑激素分泌，讓身體進入更好睡的夜晚狀態。
-
-#### Slide 6
-**晚上需要光，但不需要白天**
-
-房間還看得到，但不把白天帶回來。
-
-#### Slide 7
-**適合這些時候**
-
-睡前。
-
-半夜醒來。
-
-照顧小孩。
-
-去洗手間。
-
-閱讀。
-
-整晚留一點柔和的光。
-
-#### Slide 8
-**關掉白天，不必關掉整個房間。**
-
-不是普通小夜燈。  
-不是另一個 app。  
-是一盞為更好夜晚設計的低藍光睡眠光譜燈。
-
----
-
-## 5. KOL Script Version
-
-### English KOL Script
-
-Most warm lamps look cozy, but that does not automatically mean they are designed for sleep.
-
-At night, I still need light. Total darkness is not always practical. But I also do not want to turn on something that makes the room feel like daytime again.
-
-That is where Owlnest Lume is different.
-
-Lume uses a deep amber, low-blue sleep spectrum. It is designed to help reduce nighttime blue-light exposure, support natural melatonin, and keep the room usable without bringing daytime back.
-
-So instead of a normal night light or another sleep app, this is a sleep-spectrum lamp made for bedtime, night wake-ups, and all-night low-light use.
-
-Turn the day off, not the room.
-
-### Traditional Chinese KOL Script
-
-很多暖燈看起來很舒服，但看起來溫暖，不代表它就是為睡眠設計。
-
-晚上其實還是會需要一點光。全黑不一定方便，但我也不想一開燈，房間又亮得像白天。
-
-Owlnest Lume 不一樣的地方就在這裡。
-
-它用的是 deep amber 深琥珀、低藍光睡眠光譜，幫助減少夜間藍光暴露，也幫助促進自然褪黑激素分泌，讓房間還保留一點剛剛好的光。
-
-所以它不是普通小夜燈，也不是另一個睡眠 app。它是一盞為睡前、半夜醒來和整晚留一點柔和的光而設計的睡眠光譜燈。
-
-關掉白天，不必關掉整個房間。
-
----
-
-## 6. Ad Headline Options
+- 天黑之後，普通的燈就用錯了。
+- 夜晚，值得有自己的光。
+- 不是普通小夜燈，是睡眠光譜燈。
+- 為夜晚特別調製的光。
+- 一顆實體按鈕，沒有 App，也沒有螢幕。
+- 身體會從光，判斷現在是什麼時候。
+
+Use these lines by job. Do not stack all of them in a single comparison card.
+
+## 6. Claims Not Allowed in the Comparison
+
+Do not use either column to assert:
+
+- exact blue-light reduction without real measurement
+- no-blue, zero-blue, blue-light-free, or low-blue as Lume's identity
+- verified CCT, SPD, illuminance, melanopic EDI, distance, or angle without records
+- faster sleep, longer sleep, deeper sleep, or improved sleep quality
+- guaranteed melatonin changes
+- all-night use as a sleep benefit
+- baby-sleep outcomes
+- clinical validation or medical treatment
+
+Do not list brightness adjustment, dimming, modes, a timer, automatic fade, or another unconfirmed feature as a Lume advantage.
+
+## 7. Creator and Advertising Draft
 
 ### English
 
-1. Warm light is not always sleep light.
-2. Not every night light is made for sleep.
-3. Need light at night? Do not bring daytime back.
-4. Deep amber. Low blue. Built for better nights.
-5. A normal warm lamp helps you see. Lume helps the night stay night.
-6. Turn the day off, not the room.
-7. Not a normal night light. A sleep-spectrum lamp.
-8. Light for night, not daytime leftovers.
-9. Keep the room usable. Keep your body in night mode.
-10. Support melatonin. Keep the room usable. Sleep better.
-11. The warm lamp you have is not necessarily sleep-spectrum.
-12. Better nights start with different light.
+Most warm lamps are described by how the light looks. Lume starts with what the light contains.
+
+That is why Lume is not positioned as another cozy lamp or ordinary night light. It is a sleep-spectrum lamp, specially tuned for after dark, with one physical button and no App or screen.
+
+The design is research-informed. Product-specific spectrum measurements and a measured warm-lamp comparison are still pending, so do not present a concept curve as proof.
 
 ### Traditional Chinese
 
-1. 看起來暖，不等於適合睡。
-2. 不是每一盞小夜燈，都是為睡眠設計。
-3. 晚上需要光，但不需要把白天帶回來。
-4. 深琥珀、低藍光，為更好夜晚設計。
-5. 普通暖燈讓你看得到，Lume 讓夜晚還是夜晚。
-6. 關掉白天，不必關掉整個房間。
-7. 不是普通小夜燈，是睡眠光譜燈。
-8. 給夜晚的光，不是白天的殘光。
-9. 房間還看得到，身體也比較容易進入夜晚模式。
-10. 幫助促進自然褪黑激素分泌，保留夜晚需要的光，睡得更好。
-11. 你家的暖燈，不一定是睡眠光譜。
-12. 更好睡的夜晚，從不一樣的光開始。
+多數暖光燈先說光看起來多溫暖；Lume 從光真正包含的內容開始。
+
+所以 Lume 不是另一盞氣氛燈或普通小夜燈，而是為天黑後特別調製的睡眠光譜燈。一顆實體按鈕，沒有 App，也沒有螢幕。
+
+產品設計參考一般研究；Lume 專屬光譜實測與普通暖光燈對照仍待完成，因此不可把概念曲線當成證據。

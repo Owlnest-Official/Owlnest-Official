@@ -1,8 +1,10 @@
 # Owlnest Lume Adjacent Problem Angles
 
-Status: Internal marketing strategy reference
-Use for: ad strategy, hook testing, creator briefs, email angles, blog planning, campaign planning
-Do not treat this as public page copy by default. This is an internal strategy document.
+> [!WARNING]
+> **Status: Historical marketing strategy archive — not current product or claim authority.**
+> The problem angles may be reviewed as raw ideas, but the product return lines have not been reconciled with the 2026-07-17 positioning. Rebuild every answer through `docs/OWLNEST_BRAND_TRUTH.md`, `docs/LUME_PRODUCT_TRUTH.md`, and the current claim ladder before testing or publication.
+
+Original use: ad strategy, hook testing, creator briefs, email angles, blog planning, and campaign planning.
 
 ## 1. Strategy Summary
 

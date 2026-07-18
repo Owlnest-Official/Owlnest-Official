@@ -1,8 +1,10 @@
 # Owlnest Lume Benefit Amplification Map
 
-Status: Internal strategic map
-Use for: future Home, Products, ads, FAQ, creator copy, support scripts, and campaign planning
-Do not treat this as public page copy by default.
+> [!WARNING]
+> **Status: Historical strategy archive — not current claim authority.**
+> This file has not been reconciled with the 2026-07-17 positioning. Do not reuse its product definitions, low-blue positioning, melatonin outcomes, or usage claims verbatim. Read `docs/OWLNEST_BRAND_TRUTH.md`, `docs/LUME_PRODUCT_TRUTH.md`, and the current operating brief first.
+
+Original use: future Home, Products, ads, FAQ, creator copy, support scripts, and campaign planning.
 
 ## Main Positioning
 

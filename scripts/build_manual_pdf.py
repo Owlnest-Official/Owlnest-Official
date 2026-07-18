@@ -209,7 +209,7 @@ def draw_cover(c: canvas.Canvas) -> None:
 
     c.setFillColor(HexColor("#B8C0CC"))
     c.setFont("OwlnestSans", 6.8)
-    c.drawString(MARGIN, 40, "LOW-BLUE SLEEP-SPECTRUM LAMP")
+    c.drawString(MARGIN, 40, "SLEEP-SPECTRUM LAMP")
     c.drawRightString(PAGE_W - MARGIN, 40, "VERSION 2026.07")
 
 
@@ -220,7 +220,7 @@ def draw_overview(c: canvas.Canvas) -> None:
         c,
         "01 / PRODUCT AT A GLANCE",
         "Meet Owlnest Lume",
-        "A low-blue sleep-spectrum lamp designed for the last part of your evening.",
+        "A sleep-spectrum lamp, specially tuned for after dark.",
     )
     rounded_panel(c, MARGIN, 395, PAGE_W - 2 * MARGIN, 70, NAVY, 12)
     c.setFillColor(white)
@@ -239,16 +239,16 @@ def draw_overview(c: canvas.Canvas) -> None:
 
     gap = 10
     card_w = (PAGE_W - 2 * MARGIN - gap) / 2
-    info_card(c, MARGIN, 318, card_w, 62, "1500K-1800K", "Deep-amber, low-blue light range")
-    info_card(c, MARGIN + card_w + gap, 318, card_w, 62, "1-2 hours", "Suggested use before bedtime")
-    info_card(c, MARGIN, 246, card_w, 62, "11 x 11 x 12 cm", "Compact bedside dimensions")
+    info_card(c, MARGIN, 318, card_w, 62, "Sleep spectrum", "Specially tuned for nighttime")
+    info_card(c, MARGIN + card_w + gap, 318, card_w, 62, "After dark", "Wind-down and brief wake-ups")
+    info_card(c, MARGIN, 246, card_w, 62, "14-15 cm", "Approximate height")
     info_card(c, MARGIN + card_w + gap, 246, card_w, 62, "USB-C", "Rechargeable for cable-free use")
 
     c.setFillColor(NAVY)
     c.setFont("OwlnestSansBold", 9.5)
     c.drawString(MARGIN, 218, "What Lume is")
     y = 199
-    y = bullet(c, "A gentle source of light for winding down, reading briefly, or moving through low-light moments at night.", MARGIN, y, PAGE_W - 2 * MARGIN)
+    y = bullet(c, "A source of light for winding down or moving through brief low-light moments at night.", MARGIN, y, PAGE_W - 2 * MARGIN)
     y = bullet(c, "A simple lamp with one bottom button - no app, Bluetooth, clock, speaker, projector, alarm, or color-changing modes.", MARGIN, y, PAGE_W - 2 * MARGIN)
 
     c.setFillColor(NAVY)
@@ -277,7 +277,7 @@ def draw_setup(c: canvas.Canvas) -> None:
     y = numbered_step(c, 2, "Charge before first use", "Connect the supplied USB-C cable to the port on the base and a suitable USB power source.", MARGIN, y, 226)
     y = numbered_step(c, 3, "Choose a stable location", "Place Lume upright on a dry, level surface away from water, open flame, heaters, and fabric that could cover the lamp.", MARGIN, y, 226)
     y = numbered_step(c, 4, "Turn on from the base", "Press the bottom button to control the lamp. Keep the port and button clean and dry.", MARGIN, y, 226)
-    y = numbered_step(c, 5, "Let brighter lights step back", "Use Lume during the last 1-2 hours before bed while reducing brighter overhead and cool-white lighting.", MARGIN, y, 226)
+    y = numbered_step(c, 5, "Let brighter lights step back", "Use Lume after dark while winding down before bed and reduce brighter overhead or cool-white lighting.", MARGIN, y, 226)
 
     panel_x = 282
     rounded_panel(c, panel_x, 184, PAGE_W - panel_x - MARGIN, 272, CREAM, 12)
@@ -421,9 +421,9 @@ def draw_contents(c: canvas.Canvas) -> None:
     c.drawString(MARGIN, 203, "Current product facts")
 
     facts = [
-        ("Light", "Deep amber, low-blue sleep-spectrum light"),
-        ("Range", "1500K-1800K"),
-        ("Size", "11 x 11 x 12 cm"),
+        ("Light", "Specially tuned sleep spectrum"),
+        ("Glow", "Deep amber / saturated orange-red"),
+        ("Height", "Approximately 14-15 cm"),
         ("Materials", "Soft silicone body and wooden base"),
         ("Charging", "USB-C rechargeable"),
         ("Controls", "Single bottom button"),
@@ -467,8 +467,8 @@ def draw_support(c: canvas.Canvas) -> None:
     c.setFillColor(white)
     c.setFont("OwlnestSerifBold", 15)
     c.drawString(MARGIN + 16, 422, "Limited defect warranty")
-    paragraph(c, "Campaign-backed units are expected to include a one-year limited defect warranty after delivery. Coverage applies to eligible manufacturing defects and requires proof of purchase.", MARGIN + 16, 399, PAGE_W - 2 * MARGIN - 32, size=8.3, leading=11.5, color=HexColor("#CBD2DC"))
-    paragraph(c, "Accidental damage, misuse, unauthorized modification, normal wear, and damage from improper charging or storage are not covered. Campaign and fulfillment terms remain controlling.", MARGIN + 16, 364, PAGE_W - 2 * MARGIN - 32, size=7.6, leading=10.4, color=HexColor("#AEB8C7"))
+    paragraph(c, "Owlnest Lume includes a one-year limited warranty covering eligible manufacturing defects. Proof of purchase is required.", MARGIN + 16, 399, PAGE_W - 2 * MARGIN - 32, size=8.3, leading=11.5, color=HexColor("#CBD2DC"))
+    paragraph(c, "Accidental damage, misuse, unauthorized modification, normal wear, and damage from improper charging or storage are not covered. Current store policies remain controlling.", MARGIN + 16, 364, PAGE_W - 2 * MARGIN - 32, size=7.6, leading=10.4, color=HexColor("#AEB8C7"))
 
     c.setFillColor(white)
     c.setFont("OwlnestSerifBold", 15)
@@ -480,10 +480,10 @@ def draw_support(c: canvas.Canvas) -> None:
     c.setFillColor(white)
     c.setFont("OwlnestSerifBold", 15)
     c.drawString(MARGIN, 234, "Current information")
-    linked_text(c, "Product page", "https://owlnestofficial.com/products.html", MARGIN, 209)
-    linked_text(c, "Online manual", "https://owlnestofficial.com/manual.html", MARGIN, 187)
-    linked_text(c, "Science and references", "https://owlnestofficial.com/science.html", MARGIN, 165)
-    linked_text(c, "Campaign terms", "https://owlnestofficial.com/preorder-policy.html", MARGIN, 143)
+    linked_text(c, "Product page", "https://owlnestofficial.com/products", MARGIN, 209)
+    linked_text(c, "Online manual", "https://owlnestofficial.com/manual", MARGIN, 187)
+    linked_text(c, "Science and references", "https://owlnestofficial.com/science", MARGIN, 165)
+    linked_text(c, "Shipping policy", "https://wfqwyu-ic.myshopify.com/policies/shipping-policy", MARGIN, 143)
 
     rounded_panel(c, MARGIN, 57, PAGE_W - 2 * MARGIN, 63, HexColor("#202D43"), 9)
     c.setFillColor(white)
@@ -500,7 +500,7 @@ def build() -> Path:
     c.setTitle("Owlnest Lume User Manual")
     c.setAuthor("Owlnest Official")
     c.setSubject("Setup, charging, care, safety, warranty, and support for Owlnest Lume")
-    c.setKeywords("Owlnest Lume, user manual, sleep-spectrum lamp, low-blue light, USB-C")
+    c.setKeywords("Owlnest Lume, user manual, sleep-spectrum lamp, nighttime light, USB-C")
     c.setCreator("Owlnest Official")
 
     pages = [draw_cover, draw_overview, draw_setup, draw_controls, draw_safety, draw_contents, draw_support]
