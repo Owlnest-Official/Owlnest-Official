@@ -1,0 +1,496 @@
+/*
+  Owlnest homepage editorial art direction.
+  Scope is intentionally limited to the bilingual homepage section IDs.
+  It preserves the hero canvas, checkout links, tracking, and document order.
+*/
+
+:root {
+    --owl-home-ink: #182234;
+    --owl-home-night: #101827;
+    --owl-home-deep: #0b111d;
+    --owl-home-cream: #f2ebdd;
+    --owl-home-paper: #fffaf0;
+    --owl-home-amber: #c9852a;
+    --owl-home-amber-bright: #e7a54b;
+    --owl-home-copy-dark: #455169;
+    --owl-home-copy-light: rgba(245, 238, 220, 0.74);
+}
+
+body:has(main.main-container > #section-visual-difference) main.main-container {
+    background: var(--owl-home-night);
+}
+
+/* Hero: one thought, one action, much more air. */
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-content {
+    width: min(100%, 1440px) !important;
+    max-width: 1440px !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    margin: 0 auto !important;
+    padding: 8rem clamp(1.5rem, 7vw, 7rem) clamp(4.25rem, 9vh, 7rem) !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-mark {
+    display: none !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-content > span {
+    margin: 0 0 1.35rem !important;
+    color: var(--owl-home-amber-bright) !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.24em !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-title {
+    width: min(100%, 1080px) !important;
+    max-width: 1080px !important;
+    margin: 0 0 2.25rem !important;
+    color: #fff8e9 !important;
+    font-size: clamp(3.65rem, 7vw, 7.35rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.035em !important;
+    text-align: left !important;
+    text-wrap: balance;
+    text-shadow: 0 18px 48px rgba(0, 0, 0, 0.42) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-bottom {
+    width: auto !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-actions {
+    justify-content: flex-start !important;
+    padding: 0 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-actions > a:first-child {
+    width: auto !important;
+    min-width: 168px;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 999px !important;
+    padding: 1rem 1.65rem !important;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-actions > a:nth-child(2),
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-bottom > p {
+    display: none !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-scroll-hint {
+    position: absolute !important;
+    right: clamp(1.75rem, 5vw, 5rem);
+    bottom: clamp(2rem, 5vh, 4rem);
+    margin: 0 !important;
+}
+
+/* Product reveal: replace the text-heavy infographic with an editorial product stage. */
+body:has(main.main-container > #section-visual-difference) #section-visual-difference {
+    min-height: min(100svh, 960px) !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background-color: var(--owl-home-deep) !important;
+    background-image:
+        linear-gradient(90deg, rgba(8, 13, 23, 0.98) 0%, rgba(8, 13, 23, 0.9) 34%, rgba(8, 13, 23, 0.28) 68%, rgba(8, 13, 23, 0.08) 100%),
+        radial-gradient(circle at 75% 54%, rgba(231, 90, 26, 0.25), rgba(231, 90, 26, 0) 35%),
+        url('/lume-real-photo-on.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center, center, right center !important;
+    background-size: cover, cover, auto 94% !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference > div {
+    display: flex !important;
+    width: min(100%, 1440px) !important;
+    max-width: 1440px !important;
+    min-height: min(100svh, 960px) !important;
+    align-items: flex-end !important;
+    margin: 0 auto !important;
+    padding: clamp(7rem, 12vh, 10rem) clamp(1.5rem, 7vw, 7rem) clamp(4.5rem, 9vh, 7rem) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference .section-header-centered {
+    width: min(100%, 650px) !important;
+    max-width: 650px !important;
+    margin: 0 !important;
+    padding: clamp(1.5rem, 3vw, 2.5rem) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 2px solid rgba(231, 165, 75, 0.76);
+    border-radius: 0 !important;
+    background: rgba(10, 16, 27, 0.64);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px) saturate(112%);
+    -webkit-backdrop-filter: blur(18px) saturate(112%);
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference .section-header-centered > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference h2 {
+    max-width: 590px !important;
+    font-size: clamp(3rem, 5.1vw, 5.5rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.03em !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference p {
+    max-width: 520px !important;
+    color: var(--owl-home-copy-light) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference figure {
+    display: none !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-visual-difference a {
+    border-radius: 999px !important;
+}
+
+/* Definition: one large statement with quiet product truths below it. */
+body:has(main.main-container > #section-visual-difference) #section-darkness {
+    min-height: 78svh !important;
+    padding: clamp(7rem, 11vw, 11rem) 0 !important;
+    background: var(--owl-home-cream) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness > div {
+    width: min(100%, 1360px) !important;
+    max-width: 1360px !important;
+    padding-inline: clamp(1.5rem, 7vw, 7rem) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness .section-header-centered {
+    max-width: 1120px !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness .section-header-centered > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness h2 {
+    max-width: 1120px !important;
+    color: var(--owl-home-ink) !important;
+    font-size: clamp(3.3rem, 6vw, 6.75rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness .section-header-centered p {
+    max-width: 600px !important;
+    margin-top: 2rem !important;
+    color: var(--owl-home-copy-dark) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid {
+    max-width: 1120px;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    margin-top: clamp(3rem, 7vw, 6rem) !important;
+    border-top: 1px solid rgba(24, 34, 52, 0.18);
+    border-bottom: 1px solid rgba(24, 34, 52, 0.18);
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid p {
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    padding: 1.5rem clamp(1rem, 2vw, 2rem) !important;
+    border: 0 !important;
+    border-right: 1px solid rgba(24, 34, 52, 0.16) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--owl-home-ink) !important;
+    font-weight: 600 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid p:last-child {
+    border-right: 0 !important;
+}
+
+/* Comparison: a clean two-panel decision, not another row of cards. */
+body:has(main.main-container > #section-visual-difference) #section-comparison-table {
+    min-height: 92svh !important;
+    padding: clamp(7rem, 10vw, 10rem) 0 !important;
+    background:
+        radial-gradient(circle at 82% 62%, rgba(201, 133, 42, 0.16), rgba(201, 133, 42, 0) 34%),
+        var(--owl-home-night) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table > div {
+    width: min(100%, 1360px) !important;
+    max-width: 1360px !important;
+    padding-inline: clamp(1.5rem, 7vw, 7rem) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table .section-header-centered {
+    max-width: 1080px !important;
+    margin: 0 0 clamp(3.5rem, 7vw, 6rem) !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table .section-header-centered > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table h2 {
+    max-width: 1040px !important;
+    font-size: clamp(3rem, 5.5vw, 6.1rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table .section-header-centered p {
+    max-width: 680px !important;
+    color: var(--owl-home-copy-light) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table > div > .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table article {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(2rem, 4vw, 4rem) !important;
+    border: 0 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table article:last-child {
+    border-right: 0 !important;
+    background: linear-gradient(145deg, rgba(201, 133, 42, 0.08), rgba(231, 90, 26, 0.15)) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table article h3 {
+    max-width: 470px;
+    margin-top: 1.4rem !important;
+    font-size: clamp(2rem, 3vw, 3.4rem) !important;
+    line-height: 1.04 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-comparison-table article p:last-child {
+    max-width: 470px;
+    color: var(--owl-home-copy-light) !important;
+}
+
+/* Science bridge: restrained, credible, and visibly separate from the product pitch. */
+body:has(main.main-container > #section-visual-difference) #section-science-support {
+    min-height: 70svh !important;
+    padding: clamp(7rem, 11vw, 11rem) 0 !important;
+    background:
+        linear-gradient(90deg, rgba(24, 34, 52, 0.08) 1px, transparent 1px),
+        linear-gradient(rgba(24, 34, 52, 0.08) 1px, transparent 1px),
+        var(--owl-home-cream) !important;
+    background-size: 72px 72px !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support > div {
+    width: min(100%, 1360px) !important;
+    max-width: 1360px !important;
+    padding-inline: clamp(1.5rem, 7vw, 7rem) !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support > div > div {
+    max-width: 1060px !important;
+    margin: 0 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support :is(h2, p, span, a) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support h2 {
+    max-width: 1020px !important;
+    color: var(--owl-home-ink) !important;
+    font-size: clamp(3.2rem, 5.8vw, 6.35rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support p {
+    max-width: 680px !important;
+    color: var(--owl-home-copy-dark) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-science-support > div > a {
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Product proof returns to a strong editorial split instead of another centered stack. */
+@media (min-width: 1024px) {
+    body:has(main.main-container > #section-visual-difference) #section-product .product-snapshot-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr) !important;
+        align-items: center !important;
+        gap: clamp(3rem, 6vw, 7rem) !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-product .product-snapshot-grid > figure,
+    body:has(main.main-container > #section-visual-difference) #section-product .product-snapshot-grid > .flex {
+        width: auto !important;
+        order: initial !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-product .product-copy-panel,
+    body:has(main.main-container > #section-visual-difference) #section-product .product-copy-panel > * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-product .product-copy-panel .flex {
+        justify-content: flex-start !important;
+    }
+}
+
+body:has(main.main-container > #section-visual-difference) #section-product {
+    padding: clamp(7rem, 10vw, 10rem) 0 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-product .product-gallery,
+body:has(main.main-container > #section-visual-difference) #section-product .gallery-frame {
+    border-radius: 0 !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-product .product-gallery {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.025) !important;
+}
+
+body:has(main.main-container > #section-visual-difference) #section-product .product-copy-panel h2 {
+    font-size: clamp(3.1rem, 5vw, 5.6rem) !important;
+    font-weight: 400 !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+}
+
+@media (max-width: 767px) {
+    body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-content {
+        justify-content: flex-end !important;
+        padding: 7.5rem 1.25rem 3rem !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-content > span {
+        margin-bottom: 1rem !important;
+        font-size: 0.66rem !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-title {
+        max-width: 22rem !important;
+        margin-bottom: 1.5rem !important;
+        font-size: clamp(2.75rem, 13vw, 4rem) !important;
+        line-height: 0.98 !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-1 .home-hero-actions > a:first-child {
+        min-width: 0;
+        padding: 0.9rem 1.35rem !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-visual-difference {
+        min-height: 88svh !important;
+        background-image:
+            linear-gradient(180deg, rgba(8, 13, 23, 0.06) 0%, rgba(8, 13, 23, 0.16) 42%, rgba(8, 13, 23, 0.98) 74%, rgba(8, 13, 23, 1) 100%),
+            radial-gradient(circle at 50% 32%, rgba(231, 90, 26, 0.22), rgba(231, 90, 26, 0) 34%),
+            url('/lume-real-photo-on.jpg') !important;
+        background-position: center, center, center 12% !important;
+        background-size: cover, cover, auto 62% !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-visual-difference > div {
+        min-height: 88svh !important;
+        padding: 19rem 1rem 2rem !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-visual-difference .section-header-centered {
+        padding: 1.35rem !important;
+        background: rgba(10, 16, 27, 0.76);
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-visual-difference h2 {
+        font-size: clamp(2.55rem, 12vw, 3.8rem) !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-darkness,
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table,
+    body:has(main.main-container > #section-visual-difference) #section-science-support,
+    body:has(main.main-container > #section-visual-difference) #section-product {
+        min-height: auto !important;
+        padding: 6rem 0 !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-darkness h2,
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table h2,
+    body:has(main.main-container > #section-visual-difference) #section-science-support h2,
+    body:has(main.main-container > #section-visual-difference) #section-product .product-copy-panel h2 {
+        font-size: clamp(2.65rem, 12vw, 4rem) !important;
+        line-height: 1 !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid,
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table > div > .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid p {
+        min-height: 0;
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(24, 34, 52, 0.16) !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-darkness > div > .grid p:last-child {
+        border-bottom: 0 !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table article {
+        min-height: 280px;
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table article:last-child {
+        border-bottom: 0 !important;
+    }
+
+    body:has(main.main-container > #section-visual-difference) #section-science-support {
+        background-size: 48px 48px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body:has(main.main-container > #section-visual-difference) #section-visual-difference,
+    body:has(main.main-container > #section-visual-difference) #section-comparison-table {
+        background-attachment: initial !important;
+    }
+}
