@@ -6,9 +6,22 @@ For any task involving Owlnest or Lume marketing, website copy, brand documents,
 
 1. `docs/OWLNEST_BRAND_TRUTH.md`
 2. `docs/LUME_PRODUCT_TRUTH.md`
-3. `docs/brand/owlnest-lume-operating-brief.md`
+3. `docs/OWLNEST_CROSS_CONVERSATION_DECISION_LEDGER.md`
+4. `docs/brand/owlnest-lume-operating-brief.md`
+
+For website structure, public-page content, navigation, SEO landing pages, Campaign, Homepage, Products, Science, Evidence, FAQ, Manual, policy presentation, AI-readable public content, or cross-page duplication work, also read:
+
+5. `docs/OWLNEST_SITE_ARCHITECTURE.md`
+
+The Site Architecture is a conditional website-governance reference. It does not override either Truth document, the Ledger, the Operating Brief, or the user's active explicit instruction.
 
 The two root-level Truth documents are the primary authority. If any older brief, bank, draft, public page, runtime prompt, or generated artifact conflicts with them, the Truth documents win.
+
+The Cross-Conversation Decision Ledger supplements repository context with history from cross-ChatGPT projects, unarchived conversations, and memory sources that the repository cannot directly access. It does not override either Truth document.
+
+- If an older conversation conflicts with the Truth documents or a `CURRENT` decision in the Ledger, treat it as historical material.
+- Do not restore retired positioning from an older conversation, Campaign, metadata version, or marketing bank.
+- If the active user's explicit instruction conflicts with the Ledger or either Truth document, stop and report the conflict. Do not blend the versions or resolve the conflict silently.
 
 Current derived references:
 
