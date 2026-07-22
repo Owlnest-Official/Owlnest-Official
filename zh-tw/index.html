@@ -130,24 +130,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             min-height: 100vh;
         }
 
-        /* Canvas 向下滑動 Height Preservation */
-        #section-1 {
-            display: block !important;
-            padding: 0 !important;
-            overflow: visible !important;
-            height: 250vh !important;
-            background: #182234 !important;
-        }
-        @media (min-width: 768px) {
-            #section-1 {
-                height: 400vh !important;
-            }
-        }
-
-        body.home-sequence-complete #section-1 {
-            height: 100vh !important;
-        }
-
         @media (max-width: 1023px) {
             .section-container {
                 height: auto;
@@ -158,59 +140,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         @media (max-width: 640px) {
-            #main-header {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            #main-header .logo-area {
-                gap: 0.55rem;
-            }
-            #main-header .logo-area span {
-                font-size: 1rem;
-                letter-spacing: 0.16em;
-            }
-            #main-header .mobile-actions {
-                gap: 0.9rem;
-                position: absolute;
-                right: 2.25rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            #main-header .mobile-actions button {
-                margin-left: 0 !important;
-            }
-            #main-header .mobile-account-link {
-                display: none;
-            }
-            #main-header .mobile-campaign-link {
-                display: none;
-            }
-            .home-hero-content {
-                max-width: 100%;
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
-            }
-            .home-hero-title {
-                max-width: 21rem !important;
-                font-size: 2rem !important;
-                line-height: 1.08 !important;
-            }
-            .home-hero-copy {
-                max-width: 20.5rem !important;
-                font-size: 0.95rem !important;
-                line-height: 1.65 !important;
-            }
-            .home-hero-chips {
-                max-width: 20rem;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .home-hero-chip {
-                padding-left: 0.85rem !important;
-                padding-right: 0.85rem !important;
-                font-size: 0.625rem !important;
-                letter-spacing: 0.05em !important;
-            }
             .section-container:not(#section-1) h2 {
                 font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
                 line-height: 1.06 !important;
@@ -297,40 +226,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gap: clamp(2.5rem, 6vw, 6rem) !important;
         }
 
-        @media (min-width: 1024px) {
-            #section-ritual .homepage-balanced-grid {
-                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-            }
-
-            #section-visual-difference .homepage-balanced-grid {
-                grid-template-columns: minmax(0, 0.72fr) minmax(640px, 1.28fr) !important;
-            }
-
-            #section-visual-difference figure {
-                width: 100%;
-                max-width: 820px;
-                justify-self: end;
-            }
-
-            #section-gift .section-heading {
-                max-width: min(100%, 1120px);
-            }
-
-            #section-visual-difference h2.section-heading {
-                max-width: 760px;
-                font-size: clamp(2.45rem, 3.35vw, 3.45rem) !important;
-                line-height: 1.07 !important;
-            }
-
-            #section-product .product-snapshot-grid {
-                grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
-            }
-
-            #section-product .product-copy-panel {
-                max-width: 680px;
-            }
-        }
-
         .section-container:not(#section-1) [class*="mb-20"] {
             margin-bottom: clamp(2.5rem, 5vw, 4.5rem) !important;
         }
@@ -362,19 +257,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: min(100%, 1360px);
             margin-inline: auto;
             padding-inline: clamp(24px, 4vw, 64px);
-        }
-
-        @media (min-width: 1024px) {
-            main .section-container:not(#section-1) .grid[class*="lg:grid-cols-["] {
-                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-            }
-
-            main .section-container:not(#section-1) [class*="max-w-3xl"]:has(h2.font-serif),
-            main .section-container:not(#section-1) [class*="max-w-2xl"]:has(h2.font-serif),
-            main .section-container:not(#section-1) [class*="max-w-xl"]:has(h2.font-serif),
-            main .section-container:not(#section-1) [class*="max-w-lg"]:has(h2.font-serif) {
-                max-width: min(100%, 1120px) !important;
-            }
         }
 
         @media (max-width: 640px) {
@@ -558,36 +440,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        /* Hard readability fix: these cream sections must never render pale text. */
-        #section-gift,
+        /* Science bridge must remain readable on its cream background. */
         #section-science-support {
             background-color: #F2EBDD !important;
             color: #182033 !important;
         }
 
-        #section-gift *,
         #section-science-support * {
             text-shadow: none !important;
-        }
-        #section-gift h2,
-        #section-gift h3 {
-            color: #182033 !important;
-            opacity: 1 !important;
-        }
-        #section-gift p {
-            color: #455169 !important;
-            opacity: 1 !important;
-        }
-        #section-gift .text-amber,
-        #section-gift span {
-            color: #9A551F !important;
-            opacity: 1 !important;
-        }
-        #section-gift article {
-            background: #FFFAF0 !important;
-            border: 1px solid rgba(24,32,51,0.14) !important;
-            border-top: 2px solid rgba(154,85,31,0.55) !important;
-            box-shadow: 0 16px 38px rgba(24,32,51,0.08) !important;
         }
 
         #section-science-support h2 {
@@ -609,14 +469,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: rgba(255,255,255,0.42) !important;
         }
 
-        #mobile-menu {
-            transform: translateY(-100%);
-            transition: transform 0.4s ease-in-out;
-        }
-        #mobile-menu.open {
-            transform: translateY(0);
-        }
-
         .language-menu {
             opacity: 0;
             pointer-events: none;
@@ -627,42 +479,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             opacity: 1;
             pointer-events: auto;
             transform: translateY(0);
-        }
-
-        /* Dynamic Header Color Switching Classes */
-        #main-header {
-            transition: background-color 0.4s ease, border-color 0.4s ease;
-        }
-        #main-header.nav-dark {
-            background-color: rgba(242, 235, 221, 0.95) !important;
-            border-bottom-color: rgba(24, 34, 52, 0.1) !important;
-        }
-        #main-header.nav-dark .logo-area span,
-        #main-header.nav-dark nav a,
-        #main-header.nav-dark .flex a i,
-        #main-header.nav-dark .flex button i {
-            color: #182234 !important;
-        }
-        #main-header.nav-dark .border-white\/10 {
-            border-color: rgba(24, 34, 52, 0.2) !important;
-        }
-
-        /* Desktop Split Header (Left dark text, Right white text) */
-        @media (min-width: 1024px) {
-            #main-header.nav-split {
-                background-color: transparent !important;
-                backdrop-filter: none !important;
-                border-bottom-color: transparent !important;
-            }
-            #main-header.nav-split .logo-area span {
-                color: #182234 !important;
-            }
-            #main-header.nav-split nav a,
-            #main-header.nav-split .flex a i,
-            #main-header.nav-split .flex button i,
-            #main-header.nav-split .language-trigger {
-                color: #ffffff !important;
-            }
         }
 
         /* Readable Display Heading System Override */
@@ -705,21 +521,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             max-width: min(100%, 900px) !important;
             font-size: clamp(2.35rem, 3.45vw, 3.55rem) !important;
             line-height: 1.12 !important;
-        }
-
-        @media (min-width: 1024px) and (max-width: 1279px) {
-            .section-container:not(#section-1) .homepage-balanced-grid,
-            .section-container:not(#section-1) .grid[class*="lg:grid-cols-["],
-            main section .grid[class*="lg:grid-cols-["],
-            main section:not(#hero) .grid[class*="lg:grid-cols-"] {
-                grid-template-columns: minmax(0, 1fr) !important;
-            }
-
-            .section-container:not(#section-1) h2.font-serif,
-            main section h2.font-serif,
-            main section:not(#hero) h2.font-serif {
-                max-width: min(100%, 1040px) !important;
-            }
         }
 
         @media (max-width: 900px) {
@@ -783,24 +584,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260722">
 </head>
-<body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
+<body class="homepage bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header / Navbar -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-        <!-- Logo -->
-        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
-             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
-        </a>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
+        <div class="header-inner mx-auto grid h-[72px] max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8">
+            <a href="/zh-tw/" class="brand site-brand flex items-center gap-3 justify-self-start cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+                <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-8 md:h-10 w-auto object-contain transition-all duration-300">
+                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+            </a>
 
-        <!-- Desktop Nav -->
-        <div class="hidden lg:flex items-center gap-10 nav-links">
-            <nav class="flex gap-8 text-xs font-semibold text-white/60">
+            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] font-semibold text-white/64">
                 <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
                 <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
                 <a href="/zh-tw/campaign/" class="hover:text-amber transition-colors duration-300">Campaign</a>
@@ -809,42 +608,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
 
-            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
-                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="會員中心">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
+                <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
+                <a href="/account/" aria-label="會員中心" title="會員中心" class="inline-flex h-9 w-9 items-center justify-center text-white/64 hover:text-amber transition-colors" rel="nofollow">
+                    <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M20 21a8 8 0 0 0-16 0" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
                 </a>
-                <div class="relative language-wrap">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                <div class="relative">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] font-semibold text-white/64 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
                         <i class="fas fa-globe text-xs"></i>
-                        繁體中文
+                        繁中
                         <i class="fas fa-chevron-down text-[9px]"></i>
                     </button>
                     <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
-                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English</a>
-                        <a href="/zh-tw/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
+                        <a href="/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">English <span>EN</span></a>
+                        <a href="/zh-tw/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">繁體中文 <span class="text-amber">繁中</span></a>
                     </div>
                 </div>
-                <a href="/zh-tw/products/#buy" class="inline-flex items-center gap-2 text-xs font-semibold text-amber hover:text-white transition-colors"><i class="fas fa-arrow-up-right-from-square text-xs"></i>購買 LUME</a>
+                <a href="/zh-tw/products/#buy" class="inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] font-bold hover:bg-warm transition-colors rounded-full">購買 Lume</a>
             </div>
-        </div>
 
-        <!-- Mobile Toggle Button -->
-        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber">
-                <i class="fas fa-user text-lg transition-colors duration-300"></i>
-            </a>
-            <a href="/zh-tw/products/#buy" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 LUME">
-                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-            </a>
-            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu">
+            <button type="button" data-mobile-menu-toggle onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="開啟或關閉選單" aria-controls="mobile-menu" aria-expanded="false">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+                <span class="text-[10px] tracking-[0.18em] font-bold">選單</span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white" aria-hidden="true">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
 
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
@@ -871,14 +664,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
                 <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 LUME</a>
                 <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
-            </div></nav>
+            </div>
+        </nav>
     </div>
 
     <main class="main-container">
 
         <!-- Section 1: Hero -->
         <section id="section-1" class="section-container bg-midnight active">
-            <div class="sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
+            <div class="home-hero-stage sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
                 <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
                 <div class="absolute inset-0 hero-atmosphere z-20 pointer-events-none"></div>
@@ -894,7 +688,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <span class="block">燈卻還不知道。</span>
                     </h1>
 
-                    <p class="max-w-xl text-base md:text-lg leading-relaxed text-white/68 reveal-text" style="transition-delay: 0.22s;">Lume 是為天黑後特別設計的光。</p>
+                    <p class="home-hero-summary max-w-xl text-base md:text-lg leading-relaxed text-white/68 reveal-text" style="transition-delay: 0.22s;">Lume 是為天黑後特別設計的光。</p>
 
                     <div class="home-hero-bottom reveal-text pointer-events-auto" style="transition-delay: 0.38s;">
                         <div class="home-hero-actions mt-7 flex w-full justify-center px-4 sm:w-auto sm:px-0">
@@ -916,17 +710,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Lume Product Reveal -->
         <section id="section-visual-difference" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
             <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-text">
-                <figure class="rounded-[28px] border border-white/10 bg-midnight/60 p-4 md:p-6 overflow-hidden">
+                <figure class="homepage-product-reveal rounded-[28px] border border-white/10 bg-midnight/60 p-4 md:p-6 overflow-hidden">
                     <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 的柔軟矽膠燈體、圓形木質底座與深琥珀橘紅暮光" class="mx-auto max-h-[680px] w-auto max-w-full object-contain rounded-[20px]">
                     <figcaption class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-white/55">真實 Lume，在天黑後發出深琥珀、飽和橘紅暮光。</figcaption>
                 </figure>
-                <div class="text-white">
-                    <span class="text-amber text-xs block font-bold mb-4">Lume・睡眠光譜燈</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">夜晚，值得有自己的光。</h2>
-                    <p class="font-serif text-2xl text-amber leading-relaxed">白天與夜晚，不該共用完全相同的光。</p>
-                    <p class="mt-7 text-base md:text-lg leading-relaxed text-white/72">Lume 是為天黑後特別調製的睡眠光譜燈。</p>
-                    <p class="mt-3 text-base md:text-lg leading-relaxed text-white/60">為夜晚特別調製的光。</p>
-                    <a href="/zh-tw/products/" class="premium-cta mt-8 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold text-sm text-white hover:border-amber hover:text-amber">了解 Lume</a>
+                <div class="homepage-copy-panel text-white">
+                    <div class="homepage-copy-inner">
+                        <span class="text-amber text-xs block font-bold mb-4">Lume・睡眠光譜燈</span>
+                        <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">夜晚，值得有自己的光。</h2>
+                        <p class="font-serif text-2xl text-amber leading-relaxed">白天與夜晚，不該共用完全相同的光。</p>
+                        <p class="mt-7 text-base md:text-lg leading-relaxed text-white/72">Lume 是為天黑後特別調製的睡眠光譜燈。</p>
+                        <p class="mt-3 text-base md:text-lg leading-relaxed text-white/60">為夜晚特別調製的光。</p>
+                        <a href="/zh-tw/products/" class="premium-cta mt-8 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold text-sm text-white hover:border-amber hover:text-amber">了解 Lume</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -969,18 +765,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <!-- Section 4: 產品重點 -->
         <section id="section-product" class="section-container bg-midnight section-breathe border-b border-white/5 !min-h-fit">
-            <div class="product-snapshot-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="homepage-product-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-5 md:p-8 overflow-hidden">
                     <div class="grid grid-cols-1 md:grid-cols-[1fr_0.56fr] gap-4 md:gap-5">
                         <div class="gallery-frame p-8 md:p-12 flex min-h-[420px] md:min-h-[540px] items-center justify-center">
-                            <img src="/lume-real-photo-on.jpg" alt="Owlnest Lume 發出深琥珀橘紅暮光" class="max-h-[360px] md:max-h-[455px] w-auto max-w-full object-contain rounded-[18px]">
+                            <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 發出深琥珀橘紅暮光" class="max-h-[360px] md:max-h-[455px] w-auto max-w-full object-contain rounded-[18px]">
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-5">
                             <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="/lume-size-reference.jpg" alt="Owlnest Lume 尺寸參考" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
+                                <img src="/lume-size-reference.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 尺寸參考" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
                             </div>
                             <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="/lume-bottom-button.jpg" alt="Owlnest Lume 底部按鍵與 USB-C 充電細節" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
+                                <img src="/lume-bottom-button.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 底部按鍵與 USB-C 充電細節" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
                             </div>
                         </div>
                     </div>
@@ -1096,31 +892,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const frameCount = 96;
         const heroFrameWidth = window.innerWidth <= 640 ? 640 : (window.innerWidth <= 1024 ? 1024 : 1280);
         const currentFrame = index => `/.netlify/images?url=/${index.toString().padStart(3, '0')}.png&w=${heroFrameWidth}&q=72`;
-        const HOME_SEQUENCE_SETTINGS = {
-            desktopCompleteOnWheel: true,
-            mobileCompleteOnSwipe: true,
-            desktopPlayDurationMs: 520,
-            mobilePlayDurationMs: 460,
-            requiredGesturesToComplete: 2,
-            wheelTriggerDelta: 10,
-            swipeTriggerDistance: 28,
-            frameSampleStep: 1
-        };
-
         const images = [];
-        const skySequence = { frame: 0 };
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const skySequence = { frame: prefersReducedMotion ? frameCount - 1 : 0 };
         let imagesLoaded = 0;
         let imagesFailed = false;
-        let heroSequenceCompleted = false;
-        let heroSequencePlaying = false;
-        let heroSequenceGestureCount = 0;
-        let heroSequencePlayToken = 0;
-        let heroTouchStartY = null;
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        for (let i = 1; i <= frameCount; i++) {
+        const heroFrames = prefersReducedMotion
+            ? [frameCount]
+            : Array.from({ length: frameCount }, (_, index) => index + 1);
+
+        heroFrames.forEach((frameNumber) => {
             const img = new Image();
-            img.src = currentFrame(i);
+            img.src = currentFrame(frameNumber);
             img.onload = () => {
                 imagesLoaded++;
                 if (imagesLoaded === 1) { render(); }
@@ -1131,8 +915,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     render();
                 }
             }
-            images.push(img);
-        }
+            images[frameNumber - 1] = img;
+        });
 
         function render() {
             if(!canvas || !context) return;
@@ -1167,11 +951,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         // 2. Main Logic: Scroll, Interactive Lamp & UI Update
         const sections = document.querySelectorAll('.section-container');
-        const header = document.getElementById('main-header');
-        const navLogo = document.getElementById('nav-logo');
-
         let isScrolling = false;
-        let isLampOn = false;
         function owlnestTrack(eventName, params = {}) {
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -1208,24 +988,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         window.addEventListener('hashchange', cleanHomepageHash);
 
         function updateUI() {
-            const headerHeight = header ? header.offsetHeight : 80;
-            const checkY = window.innerHeight / 2;
-
-            let isBgLight = false;
-            let currentSec = null;
-
-            document.querySelectorAll('.section-light').forEach(s => {
-                const rect = s.getBoundingClientRect();
-                if (rect.top <= checkY && rect.bottom > checkY) {
-                    isBgLight = true;
-                }
-            });
-
             sections.forEach(s => {
                 const rect = s.getBoundingClientRect();
-                if (rect.top <= checkY && rect.bottom > checkY) {
-                    currentSec = s;
-                }
                 if (rect.top < window.innerHeight * 0.85) {
                     s.querySelectorAll('.reveal-text').forEach(el => el.classList.add('visible'));
                 }
@@ -1238,36 +1002,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }
             });
 
-            if (currentSec) {
-                if (currentSec.id === 'section-product') {
-                     if (window.innerWidth < 1024 && currentSec.id === 'section-product') {
-                        const imgEl = document.getElementById('sec3-image');
-                        if (imgEl) {
-                            const imgRect = imgEl.getBoundingClientRect();
-                            if (imgRect.bottom > checkY) {
-                                isBgLight = !isLampOn;
-                            } else {
-                                isBgLight = false;
-                            }
-                        }
-                    } else {
-                        isBgLight = false;
-                    }
-                } else if (!isBgLight) {
-                    isBgLight = false;
-                }
-            }
-
-            // Keep the header visually consistent across all sections.
-            if (header) {
-                header.classList.remove('nav-dark', 'nav-split');
-                if (navLogo) navLogo.src = '/logo2.png';
-            }
         }
 
         function updateHeroAnimation() {
-            if(!section1) return;
-            if (heroSequenceCompleted || heroSequencePlaying) return;
+            if(!section1 || prefersReducedMotion) return;
             const rect = section1.getBoundingClientRect();
             const sectionHeight = section1.offsetHeight;
             const windowHeight = window.innerHeight;
@@ -1286,100 +1024,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         function setHeroSequenceProgress(progress) {
             const clampedProgress = Math.max(0, Math.min(1, progress));
-            const sampledFrame = Math.ceil(clampedProgress * (frameCount - 1));
-            const frameStep = Math.max(1, HOME_SEQUENCE_SETTINGS.frameSampleStep || 1);
-            const frameIndex = Math.min(
-                frameCount - 1,
-                Math.round(sampledFrame / frameStep) * frameStep
-            );
+            const frameIndex = Math.min(frameCount - 1, Math.round(clampedProgress * (frameCount - 1)));
             skySequence.frame = frameIndex;
             render();
         }
-
-        function isHeroSequenceActive() {
-            if (!section1 || heroSequenceCompleted) return false;
-            const rect = section1.getBoundingClientRect();
-            return rect.top <= 1 && rect.bottom >= window.innerHeight * 0.5;
-        }
-
-        function completeHeroSequence(durationMs, targetProgress = 1) {
-            if (heroSequenceCompleted) return;
-            const target = Math.max(0, Math.min(1, targetProgress));
-            if (prefersReducedMotion) {
-                setHeroSequenceProgress(target);
-                if (target >= 1) {
-                    heroSequenceCompleted = true;
-                    document.body.classList.add('home-sequence-complete');
-                }
-                return;
-            }
-
-            heroSequencePlaying = true;
-            const playToken = ++heroSequencePlayToken;
-            const startFrame = skySequence.frame;
-            const startProgress = Math.max(0, Math.min(1, startFrame / (frameCount - 1)));
-            const startedAt = performance.now();
-            const duration = Math.max(120, durationMs || HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
-
-            function playFrame(now) {
-                if (playToken !== heroSequencePlayToken) return;
-                const elapsed = now - startedAt;
-                const rawProgress = Math.min(1, elapsed / duration);
-                const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
-                const progress = startProgress + (target - startProgress) * easedProgress;
-                setHeroSequenceProgress(progress);
-
-                if (rawProgress < 1) {
-                    window.requestAnimationFrame(playFrame);
-                    return;
-                }
-
-                setHeroSequenceProgress(target);
-                heroSequencePlaying = false;
-                if (target >= 1) {
-                    heroSequenceCompleted = true;
-                    document.body.classList.add('home-sequence-complete');
-                }
-            }
-
-            window.requestAnimationFrame(playFrame);
-        }
-
-        function advanceHeroSequence(durationMs) {
-            if (heroSequenceCompleted) return;
-            const requiredGestures = Math.max(1, HOME_SEQUENCE_SETTINGS.requiredGesturesToComplete || 1);
-            heroSequenceGestureCount = Math.min(requiredGestures, heroSequenceGestureCount + 1);
-            completeHeroSequence(durationMs, heroSequenceGestureCount / requiredGestures);
-        }
-
-        window.addEventListener('wheel', event => {
-            if (!HOME_SEQUENCE_SETTINGS.desktopCompleteOnWheel || prefersReducedMotion) return;
-            if (event.deltaY <= HOME_SEQUENCE_SETTINGS.wheelTriggerDelta) return;
-            if (!isHeroSequenceActive()) return;
-            event.preventDefault();
-            advanceHeroSequence(HOME_SEQUENCE_SETTINGS.desktopPlayDurationMs);
-        }, { passive: false });
-
-        window.addEventListener('touchstart', event => {
-            if (!HOME_SEQUENCE_SETTINGS.mobileCompleteOnSwipe || prefersReducedMotion) return;
-            if (!isHeroSequenceActive()) return;
-            heroTouchStartY = event.touches && event.touches.length ? event.touches[0].clientY : null;
-        }, { passive: true });
-
-        window.addEventListener('touchmove', event => {
-            if (!HOME_SEQUENCE_SETTINGS.mobileCompleteOnSwipe || prefersReducedMotion) return;
-            if (heroTouchStartY === null || !isHeroSequenceActive()) return;
-            const currentY = event.touches && event.touches.length ? event.touches[0].clientY : heroTouchStartY;
-            const swipeDistance = heroTouchStartY - currentY;
-            if (swipeDistance <= HOME_SEQUENCE_SETTINGS.swipeTriggerDistance) return;
-            event.preventDefault();
-            heroTouchStartY = null;
-            advanceHeroSequence(HOME_SEQUENCE_SETTINGS.mobilePlayDurationMs);
-        }, { passive: false });
-
-        window.addEventListener('touchend', () => {
-            heroTouchStartY = null;
-        }, { passive: true });
 
         window.addEventListener('scroll', () => {
             if (!isScrolling) {
@@ -1407,18 +1055,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
             updateUI();
             render();
-            if (prefersReducedMotion) {
-                completeHeroSequence(0);
-            }
             const yr = document.getElementById('copyright-year');
             if(yr) yr.textContent = new Date().getFullYear();
         });
 
-        window.addEventListener('resize', render);
-
         // Mobile Menu Toggle
         function toggleLanguageMenu(event) {
-            event.preventDefault();
             event.stopPropagation();
             const menu = document.getElementById('language-menu');
             const trigger = document.querySelector('.language-trigger');
@@ -1427,28 +1069,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         }
 
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            if (!event.target.closest('.language-wrap')) {
-                menu.classList.remove('open');
-                trigger.setAttribute('aria-expanded', 'false');
-            }
-        });
+        function setMobileMenuState(isOpen) {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu || !icon) return;
+            menu.classList.toggle('open', isOpen);
+            menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            icon.classList.toggle('fa-bars', !isOpen);
+            icon.classList.toggle('fa-times', isOpen);
+            document.querySelectorAll('[data-mobile-menu-toggle]').forEach((button) => {
+                button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            document.body.classList.toggle('mobile-menu-open', isOpen);
+        }
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
-            if(!menu || !icon) return;
-            menu.classList.toggle('open');
-            if (menu.classList.contains('open')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            if (!menu) return;
+            setMobileMenuState(!menu.classList.contains('open'));
         }
 
 
@@ -1464,6 +1102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         document.addEventListener('keydown', (event) => {
             if (event.key !== 'Escape') return;
+            setMobileMenuState(false);
             const menu = document.getElementById('language-menu');
             const trigger = document.querySelector('.language-trigger');
             if (!menu || !trigger) return;
@@ -1471,90 +1110,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             trigger.setAttribute('aria-expanded', 'false');
         });
 
-        // Final rendered contrast lock for the two cream sections that must never show pale text.
-        function lockReadableLightSections() {
-            const gift = document.getElementById('section-gift');
-            if (gift) {
-                gift.style.setProperty('background-color', '#F2EBDD', 'important');
-                gift.querySelectorAll('h2, h3').forEach((node) => {
-                    node.style.setProperty('color', '#182033', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-                gift.querySelectorAll('p').forEach((node) => {
-                    node.style.setProperty('color', '#455169', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-                gift.querySelectorAll('article').forEach((node) => {
-                    node.style.setProperty('background', '#FFFAF0', 'important');
-                    node.style.setProperty('border', '1px solid rgba(24,32,51,0.14)', 'important');
-                    node.style.setProperty('border-top', '2px solid rgba(154,85,31,0.55)', 'important');
-                    node.style.setProperty('border-radius', '18px', 'important');
-                    node.style.setProperty('padding', '1.5rem', 'important');
-                    node.style.setProperty('box-shadow', '0 16px 38px rgba(24,32,51,0.08)', 'important');
-                });
-                gift.querySelectorAll('span').forEach((node) => {
-                    node.style.setProperty('color', '#9A551F', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-            }
+        window.addEventListener('resize', () => {
+            render();
+            if (window.innerWidth >= 1024) setMobileMenuState(false);
+        });
 
-            const science = document.getElementById('section-science-support');
-            if (science) {
-                science.style.setProperty('background-color', '#F2EBDD', 'important');
-                science.querySelectorAll('h2').forEach((node) => {
-                    node.style.setProperty('color', '#182033', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-                science.querySelectorAll('p').forEach((node) => {
-                    node.style.setProperty('color', '#455169', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-                science.querySelectorAll('p.text-sm').forEach((node) => {
-                    node.style.setProperty('color', '#5B6578', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-                science.querySelectorAll('a').forEach((node) => {
-                    node.style.setProperty('color', '#182033', 'important');
-                    node.style.setProperty('background', 'rgba(255,255,255,0.42)', 'important');
-                    node.style.setProperty('border-color', 'rgba(24,32,51,0.28)', 'important');
-                    node.style.setProperty('opacity', '1', 'important');
-                });
-            }
-        }
-
-        lockReadableLightSections();
-        window.addEventListener('load', lockReadableLightSections);
-
-        // Interactive Lamp Toggle Logic (Restored)
-        const lampImg = document.getElementById('lamp-sequence-img');
-        const lampStatus = document.getElementById('lamp-status-label');
-        const lampContainer = document.getElementById('sec3-image');
-        const customToggleBg = document.getElementById('custom-toggle-bg');
-        const customToggleCircle = document.getElementById('custom-toggle-circle');
-
-        function toggleLamp() {
-            if (!lampImg || !lampContainer) return;
-            if (isLampOn) {
-                lampImg.src = 'lamp-off.jpg';
-                lampStatus.textContent = 'Click to Light Up';
-                customToggleBg.classList.remove('bg-amber');
-                customToggleBg.classList.add('bg-taupe/50');
-                customToggleCircle.classList.remove('translate-x-6');
-                lampContainer.classList.remove('bg-midnight');
-                lampContainer.classList.add('bg-warm');
-                isLampOn = false;
-            } else {
-                lampImg.src = 'lamp-on.jpg';
-                lampStatus.textContent = 'Click to Turn Off';
-                customToggleBg.classList.remove('bg-taupe/50');
-                customToggleBg.classList.add('bg-amber');
-                customToggleCircle.classList.add('translate-x-6');
-                lampContainer.classList.remove('bg-warm');
-                lampContainer.classList.add('bg-midnight');
-                isLampOn = true;
-            }
-            updateUI();
-        }
     </script>
 
     <script src="/assets/js/shopify-checkout.js?v=20260714-2" defer></script>
