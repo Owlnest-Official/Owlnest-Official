@@ -42,9 +42,27 @@
     "href": "/products/#buy"
   },
   "secondaryCta": {
-    "label": "Read Science & FAQ",
+    "label": "Read the Science",
     "href": "/science"
   },
+  "ownerLinks": [
+    {
+      "label": "Product details",
+      "href": "/products"
+    },
+    {
+      "label": "Science",
+      "href": "/science"
+    },
+    {
+      "label": "Evidence",
+      "href": "/evidence/"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq/"
+    }
+  ],
   "stats": {
     "goal": null,
     "raised": null,
@@ -59,30 +77,18 @@
     },
     {
       "date": "As orders progress",
-      "title": "Production and shipping updates",
-      "text": "Customers receive production, shipping, and fulfillment updates by email as they are ready."
+      "title": "Order and shipping updates",
+      "text": "Customers receive order, shipping, and fulfillment updates by email as they are ready."
     }
   ],
   "faq": [
-    {
-      "q": "What is Owlnest Lume?",
-      "a": "Lume is a sleep-spectrum lamp, specially tuned for after dark."
-    },
-    {
-      "q": "How is Owlnest Lume different from a normal warm lamp or night light?",
-      "a": "Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep."
-    },
     {
       "q": "Can I order now?",
       "a": "Yes. Owlnest Lume is in stock and available to order while inventory remains."
     },
     {
-      "q": "Are shipping and taxes included today?",
-      "a": "Shopify checkout shows applicable shipping and any store-collected taxes before payment. Destination duties not collected at checkout may still apply."
-    },
-    {
-      "q": "Is there a warranty?",
-      "a": "Owlnest Lume includes a standard 1-year limited warranty covering manufacturing defects."
+      "q": "What happens after I join the updates list?",
+      "a": "You will receive product, order, and shipping updates. You can unsubscribe at any time."
     }
   ]
 }

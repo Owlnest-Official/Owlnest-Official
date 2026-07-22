@@ -86,52 +86,6 @@
             "name": "Owlnest Lume",
             "description": "Lume is a sleep-spectrum lamp, specially tuned for after dark."
           }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://owlnestofficial.com/campaign/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Where can I find shipping details?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Owlnest Lume is in stock. Shipping and delivery details are shown at secure Shopify checkout."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Lume available to order?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Owlnest Lume is available to order now."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Lume a medical device?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Owlnest Lume is not a medical device and does not diagnose, treat, cure, or prevent insomnia or any sleep disorder. Lume is a sleep-spectrum lamp, specially tuned for after dark."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens after I join the list?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "You will receive product, order, and shipping updates when they are ready. No spam."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How can I contact Owlnest?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Use the Contact page for product questions, campaign questions, B2B inquiries, or support."
-              }
-            }
-          ]
         }
       ]
     }
@@ -883,38 +837,6 @@
                         <img src="/assets/campaign/campaign-hero-phone-back-up.webp" width="960" height="720" alt="Phone glow in a dark bedroom before the room lighting changes" class="w-full h-auto rounded-xl" fetchpriority="high" decoding="async">
                     </div>
 
-                    <div id="early-access" class="mt-6 sm:mt-8 max-w-xl">
-                        <p class="mb-3 text-[10px] font-bold uppercase tracking-[0.18em] text-white/46">Get product updates</p>
-                        <form class="signup-form field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-hero" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                            <input type="hidden" name="form-name" value="campaign-email">
-                            <input type="hidden" name="source_section" value="campaign-hero">
-                            <input type="hidden" name="page_path" value="/campaign/">
-                            <input type="hidden" name="utm_source">
-                            <input type="hidden" name="utm_medium">
-                            <input type="hidden" name="utm_campaign">
-                            <input type="hidden" name="utm_content">
-                            <input type="hidden" name="utm_term">
-                            <input type="hidden" name="lead_source" value="preorder_waitlist">
-                            <input type="hidden" name="preorder_interest" value="true">
-                            <input type="hidden" name="preorder_payment_link_configured" value="true">
-                            <input type="hidden" name="tier_interest" value="undecided">
-                            <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-                            <div class="flex flex-col sm:flex-row gap-3">
-                                <label class="sr-only" for="hero-email">Enter your email</label>
-                                <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                                <button type="submit" data-track-click="click_get_product_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-warm" data-cta-name="product_updates">
-                                    Get Updates
-                                </button>
-                            </div>
-                            <label class="campaign-consent">
-                                <input type="checkbox" name="consent" value="yes" required>
-                                <span>I agree to receive Owlnest product updates and understand I can unsubscribe anytime.</span>
-                            </label>
-                            <p class="mt-2 sm:mt-3 px-1 text-xs text-white/48">No spam. Just product and shipping updates.</p>
-                            <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
-                        </form>
-                    </div>
-
                 </div>
 
                 <div class="relative hidden lg:block">
@@ -926,7 +848,7 @@
         </section>
 
         <section id="product-definition" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div>
                     <p class="section-label mb-5">Owlnest Lume</p>
                     <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Night deserves its own light.</h2>
@@ -934,7 +856,7 @@
                     <p class="mt-4 text-white/58 leading-relaxed">Light specially tuned for nighttime.</p>
                 </div>
                 <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4 shadow-2xl shadow-black/35">
-                    <img src="/lume-real-photo-on.jpg" alt="Owlnest Lume casting a deep amber, orange-red glow" class="w-full max-h-[560px] object-contain rounded-xl" loading="lazy" decoding="async">
+                    <img src="/lume-real-photo-on.jpg" width="1350" height="1800" alt="Owlnest Lume casting a deep amber, orange-red glow" class="w-full max-h-[620px] object-contain rounded-xl" loading="lazy" decoding="async">
                 </figure>
             </div>
         </section>
@@ -977,18 +899,23 @@
             </div>
         </section>
 
-        <section id="room-shift" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
+        <section id="campaign-story" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
             <div class="max-w-6xl mx-auto">
-                <p class="section-label mb-5">Before / With Lume</p>
-                <img src="/.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=1200&amp;q=78" srcset="/.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=640&amp;q=78 640w, /.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=960&amp;q=78 960w, /.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=1200&amp;q=78 1200w" sizes="(max-width: 768px) 100vw, 1200px" width="1200" height="900" alt="Before and with Lume comparison showing an active room changing into a deep amber nighttime setting" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
-            </div>
-        </section>
-
-        <section id="use-scenes" class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <p class="section-label mb-5">Use Scenes</p>
-                <img src="/.netlify/images?url=/assets/campaign/campaign-use-scenes.png&amp;w=1200&amp;q=78" srcset="/.netlify/images?url=/assets/campaign/campaign-use-scenes.png&amp;w=640&amp;q=78 640w, /.netlify/images?url=/assets/campaign/campaign-use-scenes.png&amp;w=960&amp;q=78 960w, /.netlify/images?url=/assets/campaign/campaign-use-scenes.png&amp;w=1200&amp;q=78 1200w" sizes="(max-width: 768px) 100vw, 1200px" width="1200" height="900" alt="Four Lume use scenes: reading before bed, after-shower wind-down, one partner still awake, and hotel nights" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
-                <p class="mt-5 max-w-3xl text-sm text-white/58 leading-relaxed">Use Lume during wind-down or brief nighttime wake-ups when a small amount of light is needed. At bedtime, switch it off unless a little light is still needed.</p>
+                <div class="max-w-3xl">
+                    <p class="section-label mb-5">After Dark, In the Room</p>
+                    <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">See the room shift.</h2>
+                    <p class="mt-5 text-white/62 leading-relaxed">Use Lume during wind-down or brief nighttime wake-ups when a small amount of light is needed. At bedtime, switch it off unless a little light is still needed.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+                    <figure>
+                        <img src="/.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=1200&amp;q=78" srcset="/.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=640&amp;q=78 640w, /.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=960&amp;q=78 960w, /.netlify/images?url=/assets/campaign/campaign-room-shift-before-with-lume.png&amp;w=1200&amp;q=78 1200w" sizes="(max-width: 1024px) 100vw, 50vw" width="1200" height="900" alt="Before and with Lume comparison showing a room changing into a deep amber nighttime setting" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
+                        <figcaption class="mt-4 text-sm text-white/58">Before / With Lume — a visual comparison of the room after dark.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/lume-night-effect.jpg" width="1350" height="1800" alt="Owlnest Lume casting a deep amber, orange-red glow in a real nighttime setting" class="w-full max-h-[620px] object-contain rounded-[1.5rem] border border-white/10 bg-black/20 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
+                        <figcaption class="mt-4 text-sm text-white/58">Real product glow photographed after dark.</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -1002,44 +929,17 @@
                         <figcaption class="mt-4 text-sm text-white/60">Soft silicone lamp body with a simple round wooden base.</figcaption>
                     </figure>
                     <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4">
-                        <img src="/lume-size-reference.jpg" alt="Owlnest Lume shown beside a tablet for scale" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async">
-                        <figcaption class="mt-4 text-sm text-white/60">Approximately 14–15 cm tall.</figcaption>
-                    </figure>
-                    <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4">
-                        <img src="/lume-bottom-button.jpg" alt="Owlnest Lume bottom physical power button" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async">
-                        <figcaption class="mt-4 text-sm text-white/60">One physical button on the bottom.</figcaption>
-                    </figure>
-                    <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4">
-                        <img src="/lume-usb-c.jpg" alt="Owlnest Lume USB-C charging port" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async">
-                        <figcaption class="mt-4 text-sm text-white/60">USB-C rechargeable.</figcaption>
+                        <img src="/lume-bottom-button.jpg" alt="Owlnest Lume bottom physical button and USB-C charging port" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async">
+                        <figcaption class="mt-4 text-sm text-white/60">One physical button on the bottom. USB-C rechargeable.</figcaption>
                     </figure>
                 </div>
-            </div>
-        </section>
-
-        <section id="simple" class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <p class="section-label mb-5">Simple By Design</p>
-                <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Less bedtime technology.<br>One light.</h2>
-                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="proof-chip">No app</div>
-                    <div class="proof-chip">No screen</div>
-                    <div class="proof-chip">No subscription</div>
-                    <div class="proof-chip">No sleep score</div>
-                    <div class="proof-chip">No Bluetooth</div>
-                    <div class="proof-chip">No clock</div>
-                    <div class="proof-chip">No speaker</div>
-                    <div class="proof-chip">No RGB</div>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="proof-chip">Approx. 14–15 cm</div>
+                    <div class="proof-chip">Deep amber glow</div>
+                    <div class="proof-chip">No app or screen</div>
+                    <div class="proof-chip">No subscription or sleep score</div>
                 </div>
-            </div>
-        </section>
-
-        <section class="campaign-check-section text-midnight px-5 sm:px-8 py-14 sm:py-16">
-            <div class="campaign-check-card mx-auto rounded-[2rem] border border-midnight/10 bg-white/60 p-6 sm:p-8 text-center">
-                <span class="section-label font-black tracking-[0.16em]"><span class="text-base md:text-xl">AI</span> Room Light Check</span>
-                <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">Is your room still acting like daytime?</h2>
-                <p class="mt-4 text-midnight/64 leading-relaxed">Answer 10 quick questions.<br>Add a room photo for an optional AI light reading.</p>
-                <a href="/sleep-ready-room-check/" data-track-click="click_sleep_ready_check" class="cta js-campaign-cta mt-6 inline-flex items-center justify-center bg-amber text-midnight px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white transition" data-cta-name="sleep_ready_check">Check My Room Light</a>
+                <a href="/products" class="mt-8 inline-flex items-center justify-center rounded-xl border border-white/18 px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">See Full Product Details</a>
             </div>
         </section>
 
@@ -1076,36 +976,6 @@
                                 <p id="checkout-feedback" class="mt-4 hidden text-center text-sm text-red-200" aria-live="polite"></p>
                                 <p class="mt-4 text-center text-xs"><a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy" class="text-[#D8952E] hover:text-[#FAEFCF] underline underline-offset-4">Read Shipping Policy</a></p>
                             </div>
-                        </div>
-
-                        <div id="preorder-signup" class="mt-6 rounded-[1.4rem] border border-midnight/10 bg-white/60 p-4 sm:p-5">
-                            <h3 class="font-serif text-2xl">Get product updates</h3>
-                            <p class="mt-2 text-sm text-midnight/62 leading-relaxed">Join the list for product and shipping updates.</p>
-                            <form class="signup-form mt-5 rounded-2xl border border-midnight/12 bg-white/70 p-3 sm:p-2" data-source-section="campaign-product-updates" data-stay-on-page="true" data-success-message="You’re on the list. We’ll email you product and shipping updates." name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                                <input type="hidden" name="form-name" value="campaign-email">
-                                <input type="hidden" name="source_section" value="campaign-product-updates">
-                                <input type="hidden" name="page_path" value="/campaign/">
-                                <input type="hidden" name="utm_source">
-                                <input type="hidden" name="utm_medium">
-                                <input type="hidden" name="utm_campaign">
-                                <input type="hidden" name="utm_content">
-                                <input type="hidden" name="utm_term">
-                                <input type="hidden" name="lead_source" value="preorder_waitlist">
-                                <input type="hidden" name="preorder_interest" value="true">
-                                <input type="hidden" name="preorder_payment_link_configured" value="true">
-                                <input type="hidden" name="tier_interest" value="undecided">
-                                <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-                                <div class="flex flex-col sm:flex-row gap-3">
-                                    <label class="sr-only" for="preorder-email">Email</label>
-                                    <input id="preorder-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                                    <button type="submit" data-track-click="click_join_product_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-white px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white" data-cta-name="product_updates">Get Updates</button>
-                                </div>
-                                <label class="campaign-consent text-midnight/58">
-                                    <input type="checkbox" name="consent" value="yes" required>
-                                    <span>I agree to receive Owlnest product updates and understand I can unsubscribe anytime.</span>
-                                </label>
-                                <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
-                            </form>
                         </div>
 
                     </div>
@@ -1146,71 +1016,15 @@
                     <p class="mt-3 px-1 text-xs text-white/48">No spam. Just product and shipping updates.</p>
                     <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
                 </form>
+                <nav aria-label="More about Owlnest Lume" class="mt-8 flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-[0.12em] text-white/60">
+                    <a href="/products" class="hover:text-amber transition-colors">Product Details</a>
+                    <a href="/science" class="hover:text-amber transition-colors">Science</a>
+                    <a href="/evidence/" class="hover:text-amber transition-colors">Evidence</a>
+                    <a href="/faq/" class="hover:text-amber transition-colors">FAQ</a>
+                </nav>
             </div>
         </section>
 
-        <section id="faq" class="bg-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-4xl mx-auto">
-                <span class="section-label">FAQ</span>
-                <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Quick Questions</h2>
-                <div class="mt-8 space-y-3">
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Where can I find shipping details?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume is in stock. Shipping and delivery details are shown at checkout.</p>
-                    </details>
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Is Lume available to order?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Yes. Orders are open now through secure Shopify checkout.</p>
-                    </details>
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Is Lume a medical device?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">No. Lume is a sleep-spectrum lamp, specially tuned for after dark. It does not diagnose, treat, cure, or prevent sleep disorders.</p>
-                    </details>
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">What happens after I join the list?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Product notes, order updates, and shipping updates.<br>No spam.</p>
-                    </details>
-                    <details class="card rounded-2xl p-5">
-                        <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">How can I contact Owlnest?<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Use the Contact page for product questions, campaign questions, B2B inquiries, or support.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <section id="final-early-access" class="bg-cream text-midnight px-5 sm:px-8 py-20 sm:py-24">
-            <div class="max-w-4xl mx-auto text-center">
-                <span class="section-label">Product Updates</span>
-                <h2 class="font-serif text-4xl md:text-5xl leading-[1.06] tracking-[-0.02em]">Get product and shipping updates.</h2>
-                <p class="mt-5 text-lg text-midnight/64 leading-relaxed">Practical product, order, and shipping news from Owlnest.</p>
-                <form class="signup-form mt-8 mx-auto max-w-2xl rounded-2xl border border-midnight/12 bg-white/60 p-3 sm:p-2" data-source-section="campaign-final-cta" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="campaign-email">
-                    <input type="hidden" name="source_section" value="campaign-final-cta">
-                    <input type="hidden" name="page_path" value="/campaign/">
-                    <input type="hidden" name="utm_source">
-                    <input type="hidden" name="utm_medium">
-                    <input type="hidden" name="utm_campaign">
-                    <input type="hidden" name="utm_content">
-                    <input type="hidden" name="utm_term">
-                    <input type="hidden" name="lead_source" value="preorder_waitlist">
-                    <input type="hidden" name="preorder_interest" value="true">
-                    <input type="hidden" name="preorder_payment_link_configured" value="true">
-                    <input type="hidden" name="tier_interest" value="undecided">
-                    <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <label class="sr-only" for="final-email">Enter your email</label>
-                        <input id="final-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-midnight placeholder:text-midnight/40 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                        <button type="submit" data-track-click="click_get_product_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-midnight hover:text-white" data-cta-name="product_updates">Get Updates</button>
-                    </div>
-                    <label class="campaign-consent">
-                        <input type="checkbox" name="consent" value="yes" required>
-                        <span>I agree to receive Owlnest product updates and understand I can unsubscribe anytime.</span>
-                    </label>
-                    <p class="mt-3 px-1 text-xs text-midnight/48">No spam. Just product and shipping updates.</p>
-                    <p class="signup-message px-1 pt-2 text-sm" role="status" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer bg-[#0b1320] border-t border-white/10 px-5 sm:px-8 py-14 md:py-16">
