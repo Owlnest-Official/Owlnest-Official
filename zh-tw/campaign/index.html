@@ -98,7 +98,7 @@
               "name": "配送資訊在哪裡查看？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Owlnest Lume 現已開放購買。配送方式與到貨資訊會顯示在 Shopify 安全結帳頁面。"
+                "text": "Owlnest Lume 目前有現貨。配送方式與到貨資訊會顯示在 Shopify 安全結帳頁面。"
               }
             },
             {
@@ -342,7 +342,7 @@
             <div class="absolute inset-0 opacity-[0.18]" style="background-image: radial-gradient(rgba(247,239,216,0.45) 1px, transparent 1px); background-size: 42px 42px;"></div>
             <div class="relative max-w-7xl mx-auto w-full grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-16 items-center">
                 <div class="max-w-5xl min-w-0" style="width: min(100%, calc(100vw - 40px)); max-width: 100%; overflow-wrap: anywhere;">
-                    <span class="section-label">Owlnest Lume | 現貨開放購買</span>
+                    <span class="section-label">Owlnest Lume | 活動進行中</span>
                     <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-white">
                         房間知道夜深了<br>燈卻還不知道
                     </h1>
@@ -494,7 +494,7 @@
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-[0.96fr_1.04fr] gap-8 lg:gap-12 xl:gap-16 items-start">
                     <div>
-                        <span class="section-label">現貨開放購買</span>
+                        <span class="section-label">活動進行中</span>
                         <h2 class="mt-3 font-serif text-4xl md:text-5xl leading-[1.06] tracking-[-0.02em]">購買 Owlnest Lume</h2>
                         <p class="mt-5 text-midnight/64 leading-relaxed">選擇 Single 或 Duo 後，直接前往 Shopify 安全結帳</p>
                     </div>
@@ -566,7 +566,7 @@
                 <div class="mt-8 space-y-3">
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">配送資訊在哪裡查看？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
-                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume 現已開放購買。配送方式與到貨資訊會顯示在 Shopify 安全結帳頁面。</p>
+                        <p class="mt-4 text-white/62 leading-relaxed">Owlnest Lume 目前有現貨。配送方式與到貨資訊會顯示在 Shopify 安全結帳頁面。</p>
                     </details>
                     <details class="card rounded-2xl p-5">
                         <summary class="cursor-pointer flex items-center justify-between gap-4 font-bold text-white">Lume 現在可以購買嗎？<i class="accordion-icon fas fa-plus text-amber transition-transform"></i></summary>
@@ -725,13 +725,13 @@
 
         owlnestTrack('view_campaign', {
             source_page: 'zh_campaign',
-            sale_status: 'available_now',
+            sale_status: 'active',
             product_name: 'Owlnest Lume'
         });
 
         const purchaseConfig = {
             destinationUrl: '/zh-tw/products/#buy',
-            status: 'available_now'
+            status: 'active'
         };
 
         function purchaseClickPayload(button) {
@@ -746,7 +746,7 @@
                 currency: 'USD',
                 single_price: 59,
                 duo_price: 100,
-                sale_status: 'available_now'
+                sale_status: 'active'
             };
         }
 
@@ -833,7 +833,7 @@
                     owlnestTrack('campaign_email_submit', {
                         source_page: 'zh_campaign',
                         lead_type: 'product_updates',
-                        sale_status: 'available_now'
+                        sale_status: 'active'
                     });
                     owlnestTrack('generate_lead', {
                         source_page: 'zh_campaign',

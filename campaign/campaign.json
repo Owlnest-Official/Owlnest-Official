@@ -1,11 +1,11 @@
 {
-  "status": "available_now",
+  "status": "active",
   "active": true,
   "lang": "en",
   "title": "Owlnest Lume: Sleep-Spectrum Lamp",
   "subtitle": "Night deserves its own light.",
   "description": "Lume is a sleep-spectrum lamp, specially tuned for after dark. Ordinary warm light only looks warm; Lume is designed from the spectrum up for sleep.",
-  "notice": "Owlnest Lume is available now. Choose Single Lume or Duo Lume before secure Shopify checkout.",
+  "notice": "The Owlnest Lume campaign is active. Lume is in stock; choose Single Lume or Duo Lume before secure Shopify checkout.",
   "preorder": {
     "enabled": true,
     "paymentEnabled": true,
@@ -29,11 +29,11 @@
         "currency": "USD"
       }
     ],
-    "shippingCopy": "Owlnest Lume is available now. Shipping and delivery details are shown at checkout.",
+    "shippingCopy": "Owlnest Lume is in stock. Shipping and delivery details are shown at checkout.",
     "finePrint": "Shopify checkout shows product price, applicable shipping, and any store-collected taxes before payment."
   },
   "heroPricing": {
-    "eyebrow": "Available Now",
+    "eyebrow": "Campaign Active",
     "main": "Single Lume $59 / Duo Lume $100",
     "subtext": "Choose Single or Duo before Shopify checkout"
   },
@@ -74,7 +74,7 @@
     },
     {
       "q": "Can I order now?",
-      "a": "Yes. Owlnest Lume is available now while inventory remains."
+      "a": "Yes. Owlnest Lume is in stock and available to order while inventory remains."
     },
     {
       "q": "Are shipping and taxes included today?",
