@@ -1,5 +1,7 @@
 # Owlnest Official
 
+Last updated: 2026-07-22
+
 Owlnest is a nighttime living brand: made for life after dark. Lume is its first hero product, not the full limit of the brand.
 
 ## Core Product
@@ -44,15 +46,28 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 - No app, screen, clock, speaker, Bluetooth, touch controls, RGB, projector, subscription, or sleep score
 - Brightness adjustment, multiple modes, timer, and automatic dimming are unconfirmed and must not be claimed
 
+## Canonical Page Owners
+
+- Products owns the complete product decision, verified facts, fit, proof, and purchase path.
+- Science owns consumer-readable research interpretation.
+- Evidence owns source traceability, validation status, methods, and limitations.
+- FAQ owns discrete question resolution; Manual owns safe use and operation.
+- Order and Shipping Policy owns fulfillment, shipping, returns, and commercial terms.
+- AI-readable files mirror these human owners and do not create independent claims.
+
 ## Important Pages
 
 - Homepage: https://owlnestofficial.com/
+- Products: https://owlnestofficial.com/products
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
 - Science: https://owlnestofficial.com/science
+- FAQ: https://owlnestofficial.com/faq/
+- Manual: https://owlnestofficial.com/manual
+- Order and Shipping Policy: https://owlnestofficial.com/preorder-policy
 - Campaign: https://owlnestofficial.com/campaign/
 - Traditional Chinese: https://owlnestofficial.com/zh-tw/
 

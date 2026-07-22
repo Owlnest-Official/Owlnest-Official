@@ -99,14 +99,18 @@
   ],
   "important_links": {
     "homepage": "https://owlnestofficial.com/",
+    "products": "https://owlnestofficial.com/products",
     "definition": "https://owlnestofficial.com/what-is-owlnest-lume/",
     "ai_brief": "https://owlnestofficial.com/ai-brief.html",
     "science": "https://owlnestofficial.com/science",
     "evidence_brief": "https://owlnestofficial.com/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
+    "faq": "https://owlnestofficial.com/faq/",
+    "manual": "https://owlnestofficial.com/manual",
+    "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy",
     "campaign": "https://owlnestofficial.com/campaign/"
   },
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-22",
   "language_versions": {
     "en": "https://owlnestofficial.com/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/"
@@ -115,6 +119,9 @@
     "zh-Hant_homepage": "https://owlnestofficial.com/zh-tw/",
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
     "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
+    "zh-Hant_faq": "https://owlnestofficial.com/zh-tw/faq/",
+    "zh-Hant_manual": "https://owlnestofficial.com/zh-tw/manual/",
+    "zh-Hant_order_and_shipping_policy": "https://owlnestofficial.com/zh-tw/preorder-policy/",
     "zh-Hant_definition": "https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/",
     "zh-Hant_campaign": "https://owlnestofficial.com/zh-tw/campaign/"
   }

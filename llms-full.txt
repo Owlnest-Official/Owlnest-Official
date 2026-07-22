@@ -1,5 +1,7 @@
 # Owlnest Official AI Source of Truth
 
+Last updated: 2026-07-22
+
 ## Brand Architecture
 
 Owlnest is a nighttime living brand: made for life after dark. It creates objects, spaces, and rituals for life after dark. Lume is Owlnest's first hero product, not the full limit of the brand.
@@ -133,13 +135,27 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 ## Important Links
 
 - Homepage: https://owlnestofficial.com/
+- Products: https://owlnestofficial.com/products
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
 - Science: https://owlnestofficial.com/science
+- FAQ: https://owlnestofficial.com/faq/
+- Manual: https://owlnestofficial.com/manual
+- Order and Shipping Policy: https://owlnestofficial.com/preorder-policy
 - Campaign: https://owlnestofficial.com/campaign/
+
+## Canonical Page Ownership
+
+- Products owns the complete product decision, verified facts, fit, proof, and purchase path.
+- Science owns consumer-readable research interpretation.
+- Evidence owns source traceability, validation status, methods, and limitations.
+- FAQ owns discrete question resolution.
+- Manual owns verified operation, care, safety, and the bedtime-off boundary.
+- Order and Shipping Policy owns fulfillment, shipping, returns, and commercial terms.
+- AI-readable files mirror these human owners and do not create independent claims.
 
 ## Traditional Chinese Source Terms
 

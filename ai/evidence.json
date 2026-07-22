@@ -1,7 +1,15 @@
 {
   "brand": "Owlnest",
   "product_name": "Owlnest Lume",
-  "source_of_truth": "Existing Owlnest Science page",
+  "source_of_truth": "Owlnest Truth documents and the current public Science and Evidence pages. Science owns consumer interpretation; Evidence owns source traceability and validation status.",
+  "canonical_owners": {
+    "product_decision": "https://owlnestofficial.com/products",
+    "consumer_science": "https://owlnestofficial.com/science",
+    "source_traceability": "https://owlnestofficial.com/evidence/",
+    "questions": "https://owlnestofficial.com/faq/",
+    "safe_use": "https://owlnestofficial.com/manual",
+    "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy"
+  },
   "evidence_positioning": "Owlnest Lume is a research-informed sleep-spectrum lamp, specially tuned for after dark. Published research and institutional references support general lighting principles, not product-specific clinical outcomes.",
   "claim_boundary": "The research sources support design principles only. They do not mean Owlnest Lume has completed product-specific clinical trials or can diagnose, treat, cure, or prevent disease.",
   "evidence_levels": [
@@ -186,7 +194,7 @@
     {
       "science_page_source": "Read: Smart Sleep Technology by ITRI",
       "research_principle": "Timing matters for sleep-supporting lighting environments.",
-      "product_design_decision": "Use after dark during the wind-down; the final 1 to 2 hours is practical guidance, not a tested threshold.",
+      "product_design_decision": "Use after dark during the wind-down; the final 1 to 2 hours is practical guidance, not a tested threshold. At bedtime, switch Lume off unless a small amount of light is still needed.",
       "owlnest_lume_implementation": "Sleep-spectrum lamp specially tuned for after dark, including brief nighttime wake-ups when a small amount of light is needed.",
       "evidence_level": "Institutional research + design rationale",
       "claim_boundary": "Does not guarantee sleep improvement.",
@@ -297,7 +305,7 @@
       "third-party lab or instrument report if available"
     ]
   },
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-22",
   "language_versions": {
     "en": "https://owlnestofficial.com/evidence/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"
