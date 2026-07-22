@@ -992,6 +992,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         }
 
+        // Reveal above-the-fold content without waiting for the full frame sequence to load.
+        updateUI();
+
         function updateHeroAnimation() {
             if(!section1 || prefersReducedMotion) return;
             const rect = section1.getBoundingClientRect();
