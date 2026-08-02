@@ -1,5 +1,29 @@
 # Owlnest Website Agent Instructions
 
+## Production and Deployment Architecture
+
+The current production architecture is:
+
+- The canonical production website is `https://owlnestofficial.com`.
+- Production hosting is provided by a Hetzner VPS, not Netlify Hosting.
+- GitHub `main` is the source branch for the production website.
+- The VPS synchronizes from `origin/main` automatically every five minutes. A push to `main` can therefore update production within five minutes.
+- `staging.owlnestofficial.com` and production currently use the same website files. Staging is not an isolated test environment and must not be treated as a safe preview environment.
+- Netlify remains only for DNS management and legacy-site fallback. Do not use Netlify to deploy the production website.
+- The production server is Linux. Treat every filename, directory name, URL path, import, and asset reference as case-sensitive.
+- Supabase continues to provide member authentication and data services.
+- Shopify continues to provide products and checkout.
+
+Deployment restrictions:
+
+- Never run `netlify deploy`.
+- Do not create new Netlify Functions.
+- Do not create new `/.netlify/images` asset paths. Reference the real repository asset path directly.
+- Do not assume `_redirects` controls production routing. Production routing is currently handled by Nginx on the VPS.
+- Do not modify DNS, Caddy, Nginx, Docker, Supabase configuration, or Shopify configuration unless the active user request explicitly authorizes that exact system.
+- Existing Netlify files, functions, paths, or legacy integrations are historical or fallback implementation. Do not remove or rewrite them merely because Netlify no longer hosts production.
+- Never write VPS passwords, SSH private keys, access tokens, server secrets, or other credentials into the repository.
+
 ## Required Reading Order
 
 For any task involving Owlnest or Lume marketing, website copy, brand documents, ads, FAQ, creator materials, SEO, structured data, AI-readable content, or Traditional Chinese copy, read these files in order:
@@ -124,6 +148,14 @@ The current repository contains general research and real product/hardware photo
 - Prefer minimal, reversible changes.
 - Do not expose supplier details, costs, private agreements, internal strategy, team details, or unpublished operations.
 - Summarize files changed after every task.
+- Before editing, identify the files that are allowed to change and the files or systems that must remain untouched.
+- Keep each task within its approved scope. Do not expand the edit because an adjacent issue appears convenient to fix.
+- For visual changes, validate both desktop and mobile layouts.
+- For shared navigation, product, policy, or layout changes, validate both English and Traditional Chinese pages.
+- After changes, run `git diff --check`.
+- Validate every new or modified image, script, stylesheet, and resource path against the exact case-sensitive repository path.
+- Confirm affected pages remain functional as static HTML without depending on Netlify Hosting behavior.
+- Complete a QA report before committing or pushing.
 
 Do not touch these areas unless explicitly requested:
 
@@ -141,9 +173,12 @@ Never stage `_incoming/`.
 
 ## Git Behavior
 
-Unless the user explicitly asks:
-
-- do not commit
-- do not push
-
-When committing, stage only the expected files.
+- The active user's explicit task instructions always control whether a task stops before commit or push.
+- When a repository change is authorized through deployment and its QA passes, stage only the expected files, create an intentional commit, and push to `origin/main`.
+- Never stage unrelated working-tree changes or `_incoming/`.
+- Before committing, verify the staged file list and run `git diff --cached --check`.
+- Before pushing, confirm the current branch, commit SHA, and ahead/behind state.
+- Do not create or require a separate production branch.
+- Do not use a Netlify preview as a release gate. Local static-page QA is the normal preview method unless the user explicitly provides another isolated environment.
+- Remember that pushing `main` is a production-affecting action because the VPS may synchronize it within five minutes.
+- After a successful push, report the exact commit SHA clearly.
