@@ -451,8 +451,9 @@
                     <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">想收到產品與出貨更新嗎？</h2>
                     <p class="mt-5 text-white/60 leading-relaxed">加入名單，收到實用的產品、訂單與出貨消息。</p>
                 </div>
-                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-positioning" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="campaign-email">
+                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-positioning" data-success-url="/campaign-success.html" name="campaign-email" method="POST" action="/api/subscribe-updates">
+                    <input type="hidden" name="locale" value="zh-Hant">
+                    <input type="hidden" name="source" value="zh-campaign-positioning">
                     <input type="hidden" name="source_section" value="zh-campaign-positioning">
                     <input type="hidden" name="page_path" value="/zh-tw/campaign/">
                     <input type="hidden" name="utm_source" value="">
@@ -641,7 +642,6 @@
         function encodeFormData(form) {
             fillTrackingFields(form);
             const data = new FormData(form);
-            data.set('form-name', 'campaign-email');
             return new URLSearchParams(data).toString();
         }
 
@@ -678,16 +678,12 @@
                 setMessage(form, '正在送出...', 'neutral');
 
                 try {
-                    if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
-                        await new Promise((resolve) => setTimeout(resolve, 250));
-                    } else {
-                        const response = await fetch('/', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                            body: encodeFormData(form)
-                        });
-                        if (!response.ok) throw new Error('submit_failed');
-                    }
+                    const response = await fetch('/api/subscribe-updates', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: encodeFormData(form)
+                    });
+                    if (!response.ok) throw new Error('submit_failed');
 
                     form.reset();
                     fillTrackingFields(form);
@@ -708,7 +704,7 @@
                     if (form.dataset.stayOnPage === 'true') {
                         setMessage(form, form.dataset.successMessage || '已收到，謝謝你加入 Owlnest Lume 產品更新', 'success');
                     } else {
-                        window.location.href = form.getAttribute('action') || '/campaign-success.html';
+                        window.location.href = form.dataset.successUrl || '/campaign-success.html';
                     }
                 } catch (error) {
                     setMessage(form, '送出時發生問題，請稍後再試', 'error');

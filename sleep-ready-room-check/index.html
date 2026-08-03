@@ -417,8 +417,9 @@
                     </section>
 
                     <div id="lead-panel" class="result-panel mt-8 border-t border-white/10 pt-7">
-                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
-                            <input type="hidden" name="form-name" value="sleep-ready-room-check">
+                        <form id="room-check-form" class="mt-7 field-shell rounded-2xl p-4" name="sleep-ready-room-check" method="POST" action="/api/subscribe-updates" novalidate>
+                            <input type="hidden" name="locale" value="en">
+                            <input type="hidden" name="source" value="sleep-ready-room-check">
                             <input type="hidden" name="sleep_check_session_id" id="sleep-check-session-id">
                             <input type="hidden" name="lead_stage" id="lead-stage-field">
                             <input type="hidden" name="quiz_score" id="quiz-score">
@@ -865,7 +866,8 @@
                 ai_summary: get('ai-summary-field'),
                 ai_product_guidance: get('ai-product-guidance-field'),
                 source: window.location.href,
-                campaign: 'sleep-ready-room-check'
+                campaign: 'sleep-ready-room-check',
+                'bot-field': form.elements['bot-field']?.value || ''
             };
         }
 
@@ -874,7 +876,7 @@
                 return false;
             }
             try {
-                const response = await fetch('/.netlify/functions/send-sleep-check-result', {
+                const response = await fetch('/api/sleep-check-result', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -968,18 +970,15 @@
             const submittedAt = new Date();
             populateSubmissionFields(submittedAt);
             setFieldValue('lead-stage-field', stage);
-            const data = new URLSearchParams(new FormData(form));
-            data.set('form-name', 'sleep-ready-room-check');
-            data.set('sleep_check_session_id', sleepCheckSessionId);
-            data.set('lead_stage', stage);
-            data.set('email', email);
-            data.set('timestamp', submittedAt.toISOString());
-            data.set('timestamp_local', localTimestamp(submittedAt));
-            data.set('page_source', window.location.href);
-            data.set('language', document.documentElement.lang || 'en');
-            data.set('consent', 'yes');
+            const data = new URLSearchParams({
+                email,
+                consent: 'yes',
+                locale: document.documentElement.lang || 'en',
+                source: 'sleep-ready-room-check',
+                'bot-field': form.elements['bot-field']?.value || ''
+            });
 
-            const response = await fetch('/', {
+            const response = await fetch('/api/subscribe-updates', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: data.toString()

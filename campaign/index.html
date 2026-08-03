@@ -990,8 +990,9 @@
                     <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">Want product and shipping updates?</h2>
                     <p class="mt-5 text-white/60 leading-relaxed">Join the list for practical product, order, and shipping news.</p>
                 </div>
-                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-positioning" name="campaign-email" method="POST" action="/campaign-success.html" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="campaign-email">
+                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="campaign-positioning" data-success-url="/campaign-success.html" name="campaign-email" method="POST" action="/api/subscribe-updates">
+                    <input type="hidden" name="locale" value="en">
+                    <input type="hidden" name="source" value="campaign-positioning">
                     <input type="hidden" name="source_section" value="campaign-positioning">
                     <input type="hidden" name="page_path" value="/campaign/">
                     <input type="hidden" name="utm_source">
@@ -1131,7 +1132,6 @@
         function encodeFormData(form) {
             fillTrackingFields(form);
             const data = new FormData(form);
-            data.set('form-name', 'campaign-email');
             return new URLSearchParams(data).toString();
         }
 
@@ -1172,16 +1172,12 @@
                     if (window.__OWLNEST_FORCE_SIGNUP_ERROR__) {
                         throw new Error('submit_failed');
                     }
-                    if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
-                        await new Promise((resolve) => setTimeout(resolve, 250));
-                    } else {
-                        const response = await fetch('/', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                            body: encodeFormData(form)
-                        });
-                        if (!response.ok) throw new Error('submit_failed');
-                    }
+                    const response = await fetch('/api/subscribe-updates', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: encodeFormData(form)
+                    });
+                    if (!response.ok) throw new Error('submit_failed');
                     form.reset();
                     fillTrackingFields(form);
                     trackEvent('submit_early_access_email', {
@@ -1200,7 +1196,7 @@
                     if (form.dataset.stayOnPage === 'true') {
                         setMessage(form, form.dataset.successMessage || 'You’re on the list. We’ll email you product and shipping updates.', 'success');
                     } else {
-                        window.location.href = form.getAttribute('action') || '/campaign-success.html';
+                        window.location.href = form.dataset.successUrl || '/campaign-success.html';
                     }
                 } catch (error) {
                     setMessage(form, 'Something went wrong. Please try again.', 'error');
