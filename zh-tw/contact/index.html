@@ -269,8 +269,8 @@
                         <h2 class="font-serif text-3xl md:text-4xl text-midnight mb-4">留下你的問題</h2>
                         <p class="text-midnight/65 font-light leading-relaxed text-sm md:text-base">簡單說明需求，我們會回覆</p>
                     </div>
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact-success.html">
-                        <input type="hidden" name="form-name" value="contact">
+                    <form name="contact" method="POST" action="/api/contact">
+                        <input type="hidden" name="locale" value="zh-Hant">
                         <p class="hidden" aria-hidden="true">
                             <label><span class="sr-only">Bot field</span><input name="bot-field" tabindex="-1" autocomplete="off"></label>
                         </p>
