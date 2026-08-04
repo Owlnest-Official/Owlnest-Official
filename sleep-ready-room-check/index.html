@@ -565,7 +565,7 @@
         const quizActions = document.getElementById('quiz-actions');
         const sessionIdField = document.getElementById('sleep-check-session-id');
         const leadStageField = document.getElementById('lead-stage-field');
-        const aiEndpoint = '/.netlify/functions/analyze-sleep-environment';
+        const aiEndpoint = '/api/analyze-sleep-environment';
         const maxPhotoBytes = 8 * 1024 * 1024;
         const allowedPhotoTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
         let current = 0;
