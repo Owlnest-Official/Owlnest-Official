@@ -8,11 +8,11 @@
   const PACKAGES = {
     single: {
       merchandiseId: "gid://shopify/ProductVariant/53197831405884",
-      amount: 59
+      amount: 119
     },
     duo: {
       merchandiseId: "gid://shopify/ProductVariant/53218207236412",
-      amount: 100
+      amount: 219
     }
   };
 
