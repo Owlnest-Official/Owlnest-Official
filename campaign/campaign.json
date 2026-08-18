@@ -1,96 +1,63 @@
 {
-  "status": "active",
-  "active": true,
-  "lang": "en",
-  "title": "Owlnest Lume: Sleep-Spectrum Lamp",
-  "subtitle": "Night deserves its own light.",
-  "description": "Lume is a sleep-spectrum lamp, specially tuned for after dark. Ordinary warm light only looks warm; Lume is designed from the spectrum up for sleep.",
-  "notice": "The Owlnest Lume campaign is active. Lume is in stock; choose Single Lume or Duo Lume before secure Shopify checkout.",
-  "preorder": {
-    "enabled": true,
-    "paymentEnabled": true,
-    "preorderIsLive": false,
-    "paymentProvider": "shopify",
-    "checkoutPath": "/products/#buy",
-    "fulfillmentBeginsOn": null,
-    "availability": "In stock while inventory remains",
-    "ctaLive": "Buy Now",
-    "pricing": [
-      {
-        "name": "Single Lume",
-        "quantity": "1 × Owlnest Lume",
-        "price": "US$119",
-        "currency": "USD"
-      },
-      {
-        "name": "Duo Lume",
-        "quantity": "2 × Owlnest Lume",
-        "price": "US$219",
-        "currency": "USD",
-        "twoSinglesValue": "US$238",
-        "savings": "US$19"
-      }
+  "schemaVersion": "3.0",
+  "pageType": "21-day-sleep-program",
+  "program": {
+    "name": "21-Day Sleep Program",
+    "nameZhTw": "21 天睡眠計畫",
+    "ecosystem": "Owlnest Lab",
+    "durationDays": 21,
+    "participantLimit": {
+      "maximum": 50,
+      "qualifier": "up to",
+      "status": "intended"
+    },
+    "region": "United States",
+    "participantStatus": "not-yet-selected",
+    "resultsStatus": "no-results-yet",
+    "researchType": [
+      "real-world participant research",
+      "structured observation",
+      "self-reported participant feedback",
+      "product-use research"
     ],
-    "shippingCopy": "Owlnest Lume is in stock. Shipping and delivery details are shown at checkout.",
-    "finePrint": "Shopify checkout shows product price, applicable shipping, and any store-collected taxes before payment."
+    "not": [
+      "clinical trial",
+      "medical research",
+      "diagnosis",
+      "treatment",
+      "healthcare service"
+    ],
+    "researchQuestion": "Who finds Lume useful, in what situations, and under what nighttime habits?",
+    "principle": "We're not looking for positive reviews. We're looking for honest results."
   },
-  "heroPricing": {
-    "eyebrow": "Campaign Active",
-    "main": "Single Lume US$119 / Duo Lume US$219",
-    "subtext": "Save US$19 with Duo"
-  },
-  "platformCta": {
-    "label": "Buy Now",
-    "href": "/products/#buy"
-  },
-  "secondaryCta": {
-    "label": "Read the Science",
-    "href": "/science"
-  },
-  "ownerLinks": [
-    {
-      "label": "Product details",
-      "href": "/products"
-    },
-    {
-      "label": "Science",
-      "href": "/science"
-    },
-    {
-      "label": "Evidence",
-      "href": "/evidence/"
-    },
-    {
-      "label": "FAQ",
-      "href": "/faq/"
-    }
-  ],
-  "stats": {
-    "goal": null,
-    "raised": null,
-    "backers": null,
-    "daysLeft": null
+  "application": {
+    "provider": "Google Forms",
+    "status": "opening-soon",
+    "urlSource": "/assets/js/sleep-program-application.js#SLEEP_PROGRAM_APPLICATION_URL",
+    "fallbackTarget": "#application-status"
   },
   "timeline": [
     {
-      "date": "After purchase",
-      "title": "Order processing",
-      "text": "Customers receive order and shipping updates by email as their order progresses."
+      "day": 0,
+      "stage": "Baseline"
     },
     {
-      "date": "As orders progress",
-      "title": "Order and shipping updates",
-      "text": "Customers receive order, shipping, and fulfillment updates by email as they are ready."
+      "day": 7,
+      "stage": "First check-in"
+    },
+    {
+      "day": 14,
+      "stage": "Second check-in"
+    },
+    {
+      "day": 21,
+      "stage": "Final reflection"
     }
   ],
-  "faq": [
-    {
-      "q": "Can I order now?",
-      "a": "Yes. Owlnest Lume is in stock and available to order while inventory remains."
-    },
-    {
-      "q": "What happens after I join the updates list?",
-      "a": "You will receive product, order, and shipping updates. You can unsubscribe at any time."
-    }
-  ]
+  "links": {
+    "lab": "/lab/",
+    "labZhTw": "/zh-tw/lab/",
+    "science": "/science",
+    "scienceZhTw": "/zh-tw/science/"
+  }
 }

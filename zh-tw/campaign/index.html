@@ -1,267 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
-        <!-- Google Consent Mode v2 default -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     (function(){
         var savedConsent = null;
-        try {
-            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
-        } catch (error) {
-            savedConsent = null;
-        }
+        try { savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null'); } catch (error) { savedConsent = null; }
         var hasSavedConsent = savedConsent && savedConsent.version === 1;
         var consentState = hasSavedConsent ? {
             analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
             ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
             ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
             ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
-        } : {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        };
+        } : { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' };
         gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
-        window.dataLayer.push({
-            event: 'owlnest_consent_default',
-            owlnest_consent_analytics: consentState.analytics_storage,
-            owlnest_consent_ads: consentState.ad_storage,
-            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
-        });
+        window.dataLayer.push({ event: 'owlnest_consent_default', owlnest_consent_analytics: consentState.analytics_storage, owlnest_consent_ads: consentState.ad_storage, owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied' });
     })();
     </script>
-    <!-- End Google Consent Mode v2 default -->
-<script>
-        if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
-        }
+    <script>
+    if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+    }
     </script>
-    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaign | Owlnest Official</title>
-    <meta name="description" content="認識為天黑後特別調製的睡眠光譜燈 Owlnest Lume，以及它為什麼不同於普通暖光。">
+    <title>21 天睡眠計畫 | Owlnest Official</title>
+    <meta name="description" content="申請加入 Owlnest 21 天睡眠計畫：預計在美國選出最多 50 位參與者，在真實夜晚生活中使用 Lume，並提供坦白回饋。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://owlnestofficial.com/zh-tw/campaign/">
     <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/campaign/">
     <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/campaign/">
     <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/campaign/">
-    <meta property="og:title" content="Campaign | Owlnest Official">
-    <meta property="og:description" content="認識為天黑後特別調製的睡眠光譜燈 Owlnest Lume，以及它為什麼不同於普通暖光。">
+    <meta property="og:title" content="21 天睡眠計畫 | Owlnest Official">
+    <meta property="og:description" content="21 個夜晚，真實作息，坦白回饋。入選參與者將在日常生活中使用 Lume，和 Owlnest Lab 分享實際經驗。">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:url" content="https://owlnestofficial.com/zh-tw/campaign/">
     <meta property="og:image" content="https://owlnestofficial.com/campaign-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Campaign | Owlnest Official">
-    <meta name="twitter:description" content="認識為天黑後特別調製的睡眠光譜燈 Owlnest Lume，以及它為什麼不同於普通暖光。">
+    <meta name="twitter:title" content="21 天睡眠計畫 | Owlnest Official">
+    <meta name="twitter:description" content="Owlnest Lab 的真實生活參與計畫：我們要找的不是好評，而是真實結果。">
     <meta name="twitter:image" content="https://owlnestofficial.com/campaign-og.jpg">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://owlnestofficial.com/zh-tw/campaign/#webpage",
-          "url": "https://owlnestofficial.com/zh-tw/campaign/",
-          "name": "Campaign | Owlnest Official",
-          "description": "認識為天黑後特別調製的睡眠光譜燈 Owlnest Lume，以及它為什麼不同於普通暖光。",
-          "inLanguage": "zh-Hant-TW",
-          "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://owlnestofficial.com/#website",
-            "name": "Owlnest Official",
-            "url": "https://owlnestofficial.com/"
-          },
-          "about": {
-            "@type": "Product",
-            "@id": "https://owlnestofficial.com/zh-tw/products/#owlnest-lume-product-page",
-            "name": "Owlnest Lume",
-            "description": "Owlnest Lume 是為天黑後特別調製的睡眠光譜燈。為夜晚特別調製的光。"
-          }
-        }
-      ]
-    }
+    {"@context":"https://schema.org","@type":"WebPage","name":"21 天睡眠計畫","description":"Owlnest Lab 的結構化真實生活參與計畫，預計在美國選出參與者，於 21 天內使用 Lume 並提供坦白回饋。","url":"https://owlnestofficial.com/zh-tw/campaign/","inLanguage":"zh-Hant","isPartOf":{"@type":"WebSite","name":"Owlnest Official","url":"https://owlnestofficial.com/zh-tw/"}}
     </script>
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { background: #111927; color: #fff; overflow-x: hidden; }
-        .field-shell { border: 1px solid rgba(250,239,207,.16); background: rgba(255,255,255,.045); }
-        .campaign-image-section img { width: 100%; height: auto; border-radius: 1.5rem; }
-        .campaign-check-section {
-            background: #0d1727 !important;
-            color: #111d2f;
-            padding-top: clamp(2rem, 3.5vw, 3.5rem) !important;
-            padding-bottom: clamp(2rem, 3.5vw, 3.5rem) !important;
-        }
-        .campaign-check-card {
-            max-width: 760px;
-            border-color: rgba(247, 239, 216, 0.18) !important;
-            background: rgba(247, 239, 216, 0.92) !important;
-            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
-        }
-        .campaign-mood-crop {
-            width: min(100%, 980px);
-            margin-inline: auto;
-        }
-        .campaign-mood-crop img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border: 1px solid rgba(247, 239, 216, 0.10) !important;
-            border-radius: clamp(1.1rem, 2vw, 1.65rem) !important;
-            box-shadow: 0 26px 68px rgba(0, 0, 0, 0.25);
-        }
-        .hero-glow {
-            background:
-                radial-gradient(circle at 58% 58%, rgba(240, 90, 36, 0.44), transparent 34%),
-                radial-gradient(circle at 42% 30%, rgba(216, 145, 42, 0.18), transparent 48%),
-                linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025));
-        }
-        #hero .image-frame {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1.65rem;
-            padding: 0;
-            border-color: rgba(247, 239, 216, 0.07);
-            background:
-                radial-gradient(circle at 55% 62%, rgba(240, 90, 36, 0.24), transparent 48%),
-                rgba(247, 239, 216, 0.035);
-            box-shadow: 0 28px 70px rgba(0,0,0,0.30), 0 0 54px rgba(240,90,36,0.08);
-            transform: none;
-        }
-        #hero .image-frame img {
-            position: relative;
-            z-index: 1;
-            display: block;
-            background: transparent;
-            box-shadow: none;
-        }
-        .image-frame img { filter: saturate(1.04) contrast(1.03); }
-        .campaign-consent {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.65rem;
-            margin: 0.75rem 0 0.85rem;
-            padding-inline: 0.25rem;
-            color: rgba(247, 239, 216, 0.86);
-            font-size: 0.8rem;
-            line-height: 1.45;
-            text-align: left;
-        }
-        .campaign-consent input {
-            width: 1rem;
-            height: 1rem;
-            min-height: 1rem;
-            margin-top: 0.12rem;
-            flex: 0 0 auto;
-            accent-color: #C9852A;
-        }
-        #early-access .campaign-consent {
-            margin-top: 0.72rem;
-            margin-bottom: 0.45rem;
-            padding-inline: 0.12rem;
-            color: rgba(247, 239, 216, 0.72);
-            font-size: 0.78rem;
-            gap: 0.7rem;
-            line-height: 1.55;
-        }
-        #early-access .campaign-consent input { margin-top: 0.17rem; }
-        .bg-cream .campaign-consent { color: rgba(17, 25, 39, 0.66); }
-        #mobile-menu { transform: translateY(-100%); transition: transform .35s ease; visibility: hidden; pointer-events: none; overflow-y: auto; }
-        #mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
-        .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-            body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-        main .font-serif,
-        main h1,
-        main h2,
-        main h3,
-        nav,
-        button,
-        input,
-        textarea,
-        label {
-            font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-        }
-        main h1.font-serif,
-        main h2.font-serif,
-        main h3.font-serif {
-            font-weight: 500 !important;
-            letter-spacing: 0 !important;
-            line-height: 1.12 !important;
-        }
-        .language-menu {
-            opacity: 0;
-            transform: translateY(8px);
-            visibility: hidden;
-            pointer-events: none;
-        }
-        .language-menu.open,
-        .language-wrap:hover .language-menu,
-        .language-wrap:focus-within .language-menu {
-            opacity: 1;
-            transform: translateY(0);
-            visibility: visible;
-            pointer-events: auto;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/consent.css">
-    <link rel="stylesheet" href="/assets/css/typography.css?v=20260712-campaign-layout">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/sleep-program.css">
 </head>
-<body class="campaign-page font-sans antialiased selection:bg-amber selection:text-midnight">
-    <!-- Google Tag Manager (noscript) -->
+<body class="sleep-program-page zh antialiased selection:bg-amber selection:text-midnight">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-midnight/88 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-5">
-            <a href="/zh-tw/" class="site-brand flex items-center gap-3 shrink-0 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-                <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="w-9 h-9 object-contain">
-                <span class="text-sm sm:text-base font-bold tracking-[0.16em] uppercase text-white">Owlnest</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.14em] uppercase font-bold">
-                <a href="/zh-tw/" class="campaign-nav-link">首頁</a>
-                <a href="/zh-tw/products/" class="campaign-nav-link">產品</a>
-                <a href="/zh-tw/campaign/" class="campaign-nav-link is-active" aria-current="page">Campaign</a>
-                <a href="/zh-tw/science/" class="campaign-nav-link">科學</a>
-                <a href="/zh-tw/about/" class="campaign-nav-link">關於</a>
-                <a href="/zh-tw/contact/" class="campaign-nav-link">聯絡我們</a>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+            <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+            <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="主要導覽">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/campaign/" class="text-amber transition-colors duration-300" aria-current="page">Campaign</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">科學</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <a href="/account/" class="hidden lg:inline-flex text-white/65 hover:text-amber transition-colors" title="會員中心" aria-label="會員中心">
-                    <i class="fas fa-user"></i>
-                </a>
-                <div class="relative hidden lg:block">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/65 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i> 繁體中文 <i class="fas fa-chevron-down text-[9px]"></i>
-                    </button>
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="會員中心" aria-label="會員中心" rel="nofollow"><i class="fas fa-user text-lg transition-colors duration-300"></i></a>
+                <div class="relative language-wrap">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false"><i class="fas fa-globe text-xs"></i>繁體中文<i class="fas fa-chevron-down text-[9px]"></i></button>
                     <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
                         <a href="/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English</a>
                         <a href="/zh-tw/campaign/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
                     </div>
                 </div>
-                <a href="/zh-tw/products/#buy" class="inline-flex items-center justify-center bg-amber text-midnight px-3 sm:px-5 py-3 text-[9px] sm:text-xs font-bold tracking-[0.11em] sm:tracking-[0.14em] uppercase hover:bg-warm">購買 LUME</a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="切換選單">
-                    <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                    <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-                </button>
+                <a href="/zh-tw/products/#buy" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors"><i class="fas fa-arrow-up-right-from-square text-xs"></i>購買 LUME</a>
             </div>
+        </div>
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員中心" rel="nofollow"><i class="fas fa-user text-lg transition-colors duration-300"></i></a>
+            <a href="/zh-tw/products/#buy" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 Lume" aria-label="購買 Lume"><i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i></a>
+            <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單" aria-expanded="false"><i class="fas fa-bars" id="mobile-menu-icon"></i><span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span></button>
         </div>
     </header>
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm uppercase tracking-[0.2em] font-semibold text-center">
-
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="行動版導覽">
             <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-amber transition-colors" aria-current="page">Campaign</a>
@@ -269,458 +100,125 @@
             <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
             <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
-            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
-                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M20 21a8 8 0 0 0-16 0" />
-                    <circle cx="12" cy="7" r="4" />
-                </svg>
-            </a>
-            <div class="text-center">
-                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
-                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
-                    <a href="/campaign/" class="text-white hover:text-amber">English</a>
-                    <a href="/zh-tw/campaign/" class="text-amber">繁體中文</a>
-                </div>
-            </div>
-                        <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 LUME</a>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="會員中心" title="會員中心" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow"><i class="fas fa-user text-lg"></i></a>
+            <div class="text-center"><p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p><div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case"><a href="/campaign/" class="text-white hover:text-amber">English</a><a href="/zh-tw/campaign/" class="text-amber">繁體中文</a></div></div>
+            <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
+                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 Lume</a>
                 <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
             </div>
         </nav>
     </div>
 
     <main>
-        <section id="hero" class="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 px-5 sm:px-8 flex items-center overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(216,145,42,0.15),transparent_32%),linear-gradient(135deg,#111d2f_0%,#16253b_48%,#0c1422_100%)]"></div>
-            <div class="absolute inset-0 opacity-[0.18]" style="background-image: radial-gradient(rgba(247,239,216,0.45) 1px, transparent 1px); background-size: 42px 42px;"></div>
-            <div class="relative max-w-7xl mx-auto w-full grid lg:grid-cols-[1.02fr_0.98fr] gap-10 lg:gap-16 items-center">
-                <div class="max-w-5xl min-w-0" style="width: min(100%, calc(100vw - 40px)); max-width: 100%; overflow-wrap: anywhere;">
-                    <span class="section-label">Owlnest Lume | 活動進行中</span>
-                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-[-0.035em] font-medium text-white">
-                        房間知道夜深了<br>燈卻還不知道
-                    </h1>
-                    <p class="mt-4 sm:mt-6 text-xl sm:text-3xl font-serif leading-tight text-warm">
-                        天黑之後，普通的燈就用錯了
-                    </p>
-                    <p class="mt-3 sm:mt-5 max-w-2xl text-base sm:text-xl text-white/72 leading-relaxed">
-                        夜晚已經來了，多數房間照明還在做白天的工作
-                    </p>
-                    <div class="mt-7 flex flex-col sm:flex-row gap-3 max-w-xl">
-                        <a href="/zh-tw/products/#buy" data-track-click="click_buy_lume" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl bg-amber px-7 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="buy_lume">購買 Lume</a>
-                        <a href="#difference" class="cta js-campaign-cta inline-flex min-h-14 items-center justify-center rounded-xl border border-white/18 px-7 text-xs font-bold uppercase tracking-[0.14em] text-white hover:border-amber hover:bg-white/8" data-cta-name="learn_more">看看有什麼不同</a>
-                    </div>
-                    <p class="mt-4 max-w-xl text-xs leading-relaxed text-white/58"><a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy" class="text-amber hover:text-warm underline underline-offset-4">查看配送政策</a></p>
-
-                    <div class="lg:hidden mt-4 hero-glow image-frame rounded-2xl border border-white/12 p-3 shadow-2xl shadow-black/35">
-                        <img src="/assets/campaign/campaign-hero-phone-back-up.webp" width="960" height="720" alt="黑暗房間中的手機亮光，房間照明尚未轉入夜晚" class="w-full h-auto rounded-xl" fetchpriority="high" decoding="async">
-                    </div>
-
-                </div>
-
-                <div class="relative hidden lg:block">
-                    <div class="hero-glow image-frame rounded-[2rem] border border-white/12 p-4 sm:p-6 shadow-2xl shadow-black/40">
-                        <img src="/assets/campaign/campaign-hero-phone-back-up.webp" width="960" height="720" alt="黑暗房間中的手機亮光，房間照明尚未轉入夜晚" class="w-full max-h-[620px] object-contain rounded-[1.45rem]" fetchpriority="high" decoding="async">
-                    </div>
+        <section class="program-band program-hero">
+            <div class="program-shell program-hero-grid">
+                <div><span class="program-kicker">Owlnest Lab · 第一梯次參與計畫</span><h1>21 天睡眠計畫</h1></div>
+                <div class="program-hero-copy">
+                    <p>21 個夜晚，真實作息，坦白回饋。第一梯次預計在美國選出最多 50 位參與者，在日常生活中使用 Lume，分享實際發生的事。</p>
+                    <div class="program-facts"><span>21 天</span><span>最多 50 位入選參與者</span><span>美國</span></div>
+                    <div class="program-actions"><a class="program-button program-button--primary" href="#application-status" data-sleep-program-apply>申請加入 21 天睡眠計畫</a><a class="program-button" href="/zh-tw/lab/">探索 Lab</a></div>
                 </div>
             </div>
         </section>
 
-        <section id="product-definition" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                <div>
-                    <p class="section-label mb-5">Owlnest Lume</p>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">夜晚，值得有自己的光</h2>
-                    <p class="mt-6 text-lg leading-relaxed text-white/72">Lume 是為天黑後特別調製的睡眠光譜燈</p>
-                    <p class="mt-4 text-white/58 leading-relaxed">為夜晚特別調製的光</p>
-                </div>
-                <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4 shadow-2xl shadow-black/35">
-                    <img src="/lume-real-photo-on.jpg" width="1350" height="1800" alt="Owlnest Lume 發出深琥珀、飽和橘紅色光線" class="w-full max-h-[620px] object-contain rounded-xl" loading="lazy" decoding="async">
-                </figure>
-            </div>
-        </section>
-
-        <section id="difference" class="bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <div class="max-w-4xl">
-                    <span class="section-label">普通暖光 vs Lume</span>
-                    <h2 class="mt-3 font-serif text-4xl md:text-5xl leading-tight">普通暖光只是看起來溫暖<br>Lume 從光譜開始為睡眠設計</h2>
-                    <p class="mt-5 text-lg text-midnight/64 leading-relaxed">暖，是光看起來的樣子；光譜，是光真正包含的內容</p>
-                </div>
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-7">
-                    <article class="rounded-[1.5rem] border border-midnight/10 bg-white/70 p-6 md:p-8"><h3 class="font-serif text-3xl">普通暖燈</h3><p class="mt-4 text-midnight/64 leading-relaxed">通常是為一般照明或氣氛設計。只看起來溫暖，無法知道它真正的光譜</p></article>
-                    <article class="comparison-card-highlight rounded-[1.5rem] border border-amber/45 p-6 md:p-8"><h3 class="font-serif text-3xl">Owlnest Lume</h3><p class="mt-4 text-midnight/68 leading-relaxed">以特調睡眠光譜為核心的睡眠環境工具，只有一個實體按鍵，沒有 App 或螢幕</p></article>
+        <section class="program-band program-intro" id="why">
+            <div class="program-shell program-split">
+                <div><span class="program-kicker" style="color:#9a551f">為什麼要做這項計畫</span><h2 class="program-title">科學說明光為什麼可能重要；真實生活讓我們看見它適合出現在哪裡。</h2></div>
+                <div class="program-prose">
+                    <p>每個人的夜晚都不同：住的地方、使用的螢幕、工作時間、房間光線與睡前作息都不一樣。一般<a href="/zh-tw/science/" style="text-decoration:underline;text-underline-offset:4px">科學研究</a>幫助我們理解光如何讓身體判斷時間，卻無法直接告訴我們，Lume 在每個人的生活裡會怎麼被使用。</p>
+                    <p>因此，Owlnest 想把問題帶進真實夜晚。這是一項以產品使用和參與者自述回饋為主的結構化生活研究，不是臨床試驗、醫學研究、診斷或治療。</p>
                 </div>
             </div>
         </section>
 
-        <section id="evidence" class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-14 items-start">
-                <div>
-                    <p class="section-label mb-5">科學，誠實說清楚</p>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">身體會從光，判斷現在是什麼時候</h2>
-                    <p class="mt-6 text-white/68 leading-relaxed">一般研究是 Lume 的設計背景；產品光譜證據必須來自真實量測</p>
-                </div>
-                <div class="rounded-[1.5rem] border border-amber/30 bg-white/5 p-6 md:p-8">
-                    <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-amber">量測狀態</p>
-                    <h3 class="mt-4 font-serif text-3xl text-white">Lume 與一般暖光燈的 SPD 實測比較仍待補齊</h3>
-                    <p class="mt-5 text-white/62 leading-relaxed">目前不會把概念曲線當成量測證據。正式公開必須包含真實 SPD、相同測試條件、照度、距離、角度、方法與限制</p>
-                    <a href="/zh-tw/science/" class="mt-6 inline-flex items-center justify-center rounded-xl border border-white/18 px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">閱讀科學說明</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="campaign-story" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <div class="max-w-3xl">
-                    <p class="section-label mb-5">天黑後的房間</p>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">看見房間怎麼改變。</h2>
-                    <p class="mt-5 text-white/62 leading-relaxed">睡前放鬆或半夜短暫醒來需要一點光時使用。準備睡覺時，除非仍需要保留少量光線，否則請關閉 Lume。</p>
-                </div>
-                <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-                    <figure>
-                        <img src="/.netlify/images?url=/assets/zh-tw/campaign-room-shift-before-with-lumeZH.png&amp;w=1200&amp;q=78" srcset="/.netlify/images?url=/assets/zh-tw/campaign-room-shift-before-with-lumeZH.png&amp;w=640&amp;q=78 640w, /.netlify/images?url=/assets/zh-tw/campaign-room-shift-before-with-lumeZH.png&amp;w=960&amp;q=78 960w, /.netlify/images?url=/assets/zh-tw/campaign-room-shift-before-with-lumeZH.png&amp;w=1200&amp;q=78 1200w" sizes="(max-width: 1024px) 100vw, 50vw" width="1200" height="900" alt="使用 Lume 前後，房間轉為深琥珀夜晚光線" class="w-full h-auto rounded-[1.5rem] border border-white/10 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
-                        <figcaption class="mt-4 text-sm text-white/58">使用前／使用 Lume 後——房間在天黑後的視覺對照。</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/lume-night-effect.jpg" width="1350" height="1800" alt="Owlnest Lume 在真實夜間情境中發出深琥珀橘紅光" class="w-full max-h-[620px] object-contain rounded-[1.5rem] border border-white/10 bg-black/20 shadow-2xl shadow-black/35" loading="lazy" decoding="async">
-                        <figcaption class="mt-4 text-sm text-white/58">真實拍攝的 Lume 夜間光線。</figcaption>
-                    </figure>
+        <section class="program-band program-question-band" id="questions">
+            <div class="program-shell">
+                <span class="program-kicker">我們想了解什麼</span>
+                <h2 class="program-question">Lume 對誰有用、在什麼情境有用，又和哪些夜晚習慣有關？</h2>
+                <div class="program-questions">
+                    <div class="program-question-item"><span>01</span><div>一個人的夜晚，原本有哪些光線與螢幕使用情境？</div></div>
+                    <div class="program-question-item"><span>02</span><div>Lume 會在什麼時間、什麼地方自然進入日常作息？</div></div>
+                    <div class="program-question-item"><span>03</span><div>參與者會不會繼續選擇使用？哪些因素影響這個選擇？</div></div>
+                    <div class="program-question-item"><span>04</span><div>哪些地方有用、感受不明顯、使用不便，或根本不相關？</div></div>
+                    <div class="program-question-item"><span>05</span><div>不同生活型態中，哪些夜晚情境看起來最值得繼續觀察？</div></div>
+                    <div class="program-question-item"><span>06</span><div>Lume 在哪些情況下沒有幫助？這又能讓我們學到什麼？</div></div>
                 </div>
             </div>
         </section>
 
-        <section id="proof" class="campaign-image-section bg-[#0d1727] px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <p class="section-label">產品證明</p>
-                <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">真實產品，簡單硬體</h2>
-                <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-7">
-                    <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4"><img src="/lume-real-photo-off.jpg" alt="Owlnest Lume 柔軟矽膠燈體與圓形木質底座" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async"><figcaption class="mt-4 text-sm text-white/60">柔軟矽膠燈體與簡單圓形木質底座</figcaption></figure>
-                    <figure class="rounded-[1.5rem] border border-white/10 bg-midnight/45 p-4"><img src="/lume-bottom-button.jpg" alt="Owlnest Lume 底部實體按鍵與 USB-C 充電孔" class="w-full h-72 object-contain rounded-xl bg-[#efe6d8]" loading="lazy" decoding="async"><figcaption class="mt-4 text-sm text-white/60">底部單一實體按鍵，使用 USB-C 充電</figcaption></figure>
-                </div>
-                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="proof-chip">高度約 14–15 公分</div>
-                    <div class="proof-chip">深琥珀橘紅光</div>
-                    <div class="proof-chip">沒有 App 或螢幕</div>
-                    <div class="proof-chip">沒有訂閱或睡眠分數</div>
-                </div>
-                <a href="/zh-tw/products/" class="mt-8 inline-flex items-center justify-center rounded-xl border border-white/18 px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">查看完整產品資訊</a>
-            </div>
-        </section>
-
-        <section id="preorder" class="bg-cream text-midnight px-5 sm:px-8 py-16 sm:py-24">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-[0.96fr_1.04fr] gap-8 lg:gap-12 xl:gap-16 items-start">
-                    <div>
-                        <span class="section-label">活動進行中</span>
-                        <h2 class="mt-3 font-serif text-4xl md:text-5xl leading-[1.06] tracking-[-0.02em]">購買 Owlnest Lume</h2>
-                        <p class="mt-5 text-midnight/64 leading-relaxed">選擇 Single 或 Duo 後，直接前往 Shopify 安全結帳</p>
-                    </div>
-                    <div class="rounded-[2.25rem] border border-midnight/10 bg-[#fffaf0] p-5 sm:p-7 lg:p-8 shadow-[0_28px_90px_rgba(24,32,51,0.10)]">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber">購買</p>
-                        <h3 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">選擇 Lume 方案</h3>
-                        <div class="mt-6 grid sm:grid-cols-2 gap-4">
-                            <button type="button" class="w-full text-left rounded-2xl border border-midnight/12 bg-white p-5 sm:p-6 disabled:cursor-wait disabled:opacity-70" data-shopify-checkout-package="single" data-checkout-label="購買 Single" data-checkout-loading-label="正在前往安全結帳...">
-                                <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Single Lume</span>
-                                <h3 class="mt-3 font-serif text-3xl">1 盞 Owlnest Lume</h3>
-                                <p class="mt-2 text-4xl font-serif text-midnight">US$119</p>
-                    <p class="mt-4 text-sm leading-relaxed text-midnight/62">適合一側床邊或夜晚空間</p>
-                            </button>
-                            <button type="button" class="w-full text-left rounded-2xl border border-amber/45 bg-[#fff7e8] p-5 sm:p-6 shadow-[0_18px_60px_rgba(216,138,36,0.12)] disabled:cursor-wait disabled:opacity-70" data-shopify-checkout-package="duo" data-checkout-label="購買 Duo" data-checkout-loading-label="正在前往安全結帳...">
-                                <span class="text-[10px] uppercase tracking-[0.18em] text-amber font-bold">Duo Lume</span>
-                                <h3 class="mt-3 font-serif text-3xl">2 盞 Owlnest Lume</h3>
-                                <p class="mt-2 text-4xl font-serif text-midnight">US$219</p>
-                                <p class="mt-2 text-sm font-semibold text-amber">省 US$19</p>
-                    <p class="mt-4 text-sm leading-relaxed text-midnight/62">適合兩個房間，或家中加旅行</p>
-                            </button>
-                        </div>
-
-                        <div class="mt-6 rounded-[1.6rem] border border-midnight/10 bg-midnight p-5 sm:p-6 text-[#FAEFCF]">
-                            <p class="font-serif text-2xl text-[#FAEFCF]">準備購買了嗎？</p>
-                            <a href="/zh-tw/products/#buy" data-track-click="click_buy_options" class="cta js-campaign-cta mt-5 inline-flex w-full items-center justify-center rounded-xl bg-amber px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-midnight hover:bg-warm" data-cta-name="buy_options">選擇 Single 或 Duo</a>
-                            <p id="checkout-feedback" class="mt-4 hidden text-center text-sm text-red-200" aria-live="polite"></p>
-                            <p class="mt-4 text-center text-xs"><a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy" class="text-[#D8952E] hover:text-[#FAEFCF] underline underline-offset-4">查看配送政策</a></p>
-                        </div>
-                    </div>
+        <section class="program-band program-contexts" id="participants">
+            <div class="program-shell">
+                <span class="program-kicker">我們在找誰</span><h2 class="program-title">讓不同的真實夜晚，都能被看見。</h2>
+                <div class="program-context-list">
+                    <div class="program-context"><span>螢幕習慣</span><h3>晚上經常使用手機、電腦，或兩者都會使用的人。</h3></div>
+                    <div class="program-context"><span>晚睡作息</span><h3>工作到很晚，或夜間作息較不固定的人。</h3></div>
+                    <div class="program-context"><span>居家照明</span><h3>晚上目前習慣依賴明亮主燈或一般房間照明的人。</h3></div>
+                    <div class="program-context"><span>有意識的夜晚</span><h3>正在嘗試讓家中夜晚環境更平靜的人。</h3></div>
+                    <div class="program-context"><span>完整參與</span><h3>人在美國，且能完成 21 天全程參與的人。</h3></div>
+                    <div class="program-context"><span>坦白回饋</span><h3>願意說出哪些有效、哪些無效，以及哪些沒有明顯差別的人。</h3></div>
                 </div>
             </div>
         </section>
 
-        <section class="campaign-image-section bg-midnight px-5 sm:px-8 py-16 sm:py-20">
-            <div class="max-w-6xl mx-auto">
-                <div class="mx-auto max-w-2xl text-center">
-                    <p class="section-label mb-5">產品更新</p>
-                    <h2 class="font-serif text-4xl md:text-5xl leading-tight text-white">想收到產品與出貨更新嗎？</h2>
-                    <p class="mt-5 text-white/60 leading-relaxed">加入名單，收到實用的產品、訂單與出貨消息。</p>
-                </div>
-                <form class="signup-form mt-8 mx-auto max-w-2xl field-shell rounded-2xl p-3 sm:p-2" data-source-section="zh-campaign-positioning" data-success-url="/campaign-success.html" name="campaign-email" method="POST" action="/api/subscribe-updates">
-                    <input type="hidden" name="locale" value="zh-Hant">
-                    <input type="hidden" name="source" value="zh-campaign-positioning">
-                    <input type="hidden" name="source_section" value="zh-campaign-positioning">
-                    <input type="hidden" name="page_path" value="/zh-tw/campaign/">
-                    <input type="hidden" name="utm_source" value="">
-                    <input type="hidden" name="utm_medium" value="">
-                    <input type="hidden" name="utm_campaign" value="">
-                    <input type="hidden" name="utm_content" value="">
-                    <input type="hidden" name="utm_term" value="">
-                    <p class="hidden" aria-hidden="true"><label><input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-                    <div class="flex flex-col sm:flex-row gap-2">
-                        <label class="sr-only" for="positioning-email">輸入你的 email</label>
-                        <input id="positioning-email" name="email" type="email" autocomplete="email" placeholder="輸入 email" class="min-h-14 flex-1 rounded-xl bg-transparent px-4 text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-amber/55" required>
-                        <button type="submit" data-track-click="click_get_product_updates" class="cta js-campaign-cta min-h-14 rounded-xl bg-amber px-5 sm:px-6 text-midnight text-xs font-bold tracking-[0.12em] uppercase hover:bg-cream" data-cta-name="product_updates">取得更新</button>
-                    </div>
-                    <label class="campaign-consent">
-                        <input type="checkbox" name="consent" value="yes" required>
-                        <span>我同意接收 Owlnest 產品與出貨更新，並了解可隨時取消訂閱</span>
-                    </label>
-                    <p class="mt-3 px-1 text-xs text-white/48">只寄產品與出貨相關更新</p>
-                    <p class="form-message mt-3 text-sm text-white/56" role="status" aria-live="polite"></p>
-                </form>
-                <nav aria-label="更多 Owlnest Lume 資訊" class="mt-8 flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-[0.12em] text-white/60">
-                    <a href="/zh-tw/products/" class="hover:text-amber transition-colors">產品資訊</a>
-                    <a href="/zh-tw/science/" class="hover:text-amber transition-colors">科學說明</a>
-                    <a href="/zh-tw/evidence/" class="hover:text-amber transition-colors">證據來源</a>
-                    <a href="/zh-tw/faq/" class="hover:text-amber transition-colors">常見問題</a>
-                </nav>
+        <section class="program-band program-process" id="process">
+            <div class="program-shell">
+                <span class="program-kicker" style="color:#9a551f">參與方式</span><h2 class="program-title">從申請到回顧，共分四個階段。</h2>
+                <ol class="program-steps">
+                    <li class="program-step"><span class="program-step-number">01</span><h3>提出申請</h3><p>申請開放後，填寫官方 Google 表單。內容會協助 Owlnest 了解日常夜晚作息，以及是否能完整參與 21 天。</p></li>
+                    <li class="program-step"><span class="program-step-number">02</span><h3>參與者選擇</h3><p>Owlnest 會從申請中組成一群夜晚習慣與生活情境各不相同的參與者。這是計畫參與者選擇，不是醫療評估。</p></li>
+                    <li class="program-step"><span class="program-step-number">03</span><h3>與 Lume 相處 21 天</h3><p>入選參與者依照計畫指引，在平常的夜間作息裡使用這盞睡眠光譜燈，不需要把生活變成實驗室。</p></li>
+                    <li class="program-step"><span class="program-step-number">04</span><h3>分享真實感受</h3><p>依照時間完成簡短回訪，記錄實際發生的事。可以是正面、普通或負面；計畫不要求好評。</p></li>
+                </ol>
             </div>
         </section>
 
+        <section class="program-band program-timeline-band" id="timeline">
+            <div class="program-shell">
+                <span class="program-kicker">21 天進程</span><h2 class="program-title">用簡單節奏，留意真實生活中的變化與不變。</h2>
+                <div class="program-timeline" aria-label="21 天睡眠計畫進程">
+                    <div class="program-day"><strong>第 0 天</strong><h3>起始記錄</h3><p>開始固定使用 Lume 前，先記下原本的夜間作息與環境。</p></div>
+                    <div class="program-day"><strong>第 7 天</strong><h3>第一次回訪</h3><p>分享初期使用情況、實際不便，以及第一週的感受。</p></div>
+                    <div class="program-day"><strong>第 14 天</strong><h3>第二次回訪</h3><p>看看哪些已成為習慣、哪些有所改變，又有哪些沒有變。</p></div>
+                    <div class="program-day"><strong>第 21 天</strong><h3>最終回顧</h3><p>回顧完整經驗，包括有用之處、限制，以及仍不確定的地方。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-band program-honesty" id="honest-results">
+            <div class="program-shell">
+                <span class="program-kicker">真實結果</span><blockquote class="program-principle">我們要找的不是好評，而是真實結果。</blockquote>
+                <div class="program-validity"><div><strong>正面</strong><p>如果 Lume 在某個情境確實有用，這個回饋值得被看見。</p></div><div><strong>中性</strong><p>如果差異不明顯，或感受有限，這同樣是有效結果。</p></div><div><strong>負面</strong><p>如果 Lume 不適合某個人、習慣或情境，也必須如實保留。</p></div></div>
+                <p style="max-width:760px;margin:2rem 0 0;color:var(--program-muted);line-height:1.8">每個人的差異本來就存在。參與者回饋能幫助 Owlnest 理解產品在真實生活中的適合度，但不會自動成為臨床證明。目前也還沒有計畫結果或結論可以發布。</p>
+            </div>
+        </section>
+
+        <section class="program-band program-application" id="application-status">
+            <div class="program-shell program-application-inner">
+                <div class="program-status-mark"><span>申請流程準備中</span></div>
+                <div><span class="program-kicker" style="color:#9a551f">申請狀態</span><h2>申請即將開放。</h2><p>官方 Google 表單正在準備中。完成後，本頁所有申請按鈕都會前往同一份表單，不需要另外建立帳號，也不會在網站上製作自訂問卷。</p><a class="program-button" href="#application-status" data-sleep-program-apply>申請加入 21 天睡眠計畫</a></div>
+            </div>
+        </section>
+
+        <section class="program-band program-lab">
+            <div class="program-shell">
+                <span class="program-kicker">Owlnest Lab 的一部分</span><h2>一項計畫，放在更長期的學習系統裡。</h2><p>21 天睡眠計畫把科學基礎帶進真實居家生活。只有在能負責任地說明時，觀察結果才會透過 Lab 公開。</p>
+                <div class="program-actions" style="justify-content:center"><a class="program-button program-button--primary" href="/zh-tw/lab/">探索 Lab</a><a class="program-button" href="/zh-tw/science/">探索科學</a></div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-midnight border-t border-white/5 py-14 px-6 text-center">
-        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-        <p class="mt-4 text-sm text-white/72">為天黑後特別調製的睡眠光譜燈</p>
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
-            <a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy" class="hover:text-amber transition-colors">配送政策</a>
-            <a href="/zh-tw/disclaimer/" class="hover:text-amber transition-colors">政策</a>
-            <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
-        </div>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie 設定</button>
-        <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p><p class="mt-4 text-sm text-white/72">為夜晚的生活設計</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45"><a href="/zh-tw/preorder-policy/" class="hover:text-amber transition-colors">訂單與配送政策</a><a href="/zh-tw/disclaimer/" class="hover:text-amber transition-colors">政策</a><a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a></div>
+        <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie 設定</button><p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <script>
-        function toggleLanguageMenu(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            const isOpen = menu.classList.toggle('open');
-            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        }
-
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('language-menu');
-            const trigger = document.querySelector('.language-trigger');
-            if (!menu || !trigger) return;
-            if (!event.target.closest('.language-wrap')) {
-                menu.classList.remove('open');
-                trigger.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
-            if (!menu || !icon) return;
-            menu.classList.toggle('open');
-            const isOpen = menu.classList.contains('open');
-            if (icon.classList.contains('fas')) {
-                icon.classList.toggle('fa-bars', !isOpen);
-                icon.classList.toggle('fa-times', isOpen);
-            } else {
-                icon.textContent = isOpen ? '×' : '☰';
-            }
-        }
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-        const params = new URLSearchParams(window.location.search);
-        const utmValues = Object.fromEntries(utmKeys.map((key) => [key, params.get(key) || '']));
-
-        function owlnestTrack(eventName, params = {}) {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                event: eventName,
-                event_source: 'owlnest_site',
-                ...params
-            });
-        }
-
-        function trackEvent(name, details = {}) {
-            owlnestTrack(name, details);
-        }
-
-        owlnestTrack('view_campaign', {
-            source_page: 'zh_campaign',
-            sale_status: 'active',
-            product_name: 'Owlnest Lume'
-        });
-
-        const purchaseConfig = {
-            destinationUrl: '/zh-tw/products/#buy',
-            status: 'active'
-        };
-
-        function purchaseClickPayload(button) {
-            const sourceSection = button.closest('section')?.id || button.closest('form')?.dataset.sourceSection || 'zh_campaign_nav';
-            return {
-                source_page: 'zh_campaign',
-                source_section: sourceSection,
-                cta_text: button.textContent.trim(),
-                destination: 'products_buy',
-                payment_provider: 'shopify',
-                product_name: 'Owlnest Lume',
-                currency: 'USD',
-                single_price: 119,
-                duo_price: 219,
-                sale_status: 'active'
-            };
-        }
-
-        document.querySelectorAll('[data-track-click]').forEach((button) => {
-            button.addEventListener('click', () => {
-                trackEvent(button.dataset.trackClick, {
-                    source_section: button.closest('form')?.dataset.sourceSection || button.closest('section')?.id || 'nav',
-                    page_path: window.location.pathname
-                });
-                if (button.getAttribute('href') === purchaseConfig.destinationUrl) {
-                    owlnestTrack('purchase_options_click', purchaseClickPayload(button));
-                }
-            });
-        });
-
-        function fillTrackingFields(form) {
-            const sourceField = form.querySelector('[name="source_section"]');
-            const pathField = form.querySelector('[name="page_path"]');
-            if (sourceField) sourceField.value = form.dataset.sourceSection || '';
-            if (pathField) pathField.value = window.location.pathname;
-            utmKeys.forEach((key) => {
-                const field = form.querySelector(`[name="${key}"]`);
-                if (field) field.value = utmValues[key];
-            });
-        }
-
-        function encodeFormData(form) {
-            fillTrackingFields(form);
-            const data = new FormData(form);
-            return new URLSearchParams(data).toString();
-        }
-
-        function setMessage(form, text, type) {
-            const message = form.querySelector('.signup-message') || form.querySelector('.form-message');
-            if (!message) return;
-            message.textContent = text;
-            message.classList.remove('text-emerald-300', 'text-red-300', 'text-white/58', 'text-midnight/60');
-            message.classList.add(type === 'success' ? 'text-emerald-300' : type === 'error' ? 'text-red-300' : 'text-white/58');
-        }
-
-        document.querySelectorAll('.signup-form').forEach((form) => {
-            form.addEventListener('submit', async (event) => {
-                event.preventDefault();
-                if (form.dataset.submitting === 'true') return;
-                const input = form.querySelector('input[type="email"]');
-                const button = form.querySelector('button[type="submit"]');
-                const originalButtonText = button?.textContent || '取得更新';
-                const email = input?.value.trim() || '';
-                fillTrackingFields(form);
-
-                if (!emailPattern.test(email)) {
-                    setMessage(form, '請輸入有效的 email', 'error');
-                    input?.focus();
-                    return;
-                }
-
-                form.dataset.submitting = 'true';
-                if (button) {
-                    button.disabled = true;
-                    button.classList.add('opacity-70');
-                    button.textContent = '送出中...';
-                }
-                setMessage(form, '正在送出...', 'neutral');
-
-                try {
-                    const response = await fetch('/api/subscribe-updates', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: encodeFormData(form)
-                    });
-                    if (!response.ok) throw new Error('submit_failed');
-
-                    form.reset();
-                    fillTrackingFields(form);
-                    trackEvent('submit_early_access_email', {
-                        source_section: form.dataset.sourceSection || '',
-                        page_path: window.location.pathname
-                    });
-                    owlnestTrack('campaign_email_submit', {
-                        source_page: 'zh_campaign',
-                        lead_type: 'product_updates',
-                        sale_status: 'active'
-                    });
-                    owlnestTrack('generate_lead', {
-                        source_page: 'zh_campaign',
-                        lead_type: 'product_updates'
-                    });
-
-                    if (form.dataset.stayOnPage === 'true') {
-                        setMessage(form, form.dataset.successMessage || '已收到，謝謝你加入 Owlnest Lume 產品更新', 'success');
-                    } else {
-                        window.location.href = form.dataset.successUrl || '/campaign-success.html';
-                    }
-                } catch (error) {
-                    setMessage(form, '送出時發生問題，請稍後再試', 'error');
-                } finally {
-                    if (button) {
-                        button.disabled = false;
-                        button.classList.remove('opacity-70');
-                        button.textContent = originalButtonText;
-                    }
-                    form.dataset.submitting = 'false';
-                }
-            });
-        });
+    <script>
+    function toggleLanguageMenu(event) { event.preventDefault(); event.stopPropagation(); const menu = document.getElementById('language-menu'); const trigger = document.querySelector('.language-trigger'); if (!menu || !trigger) return; const isOpen = menu.classList.toggle('open'); trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); }
+    document.addEventListener('click', function(event) { const menu = document.getElementById('language-menu'); const trigger = document.querySelector('.language-trigger'); if (!menu || !trigger) return; if (!event.target.closest('.language-wrap')) { menu.classList.remove('open'); trigger.setAttribute('aria-expanded', 'false'); } });
+    function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); const icon = document.getElementById('mobile-menu-icon'); const trigger = document.querySelector('button[aria-label="切換選單"]'); if (!menu || !icon) return; menu.classList.toggle('open'); const isOpen = menu.classList.contains('open'); icon.classList.toggle('fa-bars', !isOpen); icon.classList.toggle('fa-times', isOpen); if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); }
     </script>
-    <script src="/assets/js/shopify-checkout.js?v=20260714-2" defer></script>
+    <script src="/assets/js/sleep-program-application.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>
 </html>
