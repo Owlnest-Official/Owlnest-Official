@@ -19,14 +19,16 @@
       {
         "name": "Single Lume",
         "quantity": "1 × Owlnest Lume",
-        "price": "$59",
+        "price": "US$119",
         "currency": "USD"
       },
       {
         "name": "Duo Lume",
         "quantity": "2 × Owlnest Lume",
-        "price": "$100",
-        "currency": "USD"
+        "price": "US$219",
+        "currency": "USD",
+        "twoSinglesValue": "US$238",
+        "savings": "US$19"
       }
     ],
     "shippingCopy": "Owlnest Lume is in stock. Shipping and delivery details are shown at checkout.",
@@ -34,8 +36,8 @@
   },
   "heroPricing": {
     "eyebrow": "Campaign Active",
-    "main": "Single Lume $59 / Duo Lume $100",
-    "subtext": "Choose Single or Duo before Shopify checkout"
+    "main": "Single Lume US$119 / Duo Lume US$219",
+    "subtext": "Save US$19 with Duo"
   },
   "platformCta": {
     "label": "Buy Now",
