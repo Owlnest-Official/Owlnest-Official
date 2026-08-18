@@ -19,7 +19,7 @@ Official Owlnest brand tagline:
 
 > Made for life after dark.
 
-> 為天黑後的生活而生。
+> 為夜晚的生活設計
 
 Selective emotional line:
 
@@ -53,7 +53,7 @@ Do not leave `sleep spectrum` or `睡眠光譜` unexplained at its first importa
 
 | Job | English | Traditional Chinese |
 | --- | --- | --- |
-| Owlnest brand tagline | Made for life after dark. | 為天黑後的生活而生。 |
+| Owlnest brand tagline | Made for life after dark. | 為夜晚的生活設計 |
 | Owlnest emotional line | Home begins after dark. | 天黑之後，家才真正開始。 |
 | Lume product tagline | Night deserves its own light. | 夜晚，值得有自己的光。 |
 | Lume Hero hook | Your room knows it’s night. Your light doesn’t. | 房間知道夜深了，燈卻還不知道。 |

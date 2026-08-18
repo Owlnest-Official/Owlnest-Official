@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+        var savedConsent = null;
+        try {
+            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
+        } catch (error) {
+            savedConsent = null;
+        }
+        var hasSavedConsent = savedConsent && savedConsent.version === 1;
+        var consentState = hasSavedConsent ? {
+            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
+            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
+            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
+            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
+        } : {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        };
+        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
+        window.dataLayer.push({
+            event: 'owlnest_consent_default',
+            owlnest_consent_analytics: consentState.analytics_storage,
+            owlnest_consent_ads: consentState.ad_storage,
+            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
+        });
+    })();
+    </script>
+    <script>
+    if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+    }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab | Owlnest Official</title>
+    <meta name="description" content="Owlnest Lab connects science, real-world nighttime behavior, participant programs, and honest results to understand life after dark.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://owlnestofficial.com/lab/">
+    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/">
+    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/">
+    <meta property="og:title" content="Lab | Owlnest Official">
+    <meta property="og:description" content="Owlnest's research ecosystem for understanding nighttime living through science and real-world learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://owlnestofficial.com/lab/">
+    <meta property="og:image" content="https://owlnestofficial.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lab | Owlnest Official">
+    <meta name="twitter:description" content="Owlnest's research ecosystem for understanding nighttime living through science and real-world learning.">
+    <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/lab.css">
+</head>
+<body class="lab-page antialiased selection:bg-amber selection:text-midnight">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
+            <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+            <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="Primary navigation">
+                <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
+                <a href="/products" class="hover:text-amber transition-colors duration-300">Products</a>
+                <a href="/campaign/" class="hover:text-amber transition-colors duration-300">Campaign</a>
+                <a href="/science" class="hover:text-amber transition-colors duration-300">Science</a>
+                <a href="/about" class="hover:text-amber transition-colors duration-300">About Us</a>
+                <a href="/contact" class="hover:text-amber transition-colors duration-300">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Center" aria-label="Member Center" rel="nofollow">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <div class="relative language-wrap">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        English
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
+                        <a href="/lab/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">English</a>
+                        <a href="/zh-tw/lab/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">繁體中文</a>
+                    </div>
+                </div>
+                <a href="/products/#buy" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    Buy Lume
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="Member Center" rel="nofollow">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/products/#buy" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="Buy Lume" aria-label="Buy Lume">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="Mobile navigation">
+            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
+            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
+            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Campaign</a>
+            <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+            <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
+            <a href="/contact" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <i class="fas fa-user text-lg"></i>
+            </a>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/lab/" class="text-amber">English</a>
+                    <a href="/zh-tw/lab/" class="text-white hover:text-amber">繁體中文</a>
+                </div>
+            </div>
+            <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
+                <a href="/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">Buy Lume</a>
+                <a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">Room Check</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="lab-band lab-hero">
+            <div class="lab-shell lab-hero-grid">
+                <div>
+                    <span class="lab-kicker">Owlnest Lab · Nighttime living research</span>
+                    <h1>Learning how life actually happens after dark.</h1>
+                </div>
+                <div class="lab-hero-copy">
+                    <p>Lab is Owlnest’s research ecosystem for understanding nighttime living—grounded in science, shaped by real homes, and open about what we still do not know.</p>
+                    <div class="lab-principle">Curiosity before certainty.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-intro">
+            <div class="lab-shell lab-intro-grid">
+                <div>
+                    <span class="lab-kicker" style="color:#9a551f">Why Lab exists</span>
+                    <h2 class="lab-section-title">Theory explains. Real life reveals.</h2>
+                </div>
+                <div class="lab-intro-copy">
+                    <p>Owlnest designs products for nighttime living. But design alone is not enough. Science helps explain how light may matter after dark; everyday life shows how differently people actually use it.</p>
+                    <p>Lab connects those two views. We study the foundations, observe real routines, and keep room for variation, uncertainty, and outcomes we did not expect.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-ecosystem" id="ecosystem">
+            <div class="lab-shell">
+                <div class="lab-ecosystem-header">
+                    <div>
+                        <span class="lab-kicker">The Lab ecosystem</span>
+                        <h2 class="lab-section-title">Five parts. One learning system.</h2>
+                    </div>
+                    <p>From established research to lived experience, each part has a different job—and none is permission to overstate what we know.</p>
+                </div>
+
+                <ol class="lab-path">
+                    <li class="lab-card">
+                        <span class="lab-card-number">01</span>
+                        <h3>Science</h3>
+                        <div class="lab-card-copy">
+                            <p>The foundational layer: light spectrum, circadian timing, nighttime exposure, and how the body responds to light. It draws from general research, not product-specific proof.</p>
+                            <span class="lab-card-note">Foundational understanding</span>
+                        </div>
+                        <a class="lab-card-link" href="/science">Explore Science <span aria-hidden="true">↗</span></a>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">02</span>
+                        <h3>Sleep Lab</h3>
+                        <div class="lab-card-copy">
+                            <p>Real-world nighttime behavior: screen use, lighting environments, bedtime routines, irregular schedules, and the situations in which Lume naturally fits.</p>
+                            <span class="lab-card-note">Everyday observation, not clinical research</span>
+                        </div>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">03</span>
+                        <h3>21-Day Sleep Program</h3>
+                        <div class="lab-card-copy">
+                            <p>A structured participant program for up to approximately 50 selected people in the United States. Participants use Lume in everyday life over 21 days and share feedback.</p>
+                            <span class="lab-card-note">Participant program · United States</span>
+                        </div>
+                        <a class="lab-card-link" href="/campaign/">View the program <span aria-hidden="true">↗</span></a>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">04</span>
+                        <h3>Participant Research</h3>
+                        <div class="lab-card-copy">
+                            <p>How Owlnest learns from real people without turning their experiences into promises. Different habits, homes, and responses are part of the question.</p>
+                            <span class="lab-card-note">Honest feedback over manufactured proof</span>
+                        </div>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">05</span>
+                        <h3>Results</h3>
+                        <div class="lab-card-copy">
+                            <p>A future record of what we actually observe, including limitations and variation. Research is ongoing, so there are no conclusions to publish yet.</p>
+                            <span class="lab-card-note">No data published yet</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lab-band lab-research">
+            <div class="lab-shell lab-research-grid">
+                <div>
+                    <span class="lab-kicker">Participant research</span>
+                    <blockquote class="lab-quote">We’re not looking for positive reviews. We’re looking for honest results.</blockquote>
+                </div>
+                <div class="lab-validity">
+                    <div class="lab-validity-item"><span>+</span><p>Positive feedback is valid when Lume is genuinely useful.</p></div>
+                    <div class="lab-validity-item"><span>0</span><p>Neutral feedback is valid when the difference is limited or unclear.</p></div>
+                    <div class="lab-validity-item"><span>−</span><p>Negative feedback is valid when Lume does not fit a person, habit, or situation.</p></div>
+                    <div class="lab-validity-item"><span>↔</span><p>Variation is expected. The question is who finds Lume useful, in what situations, and under which nighttime habits.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-results" id="results">
+            <div class="lab-shell lab-results-inner">
+                <div class="lab-empty-marker"><span>Research ongoing</span></div>
+                <div>
+                    <span class="lab-kicker" style="color:#9a551f">Results</span>
+                    <h2>No conclusions yet.</h2>
+                    <p>Research is ongoing. This space will remain free of invented data, premature charts, or improvement claims. Results will be published later, when there is something responsible to report.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-closing">
+            <div class="lab-shell">
+                <span class="lab-kicker">Continue exploring</span>
+                <h2>Follow the principles. Then follow real life.</h2>
+                <p>Science explains the foundations. The 21-Day Sleep Program brings the questions into everyday nighttime routines.</p>
+                <div class="lab-actions">
+                    <a class="lab-button" href="/science">Explore Science</a>
+                    <a class="lab-button lab-button--primary" href="/campaign/">Explore 21-Day Program</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-midnight border-t border-white/5 py-14 px-6 text-center">
+        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
+        <p class="mt-4 text-sm text-white/72">Made for life after dark.</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
+            <a href="/preorder-policy" class="hover:text-amber transition-colors">Order &amp; Shipping</a>
+            <a href="/disclaimer" class="hover:text-amber transition-colors">Policies</a>
+            <a href="/contact" class="hover:text-amber transition-colors">Contact</a>
+        </div>
+        <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
+        <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function toggleLanguageMenu(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        const isOpen = menu.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    document.addEventListener('click', function(event) {
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        if (!event.target.closest('.language-wrap')) {
+            menu.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('mobile-menu-icon');
+        const trigger = document.querySelector('button[aria-label="Toggle menu"]');
+        if (!menu || !icon) return;
+        menu.classList.toggle('open');
+        const isOpen = menu.classList.contains('open');
+        icon.classList.toggle('fa-bars', !isOpen);
+        icon.classList.toggle('fa-times', isOpen);
+        if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    </script>
+    <script src="/assets/js/consent.js" defer></script>
+</body>
+</html>

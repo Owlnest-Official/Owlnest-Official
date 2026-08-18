@@ -28,7 +28,7 @@ Traditional Chinese:
 Owlnest 是一個為夜晚生活而生的居家生活品牌。
 
 - 品牌領域：**夜晚生活**
-- 正式品牌主句：**為天黑後的生活而生。**
+- 正式品牌主句：**為夜晚的生活設計**
 
 ### Formal category
 
@@ -452,7 +452,7 @@ When measurement becomes available, publish the data only with its test conditio
 | Purpose | English | Traditional Chinese |
 |---|---|---|
 | Owlnest brand category | Nighttime living | 夜晚生活 |
-| Owlnest brand tagline | Made for life after dark. | 為天黑後的生活而生。 |
+| Owlnest brand tagline | Made for life after dark. | 為夜晚的生活設計 |
 | Lume product tagline | Night deserves its own light. | 夜晚，值得有自己的光。 |
 | Lume Hero hook | Your room knows it’s night. Your light doesn’t. | 房間知道夜深了，燈卻還不知道。 |
 | Category | sleep-spectrum lamp | 睡眠光譜燈 |

@@ -15,7 +15,7 @@ Use this file for website copy, product explanations, Science and FAQ drafts, cr
 
 | Layer | Official English | Official Traditional Chinese | Job |
 | --- | --- | --- | --- |
-| Owlnest brand tagline | Made for life after dark. | 為天黑後的生活而生。 | Defines the brand world |
+| Owlnest brand tagline | Made for life after dark. | 為夜晚的生活設計 | Defines the brand world |
 | Owlnest emotional line | Home begins after dark. | 天黑之後，家才真正開始。 | Adds selective brand emotion |
 | Lume product tagline | Night deserves its own light. | 夜晚，值得有自己的光。 | States Lume's point of view |
 | Lume Hero hook | Your room knows it’s night. Your light doesn’t. | 房間知道夜深了，燈卻還不知道。 | Names the nighttime-light mismatch |

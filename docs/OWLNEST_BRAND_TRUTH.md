@@ -41,7 +41,7 @@ English:
 
 Traditional Chinese:
 
-> 為天黑後的生活而生。
+> 為夜晚的生活設計
 
 This is the official Owlnest brand tagline. It defines the whole brand world, not only Lume.
 
@@ -103,7 +103,7 @@ Each official line has one job. Do not interchange them.
 
 | Layer | Official English | Official Traditional Chinese | Job |
 |---|---|---|---|
-| Owlnest brand tagline | Made for life after dark. | 為天黑後的生活而生。 | Defines the Owlnest brand world |
+| Owlnest brand tagline | Made for life after dark. | 為夜晚的生活設計 | Defines the Owlnest brand world |
 | Owlnest emotional line | Home begins after dark. | 天黑之後，家才真正開始。 | Creates brand emotion and a picture of home after dark |
 | Lume product tagline | Night deserves its own light. | 夜晚，值得有自己的光。 | Expresses Lume's product point of view |
 | Lume Hero hook | Your room knows it’s night. Your light doesn’t. | 房間知道夜深了，燈卻還不知道。 | Grabs attention and names the nighttime-light mismatch |
@@ -461,7 +461,7 @@ Fixed translations:
 | English | Traditional Chinese |
 |---|---|
 | Nighttime living | 夜晚生活 |
-| Made for life after dark. | 為天黑後的生活而生。 |
+| Made for life after dark. | 為夜晚的生活設計 |
 | Home begins after dark. | 天黑之後，家才真正開始。 |
 | Sleep-spectrum lamp | 睡眠光譜燈 |
 | Specially tuned sleep spectrum | 特調睡眠光譜 |

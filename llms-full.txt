@@ -160,7 +160,7 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 ## Traditional Chinese Source Terms
 
 - Nighttime living: 夜晚生活
-- Made for life after dark.: 為天黑後的生活而生。
+- Made for life after dark.: 為夜晚的生活設計
 - Sleep-spectrum lamp: 睡眠光譜燈
 - Specially tuned sleep spectrum: 特調睡眠光譜
 - Light specially tuned for nighttime.: 為夜晚特別調製的光。

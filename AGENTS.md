@@ -60,7 +60,7 @@ Files explicitly marked as historical or superseded are idea archives only. Do n
 Owlnest is a nighttime-living home-lifestyle brand, not only a lamp or sleep-technology company.
 
 - Brand category: `Nighttime living` / `夜晚生活`
-- Owlnest brand tagline: `Made for life after dark.` / `為天黑後的生活而生。`
+- Owlnest brand tagline: `Made for life after dark.` / `為夜晚的生活設計`
 - Lume product tagline: `Night deserves its own light.` / `夜晚，值得有自己的光。`
 - Lume Hero hook: `Your room knows it’s night. Your light doesn’t.`
 - Product definition: `Lume is a sleep-spectrum lamp, specially tuned for after dark.`

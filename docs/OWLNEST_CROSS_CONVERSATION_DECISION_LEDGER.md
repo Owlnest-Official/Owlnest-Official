@@ -159,6 +159,16 @@ The user explicitly confirmed that the Phu Quoc physical store has closed.
 
 **Status:** CURRENT operational fact. All old assumptions involving an active store, Amber staffing the store, walk-in traffic, in-store display, or routine in-person local outreach are RETIRED.
 
+### 2026-08-18: Traditional Chinese Owlnest brand-line update
+
+The founder explicitly replaced the previous formal Traditional Chinese Owlnest brand line while keeping the English line unchanged.
+
+- English: `Made for life after dark.`
+- New formal Traditional Chinese: `為夜晚的生活設計`
+- Previous formal Traditional Chinese: `為天黑後的生活而生。`
+
+**Status:** The new Traditional Chinese line is CURRENT. The previous Traditional Chinese line is RETIRED / SUPERSEDED and remains here only as decision history.
+
 ---
 
 # 4. Master Decision Ledger
@@ -169,7 +179,7 @@ The user explicitly confirmed that the Phu Quoc physical store has closed.
 |---|---|---|---|---|---|---|
 | B01 | Owlnest brand category | **Nighttime living / 夜晚生活** | CURRENT | Sleep-tech brand, sleep-lifestyle brand, lamp brand, sleep-light company | Brand Truth 2026-07-17 | Audit About, Contact, metadata, AI files, footer and old briefs for narrower definitions. |
 | B02 | Owlnest definition | Home-lifestyle brand made for life after dark; creates objects, spaces and rituals for nighttime home life | CURRENT | Owlnest defined only by sleep or by Lume | Brand Truth | Do not make every brand page a Lume product page. |
-| B03 | Official Owlnest tagline | **Made for life after dark. / 為天黑後的生活而生。** | CURRENT | Night deserves its own light; The Art of Deep Sleep; sleep-supporting spectrum lamp as brand line | Brand Truth | Use only at brand level. Never replace with Lume product language. |
+| B03 | Official Owlnest tagline | **Made for life after dark. / 為夜晚的生活設計** | CURRENT | Previous formal Traditional Chinese line `為天黑後的生活而生。` (RETIRED / SUPERSEDED); Night deserves its own light; The Art of Deep Sleep; sleep-supporting spectrum lamp as brand line | Founder decision 2026-08-18 + Brand Truth | Use only at brand level. Never replace with Lume product language. |
 | B04 | Emotional brand line | **Home begins after dark. / 天黑之後，家才真正開始。** | CONDITIONAL | Used as fixed logo tagline everywhere | Brand Truth | Use selectively in About/editorial storytelling, not mechanically. |
 | B05 | Brand expansion territory | Nighttime lighting, scent, bedding, bedtime rituals, home recovery, hotel/wellness experiences, other after-dark products | CURRENT | Owlnest permanently limited to one lamp | Brand Truth | Keep future-facing About language broad but concrete. |
 | B06 | Lume's role | Owlnest's **first hero product**, not the whole brand | CURRENT | Owlnest and Lume treated as interchangeable | Brand Truth | Structured data and AI summaries must distinguish brand from product. |

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+        var savedConsent = null;
+        try {
+            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
+        } catch (error) {
+            savedConsent = null;
+        }
+        var hasSavedConsent = savedConsent && savedConsent.version === 1;
+        var consentState = hasSavedConsent ? {
+            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
+            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
+            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
+            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
+        } : {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        };
+        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
+        window.dataLayer.push({
+            event: 'owlnest_consent_default',
+            owlnest_consent_analytics: consentState.analytics_storage,
+            owlnest_consent_ads: consentState.ad_storage,
+            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
+        });
+    })();
+    </script>
+    <script>
+    if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+    }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab | Owlnest Official</title>
+    <meta name="description" content="Owlnest Lab 從科學、真實夜晚行為、參與計畫與誠實結果，持續理解夜晚生活。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://owlnestofficial.com/zh-tw/lab/">
+    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/">
+    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/">
+    <meta property="og:title" content="Lab | Owlnest Official">
+    <meta property="og:description" content="Owlnest 用來理解夜晚生活的研究系統，從科學出發，也回到真實生活。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:url" content="https://owlnestofficial.com/zh-tw/lab/">
+    <meta property="og:image" content="https://owlnestofficial.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lab | Owlnest Official">
+    <meta name="twitter:description" content="Owlnest 用來理解夜晚生活的研究系統，從科學出發，也回到真實生活。">
+    <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/lab.css">
+</head>
+<body class="lab-page zh antialiased selection:bg-amber selection:text-midnight">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
+            <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
+            <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-10 nav-links">
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="主要導覽">
+                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
+                <a href="/zh-tw/campaign/" class="hover:text-amber transition-colors duration-300">Campaign</a>
+                <a href="/zh-tw/science/" class="hover:text-amber transition-colors duration-300">科學</a>
+                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於</a>
+                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
+            </nav>
+
+            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
+                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="會員中心" aria-label="會員中心" rel="nofollow">
+                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
+                </a>
+                <div class="relative language-wrap">
+                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
+                        <i class="fas fa-globe text-xs"></i>
+                        繁體中文
+                        <i class="fas fa-chevron-down text-[9px]"></i>
+                    </button>
+                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
+                        <a href="/lab/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English</a>
+                        <a href="/zh-tw/lab/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
+                    </div>
+                </div>
+                <a href="/zh-tw/products/#buy" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
+                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                    購買 LUME
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
+            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員中心" rel="nofollow">
+                <i class="fas fa-user text-lg transition-colors duration-300"></i>
+            </a>
+            <a href="/zh-tw/products/#buy" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 Lume" aria-label="購買 Lume">
+                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
+            </a>
+            <button type="button" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單" aria-expanded="false">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="行動版導覽">
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
+            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
+            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Campaign</a>
+            <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">科學</a>
+            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
+            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
+            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+            <a href="/account/" onclick="toggleMobileMenu()" aria-label="會員中心" title="會員中心" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
+                <i class="fas fa-user text-lg"></i>
+            </a>
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
+                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
+                    <a href="/lab/" class="text-white hover:text-amber">English</a>
+                    <a href="/zh-tw/lab/" class="text-amber">繁體中文</a>
+                </div>
+            </div>
+            <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
+                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 Lume</a>
+                <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="lab-band lab-hero">
+            <div class="lab-shell lab-hero-grid">
+                <div>
+                    <span class="lab-kicker">Owlnest Lab · 夜晚生活研究</span>
+                    <h1>從真實夜晚，慢慢理解夜晚生活。</h1>
+                </div>
+                <div class="lab-hero-copy">
+                    <p>Lab 是 Owlnest 用來理解夜晚生活的研究系統。從科學出發，也回到真實居家情境，觀察人們怎麼用光、怎麼度過睡前，以及 Lume 何時自然融入生活。</p>
+                    <div class="lab-principle">先保持好奇，再談結論。</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-intro">
+            <div class="lab-shell lab-intro-grid">
+                <div>
+                    <span class="lab-kicker" style="color:#9a551f">為什麼需要 Lab</span>
+                    <h2 class="lab-section-title">理論告訴我們原因，生活讓我們看見差異。</h2>
+                </div>
+                <div class="lab-intro-copy">
+                    <p>Owlnest 為夜晚生活設計產品。但只把產品設計好還不夠。科學讓我們理解光在夜晚可能扮演的角色；真實生活則讓我們看見，每個人的習慣、空間與作息都不一樣。</p>
+                    <p>Lab 把兩者接在一起：一邊理解原理，一邊保留現實裡的複雜、差異與意外。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-ecosystem" id="ecosystem">
+            <div class="lab-shell">
+                <div class="lab-ecosystem-header">
+                    <div>
+                        <span class="lab-kicker">Lab 研究系統</span>
+                        <h2 class="lab-section-title">五個部分，一套學習系統。</h2>
+                    </div>
+                    <p>從既有研究到真實生活，每個部分都有不同任務；任何一部分，都不能拿來誇大我們目前知道的事。</p>
+                </div>
+
+                <ol class="lab-path">
+                    <li class="lab-card">
+                        <span class="lab-card-number">01</span>
+                        <h3>科學</h3>
+                        <div class="lab-card-copy">
+                            <p>理解光譜、日夜節律、夜間光線，以及身體如何回應光。內容來自一般研究，不等於 Lume 的產品實證。</p>
+                            <span class="lab-card-note">理解基礎原理</span>
+                        </div>
+                        <a class="lab-card-link" href="/zh-tw/science/">探索科學 <span aria-hidden="true">↗</span></a>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">02</span>
+                        <h3>睡眠研究</h3>
+                        <div class="lab-card-copy">
+                            <p>觀察夜間螢幕使用、居家照明、睡前習慣、不固定作息，以及 Lume 出現在什麼情境。這是日常生活研究，不是臨床試驗。</p>
+                            <span class="lab-card-note">真實夜晚行為</span>
+                        </div>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">03</span>
+                        <h3>21 天睡眠計畫</h3>
+                        <div class="lab-card-copy">
+                            <p>一項結構化參與計畫，預計在美國選出最多約 50 位參與者，在 21 天的日常生活中使用 Lume 並提供回饋。</p>
+                            <span class="lab-card-note">參與計畫 · 美國</span>
+                        </div>
+                        <a class="lab-card-link" href="/zh-tw/campaign/">查看計畫 <span aria-hidden="true">↗</span></a>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">04</span>
+                        <h3>參與者研究</h3>
+                        <div class="lab-card-copy">
+                            <p>從真實使用者身上學習，但不把個人經驗變成承諾。不同的習慣、房間與感受，本來就是研究問題的一部分。</p>
+                            <span class="lab-card-note">誠實回饋，不製造證明</span>
+                        </div>
+                    </li>
+                    <li class="lab-card">
+                        <span class="lab-card-number">05</span>
+                        <h3>結果</h3>
+                        <div class="lab-card-copy">
+                            <p>未來用來公開實際觀察、限制與差異的地方。研究仍在進行，目前沒有可以發布的結論。</p>
+                            <span class="lab-card-note">尚未發布資料</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lab-band lab-research">
+            <div class="lab-shell lab-research-grid">
+                <div>
+                    <span class="lab-kicker">參與者研究</span>
+                    <blockquote class="lab-quote">我們不是在找好評。我們在找誠實的結果。</blockquote>
+                </div>
+                <div class="lab-validity">
+                    <div class="lab-validity-item"><span>+</span><p>如果 Lume 確實有幫助，正面回饋當然有效。</p></div>
+                    <div class="lab-validity-item"><span>0</span><p>如果差異不明顯，或感受有限，中性回饋同樣有效。</p></div>
+                    <div class="lab-validity-item"><span>−</span><p>如果 Lume 不適合某個人、習慣或情境，負面回饋也必須被保留。</p></div>
+                    <div class="lab-validity-item"><span>↔</span><p>每個人的差異本來就存在。我們真正想知道的是：Lume 對誰有用、在什麼情境有用，又和哪些夜晚習慣有關。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-results" id="results">
+            <div class="lab-shell lab-results-inner">
+                <div class="lab-empty-marker"><span>研究進行中</span></div>
+                <div>
+                    <span class="lab-kicker" style="color:#9a551f">結果</span>
+                    <h2>目前還沒有結論。</h2>
+                    <p>研究仍在進行。這裡不會出現編造的資料、過早製作的圖表，或沒有依據的改善宣稱。等到有值得公開、也能負責說明的觀察後，我們才會發布結果。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-band lab-closing">
+            <div class="lab-shell">
+                <span class="lab-kicker">繼續探索</span>
+                <h2>先理解原理，再回到真實生活。</h2>
+                <p>科學說明夜晚光線的基礎；21 天睡眠計畫，則把問題帶進每個人的日常夜晚。</p>
+                <div class="lab-actions">
+                    <a class="lab-button" href="/zh-tw/science/">探索科學</a>
+                    <a class="lab-button lab-button--primary" href="/zh-tw/campaign/">探索 21 天睡眠計畫</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-midnight border-t border-white/5 py-14 px-6 text-center">
+        <p class="font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
+        <p class="mt-4 text-sm text-white/72">為夜晚的生活設計</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
+            <a href="/zh-tw/preorder-policy/" class="hover:text-amber transition-colors">訂單與配送政策</a>
+            <a href="/zh-tw/disclaimer/" class="hover:text-amber transition-colors">政策</a>
+            <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
+        </div>
+        <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie 設定</button>
+        <p class="mt-7 text-[10px] text-white/55 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function toggleLanguageMenu(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        const isOpen = menu.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    document.addEventListener('click', function(event) {
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        if (!event.target.closest('.language-wrap')) {
+            menu.classList.remove('open');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('mobile-menu-icon');
+        const trigger = document.querySelector('button[aria-label="切換選單"]');
+        if (!menu || !icon) return;
+        menu.classList.toggle('open');
+        const isOpen = menu.classList.contains('open');
+        icon.classList.toggle('fa-bars', !isOpen);
+        icon.classList.toggle('fa-times', isOpen);
+        if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    </script>
+    <script src="/assets/js/consent.js" defer></script>
+</body>
+</html>
