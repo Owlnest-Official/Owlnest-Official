@@ -59,11 +59,11 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:url" content="https://owlnestofficial.com/zh-tw/science/">
-    <meta property="og:image" content="https://owlnestofficial.com/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png">
+    <meta property="og:image" content="https://owlnestofficial.com/lume-night-effect.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="科學依據 | Owlnest Official">
     <meta name="twitter:description" content="了解光譜、時間與光線暴露如何影響夜晚，以及 Owlnest Lume 仍待補齊的產品專屬量測。">
-    <meta name="twitter:image" content="https://owlnestofficial.com/assets/zh-tw/asset-wrong-light-vs-sleep-lightZH.png">
+    <meta name="twitter:image" content="https://owlnestofficial.com/lume-night-effect.jpg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -177,6 +177,7 @@
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/science-evidence.css">
 </head>
 <body class="font-sans antialiased selection:bg-amber selection:text-midnight">
     <!-- Google Tag Manager (noscript) -->
@@ -318,6 +319,72 @@
             </div>
         </section>
 
+        <section id="science-education-visuals" class="science-education-visuals bg-[#0f111a] text-white border-t border-white/5">
+            <div class="science-education-visuals__shell reveal-text">
+                <div class="science-education-visuals__intro">
+                    <div>
+                        <span class="science-education-visuals__eyebrow">概念示意</span>
+                        <h2>夜晚光線，先看懂兩件事</h2>
+                    </div>
+                    <p>以下整理的是一般研究概念，不是 Lume 實測，也不是產品專屬光譜。</p>
+                </div>
+
+                <div class="science-education-visuals__grid">
+                    <figure class="science-education-card">
+                        <div class="science-education-card__heading">
+                            <span>01</span>
+                            <h3>光譜看的是光的組成</h3>
+                        </div>
+                        <div class="science-spectrum-map" role="img" aria-label="400 至 700 奈米的可見光波長概念範圍；圖中沒有 Lume 的產品輸出曲線">
+                            <div class="science-spectrum-map__labels" aria-hidden="true">
+                                <span>較短波長</span>
+                                <span>較長波長</span>
+                            </div>
+                            <div class="science-spectrum-map__bar" aria-hidden="true"></div>
+                            <div class="science-spectrum-map__axis" aria-hidden="true">
+                                <span>400 nm</span>
+                                <span>500 nm</span>
+                                <span>600 nm</span>
+                                <span>700 nm</span>
+                            </div>
+                        </div>
+                        <figcaption>真實 SPD 會顯示一盞燈在各波長的輸出。Lume 的產品量測仍待完成，因此這裡不畫產品曲線。</figcaption>
+                    </figure>
+
+                    <figure class="science-education-card">
+                        <div class="science-education-card__heading">
+                            <span>02</span>
+                            <h3>晚間光線會改變身體收到的夜晚訊號</h3>
+                        </div>
+                        <svg class="science-rhythm-chart" viewBox="0 0 720 390" role="img" aria-labelledby="science-rhythm-title-zh science-rhythm-desc-zh">
+                            <title id="science-rhythm-title-zh">不同晚間光線暴露下的夜間褪黑激素節律概念圖</title>
+                            <desc id="science-rhythm-desc-zh">實線表示晚間光線暴露較低時的典型夜間上升；虛線表示晚間光線暴露較高時可能較低或延後的概念走勢。這是教育示意，不是產品實測數據。</desc>
+                            <g class="science-rhythm-chart__grid" aria-hidden="true">
+                                <line x1="76" y1="58" x2="76" y2="320"></line>
+                                <line x1="76" y1="320" x2="676" y2="320"></line>
+                                <line x1="76" y1="232" x2="676" y2="232"></line>
+                                <line x1="76" y1="144" x2="676" y2="144"></line>
+                            </g>
+                            <g class="science-rhythm-chart__axis-labels" aria-hidden="true">
+                                <text x="76" y="350">傍晚</text>
+                                <text x="360" y="350">夜間</text>
+                                <text x="626" y="350">清晨</text>
+                                <text x="28" y="220" transform="rotate(-90 28 220)">夜間節律</text>
+                            </g>
+                            <path class="science-rhythm-chart__line science-rhythm-chart__line--solid" d="M76 300 C170 294 240 252 302 172 C374 80 472 72 548 116 C612 153 648 224 676 276"></path>
+                            <path class="science-rhythm-chart__line science-rhythm-chart__line--dashed" d="M76 304 C190 303 266 282 330 225 C405 158 493 150 566 184 C621 210 651 254 676 287"></path>
+                        </svg>
+                        <div class="science-rhythm-legend" aria-hidden="true">
+                            <span><i class="science-rhythm-legend__line"></i>較低的晚間光線暴露</span>
+                            <span><i class="science-rhythm-legend__line science-rhythm-legend__line--dashed"></i>較高的晚間光線暴露</span>
+                        </div>
+                        <figcaption>這是依一般夜間光線研究整理的概念走勢，不是數值資料、Lume 實測，也不代表每個人都會有固定反應。</figcaption>
+                        <p class="science-education-card__sources">研究背景：<a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener">Gooley 等人，2011</a>、<a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener">Cain 等人，2020</a>。</p>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <section id="section-evidence" class="section-breathe px-6 bg-midnight text-white border-t border-white/5">
             <div class="max-w-7xl mx-auto reveal-text">
                 <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-16 items-end mb-12 md:mb-16">
@@ -410,7 +477,7 @@
                             <p class="mt-3 text-white/72 leading-relaxed">這項研究說明波長組成為什麼重要，但無法告訴我們 Lume 的實測光譜</p>
                         </div>
                         <p class="mt-5 text-[10px] tracking-[0.14em] uppercase text-white/40 font-bold">Journal of Neuroscience, 2001</p>
-                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="mt-5 inline-flex text-amber hover:text-white text-xs uppercase tracking-[0.14em] font-bold">閱讀研究</a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/11487664/" target="_blank" rel="noopener" class="mt-5 inline-flex text-amber hover:text-white text-xs uppercase tracking-[0.14em] font-bold">閱讀研究</a>
                     </article>
                 </div>
             </div>
@@ -494,7 +561,7 @@
                                 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep</a>
                                 <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">Evening home lighting adversely impacts the circadian system and sleep</a>
                                 <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults</a>
-                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6763155/" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">Action Spectrum for Melatonin Regulation in Humans</a>
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/11487664/" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">Action Spectrum for Melatonin Regulation in Humans</a>
                                 <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener" class="paper-card p-4 hover:border-amber/50">Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans</a>
                             </div>
                         </div>
@@ -522,10 +589,11 @@
                 <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold">宣稱邊界</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-5xl leading-tight">研究啟發設計<br>不是醫療宣稱</h2>
                 <p class="mt-5 text-midnight/70 leading-relaxed">Owlnest Lume 不是醫療器材，不診斷、治療、治癒或預防睡眠障礙。以上研究是背景資料，不是 Lume 的臨床結果。實際暴露與每個人的反應，會隨光譜、強度、時機、時間、距離、角度與房間條件而不同</p>
+                <p class="mt-5 text-sm text-midnight/58 leading-relaxed">科學是 Owlnest Lab 的其中一個分支；證據頁負責說明每項主張的依據層級。21 天睡眠計畫即將開放申請，目前尚未公布參與者觀察或研究結果。</p>
                 <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                     <a href="/zh-tw/evidence/" class="inline-flex items-center justify-center rounded-full border border-midnight/18 text-midnight px-8 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-midnight hover:text-white">查看研究與資料</a>
-                    <a href="/zh-tw/products/" class="inline-flex items-center justify-center rounded-full border border-midnight/18 text-midnight px-8 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-midnight hover:text-white">了解產品</a>
-                    <a href="/zh-tw/products/#buy" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-8 py-4 text-xs uppercase tracking-[0.14em] font-bold hover:bg-midnight hover:text-white">購買 Lume</a>
+                    <a href="/zh-tw/lab/" class="inline-flex items-center justify-center rounded-full border border-midnight/18 text-midnight px-8 py-4 text-xs tracking-[0.14em] font-bold hover:bg-midnight hover:text-white">探索 Lab</a>
+                    <a href="/zh-tw/campaign/" class="inline-flex items-center justify-center rounded-full bg-amber text-midnight px-8 py-4 text-xs tracking-[0.14em] font-bold hover:bg-midnight hover:text-white">21 天睡眠計畫</a>
                 </div>
             </div>
         </section>
