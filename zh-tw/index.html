@@ -600,7 +600,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
 
             <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] font-semibold text-white/64">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
+                <a href="/zh-tw/" class="text-amber transition-colors duration-300" aria-current="page">首頁</a>
                 <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
                 <a href="/zh-tw/lab/" class="hover:text-amber transition-colors duration-300">Lab</a>
                 <a href="/zh-tw/campaign/" class="hover:text-amber transition-colors duration-300">21 天計畫</a>
@@ -640,7 +640,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white" aria-hidden="true">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
 
-            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
+            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-amber transition-colors" aria-current="page">首頁</a>
             <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
             <a href="/zh-tw/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lab</a>
             <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">21 天計畫</a>
@@ -1126,7 +1126,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         document.addEventListener('keydown', (event) => {
             if (event.key !== 'Escape') return;
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileTrigger = document.querySelector('[data-mobile-menu-toggle]');
+            const wasMobileMenuOpen = mobileMenu?.classList.contains('open');
             setMobileMenuState(false);
+            if (wasMobileMenuOpen) mobileTrigger?.focus();
             const menu = document.getElementById('language-menu');
             const trigger = document.querySelector('.language-trigger');
             if (!menu || !trigger) return;
@@ -1143,5 +1147,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <script src="/assets/js/shopify-checkout.js?v=20260714-2" defer></script>
     <script src="/assets/js/consent.js" defer></script>
+    <script src="/assets/js/navigation-accessibility.js" defer></script>
 </body>
 </html>

@@ -79,7 +79,7 @@
                 <a href="/about" class="hover:text-amber transition-colors">About Us</a>
                 <a href="/contact" class="hover:text-amber transition-colors">Contact Us</a>
             </nav>
-            <a href="/products/#buy" class="hidden lg:inline-flex justify-self-end items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Buy</a>
+            <a href="/products#buy" class="hidden lg:inline-flex justify-self-end items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Buy</a>
             <button type="button" onclick="toggleMobileMenu()" class="lg:hidden justify-self-end text-white/80 hover:text-amber transition-colors" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars" id="mobile-menu-icon"></i>
             </button>
@@ -94,7 +94,7 @@
             <a href="/campaign/" onclick="toggleMobileMenu()">21-Day Program</a>
             <a href="/about" onclick="toggleMobileMenu()">About Us</a>
             <a href="/contact" onclick="toggleMobileMenu()">Contact Us</a>
-            <a href="/products/#buy" onclick="toggleMobileMenu()" class="text-amber">Buy</a>
+            <a href="/products#buy" onclick="toggleMobileMenu()" class="text-amber">Buy</a>
         </nav>
     </div>
 
@@ -207,5 +207,6 @@
             document.body.style.overflow = open ? 'hidden' : '';
         }
     </script>
+    <script src="/assets/js/navigation-accessibility.js" defer></script>
 </body>
 </html>
