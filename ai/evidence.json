@@ -1,318 +1,159 @@
 {
   "brand": "Owlnest",
+  "brand_category": "Nighttime living",
+  "brand_tagline": "Made for life after dark.",
+  "brand_tagline_zh_hant": "為夜晚的生活設計",
   "product_name": "Owlnest Lume",
-  "source_of_truth": "Owlnest Truth documents and the current public Science and Evidence pages. Science owns consumer interpretation; Evidence owns source traceability and validation status.",
+  "product_category": "sleep-spectrum lamp",
+  "product_category_zh_hant": "睡眠光譜燈",
+  "source_of_truth": "Owlnest Truth documents and the current public Lab, Science, Evidence, Products, and 21-Day Sleep Program pages.",
   "canonical_owners": {
+    "research_umbrella": "https://owlnestofficial.com/lab/",
     "product_decision": "https://owlnestofficial.com/products",
     "consumer_science": "https://owlnestofficial.com/science",
-    "source_traceability": "https://owlnestofficial.com/evidence/",
+    "claim_support_status": "https://owlnestofficial.com/evidence/",
+    "participant_program": "https://owlnestofficial.com/campaign/",
     "questions": "https://owlnestofficial.com/faq/",
     "safe_use": "https://owlnestofficial.com/manual",
     "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy"
   },
-  "evidence_positioning": "Owlnest Lume is a research-informed sleep-spectrum lamp, specially tuned for after dark. Published research and institutional references support general lighting principles, not product-specific clinical outcomes.",
-  "claim_boundary": "The research sources support design principles only. They do not mean Owlnest Lume has completed product-specific clinical trials or can diagnose, treat, cure, or prevent disease.",
+  "public_pricing": {
+    "currency": "USD",
+    "single_lume": 119,
+    "duo_lume": 219,
+    "two_singles": 238,
+    "duo_savings": 19,
+    "availability_status": "Not asserted; live stock and immediate fulfillment are not confirmed by current authority."
+  },
+  "evidence_positioning": "General research can explain why nighttime light and spectrum may matter. Lume's design rationale explains what Owlnest intended to build. Neither one substitutes for product-specific measurement or participant results.",
+  "claim_boundary": "The sources below support general scientific principles and measurement frameworks only. They do not validate Lume's spectrum, biological effect, clinical efficacy, or sleep outcomes.",
   "evidence_levels": [
     {
-      "level": "Level 1",
-      "name": "Published Research",
-      "summary": "Published studies, institutional research, technical reports, and research summaries support the principle that evening light spectrum, blue-light exposure, and nighttime lighting environments can affect wind-down behavior and natural melatonin rhythm."
+      "level": 1,
+      "name": "Established research",
+      "status": "Publicly cited",
+      "summary": "Peer-reviewed research and recognized technical guidance support general principles involving light as a biological timing cue, spectrum, nighttime exposure, and non-visual responses to light.",
+      "does_not_establish": "Any product-specific Lume measurement or outcome."
     },
     {
-      "level": "Level 2",
-      "name": "Design Translation",
-      "summary": "Owlnest Lume translates these principles into a compact sleep-spectrum lamp with a deep amber / saturated orange-red dusk-like glow and a specially tuned sleep spectrum. Public product-specific spectrum measurement remains pending."
+      "level": 2,
+      "name": "Lume design rationale",
+      "status": "Publicly described",
+      "summary": "Lume was designed as a sleep-spectrum lamp with a specially tuned sleep spectrum for after dark.",
+      "does_not_establish": "That design intent has produced a measured human outcome."
     },
     {
-      "level": "Level 3",
-      "name": "Product-Specific Validation",
-      "summary": "Product-specific validation should include spectral power distribution, a same-condition ordinary warm lamp comparison, illuminance at stated distances, angle, melanopic metrics if available, output conditions, method, and limitations. Current status: pending."
+      "level": 3,
+      "name": "Product-specific evidence",
+      "status": "Not yet publicly published at the required level",
+      "summary": "A verified Lume spectral power distribution report, same-condition ordinary-warm-lamp comparison, illuminance conditions, melanopic metrics, and controlled clinical outcome data are not currently public.",
+      "does_not_establish": "Measured superiority, quantified biological effect, or clinical efficacy."
+    },
+    {
+      "level": 4,
+      "name": "Participant research",
+      "status": "Applications opening soon",
+      "summary": "The 21-Day Sleep Program is intended for up to 50 selected participants in the United States to use Lume in real nighttime routines and provide honest feedback.",
+      "does_not_establish": "Participant findings or Results; none are currently published."
     }
   ],
-  "research_sources": [
+  "product_specific_evidence_status": {
+    "verified_public_lume_spd": "Not published",
+    "same_condition_warm_lamp_comparison": "Not published",
+    "defined_illuminance_conditions": "Not published",
+    "melanopic_metrics": "Not published",
+    "product_specific_clinical_study": "Not available and not claimed",
+    "quantified_sleep_outcomes": "Not available and not claimed",
+    "conceptual_visuals": "Must be labeled conceptual and must not be represented as measured Lume data."
+  },
+  "participant_research_status": {
+    "program": "21-Day Sleep Program",
+    "route": "https://owlnestofficial.com/campaign/",
+    "application_status": "Applications opening soon.",
+    "intended_scope": "Up to 50 selected participants in the United States.",
+    "published_results": "None.",
+    "principle": "Owlnest is not looking for positive reviews; it is looking for honest results. Positive, neutral, and negative feedback are all valid outcomes."
+  },
+  "validated_general_sources": [
     {
-      "source_title": "Red Light and Sleep Quality in Athletes",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Red-spectrum nighttime light strategies are discussed in relation to sleep quality and recovery-oriented behavior.",
-      "relevance_to_owlnest_lume": "Supports the broader design direction toward red-orange nighttime light rather than bright white evening lighting.",
-      "claim_boundary": "Supports a design principle, but does not prove product-specific clinical outcomes for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
+      "name": "Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21193540/",
+      "supports": "General research on evening room-light exposure and melatonin timing.",
+      "does_not_support": "A Lume-specific measurement or sleep outcome."
     },
     {
-      "source_title": "CIE S 026: Measuring Biologically Relevant Light",
-      "source_type": "other",
-      "source_url": "https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "CIE",
-      "key_idea": "Provides a framework for describing biologically relevant light, not just visible brightness.",
-      "relevance_to_owlnest_lume": "Supports the design logic that nighttime lighting should be discussed in terms of biological relevance, spectrum direction, and timing.",
-      "claim_boundary": "This is a measurement framework, not proof that Owlnest Lume has completed product-specific spectral validation.",
-      "used_in_design_traceability_matrix": true
+      "name": "The effects of spectral tuning of evening ambient light on melatonin suppression, alertness and sleep",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5536841/",
+      "supports": "General research on how spectral tuning of evening ambient light can matter.",
+      "does_not_support": "That Lume reproduces the tested conditions or outcomes."
     },
     {
-      "source_title": "How Light Spectrum Regulates Human Melatonin",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://pubmed.ncbi.nlm.nih.gov/11487664/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Human melatonin timing is sensitive to light spectrum, not only to total brightness.",
-      "relevance_to_owlnest_lume": "Supports the emphasis on spectrum direction in a nighttime lamp rather than treating all warm light as equivalent.",
-      "claim_boundary": "Supports the underlying lighting principle, but does not show that Owlnest Lume itself changes melatonin in a measured trial.",
-      "used_in_design_traceability_matrix": true
+      "name": "Evening home lighting adversely impacts the circadian system and sleep",
+      "url": "https://www.nature.com/articles/s41598-020-75622-4",
+      "supports": "General research on evening home lighting and biological timing.",
+      "does_not_support": "A product-specific claim about Lume."
     },
     {
-      "source_title": "How Evening Room Light Suppresses Melatonin",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://pubmed.ncbi.nlm.nih.gov/21193540/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Ordinary room light in the evening can affect melatonin timing and shorten the body's nighttime signal.",
-      "relevance_to_owlnest_lume": "Supports the product's positioning around using less stimulating nighttime light instead of harsh bright room light before bed.",
-      "claim_boundary": "Supports why evening light choices matter, but does not prove product-specific outcomes for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
+      "name": "Recommendations for daytime, evening, and nighttime indoor light exposure to best support physiology, sleep, and wakefulness in healthy adults",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001571",
+      "supports": "Expert recommendations for indoor light exposure across the day and night.",
+      "does_not_support": "A verified Lume output or clinical result."
     },
     {
-      "source_title": "Biologically Relevant Lighting: An Industry Perspective",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8215265/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Biological responses to light can be considered in lighting design, not only visual illumination goals.",
-      "relevance_to_owlnest_lume": "Supports the product category of circadian-aware nighttime lighting and the idea of translating lighting science into consumer product design.",
-      "claim_boundary": "This supports design framing only and does not establish product-specific clinical efficacy for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
+      "name": "Action spectrum for melatonin regulation in humans: evidence for a novel circadian photoreceptor",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11487664/",
+      "supports": "General evidence that wavelength and spectrum matter to non-visual responses to light.",
+      "does_not_support": "A measured Lume action spectrum or melatonin outcome."
     },
     {
-      "source_title": "Blue-Hazard-Free Candlelight-Style OLED",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S1566119921002317",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Candlelight-style OLED approaches are discussed in relation to reducing blue-hazard concerns and creating warmer nighttime light signatures.",
-      "relevance_to_owlnest_lume": "Supports the design direction of a deep amber / red-orange nighttime spectrum rather than standard warm household lighting.",
-      "claim_boundary": "Supports a spectrum-design principle, but does not provide product-specific test data for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "High-Efficiency Candlelight OLED with Very Low Color Temperature",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8707034/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Very low color temperature lighting can be engineered in a candlelight-like direction.",
-      "relevance_to_owlnest_lume": "Supports the product's deep amber design direction and the idea that nighttime light can be intentionally tuned away from ordinary household lighting.",
-      "claim_boundary": "This does not show measured spectral data for Owlnest Lume itself.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "Candle Light-Style Organic Light-Emitting Diodes",
-      "source_type": "peer-reviewed research",
-      "source_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.201203209",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "Author/year not clearly available from current Science page",
-      "key_idea": "Candlelight-style OLED research explores low color temperature, warm nighttime-oriented light behavior.",
-      "relevance_to_owlnest_lume": "Supports the design concept of a red-orange dusk-like glow as a deliberate nighttime lighting choice.",
-      "claim_boundary": "This supports design inspiration and spectrum direction only, not a measured outcome claim for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "Read: Smart Sleep Technology by ITRI",
-      "source_type": "article",
-      "source_url": "https://itritech.itri.org.tw/blog/smart-sleep/",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "ITRI",
-      "key_idea": "Presents ITRI's framing around sleep-related technology and nighttime-supportive environments.",
-      "relevance_to_owlnest_lume": "Supports the broader product context of research-informed nighttime light and sleep-adjacent environmental design.",
-      "claim_boundary": "Institutional context does not equal product-specific clinical validation for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "Download: Ultra-Low Color Temperature OLED Technology",
-      "source_type": "technical PDF",
-      "source_url": "https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452025756363357&Pname=350_p059_067_%E5%91%A8%E5%8D%93%E7%85%87_%E8%B6%85%E4%BD%8E%E8%89%B2%E6%BA%ABOLED%E5%85%89%E6%BA%90%E6%A8%A1%E7%B5%84%E4%B9%8B%E8%A3%BD%E9%80%A0%E6%8A%80%E8%A1%93.pdf&Siteid=1&fd=PublicationsCont_Files",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "ITRI",
-      "key_idea": "Discusses ultra-low color temperature OLED technology and a spectrum direction suited to warmer nighttime use.",
-      "relevance_to_owlnest_lume": "Supports the product's very warm deep-amber direction and the idea that nighttime lighting can be engineered toward lower-stimulation use.",
-      "claim_boundary": "A technical PDF can support design rationale, but it does not provide product-specific lab validation for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "Download: Human-Centric Lighting for Healthcare Environments",
-      "source_type": "downloadable PDF",
-      "source_url": "https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452026061075714&Pname=P12-15-%E5%89%B5%E6%96%B0%E4%B9%8B%E9%91%B0-%E4%BA%BA%E5%9B%A0%E7%85%A7%E6%98%8E.pdf&Siteid=1&fd=PublicationsCont_Files",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "ITRI",
-      "key_idea": "Human-centric lighting is framed in relation to care environments and biologically aware light design.",
-      "relevance_to_owlnest_lume": "Supports the design intent that nighttime lighting should be aligned with how people experience light beyond simple visibility.",
-      "claim_boundary": "This supports a lighting-design principle and does not prove product-specific clinical outcomes for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
-    },
-    {
-      "source_title": "Download: Smart Sleep and Care Solutions",
-      "source_type": "research report PDF",
-      "source_url": "https://www.itri.org.tw/WebTools/FilesDownload.ashx?MmmID=1036452026061075714&Pname=P30-31-%E5%B0%81%E9%9D%A2%E6%95%85%E4%BA%8B-%E7%9D%A1%E5%BE%97%E5%A5%BD.pdf&Siteid=1&fd=PublicationsCont_Files",
-      "year_if_available": "Year not clearly available from current Science page",
-      "author_or_institution_if_available": "ITRI",
-      "key_idea": "Presents smart sleep and care concepts in an institutional research context.",
-      "relevance_to_owlnest_lume": "Supports the broader nighttime-living and wind-down framing around calmer evening environments.",
-      "claim_boundary": "Institutional sleep-adjacent context does not establish clinical or lab-validated results for Owlnest Lume.",
-      "used_in_design_traceability_matrix": true
+      "name": "CIE S 026:2018",
+      "url": "https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0",
+      "supports": "A recognized measurement framework for ipRGC-influenced responses to light.",
+      "does_not_support": "That Owlnest has completed or published those measurements for Lume."
     }
   ],
-  "design_traceability_matrix": [
-    {
-      "science_page_source": "How Light Spectrum Regulates Human Melatonin",
-      "research_principle": "Evening light spectrum matters, not only brightness.",
-      "product_design_decision": "Use a deep amber / red-orange nighttime spectrum direction.",
-      "owlnest_lume_implementation": "Deep amber dusk-like glow, not white or pale yellow.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Not a clinical outcome claim.",
-      "validation_still_needed": "Product-specific spectral measurement report."
-    },
-    {
-      "science_page_source": "How Evening Room Light Suppresses Melatonin",
-      "research_principle": "Blue-rich or stimulating room light can be more disruptive at night.",
-      "product_design_decision": "Design light specifically for nighttime use.",
-      "owlnest_lume_implementation": "Specially tuned sleep spectrum; product-specific SPD and melanopic data are pending.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Needs product-specific spectral measurement for quantitative claims.",
-      "validation_still_needed": "Blue-light ratio or melanopic measurement."
-    },
-    {
-      "science_page_source": "CIE S 026: Measuring Biologically Relevant Light",
-      "research_principle": "Biologically relevant light should be measured with more than visible brightness.",
-      "product_design_decision": "Frame nighttime design around biological relevance and timing.",
-      "owlnest_lume_implementation": "Sleep-spectrum lamp, specially tuned for after dark.",
-      "evidence_level": "Institutional standard + design rationale",
-      "claim_boundary": "Not proof that Owlnest Lume has completed the same measurements.",
-      "validation_still_needed": "Melanopic or equivalent product-specific metrics if available."
-    },
-    {
-      "science_page_source": "Read: Smart Sleep Technology by ITRI",
-      "research_principle": "Timing matters for sleep-supporting lighting environments.",
-      "product_design_decision": "Use after dark during the wind-down; the final 1 to 2 hours is practical guidance, not a tested threshold. At bedtime, switch Lume off unless a small amount of light is still needed.",
-      "owlnest_lume_implementation": "Sleep-spectrum lamp specially tuned for after dark, including brief nighttime wake-ups when a small amount of light is needed.",
-      "evidence_level": "Institutional research + design rationale",
-      "claim_boundary": "Does not guarantee sleep improvement.",
-      "validation_still_needed": "User study or controlled product-specific test if stronger claims are desired."
-    },
-    {
-      "science_page_source": "Biologically Relevant Lighting: An Industry Perspective",
-      "research_principle": "Lighting can be designed with biological effects in mind.",
-      "product_design_decision": "Position the product as research-informed nighttime lighting.",
-      "owlnest_lume_implementation": "Sleep-spectrum lamp designed to support the body's natural melatonin rhythm.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Does not prove product-specific clinical efficacy.",
-      "validation_still_needed": "Product-specific validation summary page."
-    },
-    {
-      "science_page_source": "Blue-Hazard-Free Candlelight-Style OLED",
-      "research_principle": "Warm, candlelight-style spectrum directions can reduce blue-heavy nighttime light characteristics.",
-      "product_design_decision": "Favor a deeper amber / red-orange dusk-like light signature.",
-      "owlnest_lume_implementation": "Specially tuned nighttime glow instead of ordinary warm lamp output.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Not a claim that Owlnest Lume has identical spectral performance.",
-      "validation_still_needed": "Spectral power distribution report."
-    },
-    {
-      "science_page_source": "High-Efficiency Candlelight OLED with Very Low Color Temperature",
-      "research_principle": "Very low color temperature can be intentionally engineered.",
-      "product_design_decision": "Use a specially tuned sleep spectrum for after dark.",
-      "owlnest_lume_implementation": "Rich deep amber / red-orange dusk-like glow.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Not a quantitative performance claim for Owlnest Lume.",
-      "validation_still_needed": "CCT measurement and spectral report."
-    },
-    {
-      "science_page_source": "Candle Light-Style Organic Light-Emitting Diodes",
-      "research_principle": "Candlelight-style light can be deliberately designed as a distinct lighting direction.",
-      "product_design_decision": "Avoid generic warm-lamp positioning.",
-      "owlnest_lume_implementation": "Nighttime transition tool with candlelight-adjacent visual intent.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Supports direction and appearance only, not product-specific efficacy.",
-      "validation_still_needed": "Controlled product photos plus spectral measurement."
-    },
-    {
-      "science_page_source": "Download: Ultra-Low Color Temperature OLED Technology",
-      "research_principle": "Ultra-low color temperature technologies are relevant to nighttime-friendly light design.",
-      "product_design_decision": "Aim for a lower-stimulation warm spectrum direction.",
-      "owlnest_lume_implementation": "Deep amber nighttime glow for bedside or room placement.",
-      "evidence_level": "Technical PDF + design translation",
-      "claim_boundary": "Technical context is not the same as product validation.",
-      "validation_still_needed": "Third-party or instrument-based spectrum report."
-    },
-    {
-      "science_page_source": "Download: Human-Centric Lighting for Healthcare Environments",
-      "research_principle": "Human-centric lighting principles matter for how spaces feel and function.",
-      "product_design_decision": "Treat nighttime light as environmental design, not only illumination.",
-      "owlnest_lume_implementation": "Emotional calm and spatial comfort as part of the product concept.",
-      "evidence_level": "Downloadable PDF + design rationale",
-      "claim_boundary": "Does not show clinical outcomes for this consumer product.",
-      "validation_still_needed": "User environment testing if stronger evidence is desired."
-    },
-    {
-      "science_page_source": "Download: Smart Sleep and Care Solutions",
-      "research_principle": "Calmer environmental design can support nighttime routines.",
-      "product_design_decision": "Frame the product as a non-medical habit and environment support tool.",
-      "owlnest_lume_implementation": "After-dark wind-down positioning and simple hardware without an app or screen.",
-      "evidence_level": "Research report PDF + design rationale",
-      "claim_boundary": "Does not establish medical or product-specific sleep claims.",
-      "validation_still_needed": "Product-specific user testing or validation summary."
-    },
-    {
-      "science_page_source": "Red Light and Sleep Quality in Athletes",
-      "research_principle": "Red-spectrum light strategies can be relevant to nighttime behavior and recovery-oriented environments.",
-      "product_design_decision": "Support the red-orange design direction.",
-      "owlnest_lume_implementation": "Rich deep amber / red-orange dusk-like glow.",
-      "evidence_level": "Published research + design translation",
-      "claim_boundary": "Not a claim that Owlnest Lume replicates athlete-study outcomes.",
-      "validation_still_needed": "Product-specific spectrum validation and any future user study."
-    }
+  "removed_from_active_lume_evidence_mapping": [
+    "athlete red-light sleep studies",
+    "OLED engineering papers",
+    "ITRI background and healthcare-lighting materials"
   ],
+  "removal_reason": "These materials may provide indirect background, but they do not directly validate Lume and are not part of the current validated core source set.",
   "recommended_wording": [
     "research-informed design",
     "sleep-spectrum lamp",
     "specially tuned sleep spectrum",
     "light specially tuned for nighttime",
-    "specially tuned for after dark",
     "designed to support the body's natural melatonin rhythm",
-    "research-informed",
-    "supports a more sleep-ready nighttime environment",
-    "the final 1 to 2 hours before bed as practical guidance, not a tested threshold"
+    "supports a more sleep-ready nighttime environment"
   ],
   "avoided_wording": [
     "clinically proven",
+    "measured Lume spectrum unless a verified report is published",
+    "boosts or increases melatonin",
+    "prevents melatonin suppression",
+    "improves sleep quality",
     "cures insomnia",
     "treats sleep disorders",
-    "improves deep sleep",
-    "guarantees melatonin production",
-    "proven to make you sleep better",
-    "medically validated sleep treatment"
+    "fixes or resets circadian rhythm",
+    "guaranteed better sleep"
   ],
-  "product_validation_roadmap": {
-    "current_status": "Product design is evidence-informed. Product-specific laboratory validation should be added when available.",
-    "recommended_next_steps": [
-      "spectral power distribution report",
-      "same-condition ordinary warm lamp spectral comparison",
-      "illuminance / lux at common bedside distances",
-      "melanopic equivalent daylight illuminance or other melanopic metrics if available",
-      "test distance, angle, output setting, date, instrument, and environment",
-      "photos of actual product under controlled lighting",
-      "third-party lab or instrument report if available"
-    ]
-  },
-  "last_updated": "2026-07-22",
+  "future_measurement_requirements": [
+    "verified Lume spectral power distribution",
+    "same-condition ordinary warm-light comparison",
+    "measurement distance, angle, output setting, illuminance, date, instrument, and environment",
+    "melanopic or equivalent metrics where appropriate",
+    "clear separation between product measurement, participant research, and clinical evidence"
+  ],
+  "last_updated": "2026-08-19",
   "language_versions": {
     "en": "https://owlnestofficial.com/evidence/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"
   },
   "localized_links": {
+    "zh-Hant_lab": "https://owlnestofficial.com/zh-tw/lab/",
     "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
-    "zh-Hant_evidence_notes": "https://owlnestofficial.com/zh-tw/evidence/",
-    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/"
+    "zh-Hant_evidence": "https://owlnestofficial.com/zh-tw/evidence/",
+    "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
+    "zh-Hant_twenty_one_day_sleep_program": "https://owlnestofficial.com/zh-tw/campaign/"
   }
 }

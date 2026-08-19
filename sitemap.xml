@@ -29,6 +29,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/products" />
   </url>
   <url>
+    <loc>https://owlnestofficial.com/lab/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/" />
+  </url>
+  <url>
+    <loc>https://owlnestofficial.com/zh-tw/lab/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/" />
+  </url>
+  <url>
     <loc>https://owlnestofficial.com/science</loc>
     <lastmod>2026-07-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://owlnestofficial.com/science" />

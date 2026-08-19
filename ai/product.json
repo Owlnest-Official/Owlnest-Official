@@ -2,6 +2,7 @@
   "brand": "Owlnest",
   "brand_category": "Nighttime living",
   "brand_tagline": "Made for life after dark.",
+  "brand_tagline_zh_hant": "為夜晚的生活設計",
   "product_name": "Owlnest Lume",
   "product_tagline": "Night deserves its own light.",
   "hero_hook": "Your room knows it’s night. Your light doesn’t.",
@@ -9,6 +10,14 @@
   "technical_term": "specially tuned sleep spectrum",
   "plain_language": "Light specially tuned for nighttime.",
   "definition": "Lume is a sleep-spectrum lamp, specially tuned for after dark.",
+  "public_pricing": {
+    "currency": "USD",
+    "single_lume": 119,
+    "duo_lume": 219,
+    "two_singles": 238,
+    "duo_savings": 19,
+    "availability_status": "Not asserted; live stock and immediate fulfillment are not confirmed by current authority."
+  },
   "science_bridge": "Your body uses light to tell time.",
   "design_intent": "Designed to support the body's natural melatonin rhythm.",
   "primary_use_case": "Used after dark when a person still needs light but does not want ordinary daytime-like room lighting.",
@@ -62,6 +71,18 @@
     "melanopic_metrics": "Pending public product-specific measurement conditions and results.",
     "product_clinical_outcomes": "Not available and not claimed."
   },
+  "research_architecture": {
+    "lab": "Owlnest's overall research and learning ecosystem.",
+    "science": "General mechanisms and established research concerning nighttime light, spectrum, exposure, and biological timing.",
+    "evidence": "What supports each claim and which product-specific evidence is not yet public.",
+    "participant_research": "Real-world observation through structured programs; no participant results are currently published.",
+    "twenty_one_day_sleep_program": {
+      "route": "https://owlnestofficial.com/campaign/",
+      "status": "Applications opening soon.",
+      "scope": "Up to 50 selected participants in the United States.",
+      "results": "No participant results or conclusions are published."
+    }
+  },
   "evidence_links": {
     "evidence_brief": "https://owlnestofficial.com/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
@@ -100,6 +121,7 @@
   "important_links": {
     "homepage": "https://owlnestofficial.com/",
     "products": "https://owlnestofficial.com/products",
+    "lab": "https://owlnestofficial.com/lab/",
     "definition": "https://owlnestofficial.com/what-is-owlnest-lume/",
     "ai_brief": "https://owlnestofficial.com/ai-brief.html",
     "science": "https://owlnestofficial.com/science",
@@ -108,9 +130,9 @@
     "faq": "https://owlnestofficial.com/faq/",
     "manual": "https://owlnestofficial.com/manual",
     "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy",
-    "campaign": "https://owlnestofficial.com/campaign/"
+    "twenty_one_day_sleep_program": "https://owlnestofficial.com/campaign/"
   },
-  "last_updated": "2026-07-22",
+  "last_updated": "2026-08-19",
   "language_versions": {
     "en": "https://owlnestofficial.com/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/"
@@ -118,11 +140,13 @@
   "localized_links": {
     "zh-Hant_homepage": "https://owlnestofficial.com/zh-tw/",
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
+    "zh-Hant_lab": "https://owlnestofficial.com/zh-tw/lab/",
     "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
     "zh-Hant_faq": "https://owlnestofficial.com/zh-tw/faq/",
     "zh-Hant_manual": "https://owlnestofficial.com/zh-tw/manual/",
     "zh-Hant_order_and_shipping_policy": "https://owlnestofficial.com/zh-tw/preorder-policy/",
     "zh-Hant_definition": "https://owlnestofficial.com/zh-tw/what-is-owlnest-lume/",
-    "zh-Hant_campaign": "https://owlnestofficial.com/zh-tw/campaign/"
+    "zh-Hant_twenty_one_day_sleep_program": "https://owlnestofficial.com/zh-tw/campaign/",
+    "zh-Hant_evidence": "https://owlnestofficial.com/zh-tw/evidence/"
   }
 }

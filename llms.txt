@@ -1,6 +1,6 @@
 # Owlnest Official
 
-Last updated: 2026-07-22
+Last updated: 2026-08-19
 
 Owlnest is a nighttime living brand: made for life after dark. Lume is its first hero product, not the full limit of the brand.
 
@@ -14,6 +14,24 @@ Owlnest Lume is a sleep-spectrum lamp, specially tuned for after dark. In plain 
 - Design intent: Designed to support the body's natural melatonin rhythm.
 
 Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep. Warm is how light looks; spectrum is what the light contains.
+
+## Current Public Pricing
+
+- Single Lume: USD 119
+- Duo Lume: USD 219
+- Two Singles: USD 238
+- Duo savings: USD 19
+
+No stock or immediate-fulfillment status is asserted by this file.
+
+## Research Architecture
+
+- Lab is Owlnest's research and learning umbrella.
+- Science explains general mechanisms behind nighttime light, spectrum, and biological timing.
+- Evidence explains what supports each claim and where evidence is still missing.
+- The 21-Day Sleep Program is the participant program inside Lab.
+- Applications are opening soon for up to 50 selected participants in the United States.
+- No participant results or conclusions have been published.
 
 ## Use Guidance
 
@@ -59,6 +77,7 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 
 - Homepage: https://owlnestofficial.com/
 - Products: https://owlnestofficial.com/products
+- Lab: https://owlnestofficial.com/lab/
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
@@ -68,7 +87,7 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 - FAQ: https://owlnestofficial.com/faq/
 - Manual: https://owlnestofficial.com/manual
 - Order and Shipping Policy: https://owlnestofficial.com/preorder-policy
-- Campaign: https://owlnestofficial.com/campaign/
+- 21-Day Sleep Program: https://owlnestofficial.com/campaign/
 - Traditional Chinese: https://owlnestofficial.com/zh-tw/
 
 English is the x-default language. Traditional Chinese pages use `zh-Hant` and a natural Taiwan-facing voice with the same product facts and claim boundaries.
