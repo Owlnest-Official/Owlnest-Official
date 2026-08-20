@@ -1,0 +1,457 @@
+# ROUND 11A
+# OWLNEST CREATIVE DIRECTION EXPLORATION
+
+## Mode
+
+MAX
+
+## Objective
+
+The previous audit was intentionally conservative.
+
+That constraint is now removed.
+
+For this phase, I do NOT want safe, generic, incremental visual refinement.
+
+I want Owlnest to become visually memorable, unexpected, premium, contemporary, and unmistakably its own brand.
+
+You have broad creative freedom over visual design.
+
+Do NOT modify files yet.
+
+---
+
+# 1. IMPORTANT DISTINCTION
+
+The following are FIXED business / product truths:
+
+- existing information architecture
+- current EN/ZH meaning
+- Owlnest / Lume positioning
+- Lab / Science / Evidence hierarchy
+- 21-Day Program logic
+- product pricing
+- Shopify purchase behavior
+- routes
+- metadata truth
+- scientific claim boundaries
+- evidence boundaries
+- existing real product facts
+
+These are not creative constraints.
+
+They are factual constraints.
+
+Everything VISUAL is open for exploration.
+
+---
+
+# 2. YOU ARE ALLOWED TO RETHINK THE VISUAL EXPERIENCE
+
+You may radically reconsider:
+
+- layout
+- composition
+- grids
+- section geometry
+- typography
+- type scale
+- alignment
+- whitespace
+- image cropping
+- image scale
+- image layering
+- navigation presentation
+- visual rhythm
+- transitions between sections
+- page backgrounds
+- lighting effects
+- gradients
+- masks
+- texture
+- SVG graphics
+- editorial devices
+- interactive storytelling
+- scroll-driven moments
+- restrained parallax
+- product reveals
+- section transitions
+- motion design
+- micro-interactions
+- visual metaphors
+- unconventional information layouts
+
+You are NOT required to preserve the current visual structure.
+
+If a stronger design requires rebuilding the visual layout of a page while preserving its factual content and user purpose, propose it.
+
+---
+
+# 3. DO NOT DEFAULT TO SAFE DTC DESIGN
+
+Avoid automatically falling back to:
+
+- centered hero + paragraph + two buttons
+- endless rounded cards
+- generic dark luxury
+- glassmorphism
+- SaaS-style feature grids
+- Apple imitation
+- generic wellness branding
+- biotech dashboard aesthetics
+- predictable "premium" beige layouts
+- excessive pill buttons
+- every section using the same max-width container
+
+Owlnest should not look like a polished template.
+
+It should have visual authorship.
+
+---
+
+# 4. BRAND WORLD
+
+Owlnest is:
+
+Made for life after dark.
+
+The visual identity should explore what a brand built specifically around NIGHTTIME LIVING could look like.
+
+Do not interpret nighttime only as:
+
+black background + orange light.
+
+Think more deeply.
+
+Possible conceptual material includes:
+
+- the transition from day to night
+- darkness as negative space
+- artificial light interrupting darkness
+- pools of light
+- silhouettes
+- shadows
+- after-hours domestic life
+- quiet architecture
+- nocturnal rituals
+- late-night editorial photography
+- light as a physical material
+- the spectrum hidden inside visible color
+- the moment a room changes character after sunset
+
+These are creative starting points, not mandatory motifs.
+
+Invent stronger ideas if you have them.
+
+---
+
+# 5. LUME SHOULD BE A VISUAL CHARACTER
+
+Lume has a highly recognizable physical form:
+
+- compact egg-shaped illuminated body
+- round wooden base
+- deep amber / orange-red nighttime glow
+
+Do not treat it merely as a product image inside a rectangle.
+
+Explore ways the product itself could drive composition.
+
+Examples might include:
+
+- scale contrast
+- darkness interrupted by one pool of Lume light
+- extreme crop
+- silhouette
+- reflected light
+- object emerging from negative space
+- light crossing section boundaries
+- product anchoring typography
+- visual transitions driven by the lamp's glow
+
+These are examples only.
+
+Do not limit yourself to them.
+
+---
+
+# 6. EDITORIAL, NOT TEMPLATE
+
+Owlnest should have the confidence of an editorial object.
+
+Explore:
+
+- asymmetry
+- dramatic type scale
+- unexpected crop
+- narrow text columns
+- oversized statements
+- captions
+- marginal notes
+- numbered research annotations
+- vertical rhythm
+- deliberate visual interruptions
+- cinematic pacing
+
+But do not make the website difficult to use.
+
+The creativity should strengthen comprehension, not sacrifice it.
+
+---
+
+# 7. SCIENCE AND LAB CAN HAVE VISUAL CHARACTER
+
+Do not make Science simply "dark page with science cards."
+
+Do not make Evidence simply "more cards with labels."
+
+Explore distinctive visual systems for different roles.
+
+For example:
+
+Science might feel like:
+an editorial explanation of invisible light.
+
+Evidence might feel like:
+an evidence ledger / annotated archive / transparent record.
+
+Lab might feel like:
+an active living research system.
+
+21-Day Program might feel like:
+participation in a living field study.
+
+Products might feel like:
+a tactile product encounter.
+
+Homepage might feel like:
+entering Owlnest's world after dark.
+
+These are directions, not mandatory layouts.
+
+---
+
+# 8. MOTION IS ALLOWED
+
+You may propose meaningful motion.
+
+Examples:
+
+- light gradually replacing daylight
+- typography reacting subtly to scroll
+- product emerging from darkness
+- spectral transitions
+- section illumination
+- cinematic image reveals
+- sticky editorial storytelling
+- restrained scroll choreography
+
+Avoid motion for decoration alone.
+
+Avoid making content depend on animation to remain readable.
+
+Respect reduced-motion users.
+
+---
+
+# 9. CHINESE DOES NOT NEED TO VISUALLY IMITATE ENGLISH
+
+English and Traditional Chinese must communicate equivalent meaning.
+
+But their typography may be art-directed differently.
+
+The Chinese experience should feel equally intentional and premium.
+
+You may propose:
+
+- different display-font strategy
+- different line lengths
+- different breakpoints
+- different headline composition
+- different vertical rhythm
+
+Do not force Chinese into English-shaped boxes.
+
+---
+
+# 10. MOBILE IS A CREATIVE CANVAS
+
+Do not treat mobile merely as desktop stacked vertically.
+
+Explore mobile-specific composition where beneficial.
+
+Owlnest should still feel designed at:
+
+- 390px
+- 430px
+- 768px
+- desktop
+
+Mobile may have different crops, type scale, visual sequencing, or motion.
+
+Preserve the same information and functionality.
+
+---
+
+# 11. CURRENT AUDIT FINDINGS ARE INPUT, NOT LIMITS
+
+The previous audit identified:
+
+- generic centered composition
+- weak product prominence
+- inconsistent headers
+- excessive spacing
+- generic Science/Evidence visual language
+- Chinese typography weakness
+- cookie UI dominance
+- inconsistent image framing
+- generic reveal animations
+- About transition weakness
+
+Use these findings.
+
+But do NOT limit your solution to incremental corrections.
+
+If a more ambitious creative direction solves several problems at once, prefer the stronger concept.
+
+---
+
+# 12. CREATE 3 DISTINCT ART DIRECTIONS
+
+Before modifying anything, propose THREE genuinely different visual directions for Owlnest.
+
+They should not be minor variations of the same design.
+
+For each direction provide:
+
+## Name
+
+Give the direction a memorable internal name.
+
+## Core idea
+
+What is the visual concept?
+
+## Emotional effect
+
+What should a visitor feel?
+
+## Homepage
+
+Describe the Hero and major visual storytelling.
+
+## Product page
+
+Describe how Lume becomes the visual protagonist.
+
+## Lab
+
+Describe the research-world treatment.
+
+## Science
+
+Describe its unique visual language.
+
+## Evidence
+
+Describe its unique visual language.
+
+## 21-Day Program
+
+Describe the participant-program visual treatment.
+
+## About
+
+Describe the brand-story treatment.
+
+## Typography
+
+English and Traditional Chinese strategy.
+
+## Color / light
+
+How darkness, light and Owlnest colors behave.
+
+## Motion
+
+What motion language fits this direction?
+
+## Mobile
+
+How the idea translates into mobile rather than simply collapsing desktop.
+
+## Signature moments
+
+Give 3–5 specific visual moments that could become recognizable Owlnest signatures.
+
+## Risks
+
+Explain where this direction could become too theatrical, confusing or technically heavy.
+
+---
+
+# 13. PUSH THE IDEAS
+
+At least ONE of the three directions should be genuinely bold.
+
+Do not reject an idea simply because it would require more CSS, JavaScript, SVG, layout work or custom interaction.
+
+This phase is about discovering the strongest Owlnest visual identity.
+
+Technical feasibility will be evaluated after the creative direction is selected.
+
+---
+
+# 14. YOU MAY COMBINE MEDIA
+
+You may propose use of:
+
+- existing real product photos
+- existing night photography
+- CSS-generated light
+- SVG
+- typography
+- masks
+- gradients
+- noise / texture
+- controlled blur
+- animation
+- video where genuinely useful
+- future custom visual assets if worth creating
+
+Clearly distinguish:
+
+existing assets
+
+vs.
+
+new assets you recommend creating.
+
+Do not fabricate product evidence or product imagery that could misrepresent Lume.
+
+---
+
+# 15. DO NOT EDIT YET
+
+This phase is creative direction only.
+
+Do not modify:
+
+- HTML
+- CSS
+- JS
+- assets
+- Git
+- metadata
+
+Return the three creative directions.
+
+Then provide:
+
+# Recommended Direction
+
+Choose the strongest direction for Owlnest and explain why.
+
+Also explain whether elements from the other two directions should be hybridized into it.
+
+Then STOP and wait for approval.

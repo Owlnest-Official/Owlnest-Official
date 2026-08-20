@@ -77,128 +77,6 @@ main .tracking-\[0\.16em\].uppercase {
     font-weight: 800 !important;
 }
 
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(h1, h2, .owlnest-eyebrow, .section-label):first-child,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > p:first-child,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > h1:first-of-type,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > h2:first-of-type,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child > :is(h1, h2, p, .owlnest-eyebrow, .section-label),
-main > section > :is(.grid, .md\:grid, .lg\:grid, .xl\:grid) > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child,
-main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl).grid > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child,
-main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > .grid > div > :is(h1, h2, p, .owlnest-eyebrow, .section-label):first-child {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(h1, h2, p) + p,
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl):first-child > p,
-main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl).grid > div > :is(h1, h2) + p,
-main > section > :is(.max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > .grid > div > :is(h1, h2) + p {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > div:has(> :is(h1.font-serif, h2.font-serif)):not(:has(> img)):not(:has(> figure)):not(:has(> article)):not(:has(> form)) {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > div:has(> :is(h1.font-serif, h2.font-serif)):not(:has(> img)):not(:has(> figure)):not(:has(> article)):not(:has(> form)) > :is(h1, h2, p, span, a),
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > div:has(> :is(h1.font-serif, h2.font-serif)):not(:has(> img)):not(:has(> figure)):not(:has(> article)):not(:has(> form)) > div {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > :is(.max-w-2xl, .max-w-3xl, .max-w-4xl, .max-w-5xl, .max-w-6xl, .max-w-7xl, .max-w-screen-xl) > div:has(> :is(h1.font-serif, h2.font-serif)):not(:has(> img)):not(:has(> figure)):not(:has(> article)):not(:has(> form)) > div[class*="flex"] {
-    justify-content: center !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)),
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)),
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: clamp(2rem, 4vw, 3.5rem) !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div,
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > figure,
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div,
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > figure,
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div,
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > figure {
-    width: min(100%, 72rem) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)),
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)),
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) {
-    order: -1 !important;
-    width: min(100%, 58rem) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2),
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2),
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > :is(p, span, h1, h2) {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div,
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div,
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div[class*="flex"],
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div[class*="flex"],
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:has(> :is(h1.font-serif, h2.font-serif)) > div[class*="flex"] {
-    justify-content: center !important;
-}
-
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > p,
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > p,
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > p,
-main > section > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:not(:has(> :is(h1.font-serif, h2.font-serif))) > :is(p, a),
-main > section > [class*="max-w-"][class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:not(:has(> :is(h1.font-serif, h2.font-serif))) > :is(p, a),
-main > section > [class*="max-w-"] > [class*="grid"][class*="lg:grid-cols-["]:has(> div > :is(h1.font-serif, h2.font-serif)) > div:not(:has(> :is(h1.font-serif, h2.font-serif))) > :is(p, a) {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-}
-
-.product-snapshot-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: clamp(2rem, 4vw, 3.5rem) !important;
-}
-
-.product-snapshot-grid > .flex {
-    order: -1 !important;
-    width: min(100%, 58rem) !important;
-}
-
-.product-snapshot-grid .product-copy-panel {
-    max-width: 58rem !important;
-}
-
-.product-snapshot-grid > figure {
-    width: min(100%, 72rem) !important;
-    margin-inline: auto !important;
-}
-
 main .text-5xl,
 main .text-6xl,
 main .md\:text-6xl,
@@ -237,11 +115,11 @@ html[lang="zh-Hant"] {
 
 html[lang="zh-Hant"] body,
 html[lang="zh-Hant"] main {
-    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif !important;
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Manrope", sans-serif !important;
 }
 
 html[lang="zh-Hant"] main .font-serif {
-    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif !important;
+    font-family: "Noto Serif TC", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif !important;
 }
 
 html[lang="zh-Hant"] main h1.font-serif,
@@ -380,4 +258,150 @@ main :is(.bg-white, [class*="bg-[#f"]) .text-taupe {
 footer [class*="text-white/3"],
 footer [class*="text-white/4"] {
     color: rgba(245, 238, 220, 0.68) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-text {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Shared chrome: preserve each page's markup while keeping one header measure. */
+#main-header {
+    min-height: 72px;
+}
+
+#main-header .header-inner {
+    height: 72px !important;
+}
+
+#main-header:not(:has(> .header-inner)) {
+    min-height: 72px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Explicit page compositions avoid relying on generated arbitrary grid utilities. */
+@media (min-width: 1024px) {
+    .product-page .product-hero-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 0.88fr) minmax(24rem, 1.12fr) !important;
+        align-items: center !important;
+        gap: clamp(3rem, 6vw, 6rem) !important;
+    }
+
+    .product-page .product-hero-grid > div,
+    .product-page .product-hero-grid > figure {
+        width: auto !important;
+        max-width: none !important;
+        margin-inline: 0 !important;
+    }
+
+    .product-page .product-hero-grid > div,
+    .product-page .product-hero-grid > div > * {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .product-page .product-hero-grid .product-hero-actions {
+        justify-content: flex-start !important;
+    }
+
+    .science-page #section-1 > .relative.z-10 {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.08fr) minmax(19rem, 0.92fr) !important;
+        align-items: start !important;
+        gap: clamp(3rem, 6vw, 5rem) !important;
+    }
+
+    .science-page #section-1 > .relative.z-10 > div:first-child,
+    .science-page #section-1 > .relative.z-10 > div:first-child > * {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .science-page #section-1 > .relative.z-10 > div:first-child > div[class*="flex"] {
+        justify-content: flex-start !important;
+    }
+
+    .about-page main > section:first-child > .relative.z-10 {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.9fr) !important;
+        align-items: end !important;
+        gap: clamp(3rem, 6vw, 5rem) !important;
+    }
+
+    .about-page main > section:first-child > .relative.z-10 > *,
+    .about-page main > section:first-child > .relative.z-10 > div > * {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.product-page main > section:first-child {
+    padding-top: clamp(8rem, 11vw, 9.5rem) !important;
+    padding-bottom: clamp(3.5rem, 6vw, 5rem) !important;
+}
+
+.product-page .product-hero-figure {
+    border-radius: 18px;
+}
+
+.product-page .product-hero-image-wrap {
+    min-height: clamp(23rem, 43vw, 31rem) !important;
+    border-radius: 12px;
+}
+
+.science-page #section-1 article,
+.science-page main article {
+    border-radius: 18px !important;
+}
+
+.science-page main article > [class*="rounded-"] {
+    border-radius: 12px !important;
+}
+
+.evidence-page main > section:first-child > div {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding-left: clamp(0rem, 2vw, 1.5rem) !important;
+    padding-right: clamp(0rem, 2vw, 1.5rem) !important;
+    text-align: left !important;
+}
+
+.evidence-page main > section:first-child > div > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+.evidence-page main > section:first-child > div > div[class*="flex"] {
+    justify-content: flex-start !important;
+}
+
+.evidence-page main > section:not(:first-child) > div {
+    border-radius: 18px !important;
+}
+
+.evidence-page main article {
+    border-radius: 12px !important;
+}
+
+@media (max-width: 1023px) {
+    .product-page .product-hero-grid,
+    .science-page #section-1 > .relative.z-10,
+    .about-page main > section:first-child > .relative.z-10 {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .product-page .product-hero-figure {
+        width: min(100%, 34rem) !important;
+        margin-inline: auto !important;
+    }
 }

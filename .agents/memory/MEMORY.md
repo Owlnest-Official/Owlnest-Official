@@ -1,0 +1,1 @@
+- [Visual refinement guardrails](visual-refinement-guardrails.md) — Scope layout rules to named experiences; keep large frame sequences sampled and progressively loaded.

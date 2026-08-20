@@ -232,6 +232,35 @@ html[lang^="zh-Hant"] #science-education-visuals .science-education-card__source
     color: rgba(255, 255, 255, 0.62);
 }
 
+/* Science teaches in a measured progression; Evidence reads like an audit. */
+.science-page main > section:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.science-page .science-info-spotlight .science-text-lockup {
+    text-align: left;
+    justify-self: start;
+}
+
+.evidence-page main {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), transparent 24rem),
+        #182234;
+}
+
+.evidence-page main > section + section::before {
+    content: "";
+    display: block;
+    width: min(100%, 72rem);
+    height: 1px;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.evidence-page .evidence-status {
+    letter-spacing: 0.16em;
+}
+
 @media (max-width: 860px) {
     #science-education-visuals .science-education-visuals__intro,
     #science-education-visuals .science-education-visuals__grid {

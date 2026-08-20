@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -911,40 +911,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const section1 = document.getElementById('section-1');
 
         const frameCount = 96;
-        const heroFrameWidth = window.innerWidth <= 640 ? 640 : (window.innerWidth <= 1024 ? 1024 : 1280);
-        const currentFrame = index => `/.netlify/images?url=/${index.toString().padStart(3, '0')}.png&w=${heroFrameWidth}&q=72`;
+        const currentFrame = index => `/${index.toString().padStart(3, '0')}.png`;
         const images = [];
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const skySequence = { frame: prefersReducedMotion ? frameCount - 1 : 0 };
-        let imagesLoaded = 0;
-        let imagesFailed = false;
+        const frameStep = window.innerWidth <= 640 ? 6 : (window.innerWidth <= 1024 ? 4 : 3);
+        const heroFrames = prefersReducedMotion ? [frameCount] : [];
 
-        const heroFrames = prefersReducedMotion
-            ? [frameCount]
-            : Array.from({ length: frameCount }, (_, index) => index + 1);
-
-        heroFrames.forEach((frameNumber) => {
-            const img = new Image();
-            img.src = currentFrame(frameNumber);
-            img.onload = () => {
-                imagesLoaded++;
-                if (imagesLoaded === 1) { render(); }
-            };
-            img.onerror = () => {
-                if(!imagesFailed) {
-                    imagesFailed = true;
-                    render();
-                }
+        if (!prefersReducedMotion) {
+            for (let frameNumber = 1; frameNumber <= frameCount; frameNumber += frameStep) {
+                heroFrames.push(frameNumber);
             }
-            images[frameNumber - 1] = img;
-        });
+            if (heroFrames[heroFrames.length - 1] !== frameCount) {
+                heroFrames.push(frameCount);
+            }
+        }
+
+        function closestSequenceFrame(frameNumber) {
+            return heroFrames.reduce((closest, candidate) => (
+                Math.abs(candidate - frameNumber) < Math.abs(closest - frameNumber) ? candidate : closest
+            ), heroFrames[0]);
+        }
+
+        function loadHeroFrame(frameNumber) {
+            const frameIndex = frameNumber - 1;
+            if (images[frameIndex]) return;
+
+            const img = new Image();
+            img.decoding = 'async';
+            images[frameIndex] = img;
+            img.src = currentFrame(frameNumber);
+            img.onload = render;
+            img.onerror = render;
+        }
+
+        function preloadHeroWindow(frameNumber) {
+            const targetFrame = closestSequenceFrame(frameNumber);
+            const targetIndex = heroFrames.indexOf(targetFrame);
+            const windowRadius = prefersReducedMotion ? 0 : 1;
+
+            for (let offset = -windowRadius; offset <= windowRadius; offset++) {
+                const candidate = heroFrames[targetIndex + offset];
+                if (candidate) loadHeroFrame(candidate);
+            }
+        }
+
+        function closestLoadedImage(frameIndex) {
+            for (let distance = 0; distance < frameCount; distance++) {
+                const lower = images[frameIndex - distance];
+                if (lower?.complete && lower.naturalWidth) return lower;
+                const upper = images[frameIndex + distance];
+                if (upper?.complete && upper.naturalWidth) return upper;
+            }
+            return null;
+        }
+
+        preloadHeroWindow(prefersReducedMotion ? frameCount : 1);
 
         function render() {
             if(!canvas || !context) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
 
-            if (imagesFailed) {
+            const img = closestLoadedImage(skySequence.frame);
+            if (!img) {
                 const gradient = context.createLinearGradient(0, 0, 0, canvas.height);
                 const progress = skySequence.frame / frameCount;
                 if (progress < 0.5) {
@@ -958,9 +988,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 context.fillRect(0, 0, canvas.width, canvas.height);
                 return;
             }
-
-            const img = images[skySequence.frame];
-            if (!img || !img.complete) return;
 
             const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
             const x = (canvas.width / 2) - (img.width / 2) * scale;
@@ -1048,8 +1075,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         function setHeroSequenceProgress(progress) {
             const clampedProgress = Math.max(0, Math.min(1, progress));
-            const frameIndex = Math.min(frameCount - 1, Math.round(clampedProgress * (frameCount - 1)));
-            skySequence.frame = frameIndex;
+            const requestedFrame = Math.min(frameCount, Math.round(clampedProgress * (frameCount - 1)) + 1);
+            const sequenceFrame = closestSequenceFrame(requestedFrame);
+            skySequence.frame = sequenceFrame - 1;
+            preloadHeroWindow(sequenceFrame);
             render();
         }
 
