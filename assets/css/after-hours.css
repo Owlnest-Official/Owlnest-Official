@@ -1,0 +1,1173 @@
+/*
+ * Owlnest — AFTER HOURS
+ * A nocturnal-periodical visual system: paper sheets alternating with
+ * full-bleed night plates, an asymmetric editorial grid, hairline rules,
+ * marginalia and numbered annotations.
+ *
+ * Scope rule: every selector in this file is anchored to a named page
+ * (body.homepage / body.product-page). No generic `main > section` rules.
+ */
+
+/* ------------------------------------------------------------------ *
+ * 1. Tokens
+ * ------------------------------------------------------------------ */
+
+body.homepage,
+body.product-page {
+    --ah-night: #0f1725;
+    --ah-night-2: #131e2e;
+    --ah-slate: #1b283b;
+    --ah-paper: #f6efe0;
+    --ah-paper-2: #efe6d3;
+
+    --ah-display-font: "Playfair Display", "Iowan Old Style", Georgia, serif;
+    --ah-text-font: "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+    --ah-display-1: clamp(2.05rem, min(7.8vw, 10.5vh), 5.75rem);
+    --ah-display-2: clamp(1.95rem, 4.2vw, 3.5rem);
+    --ah-display-3: clamp(1.32rem, 1.9vw, 1.78rem);
+    --ah-display-4: clamp(1.1rem, 1.35vw, 1.28rem);
+    --ah-lede: clamp(1.04rem, 1.3vw, 1.22rem);
+    --ah-body: clamp(0.98rem, 1.02vw, 1.06rem);
+    --ah-note-size: 0.88rem;
+    --ah-footnote-size: 0.78rem;
+    --ah-slug-size: 0.66rem;
+
+    --ah-display-leading: 1.03;
+    --ah-display-tracking: -0.018em;
+    --ah-body-leading: 1.68;
+    --ah-slug-tracking: 0.24em;
+    --ah-slug-transform: uppercase;
+
+    --ah-measure: 36rem;
+    --ah-measure-narrow: 26rem;
+
+    overflow-x: clip;
+}
+
+/* Traditional Chinese gets its own scale, leading and measure.
+   CJK glyphs are full-width: smaller display sizes, looser leading,
+   fewer characters per line, and no faux-italic emphasis. */
+html[lang^="zh-Hant"] body.homepage,
+html[lang^="zh-Hant"] body.product-page {
+    --ah-display-font: "Noto Serif TC", "PingFang TC", "Songti TC", serif;
+    --ah-text-font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Manrope", sans-serif;
+
+    --ah-display-1: clamp(1.88rem, min(5.9vw, 8.4vh), 4.15rem);
+    --ah-display-2: clamp(1.72rem, 3.3vw, 2.8rem);
+    --ah-display-3: clamp(1.24rem, 1.7vw, 1.58rem);
+    --ah-display-4: clamp(1.06rem, 1.25vw, 1.2rem);
+    --ah-lede: clamp(1.02rem, 1.2vw, 1.14rem);
+    --ah-body: clamp(0.98rem, 1vw, 1.04rem);
+    --ah-note-size: 0.92rem;
+    --ah-footnote-size: 0.84rem;
+    --ah-slug-size: 0.72rem;
+
+    --ah-display-leading: 1.3;
+    --ah-display-tracking: 0.012em;
+    --ah-body-leading: 1.9;
+    --ah-slug-tracking: 0.12em;
+    --ah-slug-transform: none;
+
+    --ah-measure: 33em;
+    --ah-measure-narrow: 22em;
+}
+
+/* ------------------------------------------------------------------ *
+ * 2. Bands — the two printing modes
+ * ------------------------------------------------------------------ */
+
+body.homepage .ah-band,
+body.product-page .ah-band {
+    display: block;
+    position: relative;
+    min-height: 0;
+    padding-block: clamp(4rem, 7.5vw, 8rem);
+    background-color: var(--ah-surface);
+    color: var(--ah-ink);
+    font-family: var(--ah-text-font);
+    overflow: hidden;
+}
+
+body.homepage .ah-band--night,
+body.product-page .ah-band--night {
+    --ah-surface: var(--ah-night);
+    --ah-ink: #f4ead6;
+    --ah-ink-2: rgba(244, 234, 214, 0.78);
+    --ah-ink-3: rgba(244, 234, 214, 0.62);
+    --ah-ink-ghost: rgba(244, 234, 214, 0.14);
+    --ah-rule: rgba(244, 234, 214, 0.18);
+    --ah-rule-strong: rgba(244, 234, 214, 0.34);
+    --ah-accent: #e5b565;
+    --ah-accent-ink: #0f1725;
+    --ah-plate-mat: #0a1019;
+}
+
+body.homepage .ah-band--night-2,
+body.product-page .ah-band--night-2 {
+    --ah-surface: var(--ah-night-2);
+}
+
+body.homepage .ah-band--slate,
+body.product-page .ah-band--slate {
+    --ah-surface: var(--ah-slate);
+}
+
+/* The opening band clears the fixed masthead. */
+body.homepage .ah-band--hero-offset,
+body.product-page .ah-band--hero-offset {
+    padding-top: calc(var(--home-header-height, 72px) + clamp(2.5rem, 5vw, 4.5rem));
+}
+
+body.homepage .ah-band--paper,
+body.product-page .ah-band--paper {
+    --ah-surface: var(--ah-paper);
+    --ah-ink: #141d2b;
+    --ah-ink-2: #3f4a5c;
+    --ah-ink-3: #5d6879;
+    --ah-ink-ghost: rgba(20, 29, 43, 0.12);
+    --ah-rule: rgba(20, 29, 43, 0.18);
+    --ah-rule-strong: rgba(20, 29, 43, 0.34);
+    --ah-accent: #8b4818;
+    --ah-accent-ink: #f6efe0;
+    --ah-plate-mat: #e6dbc6;
+}
+
+/* Faint printed-sheet tone so paper never reads as flat #fff. */
+body.homepage .ah-band--paper::before,
+body.product-page .ah-band--paper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(120% 60% at 12% 0%, rgba(255, 253, 246, 0.9), rgba(255, 253, 246, 0) 62%),
+        linear-gradient(180deg, rgba(20, 29, 43, 0) 72%, rgba(20, 29, 43, 0.045) 100%);
+}
+
+body.homepage .ah-band > *,
+body.product-page .ah-band > * {
+    position: relative;
+    z-index: 1;
+}
+
+body.homepage .ah-shell,
+body.product-page .ah-shell {
+    width: min(100%, 1240px);
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+/* ------------------------------------------------------------------ *
+ * 3. The editorial grid
+ * ------------------------------------------------------------------ */
+
+body.homepage .ah-grid,
+body.product-page .ah-grid {
+    display: grid;
+    gap: clamp(2.25rem, 4.5vw, 4rem);
+    min-width: 0;
+}
+
+body.homepage .ah-grid > *,
+body.product-page .ah-grid > * {
+    min-width: 0;
+}
+
+@media (min-width: 1024px) {
+    body.homepage .ah-grid,
+    body.product-page .ah-grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        column-gap: clamp(1.5rem, 2.4vw, 2.75rem);
+        row-gap: clamp(2.5rem, 4vw, 4rem);
+    }
+
+    body.homepage .ah-col-main,
+    body.product-page .ah-col-main { grid-column: 1 / span 7; }
+
+    body.homepage .ah-col-margin,
+    body.product-page .ah-col-margin { grid-column: 9 / span 4; }
+
+    body.homepage .ah-col-wide,
+    body.product-page .ah-col-wide { grid-column: 1 / span 9; }
+
+    body.homepage .ah-col-inset,
+    body.product-page .ah-col-inset { grid-column: 3 / span 8; }
+
+    body.homepage .ah-col-half,
+    body.product-page .ah-col-half { grid-column: span 6; }
+
+    body.homepage .ah-col-plate,
+    body.product-page .ah-col-plate { grid-column: 1 / span 6; }
+
+    body.homepage .ah-col-plate-copy,
+    body.product-page .ah-col-plate-copy { grid-column: 8 / span 5; }
+
+    body.homepage .ah-col-copy-left,
+    body.product-page .ah-col-copy-left { grid-column: 1 / span 5; }
+
+    body.homepage .ah-col-plate-right,
+    body.product-page .ah-col-plate-right { grid-column: 7 / span 6; }
+
+    body.homepage .ah-col-full,
+    body.product-page .ah-col-full { grid-column: 1 / -1; }
+
+    body.homepage .ah-grid--align-end,
+    body.product-page .ah-grid--align-end { align-items: end; }
+
+    body.homepage .ah-grid--align-start,
+    body.product-page .ah-grid--align-start { align-items: start; }
+
+    body.homepage .ah-grid--align-center,
+    body.product-page .ah-grid--align-center { align-items: center; }
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. Editorial furniture
+ * ------------------------------------------------------------------ */
+
+body.homepage .ah-slug,
+body.product-page .ah-slug {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin: 0 0 clamp(2rem, 3.5vw, 3.25rem);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--ah-rule);
+    color: var(--ah-ink-3);
+    font-size: var(--ah-slug-size);
+    font-weight: 700;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.4;
+    text-transform: var(--ah-slug-transform);
+}
+
+body.homepage .ah-slug > :first-child,
+body.product-page .ah-slug > :first-child {
+    color: var(--ah-accent);
+}
+
+/* A shell that carries only the running head sits tight against the plate. */
+body.homepage .ah-slug:only-child,
+body.product-page .ah-slug:only-child {
+    margin-bottom: 0;
+}
+
+body.homepage .ah-kicker,
+body.product-page .ah-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 0 clamp(1rem, 1.8vw, 1.5rem);
+    color: var(--ah-accent);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-slug-size);
+    font-weight: 800;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.4;
+    text-transform: var(--ah-slug-transform);
+}
+
+body.homepage .ah-kicker::before,
+body.product-page .ah-kicker::before {
+    content: "";
+    flex: none;
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.65;
+}
+
+body.homepage .ah-display,
+body.product-page .ah-display {
+    margin: 0;
+    max-width: 18ch;
+    color: var(--ah-ink);
+    font-family: var(--ah-display-font) !important;
+    font-size: var(--ah-display-2) !important;
+    font-weight: 500 !important;
+    line-height: var(--ah-display-leading) !important;
+    letter-spacing: var(--ah-display-tracking) !important;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+}
+
+body.homepage .ah-display--lead,
+body.product-page .ah-display--lead {
+    font-size: var(--ah-display-1) !important;
+    max-width: 14ch;
+}
+
+body.homepage .ah-display--sub,
+body.product-page .ah-display--sub {
+    font-size: var(--ah-display-3) !important;
+    max-width: 26ch;
+}
+
+body.homepage .ah-display em,
+body.product-page .ah-display em {
+    display: block;
+    color: var(--ah-accent);
+    font-style: italic;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-display,
+html[lang^="zh-Hant"] body.product-page .ah-display {
+    font-weight: 600 !important;
+    max-width: 15em;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-display--lead,
+html[lang^="zh-Hant"] body.product-page .ah-display--lead {
+    max-width: 11em;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-display em,
+html[lang^="zh-Hant"] body.product-page .ah-display em {
+    font-style: normal;
+}
+
+body.homepage .ah-lede,
+body.product-page .ah-lede {
+    margin: clamp(1.25rem, 2vw, 1.75rem) 0 0;
+    max-width: var(--ah-measure);
+    color: var(--ah-ink-2);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-lede) !important;
+    font-weight: 300;
+    line-height: 1.62 !important;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-lede,
+html[lang^="zh-Hant"] body.product-page .ah-lede {
+    font-weight: 400;
+    line-height: 1.85 !important;
+}
+
+body.homepage .ah-copy,
+body.product-page .ah-copy {
+    margin: 1rem 0 0;
+    max-width: var(--ah-measure);
+    color: var(--ah-ink-2);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-body) !important;
+    line-height: var(--ah-body-leading) !important;
+}
+
+body.homepage .ah-copy--narrow,
+body.product-page .ah-copy--narrow {
+    max-width: var(--ah-measure-narrow);
+}
+
+body.homepage .ah-copy--quiet,
+body.product-page .ah-copy--quiet {
+    color: var(--ah-ink-3);
+    font-size: var(--ah-note-size) !important;
+}
+
+body.homepage .ah-pull,
+body.product-page .ah-pull {
+    margin: clamp(1.5rem, 2.5vw, 2.25rem) 0 0;
+    padding-left: clamp(1rem, 1.6vw, 1.5rem);
+    border-left: 2px solid var(--ah-accent);
+    max-width: 22ch;
+    color: var(--ah-ink);
+    font-family: var(--ah-display-font);
+    font-size: var(--ah-display-4);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-pull,
+html[lang^="zh-Hant"] body.product-page .ah-pull {
+    max-width: 17em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+body.homepage .ah-folio,
+body.product-page .ah-folio {
+    display: block;
+    margin: 0 0 0.5rem;
+    color: var(--ah-ink-ghost);
+    font-family: var(--ah-display-font);
+    font-size: clamp(2.75rem, 5.5vw, 4.75rem);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+}
+
+body.homepage .ah-rule,
+body.product-page .ah-rule {
+    height: 1px;
+    margin: clamp(2rem, 3.5vw, 3rem) 0;
+    border: 0;
+    background: var(--ah-rule);
+}
+
+body.homepage .ah-rule--double,
+body.product-page .ah-rule--double {
+    height: 4px;
+    background: none;
+    border-top: 1px solid var(--ah-rule-strong);
+    border-bottom: 1px solid var(--ah-rule-strong);
+}
+
+/* Sub-heading — the h3 level used inside columns and purchase entries. */
+body.homepage .ah-subhead,
+body.product-page .ah-subhead {
+    margin: 0.6rem 0 0;
+    color: var(--ah-ink);
+    font-family: var(--ah-display-font) !important;
+    font-size: var(--ah-display-4) !important;
+    font-weight: 500 !important;
+    line-height: 1.28 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-subhead,
+html[lang^="zh-Hant"] body.product-page .ah-subhead {
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+}
+
+/* Price — set as a folio-scale numeral, not a badge. */
+body.homepage .ah-price,
+body.product-page .ah-price {
+    margin: 0.9rem 0 0;
+    color: var(--ah-accent);
+    font-family: var(--ah-display-font);
+    font-size: clamp(2.15rem, 3.4vw, 3rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Footnote — the smallest voice on the sheet. */
+body.homepage .ah-footnote,
+body.product-page .ah-footnote {
+    margin: 1.1rem 0 0;
+    max-width: var(--ah-measure-narrow, 32em);
+    color: var(--ah-ink-3);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-footnote-size, 0.78rem);
+    line-height: 1.7;
+}
+
+body.homepage .ah-footnote a,
+body.product-page .ah-footnote a {
+    color: var(--ah-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.28em;
+    text-decoration-thickness: 1px;
+}
+
+/* Plain hairline-ruled list — used for pack contents and short manifests. */
+body.homepage .ah-list,
+body.product-page .ah-list {
+    margin: clamp(1.25rem, 2vw, 1.75rem) 0 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-list li,
+body.product-page .ah-list li {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--ah-rule);
+    color: var(--ah-ink-2);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-body);
+    line-height: var(--ah-body-leading);
+}
+
+/* Numbered annotations — the journal footnote device. */
+body.homepage .ah-notes,
+body.product-page .ah-notes {
+    counter-reset: ah-note;
+    margin: clamp(1.5rem, 2.5vw, 2.25rem) 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ah-rule);
+}
+
+/* Annotations set as parallel columns across the sheet. */
+body.homepage .ah-notes--columns,
+body.product-page .ah-notes--columns {
+    border-top: 0;
+}
+
+@media (min-width: 768px) {
+    body.homepage .ah-notes--columns,
+    body.product-page .ah-notes--columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        column-gap: clamp(1.5rem, 3vw, 3rem);
+        align-items: start;
+    }
+}
+
+body.homepage .ah-notes--columns .ah-note,
+body.product-page .ah-notes--columns .ah-note {
+    border-top: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-note,
+body.product-page .ah-note {
+    counter-increment: ah-note;
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.9rem;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-note::before,
+body.product-page .ah-note::before {
+    content: counter(ah-note, decimal-leading-zero);
+    padding-top: 0.2rem;
+    color: var(--ah-accent);
+    font-family: var(--ah-text-font);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+}
+
+body.homepage .ah-note h3,
+body.product-page .ah-note h3 {
+    margin: 0;
+    color: var(--ah-ink);
+    font-family: var(--ah-display-font) !important;
+    font-size: var(--ah-display-4) !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0 !important;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-note h3,
+html[lang^="zh-Hant"] body.product-page .ah-note h3 {
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+}
+
+body.homepage .ah-note b,
+body.product-page .ah-note b {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--ah-ink-3);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-slug-size);
+    font-weight: 800;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.5;
+    text-transform: var(--ah-slug-transform);
+}
+
+body.homepage .ah-note p,
+body.product-page .ah-note p {
+    margin: 0.4rem 0 0;
+    color: var(--ah-ink-2);
+    font-size: var(--ah-note-size) !important;
+    line-height: var(--ah-body-leading) !important;
+}
+
+/* Spec entries — narrow ruled rows instead of cards. */
+body.homepage .ah-specs,
+body.product-page .ah-specs {
+    margin: clamp(1.5rem, 2.5vw, 2.25rem) 0 0;
+    border-bottom: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-specs--split,
+body.product-page .ah-specs--split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    column-gap: clamp(1.5rem, 3vw, 3rem);
+    border-bottom: 0;
+}
+
+body.homepage .ah-specs--split .ah-spec:last-child,
+body.product-page .ah-specs--split .ah-spec:last-child {
+    border-bottom: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-spec,
+body.product-page .ah-spec {
+    display: grid;
+    grid-template-columns: minmax(6rem, 0.34fr) minmax(0, 1fr);
+    gap: 0.35rem 1.5rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-spec dt,
+body.product-page .ah-spec dt {
+    color: var(--ah-ink-3);
+    font-size: var(--ah-slug-size);
+    font-weight: 700;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.9;
+    text-transform: var(--ah-slug-transform);
+}
+
+body.homepage .ah-spec dd,
+body.product-page .ah-spec dd {
+    margin: 0;
+    color: var(--ah-ink);
+    font-family: var(--ah-display-font);
+    font-size: var(--ah-display-4);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-spec dd,
+html[lang^="zh-Hant"] body.product-page .ah-spec dd {
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ *
+ * 5. Plates — photography bleeds, is cropped hard, and is captioned
+ * ------------------------------------------------------------------ */
+
+body.homepage .ah-plate,
+body.product-page .ah-plate {
+    position: relative;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    background: var(--ah-plate-mat);
+}
+
+body.homepage .ah-plate img,
+body.product-page .ah-plate img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+body.homepage .ah-plate--banner img,
+body.product-page .ah-plate--banner img {
+    aspect-ratio: 3 / 2;
+}
+
+body.homepage .ah-plate--tall img,
+body.product-page .ah-plate--tall img {
+    aspect-ratio: 4 / 5;
+}
+
+body.homepage .ah-plate--square img,
+body.product-page .ah-plate--square img {
+    aspect-ratio: 1 / 1;
+}
+
+/* The most severe crop in the system — a standing column of the object. */
+body.homepage .ah-plate--column img,
+body.product-page .ah-plate--column img {
+    aspect-ratio: 4 / 5;
+}
+
+@media (min-width: 768px) {
+    body.homepage .ah-plate--column img,
+    body.product-page .ah-plate--column img {
+        aspect-ratio: 3 / 4.6;
+    }
+}
+
+/* The opening plate stays inside the fold on tall desktop viewports. */
+@media (min-width: 1024px) {
+    body.homepage .ah-band--hero-offset .ah-plate--column img,
+    body.product-page .ah-band--hero-offset .ah-plate--column img {
+        max-height: 74vh;
+    }
+}
+
+@media (min-width: 768px) {
+    body.homepage .ah-plate--banner img,
+    body.product-page .ah-plate--banner img {
+        aspect-ratio: 21 / 9;
+    }
+}
+
+/* Diagram plates carry their own artwork and must never be cropped. */
+body.homepage .ah-plate--contain img,
+body.product-page .ah-plate--contain img {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #f5f1ea;
+}
+
+/* Crop focus — extreme, deliberate framing of the real product shots. */
+body.homepage .ah-focus-dome img,
+body.product-page .ah-focus-dome img { object-position: 50% 24%; }
+
+body.homepage .ah-focus-base img,
+body.product-page .ah-focus-base img { object-position: 50% 62%; }
+
+body.homepage .ah-focus-room img,
+body.product-page .ah-focus-room img { object-position: 50% 52%; }
+
+body.homepage .ah-focus-scale img,
+body.product-page .ah-focus-scale img { object-position: 50% 55%; }
+
+body.homepage .ah-plate-caption,
+body.product-page .ah-plate-caption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    margin-top: 0.9rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--ah-rule);
+    color: var(--ah-ink-3);
+    font-family: var(--ah-text-font);
+    font-size: var(--ah-note-size);
+    line-height: 1.55;
+}
+
+body.homepage .ah-plate-caption b,
+body.product-page .ah-plate-caption b {
+    flex: none;
+    color: var(--ah-accent);
+    font-size: var(--ah-slug-size);
+    font-weight: 800;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.9;
+    text-transform: var(--ah-slug-transform);
+}
+
+/* Bleed plates sit outside .ah-shell, as a direct child of the band. */
+body.homepage .ah-bleed,
+body.product-page .ah-bleed {
+    width: 100%;
+    margin-block: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+body.homepage .ah-bleed .ah-plate-caption,
+body.product-page .ah-bleed .ah-plate-caption {
+    width: min(100%, 1240px);
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+/* A strip of small plates, ruled like a contact sheet. */
+body.homepage .ah-strip,
+body.product-page .ah-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1px;
+    margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+    background: var(--ah-rule);
+    border: 1px solid var(--ah-rule);
+}
+
+body.homepage .ah-strip figure,
+body.product-page .ah-strip figure {
+    margin: 0;
+    padding: 0.85rem;
+    background: var(--ah-surface);
+}
+
+body.homepage .ah-strip img,
+body.product-page .ah-strip img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--ah-plate-mat);
+}
+
+body.homepage .ah-strip figcaption,
+body.product-page .ah-strip figcaption {
+    margin-top: 0.7rem;
+    color: var(--ah-ink-3);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+body.homepage .ah-strip figcaption b,
+body.product-page .ah-strip figcaption b {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--ah-accent);
+    font-size: var(--ah-slug-size);
+    font-weight: 800;
+    letter-spacing: var(--ah-slug-tracking);
+    text-transform: var(--ah-slug-transform);
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. Actions
+ * ------------------------------------------------------------------ */
+
+body.homepage .ah-actions,
+body.product-page .ah-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+body.homepage .ah-cta,
+body.product-page .ah-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.85rem 1.75rem;
+    border: 1px solid var(--ah-accent);
+    border-radius: 0;
+    background: var(--ah-accent);
+    color: var(--ah-accent-ink);
+    font-family: var(--ah-text-font);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    text-transform: var(--ah-slug-transform);
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+body.homepage .ah-cta:hover,
+body.product-page .ah-cta:hover {
+    background: transparent;
+    color: var(--ah-accent);
+}
+
+body.homepage .ah-cta--ghost,
+body.product-page .ah-cta--ghost {
+    border-color: var(--ah-rule-strong);
+    background: transparent;
+    color: var(--ah-ink);
+}
+
+body.homepage .ah-cta--ghost:hover,
+body.product-page .ah-cta--ghost:hover {
+    border-color: var(--ah-accent);
+    color: var(--ah-accent);
+}
+
+html[lang^="zh-Hant"] body.homepage .ah-cta,
+html[lang^="zh-Hant"] body.product-page .ah-cta {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+body.homepage .ah-links,
+body.product-page .ah-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.35rem;
+    margin: clamp(1.25rem, 2vw, 1.75rem) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.homepage .ah-links a,
+body.product-page .ah-links a {
+    color: var(--ah-ink-2);
+    font-size: var(--ah-note-size);
+    line-height: 1.6;
+    text-decoration: underline;
+    text-decoration-color: var(--ah-rule-strong);
+    text-underline-offset: 0.35em;
+}
+
+body.homepage .ah-links a:hover,
+body.product-page .ah-links a:hover {
+    color: var(--ah-accent);
+    text-decoration-color: currentColor;
+}
+
+body.homepage .ah-band :is(a, button):focus-visible,
+body.product-page .ah-band :is(a, button):focus-visible {
+    outline: 2px solid var(--ah-accent);
+    outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------------ *
+ * 7. Homepage hero — the asymmetric opening spread
+ * ------------------------------------------------------------------ */
+
+body.homepage .home-hero-stage {
+    --ah-handoff: 0;
+    --ah-handoff-y: 60%;
+}
+
+body.homepage .ah-hero {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100%;
+    width: min(100%, 1240px);
+    margin-inline: auto;
+    padding: calc(var(--home-header-height, 72px) + 1.1rem + env(safe-area-inset-top))
+             clamp(1.25rem, 4vw, 3.5rem)
+             max(1.75rem, env(safe-area-inset-bottom));
+    color: #f4ead6;
+    font-family: var(--ah-text-font);
+    text-align: left;
+
+    --ah-ink: #f4ead6;
+    --ah-ink-2: rgba(244, 234, 214, 0.82);
+    --ah-ink-3: rgba(244, 234, 214, 0.68);
+    --ah-rule: rgba(244, 234, 214, 0.26);
+    --ah-rule-strong: rgba(244, 234, 214, 0.42);
+    --ah-accent: #f0c47c;
+    --ah-accent-ink: #0f1725;
+}
+
+body.homepage .ah-hero-slug {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    margin: 0;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--ah-rule);
+    color: var(--ah-ink-3);
+    font-size: var(--ah-slug-size);
+    font-weight: 700;
+    letter-spacing: var(--ah-slug-tracking);
+    line-height: 1.4;
+    text-transform: var(--ah-slug-transform);
+    text-shadow: 0 1px 12px rgba(6, 10, 18, 0.75);
+}
+
+body.homepage .ah-hero-mark {
+    flex: none;
+    width: 1.9rem;
+    height: auto;
+    margin-right: 0.85rem;
+    object-fit: contain;
+}
+
+body.homepage .ah-hero-masthead {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+body.homepage .ah-hero-masthead span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.homepage .ah-hero-issue {
+    flex: none;
+    color: var(--ah-accent);
+}
+
+body.homepage .ah-hero-body {
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: end;
+}
+
+body.homepage .ah-hero-headline .ah-kicker {
+    text-shadow: 0 1px 12px rgba(6, 10, 18, 0.7);
+}
+
+body.homepage .home-hero-title {
+    margin: 0;
+    max-width: 15ch;
+    color: #f6efe2;
+    font-family: var(--ah-display-font) !important;
+    font-size: var(--ah-display-1) !important;
+    font-weight: 500 !important;
+    line-height: var(--ah-display-leading) !important;
+    letter-spacing: var(--ah-display-tracking) !important;
+    text-shadow: 0 2px 30px rgba(6, 10, 18, 0.72);
+    text-wrap: balance;
+}
+
+body.homepage .home-hero-title em,
+body.homepage .home-hero-title .ah-turn {
+    display: block;
+    color: #f0c47c;
+    font-style: italic;
+}
+
+html[lang^="zh-Hant"] body.homepage .home-hero-title {
+    max-width: 11em;
+    font-weight: 600 !important;
+}
+
+html[lang^="zh-Hant"] body.homepage .home-hero-title em,
+html[lang^="zh-Hant"] body.homepage .home-hero-title .ah-turn {
+    font-style: normal;
+}
+
+body.homepage .ah-hero-aside {
+    pointer-events: auto;
+    padding-top: clamp(1rem, 1.6vw, 1.4rem);
+    border-top: 1px solid var(--ah-rule);
+}
+
+body.homepage .home-hero-summary {
+    margin: 0;
+    max-width: 32ch;
+    color: var(--ah-ink-2);
+    font-size: var(--ah-lede) !important;
+    font-weight: 300;
+    line-height: 1.6 !important;
+    text-shadow: 0 1px 16px rgba(6, 10, 18, 0.7);
+}
+
+html[lang^="zh-Hant"] body.homepage .home-hero-summary {
+    max-width: 22em;
+    font-weight: 400;
+    line-height: 1.85 !important;
+}
+
+body.homepage .home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+body.homepage .ah-hero-footnote {
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.85rem;
+    margin: clamp(1.1rem, 2vw, 1.5rem) 0 0;
+    color: var(--ah-ink-3);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 14px rgba(6, 10, 18, 0.7);
+}
+
+body.homepage .ah-hero-footnote b {
+    color: var(--ah-accent);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+/* Legibility scrim: the type always sits on the darkest part of the sky. */
+body.homepage .ah-hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 24;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(8, 13, 22, 0.72) 0%, rgba(8, 13, 22, 0.12) 22%, rgba(8, 13, 22, 0) 40%),
+        linear-gradient(0deg, rgba(8, 13, 22, 0.94) 0%, rgba(8, 13, 22, 0.78) 22%, rgba(8, 13, 22, 0.28) 46%, rgba(8, 13, 22, 0) 68%);
+}
+
+/* The signature moment: the sky's last warm band contracts into a lamp. */
+body.homepage .ah-handoff {
+    position: absolute;
+    inset: 0;
+    z-index: 22;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+body.homepage .ah-handoff span {
+    position: absolute;
+    left: 50%;
+    top: var(--ah-handoff-y);
+    display: block;
+}
+
+body.homepage .ah-handoff-band {
+    width: min(150%, 88rem);
+    height: clamp(3rem, 8vh, 6.5rem);
+    transform: translate(-50%, -50%) scaleX(calc(1 - 0.88 * var(--ah-handoff)));
+    background: radial-gradient(58% 100% at 50% 50%,
+        rgba(240, 196, 124, 0.58) 0%,
+        rgba(201, 133, 42, 0.24) 46%,
+        rgba(201, 133, 42, 0) 78%);
+    filter: blur(16px);
+    opacity: calc(0.24 + 0.6 * var(--ah-handoff));
+}
+
+body.homepage .ah-handoff-core {
+    z-index: 26;
+    width: clamp(5rem, 11vw, 9.5rem);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%) scale(calc(0.5 + 0.5 * var(--ah-handoff)));
+    background: radial-gradient(circle,
+        rgba(255, 232, 186, 0.96) 0%,
+        rgba(240, 179, 92, 0.72) 26%,
+        rgba(201, 133, 42, 0.24) 52%,
+        rgba(201, 133, 42, 0) 74%);
+    opacity: calc(max(0, var(--ah-handoff) - 0.55) * 2.2);
+}
+
+@media (min-width: 768px) {
+    body.homepage .home-hero-stage {
+        --ah-handoff-y: 68%;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.homepage .ah-hero-body {
+        grid-template-columns: minmax(0, 1.5fr) minmax(17rem, 0.72fr);
+        column-gap: clamp(2rem, 4vw, 4.5rem);
+    }
+
+    body.homepage .ah-hero-mark {
+        width: 2.2rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    body.homepage .ah-hero-aside {
+        max-width: 34rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body.homepage .ah-hero {
+        padding-top: calc(var(--home-header-height, 72px) + 0.85rem + env(safe-area-inset-top));
+    }
+
+    body.homepage .ah-hero-issue {
+        display: none;
+    }
+
+    body.homepage .home-hero-actions .ah-cta {
+        flex: 1 1 9rem;
+    }
+}
+
+@media (max-height: 700px) and (max-width: 640px) {
+    body.homepage .ah-hero-footnote {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------------------------ *
+ * 8. Reduced motion — the handoff resolves statically, nothing animates
+ * ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+    body.homepage .home-hero-stage {
+        --ah-handoff: 1;
+    }
+
+    body.homepage .ah-handoff-band,
+    body.homepage .ah-handoff-core {
+        transition: none !important;
+    }
+
+    body.homepage .ah-cta,
+    body.product-page .ah-cta {
+        transition: none !important;
+    }
+}

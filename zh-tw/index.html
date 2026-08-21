@@ -139,13 +139,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2 {
-                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
-                line-height: 1.06 !important;
-            }
-        }
-
         /* Reveal Animations */
         .reveal-text {
             opacity: 0;
@@ -169,24 +162,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .section-container:not(#section-1) {
             min-height: auto;
-        }
-
-        .section-container:not(#section-1) h2 {
-            max-width: min(100%, 980px);
-            font-size: clamp(2.5rem, 4vw, 4.25rem) !important;
-            line-height: 1.06 !important;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        .section-container:not(#section-1) p {
-            font-size: clamp(1rem, 1.22vw, 1.16rem);
-            line-height: 1.65;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
         }
 
         .section-heading {
@@ -234,41 +209,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: clamp(1.5rem, 3vw, 2.5rem) !important;
         }
 
-        .display-heading,
-        main .section-container:not(#section-1) h2.font-serif {
-            max-width: min(100%, 1080px) !important;
-            font-size: clamp(2.75rem, 4.6vw, 4.85rem) !important;
-            line-height: 1.04 !important;
-            letter-spacing: -0.02em;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        .display-heading--column,
-        main .section-container:not(#section-1) .grid > div > h2.font-serif {
-            max-width: min(100%, 840px) !important;
-            font-size: clamp(2.55rem, 3.85vw, 4.15rem) !important;
-            line-height: 1.05 !important;
-        }
-
         .section-shell {
             width: min(100%, 1360px);
             margin-inline: auto;
             padding-inline: clamp(24px, 4vw, 64px);
-        }
-
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2 {
-                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
-                line-height: 1.06 !important;
-            }
-
-            #section-visual-difference h2.section-heading {
-                font-size: clamp(2rem, 8.2vw, 2.15rem) !important;
-                line-height: 1.07 !important;
-            }
         }
 
         .hero-atmosphere {
@@ -481,72 +425,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
         }
 
-        /* Readable Display Heading System Override */
         :where(h1, h2).font-serif {
             text-wrap: balance;
             overflow-wrap: normal;
             word-break: normal;
             hyphens: none;
-        }
-
-        .section-container:not(#section-1) h2.font-serif,
-        main section h2.font-serif,
-        main section:not(#hero) h2.font-serif {
-            max-width: min(100%, 1120px) !important;
-            font-size: clamp(2.25rem, 3.2vw, 3.6rem) !important;
-            line-height: 1.14 !important;
-            letter-spacing: -0.01em !important;
-        }
-
-        .section-container:not(#section-1) .grid > div > h2.font-serif,
-        main section .grid > div > h2.font-serif,
-        main section:not(#hero) .grid > div > h2.font-serif {
-            max-width: min(100%, 900px) !important;
-            font-size: clamp(2.1rem, 2.65vw, 3.1rem) !important;
-            line-height: 1.16 !important;
-        }
-
-        main h1.font-serif:not(.home-hero-title) {
-            max-width: min(100%, 980px) !important;
-            font-size: clamp(2.55rem, 4vw, 4.15rem) !important;
-            line-height: 1.1 !important;
-            letter-spacing: -0.01em !important;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        main .grid > div > h1.font-serif:not(.home-hero-title) {
-            max-width: min(100%, 900px) !important;
-            font-size: clamp(2.35rem, 3.45vw, 3.55rem) !important;
-            line-height: 1.12 !important;
-        }
-
-        @media (max-width: 900px) {
-            .section-container:not(#section-1) h2.font-serif,
-            main section h2.font-serif,
-            main section:not(#hero) h2.font-serif {
-                max-width: 100% !important;
-                font-size: clamp(2rem, 6vw, 2.65rem) !important;
-                line-height: 1.16 !important;
-                letter-spacing: -0.006em !important;
-            }
-
-            main h1.font-serif:not(.home-hero-title) {
-                max-width: 100% !important;
-                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
-                line-height: 1.14 !important;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2.font-serif,
-            main section h2.font-serif,
-            main section:not(#hero) h2.font-serif {
-                font-size: clamp(1.95rem, 6.2vw, 2.35rem) !important;
-                line-height: 1.17 !important;
-            }
         }
             body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
         main .font-serif,
@@ -584,6 +467,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/after-hours.css?v=20260820">
     <link rel="stylesheet" href="/assets/css/home.css?v=20260819">
 </head>
 <body class="homepage bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
@@ -670,219 +554,306 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <main class="main-container">
 
-        <!-- Section 1: Hero -->
+        <!-- Section 1: Hero — the opening spread -->
         <section id="section-1" class="section-container bg-midnight active">
             <div class="home-hero-stage sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
                 <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
                 <div class="absolute inset-0 hero-atmosphere z-20 pointer-events-none"></div>
 
-                <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
+                <!-- The handoff: the sky's last warm band contracts into a lamp. -->
+                <div class="ah-handoff" aria-hidden="true">
+                    <span class="ah-handoff-band"></span>
+                    <span class="ah-handoff-core"></span>
+                </div>
+                <div class="ah-hero-scrim" aria-hidden="true"></div>
 
-                    <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Brand Mark" class="home-hero-mark w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
+                <div class="ah-hero relative z-30 pointer-events-none">
+                    <p class="ah-hero-slug">
+                        <span class="ah-hero-masthead">
+                            <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Brand Mark" class="ah-hero-mark" width="40" height="40" decoding="async">
+                            <span>Owlnest &middot; After Hours</span>
+                        </span>
+                        <span class="ah-hero-issue">夜晚生活</span>
+                    </p>
 
-                    <span class="text-amber text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">OWLNEST LUME</span>
+                    <div aria-hidden="true"></div>
 
-                    <h1 class="home-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] mb-7 md:mb-9 reveal-text drop-shadow-2xl max-w-5xl mx-auto" style="transition-delay: 0.14s;">
-                        <span class="block">房間知道夜深了，</span>
-                        <span class="block">燈卻還不知道。</span>
-                    </h1>
-
-                    <p class="home-hero-summary max-w-xl text-base md:text-lg leading-relaxed text-white/68 reveal-text" style="transition-delay: 0.22s;">Lume 是一盞睡眠光譜燈，採用為天黑後設計的特調睡眠光譜。</p>
-
-                    <div class="home-hero-bottom reveal-text pointer-events-auto" style="transition-delay: 0.38s;">
-                        <div class="home-hero-actions mt-7 flex w-full flex-col justify-center gap-3 px-4 sm:w-auto sm:flex-row sm:px-0">
-                            <a href="/zh-tw/products/"
-                               class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold text-sm hover:bg-warm flex justify-center items-center">
-                                了解 Lume
-                            </a>
-                            <a href="/zh-tw/products/#buy"
-                               class="premium-cta w-full sm:w-auto border border-white/25 text-white px-7 md:px-10 py-4 md:py-5 font-bold text-sm hover:border-amber hover:text-amber flex justify-center items-center">
-                                購買 Lume
-                            </a>
+                    <div class="ah-hero-body">
+                        <div class="ah-hero-headline reveal-text" style="transition-delay: 0.08s;">
+                            <p class="ah-kicker">OWLNEST LUME</p>
+                            <h1 class="home-hero-title">房間知道夜深了，<span class="ah-turn">燈卻還不知道。</span></h1>
                         </div>
-                        <div class="home-hero-scroll-hint hidden lg:flex flex-col items-center text-white/35 pointer-events-none">
-                            <span class="text-[10px] mb-3">向下滑動</span>
-                            <div class="w-px h-10 bg-white/30"></div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Lume Product Reveal -->
-        <section id="section-visual-difference" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-text">
-                <figure class="homepage-product-reveal rounded-[28px] border border-white/10 bg-midnight/60 p-4 md:p-6 overflow-hidden">
-                    <img src="/lume-real-photo-off.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 的柔軟矽膠燈體與圓形木質底座" class="mx-auto max-h-[680px] w-auto max-w-full object-contain rounded-[20px]">
-                    <figcaption class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-white/55">真實 Lume。關燈狀態更容易看清燈體形狀與材質。</figcaption>
-                </figure>
-                <div class="homepage-copy-panel text-white">
-                    <div class="homepage-copy-inner">
-                        <span class="text-amber text-xs block font-bold mb-4">Lume・睡眠光譜燈</span>
-                        <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">夜晚，值得有自己的光。</h2>
-                        <p class="font-serif text-2xl text-amber leading-relaxed">白天與夜晚，不該共用完全相同的光。</p>
-                        <p class="mt-7 text-base md:text-lg leading-relaxed text-white/72">Lume 是為天黑後特別調製的睡眠光譜燈。</p>
-                        <p class="mt-3 text-base md:text-lg leading-relaxed text-white/60">為夜晚特別調製的光。</p>
-                        <a href="/zh-tw/products/" class="premium-cta mt-8 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold text-sm text-white hover:border-amber hover:text-amber">了解 Lume</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ordinary Warm Light Comparison -->
-        <section id="section-comparison-table" class="section-container bg-midnight text-white py-14 md:py-20 border-b border-white/5 !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="section-header-centered mb-8 md:mb-10">
-                    <span class="text-amber text-xs block font-bold mb-4">普通暖光與 Lume</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">暖，是光看起來的樣子；<br>光譜，是光真正包含的內容。</h2>
-                    <p class="mt-5 max-w-3xl text-base md:text-lg leading-relaxed text-white/64">普通暖光只是看起來溫暖；Lume 從光譜開始為睡眠設計。</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <article class="rounded-[28px] border border-white/10 bg-white/[0.03] p-6 md:p-8">
-                        <p class="text-xs font-bold text-amber">普通暖光</p>
-                        <h3 class="mt-4 font-serif text-2xl md:text-3xl text-white">設計重點是看起來溫暖。</h3>
-                        <p class="mt-4 text-sm md:text-base leading-relaxed text-white/64">通常用於一般照明或營造氣氛，不一定從身體的夜間訊號出發設計。</p>
-                    </article>
-                    <article class="rounded-[28px] border border-amber/35 bg-amber/10 p-6 md:p-8">
-                        <p class="text-xs font-bold text-amber">Owlnest Lume</p>
-                        <h3 class="mt-4 font-serif text-2xl md:text-3xl text-white">從光譜開始為睡眠設計。</h3>
-                        <p class="mt-4 text-sm md:text-base leading-relaxed text-white/72">特調睡眠光譜。為夜晚特別調製的光。</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Science Bridge -->
-        <section id="section-science-support" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text text-center">
-                <div class="mx-auto max-w-4xl">
-                    <span class="text-amber text-xs block font-bold mb-5">光為什麼重要</span>
-                    <h2 class="section-heading mx-auto font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">身體會從光，判斷現在是什麼時候。</h2>
-                    <p class="mx-auto mt-6 max-w-3xl text-base md:text-lg leading-relaxed" style="color:#455169;">像白天的光，可能讓身體以為一天還沒結束。Lume 讓房間換上為夜晚特別調製的光。</p>
-                    <p class="mx-auto mt-4 max-w-3xl text-sm leading-relaxed" style="color:#5B667A;">設計參考一般光線與夜晚研究；Lume 專屬 SPD 與同條件暖光燈比較仍待量測。</p>
-                </div>
-                <a href="/zh-tw/science/" class="premium-cta mt-9 inline-flex items-center justify-center border border-midnight/15 px-8 py-4 font-bold text-sm hover:bg-amber/10" style="color:#182033 !important;">閱讀科學說明</a>
-            </div>
-        </section>
-
-        <!-- Section 4: 產品重點 -->
-        <section id="section-product" class="section-container bg-midnight section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-product-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-5 md:p-8 overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-[1fr_0.56fr] gap-4 md:gap-5">
-                        <div class="gallery-frame p-8 md:p-12 flex min-h-[420px] md:min-h-[540px] items-center justify-center">
-                            <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 發出深琥珀橘紅暮光" class="max-h-[360px] md:max-h-[455px] w-auto max-w-full object-contain rounded-[18px]">
-                        </div>
-                        <div class="grid grid-cols-3 md:grid-cols-1 gap-4 md:gap-5">
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="/lume-size-reference.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 尺寸參考" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
+                        <div class="ah-hero-aside reveal-text" style="transition-delay: 0.22s;">
+                            <p class="home-hero-summary">Lume 是一盞睡眠光譜燈，採用為天黑後設計的特調睡眠光譜。</p>
+                            <div class="home-hero-actions">
+                                <a href="/zh-tw/products/" class="ah-cta">了解 Lume</a>
+                                <a href="/zh-tw/products/#buy" class="ah-cta ah-cta--ghost">購買 Lume</a>
                             </div>
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="/lume-bottom-button.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 底部實體按鍵" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
-                            </div>
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                <img src="/lume-usb-c.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 透過 USB-C 連接充電線" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
-                            </div>
+                            <p class="ah-hero-footnote"><b>01</b><span>繼續向下滑動，天空會把最後一道光交給這盞燈。</span></p>
                         </div>
                     </div>
-                    <figcaption class="relative mt-6 border-t border-white/10 pt-5 text-xs text-white/55">深琥珀橘紅暮光</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 01 — Lume Product Reveal -->
+        <section id="section-visual-difference" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 01 頁 — 產品登場</span><span>Lume・睡眠光譜燈</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-plate">
+                        <figure class="ah-plate ah-plate--tall ah-focus-dome">
+                            <img src="/lume-real-photo-off.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume 的柔軟矽膠燈體與圓形木質底座">
+                        </figure>
+                        <p class="ah-plate-caption"><b>圖版一</b><span>真實 Lume。關燈狀態更容易看清燈體形狀與材質。</span></p>
+                    </div>
+
+                    <div class="ah-col-plate-copy">
+                        <span class="ah-folio" aria-hidden="true">01</span>
+                        <p class="ah-kicker">Lume・睡眠光譜燈</p>
+                        <h2 class="ah-display">夜晚，值得有自己的光。</h2>
+                        <p class="ah-pull">白天與夜晚，不該共用完全相同的光。</p>
+                        <p class="ah-copy">Lume 是為天黑後特別調製的睡眠光譜燈。</p>
+                        <p class="ah-copy">為夜晚特別調製的光。</p>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/products/" class="ah-cta ah-cta--ghost">了解 Lume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 02 — Ordinary Warm Light Comparison -->
+        <section id="section-comparison-table" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 02 頁 — 光的比較</span><span>普通暖光與 Lume</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">02</span>
+                        <p class="ah-kicker">普通暖光與 Lume</p>
+                        <h2 class="ah-display">暖，是光看起來的樣子；<em>光譜，是光真正包含的內容。</em></h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <p class="ah-copy ah-copy--narrow">普通暖光只是看起來溫暖；Lume 從光譜開始為睡眠設計。</p>
+                        <ol class="ah-notes">
+                            <li class="ah-note">
+                                <div>
+                                    <b>普通暖光</b>
+                                    <h3>設計重點是看起來溫暖。</h3>
+                                    <p>通常用於一般照明或營造氣氛，不一定從身體的夜間訊號出發設計。</p>
+                                </div>
+                            </li>
+                            <li class="ah-note">
+                                <div>
+                                    <b>Owlnest Lume</b>
+                                    <h3>從光譜開始為睡眠設計。</h3>
+                                    <p>特調睡眠光譜。為夜晚特別調製的光。</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 03 — Science Bridge -->
+        <section id="section-science-support" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 03 頁 — 光為什麼重要</span><span>Owlnest 科學</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">03</span>
+                        <p class="ah-kicker">光為什麼重要</p>
+                        <h2 class="ah-display">身體會從光，判斷現在是什麼時候。</h2>
+                        <p class="ah-lede">像白天的光，可能讓身體以為一天還沒結束。Lume 讓房間換上為夜晚特別調製的光。</p>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note">
+                                <div>
+                                    <b>證據狀態</b>
+                                    <p>設計參考一般光線與夜晚研究；Lume 專屬 SPD 與同條件暖光燈比較仍待量測。</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/science/" class="ah-cta ah-cta--ghost">閱讀科學說明</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 04 — Product Snapshot -->
+        <section id="section-product" class="section-container ah-band ah-band--night ah-band--night-2">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 04 頁 — 產品重點</span><span>深琥珀橘紅暮光</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-plate">
+                        <figure class="ah-plate ah-plate--square ah-focus-dome">
+                            <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 發出深琥珀橘紅暮光">
+                        </figure>
+                        <p class="ah-plate-caption"><b>圖版二</b><span>深琥珀橘紅暮光</span></p>
+                    </div>
+
+                    <div class="ah-col-plate-copy">
+                        <span class="ah-folio" aria-hidden="true">04</span>
+                        <p class="ah-kicker">產品重點</p>
+                        <h2 class="ah-display">Owlnest Lume</h2>
+                        <p class="ah-pull">真實產品。簡單硬體。不打擾夜晚。</p>
+                        <p class="ah-copy">柔軟矽膠、木質底座、USB-C。<br>一顆按鈕，無 App、無螢幕。</p>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/products/#buy" class="ah-cta">立即購買</a>
+                            <a href="/zh-tw/what-is-owlnest-lume/" class="ah-cta ah-cta--ghost">了解 Owlnest Lume</a>
+                        </div>
+                    </div>
+
+                    <div class="ah-col-full">
+                        <dl class="ah-specs ah-specs--split">
+                            <div class="ah-spec"><dt>高度</dt><dd>高約 14–15 公分</dd></div>
+                            <div class="ah-spec"><dt>燈體</dt><dd>柔軟矽膠外殼</dd></div>
+                            <div class="ah-spec"><dt>底座</dt><dd>木質底座</dd></div>
+                            <div class="ah-spec"><dt>電源</dt><dd>USB-C 充電</dd></div>
+                            <div class="ah-spec"><dt>操作</dt><dd>底部實體按鍵</dd></div>
+                            <div class="ah-spec"><dt>介面</dt><dd>無 App、無螢幕</dd></div>
+                        </dl>
+
+                        <div class="ah-strip">
+                            <figure>
+                                <img src="/lume-size-reference.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 尺寸參考">
+                                <figcaption><b>圖版二·i</b>尺寸參考</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="/lume-bottom-button.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 底部實體按鍵">
+                                <figcaption><b>圖版二·ii</b>底部實體按鍵</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="/lume-usb-c.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume 透過 USB-C 連接充電線">
+                                <figcaption><b>圖版二·iii</b>USB-C 充電</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 05 — Use Scenes -->
+        <section id="section-ritual" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 05 頁 — 使用情境</span><span>Lume 適合放在哪裡</span></p>
+            </div>
+
+            <div class="ah-bleed reveal-text">
+                <figure class="ah-plate ah-plate--banner ah-focus-room">
+                    <img src="/lume-night-effect.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Lume 在天黑後為房間染上深琥珀橘紅光">
                 </figure>
+                <p class="ah-plate-caption"><b>圖版三</b><span>真實 Lume 在夜晚房間中的光線效果。</span></p>
+            </div>
 
-                <div class="flex items-center">
-                    <div class="product-copy-panel reveal-text text-white text-center mx-auto">
-                        <span class="text-amber text-xs mb-4 block font-bold">產品重點</span>
-                        <h2 class="text-4xl md:text-5xl font-serif text-white leading-[1.08] mb-5">Owlnest Lume</h2>
-                        <p class="font-serif text-2xl text-amber mb-8">真實產品。<br>簡單硬體。<br>不打擾夜晚。</p>
-                        <p class="mb-9 text-white/68 font-light leading-relaxed">柔軟矽膠、木質底座、USB-C。<br>一顆按鈕，無 App、無螢幕。</p>
-                        <div class="proof-spec-grid border-t border-white/10 pt-8">
-                            <span class="proof-spec">高約 14–15 公分</span>
-                            <span class="proof-spec">柔軟矽膠外殼</span>
-                            <span class="proof-spec">木質底座</span>
-                            <span class="proof-spec">USB-C 充電</span>
-                            <span class="proof-spec">底部實體按鍵</span>
-                            <span class="proof-spec">無 App、無螢幕</span>
+            <div class="ah-shell">
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">05</span>
+                        <p class="ah-kicker">使用情境</p>
+                        <h2 class="ah-display">Lume 適合放在哪裡</h2>
+                        <p class="ah-lede">夜裡需要光，不需要把白天帶回來。</p>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note"><div><h3>洗澡後放鬆</h3><p>天黑後，讓房間維持低調安靜。</p></div></li>
+                            <li class="ah-note"><div><h3>閱讀與安定下來</h3><p>床邊保留一點光，慢慢結束一天。</p></div></li>
+                            <li class="ah-note"><div><h3>短暫夜醒</h3><p>需要少量光線時，不必照亮整個房間。</p></div></li>
+                            <li class="ah-note"><div><h3>旅館與旅行</h3><p>把熟悉的夜晚光線一起帶著走。</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 06 — How To Use -->
+        <section id="section-how-to-use" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 06 頁 — 如何使用</span><span>三個簡單步驟</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">06</span>
+                        <p class="ah-kicker">如何使用</p>
+                        <h2 class="ah-display">三個簡單步驟</h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note"><div><h3>放在床邊附近</h3><p>床頭櫃、矮櫃或旅館桌面都可以。</p></div></li>
+                            <li class="ah-note"><div><h3>睡前打開</h3><p>用它取代刺眼、像白天的照明。</p></div></li>
+                            <li class="ah-note"><div><h3>準備睡覺時關掉</h3><p>若半夜仍需要一點光，再短暫打開使用。</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 07 — Owlnest Lab and current participant research -->
+        <section id="section-lab-program" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 07 頁 — Owlnest Lab</span><span>Owlnest 研究系統</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">07</span>
+                        <p class="ah-kicker">Owlnest Lab</p>
+                        <h2 class="ah-display">從科學基礎，走進真實夜晚。</h2>
+                        <p class="ah-lede">Lab 是 Owlnest 用來理解夜晚生活的研究系統。科學說明光為什麼可能重要；參與者研究則讓我們看見 Lume 適合哪些情境，又不適合哪些情境。</p>
+                        <p class="ah-copy ah-copy--quiet">只有在能負責任地說明時，我們才會公開結果與觀察。</p>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/lab/" class="ah-cta">探索 Lab</a>
+                            <a href="/zh-tw/science/" class="ah-cta ah-cta--ghost">閱讀科學說明</a>
                         </div>
-                        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="/zh-tw/products/#buy" class="premium-cta bg-amber text-midnight px-8 py-4 font-bold text-sm hover:bg-warm text-center">
-                                立即購買
-                            </a>
-                            <a href="/zh-tw/what-is-owlnest-lume/" class="premium-cta border border-white/15 text-white px-8 py-4 font-bold text-sm hover:bg-white/10 hover:border-amber text-center">
-                                了解 Owlnest Lume
-                            </a>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <hr class="ah-rule ah-rule--double" style="margin-top:0;">
+                        <p class="ah-kicker">目前計畫</p>
+                        <h3 class="ah-display ah-display--sub">21 天睡眠計畫</h3>
+                        <p class="ah-copy">我們想了解：Lume 對誰有用、在什麼情境有用，又和哪些夜晚習慣有關。</p>
+                        <blockquote class="ah-pull">我們不是在找正面評價，<br>而是想看見坦白的結果。</blockquote>
+                        <p class="ah-copy ah-copy--quiet">申請即將開放。</p>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/campaign/" class="ah-cta ah-cta--ghost">了解 21 天睡眠計畫</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Use Scenes -->
-        <section id="section-ritual" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="homepage-scene-layout max-w-6xl mx-auto px-6 reveal-text">
-                <figure class="homepage-scene-figure">
-                    <img src="/lume-night-effect.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Lume 在天黑後為房間染上深琥珀橘紅光">
-                    <figcaption>真實 Lume 在夜晚房間中的光線效果。</figcaption>
-                </figure>
-                <div class="homepage-scene-copy">
-                    <span class="text-amber text-xs block font-bold mb-4">使用情境</span>
-                    <h2 class="section-heading font-serif text-midnight">Lume 適合放在哪裡</h2>
-                    <p class="body-copy mt-5 font-light">夜裡需要光，不需要把白天帶回來。</p>
-                    <div class="homepage-scene-list mt-8">
-                        <article class="homepage-scene-item"><span>01</span><div><h3>洗澡後放鬆</h3><p>天黑後，讓房間維持低調安靜。</p></div></article>
-                        <article class="homepage-scene-item"><span>02</span><div><h3>閱讀與安定下來</h3><p>床邊保留一點光，慢慢結束一天。</p></div></article>
-                        <article class="homepage-scene-item"><span>03</span><div><h3>短暫夜醒</h3><p>需要少量光線時，不必照亮整個房間。</p></div></article>
-                        <article class="homepage-scene-item"><span>04</span><div><h3>旅館與旅行</h3><p>把熟悉的夜晚光線一起帶著走。</p></div></article>
+
+        <!-- Folio 08 — Homepage purchase path -->
+        <section id="section-home-purchase" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>第 08 頁 — 準備看看 Lume？</span><span>本期結束</span></p>
+
+                <div class="ah-grid ah-grid--align-end reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">08</span>
+                        <p class="ah-kicker">準備看看 Lume？</p>
+                        <h2 class="ah-display">先看清產品，<em>再選擇適合的方案。</em></h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <p class="ah-copy ah-copy--narrow">完整產品資訊、購買方案與目前訂購資訊，都在 Products 頁。</p>
+                        <div class="ah-actions">
+                            <a href="/zh-tw/products/#buy" class="ah-cta">購買 Lume</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- How To Use -->
-        <section id="section-how-to-use" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="homepage-how-header mb-10 md:mb-12">
-                    <span class="text-amber text-xs block font-bold mb-4">如何使用</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">三個簡單步驟</h2>
-                </div>
-                <div class="homepage-step-list">
-                    <article class="homepage-step-item"><p class="homepage-step-number">01</p><div><h3>放在床邊附近</h3><p>床頭櫃、矮櫃或旅館桌面都可以。</p></div></article>
-                    <article class="homepage-step-item"><p class="homepage-step-number">02</p><div><h3>睡前打開</h3><p>用它取代刺眼、像白天的照明。</p></div></article>
-                    <article class="homepage-step-item"><p class="homepage-step-number">03</p><div><h3>準備睡覺時關掉</h3><p>若半夜仍需要一點光，再短暫打開使用。</p></div></article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Owlnest Lab and current participant research -->
-        <section id="section-lab-program" class="section-container bg-[#111927] text-white section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-research-layout max-w-6xl mx-auto px-6 reveal-text">
-                <div class="homepage-research-intro">
-                    <span class="text-amber text-xs block font-bold mb-5">Owlnest Lab</span>
-                    <h2 class="section-heading font-serif text-white">從科學基礎，走進真實夜晚。</h2>
-                    <p class="mt-6 text-base md:text-lg leading-relaxed text-white/68">Lab 是 Owlnest 用來理解夜晚生活的研究系統。科學說明光為什麼可能重要；參與者研究則讓我們看見 Lume 適合哪些情境，又不適合哪些情境。</p>
-                    <p class="mt-4 text-sm leading-relaxed text-white/52">只有在能負責任地說明時，我們才會公開結果與觀察。</p>
-                    <div class="homepage-research-actions mt-8 flex flex-col sm:flex-row gap-3">
-                        <a href="/zh-tw/lab/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold text-sm hover:bg-warm">探索 Lab</a>
-                        <a href="/zh-tw/science/" class="premium-cta inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold text-sm text-white hover:border-amber hover:text-amber">閱讀科學說明</a>
-                    </div>
-                </div>
-                <div class="homepage-program-panel">
-                    <span class="text-amber text-xs block font-bold mb-4">目前計畫</span>
-                    <h3 class="font-serif text-3xl md:text-4xl text-white">21 天睡眠計畫</h3>
-                    <p class="mt-5 text-base leading-relaxed text-white/68">我們想了解：Lume 對誰有用、在什麼情境有用，又和哪些夜晚習慣有關。</p>
-                    <blockquote class="homepage-research-principle mt-7">我們不是在找正面評價，<br>而是想看見坦白的結果。</blockquote>
-                    <p class="homepage-program-status mt-7">申請即將開放。</p>
-                    <a href="/zh-tw/campaign/" class="premium-cta mt-6 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold text-sm text-white hover:border-amber hover:text-amber">了解 21 天睡眠計畫</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 首頁購買路徑 -->
-        <section id="section-home-purchase" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-4xl mx-auto px-6 reveal-text text-center">
-                <span class="text-amber text-xs block font-bold mb-5">準備看看 Lume？</span>
-                <h2 class="section-heading mx-auto font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">先看清產品，再選擇適合的方案。</h2>
-                <p class="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed" style="color:#455169;">完整產品資訊、購買方案與目前訂購資訊，都在 Products 頁。</p>
-                <a href="/zh-tw/products/#buy" class="premium-cta mt-8 inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold text-sm hover:bg-midnight hover:text-white transition-colors">購買 Lume</a>
             </div>
         </section>
 
@@ -909,6 +880,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const canvas = document.getElementById('hero-canvas');
         const context = canvas.getContext('2d');
         const section1 = document.getElementById('section-1');
+        const heroStage = section1 ? section1.querySelector('.home-hero-stage') : null;
 
         const frameCount = 96;
         const currentFrame = index => `/${index.toString().padStart(3, '0')}.png`;
@@ -1080,6 +1052,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             skySequence.frame = sequenceFrame - 1;
             preloadHeroWindow(sequenceFrame);
             render();
+
+            // Signature moment: the sky's last warm band contracts into the lamp.
+            if (heroStage) {
+                heroStage.style.setProperty('--ah-handoff', clampedProgress.toFixed(3));
+            }
         }
 
         window.addEventListener('scroll', () => {

@@ -3,37 +3,25 @@
  * Loaded only by the English and Traditional Chinese homepages.
  */
 
-body.homepage {
+body.homepage  {
     --home-header-height: 4.5rem;
     overflow-x: clip;
-}
-
-body.homepage #main-header.owlnest-glass-header {
+}body.homepage #main-header.owlnest-glass-header  {
     background: rgba(12, 18, 30, 0.82);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
     color: rgba(246, 240, 226, 0.88);
     -webkit-backdrop-filter: blur(18px) saturate(130%);
     backdrop-filter: blur(18px) saturate(130%);
-}
-
-body.homepage #main-header :is(.site-brand span, .primary-nav a, .language-trigger, .header-actions > a, button[aria-controls="mobile-menu"]) {
+}body.homepage #main-header :is(.site-brand span, .primary-nav a, .language-trigger, .header-actions > a, button[aria-controls="mobile-menu"])  {
     color: rgba(246, 240, 226, 0.88);
-}
-
-body.homepage #main-header :is(.header-actions svg, .language-trigger i) {
+}body.homepage #main-header :is(.header-actions svg, .language-trigger i)  {
     color: rgba(246, 240, 226, 0.82);
-}
-
-body.homepage #main-header :is(.primary-nav a, .language-trigger, .header-actions > a, button[aria-controls="mobile-menu"]):hover {
+}body.homepage #main-header :is(.primary-nav a, .language-trigger, .header-actions > a, button[aria-controls="mobile-menu"]):hover  {
     color: #c9852a;
-}
-
-body.homepage #main-header .header-actions > a.bg-amber {
+}body.homepage #main-header .header-actions > a.bg-amber  {
     color: #182234;
-}
-
-body.homepage #section-1 {
+}body.homepage #section-1  {
     display: block;
     height: 135vh;
     height: 135svh;
@@ -43,37 +31,23 @@ body.homepage #section-1 {
     overflow: visible;
     background: #182234;
     touch-action: pan-y;
-}
-
-body.homepage .home-hero-stage {
+}body.homepage .home-hero-stage  {
     height: 100vh;
     height: 100svh;
     min-height: 32rem;
-}
-
-body.homepage #hero-canvas {
+}body.homepage #hero-canvas  {
     pointer-events: none;
     touch-action: pan-y;
-}
-
-body.homepage .home-hero-content {
+}body.homepage .home-hero-content  {
     min-width: 0;
-}
-
-body.homepage .home-hero-summary {
+}body.homepage .home-hero-summary  {
     max-width: 36rem;
-}
-
-body.homepage .premium-cta {
+}body.homepage .premium-cta  {
     min-height: 2.75rem;
-}
-
-body.homepage :is(a, button):focus-visible {
+}body.homepage :is(a, button):focus-visible  {
     outline: 2px solid #e6a64b;
     outline-offset: 4px;
-}
-
-body.homepage #mobile-menu {
+}body.homepage #mobile-menu  {
     max-height: 100vh;
     max-height: 100dvh;
     overflow-y: auto;
@@ -82,51 +56,23 @@ body.homepage #mobile-menu {
     pointer-events: none;
     transform: translateY(-100%);
     transition: transform 0.35s ease, visibility 0s linear 0.35s;
-}
-
-body.homepage #mobile-menu.open {
+}body.homepage #mobile-menu.open  {
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
     transition-delay: 0s;
-}
-
-body.homepage.mobile-menu-open {
+}body.homepage.mobile-menu-open  {
     overflow: hidden;
-}
-
-body.homepage .language-menu {
+}body.homepage .language-menu  {
     visibility: hidden;
-}
-
-body.homepage .language-menu.open {
+}body.homepage .language-menu.open  {
     visibility: visible;
-}
-
-body.homepage main > .section-container:not(#section-1) {
+}body.homepage main > .section-container:not(#section-1)  {
     scroll-margin-top: var(--home-header-height);
-}
-
-body.homepage .homepage-balanced-grid,
-body.homepage .homepage-product-grid {
+}body.homepage .homepage-balanced-grid {
     min-width: 0;
-}
-
-body.homepage .homepage-balanced-grid > *,
-body.homepage .homepage-product-grid > * {
+}body.homepage .homepage-balanced-grid > * {
     min-width: 0;
-}
-
-body.homepage .homepage-product-reveal img {
-    max-height: min(68svh, 42rem);
-}
-
-body.homepage .homepage-copy-panel {
-    text-align: left;
-}
-
-body.homepage #section-product .homepage-product-grid {
-    display: grid;
 }
 
 body.homepage :is(
@@ -138,14 +84,12 @@ body.homepage :is(
     #section-how-to-use,
     #section-lab-program,
     #section-home-purchase
-) h2[class] {
+) h2[class]  {
     /* Keep legacy inline utility rules from overpowering the shared type scale. */
     font-size: var(--owl-type-section) !important;
     line-height: var(--owl-leading-section, 1.12) !important;
     letter-spacing: -0.012em !important;
-}
-
-html[lang^="zh-Hant"] body.homepage :is(
+}html[lang^="zh-Hant"] body.homepage :is(
     #section-visual-difference,
     #section-comparison-table,
     #section-science-support,
@@ -154,401 +98,112 @@ html[lang^="zh-Hant"] body.homepage :is(
     #section-how-to-use,
     #section-lab-program,
     #section-home-purchase
-) h2[class] {
+) h2[class]  {
     line-height: 1.24 !important;
     letter-spacing: 0.015em !important;
 }
 
-body.homepage .homepage-scene-layout {
-    display: grid;
-    gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: center;
-}
-
-body.homepage .homepage-scene-figure {
-    overflow: hidden;
-    border: 1px solid rgba(24, 32, 51, 0.12);
-    border-radius: 1.5rem;
-    background: #111927;
-    box-shadow: 0 24px 70px rgba(24, 32, 51, 0.12);
-}
-
-body.homepage .homepage-scene-figure img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center;
-}
-
-body.homepage .homepage-scene-figure figcaption {
-    padding: 0.85rem 1rem 0.95rem;
-    color: rgba(245, 238, 220, 0.7);
-    font-size: 0.78rem;
-    line-height: 1.5;
-}
-
-body.homepage .homepage-scene-copy {
-    min-width: 0;
-    color: #182033;
-}
-
-body.homepage .homepage-scene-copy > p,
-body.homepage .homepage-step-item p {
-    color: #455169;
-}
-
-body.homepage .homepage-scene-list {
-    border-bottom: 1px solid rgba(24, 32, 51, 0.16);
-}
-
-body.homepage .homepage-scene-item {
-    display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 1rem;
-    padding: 1.15rem 0;
-    border-top: 1px solid rgba(24, 32, 51, 0.16);
-}
-
-body.homepage .homepage-scene-item > span,
-body.homepage .homepage-step-number {
-    color: #8b4818;
-    font-size: 0.76rem;
-    font-weight: 800;
-    line-height: 1.5;
-    letter-spacing: 0.12em;
-}
-
-body.homepage .homepage-scene-item h3,
-body.homepage .homepage-step-item h3 {
-    margin: 0;
-    color: #182033;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(1.2rem, 1.65vw, 1.55rem);
-    font-weight: 500;
-    line-height: 1.24;
-    letter-spacing: -0.008em;
-}
-
-body.homepage .homepage-scene-item p,
-body.homepage .homepage-step-item p:not(.homepage-step-number) {
-    margin-top: 0.45rem;
-    color: #455169;
-    font-size: 0.96rem;
-    line-height: 1.65;
-}
-
-body.homepage .homepage-how-header {
-    max-width: 44rem;
-}
-
-body.homepage .homepage-step-list {
-    border-top: 1px solid rgba(24, 32, 51, 0.18);
-    border-bottom: 1px solid rgba(24, 32, 51, 0.18);
-}
-
-body.homepage .homepage-step-item {
-    display: grid;
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 1rem;
-    padding: 1.5rem 0;
-}
-
-body.homepage .homepage-step-item + .homepage-step-item {
-    border-top: 1px solid rgba(24, 32, 51, 0.14);
-}
-
-html[lang^="zh-Hant"] body.homepage .homepage-scene-item h3,
-html[lang^="zh-Hant"] body.homepage .homepage-step-item h3 {
-    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    font-weight: 600;
-    line-height: 1.38;
-    letter-spacing: 0.015em;
-}
-
-body.homepage .homepage-research-layout {
-    display: grid;
-    gap: clamp(2.5rem, 6vw, 5rem);
-    align-items: start;
-}
-
-body.homepage .homepage-research-intro,
-body.homepage .homepage-program-panel {
-    min-width: 0;
-}
-
-body.homepage .homepage-program-panel {
-    padding-top: clamp(2rem, 5vw, 3.25rem);
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-body.homepage .homepage-research-principle {
-    color: #f3bd67;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(1.35rem, 2vw, 1.75rem);
-    line-height: 1.42;
-}
-
-body.homepage .homepage-program-status {
-    color: rgba(255, 255, 255, 0.76);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-}
-
-html[lang^="zh-Hant"] body.homepage .homepage-research-principle {
-    font-family: "Manrope", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    font-weight: 600;
-    line-height: 1.6;
-}
-
-html[lang^="zh-Hant"] body.homepage .homepage-program-status {
-    letter-spacing: 0.08em;
-}
-
-@media (min-width: 768px) {
-    body.homepage #section-1 {
+@media (min-width: 768px) {    body.homepage #section-1  {
         height: 150vh;
         height: 150svh;
         min-height: calc(100vh + 18rem);
         min-height: calc(100svh + 18rem);
-    }
-}
+    }}
 
-@media (min-width: 1024px) {
-    body.homepage .homepage-balanced-grid {
+@media (min-width: 1024px) {    body.homepage .homepage-balanced-grid  {
         grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
     }
 
-    body.homepage #section-product .homepage-product-grid {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    }
-
-    body.homepage .homepage-copy-panel {
-        padding-inline: clamp(0rem, 1.5vw, 1.5rem);
-    }
-
 }
 
-@media (min-width: 768px) {
-    body.homepage .homepage-scene-layout {
-        grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
-    }
-
-    body.homepage .homepage-step-list {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    body.homepage .homepage-step-item {
-        display: block;
-        min-width: 0;
-        padding: 1.75rem clamp(1.25rem, 2.5vw, 2rem);
-    }
-
-    body.homepage .homepage-step-item:first-child {
-        padding-left: 0;
-    }
-
-    body.homepage .homepage-step-item:last-child {
-        padding-right: 0;
-    }
-
-    body.homepage .homepage-step-item + .homepage-step-item {
-        border-top: 0;
-        border-left: 1px solid rgba(24, 32, 51, 0.14);
-    }
-
-    body.homepage .homepage-step-number {
-        margin-bottom: 1rem;
-    }
-
-    body.homepage .homepage-research-layout {
-        grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
-    }
-
-    body.homepage .homepage-program-panel {
-        padding-top: 0;
-        padding-left: clamp(2rem, 5vw, 4rem);
-        border-top: 0;
-        border-left: 1px solid rgba(255, 255, 255, 0.14);
-    }
-}
-
-@media (min-width: 1024px) and (max-height: 900px) {
-    body.homepage .home-hero-content {
+@media (min-width: 1024px) and (max-height: 900px) {    body.homepage .home-hero-content  {
         margin-top: 0;
     }
-
-    body.homepage .home-hero-mark {
-        display: none;
-    }
-
-    body.homepage .home-hero-title {
+    body.homepage .home-hero-title  {
         margin-bottom: 1.5rem;
-    }
-
-    body.homepage .home-hero-actions {
+    }    body.homepage .home-hero-actions  {
         margin-top: 1.25rem;
-    }
-}
+    }}
 
-@media (max-width: 1023px) {
-    body.homepage {
+@media (max-width: 1023px) {    body.homepage  {
         --home-header-height: 4rem;
-    }
-
-    body.homepage #main-header .header-inner {
+    }    body.homepage #main-header .header-inner  {
         grid-template-columns: minmax(0, 1fr) auto;
         height: var(--home-header-height);
         padding-inline: clamp(1rem, 4vw, 2rem);
-    }
-
-    body.homepage #main-header .site-brand {
+    }    body.homepage #main-header .site-brand  {
         min-width: 0;
-    }
-
-    body.homepage #main-header .site-brand span {
+    }    body.homepage #main-header .site-brand span  {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    body.homepage .homepage-product-reveal {
-        width: min(100%, 34rem);
-        margin-inline: auto;
-    }
-
-    body.homepage .homepage-copy-panel {
-        width: min(100%, 42rem);
-        margin-inline: auto;
-    }
-
-    body.homepage .home-hero-content {
+    body.homepage .home-hero-content  {
         margin-top: 0;
-    }
-}
+    }}
 
-@media (max-width: 640px) {
-    body.homepage {
+@media (max-width: 640px) {    body.homepage  {
         --owl-type-hero: clamp(1.95rem, 8.4vw, 2.35rem);
-    }
-
-    html[lang="zh-Hant"] body.homepage {
+    }    html[lang="zh-Hant"] body.homepage  {
         --owl-type-hero: clamp(1.9rem, 8vw, 2.25rem);
-    }
-
-    body.homepage .home-hero-content {
+    }    body.homepage .home-hero-content  {
         justify-content: flex-start;
         max-width: 100%;
         margin-top: 0;
         padding: calc(var(--home-header-height) + 1.4rem + env(safe-area-inset-top)) 1.25rem max(1.5rem, env(safe-area-inset-bottom));
     }
-
-    body.homepage .home-hero-mark {
-        display: block;
-        width: 4.25rem;
-        margin-bottom: 0.8rem;
-        opacity: 1;
-    }
-
-    body.homepage .home-hero-title {
+    body.homepage .home-hero-title  {
         width: min(100%, 22rem);
         margin-bottom: 1.25rem;
         line-height: 1.1;
-    }
-
-    body.homepage .home-hero-summary {
+    }    body.homepage .home-hero-summary  {
         width: min(100%, 21rem);
         font-size: 0.95rem;
         line-height: 1.6;
-    }
-
-    body.homepage .home-hero-actions {
+    }    body.homepage .home-hero-actions  {
         width: min(100%, 20rem);
         padding-inline: 0;
-    }
-
-    body.homepage .home-hero-actions .premium-cta {
+    }    body.homepage .home-hero-actions .premium-cta  {
         width: 100%;
         min-height: 3rem;
         padding-block: 0.8rem;
-    }
-
-    body.homepage .section-breathe {
+    }    body.homepage .section-breathe  {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
-
-    body.homepage .homepage-product-reveal img {
-        max-height: min(58svh, 32rem);
-    }
-
-    body.homepage #section-product .product-gallery > .grid > .gallery-frame {
+    body.homepage #section-product .product-gallery > .grid > .gallery-frame  {
         min-height: min(66svh, 25rem);
-    }
-
-    body.homepage #section-product .product-gallery .grid > .gallery-frame {
+    }    body.homepage #section-product .product-gallery .grid > .gallery-frame  {
         min-height: 9rem;
-    }
-
-    body.homepage #section-product .product-gallery > .grid > div:last-child {
+    }    body.homepage #section-product .product-gallery > .grid > div:last-child  {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    body.homepage #section-product .product-gallery > .grid > div:last-child > :last-child {
+    }    body.homepage #section-product .product-gallery > .grid > div:last-child > :last-child  {
         grid-column: 1 / -1;
     }
-
-    body.homepage .homepage-scene-figure img {
-        aspect-ratio: 4 / 5;
-        max-height: 68svh;
-    }
 }
 
-@media (max-width: 359px) {
-    body.homepage {
+@media (max-width: 359px) {    body.homepage  {
         --owl-type-hero: clamp(1.78rem, 8.5vw, 1.95rem);
-    }
-
-    body.homepage .home-hero-content {
+    }    body.homepage .home-hero-content  {
         padding-top: calc(var(--home-header-height) + 0.8rem + env(safe-area-inset-top));
     }
-
-    body.homepage .home-hero-mark {
-        width: 3.6rem;
-        margin-bottom: 0.55rem;
-    }
-
-    body.homepage #main-header .site-brand {
+    body.homepage #main-header .site-brand  {
         gap: 0.55rem;
-    }
-
-    body.homepage #main-header .site-brand span {
+    }    body.homepage #main-header .site-brand span  {
         font-size: 0.92rem;
         letter-spacing: 0.13em;
-    }
-}
+    }}
 
 @media (max-height: 700px) and (max-width: 640px) {
-    body.homepage .home-hero-mark {
-        display: none;
-    }
-
-    body.homepage .home-hero-content {
+    body.homepage .home-hero-content  {
         padding-top: calc(var(--home-header-height) + 0.75rem + env(safe-area-inset-top));
-    }
-}
+    }}
 
-@media (prefers-reduced-motion: reduce) {
-    body.homepage #section-1 {
+@media (prefers-reduced-motion: reduce) {    body.homepage #section-1  {
         height: 100vh;
         height: 100svh;
         min-height: 32rem;
-    }
-
-    body.homepage #mobile-menu {
+    }    body.homepage #mobile-menu  {
         transition: none;
-    }
-}
+    }}

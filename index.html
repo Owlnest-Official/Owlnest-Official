@@ -139,13 +139,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2 {
-                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
-                line-height: 1.06 !important;
-            }
-        }
-
         /* Reveal Animations */
         .reveal-text {
             opacity: 0;
@@ -169,24 +162,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .section-container:not(#section-1) {
             min-height: auto;
-        }
-
-        .section-container:not(#section-1) h2 {
-            max-width: min(100%, 980px);
-            font-size: clamp(2.5rem, 4vw, 4.25rem) !important;
-            line-height: 1.06 !important;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        .section-container:not(#section-1) p {
-            font-size: clamp(1rem, 1.22vw, 1.16rem);
-            line-height: 1.65;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
         }
 
         .section-heading {
@@ -234,41 +209,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: clamp(1.5rem, 3vw, 2.5rem) !important;
         }
 
-        .display-heading,
-        main .section-container:not(#section-1) h2.font-serif {
-            max-width: min(100%, 1080px) !important;
-            font-size: clamp(2.75rem, 4.6vw, 4.85rem) !important;
-            line-height: 1.04 !important;
-            letter-spacing: -0.02em;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        .display-heading--column,
-        main .section-container:not(#section-1) .grid > div > h2.font-serif {
-            max-width: min(100%, 840px) !important;
-            font-size: clamp(2.55rem, 3.85vw, 4.15rem) !important;
-            line-height: 1.05 !important;
-        }
-
         .section-shell {
             width: min(100%, 1360px);
             margin-inline: auto;
             padding-inline: clamp(24px, 4vw, 64px);
-        }
-
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2 {
-                font-size: clamp(2rem, 8.8vw, 2.35rem) !important;
-                line-height: 1.06 !important;
-            }
-
-            #section-visual-difference h2.section-heading {
-                font-size: clamp(2rem, 8.2vw, 2.15rem) !important;
-                line-height: 1.07 !important;
-            }
         }
 
         .hero-atmosphere {
@@ -412,20 +356,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: rgba(255,255,255,0.76);
             font-size: 0.9rem;
         }
-        @media (min-width: 1024px) {
-            .home-hero-content {
-                display: flex !important;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-            .home-hero-chips,
-            .home-hero-content .flex {
-                justify-content: center;
-            }
-        }
-
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
@@ -444,35 +374,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-        /* Science bridge must remain readable on its cream background. */
-        #section-science-support {
-            background-color: #F2EBDD !important;
-            color: #182033 !important;
-        }
-
-        #section-science-support * {
-            text-shadow: none !important;
-        }
-
-        #section-science-support h2 {
-            color: #182033 !important;
-            opacity: 1 !important;
-        }
-        #section-science-support p {
-            color: #455169 !important;
-            opacity: 1 !important;
-        }
-        #section-science-support p.text-sm {
-            color: #5B6578 !important;
-            opacity: 1 !important;
-        }
-        #section-science-support a {
-            color: #182033 !important;
-            opacity: 1 !important;
-            border-color: rgba(24,32,51,0.28) !important;
-            background: rgba(255,255,255,0.42) !important;
-        }
-
         .language-menu {
             opacity: 0;
             pointer-events: none;
@@ -485,77 +386,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
         }
 
-        /* Readable Display Heading System Override */
         :where(h1, h2).font-serif {
             text-wrap: balance;
             overflow-wrap: normal;
             word-break: normal;
             hyphens: none;
         }
-
-        .section-container:not(#section-1) h2.font-serif,
-        main section h2.font-serif,
-        main section:not(#hero) h2.font-serif {
-            max-width: min(100%, 1120px) !important;
-            font-size: clamp(2.25rem, 3.2vw, 3.6rem) !important;
-            line-height: 1.14 !important;
-            letter-spacing: -0.01em !important;
-        }
-
-        .section-container:not(#section-1) .grid > div > h2.font-serif,
-        main section .grid > div > h2.font-serif,
-        main section:not(#hero) .grid > div > h2.font-serif {
-            max-width: min(100%, 900px) !important;
-            font-size: clamp(2.1rem, 2.65vw, 3.1rem) !important;
-            line-height: 1.16 !important;
-        }
-
-        main h1.font-serif:not(.home-hero-title) {
-            max-width: min(100%, 980px) !important;
-            font-size: clamp(2.55rem, 4vw, 4.15rem) !important;
-            line-height: 1.1 !important;
-            letter-spacing: -0.01em !important;
-            text-wrap: balance;
-            overflow-wrap: normal;
-            word-break: normal;
-            hyphens: none;
-        }
-
-        main .grid > div > h1.font-serif:not(.home-hero-title) {
-            max-width: min(100%, 900px) !important;
-            font-size: clamp(2.35rem, 3.45vw, 3.55rem) !important;
-            line-height: 1.12 !important;
-        }
-
-        @media (max-width: 900px) {
-            .section-container:not(#section-1) h2.font-serif,
-            main section h2.font-serif,
-            main section:not(#hero) h2.font-serif {
-                max-width: 100% !important;
-                font-size: clamp(2rem, 6vw, 2.65rem) !important;
-                line-height: 1.16 !important;
-                letter-spacing: -0.006em !important;
-            }
-
-            main h1.font-serif:not(.home-hero-title) {
-                max-width: 100% !important;
-                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
-                line-height: 1.14 !important;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .section-container:not(#section-1) h2.font-serif,
-            main section h2.font-serif,
-            main section:not(#hero) h2.font-serif {
-                font-size: clamp(1.95rem, 6.2vw, 2.35rem) !important;
-                line-height: 1.17 !important;
-            }
-        }
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/home.css?v=20260819">
+    <link rel="stylesheet" href="/assets/css/after-hours.css?v=20260820">
 </head>
 <body class="homepage bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <!-- Google Tag Manager (noscript) -->
@@ -640,222 +481,306 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 <main class="main-container">
 
-        <!-- Section 1: Hero -->
+        <!-- Section 1: Hero — the opening spread -->
         <section id="section-1" class="section-container bg-midnight active">
             <div class="home-hero-stage sticky top-0 h-[100svh] md:h-[100vh] w-full overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-t from-midnight to-slateblue z-0"></div>
                 <canvas id="hero-canvas" class="absolute inset-0 w-full h-full object-cover z-10"></canvas>
                 <div class="absolute inset-0 hero-atmosphere z-20 pointer-events-none"></div>
 
-                <div class="home-hero-content relative z-30 h-full flex flex-col items-center justify-center text-center px-4 py-24 md:py-0 max-w-screen-xl mx-auto pointer-events-none mt-8 md:mt-12">
+                <!-- The handoff: the sky's last warm band contracts into a lamp. -->
+                <div class="ah-handoff" aria-hidden="true">
+                    <span class="ah-handoff-band"></span>
+                    <span class="ah-handoff-core"></span>
+                </div>
+                <div class="ah-hero-scrim" aria-hidden="true"></div>
 
-                    <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Brand Mark" class="home-hero-mark w-20 sm:w-24 md:w-32 lg:w-40 opacity-100 mb-6 md:mb-8 reveal-text drop-shadow-[0_4px_25px_rgba(0,0,0,0.6)] object-contain brightness-110 contrast-125" style="transition-delay: 0.02s;">
+                <div class="ah-hero relative z-30 pointer-events-none">
+                    <p class="ah-hero-slug">
+                        <span class="ah-hero-masthead">
+                            <img src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Brand Mark" class="ah-hero-mark" width="40" height="40" decoding="async">
+                            <span>Owlnest &middot; After Hours</span>
+                        </span>
+                        <span class="ah-hero-issue">Dusk to Dark</span>
+                    </p>
 
-                    <span class="text-amber tracking-[0.16em] uppercase text-[11px] md:text-xs mb-4 reveal-text font-bold" style="transition-delay: 0.08s;">OWLNEST LUME</span>
+                    <div aria-hidden="true"></div>
 
-                    <h1 class="home-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.08] mb-7 md:mb-9 reveal-text drop-shadow-2xl max-w-5xl mx-auto" style="transition-delay: 0.14s;">
-                        <span class="block">Your room knows it’s night.</span>
-                        <span class="block">Your light doesn’t.</span>
-                    </h1>
-
-                    <p class="home-hero-summary max-w-xl text-base md:text-lg leading-relaxed text-white/68 reveal-text" style="transition-delay: 0.22s;">Lume is a sleep-spectrum lamp, specially tuned for after dark.</p>
-
-                    <div class="home-hero-bottom reveal-text pointer-events-auto" style="transition-delay: 0.38s;">
-                        <div class="home-hero-actions mt-7 flex w-full flex-col justify-center gap-3 px-4 sm:w-auto sm:flex-row sm:px-0">
-                            <a href="/products"
-                               class="premium-cta w-full sm:w-auto bg-amber text-midnight px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:bg-warm flex justify-center items-center">
-                                Explore Lume
-                            </a>
-                            <a href="/products#buy"
-                               class="premium-cta w-full sm:w-auto border border-white/25 text-white px-7 md:px-10 py-4 md:py-5 font-bold tracking-[0.12em] md:tracking-[0.15em] uppercase text-xs hover:border-amber hover:text-amber flex justify-center items-center">
-                                Buy Lume
-                            </a>
+                    <div class="ah-hero-body">
+                        <div class="ah-hero-headline reveal-text" style="transition-delay: 0.08s;">
+                            <p class="ah-kicker">Owlnest Lume</p>
+                            <h1 class="home-hero-title">Your room knows it’s night.<span class="ah-turn">Your light doesn’t.</span></h1>
                         </div>
-                        <div class="home-hero-scroll-hint hidden lg:flex flex-col items-center text-white/35 pointer-events-none">
-                            <span class="text-[9px] tracking-[0.3em] uppercase mb-3">Scroll</span>
-                            <div class="w-px h-10 bg-white/30"></div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Lume Product Reveal -->
-        <section id="section-visual-difference" class="section-container bg-[#111927] section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-balanced-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-text">
-                <figure class="homepage-product-reveal rounded-[28px] border border-white/10 bg-midnight/60 p-4 md:p-6 overflow-hidden">
-                    <img src="/lume-real-photo-off.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume with a soft silicone body and round wooden base" class="mx-auto max-h-[680px] w-auto max-w-full object-contain rounded-[20px]">
-                    <figcaption class="mt-5 border-t border-white/10 pt-4 text-xs leading-relaxed text-white/55">The real Lume, shown unlit so its form and materials stay visible.</figcaption>
-                </figure>
-                <div class="homepage-copy-panel text-white">
-                    <div class="homepage-copy-inner">
-                        <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Lume · Sleep-spectrum lamp</span>
-                        <h2 class="section-heading font-serif text-4xl md:text-5xl text-white leading-[1.08] mb-6">Night deserves its own light.</h2>
-                        <p class="font-serif text-2xl text-amber leading-relaxed">Day and night shouldn’t have to share the same light.</p>
-                        <p class="mt-7 text-base md:text-lg leading-relaxed text-white/72">Lume is a sleep-spectrum lamp, specially tuned for after dark.</p>
-                        <p class="mt-3 text-base md:text-lg leading-relaxed text-white/60">Light specially tuned for nighttime.</p>
-                        <a href="/products" class="premium-cta mt-8 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs text-white hover:border-amber hover:text-amber">Explore Lume</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ordinary Warm Light Comparison -->
-        <section id="section-comparison-table" class="section-container bg-midnight text-white py-14 md:py-20 border-b border-white/5 !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="section-header-centered mb-8 md:mb-10">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Ordinary warm light vs Lume</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.08]">Warm is how light looks.<br>Spectrum is what the light contains.</h2>
-                    <p class="mt-5 max-w-3xl text-base md:text-lg leading-relaxed text-white/64">Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <article class="rounded-[28px] border border-white/10 bg-white/[0.03] p-6 md:p-8">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-amber">Ordinary warm light</p>
-                        <h3 class="mt-4 font-serif text-2xl md:text-3xl text-white">Designed to look warm.</h3>
-                        <p class="mt-4 text-sm md:text-base leading-relaxed text-white/64">Usually made for general lighting or ambience—not specifically for the body's nighttime signal.</p>
-                    </article>
-                    <article class="rounded-[28px] border border-amber/35 bg-amber/10 p-6 md:p-8">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-amber">Owlnest Lume</p>
-                        <h3 class="mt-4 font-serif text-2xl md:text-3xl text-white">Designed from the spectrum up for sleep.</h3>
-                        <p class="mt-4 text-sm md:text-base leading-relaxed text-white/72">A specially tuned sleep spectrum. Light specially tuned for nighttime.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Science Bridge -->
-        <section id="section-science-support" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text text-center">
-                <div class="mx-auto max-w-4xl">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Why light matters</span>
-                    <h2 class="section-heading mx-auto font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.08]" style="color:#182033;">Your body uses light to tell time.</h2>
-                    <p class="mx-auto mt-6 max-w-3xl text-base md:text-lg leading-relaxed" style="color:#455169;">Daytime-like light can tell your body the day is still going. Lume gives your room light specially tuned for nighttime.</p>
-                    <p class="mx-auto mt-4 max-w-3xl text-sm leading-relaxed" style="color:#5B667A;">Research informs the design. Lume-specific SPD and a same-condition warm-lamp comparison remain pending.</p>
-                </div>
-                <a href="/science" class="premium-cta mt-9 inline-flex items-center justify-center border border-midnight/15 px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-amber/10" style="color:#182033 !important;">
-                    Read the Science
-                </a>
-            </div>
-        </section>
-
-        <!-- Section 4: Product Snapshot -->
-        <section id="section-product" class="section-container bg-midnight section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-product-grid max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                <figure class="relative reveal-text product-gallery rounded-[30px] border border-white/10 p-5 md:p-8 overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-[1fr_0.56fr] gap-4 md:gap-5">
-                        <div class="gallery-frame p-8 md:p-12 flex min-h-[420px] md:min-h-[540px] items-center justify-center">
-                                <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume glowing with deep amber light" class="max-h-[360px] md:max-h-[455px] w-auto max-w-full object-contain rounded-[18px]">
-                        </div>
-                        <div class="grid grid-cols-3 md:grid-cols-1 gap-4 md:gap-5">
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                    <img src="/lume-size-reference.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume size reference" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
+                        <div class="ah-hero-aside reveal-text" style="transition-delay: 0.22s;">
+                            <p class="home-hero-summary">Lume is a sleep-spectrum lamp, specially tuned for after dark.</p>
+                            <div class="home-hero-actions">
+                                <a href="/products" class="ah-cta">Explore Lume</a>
+                                <a href="/products#buy" class="ah-cta ah-cta--ghost">Buy Lume</a>
                             </div>
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                    <img src="/lume-bottom-button.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume bottom physical button" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
-                            </div>
-                            <div class="gallery-frame p-5 flex min-h-[180px] md:min-h-0 items-center justify-center">
-                                    <img src="/lume-usb-c.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume charging through its USB-C port" class="max-h-[185px] md:max-h-[230px] w-auto max-w-full object-contain rounded-[14px]">
-                            </div>
+                            <p class="ah-hero-footnote"><b>01</b><span>Keep scrolling. The sky hands its last light to the lamp.</span></p>
                         </div>
                     </div>
-                    <figcaption class="relative mt-6 border-t border-white/10 pt-5 text-[10px] tracking-[0.22em] uppercase text-white/55">Deep amber glow</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 01 — Lume Product Reveal -->
+        <section id="section-visual-difference" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 01 &mdash; The Object</span><span>Owlnest Lume</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-plate">
+                        <figure class="ah-plate ah-plate--tall ah-focus-dome">
+                            <img src="/lume-real-photo-off.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Owlnest Lume with a soft silicone body and round wooden base">
+                        </figure>
+                        <p class="ah-plate-caption"><b>Plate I</b><span>The real Lume, shown unlit so its form and materials stay visible.</span></p>
+                    </div>
+
+                    <div class="ah-col-plate-copy">
+                        <span class="ah-folio" aria-hidden="true">01</span>
+                        <p class="ah-kicker">Lume &middot; Sleep-spectrum lamp</p>
+                        <h2 class="ah-display">Night deserves its own light.</h2>
+                        <p class="ah-pull">Day and night shouldn’t have to share the same light.</p>
+                        <p class="ah-copy">Lume is a sleep-spectrum lamp, specially tuned for after dark.</p>
+                        <p class="ah-copy">Light specially tuned for nighttime.</p>
+                        <div class="ah-actions">
+                            <a href="/products" class="ah-cta ah-cta--ghost">Explore Lume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 02 — Ordinary Warm Light Comparison -->
+        <section id="section-comparison-table" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 02 &mdash; The Comparison</span><span>Ordinary warm light vs Lume</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">02</span>
+                        <p class="ah-kicker">Ordinary warm light vs Lume</p>
+                        <h2 class="ah-display">Warm is how light looks.<em>Spectrum is what the light contains.</em></h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <p class="ah-copy ah-copy--narrow">Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep.</p>
+                        <ol class="ah-notes">
+                            <li class="ah-note">
+                                <div>
+                                    <b>Ordinary warm light</b>
+                                    <h3>Designed to look warm.</h3>
+                                    <p>Usually made for general lighting or ambience—not specifically for the body's nighttime signal.</p>
+                                </div>
+                            </li>
+                            <li class="ah-note">
+                                <div>
+                                    <b>Owlnest Lume</b>
+                                    <h3>Designed from the spectrum up for sleep.</h3>
+                                    <p>A specially tuned sleep spectrum. Light specially tuned for nighttime.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 03 — Science Bridge -->
+        <section id="section-science-support" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 03 &mdash; Why Light Matters</span><span>Owlnest Science</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">03</span>
+                        <p class="ah-kicker">Why light matters</p>
+                        <h2 class="ah-display">Your body uses light to tell time.</h2>
+                        <p class="ah-lede">Daytime-like light can tell your body the day is still going. Lume gives your room light specially tuned for nighttime.</p>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note">
+                                <div>
+                                    <b>Evidence status</b>
+                                    <p>Research informs the design. Lume-specific SPD and a same-condition warm-lamp comparison remain pending.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="ah-actions">
+                            <a href="/science" class="ah-cta ah-cta--ghost">Read the Science</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 04 — Product Snapshot -->
+        <section id="section-product" class="section-container ah-band ah-band--night ah-band--night-2">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 04 &mdash; Product Snapshot</span><span>Deep amber glow</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-plate">
+                        <figure class="ah-plate ah-plate--square ah-focus-dome">
+                            <img src="/lume-real-photo-on.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume glowing with deep amber light">
+                        </figure>
+                        <p class="ah-plate-caption"><b>Plate II</b><span>Deep amber glow.</span></p>
+                    </div>
+
+                    <div class="ah-col-plate-copy">
+                        <span class="ah-folio" aria-hidden="true">04</span>
+                        <p class="ah-kicker">Product Snapshot</p>
+                        <h2 class="ah-display">Owlnest Lume</h2>
+                        <p class="ah-pull">Real product. Simple hardware. Quiet by design.</p>
+                        <p class="ah-copy">Soft silicone. Wooden base. USB-C.<br>One button. No app. No screen.</p>
+                        <div class="ah-actions">
+                            <a href="/products#buy" class="ah-cta">Buy Lume</a>
+                            <a href="/what-is-owlnest-lume/" class="ah-cta ah-cta--ghost">What is Owlnest Lume?</a>
+                        </div>
+                    </div>
+
+                    <div class="ah-col-full">
+                        <dl class="ah-specs ah-specs--split">
+                            <div class="ah-spec"><dt>Height</dt><dd>Approx. 14–15 cm tall</dd></div>
+                            <div class="ah-spec"><dt>Body</dt><dd>Soft silicone body</dd></div>
+                            <div class="ah-spec"><dt>Base</dt><dd>Wooden base</dd></div>
+                            <div class="ah-spec"><dt>Power</dt><dd>USB-C rechargeable</dd></div>
+                            <div class="ah-spec"><dt>Control</dt><dd>Bottom-button control</dd></div>
+                            <div class="ah-spec"><dt>Interface</dt><dd>No app. No screen.</dd></div>
+                        </dl>
+
+                        <div class="ah-strip">
+                            <figure>
+                                <img src="/lume-size-reference.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume size reference">
+                                <figcaption><b>Plate II·i</b>Size reference</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="/lume-bottom-button.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume bottom physical button">
+                                <figcaption><b>Plate II·ii</b>Bottom button</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="/lume-usb-c.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Owlnest Lume charging through its USB-C port">
+                                <figcaption><b>Plate II·iii</b>USB-C port</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 05 — Use Scenes -->
+        <section id="section-ritual" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 05 &mdash; Use Scenes</span><span>Where it fits</span></p>
+            </div>
+
+            <div class="ah-bleed reveal-text">
+                <figure class="ah-plate ah-plate--banner ah-focus-room">
+                    <img src="/lume-night-effect.jpg" width="1350" height="1800" loading="lazy" decoding="async" alt="Lume casting a deep amber orange-red glow across a room after dark">
                 </figure>
+                <p class="ah-plate-caption"><b>Plate III</b><span>Real Lume glow in a nighttime room.</span></p>
+            </div>
 
-                <div class="flex items-center">
-                    <div class="product-copy-panel reveal-text text-white text-center mx-auto">
-                        <span class="text-amber tracking-[0.14em] uppercase text-xs mb-4 block font-bold">Product Snapshot</span>
-                        <h2 class="text-4xl md:text-5xl font-serif text-white leading-[1.08] mb-5">Owlnest Lume</h2>
-                        <p class="font-serif text-2xl text-amber mb-8">Real product.<br>Simple hardware.<br>Quiet by design.</p>
-                        <p class="mb-9 text-white/68 font-light leading-relaxed">Soft silicone. Wooden base. USB-C.<br>One button. No app. No screen.</p>
-                        <div class="proof-spec-grid border-t border-white/10 pt-8">
-                            <span class="proof-spec">Approx. 14–15 cm tall</span>
-                            <span class="proof-spec">Soft silicone body</span>
-                            <span class="proof-spec">Wooden base</span>
-                            <span class="proof-spec">USB-C rechargeable</span>
-                            <span class="proof-spec">Bottom-button control</span>
-                            <span class="proof-spec">No app.<br>No screen.</span>
+            <div class="ah-shell">
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">05</span>
+                        <p class="ah-kicker">Use Scenes</p>
+                        <h2 class="ah-display">Where it fits</h2>
+                        <p class="ah-lede">For nights that need light, not daytime.</p>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note"><div><h3>After-shower wind-down</h3><p>Keep the room low and quiet after dark.</p></div></li>
+                            <li class="ah-note"><div><h3>Read and settle</h3><p>A small bedside glow for a quiet evening.</p></div></li>
+                            <li class="ah-note"><div><h3>Brief night wake-ups</h3><p>Use a little light without relighting the whole room.</p></div></li>
+                            <li class="ah-note"><div><h3>Hotels and travel</h3><p>Bring familiar nighttime light with you.</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 06 — How To Use -->
+        <section id="section-how-to-use" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 06 &mdash; The Routine</span><span>How to use Owlnest Lume</span></p>
+
+                <div class="ah-grid reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">06</span>
+                        <p class="ah-kicker">How to use Owlnest Lume</p>
+                        <h2 class="ah-display">Three simple steps.</h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <ol class="ah-notes">
+                            <li class="ah-note"><div><h3>Place it near your bed</h3><p>On your nightstand, dresser, or hotel room table.</p></div></li>
+                            <li class="ah-note"><div><h3>Turn it on before sleep</h3><p>Let the room shift away from harsh daytime light.</p></div></li>
+                            <li class="ah-note"><div><h3>Turn it off at bedtime</h3><p>If you still need a little light during a brief night wake-up, turn it on again.</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Folio 07 — Owlnest Lab and current participant research -->
+        <section id="section-lab-program" class="section-container ah-band ah-band--paper">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 07 &mdash; The Lab</span><span>Owlnest research ecosystem</span></p>
+
+                <div class="ah-grid ah-grid--align-start reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">07</span>
+                        <p class="ah-kicker">Owlnest Lab</p>
+                        <h2 class="ah-display">From scientific foundations to real nighttime life.</h2>
+                        <p class="ah-lede">Lab is Owlnest’s research ecosystem for understanding nighttime living. Science explores why light may matter. Participant research helps us learn where Lume fits—and where it does not.</p>
+                        <p class="ah-copy ah-copy--quiet">Results will be shared transparently when there is something responsible to report.</p>
+                        <div class="ah-actions">
+                            <a href="/lab/" class="ah-cta">Explore the Lab</a>
+                            <a href="/science" class="ah-cta ah-cta--ghost">Read the Science</a>
                         </div>
-                        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                            <a href="/products#buy" class="premium-cta bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm text-center">
-                                Buy Lume
-                            </a>
-                            <a href="/what-is-owlnest-lume/" class="premium-cta border border-white/15 text-white px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-white/10 hover:border-amber text-center">
-                                What is Owlnest Lume?
-                            </a>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <hr class="ah-rule ah-rule--double" style="margin-top:0;">
+                        <p class="ah-kicker">Current program</p>
+                        <h3 class="ah-display ah-display--sub">21-Day Sleep Program</h3>
+                        <p class="ah-copy">We want to learn who finds Lume useful, in what situations, and under what nighttime habits.</p>
+                        <blockquote class="ah-pull">We’re not looking for positive reviews.<br>We’re looking for honest results.</blockquote>
+                        <p class="ah-copy ah-copy--quiet">Applications opening soon.</p>
+                        <div class="ah-actions">
+                            <a href="/campaign/" class="ah-cta ah-cta--ghost">Explore the 21-Day Program</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Use Scenes -->
-        <section id="section-ritual" class="section-container bg-warm section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="homepage-scene-layout max-w-6xl mx-auto px-6 reveal-text">
-                <figure class="homepage-scene-figure">
-                    <img src="/lume-night-effect.jpg" width="1350" height="1800" loading="eager" decoding="async" alt="Lume casting a deep amber orange-red glow across a room after dark">
-                    <figcaption>Real Lume glow in a nighttime room.</figcaption>
-                </figure>
-                <div class="homepage-scene-copy">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Use Scenes</span>
-                    <h2 class="section-heading font-serif text-midnight">Where it fits</h2>
-                    <p class="body-copy mt-5 font-light">For nights that need light, not daytime.</p>
-                    <div class="homepage-scene-list mt-8">
-                        <article class="homepage-scene-item"><span>01</span><div><h3>After-shower wind-down</h3><p>Keep the room low and quiet after dark.</p></div></article>
-                        <article class="homepage-scene-item"><span>02</span><div><h3>Read and settle</h3><p>A small bedside glow for a quiet evening.</p></div></article>
-                        <article class="homepage-scene-item"><span>03</span><div><h3>Brief night wake-ups</h3><p>Use a little light without relighting the whole room.</p></div></article>
-                        <article class="homepage-scene-item"><span>04</span><div><h3>Hotels and travel</h3><p>Bring familiar nighttime light with you.</p></div></article>
+        <!-- Folio 08 — Homepage purchase path -->
+        <section id="section-home-purchase" class="section-container ah-band ah-band--night">
+            <div class="ah-shell">
+                <p class="ah-slug"><span>Folio 08 &mdash; Ready for Lume?</span><span>End of issue</span></p>
+
+                <div class="ah-grid ah-grid--align-end reveal-text">
+                    <div class="ah-col-main">
+                        <span class="ah-folio" aria-hidden="true">08</span>
+                        <p class="ah-kicker">Ready for Lume?</p>
+                        <h2 class="ah-display">See the product.<em>Choose what fits.</em></h2>
+                    </div>
+
+                    <div class="ah-col-margin">
+                        <p class="ah-copy ah-copy--narrow">Find complete Lume details, purchase options, and current order information on the Products page.</p>
+                        <div class="ah-actions">
+                            <a href="/products#buy" class="ah-cta">Buy Lume</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- How To Use -->
-        <section id="section-how-to-use" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-6xl mx-auto px-6 reveal-text">
-                <div class="homepage-how-header mb-10 md:mb-12">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">How to use Owlnest Lume</span>
-                    <h2 class="section-heading font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">Three simple steps.</h2>
-                </div>
-                <div class="homepage-step-list">
-                    <article class="homepage-step-item"><p class="homepage-step-number">01</p><div><h3>Place it near your bed</h3><p>On your nightstand, dresser, or hotel room table.</p></div></article>
-                    <article class="homepage-step-item"><p class="homepage-step-number">02</p><div><h3>Turn it on before sleep</h3><p>Let the room shift away from harsh daytime light.</p></div></article>
-                    <article class="homepage-step-item"><p class="homepage-step-number">03</p><div><h3>Turn it off at bedtime</h3><p>If you still need a little light during a brief night wake-up, turn it on again.</p></div></article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Owlnest Lab and current participant research -->
-        <section id="section-lab-program" class="section-container bg-[#111927] text-white section-breathe border-b border-white/5 !min-h-fit">
-            <div class="homepage-research-layout max-w-6xl mx-auto px-6 reveal-text">
-                <div class="homepage-research-intro">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Owlnest Lab</span>
-                    <h2 class="section-heading font-serif text-white">From scientific foundations to real nighttime life.</h2>
-                    <p class="mt-6 text-base md:text-lg leading-relaxed text-white/68">Lab is Owlnest’s research ecosystem for understanding nighttime living. Science explores why light may matter. Participant research helps us learn where Lume fits—and where it does not.</p>
-                    <p class="mt-4 text-sm leading-relaxed text-white/52">Results will be shared transparently when there is something responsible to report.</p>
-                    <div class="homepage-research-actions mt-8 flex flex-col sm:flex-row gap-3">
-                        <a href="/lab/" class="premium-cta inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-warm">Explore the Lab</a>
-                        <a href="/science" class="premium-cta inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs text-white hover:border-amber hover:text-amber">Read the Science</a>
-                    </div>
-                </div>
-                <div class="homepage-program-panel">
-                    <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-4">Current program</span>
-                    <h3 class="font-serif text-3xl md:text-4xl text-white">21-Day Sleep Program</h3>
-                    <p class="mt-5 text-base leading-relaxed text-white/68">We want to learn who finds Lume useful, in what situations, and under what nighttime habits.</p>
-                    <blockquote class="homepage-research-principle mt-7">We’re not looking for positive reviews.<br>We’re looking for honest results.</blockquote>
-                    <p class="homepage-program-status mt-7">Applications opening soon.</p>
-                    <a href="/campaign/" class="premium-cta mt-6 inline-flex items-center justify-center border border-white/18 px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs text-white hover:border-amber hover:text-amber">Explore the 21-Day Program</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Homepage purchase path -->
-        <section id="section-home-purchase" class="section-container bg-warm text-midnight section-breathe border-b border-taupe/20 section-light !min-h-fit">
-            <div class="max-w-4xl mx-auto px-6 reveal-text text-center">
-                <span class="text-amber tracking-[0.14em] uppercase text-[10px] md:text-xs block font-bold mb-5">Ready for Lume?</span>
-                <h2 class="section-heading mx-auto font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-midnight leading-[1.08]">See the product. Choose what fits.</h2>
-                <p class="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed" style="color:#455169;">Find complete Lume details, purchase options, and current order information on the Products page.</p>
-                <a href="/products#buy" class="premium-cta mt-8 inline-flex items-center justify-center bg-amber text-midnight px-8 py-4 font-bold tracking-[0.12em] uppercase text-xs hover:bg-midnight hover:text-white transition-colors">Buy Lume</a>
             </div>
         </section>
 
@@ -883,6 +808,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const canvas = document.getElementById('hero-canvas');
         const context = canvas.getContext('2d');
         const section1 = document.getElementById('section-1');
+        const heroStage = section1 ? section1.querySelector('.home-hero-stage') : null;
 
         const frameCount = 96;
         const currentFrame = index => `/${index.toString().padStart(3, '0')}.png`;
@@ -1054,6 +980,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             skySequence.frame = sequenceFrame - 1;
             preloadHeroWindow(sequenceFrame);
             render();
+
+            // Signature moment: the sky's last warm band contracts into the lamp.
+            if (heroStage) {
+                heroStage.style.setProperty('--ah-handoff', clampedProgress.toFixed(3));
+            }
         }
 
         window.addEventListener('scroll', () => {
