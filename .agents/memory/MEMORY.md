@@ -1,1 +1,2 @@
 - [Visual refinement guardrails](visual-refinement-guardrails.md) — Scope layout rules to named experiences; keep large frame sequences sampled and progressively loaded.
+- [Brand architecture](brand-architecture.md) — Owlnest leads the brand story; Lume is its first product expression, not the whole site.
