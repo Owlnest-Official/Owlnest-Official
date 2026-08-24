@@ -73,7 +73,7 @@ export function OwlnestBrandRitual() {
           <div className="hero-inner wrap">
               <div className="eyebrow mono">Nighttime living, considered</div>
             <div className="hero-copy">
-              <h1>Make room for the <em>evening.</em></h1>
+              <h1><span>Make room for</span><span>the <em>evening.</em></span></h1>
               <div className="hero-aside"><p>Owlnest makes considered objects and rituals for a gentler relationship with night.</p><a className="primary" href="#why">Explore Owlnest</a></div>
             </div>
             <div className="scroll-note mono"><span>Owlnest / 001</span><span>Scroll to settle in ↓</span></div>
@@ -96,7 +96,7 @@ export function OwlnestBrandRitual() {
         <section className="object" id="lume">
           <div className="object-rail mono"><span>First expression</span><span>Lume / 001</span></div>
           <div className="wrap object-layout">
-             <div className="object-copy"><p className="eyebrow mono">Our first expression / Lume</p><h2>Light for the <em>small hours.</em></h2><p className="object-desc">A sleep-spectrum lamp for the part of the day that belongs to you. Thoughtful light, considered materials, no noise.</p><a className="linkline" href="#lab">Discover Lume</a></div>
+             <div className="object-copy"><p className="eyebrow mono">Our first expression / Lume</p><h2><span>Light for the</span><span><em>small hours.</em></span></h2><p className="object-desc">A sleep-spectrum lamp for the part of the day that belongs to you. Thoughtful light, considered materials, no noise.</p><a className="linkline" href="#lab">Discover Lume</a></div>
             <figure className="lamp-stage"><img className="lume-photo" src={`${import.meta.env.BASE_URL}lume-real-photo-on.jpg`} alt="Owlnest Lume glowing on its wooden base" /><figcaption className="mono">A warmer way to end the day</figcaption></figure>
           </div>
         </section>
