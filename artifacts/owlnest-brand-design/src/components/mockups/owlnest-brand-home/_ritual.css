@@ -31,7 +31,9 @@
 .ritual-home .toplinks a { transition: color .25s ease; }.ritual-home .toplinks a:hover { color:var(--amber); }
 .ritual-home .menu { display:none; border:0; background:transparent; padding:5px; }
 .ritual-home .hero { min-height: min(900px, 100dvh); position:relative; display:flex; align-items:flex-end; color:#f3ede3; background: var(--deep); isolation:isolate; }
-.ritual-home .hero:before { content:''; position:absolute; inset:0; z-index:-2; background: radial-gradient(ellipse 47% 42% at 70% 70%, #f19a3d 0%, #d25d24 16%, #8d3524 30%, transparent 61%), radial-gradient(ellipse at 18% 18%, #2b3b4b 0%, #1b2a38 42%, #17212d 76%); }
+.ritual-home .hero-sequence { position:absolute; inset:0; z-index:-3; overflow:hidden; background:var(--deep); }
+.ritual-home .hero-sequence img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+.ritual-home .hero:before { content:''; position:absolute; inset:0; z-index:-2; background:radial-gradient(ellipse 47% 42% at 70% 70%, #f19a3d66 0%, #d25d2433 22%, transparent 61%), linear-gradient(90deg,#11161d55,transparent 55%); }
 .ritual-home .hero:after { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(8,12,17,.56),transparent 40%,rgba(8,12,17,.82)); }
 .ritual-home .hero-inner { width:100%; padding-bottom:clamp(50px, 9vh, 100px); }
 .ritual-home .eyebrow { color:var(--amber); margin-bottom:24px; display:flex; align-items:center; gap:12px; }.ritual-home .eyebrow:before { content:''; width:34px; height:1px; background:currentColor; }

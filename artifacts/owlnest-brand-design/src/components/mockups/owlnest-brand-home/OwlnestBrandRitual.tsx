@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './_ritual.css';
 
 const discoveries = [
@@ -9,6 +9,50 @@ const discoveries = [
 
 export function OwlnestBrandRitual() {
   const [open, setOpen] = useState<number | null>(0);
+  const [heroFrame, setHeroFrame] = useState(1);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const frameStep = window.innerWidth <= 640 ? 6 : window.innerWidth <= 1024 ? 4 : 3;
+    const sampledFrames = Array.from({ length: 96 }, (_, index) => index + 1)
+      .filter((frame) => frame === 1 || frame === 96 || (frame - 1) % frameStep === 0);
+    const loaded = new Set<number>();
+    const preload = (frame: number) => {
+      if (loaded.has(frame)) return;
+      loaded.add(frame);
+      const image = new Image();
+      image.src = `${import.meta.env.BASE_URL}sequence/${frame.toString().padStart(3, '0')}.png`;
+    };
+    const preloadWindow = (frame: number) => {
+      const index = sampledFrames.reduce((closest, candidate, candidateIndex) =>
+        Math.abs(candidate - frame) < Math.abs(sampledFrames[closest] - frame) ? candidateIndex : closest, 0);
+      [sampledFrames[index - 1], sampledFrames[index], sampledFrames[index + 1]].forEach((candidate) => {
+        if (candidate) preload(candidate);
+      });
+    };
+    const updateSequence = () => {
+      const hero = heroRef.current;
+      if (!hero) return;
+      const maxScroll = Math.max(1, hero.offsetHeight - window.innerHeight);
+      const progress = Math.max(0, Math.min(1, -hero.getBoundingClientRect().top / maxScroll));
+      const requested = Math.round(progress * 95) + 1;
+      const frame = sampledFrames.reduce((closest, candidate) =>
+        Math.abs(candidate - requested) < Math.abs(closest - requested) ? candidate : closest, sampledFrames[0]);
+      preloadWindow(frame);
+      setHeroFrame((current) => current === frame ? current : frame);
+    };
+    preloadWindow(1);
+    updateSequence();
+    window.addEventListener('scroll', updateSequence, { passive: true });
+    window.addEventListener('resize', updateSequence);
+    return () => {
+      window.removeEventListener('scroll', updateSequence);
+      window.removeEventListener('resize', updateSequence);
+    };
+  }, []);
+
+  const heroFrameSource = `${import.meta.env.BASE_URL}sequence/${heroFrame.toString().padStart(3, '0')}.png`;
+
   return (
     <div className="ritual-home">
       <header className="topbar">
@@ -19,7 +63,8 @@ export function OwlnestBrandRitual() {
         <button className="menu" aria-label="Begin the Owlnest story" onClick={() => document.getElementById('why')?.scrollIntoView({ behavior: 'smooth' })}><span className="mono">Begin</span></button>
       </header>
       <main>
-        <section className="hero" id="start">
+        <section className="hero" id="start" ref={heroRef}>
+          <div className="hero-sequence" aria-hidden="true"><img src={heroFrameSource} alt="" /></div>
           <div className="hero-inner wrap">
             <div className="eyebrow mono">For the hours after</div>
             <div className="hero-copy">
