@@ -95,6 +95,7 @@
   </footer>
 
   <script>
+    const VERIFY_ENDPOINT = "https://khoiplqugajmybmultzs.supabase.co/functions/v1/verify-product";
     const inputEl = document.getElementById("verify-code");
     const btn = document.getElementById("verify-btn");
     const hintEl = document.getElementById("hint");
@@ -190,7 +191,7 @@
       actLink.classList.add("hidden");
 
       try {
-        const res = await fetch("/.netlify/functions/verify", {
+        const res = await fetch(VERIFY_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ token, key: token })
