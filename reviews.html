@@ -330,6 +330,8 @@
     </footer>
 
     <script>
+        const REVIEWS_ENDPOINT = 'https://khoiplqugajmybmultzs.supabase.co/functions/v1/reviews';
+
         window.addEventListener('load', () => {
             const yr = document.getElementById('copyright-year');
             if (yr) yr.textContent = new Date().getFullYear();
@@ -386,7 +388,7 @@
             list.innerHTML = '<div class="border border-white/10 bg-white/5 rounded-sm p-5 text-sm text-white/60">Loading feedback...</div>';
 
             try {
-                const res = await fetch('/.netlify/functions/reviews');
+                const res = await fetch(REVIEWS_ENDPOINT);
                 const data = await res.json().catch(() => ({}));
 
                 if (!res.ok || !data.success) {
