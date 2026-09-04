@@ -199,6 +199,52 @@ body.sleep-program-page.zh {
     color: var(--program-ink);
 }
 
+.program-visuals {
+    background: #101927;
+}
+
+.program-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.program-section-copy {
+    max-width: 680px;
+    color: var(--program-muted);
+    line-height: 1.7;
+}
+
+.program-photo-grid figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--program-line);
+    background: var(--program-deep);
+}
+
+.program-photo-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.program-photo-grid figcaption {
+    display: grid;
+    gap: 0.55rem;
+    padding: 1.25rem 1.35rem 1.45rem;
+    color: var(--program-muted);
+    line-height: 1.7;
+}
+
+.program-photo-grid figcaption strong {
+    color: var(--program-amber-soft);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
 .program-split {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -367,7 +413,7 @@ body.sleep-program-page.zh {
 
 .program-timeline {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-top: clamp(3rem, 6vw, 5rem);
     border-top: 1px solid var(--program-line);
 }
@@ -439,7 +485,7 @@ body.sleep-program-page.zh {
 
 .program-validity {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.25rem;
     margin-top: clamp(3rem, 6vw, 5rem);
 }
@@ -586,7 +632,8 @@ body.sleep-program-page.zh {
 
     .program-questions,
     .program-context-list,
-    .program-validity {
+    .program-validity,
+    .program-photo-grid {
         grid-template-columns: 1fr;
     }
 
@@ -613,8 +660,14 @@ body.sleep-program-page.zh {
         border-left: 0;
     }
 
-    .program-day:nth-child(3)::before {
+    .program-day:nth-child(3)::before,
+    .program-day:nth-child(5)::before {
         left: 0;
+    }
+
+    .program-day:nth-child(5) {
+        padding-left: 0;
+        border-left: 0;
     }
 
     .program-status-mark {
