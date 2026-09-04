@@ -337,6 +337,18 @@ body.lab-page.zh {
     line-height: 1.7;
 }
 
+.lab-intro .lab-validity-item {
+    border-bottom-color: rgba(24, 32, 51, 0.14);
+}
+
+.lab-intro .lab-validity-item span {
+    color: #9a551f;
+}
+
+.lab-intro .lab-validity-item p {
+    color: #455169;
+}
+
 .lab-results {
     background: var(--lab-paper);
     color: var(--lab-ink);
