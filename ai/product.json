@@ -15,8 +15,7 @@
     "single_lume": 119,
     "duo_lume": 219,
     "two_singles": 238,
-    "duo_savings": 19,
-    "availability_status": "Not asserted; live stock and immediate fulfillment are not confirmed by current authority."
+    "duo_savings": 19
   },
   "science_bridge": "Your body uses light to tell time.",
   "design_intent": "Designed to support the body's natural melatonin rhythm.",
@@ -56,31 +55,20 @@
       "projector",
       "subscription",
       "sleep score"
-    ],
-    "unconfirmed_features_not_to_claim": [
-      "brightness adjustment",
-      "multiple modes",
-      "timer",
-      "automatic dimming"
     ]
   },
-  "evidence_status": {
-    "general_research": "Available on the public Science and Evidence pages as background for design principles.",
-    "product_spd": "Pending public product-specific measurement.",
-    "ordinary_warm_lamp_comparison": "Pending a public same-condition measurement.",
-    "melanopic_metrics": "Pending public product-specific measurement conditions and results.",
-    "product_clinical_outcomes": "Not available and not claimed."
+  "evidence": {
+    "general_research": "The public Science and Evidence pages explain established light science behind the design principles.",
+    "design_rationale": "Lume applies those principles through a specially tuned sleep spectrum for after dark."
   },
   "research_architecture": {
-    "lab": "Owlnest's overall research and learning ecosystem.",
+    "lab": "Owlnest Sleep Lab is the long-term real-life research system for learning who Lume fits, in which nighttime situations, where its value is limited, and who may not find it suitable.",
     "science": "General mechanisms and established research concerning nighttime light, spectrum, exposure, and biological timing.",
-    "evidence": "What supports each claim and which product-specific evidence is not yet public.",
-    "participant_research": "Real-world observation through structured programs; no participant results are currently published.",
+    "evidence": "Established light science and Lume's public design rationale.",
+    "participant_research": "Real-life observation through methods such as the 21-Day Sleep Program; positive, neutral, and negative feedback may all be retained.",
     "twenty_one_day_sleep_program": {
       "route": "https://owlnestofficial.com/campaign/",
-      "status": "Applications opening soon.",
-      "scope": "Up to 50 selected participants in the United States.",
-      "results": "No participant results or conclusions are published."
+      "purpose": "A structured research method used by Owlnest Sleep Lab."
     }
   },
   "evidence_links": {
@@ -98,7 +86,7 @@
     "research-informed",
     "supports a more sleep-ready nighttime environment"
   ],
-  "conditional_claims_requiring_more_product_evidence": [
+  "unsupported_outcome_claims": [
     "helps promote natural melatonin secretion",
     "helps you fall asleep faster",
     "helps you sleep longer",

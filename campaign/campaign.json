@@ -4,16 +4,9 @@
   "program": {
     "name": "21-Day Sleep Program",
     "nameZhTw": "21 天睡眠計畫",
-    "ecosystem": "Owlnest Lab",
+    "ecosystem": "Owlnest Sleep Lab",
     "durationDays": 21,
-    "participantLimit": {
-      "maximum": 50,
-      "qualifier": "up to",
-      "status": "intended"
-    },
     "region": "United States",
-    "participantStatus": "not-yet-selected",
-    "resultsStatus": "no-results-yet",
     "researchType": [
       "real-world participant research",
       "structured observation",
@@ -27,14 +20,8 @@
       "treatment",
       "healthcare service"
     ],
-    "researchQuestion": "Who finds Lume useful, in what situations, and under what nighttime habits?",
+    "researchQuestion": "Who finds Lume useful, in which nighttime situations, where its value is limited, and who may not find it suitable?",
     "principle": "We're not looking for positive reviews. We're looking for honest results."
-  },
-  "application": {
-    "provider": "Google Forms",
-    "status": "opening-soon",
-    "urlSource": "/assets/js/sleep-program-application.js#SLEEP_PROGRAM_APPLICATION_URL",
-    "fallbackTarget": "#application-status"
   },
   "timeline": [
     {
