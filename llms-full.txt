@@ -29,16 +29,12 @@ Owlnest is a nighttime living brand: made for life after dark. It creates object
 - Two Singles purchased separately: USD 238
 - Duo savings: USD 19
 
-This resource does not assert live stock, immediate fulfillment, or shipping speed.
-
 ## Lab and Research Architecture
 
-- Lab is Owlnest's overall research and learning ecosystem.
+- Owlnest Sleep Lab is the public long-term real-life research system.
 - Science explains established research and general mechanisms involving nighttime light, spectrum, exposure, and biological timing.
-- Evidence explains support level: established research, Lume design rationale, product-specific evidence status, and participant research status.
-- The 21-Day Sleep Program is a structured real-world participant program inside Lab.
-- Applications are opening soon for up to 50 selected people in the United States.
-- No participant results, percentages, findings, or conclusions have been published.
+- Evidence presents established research, Lume design rationale, and claim boundaries.
+- The 21-Day Sleep Program is one structured real-life research method used by Sleep Lab.
 
 ## Core Difference
 
@@ -66,8 +62,6 @@ Lume is a sleep-environment tool, not an ordinary night light, RGB lamp, red-lig
 - No subscription
 - No sleep score
 
-Brightness adjustment, multiple modes, timer functions, and automatic dimming are unconfirmed. Do not claim them unless confirmed by a current product specification.
-
 ## Use Guidance
 
 Use Lume after dark during the wind-down before bed. It can also be used for brief nighttime wake-ups when a small amount of light is still needed. The final 1 to 2 hours before bed is practical guidance, not a product-tested threshold. At bedtime, switch Lume off unless a small light is still needed.
@@ -76,14 +70,7 @@ Do not infer that keeping Lume on all night improves sleep, has no effect on mel
 
 ## Evidence Summary
 
-The Science and Evidence pages contain published research and institutional references supporting general lighting design principles. They do not establish product-specific clinical outcomes for Lume.
-
-Current public evidence status:
-- Product-specific SPD measurement: pending
-- Same-condition ordinary warm lamp comparison: pending
-- Measurement method, distance, angle, illuminance, and output conditions: pending
-- Product-specific melanopic metrics: pending
-- Product-specific clinical sleep outcomes: unavailable and not claimed
+The Science and Evidence pages contain published research and institutional references supporting general lighting design principles. These sources inform Lume's design rationale; they do not establish product-specific clinical outcomes.
 
 Never use an AI-generated spectrum, conceptual curve, or color temperature alone as product measurement evidence.
 

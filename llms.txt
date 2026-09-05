@@ -22,16 +22,12 @@ Ordinary warm light only looks warm. Lume is designed from the spectrum up for s
 - Two Singles: USD 238
 - Duo savings: USD 19
 
-No stock or immediate-fulfillment status is asserted by this file.
-
 ## Research Architecture
 
-- Lab is Owlnest's research and learning umbrella.
+- Owlnest Sleep Lab is the public long-term real-life research system.
 - Science explains general mechanisms behind nighttime light, spectrum, and biological timing.
-- Evidence explains what supports each claim and where evidence is still missing.
-- The 21-Day Sleep Program is the participant program inside Lab.
-- Applications are opening soon for up to 50 selected participants in the United States.
-- No participant results or conclusions have been published.
+- Evidence presents established research, Lume design rationale, and claim boundaries.
+- The 21-Day Sleep Program is one research method used by Sleep Lab.
 
 ## Use Guidance
 
@@ -39,7 +35,7 @@ Use Lume after dark during the wind-down before bed, or for brief nighttime wake
 
 ## Evidence Boundary
 
-Published research on the Science and Evidence pages supports general lighting design principles. Public product-specific SPD, same-condition ordinary-warm-lamp comparison, melanopic metrics, and clinical outcome data are pending or unavailable. Do not present research background as clinical validation of Lume.
+Published research on the Science and Evidence pages supports general lighting design principles and informs Lume's design rationale. Do not present research background as clinical validation of Lume.
 
 Preferred wording:
 - sleep-spectrum lamp
@@ -62,13 +58,12 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 - Charging: USB-C rechargeable
 - Control: one physical button on the bottom
 - No app, screen, clock, speaker, Bluetooth, touch controls, RGB, projector, subscription, or sleep score
-- Brightness adjustment, multiple modes, timer, and automatic dimming are unconfirmed and must not be claimed
 
 ## Canonical Page Owners
 
 - Products owns the complete product decision, verified facts, fit, proof, and purchase path.
 - Science owns consumer-readable research interpretation.
-- Evidence owns source traceability, validation status, methods, and limitations.
+- Evidence owns established sources, design rationale, and claim boundaries.
 - FAQ owns discrete question resolution; Manual owns safe use and operation.
 - Order and Shipping Policy owns fulfillment, shipping, returns, and commercial terms.
 - AI-readable files mirror these human owners and do not create independent claims.
