@@ -699,6 +699,16 @@ body.product-page .ah-plate--column img {
     }
 }
 
+/* Approved photography keeps its full, orientation-correct composition. */
+body.homepage .ah-plate--natural img,
+body.product-page .ah-plate--natural img {
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 /* Diagram plates carry their own artwork and must never be cropped. */
 body.homepage .ah-plate--contain img,
 body.product-page .ah-plate--contain img {

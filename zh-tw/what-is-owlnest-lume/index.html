@@ -105,7 +105,8 @@
     <style>
         body { background:#111927; color:#fff; overflow-x:hidden; }
         .page-band { padding-top:clamp(4.5rem,8vw,7rem); padding-bottom:clamp(4.5rem,8vw,7rem); }
-        .what-is-image { aspect-ratio:3 / 2; object-fit:cover; object-position:center; }
+        .what-is-photo { max-width: 38rem; margin-inline: auto; }
+        .what-is-image { height: auto; object-fit: contain; }
         #mobile-menu { transform:translateY(-100%); transition:transform .35s ease; visibility:hidden; pointer-events:none; overflow-y:auto; }
         #mobile-menu.open { transform:translateY(0); visibility:visible; pointer-events:auto; }
             body { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -264,8 +265,8 @@
                 <span class="section-label block text-amber tracking-[0.14em] uppercase text-xs font-bold">為夜晚而設計</span>
                 <h2 class="mt-4 font-serif text-4xl md:text-5xl leading-tight">為夜晚的生活設計</h2>
                 <p class="mt-7 max-w-2xl text-lg text-midnight/68 leading-relaxed">床邊、閱讀、睡前放鬆。</p>
-                <figure class="mt-10 overflow-hidden border border-midnight/10 bg-midnight p-3">
-                    <img src="/assets/images/what-is/_MG_1444(1).JPG" width="3840" height="5760" loading="lazy" decoding="async" alt="Owlnest Lume 在棚拍環境中發出深琥珀光" class="what-is-image block w-full">
+                <figure class="what-is-photo mt-10 overflow-hidden border border-midnight/10 bg-midnight p-3">
+                    <img src="/assets/images/what-is/_MG_1444(1).JPG" width="3840" height="5760" loading="lazy" decoding="async" alt="圓桌上亮燈的 Lume" class="what-is-image block w-full">
                 </figure>
             </div>
         </section>

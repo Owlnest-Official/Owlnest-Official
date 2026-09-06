@@ -226,8 +226,8 @@ body.sleep-program-page.zh {
 .program-photo-grid img {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 .program-photo-grid figcaption {
