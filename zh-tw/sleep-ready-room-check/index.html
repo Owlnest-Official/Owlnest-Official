@@ -196,6 +196,7 @@
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/site-navigation.css">
 </head>
 <body class="font-sans antialiased selection:bg-amber selection:text-midnight">
     <!-- Google Tag Manager (noscript) -->
@@ -210,12 +211,10 @@
 
         <div class="hidden lg:flex items-center gap-10 nav-links">
             <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60">
-                <a href="/zh-tw/" class="hover:text-amber transition-colors duration-300">首頁</a>
-                <a href="/zh-tw/products/" class="hover:text-amber transition-colors duration-300">產品</a>
-                <a href="/zh-tw/lab/" class="hover:text-amber transition-colors duration-300">Lab</a>
-                <a href="/zh-tw/campaign/" class="hover:text-amber transition-colors duration-300">21 天計畫</a>
-                <a href="/zh-tw/about/" class="hover:text-amber transition-colors duration-300">關於</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors duration-300">聯絡我們</a>
+                <a href="/zh-tw/products/" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+                <a href="/zh-tw/science/" class="text-white/80 hover:text-amber transition-colors">科學</a>
+                <a href="/zh-tw/lab/" class="text-white/80 hover:text-amber transition-colors">Sleep Lab</a>
+                <a href="/zh-tw/about/" class="text-white/80 hover:text-amber transition-colors">關於</a>
             </nav>
 
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
@@ -256,13 +255,10 @@
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-
-            <a href="/zh-tw/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">首頁</a>
-            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">產品</a>
-            <a href="/zh-tw/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lab</a>
-            <a href="/zh-tw/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">21 天計畫</a>
-            <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
-            <a href="/zh-tw/contact/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">聯絡我們</a>
+            <a href="/zh-tw/products/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+                <a href="/zh-tw/science/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">科學</a>
+                <a href="/zh-tw/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Sleep Lab</a>
+                <a href="/zh-tw/about/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">關於</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -279,7 +275,7 @@
             </div>
             <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
                 <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 LUME</a>
-                <a href="/zh-tw/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">房間檢查</a>
+
             </div>
         </nav>
     </div>
@@ -447,18 +443,7 @@
         </section>
     </main>
 
-    <footer class="site-footer bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
-        <div class="footer-centered max-w-[720px] mx-auto text-center">
-            <p class="footer-brand font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-            <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">為夜晚特調的睡眠光譜燈</p>
-            <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
-                <a href="/zh-tw/preorder-policy/" class="hover:text-amber transition-colors">訂單與配送政策</a>
-                <a href="/zh-tw/disclaimer/" class="hover:text-amber transition-colors">政策</a>
-                <a href="/zh-tw/contact/" class="hover:text-amber transition-colors">聯絡我們</a>
-            </div>            <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie 設定</button>
-            <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/zh-tw/">OWLNEST</a><nav class="footer-groups" aria-label="頁尾導覽"><div><h2>產品</h2><ul><li><a href="/zh-tw/products/">Lume</a></li><li><a href="/zh-tw/what-is-owlnest-lume/">認識 Lume</a></li><li><a href="/zh-tw/manual/">使用手冊</a></li></ul></div><div><h2>探索</h2><ul><li><a href="/zh-tw/science/">科學</a></li><li><a href="/zh-tw/evidence/">證據依據</a></li><li><a href="/zh-tw/lab/">Sleep Lab</a></li><li><a href="/zh-tw/campaign/">21 天計畫</a></li><li><a href="/zh-tw/sleep-ready-room-check/">房間檢查</a></li></ul></div><div><h2>關於與協助</h2><ul><li><a href="/zh-tw/about/">關於</a></li><li><a href="/zh-tw/faq/">常見問題</a></li><li><a href="/zh-tw/reviews/">使用者回饋</a></li><li><a href="/zh-tw/contact/">聯絡</a></li><li><a href="/zh-tw/disclaimer/">政策</a></li><li><a href="/zh-tw/preorder-policy/">訂單與配送</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie 設定</button></div></div></footer>
 
     <script>
         const questions = [

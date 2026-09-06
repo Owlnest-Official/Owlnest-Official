@@ -397,6 +397,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/home.css?v=20260819">
     <link rel="stylesheet" href="/assets/css/after-hours.css?v=20260820">
+    <link rel="stylesheet" href="/assets/css/site-navigation.css">
 </head>
 <body class="homepage bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <!-- Google Tag Manager (noscript) -->
@@ -413,12 +414,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
 
             <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
-                <a href="/" class="text-amber transition-colors duration-300" aria-current="page">Home</a>
-                <a href="/products" class="hover:text-amber transition-colors duration-300">Products</a>
-                <a href="/lab/" class="hover:text-amber transition-colors duration-300">Lab</a>
-                <a href="/campaign/" class="hover:text-amber transition-colors duration-300">21-Day Program</a>
-                <a href="/about" class="hover:text-amber transition-colors duration-300">About Us</a>
-                <a href="/contact" class="hover:text-amber transition-colors duration-300">Contact Us</a>
+                <a href="/products" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+                <a href="/science" class="text-white/80 hover:text-amber transition-colors">Science</a>
+                <a href="/lab/" class="text-white/80 hover:text-amber transition-colors">Sleep Lab</a>
+                <a href="/about" class="text-white/80 hover:text-amber transition-colors">About</a>
             </nav>
 
             <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
@@ -452,13 +451,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white" aria-hidden="true">
         <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-
-            <a href="/" onclick="toggleMobileMenu()" class="text-amber transition-colors" aria-current="page">Home</a>
-            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lab</a>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">21-Day Program</a>
-            <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="/contact" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
+            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
+                <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
+                <a href="/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Sleep Lab</a>
+                <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About</a>
             <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -475,7 +471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
                         <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
                 <a href="/products#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">Buy Lume</a>
-                <a href="/sleep-ready-room-check/" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:border-amber hover:text-amber transition-colors">Room Check</a>
+
             </div>
         </nav>
     </div>
@@ -665,20 +661,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </main>
 
         <!-- Footer anchored in dark midnight -->
-        <footer class="site-footer bg-midnight border-t border-white/5 py-14 md:py-16 px-6">
-            <div class="footer-centered max-w-[720px] mx-auto text-center">
-                <p class="footer-brand font-serif text-2xl tracking-[0.18em] font-bold text-white">OWLNEST</p>
-                <p class="footer-tagline mt-4 max-w-xl mx-auto text-sm leading-relaxed text-white/80">Made for life after dark.</p>
-                <div class="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.14em] text-white/45">
-                    <a href="/preorder-policy" class="hover:text-amber transition-colors">Order &amp; Shipping Policy</a>
-                    <a href="/disclaimer" class="hover:text-amber transition-colors">Policy</a>
-                    <a href="/faq/" class="hover:text-amber transition-colors">FAQ</a>
-                    <a href="/contact" class="hover:text-amber transition-colors">Contact</a>
-                </div>
-                <button type="button" data-cookie-settings class="owlnest-cookie-settings mt-5 text-[11px] uppercase tracking-[0.14em] text-white/45 hover:text-amber">Cookie Settings</button>
-                <p class="footer-copyright mt-7 text-[10px] text-white/65 uppercase tracking-[0.16em]">&copy; 2026 Owlnest Official. All rights reserved.</p>
-            </div>
-        </footer>
+        <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/">OWLNEST</a><nav class="footer-groups" aria-label="Footer navigation"><div><h2>Product</h2><ul><li><a href="/products">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div><h2>Learn</h2><ul><li><a href="/science">Science</a></li><li><a href="/evidence/">Evidence</a></li><li><a href="/lab/">Sleep Lab</a></li><li><a href="/campaign/">21-Day Program</a></li><li><a href="/sleep-ready-room-check/">Room Check</a></li></ul></div><div><h2>Company &amp; Support</h2><ul><li><a href="/about">About</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/contact">Contact</a></li><li><a href="/disclaimer">Policy</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie Settings</button></div></div></footer>
 
     <!-- JavaScript Base -->
     <script>
