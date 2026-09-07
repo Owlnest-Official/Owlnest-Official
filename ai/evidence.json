@@ -80,12 +80,6 @@
       "does_not_support": "That Owlnest has completed or published those measurements for Lume."
     }
   ],
-  "removed_from_active_lume_evidence_mapping": [
-    "athlete red-light sleep studies",
-    "OLED engineering papers",
-    "ITRI background and healthcare-lighting materials"
-  ],
-  "removal_reason": "These materials may provide indirect background, but they do not directly validate Lume and are not part of the current validated core source set.",
   "recommended_wording": [
     "research-informed design",
     "sleep-spectrum lamp",
@@ -105,7 +99,7 @@
     "fixes or resets circadian rhythm",
     "guaranteed better sleep"
   ],
-  "last_updated": "2026-08-19",
+  "last_updated": "2026-09-06",
   "language_versions": {
     "en": "https://owlnestofficial.com/evidence/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"
@@ -116,5 +110,6 @@
     "zh-Hant_evidence": "https://owlnestofficial.com/zh-tw/evidence/",
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
     "zh-Hant_twenty_one_day_sleep_program": "https://owlnestofficial.com/zh-tw/campaign/"
-  }
+  },
+  "conceptual_visual_rule": "Conceptual spectrum visuals are educational, not measured product data."
 }

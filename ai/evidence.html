@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Evidence Brief | Owlnest Official</title>
-    <meta name="description" content="An AI-readable map of established research, Lume design rationale, product-specific evidence status, and participant research status.">
+    <meta name="description" content="Established light science, Lume design rationale, and source references for AI readers.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://owlnestofficial.com/evidence/">
     <meta property="og:title" content="AI Evidence Brief | Owlnest Official">
-    <meta property="og:description" content="An AI-readable map of established research, Lume design rationale, product-specific evidence status, and participant research status.">
+    <meta property="og:description" content="Established light science, Lume design rationale, and source references for AI readers.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://owlnestofficial.com/evidence/">
     <meta property="og:image" content="https://owlnestofficial.com/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Evidence Brief | Owlnest Official">
-    <meta name="twitter:description" content="An AI-readable map of established research, Lume design rationale, product-specific evidence status, and participant research status.">
+    <meta name="twitter:description" content="Established light science, Lume design rationale, and source references for AI readers.">
     <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
@@ -27,7 +27,12 @@
         #mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
         #main-header { background: rgba(12, 18, 30, .78); backdrop-filter: blur(18px) saturate(130%); -webkit-backdrop-filter: blur(18px) saturate(130%); border-bottom: 1px solid rgba(255,255,255,.08); box-shadow: 0 8px 30px rgba(0,0,0,.18); }
         #nav-logo { height: 2.25rem; width: auto; object-fit: contain; }
+        #main-header > div { width: 100%; }
         @media (min-width: 768px) { #nav-logo { height: 2.5rem; } }
+        @media (max-width: 1023px) {
+            #main-header > div { grid-template-columns: 1fr auto; }
+            #main-header button { grid-column: 2; width: 44px; min-height: 44px; }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -104,7 +109,7 @@
                 <p class="text-[11px] uppercase tracking-[0.2em] text-amber font-semibold">AI-readable evidence brief</p>
                 <h1 class="mt-4 font-serif text-4xl md:text-6xl leading-tight text-white">Evidence, with the boundaries visible.</h1>
                 <p class="mt-6 max-w-4xl text-white/70 leading-relaxed">This resource mirrors the public Evidence page: established research and Lume's design rationale.</p>
-                <p class="mt-4 text-xs uppercase tracking-[0.16em] text-white/50">Last updated: <time datetime="2026-08-19">August 19, 2026</time></p>
+                <p class="mt-4 text-xs uppercase tracking-[0.16em] text-white/50">Last updated: <time datetime="2026-09-06">September 6, 2026</time></p>
             </div>
         </section>
 
@@ -152,9 +157,9 @@
                 <article class="border border-white/10 bg-white/5 rounded-sm p-6 md:p-8">
                     <h2 class="font-serif text-2xl md:text-3xl text-white">Canonical owners</h2>
                     <ul class="mt-5 space-y-3 text-white/72 leading-relaxed break-words">
-                        <li><a href="/lab/" class="text-white hover:text-amber underline underline-offset-4">Lab — research umbrella</a></li>
+                        <li><a href="/lab/" class="text-white hover:text-amber underline underline-offset-4">Owlnest Sleep Lab — real-life research</a></li>
                         <li><a href="/science" class="text-white hover:text-amber underline underline-offset-4">Science — general mechanisms</a></li>
-                        <li><a href="/evidence/" class="text-white hover:text-amber underline underline-offset-4">Evidence — claim support status</a></li>
+                        <li><a href="/evidence/" class="text-white hover:text-amber underline underline-offset-4">Evidence — sources and design rationale</a></li>
                         <li><a href="/products" class="text-white hover:text-amber underline underline-offset-4">Products — Lume decision and purchase</a></li>
                         <li><a href="/campaign/" class="text-white hover:text-amber underline underline-offset-4">21-Day Sleep Program — participant program</a></li>
                         <li><a href="/ai/evidence.json" class="text-white hover:text-amber underline underline-offset-4">Evidence JSON</a></li>

@@ -1,6 +1,6 @@
 # Owlnest Official
 
-Last updated: 2026-08-19
+Last updated: 2026-09-06
 
 Owlnest is a nighttime living brand: made for life after dark. Lume is its first hero product, not the full limit of the brand.
 
@@ -27,11 +27,11 @@ Ordinary warm light only looks warm. Lume is designed from the spectrum up for s
 - Owlnest Sleep Lab is the public long-term real-life research system.
 - Science explains general mechanisms behind nighttime light, spectrum, and biological timing.
 - Evidence presents established research, Lume design rationale, and claim boundaries.
-- The 21-Day Sleep Program is one research method used by Sleep Lab.
+- The 21-Day Sleep Program is one research method used by Sleep Lab, focused on product–user fit rather than universal effectiveness. Positive, neutral, unchanged, and negative feedback are retained.
 
 ## Use Guidance
 
-Use Lume after dark during the wind-down before bed, or for brief nighttime wake-ups when a small amount of light is still needed. The final 1 to 2 hours before bed is practical guidance, not a product-tested threshold. At bedtime, switch it off unless a small light is still needed. Owlnest does not claim that all-night use improves sleep or has no effect on melatonin.
+Use Lume after dark during the wind-down before bed, or for brief nighttime wake-ups when a small amount of light is still needed. At bedtime, switch it off unless a small light is still needed. Owlnest does not claim that all-night use improves sleep or has no effect on melatonin.
 
 ## Evidence Boundary
 
@@ -57,7 +57,7 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 - Light: rich deep amber / saturated orange-red dusk-like glow
 - Charging: USB-C rechargeable
 - Control: one physical button on the bottom
-- No app, screen, clock, speaker, Bluetooth, touch controls, RGB, projector, subscription, or sleep score
+- No app, screen, clock, speaker, Bluetooth, touch controls, knob, RGB, projector, subscription, or sleep score
 
 ## Canonical Page Owners
 

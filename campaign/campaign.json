@@ -6,7 +6,6 @@
     "nameZhTw": "21 天睡眠計畫",
     "ecosystem": "Owlnest Sleep Lab",
     "durationDays": 21,
-    "region": "United States",
     "researchType": [
       "real-world participant research",
       "structured observation",
@@ -21,7 +20,7 @@
       "healthcare service"
     ],
     "researchQuestion": "Who finds Lume useful, in which nighttime situations, where its value is limited, and who may not find it suitable?",
-    "principle": "We're not looking for positive reviews. We're looking for honest results."
+    "principle": "Product–user fit, retaining positive, neutral, no meaningful change, and negative feedback."
   },
   "timeline": [
     {
@@ -30,15 +29,19 @@
     },
     {
       "day": 7,
-      "stage": "First check-in"
+      "stage": "Check-in"
     },
     {
       "day": 14,
-      "stage": "Second check-in"
+      "stage": "Check-in"
     },
     {
       "day": 21,
-      "stage": "Final reflection"
+      "stage": "Review"
+    },
+    {
+      "day": 30,
+      "stage": "Follow-up"
     }
   ],
   "links": {

@@ -1,5 +1,21 @@
 # Owlnest Cross-Conversation Decision Ledger
 
+## Current convergence decision — 2026-09-06
+
+Batch D confirms the current Brand Truth, Operating Brief, Site Architecture, and unchanged `OWLNEST_IMAGE_PLACEMENT_2026-09.md` as the implementation references.
+
+- Active user requirements and verified protected commerce facts outrank old snapshots. Historical price, fulfillment, Campaign, and page-count entries below are not current operational facts.
+- Only Owlnest Sleep Lab is public; the 21-Day Sleep Program is one real-life research method. Its timeline includes Day 30 follow-up.
+- Product–user fit, not universal effectiveness; retain positive, neutral, unchanged, and negative feedback.
+- Science owns general principles; Evidence owns established sources and design rationale. No conceptual visual may imply measured product data.
+- Omit nonexistent public features/results/applications instead of displaying pending status or placeholders. Never invent evidence or a replacement promise.
+- Delete before adding. One section, one idea; short support copy; no repeated education across pages.
+- Hardware includes one bottom physical button and USB-C; no touch, knob, app, or screen.
+- Current images follow the September placement document, not the historical Before / With Lume suggestion below.
+- Authorized releases use main → QA → commit → push origin/main → existing VPS auto-sync. Do not create branches or use Netlify Hosting.
+
+The remainder preserves the earlier decision record. Its dated implementation observations and old CURRENT labels are historical wherever superseded above; never restore them into public copy or commerce.
+
 **Version:** 1.0
 
 **Compiled:** 2026-07-21

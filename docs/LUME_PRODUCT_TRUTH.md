@@ -2,7 +2,7 @@
 
 Status: Master internal source of truth
 
-Effective date: 2026-07-17
+Effective date: 2026-09-06 (Batch D synchronization; core product facts retained)
 
 Version baseline: `a23a1f9eec9f1c775bb03c1cd1148acff10440fa`
 
@@ -12,7 +12,7 @@ This document governs future Owlnest Lume website, FAQ, campaign, science, SEO, 
 
 Parent brand source of truth: `docs/OWLNEST_BRAND_TRUTH.md`
 
-The 2026-07-17 Owlnest website positioning directive is newer than the existing brand and marketing files. Where an older file conflicts with this document or `docs/OWLNEST_BRAND_TRUTH.md`, the two source-of-truth documents win. Do not silently infer missing specifications or evidence.
+Active user decisions and verified protected product/commerce facts take precedence over historical references. Read the current Brand Truth and Operating Brief for page ownership, permanent copy compression, confidence language, and Sleep Lab architecture. Do not silently infer specifications or evidence. Section 11 is a historical July inventory, not a current public-content checklist.
 
 ## 1. Product Definition
 
@@ -193,7 +193,7 @@ Approved only when supported by real product-specific records:
 - measurement conditions, distance, angle, output setting, equipment, and date
 - product-specific illuminance or melanopic metrics
 
-Current status: **pending**. No public product-specific spectral report is present in the repository.
+Internal rule: require verifiable product records before asserting a measured result. Do not publish absence notices, placeholders, or release promises.
 
 ### Level 5: Sleep outcome
 
@@ -364,6 +364,7 @@ Approved physical facts from the 2026-07-17 handoff:
 - no speaker
 - no Bluetooth
 - no touch controls
+- no knob
 - no RGB
 - no projector
 - no subscription
@@ -381,18 +382,18 @@ Do not add or imply any of the following until separately confirmed:
 
 ### Known specification conflicts
 
-The current public site and `ai/product.json` state `11 x 11 x 12 cm`. This conflicts with the newer approved total height of approximately `14 to 15 cm`.
+Historical public copy used `11 x 11 x 12 cm`, superseded by the approved total height of approximately `14 to 15 cm`.
 
 Decision:
 
 - `11 x 11 x 12 cm` is not approved for future public copy.
 - Use only `approximately 14 to 15 cm tall` until width, depth, and final production measurements are reconfirmed.
 
-The current manual states `1500K-1800K`. No product-specific measurement report supporting that range is present in the repository.
+Historical manual copy used `1500K-1800K`; this is not an approved measured specification.
 
 Decision:
 
-- Treat `1500K-1800K` as pending validation.
+- Do not infer a measured CCT from the product's appearance.
 - Do not use the numeric range in new public copy until measurement records are available.
 
 ## 9. Evidence Status
@@ -407,15 +408,7 @@ General research and institutional background are available through the existing
 
 These sources support design principles only. They do not prove Lume-specific biological or clinical outcomes.
 
-Real product and hardware imagery exists in the repository, including:
-
-- `lume-real-photo-on.jpg`
-- `lume-real-photo-off.jpg`
-- `lume-night-effect.jpg`
-- `lume-usb-c.jpg`
-- `lume-bottom-button.jpg`
-- `lume-size-reference.jpg`
-- `lume-package-contents.jpg`
+Use only the exact current assets assigned in `docs/OWLNEST_IMAGE_PLACEMENT_2026-09.md`. Historical product and spectrum assets are not permission to restore public references.
 
 These images may support appearance and hardware facts. They are not spectral or clinical evidence.
 
@@ -433,7 +426,7 @@ The repository does not contain a public, product-specific:
 - product-specific clinical trial
 - controlled user sleep-outcome study
 
-Status: **pending**.
+These are internal publication boundaries, not public placeholders or promises.
 
 ### Evidence display rule
 
@@ -443,7 +436,8 @@ Until real measurement data is available:
 - do not label them as measured, tested, lab data, or real SPD
 - do not manufacture a comparison curve
 - do not infer numbers from the lamp's visual appearance
-- use a clearly marked placeholder or TODO for the future measured comparison
+- do not present conceptual spectrum visuals as measured product data
+- omit nonexistent measurements and results from public pages; no placeholders or TODOs
 
 When measurement becomes available, publish the data only with its test conditions and limitations.
 
@@ -586,7 +580,7 @@ Use only as the negative boundary `Lume is not a medical device` / `Lume 不是�
 - Read `docs/OWLNEST_BRAND_TRUTH.md` before assigning brand, product, Hero, or campaign lines.
 - Do not change every page at once.
 - Preserve scientific depth, but move detailed education behind a short consumer bridge.
-- Every major product page must retain at least one science anchor and a Science-page entry point.
+- Follow current page ownership. Do not force a science explanation or duplicate CTA onto every product or support page.
 - Do not turn an educational illustration into product evidence.
 - Do not publish a measured-spectrum comparison until real data and test conditions exist.
 - Keep English and Traditional Chinese product facts aligned.
