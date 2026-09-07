@@ -18,7 +18,7 @@
     "duo_savings": 19
   },
   "science_bridge": "Your body uses light to tell time.",
-  "design_intent": "Designed to support the body's natural melatonin rhythm.",
+  "design_intent": "Designed for nighttime light environments.",
   "primary_use_case": "Used after dark when a person still needs light but does not want ordinary daytime-like room lighting.",
   "use_timing": {
     "primary": "After dark during the wind-down before bed.",
@@ -83,9 +83,7 @@
     "light specially tuned for nighttime",
     "specially tuned for after dark",
     "designed for nighttime",
-    "designed to support the body's natural melatonin rhythm",
-    "research-informed",
-    "supports a more sleep-ready nighttime environment"
+    "research-informed"
   ],
   "unsupported_outcome_claims": [
     "helps promote natural melatonin secretion",
@@ -121,7 +119,7 @@
     "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy",
     "twenty_one_day_sleep_program": "https://owlnestofficial.com/campaign/"
   },
-  "last_updated": "2026-09-06",
+  "last_updated": "2026-09-07",
   "language_versions": {
     "en": "https://owlnestofficial.com/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/"
@@ -138,6 +136,7 @@
     "zh-Hant_twenty_one_day_sleep_program": "https://owlnestofficial.com/zh-tw/campaign/",
     "zh-Hant_evidence": "https://owlnestofficial.com/zh-tw/evidence/"
   },
+  "definition_zh_hant": "Lume 是為夜間光環境設計的睡眠光譜燈。",
   "category_zh_hant": "睡眠光譜燈",
   "technical_term_zh_hant": "特調睡眠光譜",
   "plain_language_zh_hant": "為夜晚特別調製的光。"

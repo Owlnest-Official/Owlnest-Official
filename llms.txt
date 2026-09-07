@@ -1,6 +1,6 @@
 # Owlnest Official
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 
 Owlnest is a nighttime living brand: made for life after dark. Lume is its first hero product, not the full limit of the brand.
 
@@ -11,7 +11,7 @@ Owlnest Lume is a sleep-spectrum lamp, specially tuned for after dark. In plain 
 - Product tagline: Night deserves its own light.
 - Hero hook: Your room knows it’s night. Your light doesn’t.
 - Science bridge: Your body uses light to tell time.
-- Design intent: Designed to support the body's natural melatonin rhythm.
+- Design intent: Designed for nighttime light environments.
 
 Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep. Warm is how light looks; spectrum is what the light contains.
 
@@ -42,9 +42,7 @@ Preferred wording:
 - specially tuned sleep spectrum
 - light specially tuned for nighttime
 - specially tuned for after dark
-- designed to support the body's natural melatonin rhythm
 - research-informed
-- supports a more sleep-ready nighttime environment
 
 Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a medical treatment. Do not claim guaranteed sleep or melatonin outcomes.
 

@@ -1,6 +1,6 @@
 # Owlnest Official AI Source of Truth
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 
 ## Brand Architecture
 
@@ -20,7 +20,7 @@ Owlnest is a nighttime living brand: made for life after dark. It creates object
 - Technical term: specially tuned sleep spectrum
 - Plain-language translation: Light specially tuned for nighttime.
 - Science bridge: Your body uses light to tell time.
-- Design intent: Designed to support the body's natural melatonin rhythm.
+- Design intent: Designed for nighttime light environments.
 
 ## Current Public Pricing
 
@@ -101,9 +101,7 @@ These sources support general scientific principles and measurement frameworks o
 - light specially tuned for nighttime
 - specially tuned for after dark
 - designed for nighttime
-- designed to support the body's natural melatonin rhythm
 - research-informed
-- supports a more sleep-ready nighttime environment
 
 ## Conditional Wording Requiring More Product Evidence
 
@@ -165,9 +163,9 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 - Light specially tuned for nighttime.: 為夜晚特別調製的光。
 - Night deserves its own light.: 夜晚，值得有自己的光。
 - Hero hook: 房間知道夜深了，燈卻還不知道。
-- Product definition: Lume 是為天黑後特別調製的睡眠光譜燈。
+- Product definition: Lume 是為夜間光環境設計的睡眠光譜燈。
 - Science bridge: 身體會從光，判斷現在是什麼時候。
-- Melatonin design intent: 設計用來支持身體自然的褪黑激素節律。
+- Design intent: 為夜間光環境設計。
 
 English pages are the x-default. Traditional Chinese pages under `/zh-tw/` use `zh-Hant`, natural Taiwan-facing language, and the same product facts and claim boundaries.
 

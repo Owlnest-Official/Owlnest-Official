@@ -55,6 +55,14 @@ Public site should present what is real and ready today. Omit nonexistent conten
 
 EN/ZH retain identical architecture, imagery, CTA logic, and facts. Chinese is natural Taiwan usage, not literal translation.
 
+## SEO / AEO / GEO and Taiwan copy
+
+- SEO: accurate metadata, canonical/hreflang, existing sitemap routes, headings, alt and visible-content-matched schema. No keyword padding.
+- AEO: the heading or first paragraph answers the page’s question. Keep real FAQ answers short and synchronize their existing schema.
+- GEO: stable Owlnest brand and Lume category; link facts to their page owner. Machine-readable claims must not exceed the human site.
+- Write Taiwan Chinese in natural sentence order. Prefer concrete verbs and short CTAs over literal translations, abstract nouns, or academic phrasing.
+- Keep approved taglines, product terms, evidence boundaries, real reviews, policies, and protected transaction content intact.
+
 ## Image and release checklist
 
 - Follow `docs/OWLNEST_IMAGE_PLACEMENT_2026-09.md` unchanged; no cross-family reuse.
