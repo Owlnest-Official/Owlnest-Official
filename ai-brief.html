@@ -151,6 +151,8 @@
       ]
     }
     </script>
+<link rel="stylesheet" href="/assets/css/site-navigation.css">
+<script type="application/json" id="site-architecture">{"name": "OWLNEST", "children": [{"name": "Home", "url": "https://owlnestofficial.com/"}, {"name": "Products", "url": "https://owlnestofficial.com/products#products", "children": [{"name": "Lume", "url": "https://owlnestofficial.com/products"}]}, {"name": "Lab", "url": "https://owlnestofficial.com/lab/#lab", "children": [{"name": "Sleep Lab", "url": "https://owlnestofficial.com/lab/", "role": "WHY + WHAT WE ARE LEARNING", "children": [{"name": "Science", "url": "https://owlnestofficial.com/science", "role": "WHAT SUPPORTS THE HYPOTHESIS", "supporting_page": {"name": "Evidence", "url": "https://owlnestofficial.com/evidence/", "role": "Claim support"}}, {"name": "21-Day Sleep Program", "url": "https://owlnestofficial.com/campaign/", "role": "HOW WE LEARN"}], "content_publication_rule": {"role": "Findings / Results", "parent": "OWLNEST > Lab > Sleep Lab", "purpose": "WHAT WE OBSERVED", "requirement": "Publish only real observations. A conceptual role is not a published page or a navigation entry."}}]}, {"name": "About", "url": "https://owlnestofficial.com/about"}, {"name": "Campaign / Current Program Entry", "target": "https://owlnestofficial.com/campaign/", "canonical_parent": "OWLNEST > Lab > Sleep Lab", "relationship": "Alternate entry to the same 21-Day Sleep Program, not a separate program system."}]}</script>
 </head>
 <body class="bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
         <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
@@ -160,14 +162,7 @@
                 <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
             </a>
 
-            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64">
-                <a href="/" class="hover:text-amber transition-colors duration-300">Home</a>
-                <a href="/products" class="hover:text-amber transition-colors duration-300">Products</a>
-                <a href="/lab/" class="hover:text-amber transition-colors duration-300">Sleep Lab</a>
-                <a href="/campaign/" class="hover:text-amber transition-colors duration-300">21-Day Program</a>
-                <a href="/about" class="hover:text-amber transition-colors duration-300">About Us</a>
-                <a href="/contact" class="hover:text-amber transition-colors duration-300">Contact Us</a>
-            </nav>
+            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64" aria-label="Primary navigation"><ul class="ia-primary-list"><li><details class="ia-dropdown"><summary>Products</summary><ul class="ia-panel"><li><a href="/products">Lume</a></li></ul></details></li><li><details class="ia-dropdown"><summary>Lab</summary><ul class="ia-panel"><li><a href="/lab/">Sleep Lab</a><ul><li><a href="/lab/">Overview</a></li><li><a href="/science">Science</a></li><li><a href="/campaign/">21-Day Sleep Program</a></li></ul></li></ul></details></li><li><a href="/about">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul></nav>
 
             <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
                 <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
@@ -199,14 +194,7 @@
     </header>
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center">
-            <a href="/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Home</a>
-            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Products</a>
-            <a href="/lab/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Sleep Lab</a>
-            <a href="/campaign/" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">21-Day Program</a>
-            <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About Us</a>
-            <a href="/contact" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Contact Us</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="Mobile navigation"><ul class="ia-primary-list"><li><details class="ia-dropdown"><summary>Products</summary><ul class="ia-panel"><li><a href="/products">Lume</a></li></ul></details></li><li><details class="ia-dropdown"><summary>Lab</summary><ul class="ia-panel"><li><a href="/lab/">Sleep Lab</a><ul><li><a href="/lab/">Overview</a></li><li><a href="/science">Science</a></li><li><a href="/campaign/">21-Day Sleep Program</a></li></ul></li></ul></details></li><li><a href="/about">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul><div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                     <path d="M20 21a8 8 0 0 0-16 0" />
@@ -377,7 +365,8 @@
                 </article>
             </div>
         </section>
-    </main>
+    <nav class="ia-resource-tree" aria-label="Research hierarchy"><h2>Lab</h2><ul><li><a href="/lab/">Sleep Lab — overview</a><ul><li><a href="/science">Science — research foundation</a><ul><li><a href="/evidence/">Evidence — claim support</a></li></ul></li><li><a href="/campaign/">21-Day Sleep Program — research method</a></li></ul></li></ul><p>Campaign is another entry to the same Sleep Lab program.</p></nav>
+</main>
 
     <footer class="bg-midnight border-t border-white/5 py-8 px-6">
         <div class="max-w-7xl mx-auto text-center md:text-left">
@@ -415,5 +404,6 @@
         });
     </script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
+    <script src="/assets/js/site-hierarchy.js" defer></script>
 </body>
 </html>

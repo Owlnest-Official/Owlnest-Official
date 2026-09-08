@@ -1,6 +1,6 @@
 # Owlnest Official AI Source of Truth
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ## Brand Architecture
 
@@ -31,12 +31,13 @@ Owlnest is a nighttime living brand: made for life after dark. It creates object
 
 ## Lab and Research Architecture
 
-- Owlnest Sleep Lab is the public long-term real-life research system.
-- Science explains established research and general mechanisms involving nighttime light, spectrum, exposure, and biological timing.
-- Evidence presents established research, Lume design rationale, and claim boundaries.
-- The 21-Day Sleep Program is one structured real-life research method used by Sleep Lab.
-- The goal is product–user fit: who benefits, in which situations, where value is limited, and who may not fit. Positive, neutral, no meaningful change, and negative feedback are retained.
-- Timeline: Day 0 — Baseline; Day 7 — Check-in; Day 14 — Check-in; Day 21 — Review; Day 30 — Follow-up.
+- OWLNEST → Products → Lume.
+- OWLNEST → Lab → Sleep Lab (Overview): WHY + WHAT WE ARE LEARNING.
+  - Science / Research Foundation: WHAT SUPPORTS THE HYPOTHESIS. Evidence is its auxiliary claim-support page.
+  - 21-Day Sleep Program: HOW WE LEARN. Real-life observation retains positive, neutral, unchanged, and negative feedback.
+- Findings / Results has the conceptual parent Sleep Lab and the role WHAT WE OBSERVED. Publish only real observations; a conceptual role is not a published page or navigation entry.
+- Campaign is an alternate entry to the same /campaign/ program under Sleep Lab. Promotional hierarchy does not override Information Architecture.
+- Lab and Products category anchors refer to existing pages, not separate parent routes.
 
 ## Core Difference
 
@@ -130,7 +131,7 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 
 - Homepage: https://owlnestofficial.com/
 - Products: https://owlnestofficial.com/products
-- Lab: https://owlnestofficial.com/lab/
+- Lab / Sleep Lab overview: https://owlnestofficial.com/lab/
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
@@ -145,7 +146,7 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 ## Canonical Page Ownership
 
 - Products owns the complete product decision, verified facts, fit, proof, and purchase path.
-- Owlnest Sleep Lab is the long-term real-life research system.
+- Lab → Sleep Lab owns real-life research; its Science and 21-Day Program pages supply the foundation and method.
 - Science owns consumer-readable research interpretation.
 - Evidence owns established sources and Lume design rationale, with clear scientific boundaries.
 - The 21-Day Sleep Program explains purpose, timeline, participation method, and honest feedback.

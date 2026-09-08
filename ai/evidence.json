@@ -8,14 +8,15 @@
   "product_category_zh_hant": "睡眠光譜燈",
   "source_of_truth": "Owlnest Truth documents and the current public Lab, Science, Evidence, Products, and 21-Day Sleep Program pages.",
   "canonical_owners": {
-    "research_umbrella": "https://owlnestofficial.com/lab/",
+    "research_umbrella": "https://owlnestofficial.com/lab/#lab",
     "product_decision": "https://owlnestofficial.com/products",
     "consumer_science": "https://owlnestofficial.com/science",
     "claim_support_status": "https://owlnestofficial.com/evidence/",
     "participant_program": "https://owlnestofficial.com/campaign/",
     "questions": "https://owlnestofficial.com/faq/",
     "safe_use": "https://owlnestofficial.com/manual",
-    "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy"
+    "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy",
+    "sleep_lab_overview": "https://owlnestofficial.com/lab/"
   },
   "public_pricing": {
     "currency": "USD",
@@ -99,7 +100,7 @@
     "fixes or resets circadian rhythm",
     "guaranteed better sleep"
   ],
-  "last_updated": "2026-09-06",
+  "last_updated": "2026-09-08",
   "language_versions": {
     "en": "https://owlnestofficial.com/evidence/",
     "zh-Hant": "https://owlnestofficial.com/zh-tw/evidence/"
@@ -111,5 +112,68 @@
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
     "zh-Hant_twenty_one_day_sleep_program": "https://owlnestofficial.com/zh-tw/campaign/"
   },
-  "conceptual_visual_rule": "Conceptual spectrum visuals are educational, not measured product data."
+  "conceptual_visual_rule": "Conceptual spectrum visuals are educational, not measured product data.",
+  "site_architecture": {
+    "name": "OWLNEST",
+    "children": [
+      {
+        "name": "Home",
+        "url": "https://owlnestofficial.com/"
+      },
+      {
+        "name": "Products",
+        "url": "https://owlnestofficial.com/products#products",
+        "children": [
+          {
+            "name": "Lume",
+            "url": "https://owlnestofficial.com/products"
+          }
+        ]
+      },
+      {
+        "name": "Lab",
+        "url": "https://owlnestofficial.com/lab/#lab",
+        "children": [
+          {
+            "name": "Sleep Lab",
+            "url": "https://owlnestofficial.com/lab/",
+            "role": "WHY + WHAT WE ARE LEARNING",
+            "children": [
+              {
+                "name": "Science",
+                "url": "https://owlnestofficial.com/science",
+                "role": "WHAT SUPPORTS THE HYPOTHESIS",
+                "supporting_page": {
+                  "name": "Evidence",
+                  "url": "https://owlnestofficial.com/evidence/",
+                  "role": "Claim support"
+                }
+              },
+              {
+                "name": "21-Day Sleep Program",
+                "url": "https://owlnestofficial.com/campaign/",
+                "role": "HOW WE LEARN"
+              }
+            ],
+            "content_publication_rule": {
+              "role": "Findings / Results",
+              "parent": "OWLNEST > Lab > Sleep Lab",
+              "purpose": "WHAT WE OBSERVED",
+              "requirement": "Publish only real observations. A conceptual role is not a published page or a navigation entry."
+            }
+          }
+        ]
+      },
+      {
+        "name": "About",
+        "url": "https://owlnestofficial.com/about"
+      },
+      {
+        "name": "Campaign / Current Program Entry",
+        "target": "https://owlnestofficial.com/campaign/",
+        "canonical_parent": "OWLNEST > Lab > Sleep Lab",
+        "relationship": "Alternate entry to the same 21-Day Sleep Program, not a separate program system."
+      }
+    ]
+  }
 }

@@ -1,6 +1,30 @@
 # Owlnest Brand Truth
 
-Status: Current internal authority • Updated 2026-09-06 (Batch D)
+## V1.1 information architecture — 2026-09-08
+
+The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
+
+| Parent | Child / role | Existing route |
+|---|---|---|
+| OWLNEST | Home | / |
+| OWLNEST → Products | Lume | /products |
+| OWLNEST → Lab | Sleep Lab overview — WHY + WHAT WE ARE LEARNING | /lab/ |
+| Lab → Sleep Lab | Science / Research Foundation — WHAT SUPPORTS THE HYPOTHESIS | /science |
+| Lab → Sleep Lab | 21-Day Sleep Program — HOW WE LEARN | /campaign/ |
+| Lab → Sleep Lab | Findings / Results — WHAT WE OBSERVED | Conceptual role only; no public URL or empty page |
+| Sleep Lab → Science | Evidence — auxiliary claim support, not a peer research module | /evidence/ |
+| OWLNEST | About | /about |
+| OWLNEST → Campaign entry | Same 21-Day Sleep Program under Sleep Lab | /campaign/ |
+
+Promotional hierarchy does not override Information Architecture. Home, Campaign, ads, and social may link directly to the same Program. Participant research belongs to Sleep Lab and its Program method, not a separate top-level category.
+
+Desktop and mobile use the same compact Products / Lab / About / Program-entry navigation. Lab contains Sleep Lab with Overview, Science, and Program. The footer nests the same research links, with Evidence under Science. Home is the brand-logo link.
+
+Visible breadcrumbs and BreadcrumbList agree: Home → Lab → Sleep Lab → Science / 21-Day Sleep Program; Home → Products → Lume. Category anchors /lab/#lab and /products#products represent the upper categories on existing pages, not invented routes. EN and ZH mirror this hierarchy; canonical and hreflang URLs stay unchanged.
+
+Publish Findings only from real observations. Do not create empty Results pages, sitemap entries, menu items, opening promises, participant counts, or application CTAs. No other Lab is introduced. JSON-LD and AI resources mirror the hierarchy; sitemap lists only existing canonical URLs.
+
+Status: Current internal authority • Updated 2026-09-08 (V1.1 IA; Batch D copy rules retained)
 
 The active user's locked decisions take precedence. Preserve current verified product and commerce facts; older briefs, Word drafts, reference files, and Git history cannot override them. AI resources mirror the human site and these rules, not the reverse.
 
@@ -62,7 +86,7 @@ Use existing routes. Do not create new page families or expose internal plans. F
 
 ## 4. Research and evidence
 
-Owlnest Sleep Lab is the only public Lab: a long-term real-life research system. The 21-Day Sleep Program is one method, not a separate Lab or clinical trial.
+Lab is the upper research category; Owlnest Sleep Lab is its only public Lab: a long-term real-life research system. The 21-Day Sleep Program is one method, not a separate Lab or clinical trial.
 
 The purpose is product–user fit: who finds value, in which nighttime situations, where value is limited, and who may not fit. Retain positive, neutral, no meaningful change, and negative feedback.
 

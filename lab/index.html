@@ -68,8 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/lab.css">
     <link rel="stylesheet" href="/assets/css/site-navigation.css">
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://owlnestofficial.com/lab/#webpage",
@@ -79,9 +78,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "inLanguage": "en",
   "publisher": {
     "@id": "https://owlnestofficial.com/#organization"
-  }
+  },
+  "isPartOf": {
+    "@id": "https://owlnestofficial.com/lab/#lab"
+  },
+  "breadcrumb": {
+    "@id": "https://owlnestofficial.com/lab/#breadcrumb"
+  },
+  "hasPart": [
+    {
+      "@id": "https://owlnestofficial.com/science#webpage"
+    },
+    {
+      "@id": "https://owlnestofficial.com/campaign/#webpage"
+    }
+  ]
+}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://owlnestofficial.com/lab/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://owlnestofficial.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Lab",
+          "item": "https://owlnestofficial.com/lab/#lab"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sleep Lab",
+          "item": "https://owlnestofficial.com/lab/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://owlnestofficial.com/lab/#lab",
+      "url": "https://owlnestofficial.com/lab/#lab",
+      "name": "Lab",
+      "isPartOf": {
+        "@id": "https://owlnestofficial.com/#website"
+      },
+      "hasPart": {
+        "@id": "https://owlnestofficial.com/lab/#webpage"
+      }
+    }
+  ]
 }
-    </script>
+</script>
 </head>
 <body class="lab-page antialiased selection:bg-amber selection:text-midnight">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -93,12 +148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </a>
 
         <div class="hidden lg:flex items-center gap-10 nav-links">
-            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="Primary navigation">
-                <a href="/products" class="text-white/80 hover:text-amber transition-colors">Lume</a>
-                <a href="/science" class="text-white/80 hover:text-amber transition-colors">Science</a>
-                <a href="/lab/" class="text-amber transition-colors" aria-current="page">Sleep Lab</a>
-                <a href="/about" class="text-white/80 hover:text-amber transition-colors">About</a>
-            </nav>
+            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="Primary navigation"><ul class="ia-primary-list"><li><details class="ia-dropdown"><summary>Products</summary><ul class="ia-panel"><li><a href="/products">Lume</a></li></ul></details></li><li><details class="ia-dropdown"><summary>Lab</summary><ul class="ia-panel"><li><a href="/lab/" aria-current="page">Sleep Lab</a><ul><li><a href="/lab/" aria-current="page">Overview</a></li><li><a href="/science">Science</a></li><li><a href="/campaign/">21-Day Sleep Program</a></li></ul></li></ul></details></li><li><a href="/about">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul></nav>
 
             <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
                 <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="Member Center" aria-label="Member Center" rel="nofollow">
@@ -137,12 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </header>
 
     <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="Mobile navigation">
-            <a href="/products" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Lume</a>
-                <a href="/science" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">Science</a>
-                <a href="/lab/" onclick="toggleMobileMenu()" class="text-amber transition-colors" aria-current="page">Sleep Lab</a>
-                <a href="/about" onclick="toggleMobileMenu()" class="text-white/80 hover:text-amber transition-colors">About</a>
-            <div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
+        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="Mobile navigation"><ul class="ia-primary-list"><li><details class="ia-dropdown"><summary>Products</summary><ul class="ia-panel"><li><a href="/products">Lume</a></li></ul></details></li><li><details class="ia-dropdown"><summary>Lab</summary><ul class="ia-panel"><li><a href="/lab/" aria-current="page">Sleep Lab</a><ul><li><a href="/lab/" aria-current="page">Overview</a></li><li><a href="/science">Science</a></li><li><a href="/campaign/">21-Day Sleep Program</a></li></ul></li></ul></details></li><li><a href="/about">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul><div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
             <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
                 <i class="fas fa-user text-lg"></i>
             </a>
@@ -160,15 +205,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </nav>
     </div>
 
-    <main>
+    <main id="lab">
         <section class="lab-band lab-hero">
             <div class="lab-shell lab-hero-grid">
                 <div>
+                    <nav class="ia-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/lab/#lab">Lab</a></li><li><span aria-current="page">Sleep Lab</span></li></ol></nav>
                     <span class="lab-kicker">Real-life research</span>
                     <h1>Owlnest Sleep Lab</h1>
                 </div>
                 <div class="lab-hero-copy">
-                    <p>Owlnest Sleep Lab is a long-term, real-life research system studying who Lume fits and when.</p>
+                    <p>Light science informs the design. Sleep Lab studies how Lume fits real people and nights.</p><a class="ia-context-link" href="/science">Research foundation ↗</a>
                     <div class="lab-principle">Fit, not universal proof.</div>
                 </div>
             </div>
@@ -219,7 +265,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     </main>
 
-    <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/">OWLNEST</a><nav class="footer-groups" aria-label="Footer navigation"><div><h2>Product</h2><ul><li><a href="/products">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div><h2>Learn</h2><ul><li><a href="/science">Science</a></li><li><a href="/evidence/">Evidence</a></li><li><a href="/lab/">Sleep Lab</a></li><li><a href="/campaign/">21-Day Program</a></li><li><a href="/sleep-ready-room-check/">Room Check</a></li></ul></div><div><h2>Company &amp; Support</h2><ul><li><a href="/about">About</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/contact">Contact</a></li><li><a href="/disclaimer">Policy</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie Settings</button></div></div></footer>
+    <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/">OWLNEST</a><nav class="footer-groups" aria-label="Footer navigation"><div><h2>Products</h2><ul><li><a href="/products">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div><h2>Lab</h2><ul><li><a href="/lab/">Sleep Lab</a><ul><li><a href="/lab/">Overview</a></li><li><a href="/science">Science</a><ul><li><a href="/evidence/">Evidence</a></li></ul></li><li><a href="/campaign/">21-Day Sleep Program</a></li></ul></li></ul></div><div><h2>Company &amp; Support</h2><ul><li><a href="/about">About</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/contact">Contact</a></li><li><a href="/disclaimer">Policy</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li><li><a href="/sleep-ready-room-check/">Room Check</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie Settings</button></div></div></footer>
 
     <script>
     function toggleLanguageMenu(event) {
@@ -256,5 +302,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     <script src="/assets/js/consent.js" defer></script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
+    <script src="/assets/js/site-hierarchy.js" defer></script>
 </body>
 </html>

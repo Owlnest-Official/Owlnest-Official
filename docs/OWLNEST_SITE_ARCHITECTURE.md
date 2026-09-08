@@ -1,8 +1,32 @@
 # Owlnest Site Architecture
 
-Current public architecture • Updated 2026-09-06 (Batch D)
+## V1.1 information architecture — 2026-09-08
 
-This replaces the July 2026 page-role snapshot after the approved Rounds 1–6 and Batches A–D. It records the existing site, not a redesign or new strategy.
+The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
+
+| Parent | Child / role | Existing route |
+|---|---|---|
+| OWLNEST | Home | / |
+| OWLNEST → Products | Lume | /products |
+| OWLNEST → Lab | Sleep Lab overview — WHY + WHAT WE ARE LEARNING | /lab/ |
+| Lab → Sleep Lab | Science / Research Foundation — WHAT SUPPORTS THE HYPOTHESIS | /science |
+| Lab → Sleep Lab | 21-Day Sleep Program — HOW WE LEARN | /campaign/ |
+| Lab → Sleep Lab | Findings / Results — WHAT WE OBSERVED | Conceptual role only; no public URL or empty page |
+| Sleep Lab → Science | Evidence — auxiliary claim support, not a peer research module | /evidence/ |
+| OWLNEST | About | /about |
+| OWLNEST → Campaign entry | Same 21-Day Sleep Program under Sleep Lab | /campaign/ |
+
+Promotional hierarchy does not override Information Architecture. Home, Campaign, ads, and social may link directly to the same Program. Participant research belongs to Sleep Lab and its Program method, not a separate top-level category.
+
+Desktop and mobile use the same compact Products / Lab / About / Program-entry navigation. Lab contains Sleep Lab with Overview, Science, and Program. The footer nests the same research links, with Evidence under Science. Home is the brand-logo link.
+
+Visible breadcrumbs and BreadcrumbList agree: Home → Lab → Sleep Lab → Science / 21-Day Sleep Program; Home → Products → Lume. Category anchors /lab/#lab and /products#products represent the upper categories on existing pages, not invented routes. EN and ZH mirror this hierarchy; canonical and hreflang URLs stay unchanged.
+
+Publish Findings only from real observations. Do not create empty Results pages, sitemap entries, menu items, opening promises, participant counts, or application CTAs. No other Lab is introduced. JSON-LD and AI resources mirror the hierarchy; sitemap lists only existing canonical URLs.
+
+Current public architecture • Updated 2026-09-08 (V1.1 IA)
+
+V1.1 replaces the flat Batch D navigation hierarchy. The approved Rounds 1–6 and Batches A–D page roles, compact copy, and product facts remain in force.
 
 Authority: active user decisions → verified protected product/commerce facts → Brand and Product Truth → current Operating Brief → historical reference material. This document cannot create specifications, measurements, legal terms, or operational promises.
 
@@ -32,7 +56,7 @@ Do not remove legitimate public routes because they are optional. Do not create 
 
 ## Research ownership
 
-Owlnest Sleep Lab is the only public Lab. It asks who finds value, in which nighttime situations, where value is limited, and who may not fit. Positive, neutral, no meaningful change, and negative feedback belong in the method.
+Lab is the upper research category; Owlnest Sleep Lab is its only public Lab. It asks who finds value, in which nighttime situations, where value is limited, and who may not fit. Positive, neutral, no meaningful change, and negative feedback belong in the method.
 
 The 21-Day Sleep Program is one Lab method, not a sales campaign or clinical trial. Its five checkpoints are Day 0, 7, 14, 21, and 30. Use informational CTAs, not application-status UI or recruitment promises.
 
@@ -40,7 +64,7 @@ Science explains principles. Evidence provides established sources and design ra
 
 ## Navigation and user journey
 
-Preserve the existing simplified navigation and footer from Batch B. Labels describe destinations, not slogans; EN/ZH expose equivalent destinations. Existing account and purchase utilities remain intact.
+Use the V1.1 nested navigation and footer above; the Batch B flat menu is superseded. Labels describe destinations, not slogans; EN/ZH expose equivalent destinations. Existing account and purchase utilities remain intact.
 
 Visitors can enter any relevant page. Science and Evidence are optional paths, not mandatory purchase gates. Products owns purchase decisions; Manual owns operation; Policy owns terms. Room Check must not compete as a required purchase step.
 

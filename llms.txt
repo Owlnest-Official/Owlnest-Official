@@ -1,6 +1,6 @@
 # Owlnest Official
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 Owlnest is a nighttime living brand: made for life after dark. Lume is its first hero product, not the full limit of the brand.
 
@@ -24,10 +24,13 @@ Ordinary warm light only looks warm. Lume is designed from the spectrum up for s
 
 ## Research Architecture
 
-- Owlnest Sleep Lab is the public long-term real-life research system.
-- Science explains general mechanisms behind nighttime light, spectrum, and biological timing.
-- Evidence presents established research, Lume design rationale, and claim boundaries.
-- The 21-Day Sleep Program is one research method used by Sleep Lab, focused on product–user fit rather than universal effectiveness. Positive, neutral, unchanged, and negative feedback are retained.
+- OWLNEST → Products → Lume.
+- OWLNEST → Lab → Sleep Lab (Overview): WHY + WHAT WE ARE LEARNING.
+  - Science / Research Foundation: WHAT SUPPORTS THE HYPOTHESIS. Evidence is its auxiliary claim-support page.
+  - 21-Day Sleep Program: HOW WE LEARN. Real-life observation retains positive, neutral, unchanged, and negative feedback.
+- Findings / Results has the conceptual parent Sleep Lab and the role WHAT WE OBSERVED. Publish only real observations; a conceptual role is not a published page or navigation entry.
+- Campaign is an alternate entry to the same /campaign/ program under Sleep Lab. Promotional hierarchy does not override Information Architecture.
+- Lab and Products category anchors refer to existing pages, not separate parent routes.
 
 ## Use Guidance
 
@@ -70,7 +73,7 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 
 - Homepage: https://owlnestofficial.com/
 - Products: https://owlnestofficial.com/products
-- Lab: https://owlnestofficial.com/lab/
+- Lab / Sleep Lab overview: https://owlnestofficial.com/lab/
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
 - Evidence Brief: https://owlnestofficial.com/evidence/
