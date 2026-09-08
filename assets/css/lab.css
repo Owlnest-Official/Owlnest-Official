@@ -63,19 +63,16 @@ body.lab-page.zh {
 }
 
 .lab-hero {
-    min-height: min(880px, 100svh);
+    min-height: min(720px, 85svh);
     display: grid;
     align-items: end;
     padding-top: clamp(9.5rem, 16vw, 13rem);
     overflow: hidden;
-    background:
-        radial-gradient(circle at 76% 28%, rgba(201, 133, 42, 0.2), transparent 0 25%),
-        radial-gradient(circle at 82% 34%, rgba(229, 181, 101, 0.08), transparent 0 34%),
-        linear-gradient(145deg, #0c1421 0%, #131f31 54%, #0e1725 100%);
+    background: linear-gradient(145deg, #0c1421 0%, #131f31 54%, #0e1725 100%);
 }
 
 .lab-hero::before {
-    content: "";
+    content: none;
     position: absolute;
     width: min(58vw, 680px);
     aspect-ratio: 1;

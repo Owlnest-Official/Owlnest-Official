@@ -63,18 +63,16 @@ body.sleep-program-page.zh {
 }
 
 .program-hero {
-    min-height: min(900px, 100svh);
+    min-height: min(720px, 85svh);
     display: grid;
     align-items: end;
     padding-top: clamp(9.5rem, 15vw, 13rem);
     overflow: hidden;
-    background:
-        radial-gradient(circle at 76% 24%, rgba(201, 133, 42, 0.24), transparent 0 23%),
-        linear-gradient(145deg, #0c1421 0%, #142135 57%, #0d1623 100%);
+    background: linear-gradient(145deg, #0c1421 0%, #142135 57%, #0d1623 100%);
 }
 
 .program-hero::before {
-    content: "21";
+    content: none;
     position: absolute;
     right: clamp(-2rem, 4vw, 4rem);
     top: clamp(7.5rem, 12vw, 10rem);
@@ -91,9 +89,14 @@ body.sleep-program-page.zh {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.55fr);
-    gap: clamp(3rem, 8vw, 8rem);
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 2rem clamp(3rem, 6vw, 6rem);
     align-items: end;
+}
+
+.program-hero-grid > .ia-breadcrumb {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
 }
 
 .program-hero h1,
@@ -119,7 +122,7 @@ body.sleep-program-page.zh {
 .program-hero h1 {
     max-width: 850px;
     margin: 0;
-    font-size: clamp(3.4rem, 7.6vw, 7.4rem);
+    font-size: clamp(3.4rem, 6.5vw, 6rem);
     line-height: 0.98;
     letter-spacing: -0.04em;
     text-wrap: balance;
@@ -199,6 +202,15 @@ body.sleep-program-page.zh {
     color: var(--program-ink);
 }
 
+.program-actions .program-button:not(.program-button--primary) {
+    width: auto;
+    padding-inline: 0;
+    border-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: .4em;
+    text-decoration-color: var(--program-line);
+}
+
 .program-visuals {
     background: #101927;
 }
@@ -218,9 +230,7 @@ body.sleep-program-page.zh {
 
 .program-photo-grid figure {
     margin: 0;
-    overflow: hidden;
-    border: 1px solid var(--program-line);
-    background: var(--program-deep);
+    min-width: 0;
 }
 
 .program-photo-grid img {
@@ -233,7 +243,7 @@ body.sleep-program-page.zh {
 .program-photo-grid figcaption {
     display: grid;
     gap: 0.55rem;
-    padding: 1.25rem 1.35rem 1.45rem;
+    padding: 1.25rem 0 0;
     color: var(--program-muted);
     line-height: 1.7;
 }
@@ -247,21 +257,22 @@ body.sleep-program-page.zh {
 
 .program-split {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     gap: clamp(3rem, 9vw, 9rem);
-    align-items: start;
+    align-items: center;
 }
 
 .program-title {
-    max-width: 760px;
+    max-width: 20ch;
     margin: 0;
-    font-size: clamp(2.55rem, 5vw, 5.1rem);
+    font-size: clamp(2.55rem, 4.5vw, 4rem);
     line-height: 1.06;
     letter-spacing: -0.025em;
     text-wrap: balance;
 }
 
 .zh .program-title {
+    max-width: 15em;
     line-height: 1.16;
     letter-spacing: 0;
 }
@@ -425,11 +436,10 @@ body.sleep-program-page.zh {
 
 .program-day:not(:first-child) {
     padding-left: 1.5rem;
-    border-left: 1px solid var(--program-line);
 }
 
 .program-day::before {
-    content: "";
+    content: none;
     position: absolute;
     top: -5px;
     left: 0;
@@ -484,22 +494,20 @@ body.sleep-program-page.zh {
 }
 
 .program-validity {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 3rem;
     margin-top: clamp(3rem, 6vw, 5rem);
 }
 
 .program-validity div {
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--program-line);
+    padding: 0;
 }
 
 .program-validity strong {
     color: var(--program-amber-soft);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .program-validity p {
@@ -703,11 +711,12 @@ body.sleep-program-page.zh {
     }
 
     .program-actions {
-        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem 1.5rem;
     }
 
     .program-button {
-        width: 100%;
+        width: auto;
     }
 
     .program-step {
@@ -728,9 +737,13 @@ body.sleep-program-page.zh {
     .program-day,
     .program-day:not(:first-child),
     .program-day:nth-child(3) {
-        padding: 1.5rem 0 1.5rem 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 1.25rem 0;
         border-top: 1px solid var(--program-line);
-        border-left: 1px solid var(--program-line);
+        border-left: 0;
     }
 
     .program-day::before,

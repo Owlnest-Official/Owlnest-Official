@@ -1,4 +1,12 @@
 /* Round 7 page-specific Science diagrams and Evidence hierarchy. */
+.science-page #section-1 article,
+.science-page main article,
+.science-page main article > [class*="rounded-"],
+.evidence-page main > section:not(:first-child) > div,
+.evidence-page main article {
+    border-radius: 0 !important;
+}
+
 #science-education-visuals {
     padding: clamp(4.75rem, 8vw, 7.5rem) 1.5rem;
 }
@@ -54,10 +62,7 @@
 #science-education-visuals .science-education-card {
     min-width: 0;
     margin: 0;
-    padding: clamp(1.35rem, 2.6vw, 2.25rem);
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    border-radius: 1.5rem;
-    background: rgba(255, 255, 255, 0.035);
+    padding: 0;
 }
 
 #science-education-visuals .science-education-card__heading {
@@ -91,12 +96,9 @@
     flex-direction: column;
     justify-content: center;
     padding: clamp(1rem, 2vw, 1.5rem);
-    border-radius: 1rem;
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        #0c1420;
-    background-size: 40px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: #0c1420;
 }
 
 #science-education-visuals .science-spectrum-map__labels,
@@ -114,16 +116,16 @@
     height: clamp(3.5rem, 8vw, 5.25rem);
     margin: 1rem 0 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 0.75rem;
+    border-radius: 0;
     background: linear-gradient(90deg, #4e49a8 0%, #306dc4 17%, #27a5ca 31%, #70bd8a 47%, #e2c951 62%, #e69434 78%, #b5412f 100%);
-    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
 }
 
 #science-education-visuals .science-rhythm-chart {
     display: block;
     width: 100%;
     min-height: 18.5rem;
-    border-radius: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     background: #0c1420;
 }
 
@@ -216,9 +218,7 @@ html[lang^="zh-Hant"] #science-education-visuals .science-education-card__source
 .evidence-status {
     display: inline-flex;
     align-items: center;
-    border: 1px solid rgba(230, 166, 75, 0.35);
-    border-radius: 999px;
-    padding: 0.42rem 0.72rem;
+    padding: 0;
     color: var(--owl-readable-amber-on-dark);
     font-size: 0.67rem;
     font-weight: 700;
@@ -228,7 +228,6 @@ html[lang^="zh-Hant"] #science-education-visuals .science-education-card__source
 }
 
 .evidence-status--muted {
-    border-color: rgba(255, 255, 255, 0.14);
     color: rgba(255, 255, 255, 0.62);
 }
 
@@ -277,14 +276,8 @@ html[lang^="zh-Hant"] #science-education-visuals .science-education-card__source
         padding-inline: 1rem;
     }
 
-    #science-education-visuals .science-education-card {
-        padding: 1.1rem;
-        border-radius: 1.1rem;
-    }
-
     #science-education-visuals .science-spectrum-map {
         min-height: 15rem;
-        background-size: 28px 28px;
     }
 
     #science-education-visuals .science-spectrum-map__labels,
