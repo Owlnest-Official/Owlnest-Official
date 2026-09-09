@@ -647,6 +647,59 @@ html[lang^="zh-Hant"] body.product-page .ah-spec dd {
     line-height: 1.6;
 }
 
+/* Product details: one compact folio, then a deliberate 3 x 2 specification grid. */
+body.product-page .product-details-band {
+    padding-block: clamp(4rem, 6.5vw, 6rem);
+}
+
+body.product-page .product-details-content {
+    width: min(100%, 68rem);
+}
+
+body.product-page .product-details-band .ah-display {
+    font-size: clamp(1.7rem, 2.7vw, 2.5rem) !important;
+}
+
+body.product-page .product-details-band .ah-specs--split {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 clamp(2rem, 4vw, 4rem);
+    margin-top: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+body.product-page .product-details-band .ah-spec {
+    display: block;
+    min-width: 0;
+    padding-block: 1.15rem 1.35rem;
+}
+
+body.product-page .product-details-band .ah-spec dt {
+    line-height: 1.5;
+}
+
+body.product-page .product-details-band .ah-spec dd {
+    margin-top: 0.55rem;
+    line-height: 1.45;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+}
+
+body.product-page .ah-no-break {
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    body.product-page .product-details-band .ah-specs--split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    body.product-page .product-details-band .ah-specs--split {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ------------------------------------------------------------------ *
  * 5. Plates — photography bleeds, is cropped hard, and is captioned
  * ------------------------------------------------------------------ */

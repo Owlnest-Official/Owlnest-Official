@@ -200,6 +200,24 @@ body.sleep-program-page.zh {
 .program-intro {
     background: var(--program-paper);
     color: var(--program-ink);
+    padding-block: clamp(4rem, 6vw, 6rem);
+}
+
+.program-learning {
+    max-width: 58rem;
+}
+
+.program-learning .program-title {
+    max-width: 22ch;
+}
+
+.program-learning-copy {
+    max-width: 38rem;
+    margin: clamp(1.25rem, 2vw, 1.75rem) 0 0;
+    color: #455169;
+    font-size: clamp(1rem, 1.25vw, 1.12rem);
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 .program-actions .program-button:not(.program-button--primary) {
@@ -478,6 +496,34 @@ body.sleep-program-page.zh {
 
 .program-honesty {
     background: #101927;
+    padding-block: clamp(3.5rem, 5vw, 4.75rem);
+}
+
+.program-honesty-note {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
+}
+
+.program-honesty-note .program-kicker {
+    margin: 0.25rem 0 0;
+}
+
+.program-honesty-note p {
+    max-width: 46rem;
+    margin: 0;
+    color: var(--program-cream);
+    font-family: "Playfair Display", "Noto Serif TC", Georgia, serif;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.45;
+    text-wrap: balance;
+}
+
+.zh .program-honesty-note p {
+    font-family: "Noto Serif TC", "PingFang TC", serif;
+    font-weight: 600;
+    line-height: 1.65;
 }
 
 .program-principle {
@@ -635,6 +681,7 @@ body.sleep-program-page.zh {
 @media (max-width: 900px) {
     .program-hero-grid,
     .program-split,
+    .program-honesty-note,
     .program-application-inner {
         grid-template-columns: 1fr;
     }
