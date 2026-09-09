@@ -1,5 +1,6 @@
 /* Public-site navigation only; checkout and account pages do not load this file. */
 #main-header nav a { white-space: nowrap; }
+.lume-case { text-transform: none !important; }
 #mobile-menu { overflow-y: auto; overscroll-behavior: contain; }
 /* Public navigation stays compact; deeper IA remains in breadcrumbs and page context. */
 .ia-primary-list { list-style: none; margin: 0; padding: 0; }

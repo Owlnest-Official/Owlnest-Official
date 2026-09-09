@@ -175,9 +175,9 @@
                         <a href="/zh-tw/contact/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
                     </div>
                 </div>
-                <a href="/zh-tw/products/#buy" class="inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
+                <a href="/zh-tw/products/#buy" class="lume-case inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
                     <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    購買 LUME
+                    購買 Lume
                 </a>
             </div>
         </div>
@@ -186,7 +186,7 @@
             <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員中心">
                 <i class="fas fa-user text-lg transition-colors duration-300"></i>
             </a>
-            <a href="/zh-tw/products/#buy" class="mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 LUME" aria-label="購買 LUME">
+            <a href="/zh-tw/products/#buy" class="lume-case mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 Lume" aria-label="購買 Lume">
                 <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
             </a>
             <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
@@ -212,13 +212,13 @@
                 </div>
             </div>
                         <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 LUME</a>
+                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="lume-case inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 Lume</a>
 
             </div>
         </nav>
     </div>
 
-    <main><section class="pt-36 md:pt-48 pb-20 md:pb-28 px-6 bg-midnight text-white"><div class="max-w-5xl mx-auto"><h1 class="font-serif text-4xl md:text-5xl leading-tight">聯絡 Owlnest</h1><p class="mt-6 max-w-2xl text-white/70 leading-relaxed">產品、訂單或合作問題，請用 email 或下方表單聯絡。</p><a href="mailto:team@owlnestofficial.com" class="inline-flex mt-8 text-sm font-semibold text-amber hover:underline">team@owlnestofficial.com</a></div></section><section class="bg-midnight px-6 pb-20 md:pb-28"><div class="max-w-3xl mx-auto bg-warm text-midnight p-6 md:p-12"><h2 class="font-serif text-3xl mb-8">留下訊息</h2><form name="contact" method="POST" action="/api/contact">
+    <main><section class="pt-36 md:pt-48 pb-20 md:pb-28 px-6 bg-midnight text-white"><div class="max-w-5xl mx-auto"><h1 class="font-serif text-4xl md:text-5xl leading-tight">聯絡 Owlnest</h1><p class="mt-6 max-w-2xl text-white/70 leading-relaxed">產品、訂單或合作問題，可寄 Email 或使用下方表單聯絡我們。</p><a href="mailto:team@owlnestofficial.com" class="inline-flex mt-8 text-sm font-semibold text-amber hover:underline">team@owlnestofficial.com</a></div></section><section class="bg-midnight px-6 pb-20 md:pb-28"><div class="max-w-3xl mx-auto bg-warm text-midnight p-6 md:p-12"><h2 class="font-serif text-3xl mb-8">留下訊息</h2><form name="contact" method="POST" action="/api/contact">
                         <input type="hidden" name="locale" value="zh-Hant">
                         <p class="hidden" aria-hidden="true">
                             <label><span class="sr-only">Bot field</span><input name="bot-field" tabindex="-1" autocomplete="off"></label>
@@ -227,7 +227,7 @@
                         <input id="contact-name" type="text" name="name" autocomplete="name" placeholder="你的姓名" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
 
                         <label for="contact-email" class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">Email</label>
-                        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="你的 email" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
+                        <input id="contact-email" type="email" name="email" autocomplete="email" placeholder="你的 Email" class="field w-full py-3 lg:py-4 text-midnight placeholder:text-midnight/40 text-sm transition" required>
 
                         <label for="contact-message" class="mt-6 block text-[10px] uppercase tracking-[0.14em] font-bold text-midnight/50 mb-2">留言</label>
                         <textarea id="contact-message" name="message" rows="6" placeholder="想告訴我們什麼？" class="w-full bg-white/50 border border-midnight/15 p-4 text-midnight placeholder:text-midnight/35 text-sm focus:outline-none focus:border-amber transition resize-none rounded-sm" required></textarea>
