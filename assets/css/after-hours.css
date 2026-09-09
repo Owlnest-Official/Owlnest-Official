@@ -89,6 +89,19 @@ body.product-page .ah-band {
     overflow: hidden;
 }
 
+/* The homepage closes with two concise editorial beats, not two more full spreads. */
+body.homepage #section-lab-program {
+    padding-block: clamp(4rem, 6vw, 6rem);
+}
+
+body.homepage #section-home-purchase {
+    padding-block: clamp(3.75rem, 5.25vw, 5.25rem);
+}
+
+body.homepage #section-home-purchase .ah-folio {
+    display: none;
+}
+
 body.homepage .ah-band--night,
 body.product-page .ah-band--night {
     --ah-surface: var(--ah-night);

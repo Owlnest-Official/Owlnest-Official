@@ -96,9 +96,9 @@
     flex-direction: column;
     justify-content: center;
     padding: clamp(1rem, 2vw, 1.5rem);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    background: #0c1420;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
 }
 
 #science-education-visuals .science-spectrum-map__labels,
@@ -124,13 +124,13 @@
     display: block;
     width: 100%;
     min-height: 18.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    background: #0c1420;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
 }
 
 #science-education-visuals .science-rhythm-chart__grid line {
-    stroke: rgba(255, 255, 255, 0.13);
+    stroke: rgba(255, 255, 255, 0.08);
     stroke-width: 1;
 }
 

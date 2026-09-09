@@ -236,8 +236,9 @@ body.sleep-program-page.zh {
 .program-photo-grid img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: clamp(32rem, 58vw, 48rem);
+    object-fit: cover;
+    object-position: center 54%;
 }
 
 .program-photo-grid figcaption {
@@ -717,6 +718,10 @@ body.sleep-program-page.zh {
 
     .program-button {
         width: auto;
+    }
+
+    .program-photo-grid img {
+        height: min(118vw, 31rem);
     }
 
     .program-step {

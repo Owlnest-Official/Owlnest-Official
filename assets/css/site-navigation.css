@@ -42,6 +42,16 @@
 .batch-b-footer .footer-bottom { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; border-top: 1px solid #ffffff14; margin-top: 2.5rem; padding-top: 1.5rem; font-size: .75rem; color: #f6f0e2b3; }
 .batch-b-footer button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 @media (max-width: 520px) {
-    .batch-b-footer { padding-top: 3rem; }
-    .batch-b-footer .footer-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1.25rem; }
+    .ia-breadcrumb { margin-bottom: 1.25rem; font-size: .68rem; }
+    .ia-breadcrumb ol { gap: .2rem .38rem; }
+    .ia-breadcrumb li,
+    .ia-breadcrumb a,
+    .ia-breadcrumb span { font-size: .68rem !important; line-height: 1.55 !important; }
+    .ia-breadcrumb li + li::before { margin-right: .38rem; }
+    .batch-b-footer { padding: 2.5rem 1.25rem 1.25rem; }
+    .batch-b-footer .footer-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.35rem 1.25rem; margin-top: 1.5rem; }
+    .batch-b-footer h2 { margin-bottom: .65rem; }
+    .batch-b-footer li { margin: .15rem 0; }
+    .batch-b-footer li a { padding-block: .28rem; }
+    .batch-b-footer .footer-bottom { margin-top: 2rem; padding-top: 1.15rem; }
 }

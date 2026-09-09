@@ -134,6 +134,26 @@
                 line-height: 1.17 !important;
             }
         }
+        .policy-document .policy-summary {
+            padding: 1.5rem 0;
+            border: 0;
+            border-top: 1px solid rgba(24, 34, 52, 0.2);
+            border-radius: 0;
+            background: transparent;
+        }
+        .policy-document .policy-contents > section {
+            padding: 2rem 0 !important;
+            border: 0 !important;
+            border-top: 1px solid rgba(24, 34, 52, 0.2) !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            color: #182234 !important;
+        }
+        .policy-document .policy-contents > section :is(h2, p, li) {
+            color: #182234 !important;
+        }
+        .policy-document .policy-contents > section:first-child { border-top-color: rgba(24, 34, 52, 0.34) !important; }
     </style>
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
@@ -219,9 +239,9 @@
             </div>
         </section>
 
-        <section class="py-20 md:py-28 px-6 bg-warm text-midnight border-t border-taupe/10">
+        <section class="policy-document py-20 md:py-28 px-6 bg-warm text-midnight border-t border-taupe/10">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-[0.34fr_1fr] gap-10 lg:gap-14">
-                <aside class="lg:sticky lg:top-28 h-fit bg-white/70 border border-midnight/10 p-6">
+                <aside class="policy-summary lg:sticky lg:top-28 h-fit">
                     <p class="text-[10px] tracking-[0.18em] uppercase text-amber font-bold mb-5">重點摘要</p>
                     <ul class="space-y-3 text-sm text-midnight/68 leading-relaxed">
                         <li>網站內容是一般資訊 </li>
@@ -232,7 +252,7 @@
                     </ul>
                 </aside>
 
-                <div class="space-y-5">
+                <div class="policy-contents">
                     <section class="policy-card p-7 md:p-9">
                         <h2 class="font-serif text-3xl mb-5">1. 適用範圍與官方支援</h2>
                         <div class="space-y-4 text-midnight/68 leading-relaxed">
