@@ -1,0 +1,252 @@
+/* Homepage brand and product hierarchy. No shared navigation or animation rules. */
+body.homepage main .home-hero-title {
+    max-width: 16ch;
+    margin-bottom: 0;
+    font-size: clamp(2.25rem, 5vw, 4.5rem) !important;
+    line-height: 1.08 !important;
+}
+
+body.homepage main .home-brand-hook {
+    max-width: 38ch;
+    margin: 1.25rem 0 0;
+    color: #f0c47c;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+body.homepage main .home-brand-product {
+    max-width: 29ch;
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.55;
+    color: #f6efe2;
+    text-wrap: pretty;
+}
+
+body.homepage main .home-hero-actions {
+    margin-top: 1.25rem;
+}
+
+body.homepage main .ah-cta,
+body.homepage main .home-text-link {
+    text-transform: none;
+    letter-spacing: 0.025em;
+}
+
+body.homepage main .home-section-label {
+    margin: 0 0 1rem;
+    color: var(--ah-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.5;
+}
+
+body.homepage main :is(#section-visual-difference, #section-comparison-table, #section-lab-program, #section-home-purchase) h2.home-section-title {
+    margin: 0;
+    max-width: 22ch;
+    font-family: var(--ah-display-font);
+    font-size: clamp(2rem, 3.7vw, 3.5rem) !important;
+    line-height: 1.15 !important;
+    font-weight: 500;
+    letter-spacing: -0.02em !important;
+    text-wrap: balance;
+}
+
+body.homepage main .home-featured,
+body.homepage main .home-research {
+    padding-block: clamp(4rem, 7vw, 6.5rem);
+}
+
+body.homepage main .home-featured-heading {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr auto;
+    gap: 1.5rem 3rem;
+    align-items: end;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+body.homepage main #section-visual-difference h2.home-section-title {
+    font-size: clamp(3rem, 5vw, 4.5rem) !important;
+}
+
+body.homepage main .home-product-category {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+body.homepage main .home-featured-definition .ah-copy {
+    margin: 0;
+}
+
+body.homepage main .home-product-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2.5rem);
+    align-items: start;
+}
+
+body.homepage main .home-product-photo {
+    min-width: 0;
+    margin: 0;
+    scroll-margin-top: 5rem;
+}
+
+body.homepage main .home-product-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+body.homepage main .home-product-photo figcaption {
+    margin-top: 0.8rem;
+    color: var(--ah-ink-3);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+body.homepage main .home-thinking {
+    padding-block: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+body.homepage main .home-thinking-layout,
+body.homepage main .home-research-heading {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+}
+
+body.homepage main .home-thinking-copy .ah-copy,
+body.homepage main .home-research-heading .ah-copy {
+    max-width: 40ch;
+    margin: 0;
+}
+
+body.homepage main .home-research-paths {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 6vw, 6rem);
+    margin-top: 3rem;
+}
+
+body.homepage main .home-research-path {
+    min-width: 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ah-rule);
+}
+
+body.homepage main .home-research-path h3 {
+    margin: 0;
+    font-family: var(--ah-display-font);
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+body.homepage main .home-research-path .ah-copy {
+    max-width: 40ch;
+    margin: 0.8rem 0 1.5rem;
+}
+
+body.homepage main .home-text-link {
+    display: inline-block;
+    color: var(--ah-ink);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-decoration: underline;
+    text-decoration-color: var(--ah-rule-strong);
+    text-underline-offset: 0.35em;
+}
+
+body.homepage main .home-text-link:hover {
+    color: var(--ah-accent);
+}
+
+body.homepage main .home-final-action {
+    padding-block: clamp(2.75rem, 5vw, 4rem);
+}
+
+body.homepage main .home-final-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.75rem 3rem;
+}
+
+body.homepage main #section-home-purchase h2.home-section-title {
+    font-size: clamp(1.65rem, 2.5vw, 2.5rem) !important;
+}
+
+body.homepage main .home-final-action .ah-cta {
+    flex-shrink: 0;
+}
+
+html[lang^="zh-Hant"] body.homepage main .home-hero-title {
+    max-width: 9em;
+    font-size: clamp(2rem, 4.4vw, 4rem) !important;
+    line-height: 1.25 !important;
+}
+
+body.homepage main .home-title-phrase {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+html[lang^="zh-Hant"] body.homepage main :is(#section-visual-difference, #section-comparison-table, #section-lab-program, #section-home-purchase) h2.home-section-title {
+    line-height: 1.35 !important;
+    letter-spacing: 0 !important;
+}
+
+@media (max-width: 1023px) {
+    body.homepage main .ah-hero-body {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2rem;
+    }
+    body.homepage main .home-featured-heading {
+        grid-template-columns: 1fr 1.5fr;
+    }
+    body.homepage main .home-featured-heading > .ah-cta {
+        justify-self: start;
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    body.homepage main .ah-hero-body,
+    body.homepage main .home-featured-heading,
+    body.homepage main .home-product-photos,
+    body.homepage main .home-thinking-layout,
+    body.homepage main .home-research-heading,
+    body.homepage main .home-research-paths {
+        grid-template-columns: 1fr;
+    }
+    body.homepage main .ah-hero-body {
+        gap: 1.25rem;
+    }
+    body.homepage main .home-brand-hook {
+        margin-top: 0.8rem;
+    }
+    body.homepage main .ah-hero-aside {
+        padding-top: 1rem;
+    }
+    body.homepage main .home-brand-product {
+        max-width: 31ch;
+    }
+    body.homepage main .home-featured-heading > .ah-cta {
+        grid-column: auto;
+    }
+    body.homepage main .home-product-photos {
+        gap: 2rem;
+    }
+    body.homepage main .home-research-paths {
+        margin-top: 2rem;
+    }
+    body.homepage main .home-final-layout {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
