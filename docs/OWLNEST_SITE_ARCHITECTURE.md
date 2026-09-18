@@ -1,5 +1,11 @@
 # Owlnest Site Architecture
 
+## Actual-page hierarchy correction — 2026-09-18
+
+The user's Phase 2 instruction distinguishes conceptual categories from real pages. `/lab/` is the existing Sleep Lab document, not a separate Lab index plus a child page. Public breadcrumbs and JSON-LD use Home → Sleep Lab, with Science and 21-Day as children and Evidence under Science. No `#lab` CollectionPage represents an independent parent. Header "Lab" remains the entry label.
+
+Products is protected in this round: its same-document Products → Lume hierarchy is recorded, not changed. Homepage and navigation remain unchanged. See [the scoped page-role audit and expansion gates](OWLNEST_PAGE_RESPONSIBILITIES_2026-09.md). This correction supersedes the fragment-based hierarchy below and its copies in older reference blocks; it does not revise product facts.
+
 ## V1.1 information architecture — 2026-09-08
 
 The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
@@ -20,7 +26,7 @@ Promotional hierarchy does not override Information Architecture. Home, Campaign
 
 Desktop and mobile use the same compact Products / Lab / About / Program-entry navigation. Lab contains Sleep Lab with Overview, Science, and Program. The footer nests the same research links, with Evidence under Science. Home is the brand-logo link.
 
-Visible breadcrumbs and BreadcrumbList agree: Home → Lab → Sleep Lab → Science / 21-Day Sleep Program; Home → Products → Lume. Category anchors /lab/#lab and /products#products represent the upper categories on existing pages, not invented routes. EN and ZH mirror this hierarchy; canonical and hreflang URLs stay unchanged.
+Historical implementation: V1.1 used `/lab/#lab` and `/products#products` as upper-category breadcrumb entries on the same documents. The 2026-09-18 correction removes the duplicated research tier; the protected Products tier remains a documented deferred issue. Canonical and hreflang URLs stay unchanged.
 
 Publish Findings only from real observations. Do not create empty Results pages, sitemap entries, menu items, opening promises, participant counts, or application CTAs. No other Lab is introduced. JSON-LD and AI resources mirror the hierarchy; sitemap lists only existing canonical URLs.
 
