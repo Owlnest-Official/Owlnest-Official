@@ -1,0 +1,54 @@
+/* Products-only decision flow. Shared navigation, Home and #buy stay untouched. */
+body.product-page #products > .product-decision-brief {
+    padding-block: clamp(3rem, 5vw, 5rem);
+}
+
+body.product-page .product-decision-row {
+    display: grid;
+    gap: 1.75rem 4rem;
+    align-items: start;
+}
+
+body.product-page .product-decision-row .ah-display {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.8rem) !important;
+}
+
+body.product-page .product-decision-row .ah-copy {
+    margin-top: 0;
+    max-width: 38rem;
+}
+
+body.product-page .product-detail-photos {
+    display: grid;
+    gap: 3rem;
+    margin-top: clamp(3rem, 5vw, 5rem);
+}
+
+body.product-page .product-detail-photos > div {
+    min-width: 0;
+}
+
+body.product-page .product-detail-photos .ah-subhead {
+    margin: 0 0 1.5rem;
+}
+
+body.product-page .product-detail-photos .ah-plate img {
+    width: 100%;
+    height: auto;
+    max-height: 28rem;
+    object-fit: contain;
+}
+
+body.product-page .product-purchase-help {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ah-rule);
+}
+
+@media (min-width: 801px) {
+    body.product-page .product-decision-row,
+    body.product-page .product-detail-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
