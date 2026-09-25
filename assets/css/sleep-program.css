@@ -242,6 +242,7 @@ body.sleep-program-page.zh {
 
 .program-section-copy {
     max-width: 680px;
+    margin: 1.25rem 0 0;
     color: var(--program-muted);
     line-height: 1.7;
 }

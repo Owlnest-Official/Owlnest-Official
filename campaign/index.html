@@ -65,7 +65,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
-    <link rel="stylesheet" href="/assets/css/sleep-program.css?v=20260910-ux-cleanup">
+    <link rel="stylesheet" href="/assets/css/sleep-program.css?v=20260925-application-open">
     <link rel="stylesheet" href="/assets/css/site-navigation.css?v=20260924-header-nav">
 <script type="application/ld+json">
 {
@@ -146,7 +146,7 @@
                 <div><span class="program-kicker">Owlnest Sleep Lab</span><h1>21-Day Sleep Program</h1></div>
                 <div class="program-hero-copy">
                     <p>The 21-Day Sleep Program is a Sleep Lab research method for observing Lume in everyday nighttime routines.</p>
-                    <div class="program-actions"><a class="program-button program-button--primary" href="#program-details">Review Program Details</a><a class="program-button" href="/lab/">Explore Sleep Lab</a></div>
+                    <div class="program-actions"><a class="program-button program-button--primary" data-sleep-program-apply href="https://forms.gle/FqWYNM7kR3hXXZdeA" target="_blank" rel="noopener noreferrer">Apply for the 21-Day Sleep Program</a><a class="program-button" href="/lab/">Explore Sleep Lab</a></div>
                 </div>
             </div>
         </section>
@@ -176,6 +176,8 @@
             <div class="program-shell">
                 <span class="program-kicker">Participation</span>
                 <h2 class="program-title" id="participation-heading">Selection, normal use, brief check-ins.</h2>
+                <p class="program-section-copy">Submitting an application does not guarantee selection. Participants are selected according to current research needs and sample composition.</p>
+                <div class="program-actions"><a class="program-button program-button--primary" data-sleep-program-apply href="https://forms.gle/FqWYNM7kR3hXXZdeA" target="_blank" rel="noopener noreferrer">Apply for the 21-Day Sleep Program</a></div>
                 <div class="program-photo-grid">
                     <figure>
                         <img src="/assets/images/program/DSCF1412.JPG" width="4160" height="6240" loading="lazy" decoding="async" alt="Hands operating Owlnest Lume at night">
@@ -205,7 +207,7 @@
     document.addEventListener('click', function(event) { const menu = document.getElementById('language-menu'); const trigger = document.querySelector('.language-trigger'); if (!menu || !trigger) return; if (!event.target.closest('.language-wrap')) { menu.classList.remove('open'); trigger.setAttribute('aria-expanded', 'false'); } });
     function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); const icon = document.getElementById('mobile-menu-icon'); const trigger = document.querySelector('button[aria-label="Toggle menu"]'); if (!menu || !icon) return; menu.classList.toggle('open'); const isOpen = menu.classList.contains('open'); icon.classList.toggle('fa-bars', !isOpen); icon.classList.toggle('fa-times', isOpen); if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); }
     </script>
-    <script src="/assets/js/sleep-program-application.js" defer></script>
+    <script src="/assets/js/sleep-program-application.js?v=20260925-application-open" defer></script>
     <script src="/assets/js/consent.js" defer></script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
     <script src="/assets/js/site-hierarchy.js?v=20260924-header-nav" defer></script>

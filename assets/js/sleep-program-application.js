@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    // TODO: Replace with final 21-Day Sleep Program Google Form URL.
-    const SLEEP_PROGRAM_APPLICATION_URL = '';
+    // Shared application destination for both Program language versions.
+    const SLEEP_PROGRAM_APPLICATION_URL = 'https://forms.gle/FqWYNM7kR3hXXZdeA';
 
     window.OWLNEST_SLEEP_PROGRAM = Object.freeze({
         SLEEP_PROGRAM_APPLICATION_URL

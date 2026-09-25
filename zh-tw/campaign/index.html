@@ -65,7 +65,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/consent.css">
     <link rel="stylesheet" href="/assets/css/typography.css">
-    <link rel="stylesheet" href="/assets/css/sleep-program.css?v=20260910-ux-cleanup">
+    <link rel="stylesheet" href="/assets/css/sleep-program.css?v=20260925-application-open">
     <link rel="stylesheet" href="/assets/css/site-navigation.css?v=20260924-header-nav">
 <script type="application/ld+json">
 {
@@ -146,7 +146,7 @@
                 <div><span class="program-kicker">Owlnest Sleep Lab</span><h1>21 天睡眠計畫</h1></div>
                 <div class="program-hero-copy">
                     <p>21 天睡眠計畫是 Sleep Lab 的一種研究方法，觀察人們如何在夜晚使用 Lume。</p>
-                    <div class="program-actions"><a class="program-button program-button--primary" href="#program-details">查看計畫內容</a><a class="program-button" href="/zh-tw/lab/">了解 Sleep Lab</a></div>
+                    <div class="program-actions"><a class="program-button program-button--primary" data-sleep-program-apply href="https://forms.gle/FqWYNM7kR3hXXZdeA" target="_blank" rel="noopener noreferrer">申請參加 21 天睡眠計畫</a><a class="program-button" href="/zh-tw/lab/">了解 Sleep Lab</a></div>
                 </div>
             </div>
         </section>
@@ -176,6 +176,8 @@
             <div class="program-shell">
                 <span class="program-kicker">參與方式</span>
                 <h2 class="program-title" id="participation-heading">基本篩選、日常使用、簡短回訪。</h2>
+                <p class="program-section-copy">申請表以英文填寫。提交申請不代表一定會入選，將依當次研究需求與樣本組成篩選。</p>
+                <div class="program-actions"><a class="program-button program-button--primary" data-sleep-program-apply href="https://forms.gle/FqWYNM7kR3hXXZdeA" target="_blank" rel="noopener noreferrer">申請參加 21 天睡眠計畫</a></div>
                 <div class="program-photo-grid">
                     <figure>
                         <img src="/assets/images/program/DSCF1412.JPG" width="4160" height="6240" loading="lazy" decoding="async" alt="雙手在夜間操作 Owlnest Lume">
@@ -205,7 +207,7 @@
     document.addEventListener('click', function(event) { const menu = document.getElementById('language-menu'); const trigger = document.querySelector('.language-trigger'); if (!menu || !trigger) return; if (!event.target.closest('.language-wrap')) { menu.classList.remove('open'); trigger.setAttribute('aria-expanded', 'false'); } });
     function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); const icon = document.getElementById('mobile-menu-icon'); const trigger = document.querySelector('button[aria-label="切換選單"]'); if (!menu || !icon) return; menu.classList.toggle('open'); const isOpen = menu.classList.contains('open'); icon.classList.toggle('fa-bars', !isOpen); icon.classList.toggle('fa-times', isOpen); if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); }
     </script>
-    <script src="/assets/js/sleep-program-application.js" defer></script>
+    <script src="/assets/js/sleep-program-application.js?v=20260925-application-open" defer></script>
     <script src="/assets/js/consent.js" defer></script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
     <script src="/assets/js/site-hierarchy.js?v=20260924-header-nav" defer></script>
