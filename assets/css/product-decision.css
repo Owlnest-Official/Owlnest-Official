@@ -1,4 +1,21 @@
 /* Products-only decision flow. Shared navigation, Home and #buy stay untouched. */
+body.product-page .product-hero-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d4cfc4;
+}
+
+body.product-page .product-hero-price strong {
+    color: #fffaf0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 body.product-page #products > .product-decision-brief {
     padding-block: clamp(3rem, 5vw, 5rem);
 }

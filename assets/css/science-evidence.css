@@ -1,4 +1,53 @@
 /* Round 7 page-specific Science diagrams and Evidence hierarchy. */
+.evidence-page #general-evidence dd.flex {
+    gap: 0.75rem 1.5rem;
+}
+
+.science-page .science-day-cycle {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem clamp(1.5rem, 4vw, 3.5rem);
+    margin-top: 2.5rem;
+}
+
+.science-page .science-day-cycle > div {
+    min-width: 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.science-page .science-day-cycle dt {
+    color: #f0c47c;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.science-page .science-day-cycle dd {
+    margin: 0.75rem 0 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.science-page .science-guidance-source {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.science-page .science-guidance-source a {
+    color: #f0c47c;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+@media (max-width: 767px) {
+    .science-page .science-day-cycle {
+        grid-template-columns: 1fr;
+    }
+}
+
 .science-page #section-1 article,
 .science-page main article,
 .science-page main article > [class*="rounded-"],

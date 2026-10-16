@@ -81,6 +81,13 @@ body.homepage main .home-featured-definition .ah-copy {
     margin: 0;
 }
 
+body.homepage main .home-product-price {
+    margin: 1rem 0 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
 body.homepage main .home-product-photos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
