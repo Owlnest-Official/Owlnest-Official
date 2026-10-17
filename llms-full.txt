@@ -1,14 +1,15 @@
 # Owlnest Official AI Source of Truth
 
-Last updated: 2026-09-08
+Last updated: 2026-10-17
 
 ## Brand Architecture
 
-Owlnest is a nighttime living brand: made for life after dark. It creates objects, spaces, and rituals for life after dark. Lume is Owlnest's first hero product, not the full limit of the brand.
+OWLNEST’s mission is helping people transition naturally between everyday states. Its ambition is to become the world’s first dedicated brand in this space; this is not a verified global ranking.
 
-- Brand category: Nighttime living
-- Brand tagline: Made for life after dark.
-- Brand emotional line: Home begins after dark.
+- Principles: Natural, Non-invasive, Effortless, Science-informed.
+- Origin: Nighttime living; Made for life after dark.
+- Long-term exploration: alertness, focus, relaxation, rest, sleep, and recovery. These are future research directions, not active Labs, launched products, or validated effects.
+- Lume is the first product. It does not inherit the capabilities named in the broader brand vision.
 
 ## Lume Product Architecture
 
@@ -158,7 +159,7 @@ Low-blue, no-blue, zero-blue, blue-light-free, and blue-light-minimized may appe
 ## Traditional Chinese Source Terms
 
 - Nighttime living: 夜晚生活
-- Made for life after dark.: 為夜晚的生活設計
+- Origin / nighttime expression: Made for life after dark. / 為夜晚的生活設計
 - Sleep-spectrum lamp: 睡眠光譜燈
 - Specially tuned sleep spectrum: 特調睡眠光譜
 - Light specially tuned for nighttime.: 為夜晚特別調製的光。

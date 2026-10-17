@@ -1,8 +1,10 @@
 {
   "brand": "Owlnest",
-  "brand_category": "Nighttime living",
-  "brand_tagline": "Made for life after dark.",
-  "brand_tagline_zh_hant": "為夜晚的生活設計",
+  "brand_category": "Natural transitions between everyday states",
+  "brand_mission": "Helping people transition naturally between everyday states through non-invasive, low-effort, science-informed design.",
+  "brand_ambition": "To become the world’s first brand dedicated to helping people transition naturally between states; an ambition, not a verified ranking.",
+  "brand_mission_zh_hant": "順應身體節奏，透過非侵入式科技、低操作負擔與科學導向設計，協助日常狀態自然轉換。",
+  "brand_origin": "Nighttime living; Made for life after dark.",
   "product_name": "Owlnest Lume",
   "product_tagline": "Night deserves its own light.",
   "hero_hook": "Your room knows it’s night. Your light doesn’t.",

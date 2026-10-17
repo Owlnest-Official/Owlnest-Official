@@ -39,7 +39,7 @@ For website structure, public-page content, navigation, SEO landing pages, Campa
 
 The Site Architecture is a conditional website-governance reference. It does not override either Truth document, the Ledger, the Operating Brief, or the user's active explicit instruction.
 
-The two root-level Truth documents are the primary authority. If any older brief, bank, draft, public page, runtime prompt, or generated artifact conflicts with them, the Truth documents win.
+The two root-level Truth documents are the primary authority. The explicitly authorized 2026-10-17 brand decision in Brand Truth supersedes only older restrictions that confine Owlnest to nighttime living, including brand-only descriptions in Product Truth. Product facts, evidence boundaries, engineering rules, and protected systems remain in force. If any older brief, bank, draft, public page, runtime prompt, or generated artifact conflicts with the current Truth documents, the Truth documents win.
 
 The Cross-Conversation Decision Ledger supplements repository context with history from cross-ChatGPT projects, unarchived conversations, and memory sources that the repository cannot directly access. It does not override either Truth document.
 
@@ -57,10 +57,17 @@ Files explicitly marked as historical or superseded are idea archives only. Do n
 
 ## Brand and Product Architecture
 
-Owlnest is a nighttime-living home-lifestyle brand, not only a lamp or sleep-technology company.
+Owlnest's long-term mission is to help people transition naturally between everyday states through non-invasive technology, low-effort products, and science-informed design. Natural means working with human physiology, not controlling the body or guaranteeing an outcome.
 
-- Brand category: `Nighttime living` / `夜晚生活`
-- Owlnest brand tagline: `Made for life after dark.` / `為夜晚的生活設計`
+- Brand ambition: become the world's first brand dedicated to helping people transition naturally between states. Public world-first wording must explicitly express ambition, not an independently verified market ranking.
+- Principles: Natural / Non-invasive / Effortless / Science-informed.
+- Exploration spans alertness, focus, relaxation, rest, sleep, and recovery. These directions do not establish product capabilities or validated effects.
+- Clearly labeled Future Research Directions may appear in brand vision content. Do not represent them as active Labs, launched products, completed studies, or launch promises.
+- Nighttime living is the brand's origin and Lume's use context, not the boundary of all future products.
+- Lume remains the first product, a sleep-spectrum lamp. Its category, hardware, use, and evidence limits are unchanged.
+
+- Brand mission: natural transitions between everyday states / 順應身體節奏，協助日常狀態自然轉換
+- Origin / nighttime expression: `Made for life after dark.` / `為夜晚的生活設計` (not the whole brand's scope)
 - Lume product tagline: `Night deserves its own light.` / `夜晚，值得有自己的光。`
 - Lume Hero hook: `Your room knows it’s night. Your light doesn’t.`
 - Product definition: `Lume is a sleep-spectrum lamp, specially tuned for after dark.`

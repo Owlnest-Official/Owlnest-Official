@@ -1,6 +1,22 @@
 # Owlnest Brand Truth
 
-## V1.1 information architecture — 2026-09-08
+## Current brand decision — 2026-10-17
+
+Explicitly authorized by the user as the long-term brand authority: OWLNEST exists to help people transition naturally between everyday states. Natural is the core; non-invasive technology, low operating burden, science-informed design, and careful products are the methods.
+
+The formal ambition is **to become the world's first brand dedicated to helping people transition naturally between states** / **成為全球第一個協助人體自然切換狀態的品牌**. Public wording must clearly say “our ambition”, “we aim to”, or “我們的願景：成為”. No global-first audit has established an objective market ranking. Do not assert one as fact in copy, metadata, or structured data.
+
+Nighttime living remains the origin and Lume's application context, not OWLNEST's development boundary. This decision supersedes conflicting brand-only wording in older Truth tables, the Ledger, Operating Brief, and Site Architecture. It does not supersede product facts, evidence limits, confidentiality, engineering, payment, data, or integration protections. Future conflicts still require explicit resolution under AGENTS.md.
+
+Four principles: **Natural** (work with physiology, not force a state); **Non-invasive** (prioritize light, sound, temperature, touch, and environmental approaches); **Effortless** (reduce setup and learning); **Science-informed** (separate research principles from product validation).
+
+Alertness, focus, relaxation, rest, sleep, and recovery are long-term exploration directions, not six verified benefits. Future Research Directions may be described clearly as such in brand vision content. Do not create fictitious products, active Labs, launch dates, clinical results, patents, or partnerships.
+
+Lume remains the first real product: a sleep-spectrum lamp for nighttime use. It must not inherit claims for focus, alertness, mood control, or recovery from the brand ambition.
+
+## Historical V1.1 information architecture — 2026-09-08
+
+Retained for context. Current real-page breadcrumbs follow the 2026-09-18 correction in Site Architecture; no duplicate Lab tier or fragment-based parent page is restored. This brand update changes neither routes nor navigation behavior.
 
 The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
 
@@ -24,18 +40,20 @@ Visible breadcrumbs and BreadcrumbList agree: Home → Lab → Sleep Lab → Sci
 
 Publish Findings only from real observations. Do not create empty Results pages, sitemap entries, menu items, opening promises, participant counts, or application CTAs. No other Lab is introduced. JSON-LD and AI resources mirror the hierarchy; sitemap lists only existing canonical URLs.
 
-Status: Current internal authority • Updated 2026-09-08 (V1.1 IA; Batch D copy rules retained)
+Status: Current brand authority • Updated 2026-10-17 (brand expansion; product and safety rules retained)
 
 The active user's locked decisions take precedence. Preserve current verified product and commerce facts; older briefs, Word drafts, reference files, and Git history cannot override them. AI resources mirror the human site and these rules, not the reverse.
 
 ## 1. Locked language
 
-Owlnest is a nighttime-living home-lifestyle brand. Lume is its first product, not the whole brand.
+OWLNEST designs with the body's natural rhythms in mind, with a mission to help people move naturally between everyday states. Lume is its first product, not the whole brand.
 
 | Job | English | 繁體中文 |
 |---|---|---|
-| Brand category | Nighttime living | 夜晚生活 |
-| Brand tagline | Made for life after dark. | 為夜晚的生活設計 |
+| Brand mission | Helping people transition naturally between everyday states | 順應身體節奏，協助日常狀態自然轉換 |
+| Brand ambition, always qualified | Our ambition: to build the world's first brand dedicated to helping people transition naturally between states. | 我們的願景：成為全球第一個協助人體自然切換狀態的品牌。 |
+| Brand Hero | Your body has a rhythm of its own. | 身體，有自己的節奏。 |
+| Origin / nighttime expression | Made for life after dark. | 為夜晚的生活設計 |
 | Lume category | Sleep-spectrum lamp | 睡眠光譜燈 |
 | Technical term | Specially tuned sleep spectrum | 特調睡眠光譜 |
 | Plain explanation | Light specially tuned for nighttime. | 為夜晚特別調製的光。 |
@@ -65,14 +83,14 @@ Assign each line one job. Do not stack taglines, hook, definition, and science i
 
 | Page family | One job |
 |---|---|
-| Home | Problem → category → difference → science bridge → experience and purchase entry |
+| Home | Brand mission → everyday transitions → design principles → Lume → exploration directions → research → purchase and About |
 | Products | Product presentation, buying facts, size, package, protected purchase |
 | What Is Lume | Define Lume and explain the spectrum-versus-warm-appearance difference |
 | Science | General light, spectrum, exposure, and biological timing principles |
 | Evidence | Established sources and Lume design rationale, with scientific boundaries |
-| Owlnest Sleep Lab | Long-term real-life research and product–user fit |
+| Lab / Sleep Lab | Brand research framework; existing Sleep Lab work and product–user fit; clearly separated future directions |
 | 21-Day Sleep Program | One Sleep Lab method: purpose, timeline, participation, honest feedback |
-| About | Nighttime-living brand, origin, and historical design story |
+| About | Natural transitions, design philosophy, true nighttime origin, Lume as first step, qualified brand ambition |
 | Manual | Bottom button, USB-C, nighttime use, essential care |
 | FAQ | Short answers to real questions |
 | Reviews | Real product feedback, unchanged and distinct from research |
@@ -82,11 +100,11 @@ Assign each line one job. Do not stack taglines, hook, definition, and science i
 | Sleep-Ready Room Check | Existing optional room-light tool; protected logic |
 | AI / SEO resources | Faithful mirrors and links to the page owners |
 
-Use existing routes. Do not create new page families or expose internal plans. Full route ownership: `docs/OWLNEST_SITE_ARCHITECTURE.md`.
+Use existing routes. Do not create empty page families or expose confidential plans. Public long-term exploration is limited to the explicitly authorized directions above. Full route ownership: `docs/OWLNEST_SITE_ARCHITECTURE.md`.
 
 ## 4. Research and evidence
 
-Lab is the upper research category; Owlnest Sleep Lab is its only public Lab: a long-term real-life research system. The 21-Day Sleep Program is one method, not a separate Lab or clinical trial.
+OWLNEST Lab is the long-term research and product-validation framework. Sleep Lab is the existing research area, focused on Lume in real nighttime routines. Focus, relaxation, and recovery can be named only as Future Research Directions, not active Labs. The 21-Day Sleep Program is one method, not a separate Lab or clinical trial.
 
 The purpose is product–user fit: who finds value, in which nighttime situations, where value is limited, and who may not fit. Retain positive, neutral, no meaningful change, and negative feedback.
 
@@ -98,7 +116,7 @@ Internal rules:
 - General research informs design; it does not prove Lume-specific physiological or clinical outcomes.
 - Publish measurements or participant findings only from real, verifiable records. Never fabricate participants, personas, testimonials, success rates, or comparison data.
 - Product photographs demonstrate appearance and hardware, not spectrum or clinical efficacy.
-- Keep application configuration intact. Public Program CTAs are informational; no recruitment numbers, application-status UI, or Results placeholders.
+- Keep the existing Program and questionnaire entry, application configuration, and data flow intact. Do not invent recruitment numbers or Results placeholders.
 
 ## 5. Claims and use
 
@@ -121,7 +139,7 @@ Detailed hardware and safety boundaries: `docs/LUME_PRODUCT_TRUTH.md`.
 - Use imagery and whitespace instead of filler, card walls, icons, or decorative text.
 - Preserve actual instructions, buying facts, policy substance, and real review text.
 - Public site should present what is real and ready today.
-- Omit nonexistent content. Do not advertise absence or promise future availability.
+- Omit nonexistent product/results content. Do not promise future availability. Clearly qualified brand ambitions and Future Research Directions are permitted; they are not launches or validated capabilities.
 - Prohibited public placeholders include “coming soon”, “currently unavailable”, “results pending”, “future results”, “即將”, “尚未”, and “敬請期待”.
 - These examples are internal prohibitions, not public copy or replacement slogans.
 - Keep genuine transactional errors, required disclosures, and customer rights accurate; confidence is not concealment of material facts.

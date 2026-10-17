@@ -289,6 +289,15 @@ body.lab-page.zh {
     padding-block: clamp(3.75rem, 6vw, 5.5rem);
 }
 
+.lab-future .lab-section-title {
+    font-size: clamp(2rem, 3.3vw, 3rem);
+    line-height: 1.25;
+}
+
+.lab-future .lab-section-title span {
+    display: inline-block;
+}
+
 .lab-research-grid {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);

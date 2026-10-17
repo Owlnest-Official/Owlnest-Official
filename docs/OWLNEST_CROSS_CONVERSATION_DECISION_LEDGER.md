@@ -1,5 +1,20 @@
 # Owlnest Cross-Conversation Decision Ledger
 
+## 2026-10-17 — Authorized long-term brand expansion (CURRENT)
+
+Source: the user's explicit brand-upgrade instruction and governance authorization. This is a confirmed decision, not a proposed strategy.
+
+| ID | Decision | Status / boundary |
+|---|---|---|
+| B20261017-01 | OWLNEST's mission is helping people transition naturally between everyday states. Natural is central; non-invasive technology, low effort, and science-informed product design are the methods. | CURRENT; replaces the nighttime-only brand boundary, not product or safety facts. |
+| B20261017-02 | Formal ambition: become the world's first brand dedicated to helping people transition naturally between states. | CURRENT ASPIRATION; no verified world-first ranking. Public wording must explicitly say ambition / aim / 願景：成為. |
+| B20261017-03 | Alertness, focus, relaxation, rest, sleep, and recovery are exploration directions. | CURRENT DIRECTION; not six validated effects or launched products. Clearly labeled Future Research Directions are permitted in brand vision content. |
+| B20261017-04 | Nighttime living and Made for life after dark remain origin and nighttime-context expressions. Lume is the first sleep-spectrum lamp product, not the whole brand. | CURRENT; Lume does not gain focus, mood, alertness, or recovery claims. |
+| B20261017-05 | OWLNEST Lab is the long-term research framework. Sleep Lab remains the existing area; 21-Day remains its Lume program. | CURRENT; future Focus / Relaxation / Recovery directions must not appear as active Labs or completed research. |
+| B20261017-06 | Home leads with body rhythms, brand purpose and principles, then Lume, future exploration, research, and purchase. About expands the true origin story into the new mission. | CURRENT; preserve actual commerce, questionnaire, tracking, routes, evidence boundaries, and image fidelity. |
+
+Supersession is narrow: B01–B03 and B05 are superseded as whole-brand limits; their nighttime history remains valid. M06 remains a Lume-context hook, not the required brand Hero. W04–W05 are superseded for the new Home. S10's no-brand-redefinition phase is superseded by this explicit authorization. All other engineering, confidentiality, payment, integration, and scientific rules remain. Older text below is retained for traceability, not permission to reinstate a conflicting brand scope.
+
 ## V1.1 information architecture — 2026-09-08
 
 The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
@@ -217,11 +232,11 @@ The founder explicitly replaced the previous formal Traditional Chinese Owlnest 
 
 | ID | Topic | Current decision | Status | Retired / conflicting history | Authority | Repo implication |
 |---|---|---|---|---|---|---|
-| B01 | Owlnest brand category | **Nighttime living / 夜晚生活** | CURRENT | Sleep-tech brand, sleep-lifestyle brand, lamp brand, sleep-light company | Brand Truth 2026-07-17 | Audit About, Contact, metadata, AI files, footer and old briefs for narrower definitions. |
-| B02 | Owlnest definition | Home-lifestyle brand made for life after dark; creates objects, spaces and rituals for nighttime home life | CURRENT | Owlnest defined only by sleep or by Lume | Brand Truth | Do not make every brand page a Lume product page. |
-| B03 | Official Owlnest tagline | **Made for life after dark. / 為夜晚的生活設計** | CURRENT | Previous formal Traditional Chinese line `為天黑後的生活而生。` (RETIRED / SUPERSEDED); Night deserves its own light; The Art of Deep Sleep; sleep-supporting spectrum lamp as brand line | Founder decision 2026-08-18 + Brand Truth | Use only at brand level. Never replace with Lume product language. |
+| B01 | Owlnest brand category | **Nighttime living / 夜晚生活** | SUPERSEDED AS BRAND LIMIT — B20261017 | Sleep-tech brand, sleep-lifestyle brand, lamp brand, sleep-light company | Brand Truth 2026-07-17 | Retain as origin, not the current whole-brand category. |
+| B02 | Owlnest definition | Home-lifestyle brand made for life after dark; creates objects, spaces and rituals for nighttime home life | SUPERSEDED AS BRAND LIMIT — B20261017 | Owlnest defined only by sleep or by Lume | Brand Truth | Historical origin; current mission extends to natural everyday transitions. |
+| B03 | Official Owlnest tagline | **Made for life after dark. / 為夜晚的生活設計** | ORIGIN EXPRESSION — B20261017 | Previous formal Traditional Chinese line `為天黑後的生活而生。` (RETIRED / SUPERSEDED); Night deserves its own light; The Art of Deep Sleep; sleep-supporting spectrum lamp as brand line | Founder decision 2026-08-18 + Brand Truth | May remain in nighttime context; no longer defines the whole brand's boundary. |
 | B04 | Emotional brand line | **Home begins after dark. / 天黑之後，家才真正開始。** | CONDITIONAL | Used as fixed logo tagline everywhere | Brand Truth | Use selectively in About/editorial storytelling, not mechanically. |
-| B05 | Brand expansion territory | Nighttime lighting, scent, bedding, bedtime rituals, home recovery, hotel/wellness experiences, other after-dark products | CURRENT | Owlnest permanently limited to one lamp | Brand Truth | Keep future-facing About language broad but concrete. |
+| B05 | Brand expansion territory | Nighttime lighting, scent, bedding, bedtime rituals, home recovery, hotel/wellness experiences, other after-dark products | SUPERSEDED AS BOUNDARY — B20261017 | Owlnest permanently limited to one lamp | Brand Truth | Historical ideas, not active products or current launch plans. |
 | B06 | Lume's role | Owlnest's **first hero product**, not the whole brand | CURRENT | Owlnest and Lume treated as interchangeable | Brand Truth | Structured data and AI summaries must distinguish brand from product. |
 
 ## B. Message ownership
@@ -233,7 +248,7 @@ The founder explicitly replaced the previous formal Traditional Chinese Owlnest 
 | M03 | Plain-language explanation | **Light specially tuned for nighttime. / 為夜晚特別調製的光。** | CURRENT | Technical term left unexplained | Truth files | Required near first important use of sleep spectrum. |
 | M04 | Lume product definition | **Lume is a sleep-spectrum lamp, specially tuned for after dark.** | CURRENT | Sleep-focused amber light; sleep-supporting light for 1–2 hours before bed | Truth files | Keep exact or faithful approved translation. |
 | M05 | Lume product tagline | **Night deserves its own light. / 夜晚，值得有自己的光。** | CURRENT | Used as Owlnest brand tagline | Truth files | Product point of view only. |
-| M06 | Primary Hero hook | **Your room knows it’s night. Your light doesn’t.** | CURRENT | Your room is dark. Your brain is not.; Your body is tired. Your brain is still running. | Truth files | Current main uses the approved hook. Do not casually replace. |
+| M06 | Primary Hero hook | **Your room knows it’s night. Your light doesn’t.** | LUME CONTEXT ONLY — B20261017 | Your room is dark. Your brain is not.; Your body is tired. Your brain is still running. | Truth files | Retained Lume hook; the new brand Hero is Your body has a rhythm of its own. |
 | M07 | Science bridge | **Your body uses light to tell time.** | CURRENT | Full melatonin/ipRGC lecture before product understanding | Truth files | One bridge on high-level pages, deeper science on Science page. |
 | M08 | Warm-light comparison | **Ordinary warm light only looks warm. Lume is designed from the spectrum up for sleep.** | CURRENT | Low-blue subtraction as the main difference | Truth files | Explain composition, not just absence of blue. |
 | M09 | Spectrum educational line | **Warm is how light looks. Spectrum is what the light contains.** | CURRENT | Warm CCT presented as sufficient evidence | Truth files | Educational line, not tagline or proof. |
@@ -303,8 +318,8 @@ The founder explicitly replaced the previous formal Traditional Chinese Owlnest 
 | W01 | Rebuild scope | Preserve roughly 70%; redo roughly 30% of the persuasion system | CURRENT | Full site demolition / perpetual redesign | User memory 2026-07-17 | Keep visual system, checkout, pages, assets and infrastructure. |
 | W02 | Visual direction | Deep-night, amber, premium editorial, quiet luxury, intentional whitespace, real product proof | CURRENT | Generic science-tech dashboard or decorative lamp site | User memory + repo direction | Design improvements should support hierarchy, not reopen positioning. |
 | W03 | Homepage role | Short persuasive showroom / bridge, not Products + Science + FAQ duplicated | CURRENT | Long everything-page | Historical page-role decisions + current memory | Remove duplication; product definition should appear early. |
-| W04 | Homepage persuasion sequence | Problem → product definition → ordinary warm-light difference → science bridge → real product proof → use scenes/how to use → evidence/trust → purchase | CURRENT | Product introduced before problem; repeated definitions and comparison blocks | Current memory + Truth | Main still has some repetition and needs focused audit. |
-| W05 | Hero actions | `Buy Lume` is the primary action; Room Check is supporting and should not compete at equal weight in Hero | CURRENT | Dual-primary Buy + Room Check | Current strategy + PR #5 useful principle | Main currently has both; this is a known design decision for next audit. |
+| W04 | Homepage persuasion sequence | Problem → product definition → ordinary warm-light difference → science bridge → real product proof → use scenes/how to use → evidence/trust → purchase | SUPERSEDED — B20261017 | Product introduced before problem; repeated definitions and comparison blocks | Current memory + Truth | Historical product-first sequence; current brand Home follows B20261017-06. |
+| W05 | Hero actions | `Buy Lume` is the primary action; Room Check is supporting and should not compete at equal weight in Hero | SUPERSEDED FOR HOME — B20261017 | Dual-primary Buy + Room Check | Current strategy + PR #5 useful principle | Current Home retains a clear Lume purchase entry alongside Our Philosophy. |
 | W06 | Products page role | Product details, verified facts, use, evidence boundary and purchase | CURRENT | Collection pretending multiple finished SKUs; duplicate Campaign/Science | Prior completed simplification + current main | Protect current product page structure; remove only redundancy. |
 | W07 | Science page role | Research credibility, mechanism explanation, evidence boundaries and source library | CURRENT | Product sales page or product-specific proof without evidence | Prior completed simplification + Truth | Preserve research database; avoid over-education on Home. |
 | W08 | Campaign page role | Campaign/story/progress/offer/supporting conversion page; must not duplicate entire Products page | CURRENT | Indiegogo-only prelaunch page or old closed campaign state | Current navigation and page strategy | Preserve page/nav; audit stale dates/status. |
@@ -373,7 +388,7 @@ The founder explicitly replaced the previous formal Traditional Chinese Owlnest 
 | S07 | GTM / consent | Do not modify without explicit request | PROTECTED SYSTEM | Current task constraints | Preserve analytics/compliance behavior. |
 | S08 | Images / `_incoming/` | Do not modify or stage without explicit request; never stage `_incoming/` | PROTECTED SYSTEM | AGENTS | Use existing real images by default. |
 | S09 | Git | No commit or push unless asked; stage only expected files | CURRENT WORKFLOW | AGENTS | Every Codex task must report files changed. |
-| S10 | Current phase | Website convergence and release readiness, not another brand-redefinition round | CURRENT | User 2026-07-21 | New ideas must not reopen locked foundations. |
+| S10 | Current phase | Website convergence and release readiness, not another brand-redefinition round | SUPERSEDED — B20261017 | User 2026-07-21 | Retained historical phase; the 2026-10-17 brand upgrade is explicitly authorized. |
 
 ---
 

@@ -1,6 +1,14 @@
 # Owlnest Lume Operating Brief
 
-## V1.1 information architecture — 2026-09-08
+## Brand operating decision — 2026-10-17
+
+Use the updated Brand Truth: OWLNEST's mission is natural transitions between everyday states, with Natural / Non-invasive / Effortless / Science-informed design principles. Nighttime living is the origin, not the brand boundary. Lume remains the first product and retains every existing product and evidence restriction.
+
+“World's first” is a qualified ambition, not a verified ranking. Use “Our ambition: to build…” / “我們的願景：成為…”. Clearly labeled Future Research Directions may cover alertness, focus, relaxation, rest, sleep, and recovery; no invented product availability, active projects, or physiological outcomes.
+
+This overrides only directly conflicting brand limitations below and in historical references. All engineering, scientific, commercial, privacy, and integration protections remain. Current actual-page routing follows the 2026-09-18 Site Architecture correction.
+
+## Historical V1.1 information architecture — 2026-09-08
 
 The user's explicit V1.1 hierarchy supersedes the earlier flat navigation, not product facts, compressed copy, or protected systems.
 
@@ -32,12 +40,13 @@ Read Brand Truth, Product Truth, and the Ledger before this brief. Active user d
 
 | Job | English | 繁體中文 |
 |---|---|---|
-| Brand | Made for life after dark. | 為夜晚的生活設計 |
+| Brand mission | Helping people transition naturally between everyday states | 順應身體節奏，協助日常狀態自然轉換 |
+| Origin / nighttime expression | Made for life after dark. | 為夜晚的生活設計 |
 | Category | Sleep-spectrum lamp | 睡眠光譜燈 |
 | Spectrum | Specially tuned sleep spectrum | 特調睡眠光譜 |
 | Plain explanation | Light specially tuned for nighttime. | 為夜晚特別調製的光。 |
 
-Owlnest is a nighttime-living home-lifestyle brand. Lume is its first product.
+OWLNEST designs with natural human rhythms in mind. Lume is its first product, not a device for every state named in the brand vision.
 
 One bottom physical button; USB-C charging; no touch, knob, app, screen, or smart connectivity. Egg-shaped silicone body, round wooden base, approximately 14–15 cm tall. Not a medical device. Do not invent specifications or functions.
 
@@ -45,21 +54,21 @@ One bottom physical button; USB-C charging; no touch, knob, app, screen, or smar
 
 | Owner | Content |
 |---|---|
-| Home | Brief orientation and persuasion |
+| Home | Brand mission and principles, first product Lume, exploration, research, and purchase |
 | Products | Buying facts, real product presentation, size/package, protected #buy |
 | What Is Lume | Category and warm-appearance versus spectrum distinction |
 | Science | General principles of nighttime light |
 | Evidence | Established sources and design rationale |
-| Owlnest Sleep Lab | Long-term real-life research; product–user fit |
+| Lab / Sleep Lab | Long-term brand research system, existing Sleep Lab and product–user fit; future directions clearly distinguished |
 | 21-Day Sleep Program | One Lab method; timeline and participation approach |
-| About | Brand origin and historical design |
+| About | Natural transitions, low-effort non-invasive design, true origin, Lume as first step, qualified ambition |
 | Manual | Operation, charging, use, care |
 | FAQ / Reviews / Contact | Real answers / real feedback / working contact routes |
 | Policy | Necessary terms and disclosures |
 | Account / commerce / Room Check | Existing protected tasks |
 | AI / SEO | Mirrors of the same facts and page owners |
 
-Do not create parallel pages, Labs, or roadmaps. Existing routes and detailed responsibilities are in `docs/OWLNEST_SITE_ARCHITECTURE.md`.
+Do not create empty pages, fictitious active Labs, or release roadmaps. Clearly labeled Future Research Directions belong in brand vision content. Existing routes remain unchanged; detailed responsibilities are in `docs/OWLNEST_SITE_ARCHITECTURE.md`.
 
 ## Research and claims
 
@@ -75,7 +84,7 @@ Lume is not a medical device. No insomnia treatment, medical efficacy, guarantee
 
 Delete before adding. One section, one idea. Let the headline carry the message; supporting copy is usually 1–2 short sentences. Delete repetition, keep deeper information with its owner, and use imagery and whitespace instead of filler.
 
-Public site should present what is real and ready today. Omit nonexistent content rather than displaying placeholders such as coming soon, currently unavailable, results pending, future results, 即將, 尚未, or 敬請期待. Do not hide necessary operational errors or legal disclosures.
+Public product and evidence content must reflect reality. Omit empty launch/results placeholders; qualified brand ambitions and future research directions are not product promises. Do not hide evidence limits, necessary operational errors, or legal disclosures.
 
 EN/ZH retain identical architecture, imagery, CTA logic, and facts. Chinese is natural Taiwan usage, not literal translation.
 
