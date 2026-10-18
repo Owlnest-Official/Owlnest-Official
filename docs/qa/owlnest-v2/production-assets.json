@@ -1,0 +1,156 @@
+[
+  {
+    "path": "assets/images/home/responsive/DSCF1435(1)-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 17102,
+    "exact": true
+  },
+  {
+    "path": "assets/images/home/responsive/DSCF1435(1)-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 57792,
+    "exact": true
+  },
+  {
+    "path": "assets/images/home/responsive/DSCF1435(1)-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 132756,
+    "exact": true
+  },
+  {
+    "path": "assets/images/home/responsive/DSCF1425(1)-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 13504,
+    "exact": true
+  },
+  {
+    "path": "assets/images/home/responsive/DSCF1425(1)-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 32998,
+    "exact": true
+  },
+  {
+    "path": "assets/images/home/responsive/DSCF1425(1)-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 58936,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/DSCF1429-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 10402,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/DSCF1429-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 34574,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/DSCF1429-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 70382,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/_MG_1439-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 14996,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/_MG_1439-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 57960,
+    "exact": true
+  },
+  {
+    "path": "assets/images/products/responsive/_MG_1439-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 133722,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-draw-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 20946,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-draw-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 62072,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-draw-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 96828,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-design-480.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 56796,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-design-960.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 232788,
+    "exact": true
+  },
+  {
+    "path": "assets/images/about/responsive/asset-draft-design-1440.webp",
+    "status": 200,
+    "tls": true,
+    "type": "image/webp",
+    "bytes": 345082,
+    "exact": true
+  },
+  {
+    "domain": "owlnestofficial.com",
+    "status": 200,
+    "tls": true
+  },
+  {
+    "domain": "www.owlnestofficial.com",
+    "status": 301,
+    "tls": true
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "width": 390,
+    "zh": false,
+    "aboutEntry": true,
+    "researchLinks": true,
+    "languageTarget": "/zh-tw/lab/",
+    "languageSwitched": true,
+    "formHref": "https://forms.gle/FqWYNM7kR3hXXZdeA",
+    "buyEntry": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "aboutEntry": true,
+    "researchLinks": true,
+    "languageTarget": "/lab/",
+    "languageSwitched": true,
+    "formHref": "https://forms.gle/FqWYNM7kR3hXXZdeA",
+    "buyEntry": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "aboutEntry": true,
+    "researchLinks": true,
+    "keyboard": true,
+    "languageTarget": "/zh-tw/lab/",
+    "languageSwitched": true,
+    "formHref": "https://forms.gle/FqWYNM7kR3hXXZdeA",
+    "buyEntry": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "aboutEntry": true,
+    "researchLinks": true,
+    "keyboard": true,
+    "languageTarget": "/lab/",
+    "languageSwitched": true,
+    "formHref": "https://forms.gle/FqWYNM7kR3hXXZdeA",
+    "buyEntry": true
+  }
+]

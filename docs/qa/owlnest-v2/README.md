@@ -10,7 +10,7 @@ Home, About, Products and Lab, EN/ZH: eight documents plus one opt-in stylesheet
 
 - Before: actual production Chrome captures at 390 × 844 and 1440 × 900, before the release push.
 - After: local Chrome 154.0.8037.100, using Playwright, at 320 × 740, 390 × 844, 430 × 932, 768 × 1024, 1440 × 900 and 1920 × 1080. All 48 page/viewport cases captured and checked. Final Home/Lab and narrow About retests replace the earlier cases in `browser-results.json`.
-- The gallery preserves 64 first-screen/full-page captures: eight pages × two representative widths × two phases × two capture types. Full-resolution PNG originals and the other test widths were retained in the local QA workspace; gallery copies are WebP quality 88.
+- The gallery preserves 64 first-screen/full-page captures: eight pages × two representative widths × two phases × two capture types. The four final Products full-page captures were refreshed on production at the identical release content, with all lazy images decoded before capture. Full-resolution PNG originals and the other test widths were retained in the local QA workspace; gallery copies are WebP quality 88.
 - Full-page captures flatten the sticky Home Hero into one scroll position, leaving its scroll range as a dark band. Live scrolling and changing canvas frames were tested separately. This band is not a new empty content section.
 
 ### Art-direction review
@@ -81,3 +81,13 @@ Visual/function/protected-system gates pass. No blocking regression was found. T
 - `performance.json`: lab samples with desktop profile settings.
 - `responsive-images.json`: original and derivative dimensions/bytes.
 - `screenshots/`: actual before/after browser images, not design mockups.
+
+## Production verification — 2026-10-19 (Taipei)
+
+- Release code: `60228329081a4225f577591e444b825149b7aba0`; pushed to `origin/main`. VPS `/srv/owlnest/site` reported this exact SHA; existing `owlnest-update.service` returned `Result=success`, `ExecMainStatus=0`. No infrastructure configuration changed.
+- Apex HTTPS: 200 with certificate validation. WWW HTTPS: 301 to canonical apex with certificate validation. All eight changed routes and six unchanged Science/Evidence/Program routes: 200, content hashes equal to the local release after line-ending normalization. New stylesheet matches too.
+- All 18 responsive assets: 200, `image/webp`, exact binary hashes. Gallery: 200 with `noindex,nofollow`.
+- Production Chrome: all eight pages at 390 × 844 and 1440 × 900 (16 cases), no horizontal overflow, console/page errors, failed resources or broken images. First screens and full-page compositions were inspected. Package images also checked at their actual scroll position, not only flattened full-page captures.
+- Four production functional passes confirm About/research routes, EN/ZH switching, existing questionnaire destination and both purchase entries. The form resolves to Google's sign-in page (200); no submission or payment was performed.
+- One initial Campaign check exceeded a `networkidle` wait. Repeating with DOM readiness and explicit element checks passed; HTTP content matched. No site code was changed to hide that test timeout.
+- Production evidence: `production-browser-results.json`, `production-interaction.json`, `production-assets.json`. Performance and accessibility limitations above still apply; production smoke checks are not field CWV measurements.
