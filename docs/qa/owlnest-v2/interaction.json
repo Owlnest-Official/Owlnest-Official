@@ -1,0 +1,62 @@
+[
+  {
+    "zh": false,
+    "width": 390,
+    "reducedMotion": true,
+    "keyboard": true,
+    "hoverOrMobileMenu": true,
+    "links": true,
+    "purchaseEntry": true,
+    "focus": {
+      "active": true,
+      "outline": "solid",
+      "width": "2px",
+      "transition": "0s"
+    }
+  },
+  {
+    "zh": false,
+    "width": 1440,
+    "reducedMotion": true,
+    "keyboard": true,
+    "hoverOrMobileMenu": true,
+    "links": true,
+    "purchaseEntry": true,
+    "focus": {
+      "active": true,
+      "outline": "solid",
+      "width": "2px",
+      "transition": "0s"
+    }
+  },
+  {
+    "zh": true,
+    "width": 390,
+    "reducedMotion": true,
+    "keyboard": true,
+    "hoverOrMobileMenu": true,
+    "links": true,
+    "purchaseEntry": true,
+    "focus": {
+      "active": true,
+      "outline": "solid",
+      "width": "2px",
+      "transition": "0s"
+    }
+  },
+  {
+    "zh": true,
+    "width": 1440,
+    "reducedMotion": true,
+    "keyboard": true,
+    "hoverOrMobileMenu": true,
+    "links": true,
+    "purchaseEntry": true,
+    "focus": {
+      "active": true,
+      "outline": "solid",
+      "width": "2px",
+      "transition": "0s"
+    }
+  }
+]

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>OWLNEST V2 — Visual QA evidence</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:32px;background:#eee9df;color:#202420;font:16px/1.6 system-ui,sans-serif}main{max-width:1600px;margin:auto}h1,h2{font-weight:500}p{max-width:85ch}nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:24px 0}a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:2px solid;outline-offset:4px}section{margin:64px 0;border-top:1px solid #aaa;padding-top:24px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}figure{margin:0}img{display:block;width:100%;height:auto}figcaption{padding:12px 0}.mobile .pair{max-width:804px}details{margin:24px 0}summary{cursor:pointer;padding:12px 0}@media(max-width:640px){body{padding:16px}.pair{gap:12px}}
+  </style>
+</head>
+<body><main>
+  <h1>OWLNEST V2 — Visual evidence</h1>
+  <p>Before: production baseline <code>557ae712</code>. After: local release candidate. Real Chrome captures, 390 × 844 and 1440 × 900; open an image for full resolution. The full-page Home capture shows the sticky Hero's scroll range as a dark band; live scrolling was checked separately. No source image or page was composited for this comparison.</p>
+  <p><a href="README.md">QA results, performance methodology and limitations</a></p>
+  <nav aria-label="Screenshot pages" id="pages"></nav>
+  <div id="gallery"></div>
+  <script>
+    const pages = ['home-en','home-zh','about-en','about-zh','products-en','products-zh','lab-en','lab-zh'];
+    for (const page of pages) {
+      const link = document.createElement('a'); link.href = '#' + page; link.textContent = page; document.querySelector('#pages').append(link);
+      const section = document.createElement('section'); section.id = page;
+      const heading = document.createElement('h2'); heading.textContent = page; section.append(heading);
+      for (const width of [390,1440]) {
+        const wrapper = document.createElement('div'); wrapper.className = width === 390 ? 'mobile' : 'desktop';
+        const subheading = document.createElement('h3'); subheading.textContent = width + 'px'; wrapper.append(subheading);
+        for (const kind of ['hero','full']) {
+          const detail = document.createElement('details'); detail.open = kind === 'hero';
+          const summary = document.createElement('summary'); summary.textContent = kind === 'hero' ? 'First screen' : 'Complete page'; detail.append(summary);
+          const pair = document.createElement('div'); pair.className = 'pair';
+          for (const phase of ['before','after']) {
+            const figure = document.createElement('figure'); const caption = document.createElement('figcaption'); caption.textContent = phase;
+            const a = document.createElement('a'); a.href = 'screenshots/' + page + '-' + width + '-' + phase + '-' + kind + '.webp';
+            const img = document.createElement('img'); img.src = a.href; img.alt = page + ', ' + width + 'px, ' + phase + ', ' + kind; img.loading = 'lazy';
+            a.append(img); figure.append(caption,a); pair.append(figure);
+          }
+          detail.append(pair); wrapper.append(detail);
+        }
+        section.append(wrapper);
+      }
+      document.querySelector('#gallery').append(section);
+    }
+  </script>
+</main></body>
+</html>

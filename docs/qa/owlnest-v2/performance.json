@@ -1,0 +1,88 @@
+[
+  {
+    "phase": "before",
+    "route": "/",
+    "formFactor": "mobile",
+    "performance": 0.5,
+    "accessibility": 1,
+    "lcp": 8578.858499999998,
+    "cls": 0,
+    "tbt": 368,
+    "bytes": 22805564,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/products",
+    "formFactor": "mobile",
+    "performance": 0.37,
+    "accessibility": 1,
+    "lcp": 60597.44399999985,
+    "cls": 0.1658276431347005,
+    "tbt": 541,
+    "bytes": 18869785,
+    "warnings": []
+  },
+  {
+    "phase": "after",
+    "route": "/",
+    "formFactor": "mobile",
+    "performance": 0.71,
+    "accessibility": 1,
+    "lcp": 6342.462750000001,
+    "cls": 0.01095403338272662,
+    "tbt": 0,
+    "bytes": 2126611,
+    "warnings": []
+  },
+  {
+    "phase": "after",
+    "route": "/products",
+    "formFactor": "mobile",
+    "performance": 0.71,
+    "accessibility": 1,
+    "lcp": 6261.3961500000005,
+    "cls": 0.0007270066328177599,
+    "tbt": 0,
+    "bytes": 1251538,
+    "warnings": []
+  },
+  {
+    "phase": "after",
+    "route": "/",
+    "formFactor": "desktop",
+    "profile": "Lighthouse desktopDense4G",
+    "performance": 0.96,
+    "lcp": 1220.3147,
+    "cls": 0.0022889904586026466,
+    "tbt": 0,
+    "bytes": 2186319,
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    }
+  },
+  {
+    "phase": "after",
+    "route": "/products",
+    "formFactor": "desktop",
+    "profile": "Lighthouse desktopDense4G",
+    "performance": 0.97,
+    "lcp": 1203.07655,
+    "cls": 0.0009234954344926644,
+    "tbt": 0,
+    "bytes": 1318698,
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    }
+  }
+]

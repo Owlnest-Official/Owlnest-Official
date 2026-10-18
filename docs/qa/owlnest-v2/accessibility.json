@@ -1,0 +1,94 @@
+[
+  {
+    "route": "/",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "41.34px"
+    },
+    "issues": []
+  },
+  {
+    "route": "/zh-tw/",
+    "type": {
+      "font": "\"Noto Serif TC\", \"PingFang TC\", \"Microsoft JhengHei\", serif",
+      "size": "38.4px"
+    },
+    "issues": []
+  },
+  {
+    "route": "/products",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "60px"
+    },
+    "issues": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".ah-folio"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #2f353e, background color: #0f1725, font size: 33.0pt (44px), font weight: normal). Expected contrast ratio of 3:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/zh-tw/products/",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "60px"
+    },
+    "issues": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".ah-folio"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.45 (foreground color: #2f353e, background color: #0f1725, font size: 33.0pt (44px), font weight: normal). Expected contrast ratio of 3:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/about",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "48px"
+    },
+    "issues": []
+  },
+  {
+    "route": "/zh-tw/about/",
+    "type": {
+      "font": "\"Noto Serif TC\", \"PingFang TC\", \"Microsoft JhengHei\", serif",
+      "size": "42.4px"
+    },
+    "issues": []
+  },
+  {
+    "route": "/lab/",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "58.5px"
+    },
+    "issues": []
+  },
+  {
+    "route": "/zh-tw/lab/",
+    "type": {
+      "font": "\"Playfair Display\", \"Noto Serif TC\", Georgia, serif",
+      "size": "58.5px"
+    },
+    "issues": []
+  }
+]

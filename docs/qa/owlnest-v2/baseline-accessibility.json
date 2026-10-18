@@ -1,0 +1,28 @@
+[
+  {
+    "route": "/products",
+    "issues": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            ".ah-folio"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/zh-tw/products/",
+    "issues": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            ".ah-folio"
+          ]
+        ]
+      }
+    ]
+  }
+]
