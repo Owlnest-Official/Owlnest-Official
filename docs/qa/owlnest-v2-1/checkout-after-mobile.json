@@ -1,0 +1,40 @@
+[
+  {
+    "route": "/products",
+    "singleOpened": true,
+    "checkoutHost": "wfqwyu-ic.myshopify.com",
+    "restored": true,
+    "buttons": [
+      {
+        "package": "single",
+        "disabled": false,
+        "text": "Buy Single"
+      },
+      {
+        "package": "duo",
+        "disabled": false,
+        "text": "Buy Duo"
+      }
+    ],
+    "duoOpened": true
+  },
+  {
+    "route": "/zh-tw/products/",
+    "singleOpened": true,
+    "checkoutHost": "wfqwyu-ic.myshopify.com",
+    "restored": true,
+    "buttons": [
+      {
+        "package": "single",
+        "disabled": false,
+        "text": "購買 Single"
+      },
+      {
+        "package": "duo",
+        "disabled": false,
+        "text": "購買 Duo"
+      }
+    ],
+    "duoOpened": true
+  }
+]

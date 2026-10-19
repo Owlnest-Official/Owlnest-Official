@@ -1,0 +1,38 @@
+[
+  {
+    "route": "/products",
+    "singleOpened": true,
+    "checkoutHost": "wfqwyu-ic.myshopify.com",
+    "restored": true,
+    "buttons": [
+      {
+        "package": "single",
+        "disabled": true,
+        "text": "Opening secure checkout..."
+      },
+      {
+        "package": "duo",
+        "disabled": true,
+        "text": "Buy Duo"
+      }
+    ]
+  },
+  {
+    "route": "/zh-tw/products/",
+    "singleOpened": true,
+    "checkoutHost": "wfqwyu-ic.myshopify.com",
+    "restored": true,
+    "buttons": [
+      {
+        "package": "single",
+        "disabled": true,
+        "text": "正在前往安全結帳..."
+      },
+      {
+        "package": "duo",
+        "disabled": true,
+        "text": "購買 Duo"
+      }
+    ]
+  }
+]

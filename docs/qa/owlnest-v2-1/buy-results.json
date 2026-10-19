@@ -1,0 +1,74 @@
+[
+  {
+    "zh": false,
+    "w": 320,
+    "overflow": false,
+    "discountFeedback": "Code not found. Please check and try again.",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": true,
+    "w": 320,
+    "overflow": false,
+    "discountFeedback": "找不到這組折扣碼，請確認後再試一次。",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": false,
+    "w": 390,
+    "overflow": false,
+    "discountFeedback": "Code not found. Please check and try again.",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": true,
+    "w": 390,
+    "overflow": false,
+    "discountFeedback": "找不到這組折扣碼，請確認後再試一次。",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": false,
+    "w": 768,
+    "overflow": false,
+    "discountFeedback": "Code not found. Please check and try again.",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": true,
+    "w": 768,
+    "overflow": false,
+    "discountFeedback": "找不到這組折扣碼，請確認後再試一次。",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": false,
+    "w": 1440,
+    "overflow": false,
+    "discountFeedback": "Code not found. Please check and try again.",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  },
+  {
+    "zh": true,
+    "w": 1440,
+    "overflow": false,
+    "discountFeedback": "找不到這組折扣碼，請確認後再試一次。",
+    "focus": "solid",
+    "issues": [],
+    "errors": []
+  }
+]

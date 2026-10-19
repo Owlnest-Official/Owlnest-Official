@@ -1,0 +1,42 @@
+/* V2.1: purchase presentation only. Keep all commerce and discount hooks. */
+#products #buy { scroll-margin-top: 5rem; }
+#products #buy .v2-title { max-width: 24ch; }
+#products #buy #buy-options { gap: clamp(2rem, 5vw, 5rem); margin-top: 3rem; }
+#products #buy #buy-options > article {
+    display: flex; flex-direction: column; padding: 1.75rem 0 0;
+    border: 0; border-top: 1px solid #ffffff40; background: none;
+}
+#products #buy #buy-options > article > p:first-child {
+    color: var(--v2-amber); font: 600 .875rem/1.6 var(--v2-sans);
+    letter-spacing: .02em; text-transform: none;
+}
+#products #buy .ah-subhead { margin-top: .5rem; color: var(--v2-paper); font: 400 1.5rem/1.4 var(--v2-serif); }
+#products #buy .ah-price { margin-block: 1.25rem .75rem; color: var(--v2-paper); font: 500 clamp(2rem, 3vw, 2.75rem)/1.2 var(--v2-sans); }
+#products #buy .ah-copy { margin-block: .5rem 1.5rem; color: var(--v2-muted); font: 400 1rem/1.7 var(--v2-sans); }
+#products #buy #creator-code-form { padding: 0; border: 0; background: none; max-width: 32rem; }
+#products #buy #creator-code-form label > span { color: var(--v2-paper); font: 500 .875rem/1.5 var(--v2-sans); letter-spacing: 0; text-transform: none; }
+#products #buy #creator-code-input {
+    min-height: 48px; border-radius: 0; border-color: #ffffff66;
+    background: #0c141e; color: var(--v2-paper); font: 500 1rem/1.5 var(--v2-sans); letter-spacing: .02em;
+}
+#products #buy #creator-code-input::placeholder { color: #aeb5ba; opacity: 1; }
+#products #buy button {
+    min-height: 48px; border-radius: 0; border: 1px solid var(--v2-amber);
+    background: var(--v2-amber); color: #17201b; padding: .8rem 1.5rem;
+    font: 600 .875rem/1.5 var(--v2-sans); letter-spacing: .01em; text-transform: none;
+    transition: background 160ms ease, color 160ms ease;
+}
+#products #buy [data-shopify-checkout-package] { margin-top: auto; }
+#products #buy button:hover:not(:disabled) { background: #f2cc8a; }
+#products #buy button:disabled { opacity: .75; cursor: wait; }
+#products #buy :is(button,input):focus-visible { outline: 2px solid var(--v2-paper); outline-offset: 4px; }
+#products #buy .v21-purchase-links { margin-top: 2rem; }
+#products #product-details .v2-specs > div { font-size: 1rem; }
+@media (max-width: 600px) {
+    #products #buy #creator-code-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; align-items: end; }
+    #products #buy #creator-code-form label { min-width: 0; }
+    #products #buy #creator-code-form button { padding-inline: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #products #buy button { transition: none; }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "before",
+    "route": "/",
+    "run": 1,
+    "performance": 0.7,
+    "lcp": 6249.388625,
+    "fcp": 3418.5300000000007,
+    "cls": 0.01095403338272662,
+    "tbt": 0,
+    "bytes": 2126614,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/",
+    "run": 2,
+    "performance": 0.71,
+    "lcp": 6348.9243,
+    "fcp": 3249.9595000000004,
+    "cls": 0.01095403338272662,
+    "tbt": 0,
+    "bytes": 2126638,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/",
+    "run": 3,
+    "performance": 0.7,
+    "lcp": 6393.63135,
+    "fcp": 3427.5152000000003,
+    "cls": 0.01095403338272662,
+    "tbt": 0,
+    "bytes": 2126613,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/products",
+    "run": 1,
+    "performance": 0.7,
+    "lcp": 6204.175799999999,
+    "fcp": 3438.6048000000005,
+    "cls": 0.0007270066328177599,
+    "tbt": 0,
+    "bytes": 1251540,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/products",
+    "run": 2,
+    "performance": 0.73,
+    "lcp": 5283.8910000000005,
+    "fcp": 3352.318,
+    "cls": 0.0007270066328177599,
+    "tbt": 0,
+    "bytes": 1251541,
+    "warnings": []
+  },
+  {
+    "phase": "before",
+    "route": "/products",
+    "run": 3,
+    "performance": 0.74,
+    "lcp": 5292.9571,
+    "fcp": 3260.924,
+    "cls": 0.0007270066328177599,
+    "tbt": 0,
+    "bytes": 1251534,
+    "warnings": []
+  }
+]

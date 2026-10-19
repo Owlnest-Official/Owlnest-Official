@@ -1,0 +1,26 @@
+/* Six existing Font Awesome Free 6.4.0 glyphs, not a new icon system.
+   Subset renamed under SIL OFL; attribution/license: assets/fonts/fontawesome-LICENSE.txt. */
+@font-face {
+    font-family: "Owlnest Navigation Icons";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("/assets/fonts/navigation-icons.woff2") format("woff2");
+}
+.fas {
+    font-family: "Owlnest Navigation Icons";
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-user::before { content: "\f007"; }
+.fa-times::before { content: "\f00d"; }
+.fa-chevron-down::before { content: "\f078"; }
+.fa-globe::before { content: "\f0ac"; }
+.fa-bars::before { content: "\f0c9"; }
+.fa-arrow-up-right-from-square::before { content: "\f35d"; }

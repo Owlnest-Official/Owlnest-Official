@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/playfair-display-latin.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/manrope-latin.woff2">
     <!-- Google Tag Manager -->
     <!-- Google Consent Mode v2 default -->
     <script>
@@ -139,10 +138,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/core-fonts.css">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/navigation-icons.css">
 
     <style>
         html {
@@ -511,6 +510,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
     <link rel="stylesheet" href="/assets/css/owlnest-v2.css?v=20261018">
+    <link rel="stylesheet" href="/assets/css/product-refinements.css?v=20261019">
 </head>
 <body class="product-page bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
 <!-- Google Tag Manager (noscript) -->
@@ -614,7 +614,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h2 class="v2-title ">Designed from<br><em>the spectrum up.</em></h2>
         <p class="v2-copy ">Warm-looking lights can have different spectra. Lume is designed from the spectrum up for nighttime use.</p><a class="v2-link " href="/what-is-owlnest-lume/">What Is Lume?<span aria-hidden="true"> ↗</span></a>
         <div id="product-details">
-        <h3 class="v2-title ">Product details</h3>
+        <h3 class="v2-title ">Materials &amp; controls</h3>
         <dl class="v2-specs">
                         <div class="ah-spec"><dt>Body</dt><dd>Soft silicone</dd>
         </div>
@@ -673,14 +673,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </nav>
         </div>
         </section>
-        <section id="buy" class="ah-band ah-band--night">
-            <div class="ah-shell">
-                <p class="ah-slug"><span>Sheet 08 &mdash; Purchase Options</span><span>End of issue</span></p>
-
-                <div class="reveal-text">
-                    <span class="ah-folio" aria-hidden="true">08</span>
-                    <p class="ah-kicker">Purchase options</p>
-                    <h2 class="ah-display ah-display--sub">Choose your Lume.</h2>
+        <section id="buy" class="v2-surface v2-night v2-space v21-buy">
+            <div class="v2-wrap">
+                <div>
+                    <h2 class="v2-title">Choose your Lume.</h2>
 
                     <form id="creator-code-form" class="mt-8 flex max-w-md flex-col gap-3 border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:items-end" novalidate>
                         <label class="flex-1 text-left">
@@ -715,7 +711,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </article>
                     </div>
 
-                    <p class="ah-links"><a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy">Shipping</a><a href="https://wfqwyu-ic.myshopify.com/policies/refund-policy">Returns</a></p>
+                    <nav class="v2-links v21-purchase-links" aria-label="Purchase support"><a class="v2-link" href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy">Shipping</a><a class="v2-link" href="https://wfqwyu-ic.myshopify.com/policies/refund-policy">Returns</a><a class="v2-link" href="/contact">Contact</a></nav>
                     <p id="checkout-feedback" class="mt-4 hidden max-w-md text-sm text-amber/90" aria-live="polite"></p>
                 </div>
             </div>
@@ -823,7 +819,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
 </script>
     <script src="/assets/js/referral.js?v=20260714-2" defer></script>
-    <script src="/assets/js/shopify-checkout.js?v=20260714-2" defer></script>
+    <script src="/assets/js/shopify-checkout.js?v=20261019" defer></script>
     <script src="/assets/js/consent.js" defer></script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
     <script src="/assets/js/site-hierarchy.js?v=20260924-header-nav" defer></script>

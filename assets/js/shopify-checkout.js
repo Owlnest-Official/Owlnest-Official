@@ -4,6 +4,10 @@
   const REFERRAL_STORAGE_KEY = "owlnest_creator_referral";
   const DISCOUNT_STORAGE_KEY = "owlnest_checkout_discount";
   const CHECKOUT_FEEDBACK_ID = "checkout-feedback";
+  const CART_TIMEOUT_MS = 20000;
+  const REDIRECT_TIMEOUT_MS = 10000;
+  const checkoutLabels = new Map();
+  let activeAttempt = null;
 
   const PACKAGES = {
     single: {
@@ -211,10 +215,24 @@
   function setCheckoutButtonsDisabled(isDisabled) {
     document.querySelectorAll("[data-shopify-checkout-package]").forEach((button) => {
       button.disabled = isDisabled;
+      button.setAttribute("aria-busy", String(isDisabled));
+      if (!isDisabled && checkoutLabels.has(button)) {
+        button.textContent = checkoutLabels.get(button);
+      }
     });
   }
 
-  async function createCart(packageKey) {
+  function resetCheckoutState() {
+    const attempt = activeAttempt;
+    activeAttempt = null;
+    if (attempt) {
+      clearTimeout(attempt.timeout);
+      attempt.controller.abort();
+    }
+    setCheckoutButtonsDisabled(false);
+  }
+
+  async function createCart(packageKey, signal) {
     const selectedPackage = PACKAGES[packageKey];
     if (!selectedPackage) throw new Error("INVALID_PACKAGE");
     const referral = readCheckoutReferral();
@@ -235,6 +253,7 @@
     const response = await fetch(STOREFRONT_ENDPOINT, {
       method: "POST",
       credentials: "omit",
+      signal,
       headers: {
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": STOREFRONT_ACCESS_TOKEN
@@ -288,33 +307,61 @@
 
   function initCheckoutButtons() {
     document.querySelectorAll("[data-shopify-checkout-package]").forEach((button) => {
+      checkoutLabels.set(button, button.dataset.checkoutLabel || button.textContent.trim());
       button.addEventListener("click", async () => {
         const packageKey = button.dataset.shopifyCheckoutPackage;
-        if (!PACKAGES[packageKey]) return;
+        if (!PACKAGES[packageKey] || activeAttempt) return;
 
-        const originalText = button.dataset.checkoutLabel || button.textContent.trim();
+        const attempt = { controller: new AbortController(), timeout: null };
+        activeAttempt = attempt;
+        // A stalled request must not lock both purchase options indefinitely.
+        attempt.timeout = setTimeout(() => {
+          if (activeAttempt !== attempt) return;
+          resetCheckoutState();
+          renderCheckoutFeedback(checkoutErrorMessage(), true);
+        }, CART_TIMEOUT_MS);
         const loadingText = button.dataset.checkoutLoadingLabel || "Opening secure checkout...";
         renderCheckoutFeedback("", false);
         setCheckoutButtonsDisabled(true);
         button.textContent = loadingText;
 
         try {
-          const { cart, referral } = await createCart(packageKey);
+          const { cart, referral } = await createCart(packageKey, attempt.controller.signal);
+          // Ignore a response from a page that was left, restored, or timed out.
+          if (activeAttempt !== attempt) return;
+          clearTimeout(attempt.timeout);
           trackCheckout(packageKey, cart, referral);
           consumeDiscountReferral(referral);
+          // Navigation can be cancelled or fail without throwing from assign().
+          attempt.timeout = setTimeout(() => {
+            if (activeAttempt !== attempt) return;
+            resetCheckoutState();
+            renderCheckoutFeedback(checkoutErrorMessage(), true);
+          }, REDIRECT_TIMEOUT_MS);
           window.location.assign(localizedCheckoutUrl(cart.checkoutUrl));
         } catch (error) {
+          if (activeAttempt !== attempt) return;
           console.error("[Owlnest Shopify checkout]", error.message);
+          resetCheckoutState();
           renderCheckoutFeedback(
             error.message === "DISCOUNT_NOT_APPLICABLE" ? discountErrorMessage() : checkoutErrorMessage(),
             true
           );
-          setCheckoutButtonsDisabled(false);
-          button.textContent = originalText;
         }
       });
     });
+    resetCheckoutState();
   }
+
+  // pagehide keeps the cached DOM idle; pageshow also covers BFCache restores.
+  // Neither handler changes cart data, prices, discounts, or attribution.
+  window.addEventListener("pagehide", resetCheckoutState);
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      resetCheckoutState();
+      renderCheckoutFeedback("", false);
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initCheckoutButtons, { once: true });

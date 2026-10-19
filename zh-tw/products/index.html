@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <!-- Google Tag Manager -->
         <!-- Google Consent Mode v2 default -->
     <script>
@@ -133,8 +132,9 @@
     </script>
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/navigation-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
     <style>
         body { background: #182234; color: #fff; overflow-x: hidden; }
         .section-light { color: #182234; }
@@ -236,6 +236,7 @@
 }
 </script>
     <link rel="stylesheet" href="/assets/css/owlnest-v2.css?v=20261018">
+    <link rel="stylesheet" href="/assets/css/product-refinements.css?v=20261019">
 </head>
 <body class="product-page font-sans antialiased selection:bg-amber selection:text-midnight">
     <!-- Google Tag Manager (noscript) -->
@@ -343,7 +344,7 @@
         <h2 class="v2-title ">從光的組成，<br><em>為夜晚設計。</em></h2>
         <p class="v2-copy ">看起來同樣溫暖的光，光譜組成也可能不同。Lume 從光譜開始，為夜間使用而設計。</p><a class="v2-link " href="/zh-tw/what-is-owlnest-lume/">認識 Lume<span aria-hidden="true"> ↗</span></a>
         <div id="product-details">
-        <h3 class="v2-title ">產品細節</h3>
+        <h3 class="v2-title ">材質與操作</h3>
         <dl class="v2-specs">
                         <div class="ah-spec"><dt>本體</dt><dd>柔軟矽膠</dd>
         </div>
@@ -402,14 +403,10 @@
         </nav>
         </div>
         </section>
-        <section id="buy" class="ah-band ah-band--night">
-            <div class="ah-shell">
-                <p class="ah-slug"><span>第 08 張 — 購買方案</span><span>本期結束</span></p>
-
-                <div class="reveal-text">
-                    <span class="ah-folio" aria-hidden="true">08</span>
-                    <p class="ah-kicker">購買方案</p>
-                    <h2 class="ah-display ah-display--sub">選擇 Lume 方案</h2>
+        <section id="buy" class="v2-surface v2-night v2-space v21-buy">
+            <div class="v2-wrap">
+                <div>
+                    <h2 class="v2-title">選擇 Lume 方案</h2>
 
                     <form id="creator-code-form" class="mt-8 flex max-w-md flex-col gap-3 border border-white/10 bg-white/[0.04] p-4 sm:flex-row sm:items-end" novalidate>
                         <label class="flex-1 text-left">
@@ -444,7 +441,7 @@
                         </article>
                     </div>
 
-                    <p class="ah-links"><a href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy">配送政策</a><a href="https://wfqwyu-ic.myshopify.com/policies/refund-policy">退貨與退款</a></p>
+                    <nav class="v2-links v21-purchase-links" aria-label="購買協助"><a class="v2-link" href="https://wfqwyu-ic.myshopify.com/policies/shipping-policy">配送政策</a><a class="v2-link" href="https://wfqwyu-ic.myshopify.com/policies/refund-policy">退貨與退款</a><a class="v2-link" href="/zh-tw/contact/">聯絡我們</a></nav>
                     <p id="checkout-feedback" class="mt-4 hidden max-w-md text-sm text-amber/90" aria-live="polite"></p>
                 </div>
             </div>
@@ -539,7 +536,7 @@
         }
     </script>
     <script src="/assets/js/referral.js?v=20260714-2" defer></script>
-    <script src="/assets/js/shopify-checkout.js?v=20260714-2" defer></script>
+    <script src="/assets/js/shopify-checkout.js?v=20261019" defer></script>
     <script src="/assets/js/consent.js" defer></script>
     <script src="/assets/js/navigation-accessibility.js" defer></script>
     <script src="/assets/js/site-hierarchy.js?v=20260924-header-nav" defer></script>

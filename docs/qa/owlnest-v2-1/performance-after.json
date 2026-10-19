@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "final",
+    "route": "/",
+    "run": 1,
+    "performance": 0.82,
+    "lcp": 4924.754799999999,
+    "fcp": 1537.3161,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1957595,
+    "warnings": []
+  },
+  {
+    "phase": "final",
+    "route": "/",
+    "run": 2,
+    "performance": 0.82,
+    "lcp": 4847.8422,
+    "fcp": 1535.88165,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1957595,
+    "warnings": []
+  },
+  {
+    "phase": "final",
+    "route": "/",
+    "run": 3,
+    "performance": 0.82,
+    "lcp": 4912.5578000000005,
+    "fcp": 1528.16835,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1957595,
+    "warnings": []
+  },
+  {
+    "phase": "final",
+    "route": "/products",
+    "run": 1,
+    "performance": 0.82,
+    "lcp": 4918.2928,
+    "fcp": 1532.4696000000001,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1083630,
+    "warnings": []
+  },
+  {
+    "phase": "final",
+    "route": "/products",
+    "run": 2,
+    "performance": 0.82,
+    "lcp": 4916.0862,
+    "fcp": 1530.81465,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1083630,
+    "warnings": []
+  },
+  {
+    "phase": "final",
+    "route": "/products",
+    "run": 3,
+    "performance": 0.82,
+    "lcp": 4917.5556,
+    "fcp": 1531.9167,
+    "cls": 0,
+    "tbt": 0,
+    "bytes": 1083630,
+    "warnings": []
+  }
+]
