@@ -1,0 +1,20 @@
+/* Homepage-only subset: 294 CJK glyphs from Home, navigation and consent.
+   Noto Sans TC / Noto Serif TC, SIL OFL. Existing families; no design substitution.
+   Rebuild when adding Chinese homepage or shared navigation/consent text.
+   Glyph SHA256: eae00ca74e22f7aef729adc4a16dc94b45a7da9a3c089c8b33a16adbf93fa090 */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/assets/fonts/noto-sans-tc-home.woff2) format('woff2');
+  unicode-range: U+3001-3002, U+4e00, U+4e0a, U+4e0d, U+4e26, U+4e2d, U+4e3b, U+4e4b, U+4e5f, U+4e86, U+4eae, U+4eba, U+4ecd, U+4ee5, U+4ef6, U+4f4e, U+4f55, U+4f5c, U+4f60, U+4f7f, U+4f86, U+4f9d, U+4fb5, U+4fdd, U+500b, U+5011, U+5019, U+503c, U+504f, U+5099, U+50f9, U+5132, U+5145, U+5149, U+5165, U+5167-5169, U+51fa, U+5206-5207, U+5225, U+5230, U+524d, U+529f, U+52a9, U+52d5, U+52d9, U+5354, U+5377, U+539f, U+53ca, U+53d7, U+53ea, U+53ef, U+5408, U+540c, U+5411, U+544a, U+54c1, U+54e1, U+554f, U+555f, U+5584, U+55ae, U+56de, U+5728, U+5730, U+5916, U+591c, U+5929, U+594f, U+597d, U+5982, U+59cb, U+5b58, U+5b78, U+5b8c, U+5b9a, U+5ba2, U+5be6, U+5c04, U+5c07-5c08, U+5c0e, U+5c3e, U+5c6c, U+5df1-5df2, U+5e03, U+5e33, U+5e38, U+5e55, U+5e6b, U+5e95, U+5ea6-5ea7, U+5ee3, U+5f0f, U+5f37, U+5f88, U+5f8b-5f8c, U+5f9e, U+5fc3, U+5fc5, U+5ff5, U+610f, U+614b, U+6162, U+61c9, U+6210-6211, U+6216, U+6280, U+62d2, U+6301, U+6309, U+63a2, U+63a5, U+63d0, U+63db, U+64c7, U+64cd, U+64d4, U+64da, U+6536, U+6539, U+653e-653f, U+6548, U+6574, U+6587, U+65b9, U+65bc, U+65c1, U+65e5, U+660e, U+662f, U+6642, U+665a, U+666f, U+6696, U+66ab, U+66f4, U+6703, U+6709, U+670d, U+6728, U+672a, U+672c, U+6790, U+679c, U+67d4, U+67e5, U+6848, U+684c, U+689d, U+6b3e, U+6b63, U+6b65, U+6c42, U+6e2c, U+6e96, U+6eab, U+70ba, U+7136, U+7167, U+71c8, U+724c, U+7279, U+72c0, U+73fe, U+7403, U+7406, U+7522, U+7528, U+7531, U+7533, U+7559, U+756b, U+7684, U+76de, U+770b, U+771f-7720, U+7761, U+77ed, U+77fd, U+7814, U+78ba, U+793a, U+79c1, U+79d1, U+7a76, U+7ad9, U+7b26, U+7b2c, U+7b56, U+7ba1, U+7bc0, U+7c3e, U+7d22, U+7d44, U+7d50, U+7d55, U+7d61, U+7d66, U+7db2, U+7e41, U+8005, U+806f, U+80fd, U+81a0, U+81ea, U+8207, U+8272, U+82e5, U+878d, U+87a2, U+884c, U+8861, U+8868, U+88e1, U+88fd, U+8981, U+898b, U+89bd, U+89c0, U+89e3, U+8a00, U+8a02, U+8a08, U+8a2a, U+8a2d, U+8a73, U+8a8d, U+8a9e, U+8aaa, U+8abf, U+8acb, U+8b49, U+8b58, U+8b5c, U+8b93, U+8ca0, U+8ca8, U+8cb7, U+8cbb, U+8cea, U+8cfc, U+8d77, U+8eab, U+8edf, U+8f49, U+9000-9001, U+900f, U+904b, U+904e, U+9078, U+90e8, U+90fd, U+91cd, U+91cf, U+9215, U+92b7, U+9577, U+9589, U+958b, U+9593, U+95dc, U+9650, U+9664, U+96b1, U+96fb, U+9700, U+975e, U+9801, U+9806, U+9808, U+9846, U+984c, U+984f, U+9858, U+986f, U+9996, U+9a57, U+9ad4, U+9b06, U+9ede, U+ff0c, U+ff1b;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/noto-serif-tc-home.woff2) format('woff2');
+  unicode-range: U+3002, U+4e00, U+4e0d, U+5011, U+5149, U+5206, U+52d9, U+53ea, U+54c1, U+591c, U+594f, U+59cb, U+5df1, U+5e95, U+5ea7, U+5f37, U+5f9e, U+6211, U+662f, U+665a, U+666f, U+6709, U+670d, U+6728, U+67d4, U+6c42, U+7136, U+7522, U+7684, U+76de, U+77fd, U+7bc0, U+7d66, U+81a0, U+81ea, U+8272, U+8cea, U+8eab, U+8edf, U+9078, U+90e8, U+958b, U+984f, U+9858, U+9ad4, U+ff0c;
+}
