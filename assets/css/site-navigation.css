@@ -1,5 +1,6 @@
 /* Public-site navigation only; checkout and account pages do not load this file. */
 #main-header nav a { white-space: nowrap; }
+#main-header a, #main-header button, #mobile-menu a, #mobile-menu button { touch-action: manipulation; }
 .lume-case { text-transform: none !important; }
 #mobile-menu { overflow-y: auto; overscroll-behavior: contain; }
 /* Public navigation stays compact; deeper IA remains in breadcrumbs and page context. */
@@ -15,7 +16,9 @@
 /* Header-only enhancements. Keep page content, footer and commerce styles untouched. */
 #main-header .ia-primary-list { font-size: 13px; font-weight: 600; letter-spacing: .08em; }
 .ia-nav-group { position: relative; }
-.ia-nav-trigger { display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 0; border: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+.ia-nav-row { display: flex; align-items: center; }
+.ia-nav-row > a { min-height: 44px; display: flex; align-items: center; }
+.ia-nav-trigger { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 .ia-nav-trigger::after { content: ''; width: .35rem; height: .35rem; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-2px) rotate(45deg); }
 .ia-nav-trigger[aria-expanded="true"]::after { transform: translateY(1px) rotate(225deg); }
 .ia-nav-trigger:hover, .ia-nav-trigger:focus-visible, .ia-nav-trigger.is-current-section { color: #e6a64b; }
@@ -27,7 +30,10 @@
 #main-header .ia-nav-submenu a:hover, #main-header .ia-nav-submenu a:focus-visible { color: #e6a64b; background: #ffffff08; }
 #main-header .ia-nav-submenu a:focus-visible { outline-offset: -3px; }
 #mobile-menu .ia-primary-list { text-align: left; letter-spacing: .08em; }
-#mobile-menu .ia-primary-list > li > a, #mobile-menu .ia-nav-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 44px; padding: .7rem 0; }
+#mobile-menu .ia-primary-list > li > a, #mobile-menu .ia-nav-row > a { display: flex; align-items: center; flex: 1; min-width: 0; min-height: 44px; padding: .7rem 0; }
+#mobile-menu .ia-nav-trigger { width: 44px; min-height: 44px; padding: 0; }
+#mobile-menu .ia-nav-row { width: 100%; }
+#mobile-menu .ia-mobile-account { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
 #mobile-menu .ia-nav-submenu { padding: 0 0 .5rem; border-bottom: 1px solid #ffffff14; }
 #mobile-menu .ia-nav-submenu a { color: #f6f0e2b3; }
 #mobile-menu .ia-nav-submenu a:hover, #mobile-menu .ia-nav-submenu a:focus-visible, #mobile-menu .ia-nav-submenu [aria-current="page"] { color: #e6a64b; }
@@ -43,6 +49,11 @@
 @media (max-width: 1023px) {
     #mobile-menu > nav { gap: .75rem; }
     #mobile-menu .ia-primary-list a { min-height: 44px; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+    #main-header .header-inner { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 16px; padding-inline: 24px; }
+    #main-header .ia-primary-list { gap: 12px; }
+    #main-header .header-actions { gap: 10px; }
 }
 .ia-context-link { display: inline-block; margin-top: 1rem; color: #e6a64b; font-size: .85rem; text-underline-offset: .3em; }
 .ia-resource-tree { max-width: 68rem; margin: 3rem auto 0; padding-inline: 1.5rem; font-size: .9rem; }
