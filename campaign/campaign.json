@@ -24,31 +24,32 @@
   },
   "timeline": [
     {
-      "day": 0,
-      "stage": "Baseline"
+      "stage": "Historical baseline",
+      "nights": 7
+    },
+    {
+      "day": 1,
+      "stage": "First actual use"
     },
     {
       "day": 7,
-      "stage": "Check-in"
+      "stage": "Individual follow-up"
     },
     {
       "day": 14,
-      "stage": "Check-in"
+      "stage": "Individual follow-up"
     },
     {
       "day": 21,
-      "stage": "Review"
-    },
-    {
-      "day": 30,
-      "stage": "Follow-up"
+      "stage": "Individual follow-up"
     }
   ],
   "links": {
     "lab": "/lab/",
     "labZhTw": "/zh-tw/lab/",
-    "science": "/science",
-    "scienceZhTw": "/zh-tw/science/"
+    "science": "/lab/sleep/science/",
+    "scienceZhTw": "/zh-tw/lab/sleep/science/",
+    "sleepLab": "/lab/sleep/"
   },
   "site_architecture": {
     "name": "OWLNEST",
@@ -59,58 +60,53 @@
       },
       {
         "name": "Products",
-        "url": "https://owlnestofficial.com/products#products",
+        "url": "https://owlnestofficial.com/products/",
         "children": [
           {
             "name": "Lume",
-            "url": "https://owlnestofficial.com/products"
+            "url": "https://owlnestofficial.com/products/lume/"
           }
         ]
       },
       {
         "name": "Lab",
-        "url": "https://owlnestofficial.com/lab/#lab",
+        "url": "https://owlnestofficial.com/lab/",
         "children": [
           {
             "name": "Sleep Lab",
-            "url": "https://owlnestofficial.com/lab/",
-            "role": "WHY + WHAT WE ARE LEARNING",
+            "url": "https://owlnestofficial.com/lab/sleep/",
             "children": [
               {
-                "name": "Science",
-                "url": "https://owlnestofficial.com/science",
-                "role": "WHAT SUPPORTS THE HYPOTHESIS",
-                "supporting_page": {
-                  "name": "Evidence",
-                  "url": "https://owlnestofficial.com/evidence/",
-                  "role": "Claim support"
-                }
+                "name": "evidence",
+                "url": "https://owlnestofficial.com/lab/sleep/evidence/"
               },
               {
-                "name": "21-Day Sleep Program",
-                "url": "https://owlnestofficial.com/campaign/",
-                "role": "HOW WE LEARN"
+                "name": "science",
+                "url": "https://owlnestofficial.com/lab/sleep/science/"
+              },
+              {
+                "name": "21-day-program",
+                "url": "https://owlnestofficial.com/lab/sleep/21-day-program/"
               }
-            ],
-            "content_publication_rule": {
-              "role": "Findings / Results",
-              "parent": "OWLNEST > Lab > Sleep Lab",
-              "purpose": "WHAT WE OBSERVED",
-              "requirement": "Publish only real observations. A conceptual role is not a published page or a navigation entry."
-            }
+            ]
           }
         ]
       },
       {
         "name": "About",
-        "url": "https://owlnestofficial.com/about"
-      },
-      {
-        "name": "Campaign / Current Program Entry",
-        "target": "https://owlnestofficial.com/campaign/",
-        "canonical_parent": "OWLNEST > Lab > Sleep Lab",
-        "relationship": "Alternate entry to the same 21-Day Sleep Program, not a separate program system."
+        "url": "https://owlnestofficial.com/about/"
       }
     ]
+  },
+  "application": {
+    "stages": [
+      "short application",
+      "human initial review",
+      "invitation-only full screening",
+      "human final review",
+      "reconfirmation",
+      "free dispatch"
+    ],
+    "collectionEnabled": false
   }
 }

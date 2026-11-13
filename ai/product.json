@@ -65,9 +65,9 @@
     "claim_boundary": "General research informs design; it does not establish Lume-specific measurements or clinical outcomes. Conceptual spectrum visuals are educational, not measured product data."
   },
   "evidence_links": {
-    "evidence_brief": "https://owlnestofficial.com/evidence/",
+    "evidence_brief": "https://owlnestofficial.com/lab/sleep/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
-    "science_page": "https://owlnestofficial.com/science"
+    "science_page": "https://owlnestofficial.com/lab/sleep/science/"
   },
   "approved_claims": [
     "sleep-spectrum lamp",
@@ -99,17 +99,17 @@
   ],
   "important_links": {
     "homepage": "https://owlnestofficial.com/",
-    "products": "https://owlnestofficial.com/products",
+    "products": "https://owlnestofficial.com/products/lume/",
     "lab": "https://owlnestofficial.com/lab/",
     "definition": "https://owlnestofficial.com/what-is-owlnest-lume/",
     "ai_brief": "https://owlnestofficial.com/ai-brief.html",
-    "science": "https://owlnestofficial.com/science",
-    "evidence_brief": "https://owlnestofficial.com/evidence/",
+    "science": "https://owlnestofficial.com/lab/sleep/science/",
+    "evidence_brief": "https://owlnestofficial.com/lab/sleep/evidence/",
     "evidence_json": "https://owlnestofficial.com/ai/evidence.json",
     "faq": "https://owlnestofficial.com/faq/",
     "manual": "https://owlnestofficial.com/manual",
     "order_and_shipping_policy": "https://owlnestofficial.com/preorder-policy",
-    "twenty_one_day_sleep_program": "https://owlnestofficial.com/campaign/"
+    "twenty_one_day_sleep_program": "https://owlnestofficial.com/lab/sleep/21-day-program/"
   },
   "last_updated": "2026-09-08",
   "language_versions": {
@@ -120,7 +120,7 @@
     "zh-Hant_homepage": "https://owlnestofficial.com/zh-tw/",
     "zh-Hant_products": "https://owlnestofficial.com/zh-tw/products/",
     "zh-Hant_lab": "https://owlnestofficial.com/zh-tw/lab/",
-    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/science/",
+    "zh-Hant_science": "https://owlnestofficial.com/zh-tw/lab/sleep/science/",
     "zh-Hant_faq": "https://owlnestofficial.com/zh-tw/faq/",
     "zh-Hant_manual": "https://owlnestofficial.com/zh-tw/manual/",
     "zh-Hant_order_and_shipping_policy": "https://owlnestofficial.com/zh-tw/preorder-policy/",
@@ -141,57 +141,41 @@
       },
       {
         "name": "Products",
-        "url": "https://owlnestofficial.com/products#products",
+        "url": "https://owlnestofficial.com/products/",
         "children": [
           {
             "name": "Lume",
-            "url": "https://owlnestofficial.com/products"
+            "url": "https://owlnestofficial.com/products/lume/"
           }
         ]
       },
       {
         "name": "Lab",
-        "url": "https://owlnestofficial.com/lab/#lab",
+        "url": "https://owlnestofficial.com/lab/",
         "children": [
           {
             "name": "Sleep Lab",
-            "url": "https://owlnestofficial.com/lab/",
-            "role": "WHY + WHAT WE ARE LEARNING",
+            "url": "https://owlnestofficial.com/lab/sleep/",
             "children": [
               {
-                "name": "Science",
-                "url": "https://owlnestofficial.com/science",
-                "role": "WHAT SUPPORTS THE HYPOTHESIS",
-                "supporting_page": {
-                  "name": "Evidence",
-                  "url": "https://owlnestofficial.com/evidence/",
-                  "role": "Claim support"
-                }
+                "name": "evidence",
+                "url": "https://owlnestofficial.com/lab/sleep/evidence/"
               },
               {
-                "name": "21-Day Sleep Program",
-                "url": "https://owlnestofficial.com/campaign/",
-                "role": "HOW WE LEARN"
+                "name": "science",
+                "url": "https://owlnestofficial.com/lab/sleep/science/"
+              },
+              {
+                "name": "21-day-program",
+                "url": "https://owlnestofficial.com/lab/sleep/21-day-program/"
               }
-            ],
-            "content_publication_rule": {
-              "role": "Findings / Results",
-              "parent": "OWLNEST > Lab > Sleep Lab",
-              "purpose": "WHAT WE OBSERVED",
-              "requirement": "Publish only real observations. A conceptual role is not a published page or a navigation entry."
-            }
+            ]
           }
         ]
       },
       {
         "name": "About",
-        "url": "https://owlnestofficial.com/about"
-      },
-      {
-        "name": "Campaign / Current Program Entry",
-        "target": "https://owlnestofficial.com/campaign/",
-        "canonical_parent": "OWLNEST > Lab > Sleep Lab",
-        "relationship": "Alternate entry to the same 21-Day Sleep Program, not a separate program system."
+        "url": "https://owlnestofficial.com/about/"
       }
     ]
   }

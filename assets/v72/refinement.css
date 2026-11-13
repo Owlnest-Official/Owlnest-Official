@@ -1,0 +1,36 @@
+/* V7.2 editorial roles. Existing V7 token values are replaced at build time, not shadowed. */
+.v72-page main [data-v7-type=body]{font-size:var(--v7-body);line-height:1.7;max-width:62ch;text-wrap:pretty}
+.v72-page main [data-v7-type=secondary]{font-size:var(--v7-secondary);line-height:1.65;max-width:65ch}
+.v72-page main [data-v7-type=label]{font-size:var(--v7-label);line-height:1.5;letter-spacing:.055em}
+.v72-page main [data-v7-type=action]{font-size:var(--v7-nav);line-height:1.5;min-height:44px}
+.v72-page main [data-v7-type=sub]{font-size:var(--v7-sub);line-height:1.25;text-wrap:balance}
+.v72-page main [data-v7-type=section]{font-size:var(--v7-section);line-height:1.15;text-wrap:balance}
+html:lang(zh) .v72-page main :is([data-v7-type=body],[data-v7-type=secondary]){line-height:1.8;max-width:34em;line-break:strict}
+html:lang(zh) .v72-page main :is([data-v7-type=section],[data-v7-type=sub]){line-height:1.3;line-break:strict;word-break:normal}
+.v72-page main :is(p,dd,li,figcaption,summary){overflow-wrap:break-word}
+.v72-page .v7-bridge p{font-size:var(--v7-body);line-height:1.7;max-width:42ch}
+.v72-page .v72-breadcrumb{margin:0 0 1.6rem;color:inherit;font:400 var(--v7-label)/1.6 var(--v7-sans)}
+.v72-breadcrumb ol{display:flex;flex-wrap:wrap;gap:.3rem .55rem;list-style:none;padding:0;margin:0}
+.v72-page main .v72-breadcrumb :is(li,a,span){font:inherit;letter-spacing:.01em;color:inherit}
+.v72-breadcrumb li+li:before{content:"/";margin-right:.55rem;opacity:.6}.v72-breadcrumb a{text-decoration:none}.v72-breadcrumb a:hover{text-decoration:underline}
+.v72-page #v71-motion-note{font-size:var(--v7-label);line-height:1.45}
+.v72-page .v71-chapter-label{font-size:var(--v7-label)}
+.v72-page #lume-introduction .v2-purchase-summary>.v2-copy{font-size:var(--v7-body);line-height:1.7}
+.v72-page #lume-introduction .product-hero-price{font-size:var(--v7-secondary)}
+.v72-page #lume-introduction .v7-price-line{font-size:var(--v7-secondary)}
+.v72-page #materials .v2-specs dt{font-size:var(--v7-label);line-height:1.65}
+.v72-page #materials .v2-specs dd{font-size:var(--v7-body);line-height:1.65}
+.v72-page #science-education-visuals .science-education-card__sources{font-size:var(--v7-secondary);line-height:1.7;color:#d1ccc2}
+.v72-page main :is(.sys-small,.pv-small,.pv-scope){font-size:var(--v7-secondary);line-height:1.7}
+.v72-page #science-education-visuals .science-education-visuals__intro>p{font-size:var(--v7-secondary);line-height:1.7}
+.v72-page .v72-cta-section .v72-cta-group{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:14px;width:100%;max-width:none;margin:26px auto 0;grid-column:1/-1}
+.v72-page .v72-cta-section .v72-cta-group>a{display:inline-flex;justify-content:center;align-items:center;min-width:160px;min-height:48px;padding:12px 22px;flex:0 1 auto;margin:0;font-size:var(--v7-nav);line-height:1.5;box-sizing:border-box;text-align:center}
+.v72-page .v72-cta-section .v72-cta-inner{width:100%;max-width:none;text-align:center;grid-column:1/-1}
+.v72-page .v72-cta-section .v72-cta-inner>:is(h2,p){margin-inline:auto}
+.v72-page .v7-footer :is(p,a,button,summary,small){font-size:var(--v7-foot);line-height:1.65}
+.v72-page .v7-footer :is(h3,h4){font-size:var(--v7-nav)}
+.v72-aux main{max-width:1080px;margin-inline:auto;padding-inline:clamp(22px,5vw,64px)}
+.v72-aux main h1{max-width:18ch}.v72-aux main h2{margin-top:2.2rem}.v72-aux main :is(p,li){max-width:64ch}
+.v72-aux main a{overflow-wrap:anywhere}
+@media(max-width:700px){.v72-page .v72-cta-section .v72-cta-group{gap:10px}.v72-page .v72-cta-section .v72-cta-group>a{min-width:180px;max-width:100%}}
+@media(min-width:1061px){#v7-header .v7-sub:before{content:"";position:absolute;inset:-8px 0 100%;height:8px}}

@@ -1,0 +1,92 @@
+/* Content-specific extension of the existing serif/sans, paper/navy system. */
+.persuasion-evidence {padding:0!important;background:#122734!important;color:#f3eee4}
+.persuasion-evidence section::before {display:none!important}
+.persuasion-evidence .pv-shell {width:min(1160px,calc(100% - 96px));margin-inline:auto}
+.persuasion-evidence h1,.persuasion-evidence h2,.persuasion-evidence h3 {font-family:"Playfair Display",Georgia,serif;font-weight:400;letter-spacing:-.025em;margin:0;text-wrap:balance;color:inherit}
+.persuasion-evidence h1 {font-size:clamp(42px,5vw,72px);line-height:1.1;max-width:1000px}
+.persuasion-evidence h2 {font-size:clamp(32px,3.4vw,48px);line-height:1.16}
+.persuasion-evidence h3 {font-size:29px}
+.persuasion-evidence p,.persuasion-evidence dd {font-size:17px;line-height:1.8;margin:1.25rem 0 0}
+.persuasion-evidence .pv-label {font:600 12px/1.6 Manrope,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#d9ba81;margin:0 0 24px}
+.persuasion-evidence .pv-opening {padding:144px 0 76px}
+.persuasion-evidence .ia-breadcrumb {margin-bottom:36px}
+.persuasion-evidence .pv-intro {font-size:23px;max-width:720px;margin-top:30px}
+.persuasion-evidence .pv-deck {max-width:650px;color:#d5dce0}
+.persuasion-evidence .pv-paper {background:#f3ede2;color:#162734}
+.persuasion-evidence .pv-paper .pv-label {color:#775221}
+.persuasion-evidence .pv-study,.persuasion-evidence .pv-boundaries {padding:80px 0}
+.persuasion-evidence .pv-study-grid {display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.persuasion-evidence .pv-reading {padding-top:38px}
+.persuasion-evidence .pv-reading>p:first-child {margin-top:0}
+.persuasion-evidence .pv-scope {font-size:15px;line-height:1.75;opacity:.85;max-width:850px}
+.persuasion-evidence .pv-text-link {display:inline-block;margin-top:20px;padding:6px 0;color:inherit;font-size:14px;font-weight:600;line-height:1.65;text-decoration:underline;text-underline-offset:6px}
+.persuasion-evidence .pv-viewpoint {padding:65px 0;background:#102432}
+.persuasion-evidence .pv-voice {padding-left:9%;border:0}
+.persuasion-evidence .pv-voice h2 {max-width:850px;color:#e4c590}
+.persuasion-evidence .pv-voice>p:last-child {max-width:760px}
+.persuasion-evidence .pv-lens {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin-top:48px;padding:28px 0 0;border-top:1px solid #c7c0b3}
+.persuasion-evidence .pv-lens>* {min-width:0}
+.persuasion-evidence .pv-lens>:nth-child(1) {grid-area:1/1}
+.persuasion-evidence .pv-lens>:nth-child(2) {grid-area:2/1}
+.persuasion-evidence .pv-lens>:nth-child(3) {grid-area:1/2}
+.persuasion-evidence .pv-lens>:nth-child(4) {grid-area:2/2}
+.persuasion-evidence .pv-lens span {font-size:13px;letter-spacing:.05em}
+.persuasion-evidence .pv-lens strong {font:400 38px/1.2 "Playfair Display",Georgia,serif}
+.persuasion-evidence .pv-lens p {grid-area:3/1/4/3;font-size:13px;margin:12px 0 0}
+.persuasion-evidence .pv-day {display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:40px 0}
+.persuasion-evidence .pv-day>div {border-top:1px solid #bfb5a4;padding-top:22px}
+.persuasion-evidence .pv-lume {padding:72px 0;background:#090e11}
+.persuasion-evidence .pv-lume-grid {display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;align-items:center}
+.persuasion-evidence .pv-lume figure {margin:0}
+.persuasion-evidence .pv-lume img {display:block;width:100%;max-height:500px;object-fit:contain}
+.persuasion-evidence .pv-actions {display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:28px}
+.persuasion-evidence .pv-actions a {margin-top:0}
+.persuasion-evidence .pv-button {background:#f3ede2;color:#122734;padding:17px 24px;font-size:15px;line-height:1.5;text-decoration:none}
+.persuasion-evidence .pv-levels {margin:40px 0 0}
+.persuasion-evidence .pv-levels>div {display:grid;grid-template-columns:250px 1fr;gap:40px;border-top:1px solid #c7c0b3;padding:22px 0}
+.persuasion-evidence dt {font-weight:600;font-size:17px}
+.persuasion-evidence dd {margin:0;font-size:16px}
+.persuasion-evidence dd a {text-decoration:underline;text-underline-offset:4px}
+.persuasion-evidence .pv-details {margin-top:30px;border-top:1px solid #c7c0b3;padding-top:20px}
+.persuasion-evidence summary {cursor:pointer;font-size:17px;line-height:1.7;padding:10px 0}
+.persuasion-evidence .pv-beyond {padding:64px 0;background:#203340}
+.persuasion-evidence .pv-beyond h2 {font-size:clamp(28px,3vw,38px)}
+.persuasion-evidence .pv-beyond p {max-width:850px}
+.persuasion-evidence a:focus-visible,.persuasion-evidence summary:focus-visible {outline:3px solid #be8b37;outline-offset:5px}
+.persuasion-evidence a:hover {text-decoration-thickness:2px}
+html[lang^=zh] .persuasion-evidence h1,html[lang^=zh] .persuasion-evidence h2,html[lang^=zh] .persuasion-evidence h3,html[lang^=zh] .persuasion-evidence .pv-lens strong {font-family:"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif!important;line-height:1.38;letter-spacing:0}
+.pv-science-copy {max-width:72rem;margin:auto;padding:64px 24px}
+.pv-science-copy h2 {font:400 clamp(30px,3vw,44px)/1.25 "Playfair Display",Georgia,serif;margin:0 0 28px}
+.pv-science-copy h3 {font-size:19px;font-weight:600;margin:0 0 12px}
+.pv-science-copy p {font-size:17px;line-height:1.8;margin:0 0 20px}
+.pv-science-columns {display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pv-science-copy a {text-decoration:underline;text-underline-offset:4px}
+.pv-science-copy .pv-small {font-size:15px;opacity:.85}
+html[lang^=zh] .pv-science-copy h2 {font-family:"Noto Serif TC","Microsoft JhengHei",serif}
+@media(max-width:767px){
+ .persuasion-evidence .pv-shell {width:calc(100% - 40px)}
+ .persuasion-evidence .pv-opening {padding:116px 0 48px}
+ .persuasion-evidence h1 {font-size:39px}
+ .persuasion-evidence h2 {font-size:31px}
+ .persuasion-evidence .pv-intro {font-size:20px}
+ .persuasion-evidence p,.persuasion-evidence dd {font-size:16px;line-height:1.8}
+ .persuasion-evidence .pv-label {font-size:11px;margin-bottom:18px}
+ .persuasion-evidence .pv-study,.persuasion-evidence .pv-boundaries {padding:48px 0}
+ .persuasion-evidence .pv-study-grid,.persuasion-evidence .pv-lume-grid {grid-template-columns:1fr;gap:28px}
+ .persuasion-evidence .pv-reading {padding:0}
+ .persuasion-evidence .pv-viewpoint {padding:44px 0}
+ .persuasion-evidence .pv-voice {padding:0}
+ .persuasion-evidence .pv-scope {font-size:14px}
+ .persuasion-evidence .pv-lens strong {font-size:30px}
+ .persuasion-evidence .pv-day {grid-template-columns:1fr;gap:24px;margin:30px 0}
+ .persuasion-evidence .pv-day p {margin-top:7px}
+ .persuasion-evidence .pv-lume {padding:44px 0}
+ .persuasion-evidence .pv-lume figure {max-width:240px;margin:auto}
+ .persuasion-evidence .pv-lume img {max-height:340px}
+ .persuasion-evidence .pv-levels>div {grid-template-columns:1fr;gap:10px}
+ .persuasion-evidence .pv-beyond {padding:44px 0}
+ .pv-science-columns {grid-template-columns:1fr;gap:24px}
+ .pv-science-copy {padding:44px 24px}
+ .pv-science-copy p {font-size:16px}
+}
+@media(max-width:350px){.persuasion-evidence h1{font-size:34px}.persuasion-evidence h2{font-size:28px}}

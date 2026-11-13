@@ -1,70 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/playfair-display-latin.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/manrope-latin.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/assets/fonts/playfair-display-latin.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/assets/fonts/manrope-latin.woff2">
     <!-- Google Tag Manager -->
     <!-- Google Consent Mode v2 default -->
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    (function(){
-        var savedConsent = null;
-        try {
-            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
-        } catch (error) {
-            savedConsent = null;
-        }
-        var hasSavedConsent = savedConsent && savedConsent.version === 1;
-        var consentState = hasSavedConsent ? {
-            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
-            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
-            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
-            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
-        } : {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        };
-        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
-        window.dataLayer.push({
-            event: 'owlnest_consent_default',
-            owlnest_consent_analytics: consentState.analytics_storage,
-            owlnest_consent_ads: consentState.ad_storage,
-            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
-        });
-    })();
-    </script>
+
     <!-- End Google Consent Mode v2 default -->
-<script>
-if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
-}
-</script>
+
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About OWLNEST | Owlnest Official</title>
-    <meta name="description" content="Why OWLNEST designs for natural transitions. Our philosophy, the Phu Quoc sunset that inspired Lume, and the ambition beyond our first product.">
+    <title>Our Story &amp; Purpose | OWLNEST Official</title>
+    <meta name="description" content="From a question about sleep to a wider mission: the people and thinking behind OWLNEST and its first product, Lume.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://owlnestofficial.com/about">
-    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/about">
+    <link rel="canonical" href="https://owlnestofficial.com/about/">
+    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/about/">
     <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/about/">
-    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/about">
-    <meta property="og:title" content="About OWLNEST | Owlnest Official">
-    <meta property="og:description" content="Why OWLNEST designs for natural transitions. Our philosophy, the Phu Quoc sunset that inspired Lume, and the ambition beyond our first product.">
+    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/about/">
+    <meta property="og:title" content="Our Story &amp; Purpose | OWLNEST Official">
+    <meta property="og:description" content="From a question about sleep to a wider mission: the people and thinking behind OWLNEST and its first product, Lume.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://owlnestofficial.com/about">
+    <meta property="og:url" content="https://owlnestofficial.com/about/">
     <meta property="og:image" content="https://owlnestofficial.com/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About OWLNEST | Owlnest Official">
-    <meta name="twitter:description" content="Why OWLNEST designs for natural transitions. Our philosophy, the Phu Quoc sunset that inspired Lume, and the ambition beyond our first product.">
+    <meta name="twitter:title" content="Our Story &amp; Purpose | OWLNEST Official">
+    <meta name="twitter:description" content="From a question about sleep to a wider mission: the people and thinking behind OWLNEST and its first product, Lume.">
     <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
@@ -133,11 +94,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(0);
         }
 
-        main section {
+        main section:not(.e74-band):not(#story-origin) {
             padding-top: clamp(4.5rem, 7vw, 7rem) !important;
             padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
         }
-        main section:first-of-type {
+        main section:first-of-type:not(.e74-band) {
             padding-top: clamp(8rem, 12vw, 11rem) !important;
             padding-bottom: clamp(5rem, 8vw, 7rem) !important;
         }
@@ -235,11 +196,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             #main-header .mobile-campaign-link {
                 display: none;
             }
-            main section {
+            main section:not(.e74-band):not(#story-origin) {
                 padding-top: 3.5rem !important;
                 padding-bottom: 3.5rem !important;
             }
-            main section:first-of-type {
+            main section:first-of-type:not(.e74-band) {
                 padding-top: 8rem !important;
             }
         }
@@ -392,126 +353,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/site-navigation.css?v=20261022-touch-nav">
     <link rel="stylesheet" href="/assets/css/owlnest-v2.css?v=20261018">
+<link rel="stylesheet" href="/assets/css/site-system-compat.css"><link rel="stylesheet" href="/assets/css/site-system.css"><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+        var savedConsent = null;
+        try {
+            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
+        } catch (error) {
+            savedConsent = null;
+        }
+        var hasSavedConsent = savedConsent && savedConsent.version === 1;
+        var consentState = hasSavedConsent ? {
+            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
+            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
+            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
+            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
+        } : {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        };
+        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
+        window.dataLayer.push({
+            event: 'owlnest_consent_default',
+            owlnest_consent_analytics: consentState.analytics_storage,
+            owlnest_consent_ads: consentState.ad_storage,
+            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
+        });
+    })();
+    </script><script>
+if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+}
+</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://owlnestofficial.com/about/",
+      "url": "https://owlnestofficial.com/about/",
+      "name": "Our Story & Purpose | OWLNEST Official",
+      "description": "From a question about sleep to a wider mission: the people and thinking behind OWLNEST and its first product, Lume.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://owlnestofficial.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://owlnestofficial.com/about/"
+        }
+      ]
+    }
+  ]
+}</script><link rel="stylesheet" href="/assets/v72/system.css"><link rel="stylesheet" href="/assets/v72/refinement.css"><link class="" rel="stylesheet" href="/assets/v74/editorial.css"><meta name="owlnest-route-target" content="/about/">
+<script src="/assets/js/legacy-page-route.js" defer></script>
 </head>
-<body class="about-page bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight">
+<body class="about-page bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight v7-page v72-page" data-proposal-version="owlnest-v7.4-editorial-art-direction" data-editorial-version="owlnest-v7.4-editorial-art-direction"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <!-- End Google Tag Manager (noscript) -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 owlnest-glass-header">
-        <div class="header-inner mx-auto grid h-[72px] max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 sm:px-8">
-            <a href="/" class="brand site-brand flex items-center gap-3 justify-self-start cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="Go to Owlnest homepage">
-                <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest" class="h-8 md:h-10 w-auto object-contain transition-all duration-300">
-                <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
-            </a>
+    <header id="v7-header" data-position="fixed"><div class="v7-bar"><a class="v7-mark" href="/" aria-label="OWLNEST Home"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav id="v7-nav" aria-label="Primary navigation"><ul class="v7-list"><li class="v7-item"><div class="v7-row"><a href="/">Home</a></div></li><li class="v7-item"><div class="v7-row"><a href="/products/">Products</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="Products submenu" aria-controls="v7-sub-1"><i aria-hidden="true"></i></button></div><ul id="v7-sub-1" class="v7-sub" hidden=""><li><a href="/products/lume/">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/lab/">Lab</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="Lab submenu" aria-controls="v7-sub-2"><i aria-hidden="true"></i></button></div><ul id="v7-sub-2" class="v7-sub" hidden=""><li><a href="/lab/sleep/">Sleep Lab</a></li><li><a href="/lab/sleep/science/">Science</a></li><li><a href="/lab/sleep/evidence/">Evidence</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/about/" aria-current="page">About</a></div></li><li class="v7-item"><div class="v7-row"><a href="/lab/sleep/21-day-program/">Program</a></div></li></ul><div class="v7-drawer-tools"><a href="/account/">Account</a><a class="v7-lang" lang="zh-Hant" aria-label="切換繁體中文" href="/zh-tw/about/">繁中</a></div></nav><div class="v7-tools"><div class="v7-desktop-tools"><a href="/account/">Account</a><a class="v7-lang" lang="zh-Hant" aria-label="切換繁體中文" href="/zh-tw/about/">繁中</a></div><a class="v7-buy" href="/products/lume/#buy">Buy Lume</a><button type="button" class="v7-menu" aria-controls="v7-nav" aria-expanded="false" aria-label="Main menu"><span aria-hidden="true"></span></button></div></div></header>
 
-            <nav class="primary-nav hidden lg:flex justify-self-center items-center gap-[30px] text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64" aria-label="Primary navigation"><ul class="ia-primary-list"><li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/lab/">Lab</a></li><li><a href="/about" aria-current="page">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul></nav>
 
-            <div class="header-actions hidden lg:flex justify-self-end items-center gap-4">
-                <span class="h-6 w-px bg-white/10" aria-hidden="true"></span>
-                <a href="/account/" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/64 hover:text-amber transition-colors" rel="nofollow">
-                    <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <path d="M20 21a8 8 0 0 0-16 0" />
-                        <circle cx="12" cy="7" r="4" />
-                    </svg>
-                </a>
-                <div class="relative">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/64 hover:text-amber transition-colors" aria-label="Select language" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i>
-                        EN
-                        <i class="fas fa-chevron-down text-[9px]"></i>
-                    </button>
-                    <div id="language-menu" class="hidden absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl">
-                        <a href="/about" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English <span class="text-amber">EN</span></a>
-                        <a href="/zh-tw/about/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white/80 hover:text-amber transition-colors">繁體中文</a>
-                    </div>
-                </div>
-                <a href="/products#buy" class="lume-case inline-flex items-center justify-center bg-amber text-midnight px-5 py-3 text-[11px] tracking-[0.14em] uppercase font-bold hover:bg-warm transition-colors rounded-full">Buy Lume</a>
-            </div>
-
-            <button onclick="toggleMobileMenu()" class="lg:hidden justify-self-end inline-flex items-center gap-2 text-white/80 hover:text-amber transition-colors text-xl active:scale-95" aria-label="Toggle menu">
-                <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">Menu</span>
-            </button>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="Mobile navigation"><ul class="ia-primary-list"><li><a href="/">Home</a></li><li><a href="/products">Products</a></li><li><a href="/lab/">Lab</a></li><li><a href="/about" aria-current="page">About</a></li><li><a data-entry="campaign" href="/campaign/">Program</a></li></ul><div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
-            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
-                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M20 21a8 8 0 0 0-16 0" />
-                    <circle cx="12" cy="7" r="4" />
-                </svg>
-            </a>
-            <div class="text-center">
-                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">Language</p>
-                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
-                    <a href="/about" class="text-white hover:text-amber">English — EN</a>
-                    <a href="/zh-tw/about/" class="text-white/80 hover:text-amber transition-colors">繁體中文</a>
-                </div>
-            </div>
-                        <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/products#buy" onclick="toggleMobileMenu()" class="lume-case inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">Buy Lume</a>
-
-            </div>
-        </nav>
-    </div>
 
 
 <main class="ow-v2 brand-story">
-        <section id="story-opening" class="v2-surface v2-paper v2-story-opening">
-        <div class="v2-wrap v2-story-title">
-        <p class="v2-label">About OWLNEST</p>
-        <h1 class="v2-title ">A little room<br>to change pace.</h1>
-        <p class="v2-copy v2-intro">We are building OWLNEST around a simple idea: everyday products should work with the body, not ask it to keep up.</p>
+        <section id="story-opening" class="e74-band e74-about-opening">
+        <div class="e74-intro">
+        <p class="v2-label" data-v7-type="label">About OWLNEST</p>
+        <h1 class="e74-heading">Room for a change of pace</h1>
+        <p class="e74-body">Life changes pace quickly. The body does not always follow on cue. OWLNEST exists to give those everyday transitions more thought—not another demand to keep up.</p>
         </div>
         </section>
         <section id="story-origin" class="v2-surface v2-paper">
         <div class="v2-wrap v2-origin-spread">
         <figure class="v2-photo "><img src="/asset-draft-draw.png" srcset="/assets/images/about/responsive/asset-draft-draw-480.webp 480w, /assets/images/about/responsive/asset-draft-draw-960.webp 960w, /assets/images/about/responsive/asset-draft-draw-1440.webp 1254w" sizes="(max-width: 600px) 100vw, (max-width: 1600px) 50vw, 760px" width="1254" height="1254" loading="eager" alt="Historical Lume hand-drawn design draft">
-        <figcaption>Historical design draft. Dimensions shown are not current product specifications.</figcaption>
+        <figcaption data-v7-type="secondary">Historical design draft. Dimensions shown are not current product specifications.</figcaption>
         </figure>
         <div>
-        <p class="v2-label">Phu Quoc · Our beginning</p>
-        <h2 class="v2-title ">Our first question<br>came at sunset.</h2>
-        <p class="v2-copy ">In Phu Quoc, daylight softened and the pace changed. We wondered how light could bring that quiet transition home. “Made for life after dark” became the beginning of OWLNEST—not its limit.</p>
+        <p class="v2-label" data-v7-type="label">A question close to home</p>
+        <h2 class="v2-title " data-v7-type="section">Why we started with the bedroom</h2>
+        <p class="v2-copy " data-v7-type="body">Our founders noticed older people around them relying on sleep medication. It prompted a different question: what non-invasive approaches might help make room for natural sleep? Reading research on light and the body clock led to the first product, Lume. This was not a search for a replacement for prescribed care.</p>
         </div>
         </div>
         </section>
-        <section id="story-philosophy" class="v2-surface v2-night v2-space">
-        <div class="v2-wrap v2-story-philosophy">
-        <h2 class="v2-title ">Life changes pace.<br><em>So do we.</em></h2>
-        <div>
-        <p class="v2-copy ">The workday ends before our thoughts do. Finding focus or settling into rest can take time. These ordinary moments are where we begin—not with a promise to control how anyone feels.</p>
-        <h3 class="v2-title ">Natural, by design.</h3>
-        <p class="v2-copy ">We prioritize non-invasive approaches that work through the environment: light, sound, temperature, and touch. The aim is less effort in daily use, with research guiding design and real evidence testing each product’s claims.</p>
-        </div>
-        </div>
-        </section>
+        <section id="story-philosophy" class="e74-band e74-about-statement"><div class="e74-statement"><h2 class="e74-heading">When the day moves faster than you do</h2><p class="e74-body">You leave work, but work has not quite left you. You make time to focus, yet the morning still feels scattered. We want everyday objects to make room for the way people actually feel in those moments.</p></div><div class="e74-mechanisms"><h3 class="e74-heading">Working with the body’s own mechanisms</h3><p class="e74-body">We start with how the body works, exploring light, sound, temperature and touch through products that ask little of the person using them. Research guides the design; product testing is needed to understand what it can actually do.</p></div></section>
         <section id="story-design" class="v2-surface v2-stone v2-space">
         <div class="v2-wrap v2-design-spread">
         <div>
-        <p class="v2-label">The first sketches</p>
-        <h2 class="v2-title ">A first step,<br>not a final destination.</h2>
-        <p class="v2-copy ">That question became Lume, our sleep-spectrum lamp. It begins with the nighttime environment; the wider brand looks at the transitions across a day. Lume is not a product for all of those states.</p><a class="v2-link " href="/products">Explore Lume<span aria-hidden="true"> ↗</span></a>
+        <p class="v2-label" data-v7-type="label">The first sketches</p>
+        <h2 class="v2-title " data-v7-type="section">How Lume took shape</h2>
+        <p class="v2-copy " data-v7-type="body">Lume made the first question tangible. The changing light of Phu Quoc remains part of its design inspiration. From nighttime light, OWLNEST’s mission grew toward natural transitions throughout the day—not a claim that one lamp can serve every state.</p><a class="v2-link " href="/products/lume/">Explore Lume<span aria-hidden="true"> ↗</span></a>
         </div>
         <figure class="v2-photo "><img src="/asset-draft-design.png" srcset="/assets/images/about/responsive/asset-draft-design-480.webp 480w, /assets/images/about/responsive/asset-draft-design-960.webp 960w, /assets/images/about/responsive/asset-draft-design-1440.webp 1254w" sizes="(max-width: 600px) 100vw, (max-width: 1600px) 50vw, 760px" width="1254" height="1254" loading="lazy" alt="Historical Lume industrial design draft">
-        <figcaption>Historical design draft. Dimensions shown are not current product specifications.</figcaption>
+        <figcaption data-v7-type="secondary">Historical design draft. Dimensions shown are not current product specifications.</figcaption>
         </figure>
         </div>
         </section>
-        <section id="story-ambition" class="v2-surface v2-paper v2-space">
-        <div class="v2-wrap v2-story-ambition">
-        <p class="v2-label">Our ambition</p>
-        <h2 class="v2-title ">To build the world’s first brand dedicated to helping people transition naturally between states.</h2>
-        <div>
-        <p class="v2-copy ">Our long-term exploration spans the transitions throughout a day. These are directions for research and design, not a list of Lume’s effects.</p><a class="v2-link " href="/lab/">Explore Sleep Lab<span aria-hidden="true"> ↗</span></a>
-        </div>
-        </div>
-        </section>
+        <section class="r-section r-team" data-proposal="team" data-option="c" id="p-team"><h2 class="r-team-title">Team responsibilities</h2><article class="r-team-founders"><h3 class="r-team-role">Cofounders</h3><p class="r-body">One cofounder leads brand strategy and marketing; the other leads product engineering, supply chain and execution.</p></article><article class="r-team-scientist"><h3 class="r-team-role">Research</h3><p class="r-team-name">Dr. 高國維</p><p class="r-body">Chief Research Scientist, contributing to OWLNEST’s long-term research direction.</p><p class="r-notice">This role is separate from first-generation Lume development, human-trial leadership and product-effect validation.</p></article></section><section id="story-ambition" class="r-section r-ambition" data-proposal="ambition" data-option="a-refined"><div class="p-vision-present"><p class="p-label">Our first chapter</p><p class="p-vision-product">Lume</p><p class="p-body">Our first product puts that purpose into practice, starting with nighttime light.</p><a class="p-link" href="/products/">Explore our products ↗</a></div><div class="p-vision-future"><p class="p-label">Our ambition</p><h2 class="p-vision">Beyond our first light</h2><p class="p-vision-qualification">Our ambition is to become the world’s first brand dedicated to helping people transition naturally between everyday states.</p><p class="r-body">Focus, relaxation and recovery are future directions to explore—not products we have already developed.</p><a class="p-link" href="/lab/sleep/">Explore Sleep Lab ↗</a></div></section>
         </main>
-    <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/">OWLNEST</a><nav class="footer-groups" aria-label="Footer navigation"><div class="footer-group"><h2 class="footer-group-heading">Product</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-product-links"><span>Product</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-product-links" class="footer-links"><li><a href="/products">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Lab</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-lab-links"><span>Lab</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-lab-links" class="footer-links"><li><a href="/lab/">Sleep Lab</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Owlnest</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-owlnest-links"><span>Owlnest</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-owlnest-links" class="footer-links"><li><a href="/about">About</a></li><li><a href="/campaign/">Program</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Support</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-support-links"><span>Support</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-support-links" class="footer-links"><li><a href="/faq/">FAQ</a></li><li><a href="/contact">Contact</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li><li><a href="/disclaimer">Policy</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie Settings</button></div></div></footer>
+    <footer class="site-footer batch-b-footer v7-footer"><div class="footer-wrap"><a class="footer-brand v7-footmark" href="/"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav class="footer-groups" aria-label="Footer navigation"><div class="footer-group"><h2 class="footer-group-heading">Product</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-product-links"><span>Product</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-product-links" class="footer-links"><li><a href="/products/lume/">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Lab</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-lab-links"><span>Lab</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-lab-links" class="footer-links"><li><a href="/lab/sleep/">Sleep Lab</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Owlnest</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-owlnest-links"><span>Owlnest</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-owlnest-links" class="footer-links"><li><a href="/about/">About</a></li><li><a href="/lab/sleep/21-day-program/">Program</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Support</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-support-links"><span>Support</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-support-links" class="footer-links"><li><a href="/faq/">FAQ</a></li><li><a href="/contact">Contact</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li><li><a href="/disclaimer">Policy</a></li></ul></div></nav><div class="footer-bottom"><span>© 2026 Owlnest Official</span><button type="button" data-cookie-settings="">Cookie Settings</button></div></div></footer>
 
     <script>
         function toggleMobileMenu() {
@@ -566,9 +522,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         trigger.setAttribute('aria-expanded', 'false');
     });
 </script>
-    <script src="/assets/js/consent.js" defer></script>
-    <script src="/assets/js/navigation-accessibility.js" defer></script>
-    <script src="/assets/js/site-hierarchy.js?v=20261022-touch-nav" defer></script>
-    <script src="/assets/js/site-footer.js?v=20260909-footer-hotfix" defer></script>
-</body>
-</html>
+    <script src="/assets/js/consent.js" defer=""></script>
+
+
+    <script src="/assets/js/site-footer.js?v=20260909-footer-hotfix" defer=""></script>
+
+
+<script src="/assets/js/site-route-compat.js" defer=""></script><script src="/assets/v72/navigation.js" defer=""></script></body></html>

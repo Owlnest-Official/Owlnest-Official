@@ -1,0 +1,8 @@
+/* Only the two approved page-level adjustments; shared typography and CTA rules stay intact. */
+.v72-page .program-record-summary{margin:18px 0 0;max-width:44ch;color:#f6f2e9;font-size:var(--v7-body);line-height:1.6}
+.v72-page .program-record-summary+.program-intro-action{margin-top:20px}
+.v72-page .v72-product-caption{padding:18px 12px 10px;color:#f6f2e9;text-align:left}
+.v72-page .v72-product-caption p{margin:0;color:#f6f2e9;font-size:var(--v7-body);line-height:1.65}
+.v72-page .v72-product-caption p+p{margin-top:6px}
+.v72-page .v72-product-information{padding-bottom:clamp(32px,4vw,56px)}
+.v72-page .v72-product-information+.v72-cta-section{padding-top:32px}

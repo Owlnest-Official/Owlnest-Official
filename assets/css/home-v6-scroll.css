@@ -1,0 +1,5 @@
+/* Narrative layers follow the exact same native scroll progress as the frames. */
+.hero-scroll .hero-brand{transform:translate3d(0,var(--brand-shift,0px),0);opacity:var(--brand-visibility,1)}
+.hero-scroll .hero-foot{opacity:var(--foot-visibility,1)}
+.hero-scroll .hero-brand:after{opacity:var(--hint-visibility,1)}
+@media(prefers-reduced-motion:reduce){.hero-scroll .hero-brand{transform:none;opacity:1}.hero-scroll .hero-foot{opacity:1}}

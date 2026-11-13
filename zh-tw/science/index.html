@@ -1,124 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
+<html lang="zh-Hant"><head>
     <meta charset="UTF-8">
     <!-- Google Tag Manager -->
         <!-- Google Consent Mode v2 default -->
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    (function(){
-        var savedConsent = null;
-        try {
-            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
-        } catch (error) {
-            savedConsent = null;
-        }
-        var hasSavedConsent = savedConsent && savedConsent.version === 1;
-        var consentState = hasSavedConsent ? {
-            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
-            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
-            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
-            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
-        } : {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        };
-        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
-        window.dataLayer.push({
-            event: 'owlnest_consent_default',
-            owlnest_consent_analytics: consentState.analytics_storage,
-            owlnest_consent_ads: consentState.ad_storage,
-            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
-        });
-    })();
-    </script>
+
     <!-- End Google Consent Mode v2 default -->
-<script>
-        if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
-        }
-    </script>
+
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>夜晚光線科學 | Owlnest Official</title>
-<meta name="description" content="Sleep Lab 的科學基礎：光是身體判斷時間的線索。了解光譜、亮度與照光時間，為什麼會影響夜晚的光環境。">
+    <title>光、光譜與生理時鐘｜OWLNEST Official</title>
+<meta name="description" content="深入理解光譜、色溫、非視覺感光與日常節律，分清科學原理、產品設計與實際驗證。">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://owlnestofficial.com/zh-tw/science/">
-    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/science">
-    <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/science/">
-    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/science">
-    <meta property="og:title" content="夜晚光線科學 | Owlnest Official">
-<meta property="og:description" content="Sleep Lab 的科學基礎：光是身體判斷時間的線索。了解光譜、亮度與照光時間，為什麼會影響夜晚的光環境。">
+    <link rel="canonical" href="https://owlnestofficial.com/zh-tw/lab/sleep/science/">
+    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/sleep/science/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/sleep/science/">
+    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/sleep/science/">
+    <meta property="og:title" content="光、光譜與生理時鐘｜OWLNEST Official">
+<meta property="og:description" content="深入理解光譜、色溫、非視覺感光與日常節律，分清科學原理、產品設計與實際驗證。">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
-    <meta property="og:url" content="https://owlnestofficial.com/zh-tw/science/">
+    <meta property="og:url" content="https://owlnestofficial.com/zh-tw/lab/sleep/science/">
     <meta property="og:image" content="https://owlnestofficial.com/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="夜晚光線科學 | Owlnest Official">
-<meta name="twitter:description" content="Sleep Lab 的科學基礎：光是身體判斷時間的線索。了解光譜、亮度與照光時間，為什麼會影響夜晚的光環境。">
+    <meta name="twitter:title" content="光、光譜與生理時鐘｜OWLNEST Official">
+<meta name="twitter:description" content="深入理解光譜、色溫、非視覺感光與日常節律，分清科學原理、產品設計與實際驗證。">
     <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://owlnestofficial.com/#organization",
-          "name": "Owlnest",
-          "url": "https://owlnestofficial.com/",
-          "brand": {
-            "@type": "Brand",
-            "name": "Owlnest"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://owlnestofficial.com/zh-tw/science/#webpage",
-          "url": "https://owlnestofficial.com/zh-tw/science/",
-          "name": "夜晚光線科學 | Owlnest Official",
-      "description": "光是身體判斷時間的線索。了解光譜、亮度與照光時間，為什麼會影響夜晚的光環境。",
-          "inLanguage": "zh-Hant-TW",
-          "about": {
-            "@type": "Thing",
-            "name": "光譜與夜間光線的科學原理"
-          },
-          "publisher": {
-            "@id": "https://owlnestofficial.com/#organization"
-          },
-          "isPartOf": {"@id": "https://owlnestofficial.com/zh-tw/lab/#webpage"},
-          "breadcrumb": {"@id": "https://owlnestofficial.com/zh-tw/science/#breadcrumb"}
-        },
-        {
-          "@type": "TechArticle",
-          "@id": "https://owlnestofficial.com/zh-tw/science/#article",
-      "headline": "夜晚的光為什麼重要",
-          "url": "https://owlnestofficial.com/zh-tw/science/",
-      "description": "光是身體判斷時間的線索。了解光譜、亮度與照光時間，為什麼會影響夜晚的光環境。",
-          "inLanguage": "zh-Hant-TW",
-          "author": {
-            "@id": "https://owlnestofficial.com/#organization"
-          },
-          "publisher": {
-            "@id": "https://owlnestofficial.com/#organization"
-          },
-          "mainEntityOfPage": {
-            "@id": "https://owlnestofficial.com/zh-tw/science/#webpage"
-          }
-        }
-      ]
-    }
-    </script>
+
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="stylesheet" href="/assets/css/tailwind-public.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;family=Noto+Serif+TC:wght@500;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <style>
         body { background:#111927; color:#fff; overflow-x:hidden; }
         .section-light { color:#182234; }
@@ -175,155 +86,153 @@
     <link rel="stylesheet" href="/assets/css/typography.css">
     <link rel="stylesheet" href="/assets/css/science-evidence.css?v=20261015">
     <link rel="stylesheet" href="/assets/css/site-navigation.css?v=20261022-touch-nav">
-<script type="application/ld+json">
-{
+
+<link rel="stylesheet" href="/assets/css/site-system-compat.css"><link rel="stylesheet" href="/assets/css/site-system.css"><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+        var savedConsent = null;
+        try {
+            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
+        } catch (error) {
+            savedConsent = null;
+        }
+        var hasSavedConsent = savedConsent && savedConsent.version === 1;
+        var consentState = hasSavedConsent ? {
+            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
+            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
+            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
+            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
+        } : {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        };
+        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
+        window.dataLayer.push({
+            event: 'owlnest_consent_default',
+            owlnest_consent_analytics: consentState.analytics_storage,
+            owlnest_consent_ads: consentState.ad_storage,
+            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
+        });
+    })();
+    </script><script>
+        if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+        }
+    </script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://owlnestofficial.com/zh-tw/lab/sleep/science/",
+      "url": "https://owlnestofficial.com/zh-tw/lab/sleep/science/",
+      "name": "光、光譜與生理時鐘｜OWLNEST Official",
+      "description": "深入理解光譜、色溫、非視覺感光與日常節律，分清科學原理、產品設計與實際驗證。",
+      "inLanguage": "zh-Hant"
+    },
+    {
       "@type": "BreadcrumbList",
-      "@id": "https://owlnestofficial.com/zh-tw/science/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "首頁",
+          "name": "Home",
           "item": "https://owlnestofficial.com/zh-tw/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Sleep Lab",
+          "name": "Lab",
           "item": "https://owlnestofficial.com/zh-tw/lab/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "科學基礎",
-          "item": "https://owlnestofficial.com/zh-tw/science/"
+          "name": "Sleep Lab",
+          "item": "https://owlnestofficial.com/zh-tw/lab/sleep/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "科學",
+          "item": "https://owlnestofficial.com/zh-tw/lab/sleep/science/"
         }
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://owlnestofficial.com/#organization",
+      "name": "Owlnest",
+      "url": "https://owlnestofficial.com/",
+      "brand": {
+        "@type": "Brand",
+        "name": "Owlnest"
+      }
     }
   ]
-}
-</script>
+}</script><link rel="stylesheet" href="/assets/v72/system.css"><link rel="stylesheet" href="/assets/v71/refinement.css"><link rel="stylesheet" href="/assets/v72/refinement.css"><link class="" rel="stylesheet" href="/assets/v74/editorial.css"><meta name="owlnest-route-target" content="/zh-tw/lab/sleep/science/">
+<script src="/assets/js/legacy-page-route.js" defer></script>
 </head>
-<body class="science-page font-sans antialiased selection:bg-amber selection:text-midnight">
+<body class="science-page font-sans antialiased selection:bg-amber selection:text-midnight v7-page v71-reading v72-page" data-editorial-version="owlnest-v7.4-editorial-art-direction" data-proposal-version="owlnest-v7.4-editorial-art-direction"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <!-- End Google Tag Manager (noscript) -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 px-6 py-5 flex justify-between items-center bg-midnight/85 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-        <a href="/zh-tw/" class="site-brand logo-area flex items-center gap-3 relative z-50 cursor-pointer no-underline hover:opacity-90 transition-opacity" aria-label="回到 Owlnest 首頁">
-             <img id="nav-logo" src="/logo2.png" onerror="this.src='/logo.png'" alt="Owlnest Logo" class="h-7 md:h-9 w-auto object-contain transition-all duration-300">
-             <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-white transition-colors duration-300">OWLNEST</span>
-        </a>
+    <header id="v7-header" data-position="fixed"><div class="v7-bar"><a class="v7-mark" href="/zh-tw/" aria-label="OWLNEST 首頁"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav id="v7-nav" aria-label="主導覽"><ul class="v7-list"><li class="v7-item"><div class="v7-row"><a href="/zh-tw/">首頁</a></div></li><li class="v7-item"><div class="v7-row"><a href="/zh-tw/products/">產品</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="產品子選單" aria-controls="v7-sub-1"><i aria-hidden="true"></i></button></div><ul id="v7-sub-1" class="v7-sub" hidden=""><li><a href="/zh-tw/products/lume/">Lume</a></li><li><a href="/zh-tw/what-is-owlnest-lume/">認識 Lume</a></li><li><a href="/zh-tw/manual/">使用說明</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/zh-tw/lab/">研究</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="研究子選單" aria-controls="v7-sub-2"><i aria-hidden="true"></i></button></div><ul id="v7-sub-2" class="v7-sub" hidden=""><li><a href="/zh-tw/lab/sleep/">Sleep Lab</a></li><li><a href="/zh-tw/lab/sleep/science/" aria-current="page">科學原理</a></li><li><a href="/zh-tw/lab/sleep/evidence/">研究依據</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/zh-tw/about/">關於我們</a></div></li><li class="v7-item"><div class="v7-row"><a href="/zh-tw/lab/sleep/21-day-program/">研究計畫</a></div></li></ul><div class="v7-drawer-tools"><a href="/account/">帳戶</a><a class="v7-lang" lang="en" aria-label="Switch to English" href="/lab/sleep/science/">EN</a></div></nav><div class="v7-tools"><div class="v7-desktop-tools"><a href="/account/">帳戶</a><a class="v7-lang" lang="en" aria-label="Switch to English" href="/lab/sleep/science/">EN</a></div><a class="v7-buy" href="/zh-tw/products/lume/#buy">選購 Lume</a><button type="button" class="v7-menu" aria-controls="v7-nav" aria-expanded="false" aria-label="主選單"><span aria-hidden="true"></span></button></div></div></header>
 
-        <div class="hidden lg:flex items-center gap-10 nav-links">
-            <nav class="flex gap-8 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60" aria-label="主要導覽"><ul class="ia-primary-list"><li><a href="/zh-tw/">首頁</a></li><li><a href="/zh-tw/products/">產品</a></li><li><a href="/zh-tw/lab/">Lab</a></li><li><a href="/zh-tw/about/">關於</a></li><li><a data-entry="campaign" href="/zh-tw/campaign/">計畫</a></li></ul></nav>
 
-            <div class="flex items-center gap-6 border-l border-white/10 pl-8 transition-colors duration-300">
-                <a href="/account/" class="relative group text-white/60 hover:text-amber transition-colors" title="會員中心" aria-label="會員中心">
-                    <i class="fas fa-user text-lg transition-colors duration-300"></i>
-                </a>
-                <div class="relative language-wrap">
-                    <button type="button" onclick="toggleLanguageMenu(event)" class="language-trigger inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors" aria-label="選擇語言" aria-expanded="false">
-                        <i class="fas fa-globe text-xs"></i>
-                        繁體中文
-                        <i class="fas fa-chevron-down text-[9px]"></i>
-                    </button>
-                    <div id="language-menu" class="language-menu absolute right-0 top-full mt-4 w-64 border border-white/10 bg-midnight/95 backdrop-blur-xl p-3 shadow-2xl transition-all duration-200">
-                        <a href="/science" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-white hover:text-amber transition-colors">English</a>
-                        <a href="/zh-tw/science/" class="flex items-center justify-between px-3 py-2 text-xs tracking-[0.08em] text-amber">繁體中文</a>
-                    </div>
-                </div>
-                <a href="/zh-tw/products/#buy" class="lume-case inline-flex items-center gap-2 text-[11px] tracking-[0.15em] uppercase font-semibold text-white/60 hover:text-amber transition-colors">
-                    <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                    購買 Lume
-                </a>
-            </div>
-        </div>
-
-        <div class="mobile-actions flex lg:hidden items-center gap-5 relative z-50">
-            <a href="/account/" class="mobile-account-link relative active:scale-95 transition text-white/80 hover:text-amber" aria-label="會員中心">
-                <i class="fas fa-user text-lg transition-colors duration-300"></i>
-            </a>
-            <a href="/zh-tw/products/#buy" class="lume-case mobile-campaign-link relative active:scale-95 transition text-white/80 hover:text-amber" title="購買 Lume" aria-label="購買 Lume">
-                <i class="fas fa-arrow-up-right-from-square text-lg transition-colors duration-300"></i>
-            </a>
-            <button onclick="toggleMobileMenu()" class="flex items-center gap-2 text-xl focus:outline-none active:scale-95 transition text-white/80 hover:text-amber ml-2" aria-label="切換選單">
-                <i class="fas fa-bars" id="mobile-menu-icon"></i>
-                <span class="text-[10px] tracking-[0.18em] uppercase font-bold">選單</span>
-            </button>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col justify-start items-center pt-28 pb-10 px-6 lg:hidden text-white">
-        <nav class="flex flex-col items-center gap-5 text-sm tracking-[0.2em] uppercase font-semibold text-center" aria-label="行動導覽"><ul class="ia-primary-list"><li><a href="/zh-tw/">首頁</a></li><li><a href="/zh-tw/products/">產品</a></li><li><a href="/zh-tw/lab/">Lab</a></li><li><a href="/zh-tw/about/">關於</a></li><li><a data-entry="campaign" href="/zh-tw/campaign/">計畫</a></li></ul><div class="w-8 h-px bg-white/10 mx-auto my-2"></div>
-            <a href="/account/" onclick="toggleMobileMenu()" aria-label="Member Center" title="Member Center" class="inline-flex h-9 w-9 items-center justify-center text-white/80 hover:text-amber transition-colors" rel="nofollow">
-                <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M20 21a8 8 0 0 0-16 0" />
-                    <circle cx="12" cy="7" r="4" />
-                </svg>
-            </a>
-            <div class="text-center">
-                <p class="text-[10px] tracking-[0.18em] uppercase text-amber mb-4">語言</p>
-                <div class="grid grid-cols-2 gap-x-5 gap-y-3 text-[11px] tracking-[0.08em] normal-case">
-                    <a href="/science" class="text-white hover:text-amber">English</a>
-                    <a href="/zh-tw/science/" class="text-amber">繁體中文</a>
-                </div>
-            </div>
-                        <div class="mt-2 flex w-full max-w-xs flex-col gap-3">
-                <a href="/zh-tw/products/#buy" onclick="toggleMobileMenu()" class="lume-case inline-flex items-center justify-center rounded-full bg-amber px-6 py-3 text-[11px] font-bold uppercase tracking-[0.12em] text-midnight hover:bg-warm transition-colors">購買 Lume</a>
-
-            </div>
-        </nav>
-    </div>
 
     <main>
         <section id="section-1" class="relative pt-36 pb-24 md:pt-48 md:pb-32 px-6 bg-midnight overflow-hidden">
             <div class="absolute inset-0 ambient-glow pointer-events-none"></div>
             <div class="relative z-10 max-w-6xl mx-auto reveal-text visible">
-                <nav class="ia-breadcrumb" aria-label="麵包屑導覽"><ol><li><a href="/zh-tw/">首頁</a></li><li><a href="/zh-tw/lab/">Sleep Lab</a></li><li><span aria-current="page">科學基礎</span></li></ol></nav>
-                <span class="text-amber tracking-[0.14em] uppercase text-xs mb-6 block font-bold">Sleep Lab · 科學基礎</span>
-                <h1 class="max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.4rem] font-serif text-white leading-[1.12] mb-6">身體會透過光線判斷時間。</h1>
-                <p class="max-w-2xl text-base md:text-lg font-light leading-relaxed text-white/70">何時照光、照多久、光有多強，以及光譜組成，都很重要。</p>
+                <nav class="v72-breadcrumb" aria-label="麵包屑導覽"><ol><li><a href="/zh-tw/">Home</a></li><li><a href="/zh-tw/lab/">Lab</a></li><li><a href="/zh-tw/lab/sleep/">Sleep Lab</a></li><li data-v7-type="label"><span aria-current="page">科學</span></li></ol></nav>
+                <span class="text-amber tracking-[0.14em] uppercase text-xs mb-6 block font-bold">Science / 光線與生理時鐘</span>
+                <h1 class="max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.4rem] font-serif text-white leading-[1.12] mb-6 e74-research-title"><span>身體會透過光線</span><span>判斷時間</span></h1>
+                <p class="max-w-2xl text-base md:text-lg font-light leading-relaxed text-white/70" data-v7-type="body">光不只照亮房間。理解夜晚的光，需要一起看時間、強度、持續多久與光譜，而不是只問它夠不夠暖。</p>
             </div>
-        </section>
+        </section><nav class="v71-chapters" aria-label="本頁章節"><details><summary data-v7-type="action"><span>本頁章節</span><span class="v71-chapter-label">快速前往</span></summary><ol><li><a href="#section-appearance">顏色與光譜</a></li><li><a href="#nonvisual-light">非視覺光感知</a></li><li><a href="#section-night">日夜光照</a></li><li><a href="#science-education-visuals">概念圖解</a></li><li><a href="#design-and-validation">設計與驗證</a></li></ol></details></nav>
 
-        <section id="section-appearance" class="section-breathe px-6 bg-warm text-midnight section-light border-t border-taupe/10">
+        <section id="section-appearance" class="section-breathe px-6 bg-warm text-midnight section-light border-t border-taupe/10 v71-anchor" tabindex="-1">
             <div class="max-w-6xl mx-auto reveal-text">
-                <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-5 block">光不只有顏色</span>
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14] max-w-4xl">兩盞看起來都暖的燈，光譜仍可能不同。</h2>
-                <p class="mt-6 max-w-2xl text-base md:text-lg text-midnight/68 leading-relaxed">顏色是光的外觀，光譜是光的組成。</p>
+                <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-5 block">顏色與光譜</span>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14] max-w-4xl" data-v7-type="section">看起來同樣溫暖<br>光譜仍可能不同</h2>
+                <p class="mt-6 max-w-2xl text-base md:text-lg text-midnight/68 leading-relaxed" data-v7-type="body">顏色說明外觀，光譜則說明不同波長的組成。這是兩個不同的問題；光憑任何一項，也無法預測一個人會睡得如何。</p>
             </div>
-        </section>
+        </section><section class="pv-science-copy v71-anchor" id="nonvisual-light" tabindex="-1"><h2>視網膜如何將光訊息<br>傳給生理時鐘</h2><div class="pv-science-columns"><div><h3>通往生理時鐘的訊號</h3><p data-v7-type="body">視網膜中含有黑視素的細胞，參與傳遞日常節律所需的光訊息；視桿與視錐細胞也有貢獻。這類非視覺路徑，正是不能只看外觀來理解光的原因。</p><a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank" rel="noopener">CIE S 026:2018 ↗</a></div><div><h3>色溫無法單獨說明<br>光的生理影響</h3><p data-v7-type="body">相關色溫（CCT）描述接近白光的外觀，不能唯一決定光譜。黑視素等效日光照度（melanopic EDI）依黑視素敏感度加權，並以日光為參照；它不是生理效果的保證。</p><p class="pv-small" data-v7-type="secondary">Lume 是飽和橘紅色光源，不能只用一般白光的色溫比較，判定產品表現。</p><a href="https://doi.org/10.1038/s41598-022-21755-7" target="_blank" rel="noopener">Esposito 與 Houser，2022 ↗</a></div></div></section>
 
-        <section id="section-night" class="section-breathe px-6 bg-midnight text-white border-t border-white/5">
+        <section id="section-night" class="section-breathe px-6 bg-midnight text-white border-t border-white/5 v71-anchor" tabindex="-1">
             <div class="max-w-6xl mx-auto reveal-text">
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14] max-w-4xl">在對的時間，使用適合的光。</h2>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14] max-w-4xl" data-v7-type="section">從白天到入睡的光照建議</h2>
                 <dl class="science-day-cycle">
-                    <div><dt>白天</dt><dd>在適當時間接觸充足光線，有助於維持身體的日常節律。</dd></div>
-                    <div><dt>晚上</dt><dd>越接近睡覺時間，越應減少光照刺激。</dd></div>
-                    <div><dt>夜間</dt><dd>睡眠環境盡量保持黑暗。需要照明時，留意光的強度、光譜與使用時間。</dd></div>
+                    <div><dt data-v7-type="secondary">白天</dt><dd data-v7-type="body">在適當時間接觸充足光線，有助於維持身體的日常節律。</dd></div>
+                    <div><dt data-v7-type="secondary">晚上</dt><dd data-v7-type="body">越接近睡覺時間，越應減少光照刺激。</dd></div>
+                    <div><dt data-v7-type="secondary">夜間</dt><dd data-v7-type="body">睡眠環境盡量保持黑暗。需要照明時，留意光的強度、光譜與使用時間。</dd></div>
                 </dl>
-                <p class="science-guidance-source">適用於健康成人的一般建議。<a href="/zh-tw/evidence/#general-evidence">Brown 等人，2022 ↗</a></p>
+                <p class="science-guidance-source" data-v7-type="body">適用於健康成人的一般建議。<a href="/zh-tw/lab/sleep/evidence/#day-night">Brown 等人，2022 ↗</a></p>
             </div>
         </section>
 
-        <section id="science-education-visuals" class="science-education-visuals bg-[#0f111a] text-white border-t border-white/5">
+        <section id="science-education-visuals" class="science-education-visuals bg-[#0f111a] text-white border-t border-white/5 v71-anchor" tabindex="-1">
             <div class="science-education-visuals__shell reveal-text">
                 <div class="science-education-visuals__intro">
                     <div>
                         <span class="science-education-visuals__eyebrow">概念示意</span>
-                        <h2>夜晚光線，先看懂兩件事</h2>
+                        <h2>光譜組成與夜間生理訊號</h2>
                     </div>
-                    <p>一般研究的概念示意，非 Lume 實測資料。</p>
+                    <p data-v7-type="secondary">一般研究的概念示意，非 Lume 實測資料。</p>
                 </div>
 
                 <div class="science-education-visuals__grid">
                     <figure class="science-education-card">
                         <div class="science-education-card__heading">
                             <span>01</span>
-                            <h3>光譜看的是光的組成</h3>
+                            <h3>光譜顯示不同波長的組成</h3>
                         </div>
                         <div class="science-spectrum-map" role="img" aria-label="400 至 700 奈米的可見光波長概念範圍；圖中沒有 Lume 的產品輸出曲線">
                             <div class="science-spectrum-map__labels" aria-hidden="true">
@@ -338,7 +247,7 @@
                                 <span>700 nm</span>
                             </div>
                         </div>
-                        <figcaption>僅為概念示意與科普用途，不呈現任何產品輸出曲線。</figcaption>
+                        <figcaption data-v7-type="secondary">僅為概念示意與科普用途，不呈現任何產品輸出曲線。</figcaption>
                     </figure>
 
                     <figure class="science-education-card">
@@ -368,23 +277,23 @@
                             <span><i class="science-rhythm-legend__line"></i>晚間照光較少</span>
                             <span><i class="science-rhythm-legend__line science-rhythm-legend__line--dashed"></i>晚間照光較多</span>
                         </div>
-                        <figcaption>一般研究的概念示意，非 Lume 實測，也不代表每個人的反應。</figcaption>
-                        <p class="science-education-card__sources">研究背景：<a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener">Gooley 等人，2011</a>、<a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener">Cain 等人，2020</a>。</p>
+                        <figcaption data-v7-type="secondary">一般研究的概念示意，非 Lume 實測，也不代表每個人的反應。</figcaption>
+                        <p class="science-education-card__sources" data-v7-type="secondary">研究背景：<a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener">Gooley 等人，2011</a>、<a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener">Cain 等人，2020</a>。</p>
                     </figure>
                 </div>
             </div>
         </section>
 
-        <section id="section-evidence" class="section-breathe px-6 bg-warm text-midnight text-center section-light border-t border-taupe/10">
+        <section class="pv-science-copy v71-anchor" id="design-and-validation" tabindex="-1"><h2>如何評估 Lume 的設計與作用</h2><p data-v7-type="body">Lume 把研究導向的設計理念，落實在夜間用光。要評估產品本身，光譜量測需要明確的眼部照光條件；生理與睡眠主張則需要適當的人體研究，兩者不能互相替代。</p><p data-v7-type="body">Sleep Lab 的使用回報回答另一個問題：產品如何融入生活。個人感受不能用來判定褪黑激素濃度或臨床睡眠效果。</p><a href="/zh-tw/lab/sleep/evidence/#product-evidence">查看證據分界 ↗</a></section><section id="section-evidence" class="section-breathe px-6 bg-warm text-midnight text-center section-light border-t border-taupe/10">
             <div class="max-w-4xl mx-auto reveal-text">
                 <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-5 block">證據</span>
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14]">查閱來源，分清證據。</h2>
-                <a href="/zh-tw/evidence/" class="mt-9 inline-flex items-center justify-center bg-midnight text-white px-8 py-4 font-bold tracking-[0.14em] text-xs hover:bg-amber hover:text-midnight transition-colors">研究來源與證據</a>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.14]" data-v7-type="section">閱讀設計所參考的研究</h2>
+                <a href="/zh-tw/lab/sleep/evidence/" class="mt-9 inline-flex items-center justify-center bg-midnight text-white px-8 py-4 font-bold tracking-[0.14em] text-xs hover:bg-amber hover:text-midnight transition-colors">研究來源與證據</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer batch-b-footer"><div class="footer-wrap"><a class="footer-brand" href="/zh-tw/">OWLNEST</a><nav class="footer-groups" aria-label="頁尾導覽"><div class="footer-group"><h2 class="footer-group-heading">產品</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-product-links"><span>產品</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-product-links" class="footer-links"><li><a href="/zh-tw/products/">Lume</a></li><li><a href="/zh-tw/what-is-owlnest-lume/">認識 Lume</a></li><li><a href="/zh-tw/manual/">使用說明</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Lab</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-lab-links"><span>Lab</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-lab-links" class="footer-links"><li><a href="/zh-tw/lab/">Sleep Lab</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Owlnest</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-owlnest-links"><span>Owlnest</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-owlnest-links" class="footer-links"><li><a href="/zh-tw/about/">關於</a></li><li><a href="/zh-tw/campaign/">21 天睡眠計畫</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">服務</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-support-links"><span>服務</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-support-links" class="footer-links"><li><a href="/zh-tw/faq/">常見問題</a></li><li><a href="/zh-tw/contact/">聯絡我們</a></li><li><a href="/zh-tw/preorder-policy/">訂單與運送</a></li><li><a href="/zh-tw/disclaimer/">政策</a></li></ul></div></nav><div class="footer-bottom"><span>&copy; 2026 Owlnest Official</span><button type="button" data-cookie-settings>Cookie 設定</button></div></div></footer>
+    <footer class="site-footer batch-b-footer v7-footer"><div class="footer-wrap"><a class="footer-brand v7-footmark" href="/zh-tw/"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav class="footer-groups" aria-label="頁尾導覽"><div class="footer-group"><h2 class="footer-group-heading">產品</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-product-links"><span>產品</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-product-links" class="footer-links"><li><a href="/zh-tw/products/lume/">Lume</a></li><li><a href="/zh-tw/what-is-owlnest-lume/">認識 Lume</a></li><li><a href="/zh-tw/manual/">使用說明</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Lab</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-lab-links"><span>Lab</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-lab-links" class="footer-links"><li><a href="/zh-tw/lab/sleep/">Sleep Lab</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Owlnest</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-owlnest-links"><span>Owlnest</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-owlnest-links" class="footer-links"><li><a href="/zh-tw/about/">關於</a></li><li><a href="/zh-tw/lab/sleep/21-day-program/">21 天睡眠計畫</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">服務</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-support-links"><span>服務</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-support-links" class="footer-links"><li><a href="/zh-tw/faq/">常見問題</a></li><li><a href="/zh-tw/contact/">聯絡我們</a></li><li><a href="/zh-tw/preorder-policy/">訂單與運送</a></li><li><a href="/zh-tw/disclaimer/">政策</a></li></ul></div></nav><div class="footer-bottom"><span>© 2026 Owlnest Official</span><button type="button" data-cookie-settings="">Cookie 設定</button></div></div></footer>
 
 
 
@@ -462,9 +371,10 @@
             }
         }
     </script>
-    <script src="/assets/js/consent.js" defer></script>
-    <script src="/assets/js/navigation-accessibility.js" defer></script>
-    <script src="/assets/js/site-hierarchy.js?v=20261022-touch-nav" defer></script>
-    <script src="/assets/js/site-footer.js?v=20260909-footer-hotfix" defer></script>
-</body>
-</html>
+    <script src="/assets/js/consent.js" defer=""></script>
+
+
+    <script src="/assets/js/site-footer.js?v=20260909-footer-hotfix" defer=""></script>
+
+
+<script src="/assets/js/site-route-compat.js" defer=""></script><script src="/assets/v72/navigation.js" defer=""></script><script src="/assets/v71/experience.js" defer=""></script></body></html>

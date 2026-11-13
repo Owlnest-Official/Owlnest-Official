@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <!-- Google Consent Mode v2 default -->
+
+    <!-- End Google Consent Mode v2 default -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light, Spectrum &amp; Circadian Science | OWLNEST Official</title>
+<meta name="description" content="Understand spectrum, color temperature, non-visual light sensing and daily timing—and the distinction between design and product validation.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://owlnestofficial.com/lab/sleep/science/">
+    <link rel="alternate" hreflang="en" href="https://owlnestofficial.com/lab/sleep/science/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://owlnestofficial.com/zh-tw/lab/sleep/science/">
+    <link rel="alternate" hreflang="x-default" href="https://owlnestofficial.com/lab/sleep/science/">
+    <meta property="og:title" content="Light, Spectrum &amp; Circadian Science | OWLNEST Official">
+<meta property="og:description" content="Understand spectrum, color temperature, non-visual light sensing and daily timing—and the distinction between design and product validation.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://owlnestofficial.com/lab/sleep/science/">
+    <meta property="og:image" content="https://owlnestofficial.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Light, Spectrum &amp; Circadian Science | OWLNEST Official">
+<meta name="twitter:description" content="Understand spectrum, color temperature, non-visual light sensing and daily timing—and the distinction between design and product validation.">
+    <meta name="twitter:image" content="https://owlnestofficial.com/logo.png">
+
+
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/assets/css/tailwind-public.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #182234;
+            color: #ffffff;
+            --color-text-primary: #111827;
+            --color-text-secondary: #455169;
+            --color-text-muted: #5B667A;
+            --color-dark-muted: #D7CDB8;
+            --color-readable-amber: #9A551F;
+        }
+
+        @media (max-width: 1023px) {
+            .section-container {
+                height: auto;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                display: block;
+            }
+            #section-product {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        }
+
+        /* Reveal Animations */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.4s ease-in-out;
+            visibility: hidden;
+            pointer-events: none;
+            overflow-y: auto;
+        }
+        #mobile-menu.open {
+            transform: translateY(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Ambient Glow Effect */
+        .ambient-glow {
+            background: radial-gradient(circle at center, rgba(201, 133, 42, 0.12) 0%, rgba(24, 34, 52, 0) 70%);
+        }
+
+        .science-panel {
+            border: 1px solid rgba(24, 34, 52, 0.12);
+            background: rgba(255, 255, 255, 0.58);
+            box-shadow: 0 18px 44px rgba(24,34,52,0.06);
+        }
+
+        .science-panel-dark {
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.035);
+            box-shadow: 0 18px 44px rgba(0,0,0,0.16);
+        }
+
+        .evidence-step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .evidence-step__number {
+            color: rgba(255, 255, 255, 0.28);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+        }
+
+        .science-visual-card img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .science-visual-card--large {
+            padding: clamp(0.55rem, 0.9vw, 0.85rem) !important;
+        }
+
+        .science-text-lockup {
+            max-width: 440px;
+        }
+
+        .science-info-spotlight {
+            display: grid;
+            gap: clamp(1.75rem, 3.5vw, 3rem);
+        }
+
+        .science-info-spotlight .science-text-lockup {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: 100%;
+            max-width: 760px;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        @media (min-width: 1024px) {
+            .science-info-spotlight {
+                grid-template-columns: minmax(280px, 0.5fr) minmax(0, 1fr);
+                align-items: end;
+            }
+
+            .science-info-spotlight .science-visual-card {
+                grid-column: 1 / -1;
+                width: 100%;
+                max-width: min(100%, 1320px);
+                justify-self: center;
+            }
+
+            .science-info-spotlight--wide .science-visual-card {
+                max-width: min(100%, 1480px);
+            }
+        }
+
+        .reference-card {
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 28px;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+            padding: clamp(1.25rem, 2vw, 1.8rem);
+            box-shadow: 0 22px 58px rgba(0,0,0,0.18);
+        }
+
+        .reference-card::before {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 2px;
+            margin-bottom: 1.15rem;
+            background: rgba(201, 133, 42, 0.92);
+        }
+
+        .reference-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.95rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.035);
+            color: rgba(255, 255, 255, 0.78);
+            text-decoration: none;
+            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, transform 180ms ease;
+        }
+
+        .reference-link:hover,
+        .reference-link:focus-visible {
+            color: #C9852A;
+            border-color: rgba(201, 133, 42, 0.36);
+            background: rgba(201, 133, 42, 0.08);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        .reference-link span:last-child {
+            flex: 0 0 auto;
+            color: rgba(201, 133, 42, 0.85);
+            font-size: 0.9rem;
+        }
+
+        .spectrum-visual {
+            background:
+                radial-gradient(circle at 78% 50%, rgba(201, 133, 42, 0.24), rgba(201, 133, 42, 0) 38%),
+                linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+        }
+
+        .chain-arrow {
+            color: rgba(201, 133, 42, 0.85);
+        }
+
+        .section-breathe {
+            padding-top: clamp(5rem, 8vw, 8rem);
+            padding-bottom: clamp(5rem, 8vw, 8rem);
+        }
+
+        main section:not(#section-1) h2 {
+            max-width: min(100%, 980px);
+            font-size: clamp(2.35rem, 4vw, 4.25rem) !important;
+            line-height: 1.06 !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        main section:not(#section-1) p {
+            line-height: 1.65;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .section-heading {
+            max-width: min(100%, 1040px);
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        main section [class*="gap-24"],
+        main section [class*="gap-20"] {
+            gap: clamp(2.5rem, 5vw, 5rem) !important;
+        }
+
+        .display-heading,
+        main section:not(#section-1) h2.font-serif {
+            max-width: min(100%, 1080px) !important;
+            font-size: clamp(2.75rem, 4.6vw, 4.85rem) !important;
+            line-height: 1.04 !important;
+            letter-spacing: -0.02em;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .display-heading--column,
+        main section:not(#section-1) .grid > div > h2.font-serif {
+            max-width: min(100%, 840px) !important;
+            font-size: clamp(2.55rem, 3.85vw, 4.15rem) !important;
+            line-height: 1.05 !important;
+        }
+
+        .section-shell {
+            width: min(100%, 1360px);
+            margin-inline: auto;
+            padding-inline: clamp(24px, 4vw, 64px);
+        }
+
+        @media (min-width: 1024px) {
+            main section:not(#section-1) .grid[class*="lg:grid-cols-["] {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+            }
+
+            main section:not(#section-1) [class*="max-w-3xl"]:has(h2.font-serif),
+            main section:not(#section-1) [class*="max-w-2xl"]:has(h2.font-serif),
+            main section:not(#section-1) [class*="max-w-xl"]:has(h2.font-serif),
+            main section:not(#section-1) [class*="max-w-lg"]:has(h2.font-serif) {
+                max-width: min(100%, 1120px) !important;
+            }
+        }
+
+        .proof-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 360px;
+            box-shadow: 0 20px 52px rgba(24,34,52,0.08);
+        }
+        .section-light .text-white,
+        .section-light [class*="text-white/"] {
+            color: var(--color-text-primary) !important;
+        }
+        .section-light [class*="text-midnight/"] {
+            color: var(--color-text-secondary) !important;
+        }
+        .section-light .text-amber {
+            color: var(--color-readable-amber) !important;
+        }
+        .section-light a.bg-amber {
+            color: #182234 !important;
+        }
+        .bg-midnight [class*="text-white/6"],
+        .bg-midnight [class*="text-white/5"],
+        .bg-midnight [class*="text-white/4"],
+        [class*="bg-[#0f111a]"] [class*="text-white/6"],
+        [class*="bg-[#0f111a]"] [class*="text-white/5"],
+        [class*="bg-[#0f111a]"] [class*="text-white/4"] {
+            color: var(--color-dark-muted) !important;
+        }
+
+        .proof-card::before {
+            content: ";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 42%, rgba(201,133,42,0.28), rgba(201,133,42,0) 48%);
+            pointer-events: none;
+        }
+
+        .light-orb {
+            width: 112px;
+            height: 112px;
+            border-radius: 999px;
+            margin: 0 auto;
+            box-shadow: 0 0 54px currentColor;
+        }
+
+        .mini-spectrum {
+            height: 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        @media (max-width: 640px) {
+            #section-1 h1 {
+                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
+                line-height: 1.14 !important;
+            }
+
+            #main-header {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            main, section, section > div {
+                min-width: 0;
+            }
+            h1, h2, h3, p {
+                overflow-wrap: normal;
+                word-break: normal;
+                hyphens: none;
+            }
+            #main-header .logo-area {
+                gap: 0.55rem;
+            }
+            #main-header .logo-area span {
+                font-size: 1rem;
+                letter-spacing: 0.16em;
+            }
+            #main-header .mobile-actions {
+                gap: 0.9rem;
+                position: absolute;
+                right: 2.25rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #main-header .mobile-actions button {
+                margin-left: 0 !important;
+            }
+            #main-header .mobile-account-link {
+                display: none;
+            }
+            #main-header .mobile-campaign-link {
+                display: none;
+            }
+            main section {
+                overflow: hidden;
+            }
+            #section-1 h1,
+            #section-findings h2,
+            #section-design h2,
+            #section-visuals h2,
+            #section-anchors h2,
+            #section-references h2,
+            #section-boundaries h2 {
+                max-width: 21rem;
+                font-size: 2.55rem !important;
+                line-height: 1.08 !important;
+            }
+            #section-1 p,
+            #section-findings p,
+            #section-design p,
+            #section-visuals p,
+            #section-anchors p {
+                max-width: 20.5rem;
+            }
+            .section-breathe {
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
+            }
+        }
+
+        /* Readable Display Heading System Override */
+        :where(h1, h2).font-serif {
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        .section-container:not(#section-1) h2.font-serif,
+        main section h2.font-serif,
+        main section:not(#hero) h2.font-serif {
+            max-width: min(100%, 1120px) !important;
+            font-size: clamp(2.25rem, 3.2vw, 3.6rem) !important;
+            line-height: 1.14 !important;
+            letter-spacing: -0.01em !important;
+        }
+
+        .section-container:not(#section-1) .grid > div > h2.font-serif,
+        main section .grid > div > h2.font-serif,
+        main section:not(#hero) .grid > div > h2.font-serif {
+            max-width: min(100%, 900px) !important;
+            font-size: clamp(2.1rem, 2.65vw, 3.1rem) !important;
+            line-height: 1.16 !important;
+        }
+
+        main h1.font-serif:not(.home-hero-title) {
+            max-width: min(100%, 980px) !important;
+            font-size: clamp(2.55rem, 4vw, 4.15rem) !important;
+            line-height: 1.1 !important;
+            letter-spacing: -0.01em !important;
+            text-wrap: balance;
+            overflow-wrap: normal;
+            word-break: normal;
+            hyphens: none;
+        }
+
+        main .grid > div > h1.font-serif:not(.home-hero-title) {
+            max-width: min(100%, 900px) !important;
+            font-size: clamp(2.35rem, 3.45vw, 3.55rem) !important;
+            line-height: 1.12 !important;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            .section-container:not(#section-1) .homepage-balanced-grid,
+            .section-container:not(#section-1) .grid[class*="lg:grid-cols-["],
+            main section .grid[class*="lg:grid-cols-["],
+            main section:not(#hero) .grid[class*="lg:grid-cols-"] {
+                grid-template-columns: minmax(0, 1fr) !important;
+            }
+
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                max-width: min(100%, 1040px) !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                max-width: 100% !important;
+                font-size: clamp(2rem, 6vw, 2.65rem) !important;
+                line-height: 1.16 !important;
+                letter-spacing: -0.006em !important;
+            }
+
+            main h1.font-serif:not(.home-hero-title) {
+                max-width: 100% !important;
+                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
+                line-height: 1.14 !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #section-1 h1 {
+                font-size: clamp(2.2rem, 7vw, 2.85rem) !important;
+                line-height: 1.14 !important;
+            }
+
+            .section-container:not(#section-1) h2.font-serif,
+            main section h2.font-serif,
+            main section:not(#hero) h2.font-serif {
+                font-size: clamp(1.95rem, 6.2vw, 2.35rem) !important;
+                line-height: 1.17 !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .science-large-visual-row {
+                grid-template-columns: minmax(280px, 0.58fr) minmax(680px, 1.42fr) !important;
+                gap: clamp(2.5rem, 4vw, 4rem) !important;
+            }
+
+            .science-large-visual-row--wide {
+                grid-template-columns: minmax(260px, 0.5fr) minmax(760px, 1.5fr) !important;
+            }
+
+            .sleep-routine-figure {
+                margin-left: 0;
+            }
+        }
+
+        .sleep-routine-figure {
+            padding: clamp(0.6rem, 1vw, 0.9rem) !important;
+        }
+
+        .sleep-routine-figure img {
+            border-radius: 18px !important;
+        }
+
+        @media (max-width: 640px) {
+            .science-visual-card {
+                padding: 0.75rem !important;
+                border-radius: 22px !important;
+            }
+
+            .science-visual-card img {
+                border-radius: 16px !important;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            main section .science-large-visual-row.grid[class*="lg:grid-cols-["] {
+                grid-template-columns: minmax(280px, 0.58fr) minmax(680px, 1.42fr) !important;
+                gap: clamp(2.5rem, 4vw, 4rem) !important;
+            }
+
+            main section .science-large-visual-row--wide.grid[class*="lg:grid-cols-["] {
+                grid-template-columns: minmax(260px, 0.5fr) minmax(760px, 1.5fr) !important;
+            }
+
+            main section .sleep-routine-figure {
+                margin-left: 0;
+            }
+        }
+        /* Consistent public header: dark glass on every section and page. */
+        #main-header,
+        #main-header.nav-dark,
+        #main-header.nav-split,
+        #main-header.is-scrolled,
+        #main-header.is-light,
+        #main-header.header--light,
+        #main-header.header--transparent,
+        #main-header.header--inverse {
+            background: rgba(12, 18, 30, 0.78) !important;
+            backdrop-filter: blur(18px) saturate(130%) !important;
+            -webkit-backdrop-filter: blur(18px) saturate(130%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18) !important;
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .brand span,
+        #main-header .site-brand span,
+        #main-header .primary-nav a,
+        #main-header .language-trigger,
+        #main-header .header-actions > a,
+        #main-header button[aria-label="Toggle menu"] {
+            color: rgba(246, 240, 226, 0.88) !important;
+        }
+
+        #main-header .header-actions svg,
+        #main-header .language-trigger i {
+            color: rgba(246, 240, 226, 0.82) !important;
+        }
+
+        #main-header .primary-nav a:hover,
+        #main-header .language-trigger:hover,
+        #main-header .header-actions > a:hover,
+        #main-header button[aria-label="Toggle menu"]:hover,
+        #main-header .header-actions > a:hover svg,
+        #main-header .language-trigger:hover i {
+            color: #C9852A !important;
+        }
+
+        #main-header .header-actions > a[href="/products#buy"],
+        #main-header .header-actions > a[href="/products#buy"]:hover {
+            background: #C9852A !important;
+            color: #182234 !important;
+        }
+
+        #main-header .brand img,
+        #main-header .site-brand img,
+        #nav-logo {
+            height: 2.25rem !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        @media (min-width: 768px) {
+            #main-header .brand img,
+            #main-header .site-brand img,
+            #nav-logo {
+                height: 2.5rem !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/consent.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/science-evidence.css?v=20261015">
+    <link rel="stylesheet" href="/assets/css/site-navigation.css?v=20261022-touch-nav">
+
+<link rel="stylesheet" href="/assets/css/site-system-compat.css"><link rel="stylesheet" href="/assets/css/site-system.css"><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+        var savedConsent = null;
+        try {
+            savedConsent = JSON.parse(localStorage.getItem('owlnest_consent_v1') || 'null');
+        } catch (error) {
+            savedConsent = null;
+        }
+        var hasSavedConsent = savedConsent && savedConsent.version === 1;
+        var consentState = hasSavedConsent ? {
+            analytics_storage: savedConsent.analytics_storage === 'granted' ? 'granted' : 'denied',
+            ad_storage: savedConsent.ad_storage === 'granted' ? 'granted' : 'denied',
+            ad_user_data: savedConsent.ad_user_data === 'granted' ? 'granted' : 'denied',
+            ad_personalization: savedConsent.ad_personalization === 'granted' ? 'granted' : 'denied'
+        } : {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        };
+        gtag('consent', 'default', Object.assign({ wait_for_update: 500 }, consentState));
+        window.dataLayer.push({
+            event: 'owlnest_consent_default',
+            owlnest_consent_analytics: consentState.analytics_storage,
+            owlnest_consent_ads: consentState.ad_storage,
+            owlnest_consent_source: hasSavedConsent ? 'saved' : 'default_denied'
+        });
+    })();
+    </script><script>
+if (['owlnestofficial.com', 'www.owlnestofficial.com'].includes(window.location.hostname)) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PC4ZNPWQ');
+}
+</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://owlnestofficial.com/lab/sleep/science/",
+      "url": "https://owlnestofficial.com/lab/sleep/science/",
+      "name": "Light, Spectrum & Circadian Science | OWLNEST Official",
+      "description": "Understand spectrum, color temperature, non-visual light sensing and daily timing—and the distinction between design and product validation.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://owlnestofficial.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Lab",
+          "item": "https://owlnestofficial.com/lab/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sleep Lab",
+          "item": "https://owlnestofficial.com/lab/sleep/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Science",
+          "item": "https://owlnestofficial.com/lab/sleep/science/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://owlnestofficial.com/#organization",
+      "name": "Owlnest",
+      "url": "https://owlnestofficial.com/",
+      "brand": {
+        "@type": "Brand",
+        "name": "Owlnest"
+      }
+    }
+  ]
+}</script><link rel="stylesheet" href="/assets/v72/system.css"><link rel="stylesheet" href="/assets/v71/refinement.css"><link rel="stylesheet" href="/assets/v72/refinement.css"></head>
+<body class="science-page bg-midnight text-white antialiased text-base md:text-lg selection:bg-amber selection:text-midnight v7-page v71-reading v72-page"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC4ZNPWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="v7-header" data-position="fixed"><div class="v7-bar"><a class="v7-mark" href="/" aria-label="OWLNEST Home"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav id="v7-nav" aria-label="Primary navigation"><ul class="v7-list"><li class="v7-item"><div class="v7-row"><a href="/">Home</a></div></li><li class="v7-item"><div class="v7-row"><a href="/products/">Products</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="Products submenu" aria-controls="v7-sub-1"><i aria-hidden="true"></i></button></div><ul id="v7-sub-1" class="v7-sub" hidden=""><li><a href="/products/lume/">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/lab/">Lab</a><button type="button" class="v7-disclose" aria-expanded="false" aria-label="Lab submenu" aria-controls="v7-sub-2"><i aria-hidden="true"></i></button></div><ul id="v7-sub-2" class="v7-sub" hidden=""><li><a href="/lab/sleep/">Sleep Lab</a></li><li><a href="/lab/sleep/science/" aria-current="page">Science</a></li><li><a href="/lab/sleep/evidence/">Evidence</a></li></ul></li><li class="v7-item"><div class="v7-row"><a href="/about/">About</a></div></li><li class="v7-item"><div class="v7-row"><a href="/lab/sleep/21-day-program/">Program</a></div></li></ul><div class="v7-drawer-tools"><a href="/account/">Account</a><a class="v7-lang" lang="zh-Hant" aria-label="切換繁體中文" href="/zh-tw/lab/sleep/science/">繁中</a></div></nav><div class="v7-tools"><div class="v7-desktop-tools"><a href="/account/">Account</a><a class="v7-lang" lang="zh-Hant" aria-label="切換繁體中文" href="/zh-tw/lab/sleep/science/">繁中</a></div><a class="v7-buy" href="/products/lume/#buy">Buy Lume</a><button type="button" class="v7-menu" aria-controls="v7-nav" aria-expanded="false" aria-label="Main menu"><span aria-hidden="true"></span></button></div></div></header>
+
+
+
+
+    <div class="nav-dots hidden xl:flex">
+        <a href="#section-1" class="dot active" data-index="0"></a>
+        <a href="#section-appearance" class="dot" data-index="1"></a>
+        <a href="#section-night" class="dot" data-index="2"></a>
+        <a href="#science-education-visuals" class="dot" data-index="3"></a>
+        <a href="#section-evidence" class="dot" data-index="4"></a>
+    </div>
+
+    <main>
+        <section id="section-1" class="relative pt-36 pb-24 md:pt-48 md:pb-32 px-6 bg-midnight overflow-hidden">
+            <div class="absolute inset-0 ambient-glow pointer-events-none"></div>
+            <div class="relative z-10 max-w-6xl mx-auto reveal-text visible">
+                <nav class="v72-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/lab/">Lab</a></li><li><a href="/lab/sleep/">Sleep Lab</a></li><li data-v7-type="label"><span aria-current="page">Science</span></li></ol></nav>
+                <span class="text-amber tracking-[0.14em] uppercase text-xs mb-6 block font-bold">Science / Light and the body clock</span>
+                <h1 class="max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.4rem] font-serif text-white leading-[1.06] mb-6" data-v7-type="display">Your body uses light to tell time.</h1>
+                <p class="max-w-2xl text-base md:text-lg font-light leading-relaxed text-white/70" data-v7-type="body">Light does more than illuminate a room. To understand its role after dark, look at timing, intensity, duration and spectrum together.</p>
+            </div>
+        </section><nav class="v71-chapters" aria-label="On this page"><details><summary data-v7-type="action"><span>On this page</span><span class="v71-chapter-label">Jump to a section</span></summary><ol><li><a href="#section-appearance">Color &amp; spectrum</a></li><li><a href="#nonvisual-light">Beyond vision</a></li><li><a href="#section-night">Day &amp; night</a></li><li><a href="#science-education-visuals">Concept diagrams</a></li><li><a href="#design-and-validation">Design &amp; validation</a></li></ol></details></nav>
+
+        <section id="section-appearance" class="section-breathe px-6 bg-warm text-midnight section-light border-t border-taupe/10 v71-anchor" tabindex="-1">
+            <div class="max-w-6xl mx-auto reveal-text">
+                <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-5 block">Color and spectrum</span>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.08] max-w-4xl" data-v7-type="section">Warm-looking light can have different spectra</h2>
+                <p class="mt-6 max-w-2xl text-base md:text-lg text-midnight/68 leading-relaxed" data-v7-type="body">Color describes appearance. A spectrum describes the distribution of light across wavelengths. Those are different questions—and neither, by itself, tells us how one person will sleep.</p>
+            </div>
+        </section><section class="pv-science-copy v71-anchor" id="nonvisual-light" tabindex="-1"><h2>How the retina signals the body clock</h2><div class="pv-science-columns"><div><h3>A signal to the body clock</h3><p data-v7-type="body">Retinal cells containing melanopsin help relay light information involved in daily timing. Rods and cones also contribute. This non-visual pathway is why a light’s effect cannot be described by appearance alone.</p><a href="https://www.cie.co.at/publications/cie-system-metrology-optical-radiation-iprgc-influenced-responses-light-0" target="_blank" rel="noopener">CIE S 026:2018 ↗</a></div><div><h3>Color temperature alone cannot explain<br>light’s biological effects</h3><p data-v7-type="body">Correlated color temperature describes the appearance of near-white light. It does not uniquely specify its spectrum. Melanopic EDI weights light by melanopsin sensitivity and expresses it relative to daylight—not as a guaranteed biological outcome.</p><p class="pv-small" data-v7-type="secondary">Lume is a saturated orange-red source. Ordinary white-light CCT comparisons alone cannot establish its performance.</p><a href="https://doi.org/10.1038/s41598-022-21755-7" target="_blank" rel="noopener">Esposito &amp; Houser, 2022 ↗</a></div></div></section>
+
+        <section id="section-night" class="section-breathe px-6 bg-midnight text-white border-t border-white/5 v71-anchor" tabindex="-1">
+            <div class="max-w-6xl mx-auto reveal-text">
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.08] max-w-4xl" data-v7-type="section">Light exposure across the day</h2>
+                <dl class="science-day-cycle">
+                    <div><dt data-v7-type="secondary">Daytime</dt><dd data-v7-type="body">Bright light at appropriate times helps support the body’s daily rhythms.</dd></div>
+                    <div><dt data-v7-type="secondary">Evening</dt><dd data-v7-type="body">Reduce light exposure as bedtime approaches.</dd></div>
+                    <div><dt data-v7-type="secondary">Nighttime</dt><dd data-v7-type="body">Keep your sleep environment as dark as possible. When light is needed, consider its intensity, spectrum, and duration.</dd></div>
+                </dl>
+                <p class="science-guidance-source" data-v7-type="body">General guidance for healthy adults. <a href="/lab/sleep/evidence/#day-night">Brown et al., 2022 ↗</a></p>
+            </div>
+        </section>
+
+        <section id="science-education-visuals" class="science-education-visuals bg-[#0f111a] text-white border-t border-white/5 v71-anchor" tabindex="-1">
+            <div class="science-education-visuals__shell reveal-text">
+                <div class="science-education-visuals__intro">
+                    <div>
+                        <span class="science-education-visuals__eyebrow">Conceptual illustrations</span>
+                        <h2>Light composition and nighttime signals</h2>
+                    </div>
+                    <p data-v7-type="secondary">These diagrams summarize general research concepts. They are not Lume measurements and do not show a product-specific spectrum.</p>
+                </div>
+
+                <div class="science-education-visuals__grid">
+                    <figure class="science-education-card">
+                        <div class="science-education-card__heading">
+                            <span>01</span>
+                            <h3>A spectrum shows the mix of wavelengths</h3>
+                        </div>
+                        <div class="science-spectrum-map" role="img" aria-label="Conceptual visible wavelength range from 400 to 700 nanometres; no Lume output curve is shown">
+                            <div class="science-spectrum-map__labels" aria-hidden="true">
+                                <span>Shorter wavelengths</span>
+                                <span>Longer wavelengths</span>
+                            </div>
+                            <div class="science-spectrum-map__bar" aria-hidden="true"></div>
+                            <div class="science-spectrum-map__axis" aria-hidden="true">
+                                <span>400 nm</span>
+                                <span>500 nm</span>
+                                <span>600 nm</span>
+                                <span>700 nm</span>
+                            </div>
+                        </div>
+                        <figcaption data-v7-type="secondary">Conceptual and educational only. No product output curve is shown.</figcaption>
+                    </figure>
+
+                    <figure class="science-education-card">
+                        <div class="science-education-card__heading">
+                            <span>02</span>
+                            <h3>Evening light can change the nighttime signal</h3>
+                        </div>
+                        <svg class="science-rhythm-chart" viewBox="0 0 720 390" role="img" aria-labelledby="science-rhythm-title science-rhythm-desc">
+                            <title id="science-rhythm-title">Conceptual nighttime melatonin rhythm under different evening light exposure</title>
+                            <desc id="science-rhythm-desc">A solid line shows a typical nighttime rise under lower evening light exposure. A dashed line shows a lower or delayed pattern under greater evening light exposure. This is an educational schematic, not measured product data.</desc>
+                            <g class="science-rhythm-chart__grid" aria-hidden="true">
+                                <line x1="76" y1="58" x2="76" y2="320"></line>
+                                <line x1="76" y1="320" x2="676" y2="320"></line>
+                                <line x1="76" y1="232" x2="676" y2="232"></line>
+                                <line x1="76" y1="144" x2="676" y2="144"></line>
+                            </g>
+                            <g class="science-rhythm-chart__axis-labels" aria-hidden="true">
+                                <text x="76" y="350">Evening</text>
+                                <text x="360" y="350">Night</text>
+                                <text x="626" y="350">Morning</text>
+                                <text x="28" y="220" transform="rotate(-90 28 220)">Nighttime rhythm</text>
+                            </g>
+                            <path class="science-rhythm-chart__line science-rhythm-chart__line--solid" d="M76 300 C170 294 240 252 302 172 C374 80 472 72 548 116 C612 153 648 224 676 276"></path>
+                            <path class="science-rhythm-chart__line science-rhythm-chart__line--dashed" d="M76 304 C190 303 266 282 330 225 C405 158 493 150 566 184 C621 210 651 254 676 287"></path>
+                        </svg>
+                        <div class="science-rhythm-legend" aria-hidden="true">
+                            <span><i class="science-rhythm-legend__line"></i>Lower evening light exposure</span>
+                            <span><i class="science-rhythm-legend__line science-rhythm-legend__line--dashed"></i>Greater evening light exposure</span>
+                        </div>
+                        <figcaption data-v7-type="secondary">Conceptual pattern based on general light-at-night research. It is not numeric data, a Lume result, or a promise of an individual response.</figcaption>
+                        <p class="science-education-card__sources" data-v7-type="secondary">Research context: <a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener">Gooley et al., 2011</a> and <a href="https://www.nature.com/articles/s41598-020-75622-4" target="_blank" rel="noopener">Cain et al., 2020</a>.</p>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="pv-science-copy v71-anchor" id="design-and-validation" tabindex="-1"><h2>How to evaluate Lume’s design and effects</h2><p data-v7-type="body">Lume applies a research-informed design intention to nighttime light. To evaluate the product itself, spectral measurements need defined conditions at the eye; biological and sleep claims need suitable human studies. One cannot substitute for the other.</p><p data-v7-type="body">Sleep Lab’s self-reported experiences answer a different question: how the product fits real routines. They do not establish melatonin levels or clinical sleep outcomes.</p><a href="/lab/sleep/evidence/#product-evidence">Read the evidence boundaries ↗</a></section><section id="section-evidence" class="section-breathe px-6 bg-warm text-midnight text-center section-light border-t border-taupe/10">
+            <div class="max-w-4xl mx-auto reveal-text">
+                <span class="text-amber tracking-[0.14em] uppercase text-xs font-bold mb-5 block">Evidence</span>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.7rem] leading-[1.08]" data-v7-type="section">Read the studies behind the design</h2>
+                <a href="/lab/sleep/evidence/" class="mt-9 inline-flex items-center justify-center bg-midnight text-white px-8 py-4 font-bold tracking-[0.14em] uppercase text-xs hover:bg-amber hover:text-midnight transition-colors">Sources &amp; Evidence</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer batch-b-footer v7-footer"><div class="footer-wrap"><a class="footer-brand v7-footmark" href="/"><img width="820" height="150" src="/assets/brand-opening/logo/wordmark-gold.svg" alt="OWLNEST"></a><nav class="footer-groups" aria-label="Footer navigation"><div class="footer-group"><h2 class="footer-group-heading">Product</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-product-links"><span>Product</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-product-links" class="footer-links"><li><a href="/products/lume/">Lume</a></li><li><a href="/what-is-owlnest-lume/">What Is Lume</a></li><li><a href="/manual">Manual</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Lab</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-lab-links"><span>Lab</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-lab-links" class="footer-links"><li><a href="/lab/sleep/">Sleep Lab</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Owlnest</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-owlnest-links"><span>Owlnest</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-owlnest-links" class="footer-links"><li><a href="/about/">About</a></li><li><a href="/lab/sleep/21-day-program/">Program</a></li></ul></div><div class="footer-group"><h2 class="footer-group-heading">Support</h2><button type="button" class="footer-accordion-trigger" aria-expanded="false" aria-controls="footer-support-links"><span>Support</span><span class="footer-accordion-icon" aria-hidden="true">+</span></button><ul id="footer-support-links" class="footer-links"><li><a href="/faq/">FAQ</a></li><li><a href="/contact">Contact</a></li><li><a href="/preorder-policy">Orders &amp; Shipping</a></li><li><a href="/disclaimer">Policy</a></li></ul></div></nav><div class="footer-bottom"><span>© 2026 Owlnest Official</span><button type="button" data-cookie-settings="">Cookie Settings</button></div></div></footer>
+
+    <script>
+        // Main Logic: Scroll & UI Update
+        const header = document.getElementById('main-header');
+        const navLogo = document.getElementById('nav-logo');
+        const sections = document.querySelectorAll('section[id]');
+        const dots = document.querySelectorAll('.dot');
+        let isScrolling = false;
+
+        function updateUI() {
+            const headerHeight = header ? header.offsetHeight : 80;
+            const checkY = window.innerHeight / 2;
+
+            let isBgLight = false;
+            let currentSec = null;
+
+            sections.forEach(s => {
+                const rect = s.getBoundingClientRect();
+                if (rect.top <= checkY && rect.bottom > checkY) {
+                    currentSec = s;
+                }
+            });
+
+            // Update Navigation Dots
+            if (currentSec) {
+                dots.forEach(d => {
+                    d.classList.toggle('active', d.getAttribute('href') === `#${currentSec.id}`);
+                });
+            }
+
+            // Check for light sections
+            const lightSections = document.querySelectorAll('.section-light');
+            lightSections.forEach(s => {
+                const rect = s.getBoundingClientRect();
+                if (rect.top <= checkY && rect.bottom > checkY) {
+                    isBgLight = true;
+                }
+            });
+
+            // Reveal Animation logic
+            document.querySelectorAll('.reveal-text').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    el.classList.add('visible');
+                }
+            });
+
+            // Keep the header visually consistent across all sections.
+            if (header) {
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    updateUI();
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        window.addEventListener('load', () => {
+            updateUI();
+            const yr = document.getElementById('copyright-year');
+            if(yr) yr.textContent = new Date().getFullYear();
+            setupScienceFaqToggle();
+        });
+
+        function setupScienceFaqToggle() {
+            const extra = document.getElementById('science-faq-extra');
+            const toggle = document.getElementById('science-faq-toggle');
+            if (!extra || !toggle) return;
+
+            toggle.addEventListener('click', () => {
+                const isCollapsed = extra.classList.contains('hidden');
+                extra.classList.toggle('hidden');
+                toggle.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
+                toggle.textContent = isCollapsed ? 'See Fewer Questions' : 'See More Questions';
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu || !icon) return;
+            menu.classList.toggle('open');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    </script>
+<script>
+    function toggleLanguageMenu(event) {
+        event.stopPropagation();
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        const willOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+    document.addEventListener('click', (event) => {
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+            menu.classList.add('hidden');
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        const menu = document.getElementById('language-menu');
+        const trigger = document.querySelector('.language-trigger');
+        if (!menu || !trigger) return;
+        menu.classList.add('hidden');
+        trigger.setAttribute('aria-expanded', 'false');
+    });
+</script>
+    <script src="/assets/js/consent.js" defer=""></script>
+
+
+    <script src="/assets/js/site-footer.js?v=20260909-footer-hotfix" defer=""></script>
+
+
+<script src="/assets/js/site-route-compat.js" defer=""></script><script src="/assets/v72/navigation.js" defer=""></script><script src="/assets/v71/experience.js" defer=""></script></body></html>

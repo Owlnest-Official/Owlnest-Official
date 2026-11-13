@@ -1,0 +1,5 @@
+/* Phase 2: Home-only editorial and commerce readability refinements. */
+.discovery-caption{position:absolute;z-index:1;right:9%;top:63%;width:28%;max-width:25ch;color:#1d333a;font:600 15px/1.6 var(--sans);letter-spacing:.015em}.discovery-inner>.discovery-caption{font-size:15px;line-height:1.6}
+.approach-steps{display:flex;flex-wrap:wrap;gap:5px 12px;max-width:39ch}.approach-steps span:not(:last-child):after{content:' →';color:#d8bb83}.approach-steps span{white-space:nowrap}
+.product-copy h2{max-width:15ch}.product-copy>p:not(.eyebrow){max-width:44ch}.purchase-copy .package-name small{line-height:1.5}.purchase-policy{max-width:54ch}.purchase-policy nav{gap:8px 20px}
+@media(max-width:700px){.discovery-caption{top:clamp(132px,42vw,210px);left:43px;right:auto;width:64%;font-size:13px}.discovery-inner>.discovery-caption{font-size:13px;line-height:1.45}.approach-steps{gap:3px 10px}.purchase-copy{padding-top:31px}.purchase-policy{font-size:14px;line-height:1.75}.purchase-policy nav a{min-height:44px}.product-copy h2{max-width:15ch}}

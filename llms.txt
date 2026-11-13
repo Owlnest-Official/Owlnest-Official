@@ -24,13 +24,13 @@ Ordinary warm light only looks warm. Lume is designed from the spectrum up for s
 
 ## Research Architecture
 
-- OWLNEST → Products → Lume.
-- OWLNEST → Lab → Sleep Lab (Overview): WHY + WHAT WE ARE LEARNING.
-  - Science / Research Foundation: WHAT SUPPORTS THE HYPOTHESIS. Evidence is its auxiliary claim-support page.
-  - 21-Day Sleep Program: HOW WE LEARN. Real-life observation retains positive, neutral, unchanged, and negative feedback.
-- Findings / Results has the conceptual parent Sleep Lab and the role WHAT WE OBSERVED. Publish only real observations; a conceptual role is not a published page or navigation entry.
-- Campaign is an alternate entry to the same /campaign/ program under Sleep Lab. Promotional hierarchy does not override Information Architecture.
-- Lab and Products category anchors refer to existing pages, not separate parent routes.
+- Products overview: /products/; Lume detail: /products/lume/.
+- Lab framework: /lab/; Sleep Lab: /lab/sleep/.
+- Independent Evidence and deeper Science are peer pages under Sleep Lab.
+- Program: /lab/sleep/21-day-program/. Seven historical nights plus 21 nights of use; Day 1 is first actual use, with Day 7/14/21 check-ins.
+- Short application, human initial review, invited screening, final review and reconfirmation precede free dispatch. Enrollment collection is not enabled in this candidate.
+- No public Results without verified records and participant approvals.
+
 
 ## Use Guidance
 
@@ -72,18 +72,18 @@ Avoid positioning Lume as low-blue, no-blue, zero-blue, blue-light-free, or a me
 ## Important Pages
 
 - Homepage: https://owlnestofficial.com/
-- Products: https://owlnestofficial.com/products
+- Products: https://owlnestofficial.com/products/lume/
 - Lab / Sleep Lab overview: https://owlnestofficial.com/lab/
 - Definition: https://owlnestofficial.com/what-is-owlnest-lume/
 - AI Brief: https://owlnestofficial.com/ai-brief.html
-- Evidence Brief: https://owlnestofficial.com/evidence/
+- Evidence Brief: https://owlnestofficial.com/lab/sleep/evidence/
 - Evidence JSON: https://owlnestofficial.com/ai/evidence.json
 - Product JSON: https://owlnestofficial.com/ai/product.json
-- Science: https://owlnestofficial.com/science
+- Science: https://owlnestofficial.com/lab/sleep/science/
 - FAQ: https://owlnestofficial.com/faq/
 - Manual: https://owlnestofficial.com/manual
 - Order and Shipping Policy: https://owlnestofficial.com/preorder-policy
-- 21-Day Sleep Program: https://owlnestofficial.com/campaign/
+- 21-Day Sleep Program: https://owlnestofficial.com/lab/sleep/21-day-program/
 - Traditional Chinese: https://owlnestofficial.com/zh-tw/
 
 English is the x-default language. Traditional Chinese pages use `zh-Hant` and a natural Taiwan-facing voice with the same product facts and claim boundaries.
