@@ -12,7 +12,7 @@
   const PACKAGES = {
     single: {
       merchandiseId: "gid://shopify/ProductVariant/53197831405884",
-      amount: 119
+      amount: 49
     },
     duo: {
       merchandiseId: "gid://shopify/ProductVariant/53218207236412",

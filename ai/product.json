@@ -14,10 +14,9 @@
   "definition": "Lume is a sleep-spectrum lamp, specially tuned for after dark.",
   "public_pricing": {
     "currency": "USD",
-    "single_lume": 119,
+    "single_lume": 49,
     "duo_lume": 219,
-    "two_singles": 238,
-    "duo_savings": 19
+    "two_singles": 98
   },
   "science_bridge": "Your body uses light to tell time.",
   "design_intent": "Designed for nighttime light environments.",

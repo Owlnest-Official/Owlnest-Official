@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync(require('node:path').join(__dirname, '../assets/js/shopify-checkout.js'), 'utf8');
 const tick = () => new Promise(resolve => setImmediate(resolve));
-const cart = (url = 'https://example.test/checkout') => ({ ok: true, json: async () => ({ data: { cartCreate: { cart: { checkoutUrl: url, cost: { totalAmount: { amount: '119', currencyCode: 'USD' } } } } } }) });
+const cart = (url = 'https://example.test/checkout') => ({ ok: true, json: async () => ({ data: { cartCreate: { cart: { checkoutUrl: url, cost: { totalAmount: { amount: '49', currencyCode: 'USD' } } } } } }) });
 function harness({ zh = false, search = '' } = {}) {
   const events = {}, timers = new Map(), requests = [], redirects = [], tracked = [], errors = [];
   const feedback = { textContent: '', classList: { toggle() {} } };
@@ -87,4 +87,13 @@ test('invalid discount remains available to correct; no redirect or attribution 
   assert.ok(input.attributes.some(x => x.key === 'creator_discount_code' && x.value === 'TEST10'));
   assert.equal(h.sessionStorage.getItem('owlnest_checkout_discount'), JSON.stringify(referral));
   assert.equal(h.redirects.length, 0);
+});
+test('normal-price analytics fallback is Single USD 49 and Duo USD 219', async () => {
+  const h = harness();
+  h.respond(async () => ({ ok: true, json: async () => ({ data: { cartCreate: { cart: { checkoutUrl: 'https://example.test/checkout' } } } }) }));
+  await h.click(0);
+  assert.equal(h.tracked[0][1].product_amount, 49);
+  h.event('pagehide'); h.event('pageshow');
+  await h.click(1);
+  assert.equal(h.tracked[1][1].product_amount, 219);
 });

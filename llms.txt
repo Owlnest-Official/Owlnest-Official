@@ -17,10 +17,9 @@ Ordinary warm light only looks warm. Lume is designed from the spectrum up for s
 
 ## Current Public Pricing
 
-- Single Lume: USD 119
+- Single Lume: USD 49
 - Duo Lume: USD 219
-- Two Singles: USD 238
-- Duo savings: USD 19
+- Two Singles: USD 98
 
 ## Research Architecture
 
