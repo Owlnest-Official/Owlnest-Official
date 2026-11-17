@@ -88,12 +88,12 @@ test('invalid discount remains available to correct; no redirect or attribution 
   assert.equal(h.sessionStorage.getItem('owlnest_checkout_discount'), JSON.stringify(referral));
   assert.equal(h.redirects.length, 0);
 });
-test('normal-price analytics fallback is Single USD 49 and Duo USD 219', async () => {
+test('normal-price analytics fallback is Single USD 49 and Duo USD 89', async () => {
   const h = harness();
   h.respond(async () => ({ ok: true, json: async () => ({ data: { cartCreate: { cart: { checkoutUrl: 'https://example.test/checkout' } } } }) }));
   await h.click(0);
   assert.equal(h.tracked[0][1].product_amount, 49);
   h.event('pagehide'); h.event('pageshow');
   await h.click(1);
-  assert.equal(h.tracked[1][1].product_amount, 219);
+  assert.equal(h.tracked[1][1].product_amount, 89);
 });

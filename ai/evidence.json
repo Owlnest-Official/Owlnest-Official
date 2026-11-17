@@ -23,8 +23,10 @@
   "public_pricing": {
     "currency": "USD",
     "single_lume": 49,
-    "duo_lume": 219,
-    "two_singles": 98
+    "duo_lume": 89,
+    "two_singles": 98,
+    "duo_per_lamp": 44.5,
+    "duo_savings": 9
   },
   "evidence_positioning": "General research explains why nighttime light and spectrum may matter. Lume's design rationale connects those principles to product design.",
   "claim_boundary": "The sources below support general scientific principles and measurement frameworks only. They do not validate Lume's spectrum, biological effect, clinical efficacy, or sleep outcomes.",

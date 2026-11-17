@@ -16,7 +16,7 @@
     },
     duo: {
       merchandiseId: "gid://shopify/ProductVariant/53218207236412",
-      amount: 219
+      amount: 89
     }
   };
 

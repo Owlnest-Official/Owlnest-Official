@@ -15,8 +15,10 @@
   "public_pricing": {
     "currency": "USD",
     "single_lume": 49,
-    "duo_lume": 219,
-    "two_singles": 98
+    "duo_lume": 89,
+    "two_singles": 98,
+    "duo_per_lamp": 44.5,
+    "duo_savings": 9
   },
   "science_bridge": "Your body uses light to tell time.",
   "design_intent": "Designed for nighttime light environments.",
