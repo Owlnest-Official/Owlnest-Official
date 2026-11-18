@@ -24,3 +24,9 @@
 - [Ubuntu security notices](https://ubuntu.com/security/notices): remaining package/kernel review requires maintenance access.
 
 No host-root Docker mount, privilege workaround, firewall rewrite, secret rotation, API prompt change or data-collection activation was used. See OPEN_ITEMS.md; P0 must not be marked globally complete.
+
+## Targeted image-library follow-up (2026-11-18)
+
+Read-only installed APK origin/version comparison with [Alpine3.24 official security records](https://secdb.alpinelinux.org/v3.24/) identified libxslt1.1.43-r3→r4 in Nginx and zlib1.3.2-r1→1.4-r0 in allfourimages. A package match does not prove remote exploitability: no XSLT transformation is configured, and the [zlib advisory describes GDAL contrib/infback9](https://security.alpinelinux.org/vuln/CVE-2026-4738), not evidence of an exercised website path.
+
+Nevertheless, the targeted fixes are available from the existing trusted Alpine branch. Four reproducible image builds install only these named pinned packages (build logs show one/two package upgrades, not a blanket upgrade). API invalid-input/health/no-store tests pass in network-isolated containers; actual Nginx and Caddy configuration validation passes. Separate rollback snapshots retained. This APK comparison does not scan all statically bundled Go/Node modules and is not a zero-vulnerability guarantee.

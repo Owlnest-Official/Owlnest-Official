@@ -12,3 +12,5 @@
 Live operational changes: safe Nginx boundary, scheduled private backup/monitoring, then tested runtime/redirect/cache activation as recorded in DEPLOYMENT.md.
 
 Preserved: dirty `assets/css/typography.css`, six pre-existing governance-document edits, unrelated untracked history/previews, account/auth, checkout/referral/discount logic, GTM/GA/consent, research state, photos and96frame/controller. `_incoming/` never staged. Exact staged list must be reviewed before commit; see QA report.
+
+Follow-up: `infra/vps/nginx/Dockerfile`, `infra/vps/caddy/Dockerfile` and both existingAPI Dockerfiles pin targeted Alpine zlib/libxslt patches. New read-only APK checker and isolated-image test/rollout helpers added. No other packages requested for upgrade.

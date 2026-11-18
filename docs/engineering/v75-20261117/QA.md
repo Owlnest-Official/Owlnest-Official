@@ -24,3 +24,9 @@ The initial run incorrectly required GTM on Evidence, where it was absent in bas
 ## Limitations
 
 Browser simulation is not physical iPhone Safari. Firefox launch now succeeds with installed official Playwright runtime. External checkout/valid creator discount, real email, research submission, Supabase recovery and fieldINP NOT TESTED. Thirdparty tracking/data blocked during automated navigation to avoid production pollution. Production post-release checks recorded separately; local results are not substituted for live verification.
+
+## First production verification
+
+Release294b033: all34HTMLresponses match commit; 63legacyroute contracts plus3HTTP/www chains preserve encoded query; nineprivatepathguards404; fourAPI GETs405 without submission; accountHTMLno-cache; hashedCSSimmutable. Chromium production136page cases plus2fallback cases PASS. Source/library follow-up changes no page HTML/CSS/JS.
+
+Targeted Alpine library images: isolated API checks PASS, Nginx/Caddy config PASS. An untrusted-root Node availability pilot failed locally with UNABLE_TO_VERIFY_LEAF_SIGNATURE; trusted-system-CA requests and browser/TLS checks succeed. The pilot is invalid availability evidence, not proof of downtime. Container replacement may briefly reconnect; no zero-downtime assertion.
