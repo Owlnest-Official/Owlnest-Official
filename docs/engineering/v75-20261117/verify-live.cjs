@@ -1,0 +1,17 @@
+const {save,git,fs,repo,remote}=require('./common.cjs'),assert=require('node:assert/strict');
+const base='https://owlnestofficial.com',manifest=require(repo+'/config/site-source-manifest.json'),query='?utm_source=v75&utm_medium=qa&utm_campaign=a%20b&utm_content=x%2By&utm_term=night&gclid=g&fbclid=f&ttclid=t&ref=qa-not-real&discount=QA-NOT-VALID';
+async function req(url){return fetch(url,{method:'HEAD',redirect:'manual',signal:AbortSignal.timeout(30000)});}
+(async()=>{
+const sha=git('rev-parse','HEAD'),rows=[];
+for(const {file,route} of manifest.routes){const r=await fetch(base+route+'?v75-verify=1');assert.equal(r.status,200);const s=(await r.text()).replace(/\r/g,''),expected=git('show',sha+':'+file).replace(/\r/g,'');assert.equal(s.trim(),expected.trim(),route+' differs from commit');rows.push({route,status:r.status,matchesCommit:true});}
+const redirects=[];
+for(const [from,to]of Object.entries(require(repo+'/config/site-routes.json').redirects)){const r=await req(base+from+query);assert.equal(r.status,301);assert.equal(new URL(r.headers.get('location'),base).href,base+to+query);const end=await req(base+to+query);assert.equal(end.status,200);redirects.push({from,to,status:301,queryPreserved:true,target:200});}
+for(const origin of ['http://owlnestofficial.com','http://www.owlnestofficial.com','https://www.owlnestofficial.com']){let u=origin+'/products'+query;const hops=[];for(let i=0;i<5;i++){const r=await req(u);hops.push({url:u,status:r.status});if(r.status===200)break;assert.ok([301,302,307,308].includes(r.status));u=new URL(r.headers.get('location'),u).href;assert.equal(new URL(u).search,query);}assert.equal(u,base+'/products/'+query);assert.equal(hops.at(-1).status,200);redirects.push({origin,hops});}
+const guards=[];for(const p of ['/AGENTS.md','/docs/OWLNEST_BRAND_TRUTH.md','/server/contact-api/server.js','/config/site-source-manifest.json','/.git/config','/.env','/infra/vps/backup.sh','/scripts/build-site.cjs','/.netlify/images?url=/server/contact-api/server.js']){const r=await req(base+p);assert.equal(r.status,404);guards.push({path:p,status:r.status});}
+const hashed=manifest.files.find(f=>f.startsWith('assets/optimized/css/')),headers=[];
+for(const p of ['/', '/account/','/assets/v7/scroll.js','/assets/v7/scroll.js?v=7','/'+hashed,'/assets/optimized/favicon-64.png']){const r=await req(base+p);assert.equal(r.status,200);headers.push({path:p,cache:r.headers.get('cache-control'),nosniff:r.headers.get('x-content-type-options'),server:r.headers.get('server')});}
+assert.match(headers.find(x=>x.path==='/'+hashed).cache,/immutable/);assert.equal(headers[0].cache,'no-cache');assert.equal(headers[1].cache,'no-cache');
+for(const p of ['/api/contact','/api/subscribe-updates','/api/sleep-check-result','/api/analyze-sleep-environment']){const r=await fetch(base+p,{redirect:'manual'});assert.equal(r.status,405);rows.push({route:p,status:r.status,method:'GET only; no submission'});}
+const vps=remote('set -eu\ngit -C /srv/owlnest/site rev-parse HEAD\ngit -C /srv/owlnest/site status --porcelain\nsystemctl show owlnest-update.service -p Result -p ExecMainStatus\ndocker ps --format "{{.Names}} {{.Image}} {{.Status}}"\n/home/owlnest/ops/monitor.sh');assert.equal(vps.split(/\r?\n/)[0],sha);
+save('live-verification.json',{at:new Date().toISOString(),sha,rows,redirects,guards,headers,status:'PASS'});save('vps-after.txt',vps);console.log('PASS live pages',rows.length,'redirects',redirects.length,'guards',guards.length,sha);console.log(vps);
+})().catch(e=>{console.error(e);process.exitCode=1});

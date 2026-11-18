@@ -1,0 +1,1 @@
+module.exports={extends:'lighthouse:default',settings:{onlyCategories:['performance'],blockedUrlPatterns:['*googletagmanager.com/*','*google-analytics.com/*','*myshopify.com/*','*.supabase.co/*'],formFactor:'mobile',screenEmulation:{mobile:true,width:393,height:852,deviceScaleFactor:1,disabled:false}}};
